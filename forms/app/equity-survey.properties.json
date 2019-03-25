@@ -1,0 +1,15 @@
+    
+{
+    "icon": "icon-form-general",
+    "title": {
+        "en": "Poverty assessment"
+    },
+    "context": {
+        "person": false,
+        "place": true,
+        "expression": "contact.type === 'clinic' && user.parent.type === 'health_center' && user._id != contact._id && user.sex === 'male' && contact.registration_date >= 153459756512"
+    },
+    "hidden_fields": [
+
+    ]
+}

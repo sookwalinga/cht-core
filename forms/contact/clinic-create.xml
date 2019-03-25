@@ -23,6 +23,15 @@
           <text id="/data/child/first_name:label">
             <value>ASK: What is their first name?</value>
           </text>
+          <text id="/data/child/is_under_5/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/child/is_under_5/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/child/is_under_5:label">
+            <value>ASK: Is <output value=" /data/child/first_name "/> under 5 years old?</value>
+          </text>
           <text id="/data/child/sex/female:label">
             <value>Female</value>
           </text>
@@ -31,6 +40,12 @@
           </text>
           <text id="/data/child/sex:label">
             <value>Enter <output value=" /data/child/first_name "/>'s sex</value>
+          </text>
+          <text id="/data/child/under_5_dob_note:hint">
+            <value>It's important to try and get more exact age information for children. You can enter the child's date of birth as the first of the month in which they were born.</value>
+          </text>
+          <text id="/data/child/under_5_dob_note:label">
+            <value>SAY: For children under 5, I'd like to try and get some more specific information about their age. Can you try and remember the year and month when <output value=" /data/child/first_name "/> was born?</value>
           </text>
           <text id="/data/child/yob:label">
             <value>ASK: In what year was <output value=" /data/child/first_name "/> born?</value>
@@ -44,14 +59,17 @@
           <text id="/data/clinic/consented_registration:label">
             <value>Household consented to be registered</value>
           </text>
-          <text id="/data/clinic/district:label">
-            <value>District</value>
-          </text>
           <text id="/data/clinic/geolocation:label">
             <value>Location</value>
           </text>
           <text id="/data/clinic/house_number:label">
             <value>Household number</value>
+          </text>
+          <text id="/data/clinic/household_district:label">
+            <value>District</value>
+          </text>
+          <text id="/data/clinic/household_shehia:label">
+            <value>Shehia</value>
           </text>
           <text id="/data/clinic/kijiji:label">
             <value>Kijiji</value>
@@ -68,9 +86,6 @@
           <text id="/data/clinic/number_hh_members:label">
             <value>Number of members of hosuehold</value>
           </text>
-          <text id="/data/clinic/shehia:label">
-            <value>Shehia</value>
-          </text>
           <text id="/data/clinic/street:label">
             <value>Street</value>
           </text>
@@ -84,7 +99,7 @@
             <value>Yes</value>
           </text>
           <text id="/data/confirm_home/hoh_available:label">
-            <value>Now, approach the household and indicate if the head of the family is home and available to talk now:</value>
+            <value>Now, approach the household. Introduce yourself and ask how many families (kayas) are living in this house. If more than one, ask if all heads of families are available and ready to speak at this time (Mhusi ka mkuu wa hii nyumba yupo?). If one head of family is away or not available to speak, or the heads of the families are not ready to be on the same conversation, speak with each family separately. &lt;br&gt; Is at least one head of family available to speak at this time?</value>
           </text>
           <text id="/data/confirm_home/not_home_note:label">
             <value>Since the head of the family is not available to speak to you now, you can move on to the next household. We'll add a reminder to your task list to return to this household in a few days to finish the registration process.</value>
@@ -116,11 +131,20 @@
           <text id="/data/contact/sex_hoh:label">
             <value>Gender</value>
           </text>
+          <text id="/data/end_registration_note:label">
+            <value>_The registration process for this kaya is now complete._</value>
+          </text>
+          <text id="/data/follow_up_messages/return_children_note:label">
+            <value>SAY: From this registration, Iâve seen that you have [NUMBER] child(ren) under 5 who can benefit from this national program. Therefore, Iâm asking for your permission to come back and check up on all issues related to their health care, nutrition, and child development. I would be grateful for your permission.</value>
+          </text>
+          <text id="/data/follow_up_messages/return_women_note:label">
+            <value>SAY: I see that there are some women of reproductive age in your family. Iâd like to ask your permission to return later to speak with them personally about issues related to health during pregnancy and childbirth.</value>
+          </text>
           <text id="/data/hh_member_count/hh_repeat_note:label">
             <value>SAY: For each person, I will ask some basic details about who they are, starting with the primary contact person for this household. Who should I list as the primary contact for this household, who will be the person I reach out to coordinate care for themselves and other members of this household? This person should be reachable by phone.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:hint">
-            <value>Ask the person to list the names of all people who live in the house, and count to ensure that the number they provided is correct.</value>
+            <value>Ask the person to list the names of all people who live in the house, and count to ensure that the number they provided is correct. Long term visitors to the house, such as a woman returning home for delivery, should not be counted â only people who are permanent residents of the house.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:label">
             <value>ASK: How many people live in your Kaya?</value>
@@ -161,6 +185,9 @@
           <text id="/data/household_location/district_manual/wete:label">
             <value>Wete</value>
           </text>
+          <text id="/data/household_location/district_manual:label">
+            <value>Enter the correct District:</value>
+          </text>
           <text id="/data/household_location/district_shehia_correct/no:label">
             <value>No</value>
           </text>
@@ -171,7 +198,7 @@
             <value>Are <output value=" /data/district_auto "/> and <output value=" /data/shehia_auto "/> the correct District and Shehia for this household?</value>
           </text>
           <text id="/data/household_location/house_number:label">
-            <value>House number:</value>
+            <value>House number and zone:</value>
           </text>
           <text id="/data/household_location/household_gps:hint">
             <value>Make sure location services on your phone are turned on.</value>
@@ -211,6 +238,9 @@
           </text>
           <text id="/data/household_location/means_of_travel_other:label">
             <value>Specify other means of travel:</value>
+          </text>
+          <text id="/data/household_location/shehia_manual:label">
+            <value>Enter the correct Shehia:</value>
           </text>
           <text id="/data/household_location/street:label">
             <value>Street:</value>
@@ -278,78 +308,6 @@
           <text id="/data/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
-          <text id="/data/poverty_assessment/drinking_water_source/improved:label">
-            <value>Piped water, protected well, rainwater</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source/surface_water:label">
-            <value>Surface water (river, pond, dam, stream, lake)</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source/uncovered_well_or_spring:label">
-            <value>Uncovered well or spring</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source/vendor_provided:label">
-            <value>Vendor provided (cart or truck) or bottled</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source:label">
-            <value>ASK: From where do you usually get your drinking water?</value>
-          </text>
-          <text id="/data/poverty_assessment/electricity/no:label">
-            <value>No</value>
-          </text>
-          <text id="/data/poverty_assessment/electricity/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/data/poverty_assessment/electricity:label">
-            <value>OBSERVE: Does the household have electricity?</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material/cement:label">
-            <value>Cement/concrete/tiles</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material/earth:label">
-            <value>Earth/sand/dung</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material/other:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material:label">
-            <value>OBSERVE: What is the main material of the floor of the dwelling?</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material_other:label">
-            <value>Enter floor material:</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type/improved:label">
-            <value>Improved facilities (sewer connections, septic system connections, pour-flush latrines, ventilated improved pit latrines and pit latrines with a slab or covered pit)</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type/shared:label">
-            <value>Shared facility (any facility shared with more than one household)</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type/unimproved:label">
-            <value>Unimproved facility (open defecation, disposal with other forms of solid waste, pit latrine without slab/platform, open pit, hanging latrine, bucket latrine)</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type:label">
-            <value>ASK: What type of latrine does your household typically use?</value>
-          </text>
-          <text id="/data/poverty_assessment/observe_note:label">
-            <value>For the next set of questions, observe the household but do not directly ask to the household member.</value>
-          </text>
-          <text id="/data/poverty_assessment/poverty_assessment_note:label">
-            <value>SAY: Now I'm going to ask a few more questions about you and your family.</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material/iron:label">
-            <value>Iron sheet</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material/other:label">
-            <value>Other</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material/thatch:label">
-            <value>Grass/thatch/palm leaf/mud</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material:label">
-            <value>OBSERVE: What is the main material of the roof of the dwelling?</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material_other:label">
-            <value>Enter roof material:</value>
-          </text>
           <text id="/data/program_introduction_consent/consent/no:label">
             <value>No</value>
           </text>
@@ -366,19 +324,16 @@
             <value>Discuss a good date for a follow up visit with the family, and enter the agreed upon date.</value>
           </text>
           <text id="/data/program_introduction_consent/maybe_interested_note:hint">
-            <value>Your application will schedule a follow-up visit with this family in a few days to see if they are ready to be registered.</value>
+            <value>Your application will schedule a follow-up visit with this family in a few days to see if they are ready to be registered. If there are any other kayas living in this house, start a new household registration process and ask the other head of the family for permission to register the members of his family.</value>
           </text>
           <text id="/data/program_introduction_consent/maybe_interested_note:label">
             <value>SAY: OK, I understand that you're not interested right now. I'll return in a few days to discuss this further.</value>
           </text>
           <text id="/data/program_introduction_consent/multiple_kayas:label">
-            <value>For the people in the other Kaya(s) you can start a new registration process. For now just focus on the people in this Kaya. SAY: right now, I'd like to talk just about the people in your Kaya.</value>
-          </text>
-          <text id="/data/program_introduction_consent/no_other_kayas_note:label">
-            <value>_The registration process for this house is now complete_</value>
+            <value>You will proceed with registering one kaya at a time. Focus the conversation now to one head of family, to get their permission to register their family members. Once youâre done, start the registration process over for the other head of family. &lt;br&gt; SAY: At this point Iâd like to speak to each of you individually about getting some more information about the members of your family.</value>
           </text>
           <text id="/data/program_introduction_consent/not_interested_note:hint">
-            <value>Your application will not schedule any more visits to this family at this time. If they become interested at a later date you can always resume providing services then.</value>
+            <value>Your application will not schedule any more visits to this family at this time. If they become interested at a later date you can always start providing services to them. If there are any other kayas living in this house, start a new household registration process and ask the other head of the family for permission to register the members of his family.</value>
           </text>
           <text id="/data/program_introduction_consent/not_interested_note:label">
             <value>Thank the family for their time, and provide your contact information. Let them know that theyâre free to reach out at any time if they have questions about their health.</value>
@@ -390,10 +345,10 @@
             <value>Yes</value>
           </text>
           <text id="/data/program_introduction_consent/other_kayas:label">
-            <value>ASK: Before we go on, are there any kayas living in this house besides yours?</value>
+            <value>ENTER: Is there more than one kaya living in this house?</value>
           </text>
           <text id="/data/program_introduction_consent/other_kayas_note:label">
-            <value>_Start a new registration process for the other kaya(s) living in this house_</value>
+            <value>Once you've finished the conversation with the head of this kaya, remember to re-start a new household registration process for the other kaya(s) living in this house if you have not done so already.</value>
           </text>
           <text id="/data/program_introduction_consent/permission_to_return/no:label">
             <value>No</value>
@@ -402,13 +357,13 @@
             <value>Yes</value>
           </text>
           <text id="/data/program_introduction_consent/permission_to_return:label">
-            <value>SAY: I understand that youâre not ready to register your family at this time. Could I return in a few days to discuss the services I can provide further?</value>
+            <value>SAY: I understand that you are not ready to register your family at this time. Could I return in a few days to discuss the services I can provide further?</value>
           </text>
           <text id="/data/program_introduction_consent/program_introduction_note:label">
-            <value>&lt;p&gt;Explain who you are and what your role as a community health volunteer is. Key points to mention include : &lt;ul&gt;&lt;li&gt;This is a nationwide effort implemented by the Ministry of Health to improve health services for communities in Zanzibar. Every area will now have a CHV who can care for families, pregnant women, and children up to age 5 in all issues related to their health care, nutrition, and child development.&lt;/li&gt; &lt;li&gt;At first, we will only register your household and ask some basic questions so I know how many people live in my area and what their health needs are. Every time a woman becomes pregnant or a child is born, there will be another opportunity for the family to consent to various services I can provide to you as a CHV.&lt;/li&gt; &lt;li&gt;Allow the family to ask any questions they may have&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</value>
+            <value>Explain who you are and what your role as a community health volunteer is. Key points to mention include: &lt;ul&gt; &lt;li&gt;This is a nationwide effort implemented by the Ministry of Health to improve health services for communities in Zanzibar. Every area will now have a CHV who can care for families, pregnant women, and children up to age 5 in all issues related to their health care, nutrition, and child development.&lt;/li&gt; &lt;li&gt;At first, we will only register your household and ask some basic questions so I know how many people live in my area and what their health needs are. Every time there is a new client in the household, I will ask for their permission or their parentâs permission to visit with them and provide health services. Right now, my focus is on helping pregnant women to have healthy and safe pregnancies and deliveries, and make sure babies and young children are growing up healthy and strong. In the future, I may also be able to help more members of your family to live healthier lives.&lt;/li&gt; &lt;li&gt;Some of my roles as CHV will be to provide health education, screening for danger signs, give referrals when needed and follow up on them, I will make sure that your family get all the health information they need at the right time. Thank you.&lt;/li&gt; &lt;li&gt;Since am not a medical doctor/nurse, I will be using a smart phone to do my visits, this phone has a guide to help me do my work efficiently and also keep records of my visits. I can assure you that, our conversation remains confidential and will not be exposed to anyone/anywhere.&lt;/li&gt; &lt;li&gt;I also want to explain why itâs important for your family to enroll in this Program, your participation in the National CHV program would help the government to improve health services in our country, it will also provide you with an opportunity to learn your family health needs especially on pregnant/postpartum women and children and allow them to get the health care they need to improve your family welfare.&lt;/li&gt; &lt;li&gt;Allow the family to ask any questions they may have&lt;/li&gt; &lt;/ul&gt;</value>
           </text>
           <text id="/data/program_introduction_consent/single_kaya:label">
-            <value>SAY: OK, then we'll just focus on the people in your kaya</value>
+            <value>Continue with the registration process for the people in this kaya.</value>
           </text>
           <text id="static_instance-district-0">
             <value>Chake Chake</value>
@@ -5662,6 +5617,15 @@
           <text id="/data/child/first_name:label">
             <value>-</value>
           </text>
+          <text id="/data/child/is_under_5/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/child/is_under_5/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/data/child/is_under_5:label">
+            <value>-</value>
+          </text>
           <text id="/data/child/sex/female:label">
             <value>-</value>
           </text>
@@ -5669,6 +5633,12 @@
             <value>-</value>
           </text>
           <text id="/data/child/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/data/child/under_5_dob_note:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/child/under_5_dob_note:label">
             <value>-</value>
           </text>
           <text id="/data/child/yob:label">
@@ -5686,13 +5656,16 @@
           <text id="/data/clinic/contact:label">
             <value>-</value>
           </text>
-          <text id="/data/clinic/district:label">
-            <value>-</value>
-          </text>
           <text id="/data/clinic/geolocation:label">
             <value>-</value>
           </text>
           <text id="/data/clinic/house_number:label">
+            <value>-</value>
+          </text>
+          <text id="/data/clinic/household_district:label">
+            <value>-</value>
+          </text>
+          <text id="/data/clinic/household_shehia:label">
             <value>-</value>
           </text>
           <text id="/data/clinic/kijiji:label">
@@ -5714,9 +5687,6 @@
             <value>-</value>
           </text>
           <text id="/data/clinic/parent:label">
-            <value>-</value>
-          </text>
-          <text id="/data/clinic/shehia:label">
             <value>-</value>
           </text>
           <text id="/data/clinic/street:label">
@@ -5764,6 +5734,15 @@
           <text id="/data/contact/sex_hoh:label">
             <value>-</value>
           </text>
+          <text id="/data/end_registration_note:label">
+            <value>-</value>
+          </text>
+          <text id="/data/follow_up_messages/return_children_note:label">
+            <value>-</value>
+          </text>
+          <text id="/data/follow_up_messages/return_women_note:label">
+            <value>-</value>
+          </text>
           <text id="/data/hh_member_count/hh_repeat_note:label">
             <value>-</value>
           </text>
@@ -5807,6 +5786,9 @@
             <value>-</value>
           </text>
           <text id="/data/household_location/district_manual/wete:label">
+            <value>-</value>
+          </text>
+          <text id="/data/household_location/district_manual:label">
             <value>-</value>
           </text>
           <text id="/data/household_location/district_shehia_correct/no:label">
@@ -5858,6 +5840,9 @@
             <value>-</value>
           </text>
           <text id="/data/household_location/means_of_travel_other:label">
+            <value>-</value>
+          </text>
+          <text id="/data/household_location/shehia_manual:label">
             <value>-</value>
           </text>
           <text id="/data/household_location/street:label">
@@ -5926,78 +5911,6 @@
           <text id="/data/inputs/user/name:label">
             <value>-</value>
           </text>
-          <text id="/data/poverty_assessment/drinking_water_source/improved:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source/surface_water:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source/uncovered_well_or_spring:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source/vendor_provided:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/drinking_water_source:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/electricity/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/data/poverty_assessment/electricity/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/data/poverty_assessment/electricity:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material/cement:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material/earth:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material/other:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/floor_material_other:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type/improved:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type/shared:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type/unimproved:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/latrine_type:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/observe_note:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/poverty_assessment_note:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material/iron:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material/other:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material/thatch:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material:label">
-            <value>-</value>
-          </text>
-          <text id="/data/poverty_assessment/roof_material_other:label">
-            <value>-</value>
-          </text>
           <text id="/data/program_introduction_consent/consent/no:label">
             <value>-</value>
           </text>
@@ -6020,9 +5933,6 @@
             <value>-</value>
           </text>
           <text id="/data/program_introduction_consent/multiple_kayas:label">
-            <value>-</value>
-          </text>
-          <text id="/data/program_introduction_consent/no_other_kayas_note:label">
             <value>-</value>
           </text>
           <text id="/data/program_introduction_consent/not_interested_note:hint">
@@ -11293,7 +11203,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-03-20 9-52">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-03-25 9-13">
           <inputs>
             <meta>
               <location>
@@ -11316,8 +11226,8 @@
             <name/>
             <geolocation/>
             <contact/>
-            <district/>
-            <shehia/>
+            <household_district/>
+            <household_shehia/>
             <kijiji/>
             <kitongoji/>
             <house_number/>
@@ -11378,7 +11288,6 @@
             <maybe_interested_note/>
             <maybe_interested_nex_visit_date>today()+3</maybe_interested_nex_visit_date>
             <other_kayas_note/>
-            <no_other_kayas_note/>
           </program_introduction_consent>
           <hh_member_count>
             <num_hh_members/>
@@ -11393,6 +11302,7 @@
             <dob_contact/>
             <primary_phone_contact/>
             <secondary_phone_contact/>
+            <age_contact_years/>
           </init>
           <child_count/>
           <child jr:template="">
@@ -11400,20 +11310,17 @@
             <family_name/>
             <sex/>
             <exact_dob_known/>
+            <is_under_5/>
+            <under_5_dob_note/>
             <yob/>
             <dob/>
+            <age/>
           </child>
-          <poverty_assessment>
-            <poverty_assessment_note/>
-            <drinking_water_source/>
-            <latrine_type/>
-            <observe_note/>
-            <electricity/>
-            <floor_material/>
-            <floor_material_other/>
-            <roof_material/>
-            <roof_material_other/>
-          </poverty_assessment>
+          <follow_up_messages>
+            <return_children_note/>
+            <return_women_note/>
+          </follow_up_messages>
+          <end_registration_note/>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -20154,8 +20061,8 @@
       <bind calculate="../inputs/user/contact_id" nodeset="/data/contact_id" type="string"/>
       <bind calculate="../inputs/user/facility_id" nodeset="/data/facility_id" type="string"/>
       <bind calculate="../inputs/user/name" nodeset="/data/name" type="string"/>
-      <bind calculate="../inputs/user/district" nodeset="/data/district_auto" type="string"/>
-      <bind calculate="../inputs/user/shehia" nodeset="/data/shehia_auto" type="string"/>
+      <bind calculate=" /data/inputs/user/district " nodeset="/data/district_auto" type="string"/>
+      <bind calculate=" /data/inputs/user/shehia " nodeset="/data/shehia_auto" type="string"/>
       <bind nodeset="/data/contact/parent" type="string"/>
       <bind calculate=" /data/init/first_name_contact " nodeset="/data/contact/first_name_hoh" required="true()" type="string"/>
       <bind calculate=" /data/init/family_name_contact " nodeset="/data/contact/family_name_hoh" type="string"/>
@@ -20172,7 +20079,7 @@
       <bind calculate="if(selected( /data/household_location/district_shehia_correct ,&quot;yes&quot;), /data/shehia_auto , /data/household_location/shehia_manual )" nodeset="/data/household_location/shehia_hh" type="string"/>
       <bind nodeset="/data/household_location/kijiji" required="true()" type="select1"/>
       <bind nodeset="/data/household_location/kitongoji" required="true()" type="string"/>
-      <bind nodeset="/data/household_location/house_number" type="int"/>
+      <bind nodeset="/data/household_location/house_number" type="string"/>
       <bind nodeset="/data/household_location/street" type="string"/>
       <bind nodeset="/data/household_location/any_neighbor" type="string"/>
       <bind nodeset="/data/household_location/travel_time" required="true()" type="int"/>
@@ -20192,8 +20099,7 @@
       <bind nodeset="/data/program_introduction_consent/not_interested_note" readonly="true()" relevant="selected( /data/program_introduction_consent/permission_to_return ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/data/program_introduction_consent/maybe_interested_note" readonly="true()" relevant="selected( /data/program_introduction_consent/permission_to_return ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/data/program_introduction_consent/maybe_interested_nex_visit_date" relevant="selected( /data/program_introduction_consent/permission_to_return ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/data/program_introduction_consent/other_kayas_note" readonly="true()" relevant="selected( /data/program_introduction_consent/other_kayas ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/data/program_introduction_consent/no_other_kayas_note" readonly="true()" relevant="selected( /data/program_introduction_consent/other_kayas ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/data/program_introduction_consent/other_kayas_note" readonly="true()" relevant="selected( /data/program_introduction_consent/other_kayas ,&quot;yes) and (selected( /data/program_introduction_consent/consent ,&quot;no&quot;) or selected( /data/program_introduction_consent/consent ,&quot;think&quot;))" type="string"/>
       <bind nodeset="/data/hh_member_count" relevant="selected( /data/program_introduction_consent/consent ,&quot;yes&quot;)"/>
       <bind nodeset="/data/hh_member_count/num_hh_members" required="true()" type="int"/>
       <bind nodeset="/data/hh_member_count/hh_repeat_note" readonly="true()" type="string"/>
@@ -20206,30 +20112,27 @@
       <bind constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365)))" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" nodeset="/data/init/dob_contact" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" required="true()" type="date"/>
       <bind constraint="regex(.,'^(+255|0)[0-9]{9}$')" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')" nodeset="/data/init/primary_phone_contact" required="true()" type="string"/>
       <bind constraint="regex(.,'^(+255|0)[0-9]{9}$')" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')" nodeset="/data/init/secondary_phone_contact" type="string"/>
+      <bind calculate="if( /data/init/exact_dob_known_contact =&quot;yes&quot;,format(today(),&quot;%Y&quot;)-format( /data/init/dob_contact ,&quot;%Y&quot;),format(today(),&quot;%Y&quot;)- /data/init/yob_contact )" nodeset="/data/init/age_contact_years" type="string"/>
       <bind calculate=" /data/hh_member_count/num_hh_members -1" nodeset="/data/child_count" readonly="true()" type="string"/>
       <bind nodeset="/data/child" relevant="selected( /data/program_introduction_consent/consent ,&quot;yes&quot;)"/>
       <bind nodeset="/data/child/first_name" required="true()" type="string"/>
       <bind nodeset="/data/child/family_name" required="true()" type="string"/>
       <bind nodeset="/data/child/sex" required="true()" type="select1"/>
       <bind nodeset="/data/child/exact_dob_known" required="true()" type="select1"/>
-      <bind nodeset="/data/child/yob" relevant="selected( /data/child/exact_dob_known ,&quot;no&quot;)" required="true()" type="int"/>
-      <bind nodeset="/data/child/dob" relevant="selected( /data/child/exact_dob_known ,&quot;yes&quot;)" required="true()" type="date"/>
-      <bind nodeset="/data/poverty_assessment" relevant="selected( /data/program_introduction_consent/consent ,&quot;yes&quot;)"/>
-      <bind nodeset="/data/poverty_assessment/poverty_assessment_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/poverty_assessment/drinking_water_source" required="true()" type="select"/>
-      <bind nodeset="/data/poverty_assessment/latrine_type" required="true()" type="select1"/>
-      <bind nodeset="/data/poverty_assessment/observe_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/poverty_assessment/electricity" required="true()" type="select1"/>
-      <bind nodeset="/data/poverty_assessment/floor_material" required="true()" type="select1"/>
-      <bind nodeset="/data/poverty_assessment/floor_material_other" relevant="selected( /data/poverty_assessment/floor_material ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/data/poverty_assessment/roof_material" required="true()" type="select1"/>
-      <bind nodeset="/data/poverty_assessment/roof_material_other" relevant="selected( /data/poverty_assessment/roof_material ,&quot;other&quot;)" required="true()" type="string"/>
+      <bind nodeset="/data/child/is_under_5" relevant="selected( /data/child/exact_dob_known ,&quot;no&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/data/child/under_5_dob_note" readonly="true()" relevant="selected /data/child/exact_dob_known ,&quot;no&quot;) and selected( /data/child/is_under_5 ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/data/child/yob" relevant="selected( /data/child/exact_dob_known ,&quot;no&quot;) and selected( /data/child/is_under_5 ,&quot;no&quot;)" required="true()" type="int"/>
+      <bind nodeset="/data/child/dob" relevant="selected( /data/child/exact_dob_known ,&quot;yes&quot;) or (selected( /data/child/exact_dob_known ,&quot;no&quot;) and selected( /data/child/is_under_5 ,&quot;yes))" required="true()" type="date"/>
+      <bind calculate="if(selected( /data/child/exact_dob_known ,&quot;no&quot;) and selected( /data/child/is_under_5 ,&quot;no&quot;),format(today(),&quot;%Y&quot;)- /data/child/yob ,(today()- /data/child/dob )/365)" nodeset="/data/child/age" type="string"/>
+      <bind nodeset="/data/follow_up_messages/return_children_note" readonly="true()" relevant=" /data/child/age  &lt; 5" type="string"/>
+      <bind nodeset="/data/follow_up_messages/return_women_note" readonly="true()" relevant="( /data/init/sex_contact =&quot;female&quot; and ( /data/init/age_contact_years &gt;=15 or  /data/init/age_contact_years &lt;=49)) or ( /data/child/sex =&quot;female&quot; and ( /data/child/age &gt;=15 or  /data/child/age &lt;=49))" type="string"/>
+      <bind nodeset="/data/end_registration_note" readonly="true()" type="string"/>
       <bind calculate="." nodeset="/data/clinic/parent" type="string"/>
       <bind calculate="concat(../../contact/first_name,../../contact/last_name, ' Household')" nodeset="/data/clinic/name" type="string"/>
       <bind calculate="concat(../../inputs/meta/location/lat, concat(' ', ../../inputs/meta/location/long))" nodeset="/data/clinic/geolocation" type="string"/>
-      <bind calculate="&quot;NEW&quot;" nodeset="/data/clinic/contact" type="string"/>
-      <bind calculate="../../household_location/district_hh" nodeset="/data/clinic/district" type="string"/>
-      <bind calculate="../../household_location/shehia_hh" nodeset="/data/clinic/shehia" type="string"/>
+      <bind calculate="NEW" nodeset="/data/clinic/contact" type="string"/>
+      <bind calculate="../../household_location/district_hh" nodeset="/data/clinic/household_district" type="string"/>
+      <bind calculate="../../household_location/shehia_hh" nodeset="/data/clinic/household_shehia" type="string"/>
       <bind calculate="../../household_location/kijiji" nodeset="/data/clinic/kijiji" type="string"/>
       <bind calculate="../../household_location/kitongoji" nodeset="/data/clinic/kitongoji" type="string"/>
       <bind calculate="../../household_location/house_number" nodeset="/data/clinic/house_number" type="string"/>
@@ -20276,6 +20179,7 @@
         </item>
       </select1>
       <select1 ref="/data/household_location/district_manual">
+        <label ref="jr:itext('/data/household_location/district_manual:label')"/>
         <item>
           <label ref="jr:itext('/data/household_location/district_manual/chake_chake:label')"/>
           <value>chake_chake</value>
@@ -20322,6 +20226,7 @@
         </item>
       </select1>
       <select1 ref="/data/household_location/shehia_manual">
+        <label ref="jr:itext('/data/household_location/shehia_manual:label')"/>
         <itemset nodeset="instance('shehia')/root/item[choice_filter= /data/household_location/district_manual ]">
           <value ref="name"/>
           <label ref="jr:itext(itextId)"/>
@@ -20462,9 +20367,6 @@
       <input ref="/data/program_introduction_consent/other_kayas_note">
         <label ref="jr:itext('/data/program_introduction_consent/other_kayas_note:label')"/>
       </input>
-      <input ref="/data/program_introduction_consent/no_other_kayas_note">
-        <label ref="jr:itext('/data/program_introduction_consent/no_other_kayas_note:label')"/>
-      </input>
     </group>
     <group ref="/data/hh_member_count">
       <input ref="/data/hh_member_count/num_hh_members">
@@ -20555,6 +20457,21 @@
             <value>no</value>
           </item>
         </select1>
+        <select1 ref="/data/child/is_under_5">
+          <label ref="jr:itext('/data/child/is_under_5:label')"/>
+          <item>
+            <label ref="jr:itext('/data/child/is_under_5/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/data/child/is_under_5/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/data/child/under_5_dob_note">
+          <label ref="jr:itext('/data/child/under_5_dob_note:label')"/>
+          <hint ref="jr:itext('/data/child/under_5_dob_note:hint')"/>
+        </input>
         <input ref="/data/child/yob">
           <label ref="jr:itext('/data/child/yob:label')"/>
         </input>
@@ -20563,95 +20480,17 @@
         </input>
       </repeat>
     </group>
-    <group ref="/data/poverty_assessment">
-      <input ref="/data/poverty_assessment/poverty_assessment_note">
-        <label ref="jr:itext('/data/poverty_assessment/poverty_assessment_note:label')"/>
+    <group ref="/data/follow_up_messages">
+      <input ref="/data/follow_up_messages/return_children_note">
+        <label ref="jr:itext('/data/follow_up_messages/return_children_note:label')"/>
       </input>
-      <select ref="/data/poverty_assessment/drinking_water_source">
-        <label ref="jr:itext('/data/poverty_assessment/drinking_water_source:label')"/>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/drinking_water_source/surface_water:label')"/>
-          <value>surface_water</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/drinking_water_source/uncovered_well_or_spring:label')"/>
-          <value>uncovered_well_or_spring</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/drinking_water_source/vendor_provided:label')"/>
-          <value>vendor_provided</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/drinking_water_source/improved:label')"/>
-          <value>improved</value>
-        </item>
-      </select>
-      <select1 ref="/data/poverty_assessment/latrine_type">
-        <label ref="jr:itext('/data/poverty_assessment/latrine_type:label')"/>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/latrine_type/unimproved:label')"/>
-          <value>unimproved</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/latrine_type/shared:label')"/>
-          <value>shared</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/latrine_type/improved:label')"/>
-          <value>improved</value>
-        </item>
-      </select1>
-      <input ref="/data/poverty_assessment/observe_note">
-        <label ref="jr:itext('/data/poverty_assessment/observe_note:label')"/>
-      </input>
-      <select1 ref="/data/poverty_assessment/electricity">
-        <label ref="jr:itext('/data/poverty_assessment/electricity:label')"/>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/electricity/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/electricity/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/data/poverty_assessment/floor_material">
-        <label ref="jr:itext('/data/poverty_assessment/floor_material:label')"/>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/floor_material/earth:label')"/>
-          <value>earth</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/floor_material/cement:label')"/>
-          <value>cement</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/floor_material/other:label')"/>
-          <value>other</value>
-        </item>
-      </select1>
-      <input ref="/data/poverty_assessment/floor_material_other">
-        <label ref="jr:itext('/data/poverty_assessment/floor_material_other:label')"/>
-      </input>
-      <select1 ref="/data/poverty_assessment/roof_material">
-        <label ref="jr:itext('/data/poverty_assessment/roof_material:label')"/>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/roof_material/iron:label')"/>
-          <value>iron</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/roof_material/thatch:label')"/>
-          <value>thatch</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/data/poverty_assessment/roof_material/other:label')"/>
-          <value>other</value>
-        </item>
-      </select1>
-      <input ref="/data/poverty_assessment/roof_material_other">
-        <label ref="jr:itext('/data/poverty_assessment/roof_material_other:label')"/>
+      <input ref="/data/follow_up_messages/return_women_note">
+        <label ref="jr:itext('/data/follow_up_messages/return_women_note:label')"/>
       </input>
     </group>
+    <input ref="/data/end_registration_note">
+      <label ref="jr:itext('/data/end_registration_note:label')"/>
+    </input>
     <group ref="/data/clinic"/>
   </h:body>
 </h:html>
