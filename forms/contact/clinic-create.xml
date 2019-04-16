@@ -188,7 +188,7 @@ Is at least one head of family available to speak at this time?</value>
             <value>Use one of the following formats: +255XXXXXXXXX or 0XXXXXXXXX.</value>
           </text>
           <text id="/data/init/secondary_phone_contact:label">
-            <value>ASK: is there another phone number used by <output value=" /data/init/first_name_contact "/> or another member of the household?</value>
+            <value>ASK: Is there another phone number used by <output value=" /data/init/first_name_contact "/> or another member of the household?</value>
           </text>
           <text id="/data/init/sex_contact/female:label">
             <value>Female</value>
@@ -399,7 +399,7 @@ _Allow the family to ask any questions they may have_</value>
             <value>Ndiyo</value>
           </text>
           <text id="/data/confirm_home/hoh_available:label">
-            <value>Nenda kwenye nyumba, jitambulishe na uliza je kwenye nyumba hii munaishi (kaya) ngapi? Ikiwa muna kaya zaidi ya moja uliza je wakuu wa kaya wapo na tunaweza kuzungumza mda huu? Ikiwa mkuu wa kaya mmoja hayupo au hayuko tayari kuzungumza au hayupo huru kujichanganya kwenye mazungumzo pamoja na mwenziwe, jaribu kuzungumza na mkuu wa kaya mmoja halafu zungumza na mwengine.
+            <value>Nenda kwenye nyumba, jitambulishe na uliza je kwenye nyumba hii munaishi (kaya) ngapi? Ikiwa muna kaya zaidi ya moja, uliza je wakuu wa kaya wapo na tunaweza kuzungumza mda huu? Ikiwa mkuu wa kaya mmoja hayupo au hayuko tayari kuzungumza au hayupo huru kujichanganya kwenye mazungumzo pamoja na mwenziwe, jaribu kuzungumza na mkuu wa kaya mmoja halafu zungumza na mwengine.
 
 Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</value>
           </text>
@@ -410,40 +410,40 @@ Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</valu
             <value>Ikiwa mkuu wa kaya hayupo au hawezi kuzungumza na wewe saahivi. Unaweza kwenda nyumba nyengine. Tutakuekea alama ya kukukumbusha kurudi tena kwenye nyumba hii siku chache baadae ili kumaliza usajili.</value>
           </text>
           <text id="/data/contact/alternate_phone:label">
-            <value>-</value>
+            <value>Nambari ya simu ya mbadala</value>
           </text>
           <text id="/data/contact/date_of_birth:label">
-            <value>-</value>
+            <value>Tarehe ya kuzaliwa</value>
           </text>
           <text id="/data/contact/exact_dob_known:label">
             <value>-</value>
           </text>
           <text id="/data/contact/family_name:label">
-            <value>-</value>
+            <value>Jina la ukoo</value>
           </text>
           <text id="/data/contact/first_name:label">
-            <value>-</value>
+            <value>Jina la kwanza</value>
           </text>
           <text id="/data/contact/name:label">
-            <value>-</value>
+            <value>Jina Kamili</value>
           </text>
           <text id="/data/contact/phone:label">
-            <value>-</value>
+            <value>Nambari ya simu</value>
           </text>
           <text id="/data/contact/sex:label">
-            <value>-</value>
+            <value>Jinsia</value>
           </text>
           <text id="/data/end_registration_note:label">
             <value>_Mchakato wa usajili katika kaya umekamilika_</value>
           </text>
           <text id="/data/hh_member_count/hh_repeat_note:label">
-            <value>SEMA: Kwa kila mmoja, nitawauliza baadhi ya taarifa za msingi za utambulisho wenu , tukianza na mtu ambaye naweza kuwasiliana naye kwenye nyumba hii,. Je ni nani nimuorodheshe kama mtu wa kuwasiliana naye kwenye kaya hii, Je ni nani atakayekuwa mtu ninayeweza kukutana naye ili kuratibu utowaji wa huduma kwake mwenyewe na watu wengine walioko kwenye familia. Mtu huyu awe anapatikana kupitia mawasiliano ya simu.</value>
+            <value>SEMA: Kwa kila mmoja, nitawauliza baadhi ya taarifa za msingi za utambulisho wenu, tukianza na mtu ambaye naweza kuwasiliana naye kwenye nyumba hii. Je ni nani nimuorodheshe kama mtu wa kuwasiliana naye kwenye kaya hii ? Je, ni nani atakayekuwa mtu ninayeweza kukutana naye ili kuratibu utowaji wa huduma kwake mwenyewe na watu wengine walioko kwenye familia? Mtu huyu awe anapatikana kupitia mawasiliano ya simu.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:hint">
             <value>Muombe mwenyeji wako aorodheshe majina ya watu wanaoishi kwenye kaya, na hesabu ili kuhakikisha idadi ni sawa. Usiwahesabu wageni walikokuja kutembea kwa muda mrefu, mfano wanawake walikuja nyumbani ili kujifungua, hesabu wakaazi wakudumu peke yao.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:jr:constraintMsg">
-            <value>-</value>
+            <value>Kaya iwe kati ya mtu 1 hadi watu 30.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:label">
             <value>ULIZA: Ni watu wangapi wanaishi kwenye kaya yako?</value>
@@ -455,13 +455,13 @@ Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</valu
             <value>-</value>
           </text>
           <text id="/data/household_location/house_number:label">
-            <value>Nambari ya nyumba</value>
+            <value>Nambari ya nyumba:</value>
           </text>
           <text id="/data/household_location/household_gps:hint">
             <value>Hakikisha unawasha GPS kwenye simu yako</value>
           </text>
           <text id="/data/household_location/intro_note:label">
-            <value>Lengo la maswali haya yanayouliza kuhusu eneo la kaya ni kwajili ya kukusaidia kuweza kuitambua kwa urahisi kaya wakati wa kutaka kurudia kufanya matembeleo mengine kwa watu wanaoishi humu. Ingiza taarifa zitazoweza kukusaidia kiurahisi kuitambua kaya hiyi pindi unapotaka kuirudia tena. Kabla ya kuifika kaya hii. Ni ipi anuani ya nyumba hii?</value>
+            <value>Lengo la maswali haya yanayouliza kuhusu eneo la kaya ni kwajili ya kukusaidia kuweza kuitambua kwa urahisi kaya wakati wa kutaka kurudia kufanya matembeleo mengine kwa watu wanaoishi humu. Ingiza taarifa zitazoweza kukusaidia kiurahisi kuitambua kaya hii pindi unapotaka kuirudia tena. Kabla ya kuifika kaya hii. Ni ipi anuani ya nyumba hii?</value>
           </text>
           <text id="/data/household_location/kitongoji:jr:constraintMsg">
             <value>-</value>
@@ -494,13 +494,13 @@ Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</valu
             <value>Unatumia usafiri gani?</value>
           </text>
           <text id="/data/household_location/means_of_travel_other:jr:constraintMsg">
-            <value>-</value>
+            <value>Jaza njia ya usafiri</value>
           </text>
           <text id="/data/household_location/means_of_travel_other:label">
-            <value>Taja aina nyengine ya usafiri</value>
+            <value>Taja aina nyengine ya usafiri:</value>
           </text>
           <text id="/data/household_location/travel_time:jr:constraintMsg">
-            <value>-</value>
+            <value>Jaza nambari kati ya 1 na 120. Tafadhali zungumza na msimamizi wako kama inakuchukua masaa mawili kufika katika nyumba ya mteja wako.</value>
           </text>
           <text id="/data/household_location/travel_time:label">
             <value>Ni dakika ngapi unatumia kutoka nyumbani kwenu hadi kwenye nyumba hii?</value>
@@ -521,13 +521,13 @@ Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</valu
             <value>Ndiyo</value>
           </text>
           <text id="/data/init/exact_dob_known_contact:label">
-            <value>ULIZA: Je unaijua tarehe sahihi yake ya kuzaliwa</value>
+            <value>ULIZA: Je unaijua tarehe sahihi yake ya kuzaliwa?</value>
           </text>
           <text id="/data/init/family_name_contact:jr:constraintMsg">
             <value>-</value>
           </text>
           <text id="/data/init/family_name_contact:label">
-            <value>ULIZA: ni lipi jina la babu yake?</value>
+            <value>ULIZA: Ni lipi jina la babu yake?</value>
           </text>
           <text id="/data/init/first_name_contact:jr:constraintMsg">
             <value>-</value>
@@ -539,7 +539,7 @@ Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</valu
             <value>Tumia moja kati ya mfumo huu +255XXXXXXXXX au 0XXXXXXXXX.</value>
           </text>
           <text id="/data/init/primary_phone_contact:label">
-            <value>ULIZA: Je ni ipi nambari yake nzuri ya mawasilaano.</value>
+            <value>ULIZA: Je ni ipi nambari yake nzuri ya mawasilaano?</value>
           </text>
           <text id="/data/init/secondary_phone_contact:hint">
             <value>Unaweza acha pengo usijijaze chochote kama kuna nambari moja tu ya mawasiliano kwenye kaya hii</value>
@@ -557,10 +557,10 @@ Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</valu
             <value>Mwanamme</value>
           </text>
           <text id="/data/init/sex_contact:label">
-            <value>Ingiza jinsia yake</value>
+            <value>Ingiza jinsia yake:</value>
           </text>
           <text id="/data/init/yob_contact:jr:constraintMsg">
-            <value>Umri uwe ni kati ya 12 na 100</value>
+            <value>Umri uwe ni kati ya 12 na 100!</value>
           </text>
           <text id="/data/init/yob_contact:label">
             <value>ULIZA Ni mwaka gani alizaliwa?</value>
@@ -590,7 +590,7 @@ Je yupo mkuu wa kaya japo mmoja kwenye nyumba hii aliye tayari kuzungumza?</valu
             <value>ULIZA: Je uko tayari kusajili kaya yako?</value>
           </text>
           <text id="/data/program_introduction_consent/multiple_kayas:label">
-            <value>Anza kusajili kaya moja kwenda nyengine. Jikite mazungumzo yako kwa mkuu wa kaya wa kwanza omba ridhaa yake kuwasajili wanafamiliwa wake. Ukimaliza kaya ya kwanza, Anza usajili kwa mkuu wa kaya mwengine.
+            <value>Anza kusajili kaya moja kwenda nyengine. Jikite mazungumzo yako kwa mkuu wa kaya wa kwanza. Omba ridhaa yake kuwasajili wanafamiliwa wake. Ukimaliza kaya ya kwanza, anza usajili kwa mkuu wa kaya mwengine.
 
 SEMA: Saahizi ningependa nizungumze na nyinyi mmoja mmoja ili nipate taarifa zaidi kuhusu wanafamilia wenu.</value>
           </text>
@@ -616,7 +616,7 @@ SEMA: Saahizi ningependa nizungumze na nyinyi mmoja mmoja ili nipate taarifa zai
             <value>Ndiyo</value>
           </text>
           <text id="/data/program_introduction_consent/not_consenting_today/permission_to_return:label">
-            <value>SEMA: naelewa huko tayari kuisajili kaya yako muda huu. Je naweza kurudi tena siku chache mbeleni ili tuje tujadili zaidi kuhusu huduma ambazo nitazitoa?</value>
+            <value>SEMA: Naelewa huko tayari kuisajili kaya yako muda huu. Je naweza kurudi tena siku chache mbeleni ili tuje tujadili zaidi kuhusu huduma ambazo nitazitoa?</value>
           </text>
           <text id="/data/program_introduction_consent/other_kayas/no:label">
             <value>Hapana</value>
@@ -636,9 +636,9 @@ Mwanzoni nitaisajili kaya yako na kukuuliza maswali ya msingi yatayoniwezesha ku
 
 Baadhi ya majukumu yangu kama muhumu wa afya wa kuitolea ni kutoa elimu ya afya, kuchunguza dalili za hatari, kutoa rufaa pale itapohitajika na kuzifuatilia, nitahakikisha familia yako inapata taarifa zote za afya inazozihitahi kwa muda stahili. Asante sana.
 
-Kwasasababu mimi si daktari, wala nesi nitatumia simu yangu hii ya kisasa kufanya matembeleo, simu hii ina muongozo ambao utanisaidia kufanya kazi yangu kwa ufanisi na kueka kumbukumbu ya matembelo yangu. Naomba niwahakikishie kuwa mazungumzo yetu yatabaki kuwa siri na hayatatolewa kwa mtu yeyote au popopte.
+Kwasasababu mimi si daktari wala nesi, nitatumia simu yangu hii ya kisasa kufanya matembeleo, simu hii ina muongozo ambao utanisaidia kufanya kazi yangu kwa ufanisi na kueka kumbukumbu ya matembelo yangu. Naomba niwahakikishie kuwa mazungumzo yetu yatabaki kuwa siri na hayatatolewa kwa mtu yeyote au popopte.
 
-Pia ningependa kukueleza kwanini ni muhimu kwa familia yako kusajiliwa katika mradi huu. Ushiriki wako katika mradi huu wa kitaifa wa afya utaisaidia serekali kukuza utowaji wahuduma za afya Nchini. Pia itakupa nafasi ya kujifunza mahitaji ya afya ya familia yako hasa katika maswala yanayohusu ujauzito/huduma stahiki za mama na mtoto baada ya kujifungua na kuwawezesha kupata huduma za afya wanazohitaji ili kuboresha ustawi wa familia yako.
+Pia ningependa kukueleza kwanini ni muhimu kwa familia yako kusajiliwa katika mradi huu. Ushiriki wako katika mradi huu wa kitaifa wa afya utaisaidia serekali kukuza utowaji wahuduma za afya nchini. Pia, itakupa nafasi ya kujifunza mahitaji ya afya ya familia yako hasa katika maswala yanayohusu ujauzito/huduma stahiki za mama na mtoto baada ya kujifungua na kuwawezesha kupata huduma za afya wanazohitaji ili kuboresha ustawi wa familia yako.
 
 _Iruhusu familia ikuulize maswali yoyote waliyonayo_</value>
           </text>
@@ -661,22 +661,22 @@ _Iruhusu familia ikuulize maswali yoyote waliyonayo_</value>
             <value>Ndiyo</value>
           </text>
           <text id="/data/repeat/child/exact_dob_known:label">
-            <value>ULIZA: Je unaituja terehe yake ya kuzaliwa kwa usahihi?</value>
+            <value>ULIZA: Je unaijua terehe yake ya kuzaliwa kwa usahihi?</value>
           </text>
           <text id="/data/repeat/child/family_name:jr:constraintMsg">
             <value>-</value>
           </text>
           <text id="/data/repeat/child/family_name:label">
-            <value>ULIZA: Ni lipi jina lake la Babu</value>
+            <value>ULIZA: Ni lipi jina lake la babu?</value>
           </text>
           <text id="/data/repeat/child/first_name:jr:constraintMsg">
             <value>-</value>
           </text>
           <text id="/data/repeat/child/first_name:label">
-            <value>ULIZA: Ni lipi jina lake la kwanza</value>
+            <value>ULIZA: Ni lipi jina lake la kwanza?</value>
           </text>
           <text id="/data/repeat/child/hh_member_note:label">
-            <value>Sasa, tafadhali ingiza taarifa za watu wengine wanaishin kwenye kaya.</value>
+            <value>Sasa, tafadhali ingiza taarifa za watu wengine wanaoishi kwenye kaya.</value>
           </text>
           <text id="/data/repeat/child/is_under_5/no:label">
             <value>Hapana</value>
@@ -685,10 +685,10 @@ _Iruhusu familia ikuulize maswali yoyote waliyonayo_</value>
             <value>Ndiyo</value>
           </text>
           <text id="/data/repeat/child/is_under_5:label">
-            <value>ULIZA: Je mtoto yupo chini yaumri wa miaka 5?</value>
+            <value>ULIZA: Je mtoto yupo chini ya umri wa miaka 5?</value>
           </text>
           <text id="/data/repeat/child/return_children_note:label">
-            <value>SEMA kutokanana usajili huu nimeona kuna watoto walio chini ya umri wa miaka 5 ambao wanaweza kunufaika na mradi huu wa kitaifa. Kwahivyo naomba ridhaa ya kurudi tena ili nije kuangalia maswala yote yanayohusiana na huduma zao za afya, lishe na maendeleo yao.nitafurahi kama nitapata ridhaa yenu.</value>
+            <value>SEMA kutokanana usajili huu nimeona kuna watoto walio chini ya umri wa miaka 5 ambao wanaweza kunufaika na mradi huu wa kitaifa. Kwahivyo naomba ridhaa ya kurudi tena ili nije kuangalia maswala yote yanayohusiana na huduma zao za afya, lishe, na maendeleo yao. Nitafurahi kama nitapata ridhaa yenu.</value>
           </text>
           <text id="/data/repeat/child/return_women_note:label">
             <value>SEMA: Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
@@ -706,7 +706,7 @@ _Iruhusu familia ikuulize maswali yoyote waliyonayo_</value>
             <value>Ni muhimu kupata taarifa za uhakika kuhuru umri wa watoto. Unaweza kuingiza tarehe ya mwezi wa mtoto aliozaliwa</value>
           </text>
           <text id="/data/repeat/child/under_5_dob_note:label">
-            <value>SEMA: Kwa watoto walio chini ya miaka 5 ningependa kupata taarifa zaid kuhusu umri wao, je unaweza kukumbuka ni mwezi na mwaka gani mtoto huyu alizaliwa?</value>
+            <value>SEMA: Kwa watoto walio chini ya miaka 5 ningependa kupata taarifa zaidi kuhusu umri wao. Je,, unaweza kukumbuka ni mwezi na mwaka gani mtoto huyu alizaliwa?</value>
           </text>
           <text id="/data/repeat/child/yob:jr:constraintMsg">
             <value>Kwa watoto walio chini ya umri wa miaka 5, tarehe yake yao ya kuzaliwa nilazima ichukuliwe.</value>
@@ -720,7 +720,7 @@ _Iruhusu familia ikuulize maswali yoyote waliyonayo_</value>
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-04-15 15-43">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-04-16 9-26">
           <inputs>
             <meta>
               <location>
