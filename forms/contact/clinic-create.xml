@@ -87,7 +87,7 @@
             <value>_The purpose of the following questions regarding the household location is to help you locate this house again when it is time to return for another visit to the people who live here. Enter the information that you will need to help you easily find this house again when you need to before you approach the household. What is the address of this household?_</value>
           </text>
           <text id="/data/household_location/kitongoji:jr:constraintMsg">
-            <value>Enter a Kitongoji</value>
+            <value>Enter a kitongoji</value>
           </text>
           <text id="/data/household_location/kitongoji:label">
             <value>Kitongoji:</value>
@@ -352,7 +352,7 @@
             <value>Ingiza nambari ya nyumba yote na tenganisha kwa kutumia alama ya Mkwaju</value>
           </text>
           <text id="/data/household_location/house_number:jr:constraintMsg">
-            <value>-</value>
+            <value>Jaza nambari ya nyumba</value>
           </text>
           <text id="/data/household_location/house_number:label">
             <value>Nambari ya nyumba:</value>
@@ -364,7 +364,7 @@
             <value>Lengo la maswali haya yanayouliza kuhusu eneo la kaya ni kwajili ya kukusaidia kuweza kuitambua kwa urahisi kaya wakati wa kutaka kurudia kufanya matembeleo mengine kwa watu wanaoishi humu. Ingiza taarifa zitazoweza kukusaidia kiurahisi kuitambua kaya hii pindi unapotaka kuirudia tena. Kabla ya kuifika kaya hii. Ni ipi anuani ya nyumba hii?</value>
           </text>
           <text id="/data/household_location/kitongoji:jr:constraintMsg">
-            <value>-</value>
+            <value>Jaza kitongoji</value>
           </text>
           <text id="/data/household_location/kitongoji:label">
             <value>Kitongoji:</value>
@@ -552,7 +552,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-04-16 15-15">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-04-17 11-30">
           <inputs>
             <meta>
               <location>
@@ -742,7 +742,7 @@
       <bind calculate="../../../../contact_id" nodeset="/data/repeat/child/meta/created_by_person_uuid" type="string"/>
       <bind calculate="../../../../facility_id" nodeset="/data/repeat/child/meta/created_by_place_uuid" type="string"/>
       <bind nodeset="/data/household_location/intro_note" readonly="true()" type="string"/>
-      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')" nodeset="/data/household_location/kitongoji" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')" nodeset="/data/household_location/kitongoji" required="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" jr:constraintMsg="jr:itext('/data/household_location/house_number:jr:constraintMsg')" nodeset="/data/household_location/house_number" required="true()" type="string"/>
       <bind constraint=". &gt; 0 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')" nodeset="/data/household_location/travel_time" required="true()" type="int"/>
       <bind nodeset="/data/household_location/means_of_travel_house" required="true()" type="select1"/>
