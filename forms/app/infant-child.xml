@@ -5,61 +5,47 @@
     <model>
       <itext>
         <translation lang="en">
-          <text id="/infant-child/child_danger_signs/danger_signs_intro_note:label">
-            <value>I'm not going to screen your chlid for danger signs. Observe the child and discuss each danger sign with the mother and child.</value>
+          <text id="/infant-child/child_danger_signs/child_convulsions/no:label">
+            <value>No</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/cold:label">
-            <value>Cold or low temperature</value>
+          <text id="/infant-child/child_danger_signs/child_convulsions/yes:label">
+            <value>Yes</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/cord_bleeding:label">
-            <value>Cord red, bleeding, or draining pus</value>
+          <text id="/infant-child/child_danger_signs/child_convulsions:label">
+            <value>ASK: Has the child recently had any convulsions?</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/diarrhea:label">
-            <value>Diarrhea</value>
+          <text id="/infant-child/child_danger_signs/child_danger_sign_note:label">
+            <value>The child has a danger sign. Advise the mother to go to any nearby health facility within the next 24 hours so a doctor can look at the child and help.</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/difficulty_fast_breathing:label">
-            <value>Difficulty or fast breathing (Two counts of 60 breaths or more in one minute)</value>
+          <text id="/infant-child/child_danger_signs/child_drink/no:label">
+            <value>No</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/excessive_crying:label">
-            <value>Excessive crying or restlessness for more than one hour, non-stop</value>
+          <text id="/infant-child/child_danger_signs/child_drink/yes:label">
+            <value>Yes</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/excessive_vomiting:label">
-            <value>Excessive vomiting</value>
+          <text id="/infant-child/child_danger_signs/child_drink:label">
+            <value>ASK: Is the child able to drink or breastfeed?</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/eyes_pus:label">
-            <value>Eyes draining pus</value>
+          <text id="/infant-child/child_danger_signs/child_lethargic/no:label">
+            <value>No</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/fever:label">
-            <value>Fever or high temperature</value>
+          <text id="/infant-child/child_danger_signs/child_lethargic/yes:label">
+            <value>Yes</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/had_convulsions:label">
-            <value>Had convulsions</value>
+          <text id="/infant-child/child_danger_signs/child_lethargic:label">
+            <value>ASK: Is the child lethargic or unconscious?</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/no_movement:label">
-            <value>Movement only when stimulated, or no movement even on stimulation</value>
+          <text id="/infant-child/child_danger_signs/child_vomit/no:label">
+            <value>No</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/none:label">
-            <value>None of the above</value>
+          <text id="/infant-child/child_danger_signs/child_vomit/yes:label">
+            <value>Yes</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/not_able_feed:label">
-            <value>Not able to feed since birth, or stopped feeding well</value>
+          <text id="/infant-child/child_danger_signs/child_vomit:label">
+            <value>ASK: Does the child vomit everything?</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/skin_boils:label">
-            <value>Skin boils</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/yellow_pale_palms:label">
-            <value>Yellow or pale palms and soles (hands and feet), and lips. Soles should be red/pink.</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs:label">
-            <value>SAY: I'm now going to screen your baby for neonatal danger signs.
-
-Observe and discuss each danger sign with the mother and child. Select any of the danger signs that the baby has right now</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening:label">
-            <value>Neonatal Danger Signs Screening</value>
-          </text>
-          <text id="/infant-child/child_danger_signs:label">
-            <value>Child Danger Signs Screening</value>
+          <text id="/infant-child/child_danger_signs/no_child_danger_sign_note:label">
+            <value>SAY: No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
           <text id="/infant-child/child_visit_intro_note:label">
             <value>SEMA: Habari mama? Kama tulivyozungumza wakati wa matembeleo yetu yaliyopita kuwa ntakuja kukutembelea kwa ajili ya kujua maendeleo na afya ya mtoto/watoto, na pia kujadiliana na wewe pamoja na familia juu ya malezi na makuzi bora ya mtoto/watoto wako. Nafahamu kuwa unajua jinsi ya kumtunza mtoto wako na kumkuza vizuri, lakini hii ni kama nyongeza tu ya elimu kutokana na ongezeko la maradhi na matatizo mbali mbali yanayoweza kudhoofisha afya na makuzi bora ya mtoto.</value>
@@ -159,60 +145,275 @@ SAY: I'd like to enroll <output value=" /infant-child/child_name "/> into infant
           <text id="/infant-child/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
+          <text id="/infant-child/neonatal_danger_signs/has_neonatal_danger_note:label">
+            <value>Your baby has a danger sign. This is an URGENT and super serious emergency. You should take the baby IMMEDIATELY to the nearest facility. If it is closed, you need to go to the closest hospital.</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cold/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cold/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cold:label">
+            <value>Cold or low temperature</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding:label">
+            <value>Cord red, bleeding, or draining pus</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_danger_signs_note:label">
+            <value>SAY: I'm now going to screen your baby for neonatal danger signs.
+
+Observe and discuss each danger sign with the mother and child. Does the baby have any of the following danger signs right now?</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_diarrhea/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_diarrhea/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_diarrhea:label">
+            <value>Diarrhea</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing:label">
+            <value>Difficulty or fast breathing (Two counts of 60 breaths or more in one minute)</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_crying/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_crying/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_crying:label">
+            <value>Excessive crying or restlessness for more than one hour, non-stop</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting:label">
+            <value>Excessive vomiting</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_eyes_pus/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_eyes_pus/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_eyes_pus:label">
+            <value>Eyes draining pus</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_fever/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_fever/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_fever:label">
+            <value>Fever or high temperature</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_had_convulsions/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_had_convulsions/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_had_convulsions:label">
+            <value>Had convulsions</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_no_movement/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_no_movement/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_no_movement:label">
+            <value>Movement only when stimulated, or no movement even on stimulation</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_not_able_feed/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_not_able_feed/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_not_able_feed:label">
+            <value>Not able to feed since birth, or stopped feeding well</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_skin_boils/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_skin_boils/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_skin_boils:label">
+            <value>Skin boils</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
+            <value>Yellow or pale palms and soles (hands and feet), and lips. Soles should be red/pink.</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs:label">
+            <value>Neonatal Danger Signs Screening</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note:label">
+            <value>A danger sign has been identified. Advise the mother to go to any nearby health facility within the next 24 hours so a doctor can look at the baby and help.</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension:label">
+            <value>Abdominal distension</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color:label">
+            <value>Blue in color</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel:label">
+            <value>Bulging anterior fontanel</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital:label">
+            <value>Congenital abnormality</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge:label">
+            <value>Eye discharge or swollen eyes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool:label">
+            <value>Not passing stool for a day</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine:label">
+            <value>Not passing urine for a day</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying:label">
+            <value>Not crying</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash:label">
+            <value>Skin rash</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting:label">
+            <value>Occasional vomiting</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note:label">
+            <value>No danger signs were identified in your baby, but if the baby develops any of the signs we discussed, you should go the health facility immediately.</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary:label">
+            <value>Other Neonatal Danger Signs Screening</value>
+          </text>
         </translation>
         <translation lang="sw">
-          <text id="/infant-child/child_danger_signs/danger_signs_intro_note:label">
+          <text id="/infant-child/child_danger_signs/child_convulsions/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_convulsions/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_convulsions:label">
             <value>-</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/cold:label">
+          <text id="/infant-child/child_danger_signs/child_danger_sign_note:label">
             <value>-</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/cord_bleeding:label">
+          <text id="/infant-child/child_danger_signs/child_drink/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_drink/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_drink:label">
             <value>-</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/diarrhea:label">
+          <text id="/infant-child/child_danger_signs/child_lethargic/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_lethargic/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_lethargic:label">
             <value>-</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/difficulty_fast_breathing:label">
+          <text id="/infant-child/child_danger_signs/child_vomit/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_vomit/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/child_danger_signs/child_vomit:label">
             <value>-</value>
           </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/excessive_crying:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/excessive_vomiting:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/eyes_pus:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/fever:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/had_convulsions:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/no_movement:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/none:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/not_able_feed:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/skin_boils:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/yellow_pale_palms:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs/neonatal_screening:label">
-            <value>-</value>
-          </text>
-          <text id="/infant-child/child_danger_signs:label">
+          <text id="/infant-child/child_danger_signs/no_child_danger_sign_note:label">
             <value>-</value>
           </text>
           <text id="/infant-child/child_visit_intro_note:label">
@@ -311,6 +512,231 @@ SAY: I'd like to enroll <output value=" /infant-child/child_name "/> into infant
           <text id="/infant-child/inputs/user/name:label">
             <value>-</value>
           </text>
+          <text id="/infant-child/neonatal_danger_signs/has_neonatal_danger_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cold/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cold/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cold:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_danger_signs_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_diarrhea/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_diarrhea/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_diarrhea:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_crying/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_crying/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_crying:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_eyes_pus/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_eyes_pus/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_eyes_pus:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_fever/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_fever/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_fever:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_had_convulsions/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_had_convulsions/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_had_convulsions:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_no_movement/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_no_movement/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_no_movement:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_not_able_feed/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_not_able_feed/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_not_able_feed:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_skin_boils/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_skin_boils/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_skin_boils:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant-child/neonatal_danger_signs_secondary:label">
+            <value>-</value>
+          </text>
         </translation>
       </itext>
       <instance>
@@ -358,11 +784,47 @@ SAY: I'd like to enroll <output value=" /infant-child/child_name "/> into infant
             <refer_flag_small_baby/>
             <encourage_small_baby_note/>
           </first_visit_6_months>
+          <neonatal_danger_signs>
+            <neonatal_danger_signs_note/>
+            <neonatal_not_able_feed/>
+            <neonatal_had_convulsions/>
+            <neonatal_difficulty_fast_breathing/>
+            <neonatal_fever/>
+            <neonatal_cold/>
+            <neonatal_yellow_pale_palms/>
+            <neonatal_no_movement/>
+            <neonatal_cord_bleeding/>
+            <neonatal_diarrhea/>
+            <neonatal_eyes_pus/>
+            <neonatal_skin_boils/>
+            <neonatal_excessive_vomiting/>
+            <neonatal_excessive_crying/>
+            <refer_neonatal_danger_sign_flag/>
+            <has_neonatal_danger_note/>
+          </neonatal_danger_signs>
+          <neonatal_danger_signs_secondary>
+            <neonatal_not_crying/>
+            <neonatal_blue_color/>
+            <neonatal_eye_discharge/>
+            <neonatal_skin_rash/>
+            <neonatal_congenital/>
+            <neonatal_vomiting/>
+            <neonatal_bulging_fontanel/>
+            <neonatal_abdominal_distension/>
+            <neonatal_no_urine/>
+            <neonatal_no_stool/>
+            <has_secondary_neonatal_danger_sign_flag/>
+            <has_secondary_neonatal_danger_sign_note/>
+            <no_secondary_neonatal_danger_sign_note/>
+          </neonatal_danger_signs_secondary>
           <child_danger_signs>
-            <danger_signs_intro_note/>
-            <neonatal_screening>
-              <neonatal_danger_signs/>
-            </neonatal_screening>
+            <child_drink/>
+            <child_vomit/>
+            <child_convulsions/>
+            <child_lethargic/>
+            <refer_child_danger_sign_flag/>
+            <child_danger_sign_note/>
+            <no_child_danger_sign_note/>
           </child_danger_signs>
           <meta tag="hidden">
             <instanceID/>
@@ -384,23 +846,58 @@ SAY: I'd like to enroll <output value=" /infant-child/child_name "/> into infant
       <bind calculate="../inputs/contact/date_of_birth" nodeset="/infant-child/child_date_of_birth" type="string"/>
       <bind nodeset="/infant-child/consent" relevant=" /infant-child/n_child_visits =0"/>
       <bind nodeset="/infant-child/consent/child_consent_today" type="select1"/>
-      <bind nodeset="/infant-child/child_visit_intro_note" readonly="true()" relevant="selected( /infant-child/inputs/child_consent ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/infant-child/first_visit_6_months" relevant=" /infant-child/n_child_visits =0 and  /infant-child/inputs/child_consent =&quot;yes&quot; and (decimal-date-time(today())-decimal-date-time( /infant-child/child_date_of_birth )) &lt; 182.5"/>
+      <bind nodeset="/infant-child/child_visit_intro_note" readonly="true()" relevant="selected( /infant-child/consent/child_consent_today ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/infant-child/first_visit_6_months" relevant=" /infant-child/n_child_visits =0 and  /infant-child/consent/child_consent_today =&quot;yes&quot; and (decimal-date-time(today())-decimal-date-time( /infant-child/child_date_of_birth )) &lt; 182.5"/>
       <bind nodeset="/infant-child/first_visit_6_months/delivery_location" required="true()" type="select1"/>
       <bind nodeset="/infant-child/first_visit_6_months/child_card_available" required="true()" type="select1"/>
       <bind nodeset="/infant-child/first_visit_6_months/birthweight_on_child_card" relevant="selected( /infant-child/first_visit_6_months/child_card_available ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind constraint=". &gt;= 0.5 and . &lt;= 7" jr:constraintMsg="jr:itext('/infant-child/first_visit_6_months/child_birthweight:jr:constraintMsg')" nodeset="/infant-child/first_visit_6_months/child_birthweight" relevant="selected( /infant-child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant-child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)" required="true()" type="decimal"/>
       <bind nodeset="/infant-child/first_visit_6_months/child_size_birth" relevant="(selected( /infant-child/first_visit_6_months/birthweight_on_child_card ,&quot;no&quot;) or selected( /infant-child/first_visit_6_months/child_card_available ,&quot;no&quot;))" required="true()" type="select1"/>
       <bind nodeset="/infant-child/first_visit_6_months/normal_baby_note" readonly="true()" relevant=" /infant-child/first_visit_6_months/child_birthweight  &gt;= 2 or selected( /infant-child/first_visit_6_months/child_size_birth ,&quot;regular&quot;) or selected( /infant-child/first_visit_6_months/child_size_birth ,&quot;large&quot;)" type="string"/>
-      <bind nodeset="/infant-child/first_visit_6_months/small_baby_note" readonly="true()" relevant=" /infant-child/first_visit_6_months/child_birthweight  &lt; 2 or selected( /infant-child/first_visit_6_months/child_size_birth ,&quot;small&quot;)" type="string"/>
-      <bind nodeset="/infant-child/first_visit_6_months/has_received_small_baby_services" relevant=" /infant-child/first_visit_6_months/child_birthweight  &lt; 2 or selected( /infant-child/first_visit_6_months/child_size_birth ,&quot;small&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/first_visit_6_months/small_baby_note" readonly="true()" relevant="(selected( /infant-child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant-child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;) and  /infant-child/first_visit_6_months/child_birthweight  &lt; 2) or selected( /infant-child/first_visit_6_months/child_size_birth ,&quot;small&quot;)" type="string"/>
+      <bind nodeset="/infant-child/first_visit_6_months/has_received_small_baby_services" relevant="(selected( /infant-child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant-child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;) and  /infant-child/first_visit_6_months/child_birthweight  &lt; 2) or selected( /infant-child/first_visit_6_months/child_size_birth ,&quot;small&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant-child/first_visit_6_months/refer_small_baby_note" readonly="true()" relevant="selected( /infant-child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;)" type="string"/>
       <bind calculate="if(selected( /infant-child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;),1,0)" nodeset="/infant-child/first_visit_6_months/refer_flag_small_baby" type="string"/>
       <bind nodeset="/infant-child/first_visit_6_months/encourage_small_baby_note" readonly="true()" relevant="selected( /infant-child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/infant-child/child_danger_signs" relevant=" /infant-child/previous_child_consent =1 or  /infant-child/consent/child_consent_today =1"/>
-      <bind nodeset="/infant-child/child_danger_signs/danger_signs_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant-child/child_danger_signs/neonatal_screening" relevant="(decimal-date-time(today())-decimal-date-time( /infant-child/child_date_of_birth )) &lt;= 42"/>
-      <bind nodeset="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs" required="true()" type="select"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs" relevant="(decimal-date-time(today())-decimal-date-time( /infant-child/child_date_of_birth )) &lt;= 42 and ( /infant-child/previous_child_consent =&quot;yes&quot; or selected( /infant-child/consent/child_consent_today ,&quot;yes&quot;))"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_danger_signs_note" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_not_able_feed" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_had_convulsions" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_fever" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_cold" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_no_movement" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_diarrhea" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_eyes_pus" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_skin_boils" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/neonatal_excessive_crying" required="true()" type="select1"/>
+      <bind calculate="if(selected( /infant-child/neonatal_danger_signs/neonatal_not_able_feed ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_had_convulsions ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_fever ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_cold ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_no_movement ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_cord_bleeding ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_diarrhea ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_eyes_pus ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_skin_boils ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_excessive_vomiting ,'yes') or selected( /infant-child/neonatal_danger_signs/neonatal_excessive_crying ,'yes'),1,0)" nodeset="/infant-child/neonatal_danger_signs/refer_neonatal_danger_sign_flag" type="string"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs/has_neonatal_danger_note" readonly="true()" relevant=" /infant-child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1" type="string"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary" relevant="(decimal-date-time(today())-decimal-date-time( /infant-child/child_date_of_birth )) &lt;= 42 and  /infant-child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and ( /infant-child/previous_child_consent =&quot;yes&quot; or selected( /infant-child/consent/child_consent_today ,&quot;yes&quot;))"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool" required="true()" type="select1"/>
+      <bind calculate="if(selected( /infant-child/neonatal_danger_signs_secondary/neonatal_not_crying ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_blue_color ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_congenital ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_vomiting ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_no_urine ,'yes') or selected( /infant-child/neonatal_danger_signs_secondary/neonatal_no_stool ,'yes'),1,0)" nodeset="/infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_flag" type="string"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note" readonly="true()" relevant=" /infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_flag =1" type="string"/>
+      <bind nodeset="/infant-child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note" readonly="true()" relevant=" /infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_flag =0" type="string"/>
+      <bind nodeset="/infant-child/child_danger_signs" relevant="(decimal-date-time(today())-decimal-date-time( /infant-child/child_date_of_birth )) &gt; 42 and ( /infant-child/previous_child_consent =&quot;yes&quot; or selected( /infant-child/consent/child_consent_today ,&quot;yes&quot;))"/>
+      <bind nodeset="/infant-child/child_danger_signs/child_drink" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/child_danger_signs/child_vomit" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/child_danger_signs/child_convulsions" required="true()" type="select1"/>
+      <bind nodeset="/infant-child/child_danger_signs/child_lethargic" required="true()" type="select1"/>
+      <bind calculate="if(selected( /infant-child/child_danger_signs/child_drink ,&quot;no&quot;) or selected( /infant-child/child_danger_signs/child_vomit ,&quot;yes&quot;) or selected( /infant-child/child_danger_signs/child_convulsions ,&quot;yes&quot;) or selected( /infant-child/child_danger_signs/child_lethargic ,&quot;yes&quot;),1,0)" nodeset="/infant-child/child_danger_signs/refer_child_danger_sign_flag" type="string"/>
+      <bind nodeset="/infant-child/child_danger_signs/child_danger_sign_note" readonly="true()" relevant=" /infant-child/child_danger_signs/refer_child_danger_sign_flag =1" type="string"/>
+      <bind nodeset="/infant-child/child_danger_signs/no_child_danger_sign_note" readonly="true()" relevant=" /infant-child/child_danger_signs/refer_child_danger_sign_flag =0" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/infant-child/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -523,73 +1020,328 @@ SAY: I'd like to enroll <output value=" /infant-child/child_name "/> into infant
         <label ref="jr:itext('/infant-child/first_visit_6_months/encourage_small_baby_note:label')"/>
       </input>
     </group>
-    <group ref="/infant-child/child_danger_signs">
-      <label ref="jr:itext('/infant-child/child_danger_signs:label')"/>
-      <input ref="/infant-child/child_danger_signs/danger_signs_intro_note">
-        <label ref="jr:itext('/infant-child/child_danger_signs/danger_signs_intro_note:label')"/>
+    <group ref="/infant-child/neonatal_danger_signs">
+      <label ref="jr:itext('/infant-child/neonatal_danger_signs:label')"/>
+      <input ref="/infant-child/neonatal_danger_signs/neonatal_danger_signs_note">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_danger_signs_note:label')"/>
       </input>
-      <group ref="/infant-child/child_danger_signs/neonatal_screening">
-        <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening:label')"/>
-        <select ref="/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs">
-          <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs:label')"/>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/not_able_feed:label')"/>
-            <value>not_able_feed</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/had_convulsions:label')"/>
-            <value>had_convulsions</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/difficulty_fast_breathing:label')"/>
-            <value>difficulty_fast_breathing</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/fever:label')"/>
-            <value>fever</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/cold:label')"/>
-            <value>cold</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/yellow_pale_palms:label')"/>
-            <value>yellow_pale_palms</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/no_movement:label')"/>
-            <value>no_movement</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/cord_bleeding:label')"/>
-            <value>cord_bleeding</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/diarrhea:label')"/>
-            <value>diarrhea</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/eyes_pus:label')"/>
-            <value>eyes_pus</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/skin_boils:label')"/>
-            <value>skin_boils</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/excessive_vomiting:label')"/>
-            <value>excessive_vomiting</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/excessive_crying:label')"/>
-            <value>excessive_crying</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant-child/child_danger_signs/neonatal_screening/neonatal_danger_signs/none:label')"/>
-            <value>none</value>
-          </item>
-        </select>
-      </group>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_not_able_feed">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_not_able_feed:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_not_able_feed/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_not_able_feed/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_had_convulsions">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_had_convulsions:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_had_convulsions/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_had_convulsions/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_fever">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_fever:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_fever/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_fever/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_cold">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_cold:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_cold/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_cold/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_yellow_pale_palms/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_no_movement">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_no_movement:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_no_movement/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_no_movement/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_cord_bleeding">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_cord_bleeding:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_cord_bleeding/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_cord_bleeding/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_diarrhea">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_diarrhea:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_diarrhea/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_diarrhea/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_eyes_pus">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_eyes_pus:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_eyes_pus/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_eyes_pus/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_skin_boils">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_skin_boils:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_skin_boils/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_skin_boils/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_excessive_vomiting/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs/neonatal_excessive_crying">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_excessive_crying:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_excessive_crying/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs/neonatal_excessive_crying/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/infant-child/neonatal_danger_signs/has_neonatal_danger_note">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs/has_neonatal_danger_note:label')"/>
+      </input>
+    </group>
+    <group ref="/infant-child/neonatal_danger_signs_secondary">
+      <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary:label')"/>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_not_crying/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_blue_color/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_eye_discharge/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_skin_rash/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_congenital">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_congenital:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_congenital/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_congenital/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_vomiting/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_no_urine/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/neonatal_no_stool/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note:label')"/>
+      </input>
+      <input ref="/infant-child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note">
+        <label ref="jr:itext('/infant-child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note:label')"/>
+      </input>
+    </group>
+    <group ref="/infant-child/child_danger_signs">
+      <select1 ref="/infant-child/child_danger_signs/child_drink">
+        <label ref="jr:itext('/infant-child/child_danger_signs/child_drink:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_drink/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_drink/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/child_danger_signs/child_vomit">
+        <label ref="jr:itext('/infant-child/child_danger_signs/child_vomit:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_vomit/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_vomit/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/child_danger_signs/child_convulsions">
+        <label ref="jr:itext('/infant-child/child_danger_signs/child_convulsions:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_convulsions/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_convulsions/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant-child/child_danger_signs/child_lethargic">
+        <label ref="jr:itext('/infant-child/child_danger_signs/child_lethargic:label')"/>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_lethargic/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant-child/child_danger_signs/child_lethargic/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/infant-child/child_danger_signs/child_danger_sign_note">
+        <label ref="jr:itext('/infant-child/child_danger_signs/child_danger_sign_note:label')"/>
+      </input>
+      <input ref="/infant-child/child_danger_signs/no_child_danger_sign_note">
+        <label ref="jr:itext('/infant-child/child_danger_signs/no_child_danger_sign_note:label')"/>
+      </input>
     </group>
   </h:body>
 </h:html>
