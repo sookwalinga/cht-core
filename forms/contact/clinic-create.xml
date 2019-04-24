@@ -80,9 +80,6 @@
           <text id="/data/household_location/house_number:label">
             <value>House number:</value>
           </text>
-          <text id="/data/household_location/household_gps:hint">
-            <value>Make sure location services on your phone are turned on.</value>
-          </text>
           <text id="/data/household_location/intro_note:label">
             <value>_The purpose of the following questions regarding the household location is to help you locate this house again when it is time to return for another visit to the people who live here. Enter the information that you will need to help you easily find this house again when you need to before you approach the household. What is the address of this household?_</value>
           </text>
@@ -357,9 +354,6 @@
           <text id="/data/household_location/house_number:label">
             <value>Nambari ya nyumba:</value>
           </text>
-          <text id="/data/household_location/household_gps:hint">
-            <value>Hakikisha unawasha GPS kwenye simu yako</value>
-          </text>
           <text id="/data/household_location/intro_note:label">
             <value>Lengo la maswali haya yanayouliza kuhusu eneo la kaya ni kwajili ya kukusaidia kuweza kuitambua kwa urahisi kaya wakati wa kutaka kurudia kufanya matembeleo mengine kwa watu wanaoishi humu. Ingiza taarifa zitazoweza kukusaidia kiurahisi kuitambua kaya hii pindi unapotaka kuirudia tena. Kabla ya kuifika kaya hii. Ni ipi anuani ya nyumba hii?</value>
           </text>
@@ -552,7 +546,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-04-17 11-30">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-04-23 10-49">
           <inputs>
             <meta>
               <location>
@@ -668,7 +662,6 @@
             <travel_time/>
             <means_of_travel_house/>
             <means_of_travel_other/>
-            <household_gps/>
           </household_location>
           <end_registration_note/>
           <meta tag="hidden">
@@ -747,7 +740,6 @@
       <bind constraint=". &gt; 0 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')" nodeset="/data/household_location/travel_time" required="true()" type="int"/>
       <bind nodeset="/data/household_location/means_of_travel_house" required="true()" type="select1"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')" nodeset="/data/household_location/means_of_travel_other" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/data/household_location/household_gps" type="geopoint"/>
       <bind nodeset="/data/end_registration_note" readonly="true()" type="string"/>
       <bind calculate="." nodeset="/data/clinic/parent" type="string"/>
       <bind calculate="concat(../../contact/first_name,../../contact/last_name, ' Household')" nodeset="/data/clinic/name" type="string"/>
@@ -960,7 +952,6 @@
       <input ref="/data/household_location/means_of_travel_other">
         <label ref="jr:itext('/data/household_location/means_of_travel_other:label')"/>
       </input>
-      <input ref="/data/household_location/household_gps"/>
     </group>
     <input ref="/data/end_registration_note">
       <label ref="jr:itext('/data/end_registration_note:label')"/>
