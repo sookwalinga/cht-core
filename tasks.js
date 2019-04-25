@@ -1,19 +1,25 @@
-[
+module.exports = [
+  // first infant-child visit
   {
-    icon: 'mother-child',
-    title: [ { locale:'en', content:'Postnatal visit needed' } ],
-    appliesTo: 'reports',
-    appliesToType: [ 'delivery' ],
-    actions: [ { form:'postnatal_visit' } ],
+    icon: 'child',
+    title: 'task.infant_child',
+    appliesTo: 'contacts',
+    appliesIf: function(c, r) {
+      return isChildUnderFive(c);
+    },
+    appliesToType: [ 'person' ],
+    actions: [{
+      form: 'infant_child',
+      modifyContent: function(content, c, r) {
+        content.child_consent = hasGivenConsent(c);
+        content.num_child_visits = countReportsSubmitted(c, 'infant_child');
+        content.small_baby = isSmallBaby(c);
+      }
+    }],
     events: [
       {
-        id: 'postnatal-visit-1',
-        days:7, start:2, end:2,
-      },
-      {
-        id: 'postnatal-visit-2',
-        days:14, start:2, end:2,
+        id:'infant_child_first_visit', days:0, start:0, end:300,
       }
     ]
   }
-]
+];

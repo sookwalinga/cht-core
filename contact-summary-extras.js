@@ -1,21 +1,21 @@
-function isChildUnder5(c) {
-  var birthDate = new Date(c.contact.date_of_birth);
+function isChildUnder5() {
+  var birthDate = new Date(contact.date_of_birth);
   var ageInMs = new Date(now - birthDate.getTime());
   var ageInMonths = (Math.abs(ageInMs.getFullYear() - 1970) * 12) + ageInMs.getMonth();
   return ageInMonths < 60;
 }
 
-function countReportsSubmitted(c, form) {
+function countReportsSubmitted(form) {
   var reportsFound = [];
-  reportsFound = c.contact.reports.filter(function(r) {
+  reportsFound = contact.reports.filter(function(r) {
     return r.form === form;
   });
   return reportsFound.length;
 }
 
-function hasGivenConsent(c) {
+function hasGivenConsent() {
   var reportsFound = [];
-  reportsFound = c.contact.reports.filter(function(r) {
+  reportsFound = contact.reports.filter(function(r) {
     return r.form === 'infant_child' && r.fields && r.fields.consent && r.fields.consent.child_consent_today !== '';
   });
   if(reportsFound.length > 0){
@@ -24,19 +24,13 @@ function hasGivenConsent(c) {
         return 'yes';
       }
     });
-/*
-    var mostRecentInfantChild = getMostRecentReport(reportsFound, 'infant_child');
-    if (mostRecentInfantChild){
-      consent = mostRecentInfantChild.consent.child_consent_today;
-    }
-*/
   }
   return 'no';
 }
 
-function isSmallBaby(c) {
+function isSmallBaby() {
   var reportsFound = [];
-  reportsFound = c.contact.reports.filter(function(r) {
+  reportsFound = contact.reports.filter(function(r) {
     return r.form === 'infant_child' && r.fields && r.fields.first_visit_6_months && r.fields.first_visit_6_months.small_baby_today !== '';
   });
   if(reportsFound.length > 0){
