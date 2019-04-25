@@ -2860,7 +2860,7 @@
         </translation>
       </itext>
       <instance>
-        <infant_child delimiter="#" id="infant_child" prefix="J1!infant_child!" version="2019-04-24 00:00:00">
+        <infant_child delimiter="#" id="infant_child" prefix="J1!infant_child!" version="2019-04-25 00:00:00">
           <inputs>
             <meta>
               <location>
@@ -3184,6 +3184,7 @@
         </infant_child>
       </instance>
       <instance id="contact-summary"/>
+      <bind nodeset="/infant_child/inputs" relevant="./source = 'user'"/>
       <bind nodeset="/infant_child/inputs/child_consent" type="string"/>
       <bind nodeset="/infant_child/inputs/num_child_visits" type="string"/>
       <bind nodeset="/infant_child/inputs/small_baby" type="string"/>
@@ -3461,8 +3462,8 @@
       <bind calculate="concat('uuid:', uuid())" nodeset="/infant_child/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
-  <h:body>
-    <group appearance="hidden" ref="/infant_child/inputs">
+  <h:body class="pages">
+    <group appearance="field-list" ref="/infant_child/inputs">
       <input ref="/infant_child/inputs/child_consent"/>
       <input ref="/infant_child/inputs/num_child_visits"/>
       <input ref="/infant_child/inputs/small_baby"/>
