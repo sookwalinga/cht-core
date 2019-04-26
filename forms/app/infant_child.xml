@@ -4001,6 +4001,7 @@ ASK: have you ever breastfed?</value>
         </infant_child>
       </instance>
       <instance id="contact-summary"/>
+      <bind nodeset="/infant_child/inputs" relevant="./source = 'user'"/>
       <bind nodeset="/infant_child/inputs/child_consent" type="string"/>
       <bind nodeset="/infant_child/inputs/num_child_visits" type="string"/>
       <bind nodeset="/infant_child/inputs/small_baby" type="string"/>
@@ -4360,7 +4361,7 @@ ASK: have you ever breastfed?</value>
       <input ref="/infant_child/inputs/pcvi3"/>
       <input ref="/infant_child/inputs/surua_rubella1"/>
       <input ref="/infant_child/inputs/surua_rubella2"/>
-      <group appearance="hidden" ref="/infant_child/inputs/user">
+      <group ref="/infant_child/inputs/user">
         <input ref="/infant_child/inputs/user/contact_id">
           <label ref="jr:itext('/infant_child/inputs/user/contact_id:label')"/>
         </input>
@@ -4371,7 +4372,7 @@ ASK: have you ever breastfed?</value>
           <label ref="jr:itext('/infant_child/inputs/user/name:label')"/>
         </input>
       </group>
-      <group appearance="hidden" ref="/infant_child/inputs/contact">
+      <group ref="/infant_child/inputs/contact">
         <input appearance="db-object" ref="/infant_child/inputs/contact/_id"/>
         <input ref="/infant_child/inputs/contact/name"/>
         <input ref="/infant_child/inputs/contact/sex"/>
