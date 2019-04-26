@@ -7,7 +7,7 @@
     appliesTo: 'contacts',
     appliesIf: function(c) {
       console.log("Logging from tasks ...", c);
-      return isChildUnder5(c);
+      return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && isChildUnder5(c);
     },
     appliesToType: [ 'person' ],
     actions: [{

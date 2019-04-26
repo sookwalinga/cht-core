@@ -22,7 +22,7 @@ function isChildUnder5(c) {
   if(c.contact && c.contact.date_of_birth) {
     var birthDate = new Date(c.contact.date_of_birth);
     var ageInMs = new Date(now - birthDate.getTime());
-    var ageInMonths = (Math.abs(ageInMs.getFullYear() - 1970) * 12) + ageInMs.getMonth();
+    var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30)); //Math.abs(ageInMs.getFullYear() - 1970) * 12) + ageInMs.getMonth();
     return ageInMonths < 60;
   }
   return false;

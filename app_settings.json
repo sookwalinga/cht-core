@@ -63,11 +63,12 @@
     "analytics": {
       "name": "usertype.analytics"
     },
+    "chv": {
+      "name": "usertype.chv",
+      "offline": true
+    },
     "supervisor": {
       "name": "usertype.supervisor"
-    },
-    "chv": {
-      "name": "usertype.chv"
     }
   },
   "permissions": {
@@ -92,7 +93,9 @@
       "national_admin",
       "district_admin",
       "analytics",
-      "gateway"
+      "gateway",
+      "chv",
+      "supervisor"
     ],
     "can_view_unallocated_data_records": [
       "national_admin",
@@ -115,13 +118,20 @@
     "can_update_users": [
       "national_admin"
     ],
-    "can_update_people": [],
-    "can_update_places": [],
+    "can_update_people": [
+      "chv",
+      "supervisor"
+    ],
+    "can_update_places": [
+      "chv"
+    ],
     "can_create_records": [
       "national_admin",
       "district_admin",
       "data_entry",
-      "gateway"
+      "gateway",
+      "chv",
+      "supervisor"
     ],
     "can_access_gateway_api": [
       "gateway"
@@ -130,16 +140,22 @@
       "national_admin"
     ],
     "can_create_people": [
-      "district_admin"
+      "district_admin",
+      "chv"
     ],
     "can_create_places": [
-      "district_admin"
+      "district_admin",
+      "chv"
     ],
     "can_view_tasks": [
-      "district_admin"
+      "district_admin",
+      "chv",
+      "supervisor"
     ],
     "can_view_tasks_tab": [
-      "district_admin"
+      "district_admin",
+      "chv",
+      "supervisor"
     ],
     "can_configure": [
       "national_admin"
@@ -163,19 +179,27 @@
     "can_view_analytics": [
       "national_admin",
       "district_admin",
-      "analytics"
+      "analytics",
+      "chv",
+      "supervisor"
     ],
     "can_view_analytics_tab": [
       "national_admin",
-      "district_admin"
+      "district_admin",
+      "chv",
+      "supervisor"
     ],
     "can_view_contacts": [
       "national_admin",
-      "district_admin"
+      "district_admin",
+      "chv",
+      "supervisor"
     ],
     "can_view_contacts_tab": [
       "national_admin",
-      "district_admin"
+      "district_admin",
+      "chv",
+      "supervisor"
     ],
     "can_edit_profile": [
       "national_admin",
@@ -213,7 +237,10 @@
       "national_admin",
       "district_admin"
     ],
-    "can_view_last_visited_date": [],
+    "can_view_last_visited_date": [
+      "chv",
+      "supervisor"
+    ],
     "can_write_wealth_quintiles": []
   },
   "changes_controller": {
@@ -233,7 +260,7 @@
   "setup_complete": true,
   "contact_summary": "",
   "tasks": {
-    "rules": "define Target {_id: null,deleted: null,type: null,pass: null,date: null}define Contact {contact: null,reports: null}define Task {_id: null,deleted: null,doc: null,contact: null,icon: null,date: null,title: null,fields: null,resolved: null,priority: null,priorityLabel: null,reports: null,actions: null}rule GenerateEvents {when {c: Contact}then {var idx1,idx2,r,target,now=Utils.now();function isFormSubmittedInWindow(t,e,i,a,n){var s=!1,o=0;return t.forEach(function(t){!s&&0<=e.indexOf(t.form)&&t.reported_date>=i&&t.reported_date<=a&&(o++,(!n||t.fields&&t.fields.follow_up_count>n||n<=o)&&(s=!0))}),s}function isChildUnder5(t){if(t.contact&&t.contact.date_of_birth){var e=new Date(t.contact.date_of_birth),i=new Date(now-e.getTime());return 12*Math.abs(i.getFullYear()-1970)+i.getMonth()<60}return!1}function countReportsSubmitted(t,e){return t&&t.reports?t.reports.filter(function(t){return t.form===e}).length:0}function hasGivenConsent(t){var e='',i=[];t&&t.reports&&(0<(i=t.reports.filter(function(t){return'infant_child'===t.form&&t.fields&&t.fields.consent&&''!==t.fields.consent.child_consent_today})).length&&(e=Utils.getMostRecentReport(i,'infant_child').fields.consent.child_consent_today));return e}function isSmallBaby(t){var e,i=[];t&&t.reports&&(0<(i=t.reports.filter(function(t){return'infant_child'===t.form&&t.fields&&t.fields.first_visit_6_months&&''!==t.fields.first_visit_6_months.small_baby_today})).length&&(e=Utils.getMostRecentReport(i,'infant_child').fields.first_visit_6_months.small_baby_today));return e}var targets=[],tasks=[{icon:'child',title:[{locale:'en',content:'Infant-Child visit'}],appliesTo:'contacts',appliesIf:function(t){return console.log('Logging from tasks ...',t),isChildUnder5(t)},appliesToType:['person'],actions:[{form:'infant_child',modifyContent:function(t,e){e.child_consent=hasGivenConsent(t),e.num_child_visits=countReportsSubmitted(t,'infant_child'),e.small_baby=isSmallBaby(t)}}],events:[{id:'infant_child_first_visit',days:0,start:0,end:21}],resolvedIf:function(t,e,i,a){return isFormSubmittedInWindow(t.reports,'infant_child',Utils.addDate(a,-i.start).getTime(),Utils.addDate(a,i.end+1).getTime())}}];for(idx1=0;idx1<targets.length;++idx1)switch((target=targets[idx1]).appliesTo){case'contacts':c.contact&&-1!==target.appliesToType.indexOf(c.contact.type)&&emitContactBasedTargetFor(c,target);break;case'reports':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitReportBasedTargetFor(c,r,target);break;default:throw new Error('unrecognised target type: '+target.appliesTo)}if(tasks)for(idx1=0;idx1<tasks.length;++idx1){var task=tasks[idx1];switch(task.appliesTo){case'reports':case'scheduled_tasks':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitTasksForSchedule(c,task,r);break;case'contacts':c.contact&&-1!==task.appliesToType.indexOf(c.contact.type)&&emitTasksForSchedule(c,task);break;default:throw new Error('unrecognised task type: '+task.appliesTo)}}function emitTasksForSchedule(o,r,d){var t;if((!d||!r.appliesToType||-1!==r.appliesToType.indexOf(d.form))&&('scheduled_tasks'===r.appliesTo||!r.appliesIf||r.appliesIf(o,d)))if('scheduled_tasks'===r.appliesTo){if(d&&r.appliesIf){if(!d.scheduled_tasks)return;for(t=0;t<d.scheduled_tasks.length;t++)r.appliesIf(o,d,t)&&e(t)}}else e();function e(t){var e,i,a,n,s=null;for(e=0;e<r.events.length;e++)i=r.events[e],s=d?i.dueDate?i.dueDate(d,i,t):void 0!==t?new Date(Utils.addDate(new Date(d.scheduled_tasks[t].due),i.days)):new Date(Utils.addDate(new Date(d.reported_date),i.days)):i.dueDate?i.dueDate(o.contact,i,t):new Date(Utils.addDate(new Date(o.contact.reported_date),i.days)),Utils.isTimely(s,i)&&(n={_id:d?d._id+'-'+i.id:o.contact._id+'-'+r.id,deleted:!(!(o.contact&&o.contact.deleted||d)||!d.deleted),doc:o,contact:o.contact,icon:r.icon,date:s,title:r.title,resolved:r.resolvedIf(o,d,i,s,t),actions:r.actions.map(c)},void 0!==t&&(n._id+='-'+t),'function'==typeof(a=r.priority)&&(a=a(o,d)),a&&(n.priority=a.level,n.priorityLabel=a.label),emit('task',new Task(n)))}function c(t){var e={source:'task',source_id:d&&d._id,contact:o.contact};return t.modifyContent&&t.modifyContent(d,e),{type:'report',form:t.form,label:t.label||'Follow up',content:e}}}function emitContactBasedTargetFor(t,e){if(!e.appliesIf||e.appliesIf(t)){var i=!e.passesIf||!!e.passesIf(t),a=createTargetInstance(e.id,t.contact,i);if('function'==typeof e.date)a.date=e.date(t);else if(void 0===e.date||'now'===e.date)a.date=now.getTime();else{if('reported'!==e.date)throw new Error('Unrecognised value for target.date: '+e.date);a.date=t.reported_date}emitTargetInstance(a)}}function emitReportBasedTargetFor(t,e,i){var a,n;if(!i.appliesIf||i.appliesIf(t,e))if(i.emitCustom)i.emitCustom(t,e);else switch(n=!i.passesIf||!!i.passesIf(t,e),(a=createTargetInstance(i.id,e,n))._id=('report'===i.idType?e._id:t.contact._id)+'-'+i.id,emitTargetInstance(a),i.date){case'now':a.date=now.getTime()}}function createTargetInstance(t,e,i){return new Target({_id:e._id+'-'+t,deleted:!!e.deleted,type:t,pass:i,date:e.reported_date})}function emitTargetInstance(t){emit('target',t)}emit('_complete',{_id:!0});}}",
+    "rules": "define Target {_id: null,deleted: null,type: null,pass: null,date: null}define Contact {contact: null,reports: null}define Task {_id: null,deleted: null,doc: null,contact: null,icon: null,date: null,title: null,fields: null,resolved: null,priority: null,priorityLabel: null,reports: null,actions: null}rule GenerateEvents {when {c: Contact}then {var idx1,idx2,r,target,now=Utils.now();function isFormSubmittedInWindow(t,e,a,i,n){var s=!1,r=0;return t.forEach(function(t){!s&&0<=e.indexOf(t.form)&&t.reported_date>=a&&t.reported_date<=i&&(r++,(!n||t.fields&&t.fields.follow_up_count>n||n<=r)&&(s=!0))}),s}function isChildUnder5(t){if(t.contact&&t.contact.date_of_birth){var e=new Date(t.contact.date_of_birth),a=new Date(now-e.getTime());return Math.round(a/2592e6)<60}return!1}function countReportsSubmitted(t,e){return t&&t.reports?t.reports.filter(function(t){return t.form===e}).length:0}function hasGivenConsent(t){var e='',a=[];t&&t.reports&&(0<(a=t.reports.filter(function(t){return'infant_child'===t.form&&t.fields&&t.fields.consent&&''!==t.fields.consent.child_consent_today})).length&&(e=Utils.getMostRecentReport(a,'infant_child').fields.consent.child_consent_today));return e}function isSmallBaby(t){var e,a=[];t&&t.reports&&(0<(a=t.reports.filter(function(t){return'infant_child'===t.form&&t.fields&&t.fields.first_visit_6_months&&''!==t.fields.first_visit_6_months.small_baby_today})).length&&(e=Utils.getMostRecentReport(a,'infant_child').fields.first_visit_6_months.small_baby_today));return e}var targets=[],tasks=[{icon:'child',title:[{locale:'en',content:'Infant-Child visit'}],appliesTo:'contacts',appliesIf:function(t){return console.log('Logging from tasks ...',t),t.contact.parent&&t.contact.parent.parent&&t.contact.parent.parent.parent&&isChildUnder5(t)},appliesToType:['person'],actions:[{form:'infant_child',modifyContent:function(t,e){e.child_consent=hasGivenConsent(t),e.num_child_visits=countReportsSubmitted(t,'infant_child'),e.small_baby=isSmallBaby(t)}}],events:[{id:'infant_child_first_visit',days:0,start:0,end:21}],resolvedIf:function(t,e,a,i){return isFormSubmittedInWindow(t.reports,'infant_child',Utils.addDate(i,-a.start).getTime(),Utils.addDate(i,a.end+1).getTime())}}];for(idx1=0;idx1<targets.length;++idx1)switch((target=targets[idx1]).appliesTo){case'contacts':c.contact&&-1!==target.appliesToType.indexOf(c.contact.type)&&emitContactBasedTargetFor(c,target);break;case'reports':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitReportBasedTargetFor(c,r,target);break;default:throw new Error('unrecognised target type: '+target.appliesTo)}if(tasks)for(idx1=0;idx1<tasks.length;++idx1){var task=tasks[idx1];switch(task.appliesTo){case'reports':case'scheduled_tasks':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitTasksForSchedule(c,task,r);break;case'contacts':c.contact&&-1!==task.appliesToType.indexOf(c.contact.type)&&emitTasksForSchedule(c,task);break;default:throw new Error('unrecognised task type: '+task.appliesTo)}}function emitTasksForSchedule(r,o,d){var t;if((!d||!o.appliesToType||-1!==o.appliesToType.indexOf(d.form))&&('scheduled_tasks'===o.appliesTo||!o.appliesIf||o.appliesIf(r,d)))if('scheduled_tasks'===o.appliesTo){if(d&&o.appliesIf){if(!d.scheduled_tasks)return;for(t=0;t<d.scheduled_tasks.length;t++)o.appliesIf(r,d,t)&&e(t)}}else e();function e(t){var e,a,i,n,s=null;for(e=0;e<o.events.length;e++)a=o.events[e],s=d?a.dueDate?a.dueDate(d,a,t):void 0!==t?new Date(Utils.addDate(new Date(d.scheduled_tasks[t].due),a.days)):new Date(Utils.addDate(new Date(d.reported_date),a.days)):a.dueDate?a.dueDate(r.contact,a,t):new Date(Utils.addDate(new Date(r.contact.reported_date),a.days)),Utils.isTimely(s,a)&&(n={_id:d?d._id+'-'+a.id:r.contact._id+'-'+o.id,deleted:!(!(r.contact&&r.contact.deleted||d)||!d.deleted),doc:r,contact:r.contact,icon:o.icon,date:s,title:o.title,resolved:o.resolvedIf(r,d,a,s,t),actions:o.actions.map(c)},void 0!==t&&(n._id+='-'+t),'function'==typeof(i=o.priority)&&(i=i(r,d)),i&&(n.priority=i.level,n.priorityLabel=i.label),emit('task',new Task(n)))}function c(t){var e={source:'task',source_id:d&&d._id,contact:r.contact};return t.modifyContent&&t.modifyContent(d,e),{type:'report',form:t.form,label:t.label||'Follow up',content:e}}}function emitContactBasedTargetFor(t,e){if(!e.appliesIf||e.appliesIf(t)){var a=!e.passesIf||!!e.passesIf(t),i=createTargetInstance(e.id,t.contact,a);if('function'==typeof e.date)i.date=e.date(t);else if(void 0===e.date||'now'===e.date)i.date=now.getTime();else{if('reported'!==e.date)throw new Error('Unrecognised value for target.date: '+e.date);i.date=t.reported_date}emitTargetInstance(i)}}function emitReportBasedTargetFor(t,e,a){var i,n;if(!a.appliesIf||a.appliesIf(t,e))if(a.emitCustom)a.emitCustom(t,e);else switch(n=!a.passesIf||!!a.passesIf(t,e),(i=createTargetInstance(a.id,e,n))._id=('report'===a.idType?e._id:t.contact._id)+'-'+a.id,emitTargetInstance(i),a.date){case'now':i.date=now.getTime()}}function createTargetInstance(t,e,a){return new Target({_id:e._id+'-'+t,deleted:!!e.deleted,type:t,pass:a,date:e.reported_date})}function emitTargetInstance(t){emit('target',t)}emit('_complete',{_id:!0});}}",
     "schedules": {},
     "targets": {
       "enabled": true,
