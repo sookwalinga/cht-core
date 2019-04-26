@@ -1,1 +1,1 @@
-var targets = []
+var targets = [];
