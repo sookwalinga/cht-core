@@ -68,3 +68,106 @@ function isSmallBaby(c) {
   }
   return small;
 }
+
+function getBcg(c) {
+  var result = 0;
+  var reportsFound = [];
+  if(c && c.reports) {
+    reportsFound = c.reports.filter(function(r) {
+      return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bcg === 'yes';
+    });
+    if(reportsFound.length > 0) {
+      result = 1;
+    }
+  }
+  return result;
+}
+
+function getBopv0(c) {
+  var result = 0;
+  var reportsFound = [];
+  if(c && c.reports) {
+    reportsFound = c.reports.filter(function(r) {
+      return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv0 === 'yes';
+    });
+    if(reportsFound.length > 0) {
+      result = 1;
+    }
+  }
+  return result;
+}
+
+function getBopv1(c) {
+  var result = 0;
+  var reportsFound = [];
+  if(c && c.reports) {
+    reportsFound = c.reports.filter(function(r) {
+      return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv1 === 'yes';
+    });
+    if(reportsFound.length > 0) {
+      result = 1;
+    }
+  }
+  return result;
+}
+
+// FIXME paste code below
+function getDtp_hepb_hib1() {
+  var result = 0;
+  return result;
+}
+
+function getPcvi1() {
+  var result = 0;
+  return result;
+}
+
+function getRota1() {
+  var result = 0;
+  return result;
+}
+
+function getBopv2() {
+  var result = 0;
+  return result;
+}
+
+function getDtp_hepb_hib2() {
+  var result = 0;
+  return result;
+}
+
+function getPcvi2() {
+  var result = 0;
+  return result;
+}
+
+function getRota2() {
+  var result = 0;
+  return result;
+}
+
+function getBopv3() {
+  var result = 0;
+  return result;
+}
+
+function getDtp_hepb_hib3() {
+  var result = 0;
+  return result;
+}
+
+function getPciv3() {
+  var result = 0;
+  return result;
+}
+
+function getSurua_rubella1() {
+  var result = 0;
+  return result;
+}
+
+function getSurua_rubella2() {
+  var result = 0;
+  return result;
+}
