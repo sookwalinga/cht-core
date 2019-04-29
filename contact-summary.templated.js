@@ -23,7 +23,7 @@ context= {
       fields: [
       {
           label: 'contact.profile.isunderfive',
-          value:  isChildUnder5(contact)?'contact.summary.yes':'contact.summary.no',   
+          value:  isAgeUnderFive(contact)?'contact.summary.yes':'contact.summary.no',   
           translate: true,    
           width: 6,            
         }
