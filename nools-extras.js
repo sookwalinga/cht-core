@@ -68,3 +68,15 @@ function isSmallBaby(c) {
   }
   return small;
 }
+
+function referralMade(report) {
+  // if this is to work for all forms, we'll need a standard way to store this
+  console.log("Satisfying jshint...", report);
+  return true;
+}
+
+function getReferralReasons(report) {
+  // if this is to work for all forms, we'll need a standard way to store this
+  console.log("Satisfying jshint...", report);
+  return "some very good reason<br>and another one";
+}
