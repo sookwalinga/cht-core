@@ -258,13 +258,46 @@
   "care_coordinator": "chw",
   "anc_registration_lmp": false,
   "setup_complete": true,
-  "contact_summary": "",
+  "contact_summary": "var context,fields,cards;function isAgeUnderFive(){console.log(contact);var e=new Date,t=new Date(contact.date_of_birth);return Math.round(Math.abs((e-t)/314496e5))<5}function getVisitCount(){console.debug(reports);return reports.filter(function(e){return'infant_child'===e.form}).length}function isReportValid(e){return e&&!(e.errors&&e.errors.length)}context={count_under_five_visits:6,current_year:2019,greeting:'Hello World!'},fields=[{appliesToType:'person',label:'contact.age',value:contact.date_of_birth,width:4,filter:'age'},{appliesToType:'person',label:'contact.sex',value:contact.sex,width:4},{appliesToType:'person',label:'contact.phone',value:contact.phone,width:4,filter:'phone'},{appliesToType:'person',label:'contact.parent',value:lineage,filter:'lineage'}],cards=[{label:'contact.profile.cohort',appliesTo:'contacts',appliesToType:'person',appliesIf:function(){return!0},fields:[{label:'contact.profile.isunderfive',value:isAgeUnderFive(contact)?'contact.summary.yes':'contact.summary.no',translate:!0,width:6}]},{label:'contact.profile.visit',appliesTo:'contacts',appliesToType:'person',appliesIf:isAgeUnderFive,fields:[{label:'contact.profile.visit',value:'contact.profile.visits.of',translate:!0,width:6,context:{count:function(){return getVisitCount(reports)},total:4}}]}];var result={cards:[],fields:fields.filter(function(e){if((e.appliesToType===contact.type||'!'===e.appliesToType.charAt(0)&&e.appliesToType.slice(1)!==contact.type)&&(!e.appliesIf||e.appliesIf()))return delete e.appliesToType,delete e.appliesIf,!0})};function addCard(e,a){if(e.appliesIf(a)){var t='function'==typeof e.fields?e.fields(a):e.fields.filter(function(e){switch(typeof e.appliesIf){case'undefined':return!0;case'function':return e.appliesIf(a);default:return e.appliesIf}}).map(function(e){var t={};return n(e,t,'label'),n(e,t,'value'),n(e,t,'translate'),n(e,t,'filter'),n(e,t,'width'),n(e,t,'icon'),e.context&&(t.context={},n(e.context,t.context,'count'),n(e.context,t.context,'total')),t});result.cards.push({label:e.label,fields:t}),e.modifyContext&&e.modifyContext(context,a)}function n(e,t,n){switch(typeof e[n]){case'undefined':return;case'function':t[n]=e[n](a);break;default:t[n]=e[n]}}}return cards.forEach(function(e){var t,n;switch(e.appliesToType){case'report':for(t=0;t<reports.length;++t)isReportValid(n=reports[t])&&addCard(e,n);break;default:if(contact.type!==e.appliesToType)return;addCard(e)}}),result.context=context,result;",
   "tasks": {
     "rules": "define Target {_id: null,deleted: null,type: null,pass: null,date: null}define Contact {contact: null,reports: null}define Task {_id: null,deleted: null,doc: null,contact: null,icon: null,date: null,title: null,fields: null,resolved: null,priority: null,priorityLabel: null,reports: null,actions: null}rule GenerateEvents {when {c: Contact}then {var idx1,idx2,r,target,now=Utils.now();function isFormSubmittedInWindow(t,e,a,i,n){var s=!1,r=0;return t.forEach(function(t){!s&&0<=e.indexOf(t.form)&&t.reported_date>=a&&t.reported_date<=i&&(r++,(!n||t.fields&&t.fields.follow_up_count>n||n<=r)&&(s=!0))}),s}function isChildUnder5(t){if(t.contact&&t.contact.date_of_birth){var e=new Date(t.contact.date_of_birth),a=new Date(now-e.getTime());return Math.round(a/2592e6)<60}return!1}function countReportsSubmitted(t,e){return t&&t.reports?t.reports.filter(function(t){return t.form===e}).length:0}function hasGivenConsent(t){var e='',a=[];t&&t.reports&&(0<(a=t.reports.filter(function(t){return'infant_child'===t.form&&t.fields&&t.fields.consent&&''!==t.fields.consent.child_consent_today})).length&&(e=Utils.getMostRecentReport(a,'infant_child').fields.consent.child_consent_today));return e}function isSmallBaby(t){var e,a=[];t&&t.reports&&(0<(a=t.reports.filter(function(t){return'infant_child'===t.form&&t.fields&&t.fields.first_visit_6_months&&''!==t.fields.first_visit_6_months.small_baby_today})).length&&(e=Utils.getMostRecentReport(a,'infant_child').fields.first_visit_6_months.small_baby_today));return e}var targets=[],tasks=[{icon:'child',title:[{locale:'en',content:'Infant-Child visit'}],appliesTo:'contacts',appliesIf:function(t){return console.log('Logging from tasks ...',t),t.contact.parent&&t.contact.parent.parent&&t.contact.parent.parent.parent&&isChildUnder5(t)},appliesToType:['person'],actions:[{form:'infant_child',modifyContent:function(t,e){e.child_consent=hasGivenConsent(t),e.num_child_visits=countReportsSubmitted(t,'infant_child'),e.small_baby=isSmallBaby(t)}}],events:[{id:'infant_child_first_visit',days:0,start:0,end:21}],resolvedIf:function(t,e,a,i){return isFormSubmittedInWindow(t.reports,'infant_child',Utils.addDate(i,-a.start).getTime(),Utils.addDate(i,a.end+1).getTime())}}];for(idx1=0;idx1<targets.length;++idx1)switch((target=targets[idx1]).appliesTo){case'contacts':c.contact&&-1!==target.appliesToType.indexOf(c.contact.type)&&emitContactBasedTargetFor(c,target);break;case'reports':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitReportBasedTargetFor(c,r,target);break;default:throw new Error('unrecognised target type: '+target.appliesTo)}if(tasks)for(idx1=0;idx1<tasks.length;++idx1){var task=tasks[idx1];switch(task.appliesTo){case'reports':case'scheduled_tasks':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitTasksForSchedule(c,task,r);break;case'contacts':c.contact&&-1!==task.appliesToType.indexOf(c.contact.type)&&emitTasksForSchedule(c,task);break;default:throw new Error('unrecognised task type: '+task.appliesTo)}}function emitTasksForSchedule(r,o,d){var t;if((!d||!o.appliesToType||-1!==o.appliesToType.indexOf(d.form))&&('scheduled_tasks'===o.appliesTo||!o.appliesIf||o.appliesIf(r,d)))if('scheduled_tasks'===o.appliesTo){if(d&&o.appliesIf){if(!d.scheduled_tasks)return;for(t=0;t<d.scheduled_tasks.length;t++)o.appliesIf(r,d,t)&&e(t)}}else e();function e(t){var e,a,i,n,s=null;for(e=0;e<o.events.length;e++)a=o.events[e],s=d?a.dueDate?a.dueDate(d,a,t):void 0!==t?new Date(Utils.addDate(new Date(d.scheduled_tasks[t].due),a.days)):new Date(Utils.addDate(new Date(d.reported_date),a.days)):a.dueDate?a.dueDate(r.contact,a,t):new Date(Utils.addDate(new Date(r.contact.reported_date),a.days)),Utils.isTimely(s,a)&&(n={_id:d?d._id+'-'+a.id:r.contact._id+'-'+o.id,deleted:!(!(r.contact&&r.contact.deleted||d)||!d.deleted),doc:r,contact:r.contact,icon:o.icon,date:s,title:o.title,resolved:o.resolvedIf(r,d,a,s,t),actions:o.actions.map(c)},void 0!==t&&(n._id+='-'+t),'function'==typeof(i=o.priority)&&(i=i(r,d)),i&&(n.priority=i.level,n.priorityLabel=i.label),emit('task',new Task(n)))}function c(t){var e={source:'task',source_id:d&&d._id,contact:r.contact};return t.modifyContent&&t.modifyContent(d,e),{type:'report',form:t.form,label:t.label||'Follow up',content:e}}}function emitContactBasedTargetFor(t,e){if(!e.appliesIf||e.appliesIf(t)){var a=!e.passesIf||!!e.passesIf(t),i=createTargetInstance(e.id,t.contact,a);if('function'==typeof e.date)i.date=e.date(t);else if(void 0===e.date||'now'===e.date)i.date=now.getTime();else{if('reported'!==e.date)throw new Error('Unrecognised value for target.date: '+e.date);i.date=t.reported_date}emitTargetInstance(i)}}function emitReportBasedTargetFor(t,e,a){var i,n;if(!a.appliesIf||a.appliesIf(t,e))if(a.emitCustom)a.emitCustom(t,e);else switch(n=!a.passesIf||!!a.passesIf(t,e),(i=createTargetInstance(a.id,e,n))._id=('report'===a.idType?e._id:t.contact._id)+'-'+a.id,emitTargetInstance(i),a.date){case'now':i.date=now.getTime()}}function createTargetInstance(t,e,a){return new Target({_id:e._id+'-'+t,deleted:!!e.deleted,type:t,pass:a,date:e.reported_date})}function emitTargetInstance(t){emit('target',t)}emit('_complete',{_id:!0});}}",
     "schedules": {},
     "targets": {
       "enabled": true,
-      "items": []
+      "items": [
+        {
+          "id": "children-under-5",
+          "type": "count",
+          "goal": 100,
+          "translation_key": "targets.children_u5.title",
+          "subtitle_translation_key": "targets.all_time.subtitle",
+          "icon": "icon-people-child"
+        },
+        {
+          "id": "children-under-5-this-month",
+          "type": "percent",
+          "goal": 20,
+          "translation_key": "targets.children_u5_visited.title",
+          "subtitle_translation_key": "targets.this_month.subtitle",
+          "icon": "icon-people-child"
+        },
+        {
+          "id": "under5-visitedtwiceormore-thismonth",
+          "type": "percent",
+          "goal": 20,
+          "translation_key": "targets.children_u1.multivisit",
+          "subtitle_translation_key": "targets.this_month.subtitle",
+          "icon": "icon-people-child"
+        },
+        {
+          "id": "children-born-at-home",
+          "type": "count",
+          "goal": 100,
+          "translation_key": "targets.born.athome",
+          "subtitle_translation_key": "targets.all_time.subtitle",
+          "icon": "icon-people-child"
+        }
+      ]
     }
   }
 }

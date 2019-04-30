@@ -6,8 +6,7 @@
     },
     "context": {
         "person": false,
-        "place": true,
-        "expression": "contact.type === 'clinic' && user.parent.type === 'health_center' && user._id != contact._id"
+        "place": false
     },
     "hidden_fields": [
 

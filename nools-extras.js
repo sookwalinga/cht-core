@@ -68,3 +68,39 @@ function isSmallBaby(c) {
   }
   return small;
 }
+
+function isAgeUnderFive(c) {
+    var oneDay = 24 * 60 * 60 * 1000;   
+    var today = new Date();
+    var birthDate = new Date(c.contact.date_of_birth);
+    var ageInYears =  Math.round(Math.abs((today - birthDate)/ (oneDay * 7 * 52)));
+   if(ageInYears < 5) 
+     return true;   
+  return false; 
+} 
+
+function isAgeUnderOne(c) {
+    var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds 
+    var today = new Date();
+    var birthDate = new Date(c.contact.date_of_birth);
+    var ageInYears =  Math.round((today - birthDate)/ (oneDay * 7* 52));
+   if(ageInYears < 1) {
+   console.log("Inside ageInYrs < 1"); 
+     return true; 
+     }     
+  return false; 
+} 
+
+
+function getVisitCount(r) { 
+    var count = [];     
+    count = r.reports.filter(function(r){  
+         return r.form === "infant_child";              			
+    });
+    return count.length; 	
+}
+
+function isAgeUnderOneAndVisited(c)
+{    
+     return isAgeUnderOne(c) && getVisitCount(c) > 0; 
+}
