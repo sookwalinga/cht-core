@@ -1,4 +1,4 @@
-[
+module.exports = [
   // first infant-child visit
   // FIXME add translation key 'task.infant_child'
   {
@@ -45,4 +45,4 @@
                  Utils.addDate(dueDate,  event.end+1).getTime());
     },
   }
-]
+];
