@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Referral Follow-up</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/referral_follow_up/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/referral_follow_up/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/referral_follow_up/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/congratulate:label">
+            <value>Congratulate the client on making the visit to the health facility.</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/complete_referral/no:label">
+            <value>No</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/complete_referral/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/complete_referral:label">
+            <value>ASK: Do you think you need to complete this referral?</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/discuss_reasons:label">
+            <value>Discuss the reasons, and try to solve the problems through advice, and plan how the client may get services.</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/next_follow_up:label">
+            <value>I will come back 3 days from now to make sure you completed this referral.</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/did_not_want:label">
+            <value>I did not want to go</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/no_money:label">
+            <value>I have no money</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/no_permission:label">
+            <value>I did not have permission to go</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go:label">
+            <value>ASK: Why did you not go to the facility?</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/got_services/no:label">
+            <value>No</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/got_services/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/got_services:label">
+            <value>ASK: Did you get the services?</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/intro:label">
+            <value>SAY: I'm coming to check up on you. On my visit on {last_visit_date}, I gave you a referral to the health facility for the following reasons:
+{referral_reasons}</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reasons_no_services:label">
+            <value>Discuss the reasons, and try to solve the problems and plan for the referral completion.</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/went_to_facility/no:label">
+            <value>No</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/went_to_facility/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/went_to_facility:label">
+            <value>AKS: Did you go to the health facility?</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up:label">
+            <value>Referral follow-up</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/referral_follow_up/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/congratulate:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/complete_referral/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/complete_referral/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/complete_referral:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/discuss_reasons:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/next_follow_up:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/did_not_want:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/no_money:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/no_permission:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/other:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/got_services/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/got_services/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/got_services:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/intro:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reasons_no_services:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/went_to_facility/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/went_to_facility/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/went_to_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <referral_follow_up delimiter="#" id="referral_follow_up" prefix="J1!referral_follow_up!" version="2019-04-29 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <last_visit_date/>
+            <referral_reasons/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client/>
+          <client_name/>
+          <last_visit/>
+          <reasons/>
+          <referral_follow_up>
+            <intro/>
+            <went_to_facility/>
+            <congratulate/>
+            <got_services/>
+            <reasons_no_services/>
+            <did_not_go>
+              <reason_didnt_go/>
+              <discuss_reasons/>
+              <complete_referral/>
+              <next_follow_up/>
+            </did_not_go>
+          </referral_follow_up>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </referral_follow_up>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/referral_follow_up/inputs/last_visit_date" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/referral_reasons" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/user/name" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/referral_follow_up/inputs/contact/name" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/contact/sex" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/contact/date_of_birth" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/referral_follow_up/client" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/referral_follow_up/client_name" type="string"/>
+      <bind calculate="../inputs/last_visit_date" nodeset="/referral_follow_up/last_visit" type="string"/>
+      <bind calculate="../inputs/reasons" nodeset="/referral_follow_up/reasons" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/intro" readonly="true()" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/went_to_facility" required="true()" type="select1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/congratulate" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/got_services" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reasons_no_services" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;) and selected( /referral_follow_up/referral_follow_up/got_services ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;no&quot;)"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go" required="true()" type="select"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/discuss_reasons" readonly="true()" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/complete_referral" required="true()" type="select1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/next_follow_up" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/did_not_go/complete_referral ,&quot;yes&quot;)" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/referral_follow_up/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="hidden" ref="/referral_follow_up/inputs">
+      <input ref="/referral_follow_up/inputs/last_visit_date"/>
+      <input ref="/referral_follow_up/inputs/referral_reasons"/>
+      <group ref="/referral_follow_up/inputs/user">
+        <input ref="/referral_follow_up/inputs/user/contact_id">
+          <label ref="jr:itext('/referral_follow_up/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/referral_follow_up/inputs/user/facility_id">
+          <label ref="jr:itext('/referral_follow_up/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/referral_follow_up/inputs/user/name">
+          <label ref="jr:itext('/referral_follow_up/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/referral_follow_up/inputs/contact">
+        <input appearance="db-object" ref="/referral_follow_up/inputs/contact/_id"/>
+        <input ref="/referral_follow_up/inputs/contact/name"/>
+        <input ref="/referral_follow_up/inputs/contact/sex"/>
+        <input ref="/referral_follow_up/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group ref="/referral_follow_up/referral_follow_up">
+      <label ref="jr:itext('/referral_follow_up/referral_follow_up:label')"/>
+      <input ref="/referral_follow_up/referral_follow_up/intro">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/intro:label')"/>
+      </input>
+      <select1 ref="/referral_follow_up/referral_follow_up/went_to_facility">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/went_to_facility:label')"/>
+        <item>
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/went_to_facility/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/went_to_facility/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/referral_follow_up/referral_follow_up/congratulate">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/congratulate:label')"/>
+      </input>
+      <select1 ref="/referral_follow_up/referral_follow_up/got_services">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/got_services:label')"/>
+        <item>
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/got_services/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/got_services/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/referral_follow_up/referral_follow_up/reasons_no_services">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reasons_no_services:label')"/>
+      </input>
+      <group ref="/referral_follow_up/referral_follow_up/did_not_go">
+        <select ref="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go">
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go:label')"/>
+          <item>
+            <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/no_money:label')"/>
+            <value>no_money</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/did_not_want:label')"/>
+            <value>did_not_want</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/no_permission:label')"/>
+            <value>no_permission</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go/other:label')"/>
+            <value>other</value>
+          </item>
+        </select>
+        <input ref="/referral_follow_up/referral_follow_up/did_not_go/discuss_reasons">
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/discuss_reasons:label')"/>
+        </input>
+        <select1 ref="/referral_follow_up/referral_follow_up/did_not_go/complete_referral">
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/complete_referral:label')"/>
+          <item>
+            <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/complete_referral/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/complete_referral/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/referral_follow_up/referral_follow_up/did_not_go/next_follow_up">
+          <label ref="jr:itext('/referral_follow_up/referral_follow_up/did_not_go/next_follow_up:label')"/>
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>
