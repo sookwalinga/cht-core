@@ -16,6 +16,21 @@
         content.child_consent = hasGivenConsent(c);
         content.num_child_visits = countReportsSubmitted(c, 'infant_child');
         content.small_baby = isSmallBaby(c);
+        content.bcg = getBcg(c);
+        content.bopv0 = getBopv0(c);
+        content.bopv1 = getBopv1(c);
+        content.dtp_hepb_hib1 = getDtp_hepb_hib1(c);
+        content.pcvi1 = getPcvi1(c);
+        content.rota1 = getRota1(c);
+        content.bopv2 = getBopv2(c);
+        content.dtp_hepb_hib2 = getDtp_hepb_hib2(c);
+        content.pcvi2 = getPcvi2(c);
+        content.rota2 = getRota2(c);
+        content.bopv3 = getBopv3(c);
+        content.dtp_hepb_hib3 = getDtp_hepb_hib3(c);
+        content.pcvi3 = getPciv3(c);
+        content.surua_rubella1 = getSurua_rubella1(c);
+        content.surua_rubella2 = getSurua_rubella2(c);
       }
     }],
     events: [
