@@ -48,7 +48,7 @@ module.exports = {
       var result = 0;
     var reportsFound = [];
     if(contact.reports) {
-      reportsFound = c.reports.filter(function(r) {
+      reportsFound = contact.reports.filter(function(r) {
         return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bcg === 'yes';
       });
       if(reportsFound.length > 0) {
@@ -62,7 +62,7 @@ module.exports = {
       var result = 0;
     var reportsFound = [];
     if(contact.reports) {
-      reportsFound = c.reports.filter(function(r) {
+      reportsFound = contact.reports.filter(function(r) {
         return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv0 === 'yes';
       });
       if(reportsFound.length > 0) {
