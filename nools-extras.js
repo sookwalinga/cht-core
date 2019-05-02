@@ -70,9 +70,38 @@ function isSmallBaby(c) {
 }
 
 function referralMade(report) {
-  // if this is to work for all forms, we'll need a standard way to store this
-  console.log("Satisfying jshint...", report);
-  return true;
+  var hasReferral = false;
+  var reportsFound = [];
+  if(c && c.reports) {
+    reportsFound = c.reports.filter(function(r) {
+      return r.form === 'infant_child' && r.fields && r.fields.first_visit_6_months && r.fields.first_visit_6_months.small_baby_today !== '';
+    });
+    if(reportsFound.length > 0){
+      var report = Utils.getMostRecentReport(reportsFound, 'infant_child');
+      if(report.fields.first_visit_6_months.refer_flag_small_baby === '1') {
+        return true;
+      }
+      if(report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1') {
+        return true;
+      }
+      if(report.fields.child_danger_signs.refer_child_danger_sign_flag === '1') {
+        return true;
+      }
+      if(report.fields.malnutrition_anemia.refer_muac_flag === '1') {
+        return true;
+      }
+      if(report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1') {
+        return true;
+      }
+      if(report.fields.immunizations.refer_vaccines_flag === '1') {
+        return true;
+      }
+      if(report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1') {
+        return true;
+      }
+    }
+  }
+  return hasReferral;
 }
 
 function getReferralReasons(report) {

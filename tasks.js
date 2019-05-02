@@ -39,7 +39,7 @@
     appliesTo: 'reports',
     appliesIf: function(c, r) {
       console.log("Logging from referral follow-up task ...", c);
-      return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && referralMade(r);
+      return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && referralMade(r, 'infant_child');
     },
     appliesToType: [ 'person' ],
     actions: [{
