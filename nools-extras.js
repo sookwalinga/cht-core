@@ -1,3 +1,5 @@
+/*jshint unused:false*/
+
 // HH: I copied this from a medic example
 // This was identical to the ones in nootils, but now `form` can be an array, and can count for number of forms in the window. This needs to be ported to nootils.
 function isFormSubmittedInWindow(reports, form, start, end, count) {
@@ -69,8 +71,8 @@ function isSmallBaby(c) {
   return small;
 }
 
-function referralMade(report) {
-  if (report.fields) {
+function referralMade(reports) {
+  if (report && report.fields) {
     if (
       report.fields.first_visit_6_months &&
       report.fields.first_visit_6_months.refer_flag_small_baby &&
@@ -125,8 +127,8 @@ function referralMade(report) {
 }
 
 function getReferralReasons(report) {
-  var reasons = '';
-  if (report.fields) {
+  var reasons = 'REASONS';
+  if (report && report.fields) {
     if (
       report.fields.first_visit_6_months &&
       report.fields.first_visit_6_months.refer_flag_small_baby &&

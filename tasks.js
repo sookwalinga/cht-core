@@ -24,9 +24,12 @@
     ],
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
+      return false;
+/*
       return isFormSubmittedInWindow(c.reports, 'infant_child',
                  Utils.addDate(dueDate, -event.start).getTime(),
                  Utils.addDate(dueDate,  event.end+1).getTime());
+                 */
     },
   },
 
@@ -35,7 +38,7 @@
     icon: 'followup-general', // maybe not the best icon, but the best in the set
     title: 'task.referral_follow_up',
     appliesTo: 'reports',
-    appliesIf: function(c, r) {
+    appliesIf: function(r, c) {
       console.log("Logging from referral follow-up task ...", c);
       return referralMade(r, 'infant_child');
     },
@@ -50,18 +53,22 @@
     events: [
       {
         id:'referral_follow_up',
-        dueDate: function(r) {
-          return Utils.addDate(r.reported_date, 3); // assuming all referrals should be followed-up within 3 days
-        },
+        // dueDate: function(r) {
+        //   return Utils.addDate(r.reported_date, 3); // assuming all referrals should be followed-up within 3 days
+        // },
+        days:0,
         start:1,
         end:3,
       }
     ],
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
+      return false;
+/*
       return isFormSubmittedInWindow(c.reports, 'referral_follow_up',
                   Utils.addDate(dueDate, -event.start).getTime(),
                   Utils.addDate(dueDate,  event.end+1).getTime());
+                  */
     },
   },
 
@@ -70,7 +77,7 @@
     icon: 'followup-general', // maybe not the best icon, but the best in the set
     title: 'task.referral_follow_up_test',
     appliesTo: 'reports',
-    appliesIf: function(c, r) {
+    appliesIf: function(r) {
       console.log("Logging from referral follow-up test task ...", r);
       return true;
 //      return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && referralMade(r, 'infant_child');
@@ -86,18 +93,22 @@
     events: [
       {
         id:'referral_follow_up',
-        dueDate: function(r) {
-          return Utils.addDate(r.reported_date, 3); // assuming all referrals should be followed-up within 3 days
-        },
+        // dueDate: function(r) {
+        //   return Utils.addDate(r.reported_date, 3); // assuming all referrals should be followed-up within 3 days
+        // },
+        days:0,
         start:1,
         end:3,
       }
     ],
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
+      return false;
+/*
       return isFormSubmittedInWindow(c.reports, 'referral_follow_up',
                   Utils.addDate(dueDate, -event.start).getTime(),
                   Utils.addDate(dueDate,  event.end+1).getTime());
+                  */
     },
   }
 ]

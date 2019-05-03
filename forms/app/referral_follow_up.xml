@@ -57,9 +57,8 @@
             <value>ASK: Did you get the services?</value>
           </text>
           <text id="/referral_follow_up/referral_follow_up/intro:label">
-            <value>SAY: I'm coming to check up on you. On my visit on {last_visit_date}, I gave you a referral to the health facility for the following reasons:
-{referral_reasons}</value>
-          </text>
+            <value>SAY: I'm coming to check up on you. On my visit on <output value=" /referral_follow_up/inputs/last_visit_date "/>, I gave you a referral to the health facility for the following reasons:
+<output value=" /referral_follow_up/inputs/referral_reasons "/></value></text>
           <text id="/referral_follow_up/referral_follow_up/reasons_no_services:label">
             <value>Discuss the reasons, and try to solve the problems and plan for the referral completion.</value>
           </text>
