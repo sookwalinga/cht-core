@@ -31,8 +31,6 @@
   },
 
   // referral follow-up
-  // this assumes that for any given contact, it is enough to look into the last report;
-  // an alternative (maybe easier) would be to have a referral task for each form type
   {
     icon: 'followup-general', // maybe not the best icon, but the best in the set
     title: 'task.referral_follow_up',
