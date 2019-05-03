@@ -41,7 +41,7 @@
       console.log("Logging from referral follow-up task ...", c);
       return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && referralMade(r, 'infant_child');
     },
-    appliesToType: [ 'person' ],
+    appliesToType: [ 'infant_child' ],
     actions: [{
       form: 'referral_follow_up',
       modifyContent: function(c, content, report) {
