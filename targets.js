@@ -12,7 +12,7 @@ module.exports = [
     appliesTo: 'contacts',                                  // Whether your target is associated with reports or contacts
     appliesToType: 'person' , // The type of contact for which this target is relevant. This is not a mandatory field but it is what displays
                              // the count. Without this field, the count remains as zero.
-     appliesIf: isAgeUnderFive
+     appliesIf: extras.isAgeUnderFive
   },
 
   // CHILDREN UNDER FIVE WITH ATLEAST ONE VISIT- THIS MONTH
@@ -27,7 +27,7 @@ module.exports = [
     appliesTo: 'contacts',                                 // Whether your target is associated with reports or contacts
     appliesToType: 'person',  // The type of contact for which this target is relevant. This is not a mandatory field but it is what displays
                              // the count. Without this field, the count remains as zero.
-    appliesIf: function(c){return isAgeUnderFive(c);}, //calculates the denominator
+    appliesIf: function(c){return extras.isAgeUnderFive(c);}, //calculates the denominator
     passesIf: function(c){    //calculates the numerator
 
     		var date = new Date();
@@ -36,7 +36,7 @@ module.exports = [
 
     		var contactDate = new Date(c.contact.reported_date);
 
-    		return (contactDate.getMonth() === thisMonth && contactDate.getYear() === thisYear && getVisitCount(c)>0);
+    		return (contactDate.getMonth() === thisMonth && contactDate.getYear() === thisYear && extras.getVisitCount(c)>0);
 
     }
   },
@@ -54,7 +54,7 @@ module.exports = [
     appliesToType: 'person',  // The type of contact for which this target is relevant. This is not a mandatory field but it is what displays
                              // the count. Without this field, the count remains as zero.
     appliesIf: function(){//console.log("Inside appliesIf");
-    return isAgeUnderOneAndVisited(c);} , //calculates the denominator
+    return extras.isAgeUnderOneAndVisited(c);} , //calculates the denominator
     passesIf: function(c){    //calculates the numerator (visit >2 this month)
 
     		var date = new Date();
@@ -63,7 +63,7 @@ module.exports = [
 
     		var contactDate = new Date(c.contact.reported_date);
     		console.log("Skukuuu");
-    		return (contactDate.getMonth() === thisMonth && contactDate.getYear() === thisYear && getVisitCount(c) >=2);
+    		return (contactDate.getMonth() === thisMonth && contactDate.getYear() === thisYear && extras.getVisitCount(c) >=2);
 
     }
   },

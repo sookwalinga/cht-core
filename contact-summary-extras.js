@@ -18,7 +18,7 @@ module.exports = {
   },
 
   getVisitCount: function() {
-      console.debug(reports);
+    console.debug(reports);
 
     var count = [];
 
@@ -32,20 +32,20 @@ module.exports = {
   },
 
   isSmallBaby: function() {
-      var small ="";
+    var small ="";
     var reportsFound = [];
     reportsFound = contact.reports.filter(function(r) {
       return r.form === 'infant_child' && r.fields && r.fields.first_visit_6_months && r.fields.first_visit_6_months.small_baby_today !== '';
     });
     if(reportsFound.length > 0){
-      var report = getMostRecentReport(reportsFound, 'infant_child');
+      var report = extras.getMostRecentReport(reportsFound, 'infant_child');
       small = report.fields.first_visit_6_months.small_baby_today;
     }
     return small;
   },
 
   getBcg: function() {
-      var result = 0;
+    var result = 0;
     var reportsFound = [];
     if(contact.reports) {
       reportsFound = contact.reports.filter(function(r) {

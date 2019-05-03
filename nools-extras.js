@@ -20,6 +20,21 @@ module.exports = {
     return result;
   },
 
+  // HH: I copied this from a medic example
+  // This is identical to the ones in nootils, but `form` can be an array. This needs to be ported to nootils.
+  // TODO shared with contact-summary?
+  getMostRecentReport: function (reports, form) {
+    var result = null;
+    reports.forEach(function(r) {
+      if (form.indexOf(r.form) >= 0 &&
+          !r.deleted &&
+          (!result || r.reported_date > result.reported_date)) {
+        result = r;
+      }
+    });
+    return result;
+  },
+
   isChildUnder5: function (c) {
     if(c.contact && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
@@ -104,7 +119,7 @@ module.exports = {
 
   isAgeUnderOneAndVisited: function (c)
   {
-      return isAgeUnderOne(c) && getVisitCount(c) > 0;
+      return extras.isAgeUnderOne(c) && extras.getVisitCount(c) > 0;
   },
 
   getBcg: function (c) {
