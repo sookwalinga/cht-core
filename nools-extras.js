@@ -70,52 +70,72 @@ function isSmallBaby(c) {
 }
 
 function referralMade(report) {
-  if(report.fields.first_visit_6_months.refer_flag_small_baby === '1') {
-    return true;
-  }
-  if(report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1') {
-    return true;
-  }
-  if(report.fields.child_danger_signs.refer_child_danger_sign_flag === '1') {
-    return true;
-  }
-  if(report.fields.malnutrition_anemia.refer_muac_flag === '1') {
-    return true;
-  }
-  if(report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1') {
-    return true;
-  }
-  if(report.fields.immunizations.refer_vaccines_flag === '1') {
-    return true;
-  }
-  if(report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1') {
-    return true;
+  if (report.fields) {
+    if(report.fields.first_visit_6_months &&
+      report.fields.first_visit_6_months.refer_flag_small_baby &&
+      report.fields.first_visit_6_months.refer_flag_small_baby === '1')
+    {
+      return true;
+    }
+    if(report.fields.neonatal_danger_signs &&
+      report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag &&
+      report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1') {
+      return true;
+    }
+    if(report.fields.child_danger_signs &&
+      report.fields.child_danger_signs.refer_child_danger_sign_flag &&
+      report.fields.child_danger_signs.refer_child_danger_sign_flag === '1') {
+      return true;
+    }
+    if (report.fields.malnutrition_anemia) {
+      if(report.fields.malnutrition_anemia.refer_muac_flag && report.fields.malnutrition_anemia.refer_muac_flag === '1') {
+        return true;
+      }
+      if(report.fields.malnutrition_anemia.refer_muac_flag && report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1') {
+        return true;
+      }
+    }
+    if(report.fields.immunizations &&
+      report.fields.immunizations.refer_vaccines_flag &&
+      report.fields.immunizations.refer_vaccines_flag === '1') {
+      return true;
+    }
+    if(report.fields.problem_solving &&
+      report.fields.problem_solving.refer_slow_to_lear_specifics_flag &&
+      report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1') {
+      return true;
+    }
   }
   return false;
 }
 
 function getReferralReasons(report) {
   var reasons = '';
-  if(report.fields.first_visit_6_months.refer_flag_small_baby === '1') {
-    reasons += 'referral.infant_child.refer_flag_small_baby <br> ';
-  }
-  if(report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1') {
-    reasons += 'referral.infant_child.refer_neonatal_danger_sign_flag <br> ';
-  }
-  if(report.fields.child_danger_signs.refer_child_danger_sign_flag === '1') {
-    reasons += 'referral.infant_child.refer_child_danger_sign_flag <br> ';
-  }
-  if(report.fields.malnutrition_anemia.refer_muac_flag === '1') {
-    reasons += 'referral.infant_child.refer_muac_flag <br> ';
-  }
-  if(report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1') {
-    reasons += 'referral.infant_child.refer_palm_pallor_flag <br> ';
-  }
-  if(report.fields.immunizations.refer_vaccines_flag === '1') {
-    reasons += 'referral.infant_child.refer_vaccines_flag <br> ';
-  }
-  if(report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1') {
-    reasons += 'referral.infant_child.refer_slow_to_lear_specifics_flag <br> ';
+  if (report.fields) {
+    if(report.fields.first_visit_6_months &&
+      report.fields.first_visit_6_months.refer_flag_small_baby &&
+      report.fields.first_visit_6_months.refer_flag_small_baby === '1')
+    {
+      reasons += 'referral.infant_child.refer_flag_small_baby <br> ';
+    }
+    if(report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1') {
+      reasons += 'referral.infant_child.refer_neonatal_danger_sign_flag <br> ';
+    }
+    if(report.fields.child_danger_signs.refer_child_danger_sign_flag === '1') {
+      reasons += 'referral.infant_child.refer_child_danger_sign_flag <br> ';
+    }
+    if(report.fields.malnutrition_anemia.refer_muac_flag === '1') {
+      reasons += 'referral.infant_child.refer_muac_flag <br> ';
+    }
+    if(report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1') {
+      reasons += 'referral.infant_child.refer_palm_pallor_flag <br> ';
+    }
+    if(report.fields.immunizations.refer_vaccines_flag === '1') {
+      reasons += 'referral.infant_child.refer_vaccines_flag <br> ';
+    }
+    if(report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1') {
+      reasons += 'referral.infant_child.refer_slow_to_lear_specifics_flag <br> ';
+    }
   }
   return reasons;
 }
