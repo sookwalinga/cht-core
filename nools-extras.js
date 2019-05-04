@@ -56,6 +56,18 @@ module.exports = {
     return 0;
   },
 
+  countConsentingInfantChildVisits: function(c) {
+    var consentingVisits = [];
+    if(c && c.reports) {
+      consentingVisits = c.reports.filter(function(r) {
+        if (r.form && r.form.previous_child_consent && r.form.consent && r.form.consent.child_consent_today) {
+          return r.form === form && (r.form.previous_child_consent === 'yes' || r.form.consent.child_consent_today === 'yes');
+        }
+      });
+    }
+    return 0;
+  },
+
   hasGivenConsent: function (c) {
     var consent = '';
     var reportsFound = [];
