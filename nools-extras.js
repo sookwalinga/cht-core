@@ -60,12 +60,21 @@ module.exports = {
     var consentingVisits = [];
     if(c && c.reports) {
       consentingVisits = c.reports.filter(function(r) {
-        if (r.form && r.form.previous_child_consent && r.form.consent && r.form.consent.child_consent_today) {
-          return r.form === form && (r.form.previous_child_consent === 'yes' || r.form.consent.child_consent_today === 'yes');
+        if (r.form && r.fields && r.fields.previous_child_consent && r.fields.consent && r.fields.consent.child_consent_today) {
+          return r.form === form && (r.fields.previous_child_consent === 'yes' || r.fields.consent.child_consent_today === 'yes');
         }
       });
+      return consentingVisits.length;
     }
     return 0;
+  },
+
+  daysAfterBirth: function(c, days) {
+    if (c.contact && c.contact.date_of_birth) {
+      var result = new Date(c.contact.date_of_birth);
+      return result.setDate(result.getDate() + 5);
+    }
+    return null;
   },
 
   hasGivenConsent: function (c) {
