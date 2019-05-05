@@ -84,7 +84,7 @@ module.exports = [
       // One event for that and then another for each infant-child visit thereafter
       {
         id:'infant_child_3_7_day_pp_visit', 
-        dueDate:daysAfterBirth(c, 5),      
+        dueDate: extras.daysAfterBirth(c, 5),      
         start:2,
         end:2
       }
