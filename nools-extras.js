@@ -71,97 +71,42 @@ function isSmallBaby(c) {
   return small;
 }
 
-function referralMade(reports) {
-  if (report && report.fields) {
-    if (
-      report.fields.first_visit_6_months &&
-      report.fields.first_visit_6_months.refer_flag_small_baby &&
-      report.fields.first_visit_6_months.refer_flag_small_baby === '1'
-    ) {
-      return true;
-    }
-    if (
-      report.fields.neonatal_danger_signs &&
-      report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag &&
-      report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1'
-    ) {
-      return true;
-    }
-    if (
-      report.fields.child_danger_signs &&
-      report.fields.child_danger_signs.refer_child_danger_sign_flag &&
-      report.fields.child_danger_signs.refer_child_danger_sign_flag === '1'
-    ) {
-      return true;
-    }
-    if (report.fields.malnutrition_anemia) {
-      if (
-        report.fields.malnutrition_anemia.refer_muac_flag &&
-        report.fields.malnutrition_anemia.refer_muac_flag === '1'
-      ) {
-        return true;
-      }
-      if (
-        report.fields.malnutrition_anemia.refer_muac_flag &&
-        report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1'
-      ) {
-        return true;
-      }
-    }
-    if (
-      report.fields.immunizations &&
-      report.fields.immunizations.refer_vaccines_flag &&
-      report.fields.immunizations.refer_vaccines_flag === '1'
-    ) {
-      return true;
-    }
-    if (
-      report.fields.problem_solving &&
-      report.fields.problem_solving.refer_slow_to_lear_specifics_flag &&
-      report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1'
-    ) {
-      return true;
-    }
-  }
-  return false;
-}
-
 function getReferralReasons(report) {
-  var reasons = 'REASONS';
+  var reasons = '';
   if (report && report.fields) {
     if (
       report.fields.first_visit_6_months &&
       report.fields.first_visit_6_months.refer_flag_small_baby &&
       report.fields.first_visit_6_months.refer_flag_small_baby === '1'
     ) {
-      reasons += 'referral.infant_child.refer_flag_small_baby <br> ';
+      reasons += 'Small baby, \n';
     }
     if (
       report.fields.neonatal_danger_signs &&
       report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag &&
       report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1'
     ) {
-      reasons += 'referral.infant_child.refer_neonatal_danger_sign_flag <br> ';
+      reasons += 'Neonatal danger sign, \n';
     }
     if (
       report.fields.child_danger_signs &&
       report.fields.child_danger_signs.refer_child_danger_sign_flag &&
       report.fields.child_danger_signs.refer_child_danger_sign_flag === '1'
     ) {
-      reasons += 'referral.infant_child.refer_child_danger_sign_flag <br> ';
+      reasons += 'Child danger sign, \n';
     }
     if (report.fields.malnutrition_anemia) {
       if (
         report.fields.malnutrition_anemia.refer_muac_flag &&
         report.fields.malnutrition_anemia.refer_muac_flag === '1'
       ) {
-        reasons += 'referral.infant_child.refer_muac_flag <br> ';
+        reasons += 'MUAC, \n';
       }
       if (
         report.fields.malnutrition_anemia.refer_muac_flag &&
         report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1'
       ) {
-        reasons += 'referral.infant_child.refer_palm_pallor_flag <br> ';
+        reasons += 'Palm pallor, \n';
       }
     }
     if (
@@ -169,14 +114,14 @@ function getReferralReasons(report) {
       report.fields.immunizations.refer_vaccines_flag &&
       report.fields.immunizations.refer_vaccines_flag === '1'
     ) {
-      reasons += 'referral.infant_child.refer_vaccines_flag <br> ';
+      reasons += 'Vaccines, \n';
     }
     if (
       report.fields.problem_solving &&
       report.fields.problem_solving.refer_slow_to_lear_specifics_flag &&
       report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1'
     ) {
-      reasons += 'referral.infant_child.refer_slow_to_lear_specifics_flag <br> ';
+      reasons += 'Slow to learn specifics';
     }
   }
   return reasons;
