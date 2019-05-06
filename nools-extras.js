@@ -1,44 +1,9 @@
 module.exports = {
-  // HH: I copied this from a medic example
-  // This was identical to the ones in nootils, but now `form` can be an array, and can count for number of forms in the window. This needs to be ported to nootils.
-  isFormSubmittedInWindow: function (reports, form, start, end, count) {
-    var result = false;
-    var reportsFound = 0;
-    reports.forEach(function(r) {
-      if (!result && form.indexOf(r.form) >= 0) {
-        if (r.reported_date >= start && r.reported_date <= end) {
-          reportsFound++;
-          if (!count ||
-              (r.fields && r.fields.follow_up_count > count) ||
-              (reportsFound >= count) ) {
-            result = true;
-          }
-        }
-      }
-    });
-    return result;
-  },
-
-  // HH: I copied this from a medic example
-  // This is identical to the ones in nootils, but `form` can be an array. This needs to be ported to nootils.
-  // TODO shared with contact-summary?
-  getMostRecentReport: function (reports, form) {
-    var result = null;
-    reports.forEach(function(r) {
-      if (form.indexOf(r.form) >= 0 &&
-          !r.deleted &&
-          (!result || r.reported_date > result.reported_date)) {
-        result = r;
-      }
-    });
-    return result;
-  },
-
   isChildUnder5: function (c) {
     if(c.contact && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
       var ageInMs = new Date(now - birthDate.getTime());
-      var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30)); //Math.abs(ageInMs.getFullYear() - 1970) * 12) + ageInMs.getMonth();
+      var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30));
       return ageInMonths < 60;
     }
     return false;
@@ -93,34 +58,34 @@ module.exports = {
         report.fields.first_visit_6_months.refer_flag_small_baby &&
         report.fields.first_visit_6_months.refer_flag_small_baby === '1'
       ) {
-        reasons += 'Small baby, \n';
+        reasons += 'Small baby, ';
       }
       if (
         report.fields.neonatal_danger_signs &&
         report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag &&
         report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1'
       ) {
-        reasons += 'Neonatal danger sign, \n';
+        reasons += 'Neonatal danger sign, ';
       }
       if (
         report.fields.child_danger_signs &&
         report.fields.child_danger_signs.refer_child_danger_sign_flag &&
         report.fields.child_danger_signs.refer_child_danger_sign_flag === '1'
       ) {
-        reasons += 'Child danger sign, \n';
+        reasons += 'Child danger sign, ';
       }
       if (report.fields.malnutrition_anemia) {
         if (
           report.fields.malnutrition_anemia.refer_muac_flag &&
           report.fields.malnutrition_anemia.refer_muac_flag === '1'
         ) {
-          reasons += 'MUAC, \n';
+          reasons += 'MUAC, ';
         }
         if (
           report.fields.malnutrition_anemia.refer_muac_flag &&
           report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1'
         ) {
-          reasons += 'Palm pallor, \n';
+          reasons += 'Palm pallor, ';
         }
       }
       if (
@@ -128,15 +93,18 @@ module.exports = {
         report.fields.immunizations.refer_vaccines_flag &&
         report.fields.immunizations.refer_vaccines_flag === '1'
       ) {
-        reasons += 'Vaccines, \n';
+        reasons += 'Vaccines, ';
       }
       if (
         report.fields.problem_solving &&
         report.fields.problem_solving.refer_slow_to_lear_specifics_flag &&
         report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1'
       ) {
-        reasons += 'Slow to learn specifics';
+        reasons += 'Slow to learn specifics, ';
       }
+    }
+    if (reasons.length >= 2) {
+      reasons = reasons.slice(0, -2);
     }
     return reasons;
   }

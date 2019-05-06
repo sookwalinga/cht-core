@@ -24,12 +24,9 @@ module.exports = [
     ],
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-//      return false;
-/* */
       return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
                  Utils.addDate(dueDate, -event.start).getTime(),
                  Utils.addDate(dueDate,  event.end+1).getTime());
-     /*            */
     },
   },
 
@@ -39,38 +36,33 @@ module.exports = [
     title: 'task.referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function(c, r) {
-      console.log("Logging from referral follow-up task ...", r);
       return extras.getReferralReasons(r) !== '';
     },
     appliesToType: [ 'infant_child' ],
     actions: [{
       form: 'referral_follow_up',
-      modifyContent: function(r, content) {
-        content.last_visit_date = r.reported_date;
-        content.referral_reasons = extras.getReferralReasons(r);
+      modifyContent: function(content, contact, report) {
+        content.last_visit_date = new Date(report.reported_date).toDateString();
+        content.referral_reasons = extras.getReferralReasons(report);
       }
     }],
     events: [
       {
         id:'referral_follow_up',
-/*
-        dueDate: function(r) {
-          return Utils.addDate(r.reported_date, 3); // assuming all referrals should be followed-up within 3 days
-        },
-*/
+        //dueDate: function(r) {
+        //  return Utils.addDate(r.reported_date, 3); // assuming all referrals should be followed-up within 3 days
+        //},
         days:0,
         start:1,
-        end:3,
+        end:40,
       }
     ],
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      return false;
-/*
-      return isFormSubmittedInWindow(c.reports, 'referral_follow_up',
+      //return false;
+      return Utils.isFormSubmittedInWindow(c.reports, 'referral_follow_up',
                   Utils.addDate(dueDate, -event.start).getTime(),
                   Utils.addDate(dueDate,  event.end+1).getTime());
-                  */
     },
   },
 ];
