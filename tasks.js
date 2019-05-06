@@ -1,4 +1,4 @@
-[
+module.exports = [
   // first infant-child visit
   {
     icon: 'child',
@@ -6,15 +6,15 @@
     appliesTo: 'contacts',
     appliesIf: function(c) {
       console.log("Logging from first infant-child task ...", c);
-      return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && isChildUnder5(c);
+      return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && extras.isChildUnder5(c);
     },
     appliesToType: [ 'person' ],
     actions: [{
       form: 'infant_child',
       modifyContent: function(c, content) {
-        content.child_consent = hasGivenConsent(c);
-        content.num_child_visits = countReportsSubmitted(c, 'infant_child');
-        content.small_baby = isSmallBaby(c);
+        content.child_consent = extras.hasGivenConsent(c);
+        content.num_child_visits = extras.countReportsSubmitted(c, 'infant_child');
+        content.small_baby = extras.isSmallBaby(c);
       }
     }],
     events: [
@@ -26,7 +26,7 @@
       // Resolved if there is a form submitted within the time window
 //      return false;
 /* */
-      return isFormSubmittedInWindow(c.reports, 'infant_child',
+      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
                  Utils.addDate(dueDate, -event.start).getTime(),
                  Utils.addDate(dueDate,  event.end+1).getTime());
      /*            */
@@ -40,14 +40,14 @@
     appliesTo: 'reports',
     appliesIf: function(c, r) {
       console.log("Logging from referral follow-up task ...", r);
-      return getReferralReasons(r) !== '';
+      return extras.getReferralReasons(r) !== '';
     },
     appliesToType: [ 'infant_child' ],
     actions: [{
       form: 'referral_follow_up',
       modifyContent: function(r, content) {
         content.last_visit_date = r.reported_date;
-        content.referral_reasons = getReferralReasons(r);
+        content.referral_reasons = extras.getReferralReasons(r);
       }
     }],
     events: [
@@ -73,4 +73,4 @@
                   */
     },
   },
-]
+];
