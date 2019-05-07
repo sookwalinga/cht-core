@@ -184,66 +184,172 @@ module.exports = {
     }
     return result;
   },
-
-  // FIXME paste code below
+// FIXME
   getDtp_hepb_hib1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getPcvi1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getRota1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getBopv2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getDtp_hepb_hib2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getPcvi2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getRota2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getBopv3: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv3 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getDtp_hepb_hib3: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib3 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getPciv3: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pciv3 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getSurua_rubella1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getSurua_rubella2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   }
-
 };
