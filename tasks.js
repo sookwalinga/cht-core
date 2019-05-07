@@ -1,18 +1,17 @@
 module.exports = [
   // first infant-child visit
-  // FIXME add translation key 'task.infant_child'
+  // FIXME add translation key 'task.first_infant_child'
   {
     icon: 'child',
-    title: [ {locale: 'en', content: 'Infant-Child visit'} ],
+    title: 'task.first_infant_child',
     appliesTo: 'contacts',
-    appliesIf: function(c) {
-      console.log("Logging from tasks ...", c);
+    appliesIf: function (c) {
       return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && extras.isChildUnder5(c);
     },
-    appliesToType: [ 'person' ],
+    appliesToType: ['person'],
     actions: [{
       form: 'infant_child',
-      modifyContent: function(c, content) {
+      modifyContent: function (content, c) {
         content.child_consent = extras.hasGivenConsent(c);
         content.num_child_visits = extras.countConsentingInfantChildVisits(c);
         content.small_baby = extras.isSmallBaby(c);
@@ -35,30 +34,30 @@ module.exports = [
     }],
     events: [
       {
-        id:'infant_child_first_visit', days:0, start:0, end:21,
+        id: 'infant_child_first_visit', days: 0, start: 0, end: 21,
       }
     ],
-    resolvedIf: function(c, r, event, dueDate) {
+    resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
       return extras.isFormSubmittedInWindow(c.reports, 'infant_child',
-                 Utils.addDate(dueDate, -event.start).getTime(),
-                 Utils.addDate(dueDate,  event.end+1).getTime());
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end + 1).getTime());
     },
   },
 
   // Subsequent infant-child visits, triggered only following a first visit where consent was granted
   {
     icon: 'child',
-    title: [ {locale: 'en', content: 'Infant-Child visit'} ],
+    title: 'task.infant_child',
     appliesTo: 'contacts',
-    appliesIf: function(c) {
-      console.log("Logging from tasks ...", c);
+    appliesIf: function (c) {
+      console.log("Logging from task Infant-Child visit ...", c);
       return c.contact.parent && c.contact.parent.parent && c.contact.parent.parent.parent && extras.isChildUnder5(c) && extras.countConsentingInfantChildVisits(c) > 0;
     },
-    appliesToType: [ 'person' ],
+    appliesToType: ['person'],
     actions: [{
       form: 'infant_child',
-      modifyContent: function(c, content) {
+      modifyContent: function (content, c) {
         content.child_consent = extras.hasGivenConsent(c);
         content.num_child_visits = extras.countConsentingInfantChildVisits(c);
         content.small_baby = extras.isSmallBaby(c);
@@ -80,25 +79,25 @@ module.exports = [
       }
     }],
     events: [
-      // First possible visit for this task is the SECOND infant-child visit.  
+      // First possible visit for this task is the SECOND infant-child visit.
       // One event for that and then another for each infant-child visit thereafter
       {
-        id:'infant_child_3_7_day_pp_visit', 
-        dueDate: function(c, r, event){
+        id: 'infant_child_3_7_day_pp_visit',
+        dueDate: function (c, r, event) {
           return extras.daysAfterBirth(c, 5);
-        },      
-        start:2,
-        end:2
+        },
+        start: 2,
+        end: 2
       }
 
       // Further infant-child visits go here
 
     ],
-    resolvedIf: function(c, r, event, dueDate) {
+    resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
       return extras.isFormSubmittedInWindow(c.reports, 'infant_child',
-                 Utils.addDate(dueDate, -event.start).getTime(),
-                 Utils.addDate(dueDate,  event.end+1).getTime());
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end + 1).getTime());
     },
   }
 ];

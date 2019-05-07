@@ -43,7 +43,7 @@ module.exports = {
     }
     return small;
   },
-
+/*
   getBcg: function() {
     var result = 0;
     var reportsFound = [];
@@ -146,5 +146,5 @@ module.exports = {
       var result = 0;
     return result;
   }
-
+*/
 };
