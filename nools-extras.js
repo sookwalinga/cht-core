@@ -50,6 +50,17 @@ module.exports = {
     return small;
   },
 
+  hasReferral: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.has_referral
+    ) {
+      return report.fields.has_referral;
+    }
+    return 0;
+  },
+
   getSmallBabyFlag: function (report) {
     if (
       report &&

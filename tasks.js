@@ -36,14 +36,17 @@ module.exports = [
     title: 'task.referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function(c, r) {
-      console.log("Logging from referral_follow_up 1:, ", extras.getSmallBabyFlag(r));
-      console.log("Logging from referral_follow_up 2:, ", extras.getNeonatalDangerSignFlag(r));
-      console.log("Logging from referral_follow_up 3:, ", extras.getChildDangerSignFlag(r));
-      console.log("Logging from referral_follow_up 4:, ", extras.getMUACFlag(r));
-      console.log("Logging from referral_follow_up 5:, ", extras.getPalmPallorFlag(r));
-      console.log("Logging from referral_follow_up 6:, ", extras.getVaccinesFlag(r));
-      console.log("Logging from referral_follow_up 7:, ", extras.getSlowToLearnSpecificsFlag(r));
-      return extras.getSmallBabyFlag(r) ||
+      console.log("Logging from referral_follow_up hasReferral:, ", extras.hasReferral(r));
+      console.log("Logging from referral_follow_up SmallBaby:, ", extras.getSmallBabyFlag(r));
+      console.log("Logging from referral_follow_up NeonatalDangerSign:, ", extras.getNeonatalDangerSignFlag(r));
+      console.log("Logging from referral_follow_up ChildDangerSign:, ", extras.getChildDangerSignFlag(r));
+      console.log("Logging from referral_follow_up MUAC:, ", extras.getMUACFlag(r));
+      console.log("Logging from referral_follow_up PalmPallor:, ", extras.getPalmPallorFlag(r));
+      console.log("Logging from referral_follow_up Vaccines:, ", extras.getVaccinesFlag(r));
+      console.log("Logging from referral_follow_up SlowToLearnSpecifics:, ", extras.getSlowToLearnSpecificsFlag(r));
+      // if infant_child sets has_referral, we can eliminate the other checks
+      return extras.hasReferral(r) ||
+        extras.getSmallBabyFlag(r) ||
         extras.getNeonatalDangerSignFlag(r) ||
         extras.getChildDangerSignFlag(r) ||
         extras.getMUACFlag(r) ||
@@ -68,18 +71,35 @@ module.exports = [
     events: [
       {
         id:'referral_follow_up',
-        //dueDate: function(r) {
-        //  return Utils.addDate(r.reported_date, 3); // assuming all referrals should be followed-up within 3 days
-        //},
-        days:0,
+        // in this example, is there a difference between dueDate and days?
+        // dueDate: function(r) {
+        //   var days = 3;
+        //   if (
+        //     r.fields &&
+        //     r.fields.referral_days
+        //   ) {
+        //     days = r.fields.referral_days
+        //   }
+        //   return Utils.addDate(r.reported_date, days);
+        // },
+        days: function (r) {
+          if (
+            r &&
+            r.fields &&
+            r.fields.referral_days
+          ) {
+            return r.fields.referral_days
+          }
+          return 3;
+        },
         start:1,
-        end:40,
+        end:3,
       }
     ],
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      //return false;
-      return Utils.isFormSubmittedInWindow(c.reports, 'referral_follow_up',
+      // Assumption: only one referral open for client
+      return Utils.isFormSubmittedInWindow(r, 'referral_follow_up',
                   Utils.addDate(dueDate, -event.start).getTime(),
                   Utils.addDate(dueDate,  event.end+1).getTime());
     },
