@@ -60,6 +60,10 @@ module.exports = [
     title: 'task.infant_child',
     appliesTo: 'contacts',
     appliesIf: function (c) {
+      // Task applies in one of two conditions:
+      //  1. Person is under 5 and has had no infant-child forms submitted at all - this is for the first infant-child visit
+      //  2. Person is under 5, has had an infant-child form submitted, and has a positive number of consenting visits.  This person has given consent
+      //     and will continue to receive infant-child visits. 
       return ((
         c.contact.parent && 
         c.contact.parent.parent && 
@@ -99,32 +103,111 @@ module.exports = [
       }
     }],
     events: [
-      // First possible visit for this task is the SECOND infant-child visit.
-      // One event for that and then another for each infant-child visit thereafter
+      // One event for each potential infant-child visit.  Allowed timing spans until relevancy of following visit
       {
         id: 'infant_child_0_2_day_pp_visit',
-        dueDate: function (c, r, event) {
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.day * 1));
         },
-        start: 1,
-        end: 1
+        start: (extras.day * 1),
+        end: (extras.day * 1)
       },
       {
         id: 'infant_child_3_7_day_pp_visit',
-        dueDate: function (c, r, event) {
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.day * 5));
         },
-        start: 2,
-        end: 2
+        start: (extras.day * 2),
+        end: (extras.day * 2)
       },
       {
         id: 'infant_child_day_20_week_11_visit',
-        dueDate: function (c, r, event) {
-          return extras.daysAfterBirth(c, (extras.day * 28));
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.week * 4));
         },
         start: (extras.day * 8),
-        end: (extras.week * 7)
-      }  
+        end: (extras.week * 7) - 1
+      }, 
+      {
+        id: 'infant_child_week_11_week_15_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.week * 11));
+        },
+        start: 0,
+        end: (extras.week * 15) - 1
+      }, 
+      {
+        id: 'infant_child_week_15_month_6_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.week * 16));
+        },
+        start: (extras.week * 1),
+        end: (extras.month * 6) - 1
+      }, 
+      {
+        id: 'infant_child_month_6_month_9_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.week * 26));
+        },
+        start: (extras.days * 2),
+        end: (extras.month * 9) - 1
+      }, 
+      {
+        id: 'infant_child_month_9_month_12_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.week * 42));
+        },
+        start: (extras.days * 24),
+        end: (extras.month * 12) - 1
+      }, 
+      {
+        id: 'infant_child_month_12_month_15_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.month * 13));
+        },
+        start: (extras.month * 1),
+        end: (extras.month * 2) - 1
+      }, 
+      {
+        id: 'infant_child_month_15_month_18_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.month * 16));
+        },
+        start: (extras.month * 1),
+        end: (extras.month * 2) - 1
+      }, 
+      {
+        id: 'infant_child_month_18_month_24_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.month * 20));
+        },
+        start: (extras.month * 2),
+        end: (extras.month * 4) - 1
+      },
+      {
+        id: 'infant_child_year_2_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.month * 24));
+        },
+        start: 0,
+        end: (extras.month * 12) - 1
+      },
+      {
+        id: 'infant_child_year_3_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.month * 39));
+        },
+        start: (extras.month * 3),
+        end: (extras.month * 9) - 1
+      },
+      {
+        id: 'infant_child_year_4_visit',
+        dueDate: function(event, c){
+          return extras.daysAfterBirth(c, (extras.month * 51));
+        },
+        start: (extras.month * 3),
+        end: (extras.month * 9) - 1
+      }
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window

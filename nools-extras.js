@@ -74,9 +74,10 @@ module.exports = {
   },
 
   daysAfterBirth: function(c, days) {
-    if (c.contact && c.contact.date_of_birth) {
+    if (c.contact.date_of_birth) {
       var result = new Date(c.contact.date_of_birth);
-      return result.setDate(result.getDate() + days);
+      result.setDate(result.getDate() + days);
+      return result;
     }
     return null;
   },
