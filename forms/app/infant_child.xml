@@ -677,6 +677,9 @@ Harsh child discipline will not support healthy development.Correcting and teach
           <text id="/infant_child/child_danger_signs/no_child_danger_sign_note:label">
             <value>SAY: No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
+          <text id="/infant_child/child_danger_signs:label">
+            <value>Child Danger Signs</value>
+          </text>
           <text id="/infant_child/child_visit_intro_note:label">
             <value>SEMA: Habari mama? Kama tulivyozungumza wakati wa matembeleo yetu yaliyopita kuwa ntakuja kukutembelea kwa ajili ya kujua maendeleo na afya ya mtoto/watoto, na pia kujadiliana na wewe pamoja na familia juu ya malezi na makuzi bora ya mtoto/watoto wako. Nafahamu kuwa unajua jinsi ya kumtunza mtoto wako na kumkuza vizuri, lakini hii ni kama nyongeza tu ya elimu kutokana na ongezeko la maradhi na matatizo mbali mbali yanayoweza kudhoofisha afya na makuzi bora ya mtoto.</value>
           </text>
@@ -994,6 +997,42 @@ For your newborn baby, you can:
           </text>
           <text id="/infant_child/first_visit_6_months:label">
             <value>First Infant Visit</value>
+          </text>
+          <text id="/infant_child/group_summary/healthy_note:label">
+            <value><output value=" /infant_child/child_name "/> is doing well and doesn't need to go to the health facility urgently at this time. You'll return for another checkup when it's time for the next visit.</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_anemia_note:label">
+            <value>To address issues of anemia</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_child_note:label">
+            <value>To address an urgent child danger sign</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_development_note:label">
+            <value>To address issues around learning and child development</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_muac_note:label">
+            <value>To address issues of malnourishment</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_neonatal_note:label">
+            <value>To address an urgent neonatal danger sign</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_note:label">
+            <value><output value=" /infant_child/child_name "/> needs to go to the health facility for the following reasons:</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_small_baby_note:label">
+            <value>To receive specialized care for small babies</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_vaccines_note:label">
+            <value>To make sure he/she has received the proper vaccines</value>
+          </text>
+          <text id="/infant_child/group_summary/non_consent_note:label">
+            <value>You've declined to consent for <output value=" /infant_child/child_name "/> to receive community health services. He/She won't receive any more visits from me.</value>
+          </text>
+          <text id="/infant_child/group_summary/referral_follow_up_note:label">
+            <value>Encourage the parent to take <output value=" /infant_child/child_name "/> to the facility as soon as possible to receive care. Let them know that you'll return soon to confirm that they were able to receive the proper care at the facility.</value>
+          </text>
+          <text id="/infant_child/group_summary:label">
+            <value>Visit Summary</value>
           </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
             <value>Ask mother to make sure facility staff records vaccinations on Child Health Card.</value>
@@ -2733,6 +2772,42 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/first_visit_6_months:label">
             <value>-</value>
           </text>
+          <text id="/infant_child/group_summary/healthy_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_anemia_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_child_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_development_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_muac_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_neonatal_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_small_baby_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/needs_referral_vaccines_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/non_consent_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary/referral_follow_up_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/group_summary:label">
+            <value>-</value>
+          </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
             <value>-</value>
           </text>
@@ -3937,7 +4012,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
               <slow_to_learn_speech_different/>
               <slow_to_learn_can_name_object/>
               <slow_to_learn_appears_mentally_backward/>
-              <refer_slow_to_learn_specifics_flag/>
+              <refer_slow_to_lear_specifics_flag/>
               <refer_slow_to_learn_specifics/>
               <was_male_present/>
               <male_present_entire_visit/>
@@ -3963,6 +4038,20 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <has_mosquito_net/>
             <free_mosquito_net/>
           </llints>
+          <group_summary>
+            <non_consent_note/>
+            <any_referral/>
+            <healthy_note/>
+            <needs_referral_note/>
+            <needs_referral_small_baby_note/>
+            <needs_referral_neonatal_note/>
+            <needs_referral_child_note/>
+            <needs_referral_muac_note/>
+            <needs_referral_anemia_note/>
+            <needs_referral_vaccines_note/>
+            <needs_referral_development_note/>
+            <referral_follow_up_note/>
+          </group_summary>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -4242,8 +4331,8 @@ Newborns can get an infection more easily than an adult or an older childInfecti
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/show_comforting" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/praise_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;looks_talks&quot;)" type="string"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;does_not_comfort&quot;)" type="string"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/praise_comfort" readonly="true()" required="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;looks_talks&quot;)" type="string"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort" readonly="true()" required="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;does_not_comfort&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting" relevant="not(selected( /infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/discuss_correcting" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/how_correct" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting ,&quot;yes&quot;)" required="true()" type="select1"/>
@@ -4287,8 +4376,8 @@ Newborns can get an infection more easily than an adult or an older childInfecti
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_speech_different" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/concern_slow_to_learn ,&quot;yes&quot;) and  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_can_name_object" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/concern_slow_to_learn ,&quot;yes&quot;) and  /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_appears_mentally_backward" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/concern_slow_to_learn ,&quot;yes&quot;) and  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" type="select1"/>
-      <bind calculate="if(selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_delay_sitting ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_seeing ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_hearing ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_understand_speech ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_walking_moving ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_has_fits ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_compared_with_kids ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_does_speak ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_speech_different ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_can_name_object ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_appears_mentally_backward ,&quot;yes&quot;),1,0)" nodeset="/infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_learn_specifics_flag" type="string"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_learn_specifics" readonly="true()" relevant=" /infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_learn_specifics_flag  = 1" type="string"/>
+      <bind calculate="if(selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_delay_sitting ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_seeing ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_hearing ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_understand_speech ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_walking_moving ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_has_fits ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_compared_with_kids ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_does_speak ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_speech_different ,&quot;yes&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_can_name_object ,&quot;no&quot;) or selected( /infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_appears_mentally_backward ,&quot;yes&quot;),1,0)" nodeset="/infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_lear_specifics_flag" type="string"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_learn_specifics" readonly="true()" relevant=" /infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_lear_specifics_flag  = 1" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/was_male_present" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/male_present_entire_visit" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/was_male_present ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/was_male_present ,&quot;yes&quot;)" required="true()" type="select"/>
@@ -4306,6 +4395,24 @@ Newborns can get an infection more easily than an adult or an older childInfecti
       <bind nodeset="/infant_child/llints/note_malaria" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/llints/has_mosquito_net" required="true()" type="select1"/>
       <bind nodeset="/infant_child/llints/free_mosquito_net" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/group_summary/non_consent_note" readonly="true()" relevant="selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)" type="string"/>
+      <bind calculate="if( /infant_child/first_visit_6_months/refer_flag_small_baby =1 or
+ /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1 or 
+ /infant_child/child_danger_signs/refer_child_danger_sign_flag =1 or
+ /infant_child/malnutrition_anemia/refer_muac_flag =1 or
+ /infant_child/malnutrition_anemia/refer_palm_pallor_flag =1 or
+ /infant_child/immunizations/refer_vaccines_flag =1 or
+ /infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_lear_specifics_flag =1, 1, 0)" nodeset="/infant_child/group_summary/any_referral" type="string"/>
+      <bind nodeset="/infant_child/group_summary/healthy_note" readonly="true()" relevant=" /infant_child/group_summary/any_referral =0" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_note" readonly="true()" relevant=" /infant_child/group_summary/any_referral =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_small_baby_note" readonly="true()" relevant=" /infant_child/first_visit_6_months/refer_flag_small_baby =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_neonatal_note" readonly="true()" relevant=" /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_child_note" readonly="true()" relevant=" /infant_child/child_danger_signs/refer_child_danger_sign_flag =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_muac_note" readonly="true()" relevant=" /infant_child/malnutrition_anemia/refer_muac_flag =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_anemia_note" readonly="true()" relevant=" /infant_child/malnutrition_anemia/refer_palm_pallor_flag =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_vaccines_note" readonly="true()" relevant=" /infant_child/immunizations/refer_vaccines_flag =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/needs_referral_development_note" readonly="true()" relevant=" /infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_lear_specifics_flag =1" type="string"/>
+      <bind nodeset="/infant_child/group_summary/referral_follow_up_note" readonly="true()" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/infant_child/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -4717,6 +4824,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_danger_signs">
+      <label ref="jr:itext('/infant_child/child_danger_signs:label')"/>
       <select1 ref="/infant_child/child_danger_signs/child_drink">
         <label ref="jr:itext('/infant_child/child_danger_signs/child_drink:label')"/>
         <item>
@@ -6226,6 +6334,42 @@ Newborns can get an infection more easily than an adult or an older childInfecti
       </select1>
       <input ref="/infant_child/llints/free_mosquito_net">
         <label ref="jr:itext('/infant_child/llints/free_mosquito_net:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list summary" ref="/infant_child/group_summary">
+      <label ref="jr:itext('/infant_child/group_summary:label')"/>
+      <input ref="/infant_child/group_summary/non_consent_note">
+        <label ref="jr:itext('/infant_child/group_summary/non_consent_note:label')"/>
+      </input>
+      <input ref="/infant_child/group_summary/healthy_note">
+        <label ref="jr:itext('/infant_child/group_summary/healthy_note:label')"/>
+      </input>
+      <input ref="/infant_child/group_summary/needs_referral_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_note:label')"/>
+      </input>
+      <input appearance="li" ref="/infant_child/group_summary/needs_referral_small_baby_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_small_baby_note:label')"/>
+      </input>
+      <input appearance="li" ref="/infant_child/group_summary/needs_referral_neonatal_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_neonatal_note:label')"/>
+      </input>
+      <input appearance="li" ref="/infant_child/group_summary/needs_referral_child_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_child_note:label')"/>
+      </input>
+      <input appearance="li" ref="/infant_child/group_summary/needs_referral_muac_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_muac_note:label')"/>
+      </input>
+      <input appearance="li" ref="/infant_child/group_summary/needs_referral_anemia_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_anemia_note:label')"/>
+      </input>
+      <input appearance="li" ref="/infant_child/group_summary/needs_referral_vaccines_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_vaccines_note:label')"/>
+      </input>
+      <input appearance="li" ref="/infant_child/group_summary/needs_referral_development_note">
+        <label ref="jr:itext('/infant_child/group_summary/needs_referral_development_note:label')"/>
+      </input>
+      <input ref="/infant_child/group_summary/referral_follow_up_note">
+        <label ref="jr:itext('/infant_child/group_summary/referral_follow_up_note:label')"/>
       </input>
     </group>
   </h:body>
