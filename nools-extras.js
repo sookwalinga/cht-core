@@ -1,5 +1,9 @@
 module.exports = {
 
+  day: 1,
+  week: 7,
+  month: 30,
+
   // HH: I copied this from a medic example
   // This was identical to the ones in nootils, but now `form` can be an array, and can count for number of forms in the window. This needs to be ported to nootils.
   isFormSubmittedInWindow: function (reports, form, start, end, count) {
