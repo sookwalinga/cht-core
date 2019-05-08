@@ -50,62 +50,88 @@ module.exports = {
     return small;
   },
 
-  getReferralReasons: function (report) {
-    var reasons = '';
-    if (report && report.fields) {
-      if (
-        report.fields.first_visit_6_months &&
-        report.fields.first_visit_6_months.refer_flag_small_baby &&
-        report.fields.first_visit_6_months.refer_flag_small_baby === '1'
-      ) {
-        reasons += 'Small baby, ';
-      }
-      if (
-        report.fields.neonatal_danger_signs &&
-        report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag &&
-        report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1'
-      ) {
-        reasons += 'Neonatal danger sign, ';
-      }
-      if (
-        report.fields.child_danger_signs &&
-        report.fields.child_danger_signs.refer_child_danger_sign_flag &&
-        report.fields.child_danger_signs.refer_child_danger_sign_flag === '1'
-      ) {
-        reasons += 'Child danger sign, ';
-      }
-      if (report.fields.malnutrition_anemia) {
-        if (
-          report.fields.malnutrition_anemia.refer_muac_flag &&
-          report.fields.malnutrition_anemia.refer_muac_flag === '1'
-        ) {
-          reasons += 'MUAC, ';
-        }
-        if (
-          report.fields.malnutrition_anemia.refer_muac_flag &&
-          report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1'
-        ) {
-          reasons += 'Palm pallor, ';
-        }
-      }
-      if (
-        report.fields.immunizations &&
-        report.fields.immunizations.refer_vaccines_flag &&
-        report.fields.immunizations.refer_vaccines_flag === '1'
-      ) {
-        reasons += 'Vaccines, ';
-      }
-      if (
-        report.fields.problem_solving &&
-        report.fields.problem_solving.refer_slow_to_lear_specifics_flag &&
-        report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1'
-      ) {
-        reasons += 'Slow to learn specifics, ';
-      }
+  getSmallBabyFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.first_visit_6_months &&
+      report.fields.first_visit_6_months.refer_flag_small_baby
+    ) {
+      return report.fields.first_visit_6_months.refer_flag_small_baby;
     }
-    if (reasons.length >= 2) {
-      reasons = reasons.slice(0, -2);
+    return 0;
+  },
+
+  getNeonatalDangerSignFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.neonatal_danger_signs &&
+      report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag
+  ) {
+      return report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag;
     }
-    return reasons;
-  }
+    return 0;
+  },
+
+  getChildDangerSignFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.child_danger_signs &&
+      report.fields.child_danger_signs.refer_child_danger_sign_flag
+    ) {
+      return report.fields.child_danger_signs.refer_child_danger_sign_flag;
+    }
+    return 0;
+  },
+
+  getMUACFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.malnutrition_anemia &&
+      report.fields.malnutrition_anemia.refer_muac_flag
+    ) {
+      return report.fields.malnutrition_anemia.refer_muac_flag;
+    }
+    return 0;
+  },
+
+  getPalmPallorFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.malnutrition_anemia &&
+      report.fields.malnutrition_anemia.refer_palm_pallor_flag
+    ) {
+      return report.fields.malnutrition_anemia.refer_palm_pallor_flag;
+    }
+    return 0;
+  },
+
+  getVaccinesFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.immunizations &&
+      report.fields.immunizations.refer_vaccines_flag
+    ) {
+      return report.fields.immunizations.refer_vaccines_flag;
+    }
+    return 0;
+  },
+
+  getSlowToLearnSpecificsFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.problem_solving &&
+      report.fields.problem_solving.refer_slow_to_learn_specifics_flag
+  ) {
+      return report.fields.problem_solving.refer_slow_to_learn_specifics_flag;
+    }
+    return 0;
+
+  },
 };

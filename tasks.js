@@ -36,14 +36,33 @@ module.exports = [
     title: 'task.referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function(c, r) {
-      return extras.getReferralReasons(r) !== '';
+      console.log("Logging from referral_follow_up 1:, ", extras.getSmallBabyFlag(r));
+      console.log("Logging from referral_follow_up 2:, ", extras.getNeonatalDangerSignFlag(r));
+      console.log("Logging from referral_follow_up 3:, ", extras.getChildDangerSignFlag(r));
+      console.log("Logging from referral_follow_up 4:, ", extras.getMUACFlag(r));
+      console.log("Logging from referral_follow_up 5:, ", extras.getPalmPallorFlag(r));
+      console.log("Logging from referral_follow_up 6:, ", extras.getVaccinesFlag(r));
+      console.log("Logging from referral_follow_up 7:, ", extras.getSlowToLearnSpecificsFlag(r));
+      return extras.getSmallBabyFlag(r) ||
+        extras.getNeonatalDangerSignFlag(r) ||
+        extras.getChildDangerSignFlag(r) ||
+        extras.getMUACFlag(r) ||
+        extras.getPalmPallorFlag(r) ||
+        extras.getVaccinesFlag(r) ||
+        extras.getSlowToLearnSpecificsFlag(r);
     },
     appliesToType: [ 'infant_child' ],
     actions: [{
       form: 'referral_follow_up',
       modifyContent: function(content, contact, report) {
         content.last_visit_date = new Date(report.reported_date).toDateString();
-        content.referral_reasons = extras.getReferralReasons(report);
+        content.refer_flag_small_baby = extras.getSmallBabyFlag(report);
+        content.refer_neonatal_danger_sign_flag = extras.getNeonatalDangerSignFlag(report);
+        content.refer_child_danger_sign_flag = extras.getChildDangerSignFlag(report);
+        content.refer_muac_flag = extras.getMUACFlag(report);
+        content.refer_refer_palm_pallor_flag = extras.getPalmPallorFlag(report);
+        content.refer_vaccines_flag = extras.getVaccinesFlag(report);
+        content.refer_slow_to_learn_specifics_flag = extras.getSlowToLearnSpecificsFlag(report);
       }
     }],
     events: [

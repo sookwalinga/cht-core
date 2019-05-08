@@ -57,8 +57,29 @@
             <value>ASK: Did you get the services?</value>
           </text>
           <text id="/referral_follow_up/referral_follow_up/intro:label">
-            <value>SAY: I'm coming to check up on you. On my visit on <output value=" /referral_follow_up/inputs/last_visit_date "/>, I gave you a referral to the health facility for the following reasons:
-<output value=" /referral_follow_up/inputs/referral_reasons "/></value></text>
+            <value>SAY: I'm coming to check up on you. On my visit on <output value=" /referral_follow_up/inputs/last_visit_date "/>, I gave you a referral to the health facility for the following reasons:</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label">
+            <value>Child danger sign</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby:label">
+            <value>Small baby</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_muac_flag:label">
+            <value>MUAC</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag:label">
+            <value>Neonatal danger sign</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag:label">
+            <value>Palm pallor</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag:label">
+            <value>Slow learning</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_vaccines_flag:label">
+            <value>Vaccines</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/reasons_no_services:label">
             <value>Discuss the reasons, and try to solve the problems and plan for the referral completion.</value>
           </text>
@@ -76,6 +97,45 @@
           </text>
         </translation>
         <translation lang="sw">
+          <text id="/referral_follow_up/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/last_visit_date:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_child_danger_sign_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_flag_small_baby:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_muac_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_neonatal_danger_sign_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_palm_pallor_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_slow_to_learn_specifics_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_vaccines_flag:label">
+            <value>-</value>
+          </text>
           <text id="/referral_follow_up/inputs/user/contact_id:label">
             <value>-</value>
           </text>
@@ -83,6 +143,12 @@
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs:label">
             <value>-</value>
           </text>
           <text id="/referral_follow_up/referral_follow_up/congratulate:label">
@@ -118,6 +184,9 @@
           <text id="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go:label">
             <value>-</value>
           </text>
+          <text id="/referral_follow_up/referral_follow_up/did_not_go:label">
+            <value>-</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/got_services/no:label">
             <value>Hapana</value>
           </text>
@@ -128,6 +197,27 @@
             <value>-</value>
           </text>
           <text id="/referral_follow_up/referral_follow_up/intro:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_muac_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_vaccines_flag:label">
             <value>-</value>
           </text>
           <text id="/referral_follow_up/referral_follow_up/reasons_no_services:label">
@@ -159,7 +249,13 @@
               </location>
             </meta>
             <last_visit_date/>
-            <referral_reasons/>
+            <refer_flag_small_baby/>
+            <refer_neonatal_danger_sign_flag/>
+            <refer_child_danger_sign_flag/>
+            <refer_muac_flag/>
+            <refer_palm_pallor_flag/>
+            <refer_vaccines_flag/>
+            <refer_slow_to_learn_specifics_flag/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -172,12 +268,25 @@
               <date_of_birth/>
             </contact>
           </inputs>
+          <last_visit/>
+          <refer_flag_small_baby/>
+          <refer_neonatal_danger_sign_flag/>
+          <refer_child_danger_sign_flag/>
+          <refer_muac_flag/>
+          <refer_palm_pallor_flag/>
+          <refer_vaccines_flag/>
+          <refer_slow_to_learn_specifics_flag/>
           <client/>
           <client_name/>
-          <last_visit/>
-          <reasons/>
           <referral_follow_up>
             <intro/>
+            <reason_refer_flag_small_baby/>
+            <reason_refer_neonatal_danger_sign_flag/>
+            <reason_refer_child_danger_sign_flag/>
+            <reason_refer_muac_flag/>
+            <reason_refer_palm_pallor_flag/>
+            <reason_refer_vaccines_flag/>
+            <reason_refer_slow_to_learn_specifics_flag/>
             <went_to_facility/>
             <congratulate/>
             <got_services/>
@@ -196,7 +305,13 @@
       </instance>
       <instance id="contact-summary"/>
       <bind nodeset="/referral_follow_up/inputs/last_visit_date" type="string"/>
-      <bind nodeset="/referral_follow_up/inputs/referral_reasons" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_flag_small_baby" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_neonatal_danger_sign_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_child_danger_sign_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_muac_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_palm_pallor_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_vaccines_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_slow_to_learn_specifics_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/contact_id" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/facility_id" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/name" type="string"/>
@@ -204,11 +319,24 @@
       <bind nodeset="/referral_follow_up/inputs/contact/name" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/contact/sex" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/contact/date_of_birth" type="string"/>
+      <bind calculate="../inputs/last_visit_date" nodeset="/referral_follow_up/last_visit" type="string"/>
+      <bind calculate="../inputs/refer_flag_small_baby" nodeset="/referral_follow_up/refer_flag_small_baby" type="string"/>
+      <bind calculate="../inputs/refer_neonatal_danger_sign_flag" nodeset="/referral_follow_up/refer_neonatal_danger_sign_flag" type="string"/>
+      <bind calculate="../inputs/refer_child_danger_sign_flag" nodeset="/referral_follow_up/refer_child_danger_sign_flag" type="string"/>
+      <bind calculate="../inputs/refer_muac_flag" nodeset="/referral_follow_up/refer_muac_flag" type="string"/>
+      <bind calculate="../inputs/refer_refer_palm_pallor_flag" nodeset="/referral_follow_up/refer_palm_pallor_flag" type="string"/>
+      <bind calculate="../inputs/refer_vaccines_flag" nodeset="/referral_follow_up/refer_vaccines_flag" type="string"/>
+      <bind calculate="../inputs/refer_slow_to_learn_specifics_flag" nodeset="/referral_follow_up/refer_slow_to_learn_specifics_flag" type="string"/>
       <bind calculate="../inputs/contact/_id" nodeset="/referral_follow_up/client" type="string"/>
       <bind calculate="../inputs/contact/name" nodeset="/referral_follow_up/client_name" type="string"/>
-      <bind calculate="../inputs/last_visit_date" nodeset="/referral_follow_up/last_visit" type="string"/>
-      <bind calculate="../inputs/reasons" nodeset="/referral_follow_up/reasons" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/intro" readonly="true()" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby" readonly="true()" relevant="../../refer_flag_small_baby = 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_neonatal_danger_sign_flag = 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_child_danger_sign_flag = 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_muac_flag" readonly="true()" relevant="../../inputs/refer_muac_flag = 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag" readonly="true()" relevant="../../inputs/refer_refer_palm_pallor_flag = 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_vaccines_flag" readonly="true()" relevant="../../inputs/refer_vaccines_flag = 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag" readonly="true()" relevant="../../inputs/refer_slow_to_learn_specifics_flag = 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/went_to_facility" required="true()" type="select1"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/congratulate" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/got_services" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)" required="true()" type="select1"/>
@@ -224,7 +352,13 @@
   <h:body>
     <group appearance="hidden" ref="/referral_follow_up/inputs">
       <input ref="/referral_follow_up/inputs/last_visit_date"/>
-      <input ref="/referral_follow_up/inputs/referral_reasons"/>
+      <input ref="/referral_follow_up/inputs/refer_flag_small_baby"/>
+      <input ref="/referral_follow_up/inputs/refer_neonatal_danger_sign_flag"/>
+      <input ref="/referral_follow_up/inputs/refer_child_danger_sign_flag"/>
+      <input ref="/referral_follow_up/inputs/refer_muac_flag"/>
+      <input ref="/referral_follow_up/inputs/refer_palm_pallor_flag"/>
+      <input ref="/referral_follow_up/inputs/refer_vaccines_flag"/>
+      <input ref="/referral_follow_up/inputs/refer_slow_to_learn_specifics_flag"/>
       <group ref="/referral_follow_up/inputs/user">
         <input ref="/referral_follow_up/inputs/user/contact_id">
           <label ref="jr:itext('/referral_follow_up/inputs/user/contact_id:label')"/>
@@ -247,6 +381,27 @@
       <label ref="jr:itext('/referral_follow_up/referral_follow_up:label')"/>
       <input ref="/referral_follow_up/referral_follow_up/intro">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/intro:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_muac_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_muac_flag:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_vaccines_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_vaccines_flag:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag:label')"/>
       </input>
       <select1 ref="/referral_follow_up/referral_follow_up/went_to_facility">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/went_to_facility:label')"/>
