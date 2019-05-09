@@ -83,16 +83,14 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       // Assumption: only one referral open for client
       // return false;
-      console.log('Logging from resolvedIf', r);
-      console.log('Logging from resolvedIf', dueDate);
-      console.log('Logging from resolvedIf', event.start);
-      console.log('Logging from resolvedIf', event.end);
-      console.log('Logging from resolvedIf', r.form);
-      console.log('Logging from resolvedIf', Utils.isFormSubmittedInWindow([r], 'referral_follow_up',
-      Utils.addDate(dueDate, -event.start).getTime(),
-      Utils.addDate(dueDate,  event.end+1).getTime()));
+      // console.log('Logging from resolvedIf', r);
+      // console.log('Logging from resolvedIf', dueDate);
+      // console.log('Logging from resolvedIf', r.form);
+      // console.log('Logging from resolvedIf', Utils.isFormSubmittedInWindow(c.reports, 'referral_follow_up',
+      // Utils.addDate(dueDate, -event.start).getTime(),
+      // Utils.addDate(dueDate,  event.end+1).getTime()));
 //      if (r.form === 'infant_child')
-      return Utils.isFormSubmittedInWindow([r], 'referral_follow_up',
+      return Utils.isFormSubmittedInWindow(c.reports, 'referral_follow_up',
                   Utils.addDate(dueDate, -event.start).getTime(),
                   Utils.addDate(dueDate,  event.end+1).getTime());
     },
