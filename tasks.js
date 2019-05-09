@@ -157,7 +157,7 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      return extras.isFormSubmittedInWindow(c.reports, 'infant_child',
+      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
         Utils.addDate(dueDate, -event.start).getTime(),
         Utils.addDate(dueDate, event.end).getTime());
     },
