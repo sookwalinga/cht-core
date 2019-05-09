@@ -1,4 +1,38 @@
 module.exports = {
+  isChildUnder5: function () {
+    if(contact && contact.date_of_birth) {
+      var birthDate = new Date(contact.date_of_birth);
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
+      var ageInMonths = (Math.abs(ageInMs.getFullYear() - 1970) * 12) + ageInMs.getMonth();
+      return ageInMonths < 60;
+    }
+    return false;
+  },
+
+  countReportsSubmitted: function (form) {
+    var reportsFound = [];
+    if (contact && reports && reports.filter) {
+      reportsFound = reports.filter(function(r) {
+        return r.form === form;
+      });
+    }
+    return reportsFound.length;
+  },
+
+  hasGivenConsent: function () {
+    var consent = '';
+    var reportsFound = [];
+    if (contact && reports && reports.filter) {
+      reportsFound = reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.consent && r.fields.consent.child_consent_today !== '';
+      });
+    }
+    if(reportsFound.length > 0){
+      var report = extras.getMostRecentReport(reportsFound, 'infant_child');
+      consent = report.fields.consent.child_consent_today;
+    }
+    return consent;
+  },
 
   isAgeUnderFive: function() {
     console.log(contact);
@@ -31,12 +65,14 @@ module.exports = {
     return count.length;
   },
 
-  isSmallBaby: function() {
-    var small ="";
+  isSmallBaby: function () {
+    var small = '';
     var reportsFound = [];
-    reportsFound = contact.reports.filter(function(r) {
-      return r.form === 'infant_child' && r.fields && r.fields.first_visit_6_months && r.fields.first_visit_6_months.small_baby_today !== '';
-    });
+    if (contact && reports && reports.filter) {
+      reportsFound = reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.first_visit_6_months && r.fields.first_visit_6_months.small_baby_today !== '';
+      });
+    }
     if(reportsFound.length > 0){
       var report = extras.getMostRecentReport(reportsFound, 'infant_child');
       small = report.fields.first_visit_6_months.small_baby_today;
