@@ -34,6 +34,37 @@ module.exports = {
     return consent;
   },
 
+  isAgeUnderFive: function() {
+    console.log(contact);
+
+    var oneDay = 24 * 60 * 60 * 1000;
+
+    var today = new Date();
+
+    var birthDate = new Date(contact.date_of_birth);
+
+    var ageInYears =  Math.round(Math.abs((today - birthDate)/ (oneDay * 7 * 52)));
+
+    if(ageInYears < 5)
+      return true;
+
+    return false;
+  },
+
+  getVisitCount: function() {
+    console.debug(reports);
+
+    var count = [];
+
+    count = reports.filter(function(r){
+
+      return r.form === "infant_child";
+
+    });
+
+    return count.length;
+  },
+
   isSmallBaby: function () {
     var small = '';
     var reportsFound = [];
@@ -49,59 +80,107 @@ module.exports = {
     return small;
   },
 
-  getReferralReasons: function (report) {
-    var reasons = '';
-    if (report && report.fields) {
-      if (
-        report.fields.first_visit_6_months &&
-        report.fields.first_visit_6_months.refer_flag_small_baby &&
-        report.fields.first_visit_6_months.refer_flag_small_baby === '1'
-      ) {
-        reasons += 'Small baby, \n';
-      }
-      if (
-        report.fields.neonatal_danger_signs &&
-        report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag &&
-        report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag === '1'
-      ) {
-        reasons += 'Neonatal danger sign, \n';
-      }
-      if (
-        report.fields.child_danger_signs &&
-        report.fields.child_danger_signs.refer_child_danger_sign_flag &&
-        report.fields.child_danger_signs.refer_child_danger_sign_flag === '1'
-      ) {
-        reasons += 'Child danger sign, \n';
-      }
-      if (report.fields.malnutrition_anemia) {
-        if (
-          report.fields.malnutrition_anemia.refer_muac_flag &&
-          report.fields.malnutrition_anemia.refer_muac_flag === '1'
-        ) {
-          reasons += 'MUAC, \n';
-        }
-        if (
-          report.fields.malnutrition_anemia.refer_muac_flag &&
-          report.fields.malnutrition_anemia.refer_palm_pallor_flag === '1'
-        ) {
-          reasons += 'Palm pallor, \n';
-        }
-      }
-      if (
-        report.fields.immunizations &&
-        report.fields.immunizations.refer_vaccines_flag &&
-        report.fields.immunizations.refer_vaccines_flag === '1'
-      ) {
-        reasons += 'Vaccines, \n';
-      }
-      if (
-        report.fields.problem_solving &&
-        report.fields.problem_solving.refer_slow_to_lear_specifics_flag &&
-        report.fields.problem_solving.refer_slow_to_lear_specifics_flag === '1'
-      ) {
-        reasons += 'Slow to learn specifics';
+  getBcg: function() {
+    var result = 0;
+    var reportsFound = [];
+    if(contact.reports) {
+      reportsFound = contact.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bcg === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
       }
     }
-    return reasons;
+    return result;
+  },
+
+  getBopv0: function() {
+      var result = 0;
+    var reportsFound = [];
+    if(contact.reports) {
+      reportsFound = contact.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv0 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
+    return result;
+  },
+
+  getBopv1: function() {
+      var result = 0;
+    var reportsFound = [];
+    if(contact.reports) {
+      reportsFound = contact.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bcg === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
+    return result;
+  },
+
+  // FIXME paste code below
+  getDtp_hepb_hib1: function() {
+      var result = 0;
+    return result;
+  },
+
+  getPcvi1: function() {
+      var result = 0;
+    return result;
+  },
+
+  getRota1: function() {
+      var result = 0;
+    return result;
+  },
+
+  getBopv2: function() {
+      var result = 0;
+    return result;
+  },
+
+  getDtp_hepb_hib2: function() {
+      var result = 0;
+    return result;
+  },
+
+  getPcvi2: function() {
+      var result = 0;
+    return result;
+  },
+
+  getRota2: function() {
+      var result = 0;
+    return result;
+  },
+
+  getBopv3: function() {
+      var result = 0;
+    return result;
+  },
+
+  getDtp_hepb_hib3: function() {
+      var result = 0;
+    return result;
+  },
+
+  getPciv3: function() {
+      var result = 0;
+    return result;
+  },
+
+  getSurua_rubella1: function() {
+      var result = 0;
+    return result;
+  },
+
+  getSurua_rubella2: function() {
+      var result = 0;
+    return result;
   }
+
 };
