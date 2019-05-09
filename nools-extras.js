@@ -1,4 +1,9 @@
 module.exports = {
+
+  day: 1,
+  week: 7,
+  month: 30,
+
   isChildUnder5: function (c) {
     if(c.contact && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
@@ -7,14 +12,6 @@ module.exports = {
       return ageInMonths < 60;
     }
     return false;
-  },
-
-  daysAfterBirth: function(c, days) {
-    if (c.contact && c.contact.date_of_birth) {
-      var result = new Date(c.contact.date_of_birth);
-      return result.setDate(result.getDate() + days);
-    }
-    return null;
   },
 
   isAgeUnderFive: function (c) {
@@ -74,6 +71,15 @@ module.exports = {
       return consentingVisits.length;
     }
     return 0;
+  },
+
+  daysAfterBirth: function(c, days) {
+    if (c.contact.date_of_birth) {
+      var result = new Date(c.contact.date_of_birth);
+      result.setDate(result.getDate() + days);
+      return result;
+    }
+    return null;
   },
 
   isSmallBaby: function (c) {
@@ -228,66 +234,172 @@ module.exports = {
     }
     return result;
   },
-
-  // FIXME paste code below
+// FIXME
   getDtp_hepb_hib1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getPcvi1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getRota1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getBopv2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getDtp_hepb_hib2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getPcvi2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getRota2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getBopv3: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv3 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getDtp_hepb_hib3: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib3 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getPciv3: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pciv3 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getSurua_rubella1: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella1 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   },
 
   getSurua_rubella2: function () {
     var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella2 === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
     return result;
   }
-
 };
