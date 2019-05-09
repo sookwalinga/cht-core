@@ -3093,9 +3093,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/inputs/bopv3:label">
             <value>-</value>
           </text>
-          <text id="/infant_child/inputs/child_consent:label">
-            <value>-</value>
-          </text>
           <text id="/infant_child/inputs/contact/_id:label">
             <value>-</value>
           </text>
@@ -3667,7 +3664,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
                 <message/>
               </location>
             </meta>
-            <child_consent/>
             <num_child_visits/>
             <small_baby/>
             <bcg/>
@@ -3700,7 +3696,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <patient_id/>
           <child_name/>
           <n_child_visits/>
-          <previous_child_consent/>
           <child_date_of_birth/>
           <age_days/>
           <previous_small_baby/>
@@ -4059,7 +4054,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
       </instance>
       <instance id="contact-summary"/>
       <bind nodeset="/infant_child/inputs" relevant="./source = 'user'"/>
-      <bind nodeset="/infant_child/inputs/child_consent" type="string"/>
       <bind nodeset="/infant_child/inputs/num_child_visits" type="string"/>
       <bind nodeset="/infant_child/inputs/small_baby" type="string"/>
       <bind nodeset="/infant_child/inputs/bcg" type="string"/>
@@ -4087,7 +4081,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
       <bind calculate="../inputs/contact/_id" nodeset="/infant_child/patient_id" type="string"/>
       <bind calculate="../inputs/contact/name" nodeset="/infant_child/child_name" type="string"/>
       <bind calculate="../inputs/num_child_visits" nodeset="/infant_child/n_child_visits" type="string"/>
-      <bind calculate="../inputs/child_consent" nodeset="/infant_child/previous_child_consent" type="string"/>
       <bind calculate="../inputs/contact/date_of_birth" nodeset="/infant_child/child_date_of_birth" type="string"/>
       <bind calculate="decimal-date-time(today())-decimal-date-time( /infant_child/child_date_of_birth )" nodeset="/infant_child/age_days" type="string"/>
       <bind calculate="../inputs/small_baby" nodeset="/infant_child/previous_small_baby" type="string"/>
@@ -4418,7 +4411,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
   </h:head>
   <h:body class="pages">
     <group appearance="hidden" ref="/infant_child/inputs">
-      <input ref="/infant_child/inputs/child_consent"/>
       <input ref="/infant_child/inputs/num_child_visits"/>
       <input ref="/infant_child/inputs/small_baby"/>
       <input ref="/infant_child/inputs/bcg"/>
