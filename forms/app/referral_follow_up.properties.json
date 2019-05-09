@@ -1,0 +1,14 @@
+{
+    "icon": "icon-form-general",
+    "title": {
+        "en": "Referral Follow-up"
+    },
+    "context": {
+        "person": false,
+        "place": false,
+        "expression": "contact.type === 'person' && user.parent.type === 'health_center' && user._id != contact._id"
+    },
+    "hidden_fields": [
+
+    ]
+}
