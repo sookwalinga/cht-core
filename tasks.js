@@ -36,14 +36,8 @@ module.exports = [
     title: 'task.referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function(c, r) {
-      console.log("Logging from referral_follow_up hasReferral:, ", extras.hasReferral(r));
+      console.log("Logging from referral_follow_up hasReferral: ", extras.hasReferral(r));
       console.log("Logging from referral_follow_up SmallBaby:, ", extras.getSmallBabyFlag(r));
-      console.log("Logging from referral_follow_up NeonatalDangerSign:, ", extras.getNeonatalDangerSignFlag(r));
-      console.log("Logging from referral_follow_up ChildDangerSign:, ", extras.getChildDangerSignFlag(r));
-      console.log("Logging from referral_follow_up MUAC:, ", extras.getMUACFlag(r));
-      console.log("Logging from referral_follow_up PalmPallor:, ", extras.getPalmPallorFlag(r));
-      console.log("Logging from referral_follow_up Vaccines:, ", extras.getVaccinesFlag(r));
-      console.log("Logging from referral_follow_up SlowToLearnSpecifics:, ", extras.getSlowToLearnSpecificsFlag(r));
       // if infant_child sets has_referral, we can eliminate the other checks
       return extras.hasReferral(r) ||
         extras.getSmallBabyFlag(r) ||
@@ -54,7 +48,7 @@ module.exports = [
         extras.getVaccinesFlag(r) ||
         extras.getSlowToLearnSpecificsFlag(r);
     },
-    appliesToType: [ 'infant_child' ],
+    appliesToType: [ 'infant_child', 'referral_follow_up' ],
     actions: [{
       form: 'referral_follow_up',
       modifyContent: function(content, contact, report) {
@@ -71,35 +65,34 @@ module.exports = [
     events: [
       {
         id:'referral_follow_up',
-        // in this example, is there a difference between dueDate and days?
-        // dueDate: function(r) {
-        //   var days = 3;
-        //   if (
-        //     r.fields &&
-        //     r.fields.referral_days
-        //   ) {
-        //     days = r.fields.referral_days
-        //   }
-        //   return Utils.addDate(r.reported_date, days);
-        // },
-        days: function (r) {
+        dueDate: function(event, contact, report) {
+          var days = 3; // default referral follow-up three days after issuing referral
           if (
-            r &&
-            r.fields &&
-            r.fields.referral_days
+            report.fields &&
+            report.fields.referral_days
           ) {
-            return r.fields.referral_days
+            days = report.fields.referral_days;
           }
-          return 3;
+          return Utils.addDate(new Date(report.reported_date), days);
         },
-        start:1,
-        end:3,
+        start:3, // this is just for testing, in production should change this to maybe 1
+        end:7,
       }
     ],
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
       // Assumption: only one referral open for client
-      return Utils.isFormSubmittedInWindow(r, 'referral_follow_up',
+      // return false;
+      console.log('Logging from resolvedIf', r);
+      console.log('Logging from resolvedIf', dueDate);
+      console.log('Logging from resolvedIf', event.start);
+      console.log('Logging from resolvedIf', event.end);
+      console.log('Logging from resolvedIf', r.form);
+      console.log('Logging from resolvedIf', Utils.isFormSubmittedInWindow([r], 'referral_follow_up',
+      Utils.addDate(dueDate, -event.start).getTime(),
+      Utils.addDate(dueDate,  event.end+1).getTime()));
+//      if (r.form === 'infant_child')
+      return Utils.isFormSubmittedInWindow([r], 'referral_follow_up',
                   Utils.addDate(dueDate, -event.start).getTime(),
                   Utils.addDate(dueDate,  event.end+1).getTime());
     },

@@ -298,6 +298,8 @@
               <next_follow_up/>
             </did_not_go>
           </referral_follow_up>
+          <has_referral/>
+          <referral_days/>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -346,6 +348,8 @@
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/discuss_reasons" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/complete_referral" required="true()" type="select1"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/next_follow_up" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/did_not_go/complete_referral ,&quot;yes&quot;)" type="string"/>
+      <bind calculate="if(selected( /referral_follow_up/referral_follow_up/did_not_go/complete_referral ,&quot;yes&quot;),1,0)" nodeset="/referral_follow_up/has_referral" type="string"/>
+      <bind calculate="3" nodeset="/referral_follow_up/referral_days" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/referral_follow_up/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
