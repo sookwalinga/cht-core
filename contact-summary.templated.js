@@ -24,7 +24,7 @@ module.exports = {
         {
           label: 'contact.profile.isunderfive',
           // FIXME PLEASE REVIEW
-          value:  extras.isAgeUnderFive(contact)?'contact.summary.yes':'contact.summary.no',
+          value:  extras.isChildUnder5(contact)?'contact.summary.yes':'contact.summary.no',
           translate: true,
           width: 6,
         }
@@ -36,7 +36,7 @@ module.exports = {
       appliesTo:'contacts',
       appliesToType: 'person',
       // FIXME PLEASE REVIEW
-      appliesIf: extras.isAgeUnderFive,
+      appliesIf: extras.isChildUnder5,
       fields: [
         {
           label: 'contact.profile.visit',

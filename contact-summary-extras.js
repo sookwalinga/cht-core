@@ -34,23 +34,6 @@ module.exports = {
     return consent;
   },
 
-  isAgeUnderFive: function() {
-    console.log(contact);
-
-    var oneDay = 24 * 60 * 60 * 1000;
-
-    var today = new Date();
-
-    var birthDate = new Date(contact.date_of_birth);
-
-    var ageInYears =  Math.round(Math.abs((today - birthDate)/ (oneDay * 7 * 52)));
-
-    if(ageInYears < 5)
-      return true;
-
-    return false;
-  },
-
   getVisitCount: function() {
     console.debug(reports);
 

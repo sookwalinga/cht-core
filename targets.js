@@ -11,7 +11,7 @@ module.exports = [
     appliesTo: 'contacts',                                  // Whether your target is associated with reports or contacts
     appliesToType: 'person', // The type of contact for which this target is relevant. This is not a mandatory field but it is what displays
     // the count. Without this field, the count remains as zero.
-    appliesIf: extras.isAgeUnderFive
+    appliesIf: extras.isChildUnder5
   },
 
   // CHILDREN UNDER FIVE WITH ATLEAST ONE VISIT- THIS MONTH
@@ -26,7 +26,7 @@ module.exports = [
     appliesTo: 'contacts',                                 // Whether your target is associated with reports or contacts
     appliesToType: 'person',  // The type of contact for which this target is relevant. This is not a mandatory field but it is what displays
     // the count. Without this field, the count remains as zero.
-    appliesIf: function (c) { return extras.isAgeUnderFive(c); }, //calculates the denominator
+    appliesIf: function (c) { return extras.isChildUnder5(c); }, //calculates the denominator
     passesIf: function (c) {    //calculates the numerator
 
       var date = new Date();
@@ -53,7 +53,7 @@ module.exports = [
     appliesToType: 'person',  // The type of contact for which this target is relevant. This is not a mandatory field but it is what displays
     // the count. Without this field, the count remains as zero.
     appliesIf: function () {//console.log("Inside appliesIf");
-      return extras.isAgeUnderOneAndVisited(c);
+      return extras.isChildUnder1AndVisited(c);
     }, //calculates the denominator
     passesIf: function (c) {    //calculates the numerator (visit >2 this month)
 

@@ -5,34 +5,24 @@ module.exports = {
   month: 30,
 
   isChildUnder5: function (c) {
-    if(c.contact && c.contact.date_of_birth) {
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(now - birthDate.getTime());
-      var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30));
-      return ageInMonths < 60;
+    if(c.contact && c.contact.parent && c.contact.parent.parent && 
+       c.contact.parent.parent.parent && c.contact.date_of_birth) {
+          var birthDate = new Date(c.contact.date_of_birth);
+          var ageInMs = new Date(now - birthDate.getTime());
+          var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30));
+          return ageInMonths < 60;
     }
     return false;
   },
-
-  isAgeUnderFive: function (c) {
-      var oneDay = 24 * 60 * 60 * 1000;
-      var today = new Date();
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInYears =  Math.round(Math.abs((today - birthDate)/ (oneDay * 7 * 52)));
-    if(ageInYears < 5)
-      return true;
-    return false;
-  },
-
-  isAgeUnderOne: function (c) {
-      var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-      var today = new Date();
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInYears =  Math.round((today - birthDate)/ (oneDay * 7* 52));
-    if(ageInYears < 1) {
-    console.log("Inside ageInYrs < 1");
-      return true;
-      }
+ 
+  isChildUnder1: function (c) {
+    if(c.contact && c.contact.parent && c.contact.parent.parent && 
+       c.contact.parent.parent.parent && c.contact.date_of_birth) {
+          var birthDate = new Date(c.contact.date_of_birth);
+          var ageInMs = new Date(now - birthDate.getTime());
+          var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30));
+          return ageInMonths < 12;   
+    }
     return false;
   },
 
@@ -44,9 +34,9 @@ module.exports = {
       return count.length;
   },
 
-  isAgeUnderOneAndVisited: function (c)
+  isChildUnder1AndVisited: function (c)
   {
-      return extras.isAgeUnderOne(c) && extras.getVisitCount(c) > 0;
+      return extras.isChildUnder1(c) && extras.getVisitCount(c) > 0;
   },
 
   countReportsSubmitted: function (c, form) {
