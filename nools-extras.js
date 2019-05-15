@@ -5,7 +5,7 @@ module.exports = {
   month: 30,
 
   isChildUnder5: function (c) {
-    if(c.contact && c.contact.parent && c.contact.parent.parent && 
+    if(c.contact && c.contact.parent && c.contact.parent.parent &&
        c.contact.parent.parent.parent && c.contact.date_of_birth) {
           var birthDate = new Date(c.contact.date_of_birth);
           var ageInMs = new Date(now - birthDate.getTime());
@@ -14,14 +14,14 @@ module.exports = {
     }
     return false;
   },
- 
+
   isChildUnder1: function (c) {
-    if(c.contact && c.contact.parent && c.contact.parent.parent && 
+    if(c.contact && c.contact.parent && c.contact.parent.parent &&
        c.contact.parent.parent.parent && c.contact.date_of_birth) {
           var birthDate = new Date(c.contact.date_of_birth);
           var ageInMs = new Date(now - birthDate.getTime());
           var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30));
-          return ageInMonths < 12;   
+          return ageInMonths < 12;
     }
     return false;
   },
@@ -93,13 +93,13 @@ module.exports = {
       report.fields &&
       report.fields.has_referral
     ) {
-      return report.fields.has_referral;
+      return report.fields.has_referral === '1';
     }
-    return 0;
+    return false;
   },
 
   getSmallBabyFlag: function (report) {
-    if (
+    if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
       report.fields.first_visit_6_months &&
@@ -107,11 +107,18 @@ module.exports = {
     ) {
       return report.fields.first_visit_6_months.refer_flag_small_baby;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_flag_small_baby
+    ) {
+      return report.fields.refer_flag_small_baby;
+    }
     return 0;
   },
 
   getNeonatalDangerSignFlag: function (report) {
-    if (
+    if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
       report.fields.neonatal_danger_signs &&
@@ -119,11 +126,18 @@ module.exports = {
   ) {
       return report.fields.neonatal_danger_signs.refer_neonatal_danger_sign_flag;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_neonatal_danger_sign_flag
+    ) {
+      return report.fields.refer_neonatal_danger_sign_flag;
+    }
     return 0;
   },
 
   getChildDangerSignFlag: function (report) {
-    if (
+    if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
       report.fields.child_danger_signs &&
@@ -131,11 +145,18 @@ module.exports = {
     ) {
       return report.fields.child_danger_signs.refer_child_danger_sign_flag;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_child_danger_sign_flag
+    ) {
+      return report.fields.refer_child_danger_sign_flag;
+    }
     return 0;
   },
 
   getMUACFlag: function (report) {
-    if (
+    if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
       report.fields.malnutrition_anemia &&
@@ -143,11 +164,18 @@ module.exports = {
     ) {
       return report.fields.malnutrition_anemia.refer_muac_flag;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_muac_flag
+    ) {
+      return report.fields.refer_muac_flag;
+    }
     return 0;
   },
 
   getPalmPallorFlag: function (report) {
-    if (
+    if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
       report.fields.malnutrition_anemia &&
@@ -155,11 +183,18 @@ module.exports = {
     ) {
       return report.fields.malnutrition_anemia.refer_palm_pallor_flag;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_palm_pallor_flag
+    ) {
+      return report.fields.refer_palm_pallor_flag;
+    }
     return 0;
   },
 
   getVaccinesFlag: function (report) {
-    if (
+    if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
       report.fields.immunizations &&
@@ -167,20 +202,33 @@ module.exports = {
     ) {
       return report.fields.immunizations.refer_vaccines_flag;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_vaccines_flag
+    ) {
+      return report.fields.refer_vaccines_flag;
+    }
     return 0;
   },
 
   getSlowToLearnSpecificsFlag: function (report) {
-    if (
+    if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
       report.fields.problem_solving &&
       report.fields.problem_solving.refer_slow_to_learn_specifics_flag
-  ) {
+    ) {
       return report.fields.problem_solving.refer_slow_to_learn_specifics_flag;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_slow_to_learn_specifics_flag
+    ) {
+      return report.fields.refer_slow_to_learn_specifics_flag;
+    }
     return 0;
-
   },
 
   getBcg: function (c) {
@@ -224,7 +272,7 @@ module.exports = {
     }
     return result;
   },
-// FIXME
+
   getDtp_hepb_hib1: function () {
     var result = 0;
     var reportsFound = [];
@@ -391,5 +439,15 @@ module.exports = {
       }
     }
     return result;
-  }
+  },
+
+  isFormSubmittedForSource: function (reports, source_form, source_id) {
+    var reportsFound = reports.filter(function(r) {
+      return (r.form === source_form) &&
+        r.fields &&
+        r.fields.referral_source_id &&
+        (r.fields.referral_source_id === source_id);
+    });
+    return reportsFound.length > 0;
+  },
 };

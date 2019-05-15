@@ -6,8 +6,6 @@ module.exports = [
     title: 'task.referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function(c, r) {
-      console.log("Logging from referral_follow_up hasReferral: ", extras.hasReferral(r));
-      console.log("Logging from referral_follow_up SmallBaby:, ", extras.getSmallBabyFlag(r));
       // if infant_child sets has_referral, we can eliminate the other checks
       return extras.hasReferral(r) ||
         extras.getSmallBabyFlag(r) ||
@@ -22,7 +20,8 @@ module.exports = [
     actions: [{
       form: 'referral_follow_up',
       modifyContent: function(content, contact, report) {
-        content.last_visit_date = new Date(report.reported_date).toDateString();
+        content.source_form = report.form;
+        content.source_id = report._id;
         content.refer_flag_small_baby = extras.getSmallBabyFlag(report);
         content.refer_neonatal_danger_sign_flag = extras.getNeonatalDangerSignFlag(report);
         content.refer_child_danger_sign_flag = extras.getChildDangerSignFlag(report);
@@ -41,7 +40,7 @@ module.exports = [
             report.fields &&
             report.fields.referral_days
           ) {
-            days = report.fields.referral_days;
+            days = Number(report.fields.referral_days);
           }
           return Utils.addDate(new Date(report.reported_date), days);
         },
@@ -50,19 +49,11 @@ module.exports = [
       }
     ],
     resolvedIf: function(c, r, event, dueDate) {
-      // Resolved if there is a form submitted within the time window
-      // Assumption: only one referral open for client
-      // return false;
-      // console.log('Logging from resolvedIf', r);
-      // console.log('Logging from resolvedIf', dueDate);
-      // console.log('Logging from resolvedIf', r.form);
-      // console.log('Logging from resolvedIf', Utils.isFormSubmittedInWindow(c.reports, 'referral_follow_up',
-      // Utils.addDate(dueDate, -event.start).getTime(),
-      // Utils.addDate(dueDate,  event.end+1).getTime()));
-
-      return Utils.isFormSubmittedInWindow(c.reports, 'referral_follow_up',
-                  Utils.addDate(dueDate, -event.start).getTime(),
-                  Utils.addDate(dueDate,  event.end+1).getTime());
+      // Resolved if
+      // the form is a referral form with no open referral
+      // there is a 'referral_follow_up' form submitted that has the _id of the report set as source_id
+      return (r.form === 'referral_follow_up' && !extras.hasReferral(r)) ||
+        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id);
     },
   },
 
@@ -75,16 +66,16 @@ module.exports = [
       // Task applies in one of two conditions:
       //  1. Person is under 5 and has had no infant-child forms submitted at all - this is for the first infant-child visit
       //  2. Person is under 5, has had an infant-child form submitted, and has a positive number of consenting visits.  This person has given consent
-      //     and will continue to receive infant-child visits. 
+      //     and will continue to receive infant-child visits.
       return ((
-        c.contact.parent && 
-        c.contact.parent.parent && 
-        c.contact.parent.parent.parent && 
-        extras.isChildUnder5(c) && 
+        c.contact.parent &&
+        c.contact.parent.parent &&
+        c.contact.parent.parent.parent &&
+        extras.isChildUnder5(c) &&
         extras.countConsentingInfantChildVisits(c) > 0
       ) || (
-        c.contact.parent && 
-        c.contact.parent.parent && 
+        c.contact.parent &&
+        c.contact.parent.parent &&
         c.contact.parent.parent.parent &&
         extras.isChildUnder5(c) &&
         extras.countReportsSubmitted(c, 'infant_child') === 0
@@ -138,7 +129,7 @@ module.exports = [
         },
         start: (extras.day * 8),
         end: (extras.week * 7) - 1
-      }, 
+      },
       {
         id: 'infant_child_week_11_week_15_visit',
         dueDate: function(event, c){
@@ -146,7 +137,7 @@ module.exports = [
         },
         start: 0,
         end: (extras.week * 4) - 1
-      }, 
+      },
       {
         id: 'infant_child_week_15_month_6_visit',
         dueDate: function(event, c){
@@ -154,7 +145,7 @@ module.exports = [
         },
         start: (extras.week * 1),
         end: (extras.month * 6) - 1
-      }, 
+      },
       {
         id: 'infant_child_month_6_month_9_visit',
         dueDate: function(event, c){
@@ -162,7 +153,7 @@ module.exports = [
         },
         start: (extras.days * 2),
         end: (extras.month * 9) - 1
-      }, 
+      },
       {
         id: 'infant_child_month_9_month_12_visit',
         dueDate: function(event, c){
@@ -170,7 +161,7 @@ module.exports = [
         },
         start: (extras.days * 24),
         end: (extras.month * 12) - 1
-      }, 
+      },
       {
         id: 'infant_child_month_12_month_15_visit',
         dueDate: function(event, c){
@@ -178,7 +169,7 @@ module.exports = [
         },
         start: (extras.month * 1),
         end: (extras.month * 2) - 1
-      }, 
+      },
       {
         id: 'infant_child_month_15_month_18_visit',
         dueDate: function(event, c){
@@ -186,7 +177,7 @@ module.exports = [
         },
         start: (extras.month * 1),
         end: (extras.month * 2) - 1
-      }, 
+      },
       {
         id: 'infant_child_month_18_month_24_visit',
         dueDate: function(event, c){
