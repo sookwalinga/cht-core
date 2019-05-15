@@ -129,7 +129,7 @@ module.exports = [
           return extras.daysAfterBirth(c, (extras.day * 5));
         },
         start: (extras.day * 2),
-        end: (extras.day * 2)
+        end: (extras.day * 14)
       },
       {
         id: 'infant_child_day_20_week_11_visit',
@@ -145,7 +145,7 @@ module.exports = [
           return extras.daysAfterBirth(c, (extras.week * 11));
         },
         start: 0,
-        end: (extras.week * 15) - 1
+        end: (extras.week * 4) - 1
       }, 
       {
         id: 'infant_child_week_15_month_6_visit',

@@ -4415,8 +4415,8 @@ Muombe mama akuoneshe jinsi anavyomueka mtoto wake wakati wa kumnyonyesha</value
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/show_comforting" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/praise_comfort" readonly="true()" required="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;looks_talks&quot;)" type="string"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort" readonly="true()" required="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;does_not_comfort&quot;)" type="string"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/praise_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;looks_talks&quot;)" type="string"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;does_not_comfort&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting" relevant="not(selected( /infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/discuss_correcting" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/how_correct" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting ,&quot;yes&quot;)" required="true()" type="select1"/>
@@ -4464,7 +4464,7 @@ Muombe mama akuoneshe jinsi anavyomueka mtoto wake wakati wa kumnyonyesha</value
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_learn_specifics" readonly="true()" relevant=" /infant_child/ccd_assessment_intervention/problem_solving/refer_slow_to_lear_specifics_flag  = 1" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/was_male_present" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/male_present_entire_visit" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/was_male_present ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/was_male_present ,&quot;yes&quot;)" required="true()" type="select"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/was_male_present ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/wash_baby_wash" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0"/>
       <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal" relevant="( /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15))"/>
       <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal/discuss_stool" readonly="true()" type="string"/>
@@ -4478,7 +4478,7 @@ Muombe mama akuoneshe jinsi anavyomueka mtoto wake wakati wa kumnyonyesha</value
       <bind nodeset="/infant_child/llints" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0"/>
       <bind nodeset="/infant_child/llints/note_malaria" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/llints/has_mosquito_net" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/llints/free_mosquito_net" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/llints/free_mosquito_net" readonly="true()" relevant="selected( /infant_child/llints/has_mosquito_net ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/group_summary/non_consent_note" readonly="true()" relevant="selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)" type="string"/>
       <bind calculate="if( /infant_child/first_visit_6_months/refer_flag_small_baby =1 or
  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1 or 
@@ -6325,7 +6325,7 @@ Muombe mama akuoneshe jinsi anavyomueka mtoto wake wakati wa kumnyonyesha</value
             <value>no</value>
           </item>
         </select1>
-        <select ref="/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction">
+        <select1 ref="/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction">
           <label ref="jr:itext('/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction:label')"/>
           <item>
             <label ref="jr:itext('/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction/frustrated_aggressive:label')"/>
@@ -6343,7 +6343,7 @@ Muombe mama akuoneshe jinsi anavyomueka mtoto wake wakati wa kumnyonyesha</value
             <label ref="jr:itext('/infant_child/ccd_assessment_intervention/problem_solving/partner_interaction/very_concerned_interested:label')"/>
             <value>very_concerned_interested</value>
           </item>
-        </select>
+        </select1>
       </group>
     </group>
     <group appearance="field-list" ref="/infant_child/wash_baby_wash">
