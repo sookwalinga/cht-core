@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Add person</h:title>
+    <h:title>Ongeza Mtu</h:title>
     <model>
       <itext>
         <translation lang="en">
@@ -162,7 +162,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-05-07 10-28">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-05-16  10-05">
           <inputs>
             <meta>
               <location>
@@ -220,7 +220,7 @@
           </meta>
         </data>
       </instance>
-      <bind nodeset="/data/inputs" relevant="false()"/>
+      <bind nodeset="/data/inputs" relevant="0"/>
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/inputs/user/name" type="string"/>
