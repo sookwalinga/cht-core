@@ -60,7 +60,7 @@
             <value>_The registration process for this kaya is now complete._</value>
           </text>
           <text id="/data/hh_member_count/hh_repeat_note:label">
-            <value>SAY: For each person, I will ask some basic details about who they are, starting with the primary contact person for this household. Who should I list as the primary contact for this household, who will be the person I reach out to coordinate care for themselves and other members of this household? This person should be reachable by phone.</value>
+            <value>SAY: For each person, I will ask some basic details about who they are, starting with either the head of household or best contact person for this household. Who should I list as the person I can reach out to coordinate care for themselves and other members of this household? This person should be reachable by phone.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:hint">
             <value>Ask the person to list the names of all people who live in the house, and count to ensure that the number they provided is correct. Long term visitors to the house, such as a woman returning home for delivery, should not be counted - only people who are permanent residents of the house.</value>
@@ -334,7 +334,7 @@
             <value>_Mchakato wa usajili katika kaya umekamilika_</value>
           </text>
           <text id="/data/hh_member_count/hh_repeat_note:label">
-            <value>SEMA: Kwa kila mmoja, nitawauliza baadhi ya taarifa za msingi za utambulisho wenu, tukianza na mtu ambaye naweza kuwasiliana naye kwenye nyumba hii. Je ni nani nimuorodheshe kama mtu wa kuwasiliana naye kwenye kaya hii ? Je, ni nani atakayekuwa mtu ninayeweza kukutana naye ili kuratibu utowaji wa huduma kwake mwenyewe na watu wengine walioko kwenye familia? Mtu huyu awe anapatikana kupitia mawasiliano ya simu.</value>
+            <value>SEMA: Kwa kila mmoja, nitawauliza baadhi ya taarifa za msingi za utambulisho wenu, tukianza na mkuu wa kaya au mtu mzima yoyote ambaye naweza kuwasiliana naye kwenye nyumba hii. Je, ni nani atakayekuwa mtu ninayeweza kukutana naye ili kuratibu utowaji wa huduma kwake mwenyewe na watu wengine walioko kwenye familia? Mtu huyu awe anapatikana kupitia mawasiliano ya simu.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:hint">
             <value>Muombe mwenyeji wako aorodheshe majina ya watu wanaoishi kwenye kaya, na hesabu ili kuhakikisha idadi ni sawa. Usiwahesabu wageni walikokuja kutembea kwa muda mrefu, mfano wanawake walikuja nyumbani ili kujifungua, hesabu wakaazi wakudumu peke yao.</value>
@@ -430,7 +430,7 @@
             <value>-</value>
           </text>
           <text id="/data/init/first_name_contact:label">
-            <value>ULIZA: ni lipi jina la kwanza la mtu ambaye naweza kuwasiliana naye kwenye kaya yenu?</value>
+            <value>ULIZA: Ni lipi jina la kwanza la mtu ambaye naweza kuwasiliana naye kwenye kaya yenu?</value>
           </text>
           <text id="/data/init/primary_phone_contact:jr:constraintMsg">
             <value>Tumia moja kati ya mfumo huu +255XXXXXXXXX au 0XXXXXXXXX.</value>
@@ -558,7 +558,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-05-16  10-10">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-05-17  16-05">
           <inputs>
             <meta>
               <location>
