@@ -1,0 +1,310 @@
+{
+  "locales": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "es",
+      "name": "Español (Spanish)"
+    },
+    {
+      "code": "fr",
+      "name": "Français (French)"
+    },
+    {
+      "code": "ne",
+      "name": "नेपाली (Nepali)"
+    },
+    {
+      "code": "sw",
+      "name": "Kiswahili (Swahili)"
+    }
+  ],
+  "locale": "en",
+  "locale_outgoing": "en",
+  "date_format": "DD-MMM-YYYY",
+  "reported_date_format": "DD-MMM-YYYY HH:mm:ss",
+  "forms_only_mode": false,
+  "place_hierarchy_types": [
+    "district_hospital",
+    "health_center"
+  ],
+  "default_responses": {
+    "start_date": ""
+  },
+  "district_admins_access_unallocated_messages": false,
+  "public_access": false,
+  "default_country_code": "255",
+  "gateway_number": "+255677863181",
+  "kujua-reporting": [
+    {
+      "code": "VPD",
+      "reporting_freq": "weekly"
+    }
+  ],
+  "schedule_morning_hours": 0,
+  "schedule_morning_minutes": 0,
+  "schedule_evening_hours": 23,
+  "schedule_evening_minutes": 0,
+  "synthetic_date": "",
+  "contact_display_short": "clinic.name",
+  "roles": {
+    "national_admin": {
+      "name": "usertype.national-manager"
+    },
+    "district_admin": {
+      "name": "usertype.district-manager",
+      "offline": true
+    },
+    "data_entry": {
+      "name": "usertype.data-entry"
+    },
+    "analytics": {
+      "name": "usertype.analytics"
+    },
+    "supervisor": {
+      "name": "usertype.supervisor",
+      "offline": true
+    },
+    "chv": {
+      "name": "usertype.chv"
+    }
+  },
+  "permissions": {
+    "can_export_messages": [
+      "national_admin",
+      "district_admin",
+      "analytics"
+    ],
+    "can_export_forms": [
+      "national_admin",
+      "district_admin",
+      "analytics"
+    ],
+    "can_export_contacts": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_export_feedback": [
+      "national_admin"
+    ],
+    "can_view_data_records": [
+      "national_admin",
+      "district_admin",
+      "analytics"
+    ],
+    "can_view_unallocated_data_records": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_view_users": [
+      "national_admin"
+    ],
+    "can_edit": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_update_messages": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_update_users": [
+      "national_admin"
+    ],
+    "can_update_people": [
+      "supervisor",
+      "chv"
+    ],
+    "can_update_places": [
+      "supervisor",
+      "chv"
+    ],
+    "can_create_records": [
+      "national_admin",
+      "district_admin",
+      "data_entry",
+      "supervisor",
+      "chv"
+    ],
+    "can_access_gateway_api": [],
+    "can_create_users": [
+      "national_admin"
+    ],
+    "can_create_people": [
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_create_places": [
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_view_tasks": [
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_view_tasks_tab": [
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_configure": [
+      "national_admin"
+    ],
+    "can_view_messages": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_view_messages_tab": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_view_reports": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_view_reports_tab": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_view_analytics": [
+      "national_admin",
+      "district_admin",
+      "analytics",
+      "supervisor",
+      "chv"
+    ],
+    "can_view_analytics_tab": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_view_contacts": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_view_contacts_tab": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_edit_profile": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_delete_reports": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_bulk_delete_reports": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_delete_contacts": [
+      "national_admin",
+      "district_admin",
+      "supervisor",
+      "chv"
+    ],
+    "can_delete_messages": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_delete_users": [
+      "national_admin"
+    ],
+    "can_view_message_action": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_view_call_action": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_log_out_on_android": [],
+    "can_verify_reports": [
+      "national_admin",
+      "district_admin"
+    ],
+    "can_view_last_visited_date": [],
+    "can_write_wealth_quintiles": []
+  },
+  "changes_controller": {
+    "reiterate_changes": true,
+    "changes_limit": 100,
+    "debounce_interval": 200
+  },
+  "uhc": {
+    "contacts_default_sort": "",
+    "visit_count": {
+      "month_start_date": 1,
+      "visit_count_goal": 0
+    }
+  },
+  "care_coordinator": "chw",
+  "anc_registration_lmp": false,
+  "setup_complete": true,
+  "contact_summary": "",
+  "tasks": {
+    "rules": "define Target {_id: null,deleted: null,type: null,pass: null,date: null}define Contact {contact: null,reports: null}define Task {_id: null,deleted: null,doc: null,contact: null,icon: null,date: null,title: null,fields: null,resolved: null,priority: null,priorityLabel: null,reports: null,actions: null}rule GenerateEvents {when {c: Contact}then {var idx1,idx2,r,target,now=Utils.now();function isFormSubmittedInWindow(e,t,n,i,a){var o=!1,r=0;return e.forEach(function(e){!o&&0<=t.indexOf(e.form)&&e.reported_date>=n&&e.reported_date<=i&&(r++,(!a||e.fields&&e.fields.follow_up_count>a||a<=r)&&(o=!0))}),o}function isChildUnder5(e){if(e.contact&&e.contact.date_of_birth){var t=new Date(e.contact.date_of_birth),n=new Date(now-t.getTime());return 12*Math.abs(n.getFullYear()-1970)+n.getMonth()<60}return!1}function countReportsSubmitted(e,t){return e&&e.reports?e.reports.filter(function(e){return e.form===t}).length:0}function hasGivenConsent(e){var t='',n=[];e&&e.reports&&(0<(n=e.reports.filter(function(e){return'infant_child'===e.form&&e.fields&&e.fields.consent&&''!==e.fields.consent.child_consent_today})).length&&(t=Utils.getMostRecentReport(n,'infant_child').fields.consent.child_consent_today));return t}function isSmallBaby(e){var t,n=[];e&&e.reports&&(0<(n=e.reports.filter(function(e){return'infant_child'===e.form&&e.fields&&e.fields.first_visit_6_months&&''!==e.fields.first_visit_6_months.small_baby_today})).length&&(t=Utils.getMostRecentReport(n,'infant_child').fields.first_visit_6_months.small_baby_today));return t}function isChildUnder5(e){if(e.contact&&e.contact.parent&&e.contact.parent.parent&&e.contact.parent.parent.parent)return!0}function isChildUnder1(e){var t=new Date,n=new Date(e.contact.date_of_birth);return Math.round((t-n)/314496e5)<1&&(console.log('Inside ageInYrs < 1'),!0)}function getVisitCount(e){return e.reports.filter(function(e){return'infant_child'===e.form}).length}function isChildUnder1AndVisited(e){return isChildUnder1(e)&&0<getVisitCount(e)}var targets=[{id:'children-under-5',appliesTo:'contacts',date:'now',appliesToType:'person',appliesIf:isChildUnder5},{id:'children-under-5-this-month',appliesTo:'contacts',date:'now',passesIf:function(e){var t=new Date,n=t.getMonth(),i=t.getYear(),a=new Date(e.contact.reported_date);return a.getMonth()===n&&a.getYear()===i&&0<getVisitCount(e)},appliesToType:'person',appliesIf:function(e){return isChildUnder5(e)}},{id:'under5-visitedtwiceormore-thismonth',appliesTo:'contacts',date:'now',passesIf:function(e){var t=new Date,n=t.getMonth(),i=t.getYear(),a=new Date(e.contact.reported_date);return console.log('Skukuuu'),a.getMonth()===n&&a.getYear()===i&&2<=getVisitCount(e)},appliesToType:'person',appliesIf:function(){return isChildUnder1AndVisited(c)}},{id:'children-born-at-home',appliesTo:'reports',date:'now',appliesToType:'infant_child',appliesIf:function(e,t){return e.contact&&e.contact._id&&t.fields&&t.fields.first_visit_6_months&&'at_home'===t.fields.first_visit_6_months.delivery_location}}],tasks=[{icon:'child',title:[{locale:'en',content:'Infant-Child visit'}],appliesTo:'contacts',appliesIf:function(e){return console.log('Logging from tasks ...',e),isChildUnder5(e)},appliesToType:['person'],actions:[{form:'infant_child',modifyContent:function(e,t){t.child_consent=hasGivenConsent(e),t.num_child_visits=countReportsSubmitted(e,'infant_child'),t.small_baby=isSmallBaby(e)}}],events:[{id:'infant_child_first_visit',days:0,start:0,end:21}],resolvedIf:function(e,t,n,i){return isFormSubmittedInWindow(e.reports,'infant_child',Utils.addDate(i,-n.start).getTime(),Utils.addDate(i,n.end+1).getTime())}}];for(idx1=0;idx1<targets.length;++idx1)switch((target=targets[idx1]).appliesTo){case'contacts':c.contact&&-1!==target.appliesToType.indexOf(c.contact.type)&&emitContactBasedTargetFor(c,target);break;case'reports':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitReportBasedTargetFor(c,r,target);break;default:throw new Error('unrecognised target type: '+target.appliesTo)}if(tasks)for(idx1=0;idx1<tasks.length;++idx1){var task=tasks[idx1];switch(task.appliesTo){case'reports':case'scheduled_tasks':for(idx2=0;idx2<c.reports.length;++idx2)r=c.reports[idx2],emitTasksForSchedule(c,task,r);break;case'contacts':c.contact&&-1!==task.appliesToType.indexOf(c.contact.type)&&emitTasksForSchedule(c,task);break;default:throw new Error('unrecognised task type: '+task.appliesTo)}}function emitTasksForSchedule(r,s,d){var e;if((!d||!s.appliesToType||-1!==s.appliesToType.indexOf(d.form))&&('scheduled_tasks'===s.appliesTo||!s.appliesIf||s.appliesIf(r,d)))if('scheduled_tasks'===s.appliesTo){if(d&&s.appliesIf){if(!d.scheduled_tasks)return;for(e=0;e<d.scheduled_tasks.length;e++)s.appliesIf(r,d,e)&&t(e)}}else t();function t(e){var t,n,i,a,o=null;for(t=0;t<s.events.length;t++)n=s.events[t],o=d?n.dueDate?n.dueDate(d,n,e):void 0!==e?new Date(Utils.addDate(new Date(d.scheduled_tasks[e].due),n.days)):new Date(Utils.addDate(new Date(d.reported_date),n.days)):n.dueDate?n.dueDate(r.contact,n,e):new Date(Utils.addDate(new Date(r.contact.reported_date),n.days)),Utils.isTimely(o,n)&&(a={_id:d?d._id+'-'+n.id:r.contact._id+'-'+s.id,deleted:!(!(r.contact&&r.contact.deleted||d)||!d.deleted),doc:r,contact:r.contact,icon:s.icon,date:o,title:s.title,resolved:s.resolvedIf(r,d,n,o,e),actions:s.actions.map(c)},void 0!==e&&(a._id+='-'+e),'function'==typeof(i=s.priority)&&(i=i(r,d)),i&&(a.priority=i.level,a.priorityLabel=i.label),emit('task',new Task(a)))}function c(e){var t={source:'task',source_id:d&&d._id,contact:r.contact};return e.modifyContent&&e.modifyContent(d,t),{type:'report',form:e.form,label:e.label||'Follow up',content:t}}}function emitContactBasedTargetFor(e,t){if(!t.appliesIf||t.appliesIf(e)){var n=!t.passesIf||!!t.passesIf(e),i=createTargetInstance(t.id,e.contact,n);if('function'==typeof t.date)i.date=t.date(e);else if(void 0===t.date||'now'===t.date)i.date=now.getTime();else{if('reported'!==t.date)throw new Error('Unrecognised value for target.date: '+t.date);i.date=e.reported_date}emitTargetInstance(i)}}function emitReportBasedTargetFor(e,t,n){var i,a;if(!n.appliesIf||n.appliesIf(e,t))if(n.emitCustom)n.emitCustom(e,t);else switch(a=!n.passesIf||!!n.passesIf(e,t),(i=createTargetInstance(n.id,t,a))._id=('report'===n.idType?t._id:e.contact._id)+'-'+n.id,emitTargetInstance(i),n.date){case'now':i.date=now.getTime()}}function createTargetInstance(e,t,n){return new Target({_id:t._id+'-'+e,deleted:!!t.deleted,type:e,pass:n,date:t.reported_date})}function emitTargetInstance(e){emit('target',e)}emit('_complete',{_id:!0});}}",
+    "schedules": {},
+    "targets": {
+      "enabled": true,
+      "items": [
+        {
+          "id": "children-under-5",
+          "type": "count",
+          "goal": 100,
+          "translation_key": "targets.children_u5.title",
+          "subtitle_translation_key": "targets.all_time.subtitle",
+          "icon": "icon-people-child"
+        },
+        {
+          "id": "children-under-5-this-month",
+          "type": "percent",
+          "goal": 20,
+          "translation_key": "targets.children_u5_visited.title",
+          "subtitle_translation_key": "targets.this_month.subtitle",
+          "icon": "icon-people-child"
+        },
+        {
+          "id": "under5-visitedtwiceormore-thismonth",
+          "type": "percent",
+          "goal": 20,
+          "translation_key": "targets.children_u1.multivisit",
+          "subtitle_translation_key": "targets.this_month.subtitle",
+          "icon": "icon-people-child"
+        },
+        {
+          "id": "children-born-at-home",
+          "type": "count",
+          "goal": 100,
+          "translation_key": "targets.born.athome",
+          "subtitle_translation_key": "targets.all_time.subtitle",
+          "icon": "icon-people-child"
+        }
+      ]
+    }
+  },
+  "replication_depth": [
+    {
+      "role": "supervisor",
+      "depth": 1
+    }
+  ]
+}

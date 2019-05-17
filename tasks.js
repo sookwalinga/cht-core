@@ -2,7 +2,7 @@ module.exports = [
 
   // referral follow-up
   {
-    icon: 'followup-general', // maybe not the best icon, but the best in the set
+    icon: 'follow-up', // maybe not the best icon, but the best in the set
     title: 'task.referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function(c, r) {
