@@ -558,7 +558,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-05-17  16-05">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-05-20  10-59">
           <inputs>
             <meta>
               <location>
@@ -750,7 +750,7 @@
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')" nodeset="/data/household_location/means_of_travel_other" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)" required="true()" type="string"/>
       <bind nodeset="/data/end_registration_note" readonly="true()" type="string"/>
       <bind calculate="." nodeset="/data/clinic/parent" type="string"/>
-      <bind calculate="concat(../../contact/first_name,../../contact/last_name, ' Household')" nodeset="/data/clinic/name" type="string"/>
+      <bind calculate="concat('Nyumba ya ' , ../../contact/first_name,../../contact/last_name, ' - Nyumba no. ',../../household_location/house_number)" nodeset="/data/clinic/name" type="string"/>
       <bind calculate="concat(../../inputs/meta/location/lat, concat(' ', ../../inputs/meta/location/long))" nodeset="/data/clinic/geolocation" type="string"/>
       <bind calculate="&quot;NEW&quot;" nodeset="/data/clinic/contact" type="string"/>
       <bind calculate=" /data/district_auto " nodeset="/data/clinic/household_district" type="string"/>
