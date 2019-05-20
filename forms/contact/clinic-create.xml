@@ -128,6 +128,12 @@
           <text id="/data/household_location:label">
             <value>Household Location</value>
           </text>
+          <text id="/data/init/age_estimate_contact:jr:constraintMsg">
+            <value>Age must be between 12 and 100!</value>
+          </text>
+          <text id="/data/init/age_estimate_contact:label">
+            <value>ASK: What is <output value=" /data/init/first_name_contact "/>'s estimated age in years?</value>
+          </text>
           <text id="/data/init/dob_contact:jr:constraintMsg">
             <value>Calculated age must be between 12 and 100!</value>
           </text>
@@ -179,11 +185,8 @@
           <text id="/data/init/sex_contact:label">
             <value>Enter <output value=" /data/init/first_name_contact "/>'s sex:</value>
           </text>
-          <text id="/data/init/yob_contact:jr:constraintMsg">
-            <value>Age must be between 12 and 100!</value>
-          </text>
           <text id="/data/init/yob_contact:label">
-            <value>ASK: In what year was <output value=" /data/init/first_name_contact "/> born?</value>
+            <value>-</value>
           </text>
           <text id="/data/init:label">
             <value>Household Contact Information</value>
@@ -196,6 +199,12 @@
           </text>
           <text id="/data/inputs/user/name:label">
             <value>Name of the logged in user</value>
+          </text>
+          <text id="/data/repeat/child/age_estimate:jr:constraintMsg">
+            <value>Age must be between 5 and 100. For children under 5 years of age, a more exact birthdate must be captured. Please select "Yes" to the prior question and do your best to capture more exact birthdate information about the child.</value>
+          </text>
+          <text id="/data/repeat/child/age_estimate:label">
+            <value>ASK: Do you know <output value=" /data/repeat/child/first_name_c "/>'s estimated age in years?</value>
           </text>
           <text id="/data/repeat/child/debug_note:label">
             <value>date of birth: <output value=" /data/repeat/child/date_of_birth_c "/> under_5_flag: <output value=" /data/repeat/child/is_under_5_binary "/> is reproductive age: <output value=" /data/repeat/child/reproductive_age "/></value></text>
@@ -227,7 +236,7 @@
             <value>ASK: What is their first name?</value>
           </text>
           <text id="/data/repeat/child/hh_member_note:label">
-            <value>Now, please enter information for the other members of the kaya.</value>
+            <value>Now, please enter information for the next member of the kaya.</value>
           </text>
           <text id="/data/repeat/child/return_children_note:label">
             <value>SAY: From this registration, I've seen that you have a child under 5 who can benefit from this national program. Therefore, I'm asking for your permission to come back and check up on all issues related to their health care, nutrition, and child development. I would be grateful for your permission.</value>
@@ -243,12 +252,6 @@
           </text>
           <text id="/data/repeat/child/sex:label">
             <value>Enter <output value=" /data/repeat/child/first_name_c "/>'s sex</value>
-          </text>
-          <text id="/data/repeat/child/yob:jr:constraintMsg">
-            <value>For children under 5 years of age, a more exact birthdate must be captured. Please select "Yes" to the prior question and do your best to capture more exact birthdate information about the child.</value>
-          </text>
-          <text id="/data/repeat/child/yob:label">
-            <value>ASK: In what year was <output value=" /data/repeat/child/first_name_c "/> born?</value>
           </text>
           <text id="/data/repeat/child:label">
             <value>Household Member Information</value>
@@ -358,7 +361,7 @@
             <value>Nambari ya nyumba:</value>
           </text>
           <text id="/data/household_location/intro_note:label">
-            <value>Lengo la maswali haya yanayouliza kuhusu eneo la kaya ni kwajili ya kukusaidia kuweza kuitambua kwa urahisi kaya wakati wa kutaka kurudia kufanya matembeleo mengine kwa watu wanaoishi humu. Ingiza taarifa zitazoweza kukusaidia kiurahisi kuitambua kaya hii pindi unapotaka kuirudia tena. Kabla ya kuifika kaya hii. Ni ipi anuani ya nyumba hii?</value>
+            <value>Lengo la maswali haya yanayouliza kuhusu eneo la kaya ni kwajili ya kukusaidia kuweza kuitambua kwa urahisi kaya wakati wa kutaka kurudia kufanya matembeleo mengine kwa watu wanaoishi humu. Ingiza taarifa zitazoweza kukusaidia kiurahisi kuitambua kaya hii pindi unapotaka kuirudia tena. Ni ipi anuani ya nyumba hii?</value>
           </text>
           <text id="/data/household_location/kitongoji:jr:constraintMsg">
             <value>Jaza kitongoji</value>
@@ -404,6 +407,12 @@
           </text>
           <text id="/data/household_location:label">
             <value>Eneo la kaya</value>
+          </text>
+          <text id="/data/init/age_estimate_contact:jr:constraintMsg">
+            <value>Umri uwe ni kati ya 12 na 100!</value>
+          </text>
+          <text id="/data/init/age_estimate_contact:label">
+            <value>ULIZA: Je kwa makadirio <output value=" /data/init/first_name_contact "/> ana miaka mingapi?</value>
           </text>
           <text id="/data/init/dob_contact:jr:constraintMsg">
             <value>Umri uliohesabiwa ni lazima uwe kati ya miaka 12 na 100</value>
@@ -456,9 +465,6 @@
           <text id="/data/init/sex_contact:label">
             <value>Ingiza jinsia yake:</value>
           </text>
-          <text id="/data/init/yob_contact:jr:constraintMsg">
-            <value>Umri uwe ni kati ya 12 na 100!</value>
-          </text>
           <text id="/data/init/yob_contact:label">
             <value>ULIZA Ni mwaka gani alizaliwa?</value>
           </text>
@@ -485,6 +491,12 @@
           </text>
           <text id="/data/inputs:label">
             <value>-</value>
+          </text>
+          <text id="/data/repeat/child/age_estimate:jr:constraintMsg">
+            <value>Umri lazime uwe kati ya miaka 5 hadi miaka 100. Kwa watoto walio chini ya umri wa miaka 5, tarehe yao ya kuzaliwa nilazima ichukuliwe.</value>
+          </text>
+          <text id="/data/repeat/child/age_estimate:label">
+            <value>ULIZA: Je kwa makadirio <output value=" /data/repeat/child/first_name_c "/> ana miaka mingapi?</value>
           </text>
           <text id="/data/repeat/child/debug_note:label">
             <value>-</value>
@@ -517,7 +529,7 @@
             <value>ULIZA: Ni lipi jina lake la kwanza?</value>
           </text>
           <text id="/data/repeat/child/hh_member_note:label">
-            <value>Sasa, tafadhali ingiza taarifa za watu wengine wanaoishi kwenye kaya.</value>
+            <value>Sasa, tafadhali ingiza taarifa za mtu anayefuata katika kaya yako.</value>
           </text>
           <text id="/data/repeat/child/meta:label">
             <value>-</value>
@@ -543,11 +555,8 @@
           <text id="/data/repeat/child/type:label">
             <value>-</value>
           </text>
-          <text id="/data/repeat/child/yob:jr:constraintMsg">
-            <value>Kwa watoto walio chini ya umri wa miaka 5, tarehe yake yao ya kuzaliwa nilazima ichukuliwe.</value>
-          </text>
           <text id="/data/repeat/child/yob:label">
-            <value>ULIZA: Ni mwaka gani alizaliwa?</value>
+            <value>-</value>
           </text>
           <text id="/data/repeat/child:label">
             <value>Taarifa za wanakaya</value>
@@ -558,7 +567,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-05-20  10-59">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-05-20  16-30">
           <inputs>
             <meta>
               <location>
@@ -626,6 +635,7 @@
             <name_contact/>
             <sex_contact/>
             <exact_dob_known_contact/>
+            <age_estimate_contact/>
             <yob_contact/>
             <dob_contact/>
             <primary_phone_contact/>
@@ -649,6 +659,7 @@
               <sex_c/>
               <exact_dob_known/>
               <exact_dob_known_c/>
+              <age_estimate/>
               <yob/>
               <dob/>
               <date_of_birth/>
@@ -709,7 +720,8 @@
       <bind calculate="concat( /data/init/first_name_contact ,&quot; &quot;, /data/init/family_name_contact )" nodeset="/data/init/name_contact" type="string"/>
       <bind nodeset="/data/init/sex_contact" required="true()" type="select1"/>
       <bind nodeset="/data/init/exact_dob_known_contact" required="true()" type="select1"/>
-      <bind constraint=". &lt;= (format-date-time(today(),&quot;%Y&quot;) - 12) and . &gt;= (format-date-time(today(),&quot;%Y&quot;) - 100)" jr:constraintMsg="jr:itext('/data/init/yob_contact:jr:constraintMsg')" nodeset="/data/init/yob_contact" relevant="selected( /data/init/exact_dob_known_contact ,&quot;no&quot;)" required="true()" type="int"/>
+      <bind constraint=". &gt;= 12 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')" nodeset="/data/init/age_estimate_contact" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;" required="true()" type="int"/>
+      <bind calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact" nodeset="/data/init/yob_contact" type="string"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" nodeset="/data/init/dob_contact" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" required="true()" type="date"/>
       <bind constraint="regex(.,'^(\+255|0)[0-9]{9}$')" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')" nodeset="/data/init/primary_phone_contact" required="true()" type="string"/>
       <bind constraint="regex(.,'^(\+255|0)[0-9]{9}$')" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')" nodeset="/data/init/secondary_phone_contact" type="string"/>
@@ -730,7 +742,8 @@
       <bind calculate="../sex" nodeset="/data/repeat/child/sex_c" type="string"/>
       <bind nodeset="/data/repeat/child/exact_dob_known" required="true()" type="select1"/>
       <bind calculate="../exact_dob_known" nodeset="/data/repeat/child/exact_dob_known_c" type="string"/>
-      <bind constraint="format-date-time(today(),&quot;%Y&quot;) - . &gt; 5 and format-date-time(today(),&quot;%Y&quot;) - . &lt;= 100" jr:constraintMsg="jr:itext('/data/repeat/child/yob:jr:constraintMsg')" nodeset="/data/repeat/child/yob" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;" required="true()" type="int"/>
+      <bind constraint=". &gt; 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')" nodeset="/data/repeat/child/age_estimate" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;" required="true()" type="int"/>
+      <bind calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate" nodeset="/data/repeat/child/yob" type="string"/>
       <bind constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')" nodeset="/data/repeat/child/dob" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
       <bind calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')" nodeset="/data/repeat/child/date_of_birth" type="string"/>
       <bind calculate="../date_of_birth" nodeset="/data/repeat/child/date_of_birth_c" type="string"/>
@@ -822,8 +835,8 @@
           <value>no</value>
         </item>
       </select1>
-      <input ref="/data/init/yob_contact">
-        <label ref="jr:itext('/data/init/yob_contact:label')"/>
+      <input ref="/data/init/age_estimate_contact">
+        <label ref="jr:itext('/data/init/age_estimate_contact:label')"/>
       </input>
       <input ref="/data/init/dob_contact">
         <label ref="jr:itext('/data/init/dob_contact:label')"/>
@@ -877,8 +890,8 @@
               <value>no</value>
             </item>
           </select1>
-          <input ref="/data/repeat/child/yob">
-            <label ref="jr:itext('/data/repeat/child/yob:label')"/>
+          <input ref="/data/repeat/child/age_estimate">
+            <label ref="jr:itext('/data/repeat/child/age_estimate:label')"/>
           </input>
           <input ref="/data/repeat/child/dob">
             <label ref="jr:itext('/data/repeat/child/dob:label')"/>

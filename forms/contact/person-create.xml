@@ -14,6 +14,12 @@
           <text id="/data/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
+          <text id="/data/person/age_estimate_contact:jr:constraintMsg">
+            <value>Age must be between 5 and 100. For children under 5 years of age, a more exact birthdate must be captured. Please select "Yes" to the prior question and do your best to capture a more exact birthdate.</value>
+          </text>
+          <text id="/data/person/age_estimate_contact:label">
+            <value>ASK: What is <output value=" /data/person/first_name_c "/>'s estimated age in years?</value>
+          </text>
           <text id="/data/person/debug_note:label">
             <value>date of birth: <output value=" /data/person/date_of_birth_c "/> under_5_flag: <output value=" /data/person/is_under_5_binary "/> is reproductive age: <output value=" /data/person/reproductive_age "/></value></text>
           <text id="/data/person/dob:jr:constraintMsg">
@@ -61,12 +67,6 @@
           <text id="/data/person/sex:label">
             <value>Enter <output value=" /data/person/first_name_c "/>'s sex</value>
           </text>
-          <text id="/data/person/yob:jr:constraintMsg">
-            <value>For children under 5 years of age, a more exact birthdate must be captured. Please select "Yes" to the prior question and do your best to capture a more exact birthdate.</value>
-          </text>
-          <text id="/data/person/yob:label">
-            <value>ASK: In what year was <output value=" /data/person/first_name_c "/> born?</value>
-          </text>
           <text id="/data/person:label">
             <value>Household Member Information</value>
           </text>
@@ -92,6 +92,12 @@
           </text>
           <text id="/data/inputs:label">
             <value>-</value>
+          </text>
+          <text id="/data/person/age_estimate_contact:jr:constraintMsg">
+            <value>Umri lazima uwe lati ya miaka 5 hadi miaka 100. Kwa watoto walio chini ya umri wa miaka 5, tarehe yake yao ya kuzaliwa nilazima ichukuliwe.</value>
+          </text>
+          <text id="/data/person/age_estimate_contact:label">
+            <value>ULIZA: Je kwa makadirio <output value=" /data/person/first_name_c "/> ana miaka mingapi?</value>
           </text>
           <text id="/data/person/debug_note:label">
             <value>-</value>
@@ -150,19 +156,13 @@
           <text id="/data/person/type:label">
             <value>-</value>
           </text>
-          <text id="/data/person/yob:jr:constraintMsg">
-            <value>Kwa watoto walio chini ya umri wa miaka 5, tarehe yake yao ya kuzaliwa nilazima ichukuliwe.</value>
-          </text>
-          <text id="/data/person/yob:label">
-            <value>ULIZA: Ni mwaka gani alizaliwa?</value>
-          </text>
           <text id="/data/person:label">
             <value>Taarifa za wanakaya</value>
           </text>
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-05-16  10-05">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-05-20  16-30">
           <inputs>
             <meta>
               <location>
@@ -193,6 +193,7 @@
             <sex_c/>
             <exact_dob_known/>
             <exact_dob_known_c/>
+            <age_estimate_contact/>
             <yob/>
             <dob/>
             <date_of_birth/>
@@ -243,7 +244,8 @@
       <bind calculate="../sex" nodeset="/data/person/sex_c" type="string"/>
       <bind nodeset="/data/person/exact_dob_known" required="true()" type="select1"/>
       <bind calculate="../exact_dob_known" nodeset="/data/person/exact_dob_known_c" type="string"/>
-      <bind constraint="format-date-time(today(),&quot;%Y&quot;) - . &gt; 5 and format-date-time(today(),&quot;%Y&quot;) - . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/yob:jr:constraintMsg')" nodeset="/data/person/yob" relevant=" /data/person/exact_dob_known_c =&quot;no&quot;" required="true()" type="int"/>
+      <bind constraint=". &gt; 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" nodeset="/data/person/age_estimate_contact" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" required="true()" type="int"/>
+      <bind calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact" nodeset="/data/person/yob" type="string"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" nodeset="/data/person/dob" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
       <bind calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')" nodeset="/data/person/date_of_birth" type="string"/>
       <bind calculate="../date_of_birth" nodeset="/data/person/date_of_birth_c" type="string"/>
@@ -311,8 +313,8 @@
           <value>no</value>
         </item>
       </select1>
-      <input ref="/data/person/yob">
-        <label ref="jr:itext('/data/person/yob:label')"/>
+      <input ref="/data/person/age_estimate_contact">
+        <label ref="jr:itext('/data/person/age_estimate_contact:label')"/>
       </input>
       <input ref="/data/person/dob">
         <label ref="jr:itext('/data/person/dob:label')"/>
