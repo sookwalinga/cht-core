@@ -9,10 +9,10 @@ module.exports = {
   fields: [
     { appliesToType:'person',  label:'contact.age', value:contact.date_of_birth, width: 4, filter: 'age' },
     { appliesToType:'person',  label:'contact.sex', value:contact.sex, width: 4},
-    { appliesToType:'person', appliesIf:function(){ return contact.phone; }, label:'contact.phone', value:contact.phone, width: 4, filter:'phone'},
-    { appliesToType:'person', appliesIf:function() { return contact.parent && !contact.phone && lineage[0];},label:'contact.phone',value: lineage[0].contact.phone,width: 4,filter:'phone'},
+    { appliesToType:'person',  appliesIf:function() { return contact.phone; }, label:'contact.phone', value:contact.phone, width: 4, filter:'phone'},
+    { appliesToType:'person',  appliesIf:function() { return contact.parent && !contact.phone && lineage[1] && lineage[1].parent;},label:'contact.phone',value: lineage[0] && lineage[0].contact?lineage[0].contact.phone:'',width: 4,filter:'phone'},
     { appliesToType:'person',  label:'contact.parent', value:lineage, filter: 'lineage' }
-   
+
   ],
 
   cards: [
