@@ -52,6 +52,12 @@
           <text id="/data/person/hh_member_note:label">
             <value>Now, please enter information for the other members of the kaya.</value>
           </text>
+          <text id="/data/person/middle_name:jr:constraintMsg">
+            <value>Enter a middle name</value>
+          </text>
+          <text id="/data/person/middle_name:label">
+            <value>ASK: What is their middle name?</value>
+          </text>
           <text id="/data/person/return_children_note:label">
             <value>SAY: From this registration, I've seen that you have a child under 5 who can benefit from this national program. Therefore, I'm asking for your permission to come back and check up on all issues related to their health care, nutrition, and child development. I would be grateful for your permission.</value>
           </text>
@@ -103,7 +109,7 @@
             <value>-</value>
           </text>
           <text id="/data/person/dob:jr:constraintMsg">
-            <value>Je umeingiza umri sahihi- hakikisha umeingiza kwa usahihi. Kwa watoto walio chini ya miaka 5, hakikisha kuwa tarehe yao si ya Zaidi ya miaka 5 nyuma.</value>
+            <value>Je umeingiza umri sahihi? Hakikisha umeingiza kwa usahihi. Kwa watoto walio chini ya miaka 5, hakikisha kuwa tarehe yao si ya zaidi ya miaka 5 nyuma.</value>
           </text>
           <text id="/data/person/dob:label">
             <value>ULIZA: Ipi ni tarehe yake kuzaliwa</value>
@@ -118,13 +124,13 @@
             <value>ULIZA: Je unaijua terehe yake ya kuzaliwa kwa usahihi?</value>
           </text>
           <text id="/data/person/family_name:jr:constraintMsg">
-            <value>-</value>
+            <value>Jaza jina la babu</value>
           </text>
           <text id="/data/person/family_name:label">
-            <value>ULIZA: Ni lipi jina lake la babu?</value>
+            <value>ULIZA: Ni lipi jina la babu yake?</value>
           </text>
           <text id="/data/person/first_name:jr:constraintMsg">
-            <value>-</value>
+            <value>Jaza jina la kwanza</value>
           </text>
           <text id="/data/person/first_name:label">
             <value>ULIZA: Ni lipi jina lake la kwanza?</value>
@@ -134,6 +140,12 @@
           </text>
           <text id="/data/person/meta:label">
             <value>-</value>
+          </text>
+          <text id="/data/person/middle_name:jr:constraintMsg">
+            <value>Jaza jina la baba</value>
+          </text>
+          <text id="/data/person/middle_name:label">
+            <value>ULIZA: Ni lipi jina la baba yake?</value>
           </text>
           <text id="/data/person/parent:label">
             <value>-</value>
@@ -162,7 +174,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-05-20  16-30">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-05-22  16-02">
           <inputs>
             <meta>
               <location>
@@ -185,8 +197,10 @@
             <type>person</type>
             <parent>PARENT</parent>
             <first_name/>
+            <middle_name/>
             <family_name/>
             <first_name_c/>
+            <middle_name_c/>
             <family_name_c/>
             <name/>
             <sex/>
@@ -198,6 +212,7 @@
             <dob/>
             <date_of_birth/>
             <date_of_birth_c/>
+            <is_exact_dob_in_range/>
             <reproductive_age/>
             <is_under_5_binary/>
             <return_children_note/>
@@ -236,22 +251,25 @@
       <bind nodeset="/data/person/type" type="string"/>
       <bind calculate="." nodeset="/data/person/parent" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/first_name:jr:constraintMsg')" nodeset="/data/person/first_name" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/middle_name:jr:constraintMsg')" nodeset="/data/person/middle_name" required="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/family_name:jr:constraintMsg')" nodeset="/data/person/family_name" required="true()" type="string"/>
       <bind calculate="../first_name" nodeset="/data/person/first_name_c" type="string"/>
+      <bind calculate="../middle_name" nodeset="/data/person/middle_name_c" type="string"/>
       <bind calculate="../family_name" nodeset="/data/person/family_name_c" type="string"/>
-      <bind calculate="concat( /data/person/first_name_c ,&quot; &quot;, /data/person/family_name_c )" nodeset="/data/person/name" type="string"/>
+      <bind calculate="concat( /data/person/first_name_c ,&quot; &quot;,  /data/person/middle_name_c ,&quot; &quot;,  /data/person/family_name_c )" nodeset="/data/person/name" type="string"/>
       <bind nodeset="/data/person/sex" required="true()" type="select1"/>
       <bind calculate="../sex" nodeset="/data/person/sex_c" type="string"/>
       <bind nodeset="/data/person/exact_dob_known" required="true()" type="select1"/>
       <bind calculate="../exact_dob_known" nodeset="/data/person/exact_dob_known_c" type="string"/>
-      <bind constraint=". &gt; 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" nodeset="/data/person/age_estimate_contact" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" required="true()" type="int"/>
-      <bind calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact" nodeset="/data/person/yob" type="string"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" nodeset="/data/person/age_estimate_contact" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" required="true()" type="int"/>
+      <bind calculate="if(../age_estimate_contact != '', format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact, 1900)" nodeset="/data/person/yob" type="string"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" nodeset="/data/person/dob" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
       <bind calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')" nodeset="/data/person/date_of_birth" type="string"/>
       <bind calculate="../date_of_birth" nodeset="/data/person/date_of_birth_c" type="string"/>
+      <bind calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)" nodeset="/data/person/is_exact_dob_in_range" type="string"/>
       <bind calculate="if( /data/person/sex_c =&quot;female&quot; and ((((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &gt;= 15 and ((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &lt;= 49)),int(1),int(0))" nodeset="/data/person/reproductive_age" type="string"/>
-      <bind calculate="if( /data/person/exact_dob_known_c =&quot;yes&quot;,if(((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365.25) &lt; 5,1,0),0)" nodeset="/data/person/is_under_5_binary" type="string"/>
-      <bind nodeset="/data/person/return_children_note" readonly="true()" relevant=" /data/person/is_under_5_binary =1" type="string"/>
+      <bind calculate="if(((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365.25) &lt; 5,1,0)" nodeset="/data/person/is_under_5_binary" type="string"/>
+      <bind nodeset="/data/person/return_children_note" readonly="true()" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot; and  /data/person/is_under_5_binary =1 and  /data/person/is_exact_dob_in_range  = 1" type="string"/>
       <bind nodeset="/data/person/return_women_note" readonly="true()" relevant=" /data/person/reproductive_age  = 1" type="string"/>
       <bind nodeset="/data/person/debug_note" readonly="true()" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/person/meta/start" type="dateTime"/>
@@ -287,6 +305,9 @@
       <input appearance="hidden" ref="/data/person/parent"/>
       <input ref="/data/person/first_name">
         <label ref="jr:itext('/data/person/first_name:label')"/>
+      </input>
+      <input ref="/data/person/middle_name">
+        <label ref="jr:itext('/data/person/middle_name:label')"/>
       </input>
       <input ref="/data/person/family_name">
         <label ref="jr:itext('/data/person/family_name:label')"/>
