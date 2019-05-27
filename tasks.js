@@ -100,6 +100,7 @@ module.exports = [
         content.bopv3 = extras.getBopv3(c);
         content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
         content.pcvi3 = extras.getPciv3(c);
+        content.ipv = extras.getIpv(c);
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
       }

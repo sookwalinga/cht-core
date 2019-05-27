@@ -413,6 +413,20 @@ module.exports = {
     return result;
   },
 
+  getIpv: function () {
+    var result = 0;
+    var reportsFound = [];
+    if(c && c.reports) {
+      reportsFound = c.reports.filter(function(r) {
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_ipv === 'yes';
+      });
+      if(reportsFound.length > 0) {
+        result = 1;
+      }
+    }
+    return result;
+  },
+
   getSurua_rubella1: function () {
     var result = 0;
     var reportsFound = [];

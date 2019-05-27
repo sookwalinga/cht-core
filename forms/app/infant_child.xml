@@ -6,7 +6,7 @@
       <itext>
         <translation lang="en">
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort:label">
-            <value>ADVISE FOR CONCERN: You have tried your best to comfort your child. In addition, I want to add that it is very important to look into the child's eyes, hold them gently, and speak to them all the time.
+            <value>ADVISE FOR CONCERN: You should try your best to comfort your child. In addition, I want to add that it is very important to look into the child's eyes, hold them gently, and speak to them all the time.
 
 Help the women to demonstrate again using the new techniques.</value>
           </text>
@@ -39,15 +39,6 @@ Help the women to demonstrate again using the new techniques.</value>
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting:label">
             <value>Have you observed the caregiver correcting the child?</value>
           </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort/does_not_comfort:label">
-            <value>Is not able to comfort child, and child does not look to caregiver for comfort.</value>
-          </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort/looks_talks:label">
-            <value>Looks into child's eyes and talks softly to child, gently touches child or holds child closely.</value>
-          </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort:label">
-            <value>How did the caregiver comfort the child and show love?</value>
-          </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_correct/distracts:label">
             <value>Distracts child from unwanted actions with appropriate toy or activity.</value>
           </text>
@@ -77,9 +68,6 @@ Help the women to demonstrate again using the new techniques.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/praise_interact:label">
             <value>PRAISE the caregiver</value>
-          </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/show_comforting:label">
-            <value>I would like to talk about how you comfort the child and show them love. Let's pretend that your child is disturbed right now. Can you show me how you will act/behave toward the child in order to make them comfortable, and show them love?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/development_stage/stage_12mo_to_2yr:label">
             <value>12 months up to 2 years</value>
@@ -343,7 +331,7 @@ Select 1 play and 1 communication activity from the Play and Communication Guide
             <value>Yes</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_slow_to_learn:label">
-            <value>ASK: Do you or the caregiver have any concerns that child is not responding or seems slow?</value>
+            <value>CONSIDER/ASK: Do you or the caregiver have any concerns that child is not responding or seems slow?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_stressful_family_environment/no:label">
             <value>No</value>
@@ -352,7 +340,7 @@ Select 1 play and 1 communication activity from the Play and Communication Guide
             <value>Yes</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_stressful_family_environment:label">
-            <value>ASK: Is the family environment stressful with a lot of arguments?</value>
+            <value>CONSIDER/OBSERVE: Is the family environment stressful with a lot of arguments?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_toys/no:label">
             <value>No</value>
@@ -394,6 +382,9 @@ ASK: On how many days in the past week was the child left alone for more than an
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child/took_outside:label">
             <value>Took the child outside the home</value>
+          </text>
+          <text id="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child:jr:constraintMsg">
+            <value>Cannot select "None of the above" and another option.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child:label">
             <value>ASK: In the past three days, did the mother or any household member age 15 or over engage in any of the following activities with the child?</value>
@@ -684,11 +675,17 @@ SAY: Thank you for talking about this issues with me today. I noticed a concern 
           <text id="/infant_child/child_danger_signs/child_vomit:label">
             <value>ASK: Does the child vomit everything?</value>
           </text>
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_108:label">
+            <value>Child Danger Signs</value>
+          </text>
           <text id="/infant_child/child_danger_signs/no_child_danger_sign_note:label">
             <value>SAY: No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
-          <text id="/infant_child/child_danger_signs:label">
-            <value>Child Danger Signs</value>
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109/yes:label">
+            <value>Yes</value>
           </text>
           <text id="/infant_child/child_visit_intro_note:label">
             <value>SEMA: Habari mama? Kama tulivyozungumza wakati wa matembeleo yetu yaliyopita kuwa ntakuja kukutembelea kwa ajili ya kujua maendeleo na afya ya mtoto/watoto, na pia kujadiliana na wewe pamoja na familia juu ya malezi na makuzi bora ya mtoto/watoto wako. Nafahamu kuwa unajua jinsi ya kumtunza mtoto wako na kumkuza vizuri, lakini hii ni kama nyongeza tu ya elimu kutokana na ongezeko la maradhi na matatizo mbali mbali yanayoweza kudhoofisha afya na makuzi bora ya mtoto.</value>
@@ -746,22 +743,9 @@ ASK: have you ever breastfed?</value>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding_note:label">
             <value>Praise the family if the baby is getting only breast milk.</value>
           </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/help_attachment_note:label">
-            <value>Help the mother with attachment.</value>
-          </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/how_breastfeeding_going_note:label">
             <value>ASK: How is it going? Do you have any concerns you wish to discuss?
 _Discuss concerns with mother._</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached/no:label">
-            <value>No</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached:label">
-            <value>Is the baby well attached?
-This means the chin is touching the breast, mouth wide open, lower lip turned outward, more areola visible above than below the mouth.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_breastfeeding_positioning_ok/no:label">
             <value>No</value>
@@ -770,7 +754,7 @@ This means the chin is touching the breast, mouth wide open, lower lip turned ou
             <value>Yes</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_breastfeeding_positioning_ok:label">
-            <value>Is the positioning ok?</value>
+            <value>Is the positioning and attachment ok? This means the chin is touching the breast, mouth wide open, lower lip turned outward, more areola visible above than below the mouth.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note:label">
             <value>Discuss with the mother why she is not frequently and exclusively breastfeeding. Advise her and problem solve with her.</value>
@@ -779,9 +763,11 @@ This means the chin is touching the breast, mouth wide open, lower lip turned ou
             <value>Help the mother to:
 
 -&gt;Sit or lie comfortably.
--&gt;Hold the baby's body against hers.
--&gt;Have the baby face the breast.
--&gt;Hold the breast and touch the baby's cheek with the nipple, so baby turns and opens mouth.-&gt;Fix the baby's mouth on the nipple. Make sure baby is in a comfortable position to feed.</value>
+-&gt;Support the baby's whole body, not just the neck and shoulders. Ensure baby's head and body are in a straight line.
+-&gt;Have the baby face the breast. The baby's nose is opposite her nipple.
+-&gt;Hold the breast and touch the baby's cheek with the nipple, so baby turns and opens mouth.
+-&gt;Fix the baby's mouth on the nipple. Make sure baby is in a comfortable position to feed.
+-&gt;Touch the baby's lips with her nipple</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/observe_breastfeeding_note:label">
             <value>OBSERVE: If possible, ask the mother to breastfeed and observe. If not possible, ask questions below rather than observing.
@@ -792,29 +778,14 @@ This means the chin is touching the breast, mouth wide open, lower lip turned ou
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/ok_breastfeeding_positioning_note:label">
             <value>Congratulate mother for breastfeeding in a right position.</value>
           </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_attachment_suckling_note:label">
+          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_suckling_note:label">
             <value>Help the mother to improve positioning and attachment.
-Attachment guidance:
 
 -&gt;If baby is too sleepy to feed, try to wake him by rubbing body, arms, or legs.
 -&gt;If baby is still not feeding from the breast after one hour, squeeze the first, yellow fluid from the breast into a clean cup or spoon. Feed this to baby often and in small amounts, making sure baby can swallow it.
--&gt;If baby does not feed well within the first 24 hours after birth, see a health worker.
--&gt;For a proper attachment of the infant, help the mother to make sure:
- 
--&gt;The baby's head and body are in a straight line
--&gt;The baby is facing the breast, the baby's nose is opposite her nipple
--&gt;Hold the baby's body close to her body
--&gt;Support the baby's whole body, not just the neck and shoulders
- 
-To help the baby to attach, advise the mother to:
- 
--&gt;Touch the baby's lips with her nipple
 -&gt;Wait until the baby's mouth is opened wide
 -&gt;Move the baby quickly onto her breast, aiming the infant's lower lip well below the nipple.
- 
-Look for signs of good attachment and effective suckling (slow, deep sucks, sometimes pausing). If good, praise the mother and advise her to continue doing the same. If the attachment or suckling is not good, try again. Then reassess.
-
-If breast engorgement, express a small amount of breast milk before starting breastfeeding to soften nipple area so that it is easier for the baby to attach.</value>
+-&gt;If breast engorgement, express a small amount of breast milk before starting breastfeeding to soften nipple area so that it is easier for the baby to attach.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively/no:label">
             <value>No</value>
@@ -824,6 +795,9 @@ If breast engorgement, express a small amount of breast milk before starting bre
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively:label">
             <value>Is the baby suckling effectively?</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively_note:label">
+            <value>Praise the mother and advise her to continue doing the same.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/time_to_breastfeed/dont_know:label">
             <value>Does not know</value>
@@ -863,6 +837,9 @@ If breast engorgement, express a small amount of breast milk before starting bre
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/recent_food_eaten/soft_food:label">
             <value>Soft food</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/recent_food_eaten:jr:constraintMsg">
+            <value>Cannot select "None of the above" and another option.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/recent_food_eaten:label">
             <value>ASK: Did the child drink or eat any of the following yesterday during the day or the night?</value>
@@ -920,15 +897,24 @@ If breast engorgement, express a small amount of breast milk before starting bre
             <value>Essential Newborn Care: Cord Care</value>
           </text>
           <text id="/infant_child/essential_newborn_stimulation/newborn_stimulation_note:label">
-            <value>You and your partner/ husband or family members are responsible for the infant's brain and mind development, and these early months and years should be used for his/her growth.
+            <value>SAY: You and your partner/ husband or family members are responsible for the infant's brain and mind development, and these early months and years should be used for his/her growth.
+
 A newborn baby can see things, feel things, and can respond to the voices and sounds she or he hears. A baby can tell us she or he is hungry or unhappy by the sounds he makes. A baby loves to see faces of her or his mum and dad (or other important caregiver). [see translation in EFFECTS job aids]
+
 The more opportunities we give our babies to explore the world (by playing, practicing new skills, seeing new things and copying what others do), the more information is given to the brain.
+
 For your newborn baby, you can:
 [Days 0-7:]
 
- -&gt;Talk and Mwimbie mtoto
+-&gt;Talk and sing to the baby
+-&gt;Provide ways for your baby to see, hear, move arms and legs freely, and touch you
+-&gt;Smile at your baby
+-&gt;Touch and hold the infant with love
 
-[Days 8 to month 6]: [use points in image in dropbox: Dropbox (D-tree)\DTree\Country Programs\Tanzania\Projects\Botnar Foundation ZNZ\Technical\Design\App Content\Protocols for Digitization\2019.03.12 Infant-Child\Shortened versions\5. Essential newborn care - shortened.docx]</value>
+[Days 8 to month 6]:
+
+-&gt;PLAY: Provide ways for your child to see, hear, feel, move freely, and touch you. Slowly move colourful things for your child to see and reach for. Sample toys: shaker rattle, big ring on a string. 
+-&gt;COMMUNICATE: Smile and laugh with your child. Talk to your child. Get a conversation going by copying your child's sounds or gestures.</value>
           </text>
           <text id="/infant_child/essential_newborn_stimulation:label">
             <value>Essential Newborn Care: Stimulation</value>
@@ -1048,61 +1034,19 @@ For your newborn baby, you can:
             <value>SAY: Please invite your husband and family so we can explain the importance of vaccinations.</value>
           </text>
           <text id="/infant_child/immunizations/first_visit_immunizations_note:label">
-            <value>SAY:
+            <value>SAY: Your baby was born on: <output value=" /infant_child/child_date_of_birth "/>. Your baby needs to get vaccines 6 times. At birth, and then 5 more times. Using that date, here is the expected vaccination schedule for your baby:
 
--&gt;Your baby was born on: <output value=" /infant_child/child_date_of_birth "/>
--&gt;Your baby needs to get vaccines 6 times. At birth, and then 5 more times.
--&gt;
- Using that date, here is the expected vaccination schedule for your baby.
+-&gt;<output value=" /infant_child/child_date_of_birth "/>: BCG, bOPV0 (return for BCG in month 3 if no scar visible)
 
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Date&lt;/th&gt;
- &lt;th&gt;Baby's age&lt;/th&gt;
- &lt;th&gt;Number of vaccinations&lt;/th&gt;
- &lt;th&gt;Types of vaccinations&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;<output value=" /infant_child/child_date_of_birth "/>&lt;/td&gt;
- &lt;td&gt;Birth&lt;/td&gt;
- &lt;td&gt;2&lt;/td&gt;
- &lt;td&gt;BCG, bOPV0 (return for BCG in month 3 if no scar visible)&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;<output value=" /infant_child/immunizations/bd_plus_six_weeks "/>&lt;/td&gt;
- &lt;td&gt;6 weeks&lt;/td&gt;
- &lt;td&gt;4&lt;/td&gt;
- &lt;td&gt;bOPV1, DTP-HepB-Hib1, PCVI 1, Rota 1&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;<output value=" /infant_child/immunizations/bd_plus_ten_weeks "/>&lt;/td&gt;
- &lt;td&gt;10 weeks&lt;/td&gt;
- &lt;td&gt;4&lt;/td&gt;
- &lt;td&gt;bOPV2, DTP-HepB-Hib2, PCVI 2, Rota 2&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;<output value=" /infant_child/immunizations/bd_plus_fourteen_weeks "/>&lt;/td&gt;
- &lt;td&gt;14 weeks&lt;/td&gt;
- &lt;td&gt;4&lt;/td&gt;
- &lt;td&gt;bOPV3, DTP-HepB-Hib3, PCVI 3, [What's the 4th?]&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;<output value=" /infant_child/immunizations/bd_plus_nine_months "/>&lt;/td&gt;
- &lt;td&gt;9 months&lt;/td&gt;
- &lt;td&gt;1&lt;/td&gt;
- &lt;td&gt;Surua - Rubella 1&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;<output value=" /infant_child/immunizations/bd_plus_eighteen_months "/>&lt;/td&gt;
- &lt;td&gt;18 months&lt;/td&gt;
- &lt;td&gt;1&lt;/td&gt;
- &lt;td&gt;Surua - Rubella 2&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;</value>
+-&gt;<output value=" /infant_child/immunizations/bd_plus_six_weeks "/>: bOPV1, DTP-HepB-Hib1, PCVI 1, Rota 1
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_ten_weeks "/>: bOPV2, DTP-HepB-Hib2, PCVI 2, Rota 2
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_fourteen_weeks "/>: bOPV3, DTP-HepB-Hib3, PCVI 3, IPV
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_nine_months "/>: Surua - Rubella 1
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_eighteen_months "/>: Surua - Rubella 2</value>
           </text>
           <text id="/infant_child/immunizations/has_health_card/no:label">
             <value>No</value>
@@ -1148,6 +1092,9 @@ For your newborn baby, you can:
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:label">
             <value>Enter the date that the child received the DTP-HepB-Hib3 vaccine</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/ipv_date:label">
+            <value>Enter the date that the child received the IPV vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:label">
             <value>Enter the date that the child received the PCVI 1 vaccine</value>
@@ -1229,6 +1176,15 @@ For your newborn baby, you can:
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3:label">
             <value>Did the child receive the DTP-HepB-Hib3 vaccine?</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/received_ipv/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/received_ipv/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/received_ipv:label">
+            <value>Did the child receive the IPV vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi1/no:label">
             <value>No</value>
@@ -1449,7 +1405,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
           <text id="/infant_child/malnutrition_anemia:label">
             <value>Malnutrition and Anemia Screening</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_73:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_75:label">
             <value>Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -1575,13 +1531,13 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
             <value>Yellow or pale palms and soles (hands and feet), and lips. Soles should be red/pink.</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_91:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_93:label">
             <value>Other Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note:label">
@@ -1680,10 +1636,10 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
           <text id="/infant_child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note:label">
             <value>No danger signs were identified in your baby, but if the baby develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_exclusively/no:label">
@@ -1778,6 +1734,9 @@ Ask the mother to show you how to position the baby during breast feeding</value
           <text id="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten/soft_food:label">
             <value>Soft food</value>
           </text>
+          <text id="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten:jr:constraintMsg">
+            <value>Cannot select "None of the above" and another option.</value>
+          </text>
           <text id="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten:label">
             <value>ASK: Did the child drink or eat any of the following yesterday during the day or the night?</value>
           </text>
@@ -1857,15 +1816,24 @@ Emphasize that anyone can do KMC.</value>
             <value>Small baby care -- Skin-to-skin care (KMC)</value>
           </text>
           <text id="/infant_child/small_baby_stimulation/small_baby_stimulation_note:label">
-            <value>You and your partner/ husband or family members are responsible for the infant's brain and mind development, and these early months and years should be used for his/her growth.
+            <value>SAY: You and your partner/ husband or family members are responsible for the infant's brain and mind development, and these early months and years should be used for his/her growth.
+
 A newborn baby can see things, feel things, and can respond to the voices and sounds she or he hears. A baby can tell us she or he is hungry or unhappy by the sounds he makes. A baby loves to see faces of her or his mum and dad (or other important caregiver). [see translation in EFFECTS job aids]
+
 The more opportunities we give our babies to explore the world (by playing, practicing new skills, seeing new things and copying what others do), the more information is given to the brain.
+
 For your newborn baby, you can:
 [Days 0-7:]
 
- -&gt;Talk and Mwimbie mtoto
+-&gt;Talk and sing to the baby
+-&gt;Provide ways for your baby to see, hear, move arms and legs freely, and touch you
+-&gt;Smile at your baby
+-&gt;Touch and hold the infant with love
 
-[Days 8 to month 6]: [use points in image in dropbox: Dropbox (D-tree)\DTree\Country Programs\Tanzania\Projects\Botnar Foundation ZNZ\Technical\Design\App Content\Protocols for Digitization\2019.03.12 Infant-Child\Shortened versions\5. Essential newborn care - shortened.docx]</value>
+[Days 8 to month 6]:
+
+-&gt;PLAY: Provide ways for your child to see, hear, feel, move freely, and touch you. Slowly move colourful things for your child to see and reach for. Sample toys: shaker rattle, big ring on a string. 
+-&gt;COMMUNICATE: Smile and laugh with your child. Talk to your child. Get a conversation going by copying your child's sounds or gestures.</value>
           </text>
           <text id="/infant_child/small_baby_stimulation:label">
             <value>Small baby care -- Stimulation</value>
@@ -1933,7 +1901,7 @@ SAY: Newborns can get an infection more easily than an adult or an older childIn
         </translation>
         <translation lang="sw">
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort:label">
-            <value>MSHAURI: Umejitahidi sana kumfariji mtoto wako ila nilikuwa nataka kuongezea kuwa ni muhimu kumtizama mtoto machoni, kuwashika vizuri na kuongea nao muda wote.
+            <value>MSHAURI: Jaribu sana kumfariji mtoto wako ila nilikuwa nataka kuongezea kuwa ni muhimu kumtizama mtoto machoni, kuwashika vizuri na kuongea nao muda wote.
 
 Msaidie Mama kuigiza tena na kutumia njia mpya.</value>
           </text>
@@ -1966,15 +1934,6 @@ Washawishi wanawake kuonyesha tena kutumia mbinu mpya.</value>
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting:label">
             <value>Je umemuona mlezi akimrekebisha mtoto wake?</value>
           </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort/does_not_comfort:label">
-            <value>Hawezi kufariji mtoto na mtoto hamuangalii mlezi kwa ajili ya kutafuta faraja.</value>
-          </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort/looks_talks:label">
-            <value>Muangalie mtoto machoni ongea na mtoto kwa upole, kwa upole mguse au mshike mtoto kwa ukaribu.</value>
-          </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort:label">
-            <value>Je ni vipi mlezi alimfariji mtoto wake na kumuonesha upendo?</value>
-          </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/how_correct/distracts:label">
             <value>Muapushe mtoto na vitendo visivyostahiki kwa kutumia vifaa vya kuchezea</value>
           </text>
@@ -2005,9 +1964,6 @@ Washawishi wanawake kuonyesha tena kutumia mbinu mpya.</value>
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior/praise_interact:label">
             <value>MPONGEZE Mlezi</value>
           </text>
-          <text id="/infant_child/ccd_assessment_intervention/assess_behavior/show_comforting:label">
-            <value>Ningependa tuongee kuhusu jinsi ya kumfariji mtoto na kuwaonesha upendo. Emu tujalie mtoto wako amekereka saa hivi. Je unaweza kunionesha vipi ungelimfanyia ili kuwafariji, na kuwaonesha upendo?</value>
-          </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_behavior:label">
             <value>-</value>
           </text>
@@ -2030,7 +1986,7 @@ Washawishi wanawake kuonyesha tena kutumia mbinu mpya.</value>
             <value>ULIZA: Je umri wa mtoto unaendana na maendeleo yake?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/normal_behavior_at_age:label">
-            <value>Taabia za watoto kulingana na umri wao:
+            <value>Tabia za watoto kulingana na umri wao:
 
 -&gt;Miezi 3 hadi 6:
 
@@ -2043,7 +1999,7 @@ Washawishi wanawake kuonyesha tena kutumia mbinu mpya.</value>
 
 -&gt;Unapojaribu kutabasamu na yeye anatabasamua
 -&gt;Huonesha ishara kama ana njaa
--&gt;Anapiga kelele ili kuwasilina 
+-&gt;Anapiga kelele ili kuwasiliana 
 -&gt;Anaweza kukaa kitako mwenyewe
 -&gt;Huwa anamtambua na anaitika kwa mlezi wake na rangi
  
@@ -2055,7 +2011,7 @@ Washawishi wanawake kuonyesha tena kutumia mbinu mpya.</value>
 -&gt;Anasimama mwenyewe
 -&gt;Kutembea mwenyewe au kwa msaada
 
--&gt;12 months up to 2 years:
+-&gt;Miezi 12 hadi miaka 2:
 
 -&gt;Kutembea mwenyewe
 -&gt;Majadiliano, na umri wa miaka 2 huanza kuunda sentensi fupi sana
@@ -2065,7 +2021,7 @@ Washawishi wanawake kuonyesha tena kutumia mbinu mpya.</value>
  
 -&gt;Miaka 2 au Zaidi:
  
--&gt;Anaanza kueleza anachokitaka, unaonesha vitu anavyovipenda, kuuliza maswali na kadhalika, anaweza kutunga sentensi mzima na anaanza kuhoji mambo yanayouwazunguka.</value>
+-&gt;Anaanza kueleza anachokitaka, anaonesha vitu anavyovipenda, kuuliza maswali na kadhalika, anaweza kutunga sentensi mzima na anaanza kuhoji mambo yanayomzunguka.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/others_available:label">
             <value>ULIZA: Je kuna wanafamilia wengine au walezi ili washiriki katika mjadala huu unaohusu maendeleo ya mtoto?
@@ -2073,7 +2029,7 @@ Washawishi wanawake kuonyesha tena kutumia mbinu mpya.</value>
 Hakikisha unamuhamisha baba kushiriki kama yupo, wakaribishe ili washiriki kwenye mjadala, pia muombe mama awe na mtoto wake karibu.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_ge_6mo/concern_communicate:label">
-            <value>USHAURI: Kuwasiliana vizuri na mtoto wako ni muhimu sana kwani inakuza uhusiano bora na maendeleo ya afya ya mtoto wako. Kupitia kuzungumzo na watoto na kuwaambia majina ya vitu, inawafanya wayajue maneno na hili linasaidia wao kuweza kuongea kwa urahisi.</value>
+            <value>USHAURI: Kuwasiliana vizuri na mtoto wako ni muhimu sana kwani inakuza uhusiano bora na maendeleo ya afya ya mtoto wako. Kupitia kuzungumza na watoto na kuwaambia majina ya vitu, inawafanya wayajue maneno na hili linasaidia wao kuweza kuongea kwa urahisi.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_ge_6mo/concern_play:label">
             <value>USHAURI: Kucheza kuna umuhimu mkubwa kwa mtoto. Mtoto asiyepata fursa ya kucheza hatakuwa na maendeleo mazuri ya afya. Watoto wanajifunza kupitia kuona wanachofanya watu wengine, huiga na kufanya mambo mapya. Michezo ni njia bora ya kuwasaidia watoto kujifunza na kufanya mambo mapya.</value>
@@ -2110,9 +2066,9 @@ Onesha kama njia mlezi anayocheza na mtoto kwa mfano kwa tumia toiz, michezo ya 
             <value>MPONGEZE: Hivi ni vizuri sana, kuwasiliana na mtoto wako kama hivi itakuza maendeleo ya afya ya mtoto wako. Kupitia kuzungumza na watoto na kuwaambia majina ya vitu, inawafanya wayajue maneno na hili linasaidia wao kuweza kuongea kwa urahisi.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_ge_6mo/praise_play:label">
-            <value>MPONGEZE mlezi analionesha jinsi anavyocheza na mtoto kwa maendeleo ya afya yao.
+            <value>MPONGEZE mlezi aliyeonesha jinsi anavyocheza na mtoto kwa maendeleo ya afya yao.
 
-MSHAURI: Watoto wanajifunza kupitia walichokiona kutoka kwa wengine, huiga na kujifunza vitu vipya. kucheza ni njia mzuri ya kumsaidia mtoto kujifunza and kufanya vitu vipya! Kadiri tunavyotoa fursa watoto wetu kucheza ndio akili zao hupata taarifa na uelewa mpana. Kwa mfano mtoto anavyotikisa kengele anajifunza mlio unaojitokeza, wanajifunza jinsi ya kuizungusha kengele, pia inamsaidia kuwa imara mwilini. Muache mtoto akuoneshe mchezo gani anapenda kucheza na wewe usiwe wa kwanza kumuamulia vipi acheze.</value>
+MSHAURI: Watoto wanajifunza kupitia walichokiona kutoka kwa wengine, huiga na kujifunza vitu vipya. kucheza ni njia mzuri ya kumsaidia mtoto kujifunza na kufanya vitu vipya. Kadiri tunavyotoa fursa watoto wetu kucheza ndio akili zao hupata taarifa na uelewa mpana. Kwa mfano mtoto anavyotikisa kengele anajifunza mlio unaojitokeza, wanajifunza jinsi ya kuizungusha kengele, pia inamsaidia kuwa imara mwilini. Muache mtoto akuoneshe mchezo gani anapenda kucheza na wewe usiwe wa kwanza kumuamulia vipi acheze.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_communicate2:label">
             <value>Muitikie mtoto kulingana na sauti yake na anavyotaka. Muite jina lake na mtizame jinsi anavyojibu</value>
@@ -2146,7 +2102,7 @@ MSHAURI mlezi kwamba wanaweza kuchora picha mzuri kwenye madaftari ya watoto wen
             <value>Ifiche Toiz ambayo mtoto anaipenda chini ya nguo au boksi, halafu uangalie kama anaweza kuifichua play peek-a-boo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_play_stack:label">
-            <value>Mpe vitu mtoto apange,pia aviweke kwenye kontena na kisha avitowe</value>
+            <value>Mpe vitu mtoto apange, pia aviweke kwenye kontena na kisha avitowe.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_ge_6mo:label">
             <value>-</value>
@@ -2199,9 +2155,9 @@ Pendekeza mchezo mmoja ambao mlezi anaweza kujaribu kucheza na mtoto wake na wae
             <value>Chezesha miguu na mikono ya mtoto au mpige pige mtoto kwa upole sana</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:label">
-            <value>ULIZA: Je unaweza ukanionesha jinsi unavyocheza na mtoto wako?, naomba nioneshe tafadhali. unafikri watoto wako wanajifunza kitu gani wakati mkicheza? 
+            <value>ULIZA: Je unaweza ukanionesha jinsi unavyocheza na mtoto wako? Naomba nioneshe tafadhali. Unafikri watoto wako wanajifunza kitu gani wakati mkicheza? 
 
-Onesha jinsi mama anavyoingiliana na nmtoto wake.</value>
+Onesha jinsi mama anavyoingiliana na mtoto wake.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/play_communicate_lt_6mo/praise_communicate:label">
             <value>MPONGEZE mlezi kwa kuwasiliana vizuri na mtoto.
@@ -2229,7 +2185,7 @@ MSHAURI: Mtoto anajifunza kupitia michezo na hujaribu kufanya baadhi ya vitu. Hu
             <value>SEMA: Ningelipenda kuongea na nyinyi kuhusu tabia na maendeleo ya mtoto wenu, chunguza jinsi wanavyofatilia mazungumzo yako. Hizi ni nyakati muhimu sana kwa watoto katika maisha yao, kipindi hiki watoto ndio hujifunza hivyo inategemea na matendo yenu kwani mnachokifanya ndio watachojifunza</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/talk_learning_communication:label">
-            <value>SEMA: Ningependa kukuuliza maswali kuhusu jinsi mtoto wako anavyojifunza na kujadili jinsi ya kucheza na kuwasilina na mtoto wako ili kuwasaidia wakuwe vyema na waweze kujifunza.</value>
+            <value>SEMA: Ningependa kukuuliza maswali kuhusu jinsi mtoto wako anavyojifunza na kujadili jinsi ya kucheza na kuwasiliana na mtoto wako ili kuwasaidia wakuwe vyema na waweze kujifunza.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/welcome_caregivers:label">
             <value>Wakaribishe walezi na familia na wahamasishe kushiriki kwenye mjadala</value>
@@ -2278,7 +2234,7 @@ Chagua mchezo 1 na shughuli moja ya mawasiliano kutoka kwenye muongoz wa michezo
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_slow_to_learn:label">
-            <value>ULIZA: Je! Wewe au mlezi ana matatizo yoyote kwamba mtoto hajibu au inaonekana kuwa mgumu wa kujifunza?</value>
+            <value>ZINGATIA/ULIZA: Je! Wewe au mlezi ana matatizo yoyote kwamba mtoto hajibu au inaonekana kuwa mgumu wa kujifunza?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_stressful_family_environment/no:label">
             <value>Hapana</value>
@@ -2287,7 +2243,7 @@ Chagua mchezo 1 na shughuli moja ya mawasiliano kutoka kwenye muongoz wa michezo
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_stressful_family_environment:label">
-            <value>ULIZA: Je mazingira ya familia ni yenye malumbano na yenye kusabisha msongo wa mawazo?</value>
+            <value>ZINGATIA/CHUNGUZA: Je mazingira ya familia ni yenye malumbano na yenye kusabisha msongo wa mawazo?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/concern_toys/no:label">
             <value>Hapana</value>
@@ -2329,6 +2285,9 @@ ULIZA: Ni siku ngapi nyuma mtoto aliachwa peke yake nyumbani kwa zaidi ya saa mo
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child/took_outside:label">
             <value>Mtoto hutolewa nje ya nyumba.</value>
+          </text>
+          <text id="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child:jr:constraintMsg">
+            <value>Huwez kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child:label">
             <value>ULIZA: Siku tatu zilizopita nyuma, Je mama au mwanafamilia yoyote aliye na umri wa miaka 15 au zaidi amefanya akiwa na mtoto shughuli hizi zifuatazo?</value>
@@ -2432,7 +2391,7 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_can_name_object:label">
-            <value>ULIZA: Je mtoto wako anaweza kuita jina la kitu japo kimoja (kwa mfano, mnyama, toiz, kikombe au kijiko)?</value>
+            <value>ULIZA: Je, mtoto wako anaweza kuita jina la kitu japo kimoja (kwa mfano, mnyama, toiz, kikombe au kijiko)?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_compared_with_kids/no:label">
             <value>Hapana</value>
@@ -2441,7 +2400,7 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_compared_with_kids:label">
-            <value>ULIZA: Je mtoto wako anajifunza kufanya baadhi vitu kama vile wanavyofanya watoto wa umri wake</value>
+            <value>ULIZA: Je, mtoto wako anajifunza kufanya baadhi vitu kama vile wanavyofanya watoto wa umri wake?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_delay_sitting/no:label">
             <value>Hapana</value>
@@ -2459,7 +2418,7 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_hearing:label">
-            <value>ULIZA: Je mtoto wako ana tatizo la kusikia( anatumia kifaa kinachomsaidia kusikia, anasikia kwa shida, hasikii kabisa)</value>
+            <value>ULIZA: Je, mtoto wako ana tatizo la kusikia( anatumia kifaa kinachomsaidia kusikia, anasikia kwa shida, hasikii kabisa)</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_seeing/no:label">
             <value>Hapana</value>
@@ -2477,7 +2436,7 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_difficulty_walking_moving:label">
-            <value>ULIZA: Je mtoto wako anapata shida wakati wa kutembea au anapojaribu kuzungusha mikono yake au Je ana ushaifu wowote kwenye miguu na mikono?</value>
+            <value>ULIZA: Je, mtoto wako anapata shida wakati wa kutembea au anapojaribu kuzungusha mikono yake au Je ana udhaifu wowote kwenye miguu na mikono?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_does_speak/no:label">
             <value>Hapana</value>
@@ -2486,7 +2445,7 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_does_speak:label">
-            <value>ULIZA: Je mtoto wako anaweza kuzungumza Je anaweza kuzungumza maneno yanayoeleweka?</value>
+            <value>ULIZA: Je, mtoto wako anaweza kuzungumza Je anaweza kuzungumza maneno yanayoeleweka?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_has_fits/no:label">
             <value>Hapana</value>
@@ -2495,7 +2454,7 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_has_fits:label">
-            <value>ULIZA: Je! Mtoto wako wakati mwingine anafaa, inakuwa ngumu, au kupoteza fahamu?</value>
+            <value>ULIZA: Je, mtoto wako wakati mwingine ana degedege/kukukutika/mdudu, inakuwa ngumu, au kupoteza fahamu?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_speech_different/no:label">
             <value>Hapana</value>
@@ -2504,7 +2463,7 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_speech_different:label">
-            <value>ULIZA: Je mtoto wako anazungumza tofauti na inavyopaswa kuwa (mazungumzo yake hayaeleweki vizuri na watu wengine isipokuwa watu wa karibu wa familia yake)?</value>
+            <value>ULIZA: Je, mtoto wako anazungumza tofauti na inavyopaswa kuwa (mazungumzo yake hayaeleweki vizuri na watu wengine isipokuwa watu wa karibu wa familia yake)?</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/slow_to_learn_understand_speech/no:label">
             <value>Hapana</value>
@@ -2519,9 +2478,9 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
             <value>TOA USHAURI: Adhabu kali kwa mtoto hazitamsaidia kuwa na maendeleo mazuri ya afya. kuwarekebisha na kuwafundisha watoto kwa namna mzuri ni kitu kinachoshauriwa zaidi. Msifie mtoto akifanya jambo zuri mpe uhuru mtoto achague lipi la kufanya badala ya kusema "usifanye''.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/tip_leave_child_concern:label">
-            <value>&gt;_Hali ya kuwaacha watoto kwa mtu mwengine pia ni moja ya changamoto inayowakumba mama na walezi wengi, orodhesha angalau mtu mmoja (aliye na umri wa zaidi ya miaka 10) ambaye atakuwa anawatunza watoto wako, kuwaandalia na kuwapa upendo. Mtu huyu ni lazima ashauri njia mzuri ya kuwatunza watoto._
- -&gt;_Mmoja kati ya changamoto unazoweza kupata ikiwa mtoto wako analelewa na mlezi mwengine na mtoto hataki kukaa mbali nawe, kila mda anapenda awe na wewe tu, kama ukimuacha mtoto wako atalia hii sana huwa linajitokeza. Ila itafika mda watoto watomzoea mlezi wao mpya, unachopaswa ufanya kuwa na subra. Wala usiogope._
- -&gt;_Washajihishe mama na baba watenge muda wa kucheza na mtoto ikiwa kuna uwezekano_</value>
+            <value>-&gt;_Hali ya kuwaacha watoto kwa mtu mwengine pia ni moja ya changamoto inayowakumba mama na walezi wengi, orodhesha angalau mtu mmoja (aliye na umri wa zaidi ya miaka 10) ambaye atakuwa anawatunza watoto wako, kuwaandalia na kuwapa upendo. Mtu huyu ni lazima ashauri njia mzuri ya kuwatunza watoto._
+-&gt;_Mmoja kati ya changamoto unazoweza kupata ikiwa mtoto wako analelewa na mlezi mwengine na mtoto hataki kukaa mbali nawe, kila mda anapenda awe na wewe tu, kama ukimuacha mtoto wako atalia hii sana huwa linajitokeza. Ila itafika mda watoto watomzoea mlezi wao mpya, unachopaswa kufanya kuwa na subra. Wala usiogope._
+-&gt;_Washajihishe mama na baba watenge muda wa kucheza na mtoto ikiwa kuna uwezekano_</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/tip_stress_concern:label">
             <value>-&gt;Msikilize mlezi jinsi anavyojiskia na msaidie kuorodhesha mtu muhimu ambaye anaweza kumsimulia hisia zake na kumsaidia mtoto wake
@@ -2537,12 +2496,10 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/tip_time_concern:label">
             <value>-&gt;Tatizo la Kuwa muda wakutosha ni kitu ambacho mama na walezi wengi kinawakuta, njia moja unaweza kujaribu ni kucheza na mtoto muda wowote unapokuwa naye, kwamfano ukiwa unapika mlo wa usiku na mtoto akiwa yupo karibu nawe, unaweza kujaribu kutenga mda kidogo kucheza na mtoto wako.
--&gt;Chanagmoto nyengine ni kuwa unaweza kujikuta huna muda wa kutosha wa kuwasaidia wanafamilia, Nashauri ni vyema ukazungumza na wanafamilia waambie kuwa unajikuta umelemewa majukumu mengi nyumbani na kumshughulikia mtoto. Unaweza kujaribu kuwahamasisha wanafamilia kutenga mda kucheza na mtoto.</value>
+-&gt;Changamoto nyengine ni kuwa unaweza kujikuta huna muda wa kutosha wa kuwasaidia wanafamilia, Nashauri ni vyema ukazungumza na wanafamilia waambie kuwa unajikuta umeelemewa majukumu mengi nyumbani na kumshughulikia mtoto. Unaweza kujaribu kuwahamasisha wanafamilia kutenga mda kucheza na mtoto.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/tip_toys_concern:label">
-            <value>-&gt;Ukweli ni kwamba karibu ya kitu kinaweza kuwa toiz. Siyo lazima utumie pesa nyingi kununa toiz. Unaweza kutumia baadhi ya vitu vinavyopatikana majumbani ambavyo ni visafi na salama. Unaweza kutumia kitambaa kwa ajili ya kutengeza toiz. La msingi hakikisha ni safi na salama. Sasa ningependelea nikusaidie kufikiri ni toiz zipi tunaweza kutengeneza kwa kutumia mambo tuliyonayo nyumbani.
--&gt;Waoneshe ni jinsi gani mlezi anaweza kutumia mambo yaliyopo nyumbani kutengenza toizi kwa ajili ya mtoto. Unesha mfano unaolingana na umri wa mtoto. Ikiwa mtoto ni mkubwa wahamasishe walezi wawatengenezee toiz zisizo na gharama kubwa
--&gt;Cheza na mtoto. Mtoto atajifunza kucheza na mlezi na watu wengine</value>
+            <value>-&gt;Ukweli ni kwamba karibu kila kitu kinaweza kuwa toiz. Siyo lazima utumie pesa nyingi kununa toiz. Unaweza kutumia baadhi ya vitu vinavyopatikana majumbani ambavyo ni visafi na salama. Unaweza kutumia kitambaa kwa ajili ya kutengeza toiz. La msingi hakikisha ni safi na salama. Sasa ningependelea nikusaidie kufikiri ni toiz zipi tunaweza kutengeneza kwa kutumia mambo tuliyonayo nyumbani.</value>
           </text>
           <text id="/infant_child/ccd_assessment_intervention/problem_solving/was_male_present/no:label">
             <value>Hapana</value>
@@ -2622,11 +2579,17 @@ SEMA: Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tati
           <text id="/infant_child/child_danger_signs/child_vomit:label">
             <value>ULIZA: Je mtoto anatapika kila kitu?</value>
           </text>
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_108:label">
+            <value>Dalili za hatari za mtoto</value>
+          </text>
           <text id="/infant_child/child_danger_signs/no_child_danger_sign_note:label">
             <value>SEMA: Hakuna dalili ya hatari yoyote iliyoonekana kwa mtoto wako, lakini ikitokea mtoto ameonesha dalili yoyote ya hatari tulizojadili, hakikisha unamuwahisha kituo cha afya kilichopo karibu nawe haraka.</value>
           </text>
-          <text id="/infant_child/child_danger_signs:label">
-            <value>Dalili za hatari za mtoto</value>
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109/yes:label">
+            <value>Ndiyo</value>
           </text>
           <text id="/infant_child/child_visit_intro_note:label">
             <value>SEMA: Habari mama? Kama tulivyozungumza wakati wa matembeleo yetu yaliyopita kuwa ntakuja kukutembelea kwa ajili ya kujua maendeleo na afya ya mtoto/watoto, na pia kujadiliana na wewe pamoja na familia juu ya malezi na makuzi bora ya mtoto/watoto wako. Nafahamu kuwa unajua jinsi ya kumtunza mtoto wako na kumkuza vizuri, lakini hii ni kama nyongeza tu ya elimu kutokana na ongezeko la maradhi na matatizo mbali mbali yanayoweza kudhoofisha afya na makuzi bora ya mtoto.</value>
@@ -2683,22 +2646,9 @@ ULIZA: Je ushawahi kunyonyesha?</value>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding_note:label">
             <value>Ipongeze familia ikiwa mtoto ananyonyeshwa maziwa ya mama peke yake</value>
           </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/help_attachment_note:label">
-            <value>Msaidie mama jinsi ya kumnyonya vizuri mtoto wake</value>
-          </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/how_breastfeeding_going_note:label">
             <value>ULIZA: Je unaendeleaje na kunyonyesha? Je una tatizo lolote unahitaji tujadili?
 _Jadili tatizo na mama_</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached:label">
-            <value>Je mtoto amewekwa vizuri kwaijli ya kunyonya?
-Hii inamaanisha kidevu kinagusa ziwa la mama, mdomo ameufungua vizuri, mdomo wa chini uko nje, Ncha ya ziwa inayoonekana ipo kwa juu kuliko chini ya kinywa.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_breastfeeding_positioning_ok/no:label">
             <value>Hapana</value>
@@ -2707,7 +2657,7 @@ Hii inamaanisha kidevu kinagusa ziwa la mama, mdomo ameufungua vizuri, mdomo wa 
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_breastfeeding_positioning_ok:label">
-            <value>Je mama amemuweka vizuri mtoto wake wakati anamnyonyesha?</value>
+            <value>Je, upakataji na uwekaji wa mtoto katika titi uko sawa? Hii inamaanisha kuwa kidevu kinagusa titi,kinywa cha mtoto kimeachama sawasawa, mdomo wa chini wa mtoto unabinuka kwa nje, sehemu kubwa nyeusi ya titi inaonekana zaidi juu ya kinywa cha mtoto kuliko chini.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note:label">
             <value>Jadiliana na mama kwanini hamnyonyeshi mtoto wake mara kwa mara na kama inavyopswa. Mshauri na kutatua tatizo.</value>
@@ -2716,10 +2666,11 @@ Hii inamaanisha kidevu kinagusa ziwa la mama, mdomo ameufungua vizuri, mdomo wa 
             <value>Msaidie Mama kufanya haya yafuatayo:
 
 -&gt;Kukaa au kulala vizuri
--&gt;Amkamate mtoto vizuri karibu na yeye/Ampakate vizuri
--&gt;Mtoto atazame ziwa la mama
+-&gt;Mshike mtoto mwili mzima, sio shingo tu na mabega. Hakikisha kichwa cha mtoto na mwili vimenyooka.
+-&gt;Mtoto atazame ziwa la mama. Pua ya mtoto iwe mkabala na kinyonyeo.
 -&gt;Alishike ziwa na mgusishe mtoto nalo kwenye mdomo wake ili mtoto afungue mdomo
--&gt;Hakikisha mdomo wa mtoto umekaa vizuri kwenye ncha ya ziwa la mama. Hakikisha mtoto amewekwa vyema ili kuweza kunyonya vizuri</value>
+-&gt;Hakikisha mdomo wa mtoto umekaa vizuri kwenye ncha ya ziwa la mama. Hakikisha mtoto amewekwa vyema ili kuweza kunyonya vizuri
+-&gt;Agusishe mdomo wa mtoto na kinyonyeo</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/observe_breastfeeding_note:label">
             <value>CHUNGUZA: kama kuna uwezekano muombe mama amnyonyeshe mtoto wake na chunguza, ikiwa hakuna uwezekano muulize mama maswali kuliko kumchunguza. 
@@ -2730,29 +2681,15 @@ Hii inamaanisha kidevu kinagusa ziwa la mama, mdomo ameufungua vizuri, mdomo wa 
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/ok_breastfeeding_positioning_note:label">
             <value>Mpongeze mama kwa kumuweka vizuri mtoto wake wakati wa kumnyonyesha.</value>
           </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_attachment_suckling_note:label">
+          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_suckling_note:label">
             <value>Msaidie mama kujua Zaidi kumuweka vizuri mtoto kwa ajili ya kumnyonyesha. Muongozo wa kumuweka mtoto vizuri wakati wa kunyonya:
 
 -&gt;Kama mtoto analala sana na anakosa kunyonya, muamshe kwa kupapasa mwili wake, miguu au mikono.
 -&gt;Ikiwa mtoto bado hanyonyi baada ya saa moja, kamua maji maji ya mwanzo ya njano kutoka kwenye maziwa kwenye kikombe au kijiko kilicho safi. Mpe mtoto anywe mara kwa mara na kwa kiwango kidogo, hakikisha mtoto anaweza kumeza.
--&gt;IKiwa mtoto hawez kunyonya vizuri ndani ya masaa 24 ya mwanzo baada ya kuzaliwa, muone mhudumu wa Afya.
-
-Kwa ajili ya kumuweka mtoto vizuri wakati wa kunyonyesha, msaidie mama ahakikishe:
-
--&gt;Kichwa cha mtoto na mwili vimenyooka.
--&gt;Mtoto analiangalia ziwa, pua ya mtoto ipo mkabala na kinyonyeo
--&gt;Mwili wa mtoto upo karibu sana na mwili wake.
--&gt;Aushike mwili mzima wa mtoto na sio kushikilia shingo na mabega ya mtoto pekee.
-
-Kumsaidia mama kumuweka mtoto vizuri, mshauri mama kufanya:
-
 -&gt;Kugusisha midomo ya mtoto kwa kinyonyeo chake.
 -&gt;Asubiri hadi mdomo wa mtoto umefunguka sana.
 -&gt;Amuweke mtoto haraka kwenye maziwa akitega mdomo wa chini wa mtoto vizuri chini ya kinyonyeo. 
-
-Angalia dalili za kumuweka mtoto vizuri wakati wa kunyonya na usahihi wa uvutaji wa maziwa wa mtoto, (taratibu, kuvuta kwa nguvu, baadhi yam da kupumzika). Ikiwa ni nzuri, mpongeze mama na mshauri aendelee kufanya hivyo hivyo. Ikiwa uwekaji wa mtoto kunyonya au uvutaji si mzuri, jaribu tena. Chunguza.
- 
-Kama maziwa yamevimba, pakaza kiwango kidogo cha maziwa kabla ya kuanza kumnyonyesha mtoto ili kulainisha kinyonyeo na iwe rahisi kwa mtoto kunyonya</value>
+-&gt;Kama maziwa yamevimba, pakaza kiwango kidogo cha maziwa kabla ya kuanza kumnyonyesha mtoto ili kulainisha kinyonyeo na iwe rahisi kwa mtoto kunyonya</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively/no:label">
             <value>Hapana</value>
@@ -2762,6 +2699,9 @@ Kama maziwa yamevimba, pakaza kiwango kidogo cha maziwa kabla ya kuanza kumnyony
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively:label">
             <value>Je mtoto ananyonya vizuri?</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively_note:label">
+            <value>Mpongeze mama na mshauri kuendelea kufanya hivyo</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/time_to_breastfeed/dont_know:label">
             <value>hajui</value>
@@ -2805,6 +2745,9 @@ Kama maziwa yamevimba, pakaza kiwango kidogo cha maziwa kabla ya kuanza kumnyony
           <text id="/infant_child/essential_newborn_breastfeeding/recent_food_eaten/soft_food:label">
             <value>vyakula laini</value>
           </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/recent_food_eaten:jr:constraintMsg">
+            <value>Huwez kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
           <text id="/infant_child/essential_newborn_breastfeeding/recent_food_eaten:label">
             <value>ULIZA: Je mtoto amekunywa au kula chochote kati hivi vifuatavyo?</value>
           </text>
@@ -2826,7 +2769,7 @@ Kama maziwa yamevimba, pakaza kiwango kidogo cha maziwa kabla ya kuanza kumnyony
 -&gt;Kosha mikono yako kwa sabuni na maji yanayotiririka mara kwa mara, hasa kabla ya kuanza kumlisha mtoto.</value>
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/not_still_breastfeeding_note:label">
-            <value>SEMA:Ikiwa mtoto wako hanyonyi tena , tafadhali hakikisha anapata chakula chenye afya na kilicho bora.</value>
+            <value>SEMA: Ikiwa mtoto wako hanyonyi tena, tafadhali hakikisha anapata chakula chenye afya na kilicho bora.</value>
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding/no:label">
             <value>Hapana</value>
@@ -2861,14 +2804,24 @@ Kama maziwa yamevimba, pakaza kiwango kidogo cha maziwa kabla ya kuanza kumnyony
             <value>Huduma muhimu kwa watoto wachanga: Jinsi ya kukitunza kitovu.</value>
           </text>
           <text id="/infant_child/essential_newborn_stimulation/newborn_stimulation_note:label">
-            <value>Wewe na mwenzako/ mume wako au familia muna jukumu la kuhakikisha maendeleo ya akili ya mtoto na katika kipindi hiki cha miezi na miaka ya mwanzoni ni vyema kutumiwa vyema ili kuifanya akili yake ikuwe vizuri 
+            <value>SEMA: Wewe na mwenzako/ mume wako au familia muna jukumu la kuhakikisha maendeleo ya akili ya mtoto na katika kipindi hiki cha miezi na miaka ya mwanzoni ni vyema kutumiwa vyema ili kuifanya akili yake ikuwe vizuri 
+
 Mtoto mchanga anaweza kuona vitu, kuvihisi, na anaweza kujibu sauti na milio huwa anasikia. Mtoto anaweza kutuambia kuwa anaona njaa au hana furaha kwa kwa sauti yake. Mtoto huwa anapenda kuona sura ya mama na baba yake (walezi wake wa karibu.)[ angalia tafsiri kwenye muongozo wa kazi]
+
 Kadiri tunavyowapa nafasi watoto wetu kudadilisi wanayaona (kwa kucheza, kufanya mambo mapya, kuona vitu vipya na kuiga) ndio kadiri tunavyoweza kuwafanya wawe na akili.
+
 Kwa mtoto wako unaweza 
 [Days 0-7:]
-Ongea na Mwimbie mtoto
 
-[Days 8 to month 6]: [use points in image in dropbox: Dropbox (D-tree)\DTree\Country Programs\Tanzania\Projects\Botnar Foundation ZNZ\Technical\Design\App Content\Protocols for Digitization\2019.03.12 Infant-Child\Shortened versions\5. Essential newborn care - shortened.docx]</value>
+-&gt;Ongea na mwimbie mtoto.
+-&gt;Mhamasishe aweze kuangalia, kusikiliza, kurusha miguu na mikono na kugusa vitu.
+-&gt;Muoneshe tabasamu.
+-&gt;Mshike mtoto wa upendo.
+
+[Days 8 to month 6]:
+
+-&gt;MCHEZO: Toa njia za mtoto wako kuangalia, kusikiliza, kurusha mikono na miguu kwa uhuru, na kukugusa. Pole pole msogezee mtoto wako vitu vya rangi kwa ajili ya kuviangalia na kuvifuatilia. Mfano: Vitu vya kuchezea: kitairi kikubwa kwenye uzi, mwiko.
+-&gt;WASILIANA: Tabasamu na cheka. Zungumza na mtoto wako. Hojiana kwa kuiga sauti ya mtoto wako au ishara.</value>
           </text>
           <text id="/infant_child/essential_newborn_stimulation:label">
             <value>Huduma muhimu/za lazima kwa mtoto mchanga: Kuchangamsha</value>
@@ -2973,7 +2926,7 @@ Ongea na Mwimbie mtoto
             <value>Ili kuhakikisha amepokea chanjo stahiki</value>
           </text>
           <text id="/infant_child/group_summary/non_consent_note:label">
-            <value>SEMA: Umekataa kupata huduma ya Afya ya jamii. Sitofanya tembeleo lolote linalohusu Afya ya jamii kwake {child_name}.</value>
+            <value>SEMA: Umekataa kupata huduma ya Afya ya jamii. Sitofanya tembeleo lolote linalohusu Afya ya jamii kwake <output value=" /infant_child/child_name "/>.</value>
           </text>
           <text id="/infant_child/group_summary/referral_follow_up_note:label">
             <value>Wahamasishe wazazi kumpeleka mtoto <output value=" /infant_child/child_name "/> kituo cha Afya haraka iwezekanavyo ili kupata huduma. Wataarifu kwamba utarejea karibuni kuhakikisha kwamba wameweza kupata huduma stahiki kituo cha Afya.</value>
@@ -2985,10 +2938,22 @@ Ongea na Mwimbie mtoto
             <value>Muombe mama ahakikishe kuwa wahudumu wa kituo cha afya wanaandika rikodi kuhusu chanjo kwenye kadi la afya la mtoto.</value>
           </text>
           <text id="/infant_child/immunizations/family_refused_note:label">
-            <value>SEMA: Naomba uniitie Mumeo na wanafamilia ili nipate kuwaeleza umuhimu wa chanjo.</value>
+            <value>SEMA: Naomba uniitie Mumeo au wanafamilia ili nipate kuwaeleza umuhimu wa chanjo.</value>
           </text>
           <text id="/infant_child/immunizations/first_visit_immunizations_note:label">
-            <value>SEMA:-&gt;Mtoto wako amezaliwa: <output value=" /infant_child/child_date_of_birth "/>-&gt;Mtoto wako anahitaji kupata chanjo mara 6. Wakati wa kuzaliwa, na baada ya hapo mara 5.-&gt;Kwa kutumia tarehe, Ufuatao ndio mpangilio wa kupata chanjo kwa mtoto wako.</value>
+            <value>SEMA: Mtoto wako amezaliwa: <output value=" /infant_child/child_date_of_birth "/>. Mtoto wako anahitaji kupata chanjo mara 6. Wakati wa kuzaliwa, na baada ya hapo mara 5. Kwa kutumia tarehe, Ufuatao ndio mpangilio wa kupata chanjo kwa mtoto wako:
+
+-&gt;<output value=" /infant_child/child_date_of_birth "/>: BCG, bOPV0 (Rudi tena kwa ajili ya chanjo ya BCG ikiwa kovu haijatokea)
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_six_weeks "/>: bOPV1, DTP-HepB-Hib1, PCVI 1, Rota 1
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_ten_weeks "/>: bOPV2, DTP-HepB-Hib2, PCVI 2, Rota 2
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_fourteen_weeks "/>: bOPV3, DTP-HepB-Hib3, PCVI 3, IPV
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_nine_months "/>: Surua - Rubella 1
+
+-&gt;<output value=" /infant_child/immunizations/bd_plus_eighteen_months "/>: Surua - Rubella 2</value>
           </text>
           <text id="/infant_child/immunizations/has_health_card/no:label">
             <value>Hapana</value>
@@ -3006,7 +2971,7 @@ Ongea na Mwimbie mtoto
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/next_vaccine_10_14:label">
-            <value>ANGALIA kwenye kadi ya afya. Je dozi anayotakiwa kupewa baadae ni dozi ya wiki 10 au Wiki 14?</value>
+            <value>ANGALIA kwenye kadi ya afya. Je dozi anayotakiwa kupewa baadae ni dozi ya wiki 10 au wiki 14?</value>
           </text>
           <text id="/infant_child/immunizations/next_vaccine_10_14_note:label">
             <value>SEMA: Mara nyengine utafika mda wa chanjo: mtoto wako atapatiwa chanjo ya IPV (ni chanjo ya polio itakuwa ni ya sindano siyo ya matone) tafadhali usiogope ipo salama na vizuri mtoto wako akiapatiwa chanjo hizi.</value>
@@ -3034,6 +2999,9 @@ Ongea na Mwimbie mtoto
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya DTP-HepB-Hib3</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/ipv_date:label">
+            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya IPV.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:label">
             <value>Ingiza tarehe mtoto aliyopata chanjo ya PCVI1</value>
@@ -3115,6 +3083,15 @@ Ongea na Mwimbie mtoto
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3:label">
             <value>Je mtoto amepata chanjo ya DTP-HepB-Hib3?</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/received_ipv/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/received_ipv/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/immunizations/record_vaccines/received_ipv:label">
+            <value>Je mtoto amepata chanjo ya IPV?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi1/no:label">
             <value>Hapana</value>
@@ -3292,6 +3269,9 @@ Ongea na Mwimbie mtoto
           <text id="/infant_child/inputs/dtp_hepb_hib3:label">
             <value>-</value>
           </text>
+          <text id="/infant_child/inputs/ipv:label">
+            <value>-</value>
+          </text>
           <text id="/infant_child/inputs/num_child_visits:label">
             <value>-</value>
           </text>
@@ -3344,7 +3324,7 @@ Ongea na Mwimbie mtoto
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/llints/has_mosquito_net:label">
-            <value>SEMA: Munaweza kujikinga na malaria ikiwa mtalala kwenye chandarua.
+            <value>SEMA: Munaweza kujikinga na malaria ikiwa mtalala kwenye chandarua chenye dawa.
 
 ULIZA: Je unacho chandarua?</value>
           </text>
@@ -3410,7 +3390,7 @@ SEMA: Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nita
           <text id="/infant_child/malnutrition_anemia:label">
             <value>Kuchunguza utapia mlo na upungufu wa damu</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_73:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_75:label">
             <value>Kuchunguza Dalili za hatari baada kujifungua</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -3536,13 +3516,13 @@ SEMA: Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nita
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
             <value>Viganja, mikono na mdomo viko na rangi ya njano au nyeupe, inapaswa iwe nyekundu au pink</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_91:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_93:label">
             <value>Kuchunguza dalili nyengine za hatari kwa mtoto</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note:label">
@@ -3641,10 +3621,10 @@ SEMA: Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nita
           <text id="/infant_child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note:label">
             <value>Hakuna dalili yoyote ya hatari iliyogundulika, lakini iwapo mtoto ataonesha dalili yoyote kati ya tulizojadili, unapaswa kwenda kituo cha Afya haraka iwezekanavyo.</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_exclusively/no:label">
@@ -3739,6 +3719,9 @@ Muombe mama akuoneshe jinsi anavyomueka mtoto wake wakati wa kumnyonyesha</value
           <text id="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten/soft_food:label">
             <value>vyakula laini</value>
           </text>
+          <text id="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten:jr:constraintMsg">
+            <value>Huwez kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
           <text id="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten:label">
             <value>ULIZA: Je mtoto alikunywa au kula chochote kati ya hivi vituatavyo jana mchana au usiku?</value>
           </text>
@@ -3818,9 +3801,24 @@ Sisitiza kwamba mtu yoyote anaweza kufanya KMC.</value>
             <value>Matunzo ya mtoto Njiti----matunzo ya ngozi kwa ngozi (KMC)</value>
           </text>
           <text id="/infant_child/small_baby_stimulation/small_baby_stimulation_note:label">
-            <value>Wewe na mwenza wako au wana familia mna jukumu kwa ajili ya maendeleo ya akili na ubongo ya mtoto, na miaka na miezi hii ya mwanzo inapaswa kutumika kwa ajili ya ukuwaji.Mtoto aliyezaliwa anaweza kuona vitu, kuhisi vitu, na anaweza kupoke na kujibu sauti anazoskia.Mtoto Mtoto anaweza kutwambiw ikiwa ana njaa au hana furaha kwa kutumia sauti anayotoa. Mtoto anapenda kuona sura ya mama na baba yake au walezi wake wengine wa karibu.. [see translation in EFFECTS job aids] Kila tunapowapa nafasi watoto wetu kuielewa dunia (kwa kucheza, kujfiunza vitu vipya, kuona vitu vipya na kuendana na wanayofanya wengine) , ndivyo taarifa huingia Zaidi kwenye ubongo wao.For your newborn baby, you cankwa ajili ya mtoto wako aliyezaliwa:
-[Siku 0-7:]
--&gt;Zungumza na Mwimbie mtoto[Days 8 to month 6]: [use points in image in dropbox: Dropbox (D-tree)\DTree\Country Programs\Tanzania\Projects\Botnar Foundation ZNZ\Technical\Design\App Content\Protocols for Digitization\2019.03.12 Infant-Child\Shortened versions\5. Essential newborn care - shortened.docx]</value>
+            <value>SEMA: Wewe na mwenzako/ mume wako au familia muna jukumu la kuhakikisha maendeleo ya akili ya mtoto na katika kipindi hiki cha miezi na miaka ya mwanzoni ni vyema kutumiwa vyema ili kuifanya akili yake ikuwe vizuri 
+
+Mtoto mchanga anaweza kuona vitu, kuvihisi, na anaweza kujibu sauti na milio huwa anasikia. Mtoto anaweza kutuambia kuwa anaona njaa au hana furaha kwa kwa sauti yake. Mtoto huwa anapenda kuona sura ya mama na baba yake (walezi wake wa karibu.)[ angalia tafsiri kwenye muongozo wa kazi]
+
+Kadiri tunavyowapa nafasi watoto wetu kudadilisi wanayaona (kwa kucheza, kufanya mambo mapya, kuona vitu vipya na kuiga) ndio kadiri tunavyoweza kuwafanya wawe na akili.
+
+Kwa mtoto wako unaweza 
+[Days 0-7:]
+
+-&gt;Ongea na mwimbie mtoto.
+-&gt;Mhamasishe aweze kuangalia, kusikiliza, kurusha miguu na mikono na kugusa vitu.
+-&gt;Muoneshe tabasamu.
+-&gt;Mshike mtoto wa upendo.
+
+[Days 8 to month 6]:
+
+-&gt;MCHEZO: Toa njia za mtoto wako kuangalia, kusikiliza, kurusha mikono na miguu kwa uhuru, na kukugusa. Pole pole msogezee mtoto wako vitu vya rangi kwa ajili ya kuviangalia na kuvifuatilia. Mfano: Vitu vya kuchezea: kitairi kikubwa kwenye uzi, mwiko.
+-&gt;WASILIANA: Tabasamu na cheka. Zungumza na mtoto wako. Hojiana kwa kuiga sauti ya mtoto wako au ishara.</value>
           </text>
           <text id="/infant_child/small_baby_stimulation:label">
             <value>Matunzo ya mtoto njiti -- Kumchangamsha</value>
@@ -3868,7 +3866,7 @@ ULIZA: Ni wapi mtoto wako anajisaidia? Ni wapi unapokitupa kinyesi cha mtoto wak
             <value>-</value>
           </text>
           <text id="/infant_child/wash_baby_wash/hand_washing/note_hand_washing:label">
-            <value>SEMA: Ni muhimu kunawa mikono yako kwa maji na sabuni kabla kushika mtoto.
+            <value>SEMA: Ni muhimu kunawa mikono yako kwa maji na sabuni kabla ya kushika mtoto.
 
 SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au Maambukizo yanayoweza kuhama kutoka kwa mtu mzima kwenda kwa mtoto yanaweza kuwa hatari kwa sababu kinga ya watoto bado ni dhaifu / haijatengenezwa kikamilifu hivyo unawaji wa mikono kwa usahihi ni mojawapo ya njia bora sana za kuzuia maambukizi.</value>
           </text>
@@ -3922,6 +3920,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
             <bopv3/>
             <dtp_hepb_hib3/>
             <pcvi3/>
+            <ipv/>
             <surua_rubella1/>
             <surua_rubella2/>
             <user>
@@ -3955,6 +3954,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
           <previous_bopv3/>
           <previous_dtp_hepb_hib3/>
           <previous_pcvi3/>
+          <previous_ipv/>
           <previous_surua_rubella1/>
           <previous_surua_rubella2/>
           <week/>
@@ -3978,9 +3978,9 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
             <encourage_small_baby_note/>
           </first_visit_6_months>
           <neonatal_danger_signs>
-            <generated_table_list_label_73/>
+            <generated_table_list_label_75/>
             <neonatal_danger_signs_note/>
-            <reserved_name_for_field_list_labels_75/>
+            <reserved_name_for_field_list_labels_77/>
             <neonatal_not_able_feed/>
             <neonatal_had_convulsions/>
             <neonatal_difficulty_fast_breathing/>
@@ -3998,8 +3998,8 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
             <has_neonatal_danger_note/>
           </neonatal_danger_signs>
           <neonatal_danger_signs_secondary>
-            <generated_table_list_label_91/>
-            <reserved_name_for_field_list_labels_92/>
+            <generated_table_list_label_93/>
+            <reserved_name_for_field_list_labels_94/>
             <neonatal_not_crying/>
             <neonatal_blue_color/>
             <neonatal_eye_discharge/>
@@ -4015,6 +4015,8 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
             <no_secondary_neonatal_danger_sign_note/>
           </neonatal_danger_signs_secondary>
           <child_danger_signs>
+            <generated_table_list_label_108/>
+            <reserved_name_for_field_list_labels_109/>
             <child_drink/>
             <child_vomit/>
             <child_convulsions/>
@@ -4052,10 +4054,9 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
               <is_breastfeeding_positioning_ok/>
               <ok_breastfeeding_positioning_note/>
               <not_ok_breastfeeding_positioning_note/>
-              <is_baby_well_attached/>
-              <help_attachment_note/>
               <suckling_effectively/>
-              <poor_attachment_suckling_note/>
+              <suckling_effectively_note/>
+              <poor_suckling_note/>
             </breastfeeding>
             <recent_food_eaten/>
           </essential_newborn_breastfeeding>
@@ -4139,6 +4140,8 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
               <dtp_hebp_hib3_date/>
               <received_pcvi3/>
               <pcvi3_date/>
+              <received_ipv/>
+              <ipv_date/>
               <received_surua_rubella1/>
               <surua_rubella1_date/>
               <received_surua_rubella2/>
@@ -4205,8 +4208,6 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
               <praise_interact/>
               <concern_interact/>
               <has_observed_comforting/>
-              <show_comforting/>
-              <how_comfort/>
               <praise_comfort/>
               <concern_comfort/>
               <has_observed_correcting/>
@@ -4316,6 +4317,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/inputs/bopv3" type="string"/>
       <bind nodeset="/infant_child/inputs/dtp_hepb_hib3" type="string"/>
       <bind nodeset="/infant_child/inputs/pcvi3" type="string"/>
+      <bind nodeset="/infant_child/inputs/ipv" type="string"/>
       <bind nodeset="/infant_child/inputs/surua_rubella1" type="string"/>
       <bind nodeset="/infant_child/inputs/surua_rubella2" type="string"/>
       <bind nodeset="/infant_child/inputs/user/contact_id" type="string"/>
@@ -4344,12 +4346,13 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind calculate="../inputs/bopv3" nodeset="/infant_child/previous_bopv3" type="string"/>
       <bind calculate="../inputs/dtp_hepb_hib3" nodeset="/infant_child/previous_dtp_hepb_hib3" type="string"/>
       <bind calculate="../inputs/pcvi3" nodeset="/infant_child/previous_pcvi3" type="string"/>
+      <bind calculate="../inputs/ipv" nodeset="/infant_child/previous_ipv" type="string"/>
       <bind calculate="../inputs/surua_rubella1" nodeset="/infant_child/previous_surua_rubella1" type="string"/>
       <bind calculate="../inputs/surua_rubella2" nodeset="/infant_child/previous_surua_rubella2" type="string"/>
       <bind calculate="7" nodeset="/infant_child/week" type="string"/>
       <bind calculate="30" nodeset="/infant_child/month" type="string"/>
       <bind nodeset="/infant_child/consent" relevant=" /infant_child/n_child_visits =0"/>
-      <bind nodeset="/infant_child/consent/child_consent_today" type="select1"/>
+      <bind nodeset="/infant_child/consent/child_consent_today" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_visit_intro_note" readonly="true()" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))" type="string"/>
       <bind nodeset="/infant_child/first_visit_6_months" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
       <bind nodeset="/infant_child/first_visit_6_months/delivery_location" required="true()" type="select1"/>
@@ -4365,9 +4368,9 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind calculate="if(selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;),1,0)" nodeset="/infant_child/first_visit_6_months/refer_flag_small_baby" type="string"/>
       <bind nodeset="/infant_child/first_visit_6_months/encourage_small_baby_note" readonly="true()" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_73" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_75" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_not_able_feed" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_had_convulsions" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing" required="true()" type="select1"/>
@@ -4384,8 +4387,8 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind calculate="if(selected( /infant_child/neonatal_danger_signs/neonatal_not_able_feed ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_had_convulsions ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_fever ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_cold ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_no_movement ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_cord_bleeding ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_diarrhea ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_eyes_pus ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_skin_boils ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_excessive_vomiting ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_excessive_crying ,'yes'),1,0)" nodeset="/infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/has_neonatal_danger_note" readonly="true()" relevant=" /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_91" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_93" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_not_crying" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge" required="true()" type="select1"/>
@@ -4400,6 +4403,8 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_note" readonly="true()" relevant=" /infant_child/neonatal_danger_signs_secondary/has_secondary_neonatal_danger_sign_flag =1" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note" readonly="true()" relevant="selected( /infant_child/neonatal_danger_signs_secondary/neonatal_not_crying ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_blue_color ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_skin_rash ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_congenital ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_vomiting ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_urine ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_stool ,'no')" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
+      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_108" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_drink" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_vomit" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_convulsions" required="true()" type="select1"/>
@@ -4435,11 +4440,10 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_breastfeeding_positioning_ok" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/ok_breastfeeding_positioning_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/is_breastfeeding_positioning_ok ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_ok_breastfeeding_positioning_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/is_breastfeeding_positioning_ok ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/help_attachment_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_attachment_suckling_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached ,&quot;no&quot;) or selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/recent_food_eaten" relevant=" /infant_child/essential_newborn_breastfeeding/small_baby_ever  = 0" required="true()" type="select"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_suckling_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively ,&quot;no&quot;)" type="string"/>
+      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/essential_newborn_breastfeeding/recent_food_eaten:jr:constraintMsg')" nodeset="/infant_child/essential_newborn_breastfeeding/recent_food_eaten" relevant=" /infant_child/essential_newborn_breastfeeding/small_baby_ever  = 0" required="true()" type="select"/>
       <bind nodeset="/infant_child/essential_newborn_cord" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/age_days  &lt;= ( /infant_child/week  * 2) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/essential_newborn_cord/cord_care_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_stimulation" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
@@ -4457,7 +4461,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_not_exclusive_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_breastfeed_exclusively ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_well" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_not_breastfeed_well_note" readonly="true()" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_breastfeed_well ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten" required="true()" type="select"/>
+      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten:jr:constraintMsg')" nodeset="/infant_child/small_baby_breastfeeding/small_baby_recent_foods_eaten" required="true()" type="select"/>
       <bind nodeset="/infant_child/small_baby_kmc" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/essential_newborn_breastfeeding/small_baby_ever  = 1"/>
       <bind nodeset="/infant_child/small_baby_kmc/small_baby_warmth_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/small_baby_kmc/small_baby_kmc_note" readonly="true()" type="string"/>
@@ -4487,34 +4491,36 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/immunizations/has_health_card" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bcg" relevant=" /infant_child/previous_bcg  = 0" type="select1"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" relevant=" /infant_child/previous_bopv0  = 0" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" required="true()" type="date"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" relevant=" /infant_child/previous_bopv0  = 0" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)" type="date"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)" type="date"/>
       <bind nodeset="/infant_child/immunizations/vaccines_up_to_date" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/immunizations/up_to_date_congrats_note" readonly="true()" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;yes&quot;)" type="string"/>
@@ -4573,10 +4579,8 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/praise_interact" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_interact ,&quot;moves&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/concern_interact" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_interact ,&quot;does_not_move&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/show_comforting" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/praise_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;looks_talks&quot;)" type="string"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/how_comfort ,&quot;does_not_comfort&quot;)" type="string"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/praise_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/concern_comfort" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting" relevant="not(selected( /infant_child/ccd_assessment_intervention/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))" required="true()" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/discuss_correcting" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/assess_behavior/how_correct" relevant="selected( /infant_child/ccd_assessment_intervention/assess_behavior/has_observed_correcting ,&quot;yes&quot;)" required="true()" type="select1"/>
@@ -4587,7 +4591,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/tip_stress_concern" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/has_stress_concern_play_comm ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/has_time_concern_play_comm" type="select1"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/tip_time_concern" readonly="true()" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/has_time_concern_play_comm ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" type="select"/>
+      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child:jr:constraintMsg')" nodeset="/infant_child/ccd_assessment_intervention/problem_solving/engage_with_child" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" type="select"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/who_engages" relevant="not(selected( /infant_child/ccd_assessment_intervention/problem_solving/engage_with_child ,&quot;none&quot;))" required="true()" type="select"/>
       <bind nodeset="/infant_child/ccd_assessment_intervention/problem_solving/who_engages_other" relevant="selected( /infant_child/ccd_assessment_intervention/problem_solving/who_engages ,&quot;other&quot;)" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt;= 36" nodeset="/infant_child/ccd_assessment_intervention/problem_solving/who_engages_how_many_hours" relevant="not(selected( /infant_child/ccd_assessment_intervention/problem_solving/engage_with_child ,&quot;none&quot;))" type="int"/>
@@ -4629,7 +4633,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal" relevant="( /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15))"/>
       <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal/discuss_stool" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal/has_latrine" relevant=" /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt;= ( /infant_child/week  * 11)" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal/latrine_type" relevant="selected( /infant_child/wash_baby_wash/child_stool_disposal/has_latrine ,&quot;yes&quot;)" required="true()" type="select"/>
+      <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal/latrine_type" relevant="selected( /infant_child/wash_baby_wash/child_stool_disposal/has_latrine ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal/note_latrine" readonly="true()" relevant="selected( /infant_child/wash_baby_wash/child_stool_disposal/has_latrine ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/wash_baby_wash/child_stool_disposal/note_stool_disposal" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/wash_baby_wash/hand_washing/note_hand_washing" readonly="true()" type="string"/>
@@ -4677,6 +4681,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       <input ref="/infant_child/inputs/bopv3"/>
       <input ref="/infant_child/inputs/dtp_hepb_hib3"/>
       <input ref="/infant_child/inputs/pcvi3"/>
+      <input ref="/infant_child/inputs/ipv"/>
       <input ref="/infant_child/inputs/surua_rubella1"/>
       <input ref="/infant_child/inputs/surua_rubella2"/>
       <group ref="/infant_child/inputs/user">
@@ -4796,20 +4801,20 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs">
-      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_73">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_73:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_75">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_75:label')"/>
       </input>
       <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_75/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_77/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -4961,17 +4966,17 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs_secondary">
-      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_91">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_91:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_93">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_93:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_92/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_94/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5093,8 +5098,21 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_danger_signs">
-      <label ref="jr:itext('/infant_child/child_danger_signs:label')"/>
-      <select1 ref="/infant_child/child_danger_signs/child_drink">
+      <input ref="/infant_child/child_danger_signs/generated_table_list_label_108">
+        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_108:label')"/>
+      </input>
+      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109">
+        <label></label>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_109/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_drink">
         <label ref="jr:itext('/infant_child/child_danger_signs/child_drink:label')"/>
         <item>
           <label ref="jr:itext('/infant_child/child_danger_signs/child_drink/yes:label')"/>
@@ -5105,7 +5123,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/infant_child/child_danger_signs/child_vomit">
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_vomit">
         <label ref="jr:itext('/infant_child/child_danger_signs/child_vomit:label')"/>
         <item>
           <label ref="jr:itext('/infant_child/child_danger_signs/child_vomit/yes:label')"/>
@@ -5116,7 +5134,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/infant_child/child_danger_signs/child_convulsions">
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_convulsions">
         <label ref="jr:itext('/infant_child/child_danger_signs/child_convulsions:label')"/>
         <item>
           <label ref="jr:itext('/infant_child/child_danger_signs/child_convulsions/yes:label')"/>
@@ -5127,7 +5145,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/infant_child/child_danger_signs/child_lethargic">
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_lethargic">
         <label ref="jr:itext('/infant_child/child_danger_signs/child_lethargic:label')"/>
         <item>
           <label ref="jr:itext('/infant_child/child_danger_signs/child_lethargic/yes:label')"/>
@@ -5301,20 +5319,6 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
         <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_ok_breastfeeding_positioning_note">
           <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/not_ok_breastfeeding_positioning_note:label')"/>
         </input>
-        <select1 ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached">
-          <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached:label')"/>
-          <item>
-            <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached/yes:label')"/>
-            <value>yes</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/is_baby_well_attached/no:label')"/>
-            <value>no</value>
-          </item>
-        </select1>
-        <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/help_attachment_note">
-          <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/help_attachment_note:label')"/>
-        </input>
         <select1 ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively">
           <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively:label')"/>
           <item>
@@ -5326,8 +5330,11 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
             <value>no</value>
           </item>
         </select1>
-        <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_attachment_suckling_note">
-          <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_attachment_suckling_note:label')"/>
+        <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively_note">
+          <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/suckling_effectively_note:label')"/>
+        </input>
+        <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_suckling_note">
+          <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/poor_suckling_note:label')"/>
         </input>
       </group>
       <select ref="/infant_child/essential_newborn_breastfeeding/recent_food_eaten">
@@ -5781,6 +5788,20 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
         <input ref="/infant_child/immunizations/record_vaccines/pcvi3_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:label')"/>
         </input>
+        <select1 ref="/infant_child/immunizations/record_vaccines/received_ipv">
+          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/received_ipv:label')"/>
+          <item>
+            <label ref="jr:itext('/infant_child/immunizations/record_vaccines/received_ipv/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/infant_child/immunizations/record_vaccines/received_ipv/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/infant_child/immunizations/record_vaccines/ipv_date">
+          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:label')"/>
+        </input>
         <select1 ref="/infant_child/immunizations/record_vaccines/received_surua_rubella1">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/received_surua_rubella1:label')"/>
           <item>
@@ -6101,20 +6122,6 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
           <item>
             <label ref="jr:itext('/infant_child/ccd_assessment_intervention/assess_behavior/has_observed_comforting/no:label')"/>
             <value>no</value>
-          </item>
-        </select1>
-        <input ref="/infant_child/ccd_assessment_intervention/assess_behavior/show_comforting">
-          <label ref="jr:itext('/infant_child/ccd_assessment_intervention/assess_behavior/show_comforting:label')"/>
-        </input>
-        <select1 ref="/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort">
-          <label ref="jr:itext('/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort:label')"/>
-          <item>
-            <label ref="jr:itext('/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort/looks_talks:label')"/>
-            <value>looks_talks</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant_child/ccd_assessment_intervention/assess_behavior/how_comfort/does_not_comfort:label')"/>
-            <value>does_not_comfort</value>
           </item>
         </select1>
         <input ref="/infant_child/ccd_assessment_intervention/assess_behavior/praise_comfort">
@@ -6548,7 +6555,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
             <value>no</value>
           </item>
         </select1>
-        <select ref="/infant_child/wash_baby_wash/child_stool_disposal/latrine_type">
+        <select1 ref="/infant_child/wash_baby_wash/child_stool_disposal/latrine_type">
           <label ref="jr:itext('/infant_child/wash_baby_wash/child_stool_disposal/latrine_type:label')"/>
           <item>
             <label ref="jr:itext('/infant_child/wash_baby_wash/child_stool_disposal/latrine_type/latrine_pit:label')"/>
@@ -6566,7 +6573,7 @@ SEMA: Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mz
             <label ref="jr:itext('/infant_child/wash_baby_wash/child_stool_disposal/latrine_type/latrine_other:label')"/>
             <value>latrine_other</value>
           </item>
-        </select>
+        </select1>
         <input ref="/infant_child/wash_baby_wash/child_stool_disposal/note_latrine">
           <label ref="jr:itext('/infant_child/wash_baby_wash/child_stool_disposal/note_latrine:label')"/>
         </input>
