@@ -1,9 +1,5 @@
 module.exports = {
   context: {
-     count_under_five_visits: 6,
-     current_year: 2019,
-     greeting: 'Hello World!'
-
   },
 
   fields: [

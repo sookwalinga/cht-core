@@ -14,31 +14,6 @@ module.exports = {
     }
     return false;
   },
-
-  isChildUnder1: function (c) {
-    if(c.contact && c.contact.parent && c.contact.parent.parent &&
-       c.contact.parent.parent.parent && c.contact.date_of_birth) {
-          var birthDate = new Date(c.contact.date_of_birth);
-          var ageInMs = new Date(now - birthDate.getTime());
-          var ageInMonths = Math.round(ageInMs / (1000*60*60*24*30));
-          return ageInMonths < 12;
-    }
-    return false;
-  },
-
-  getVisitCount: function (r) {
-      var count = [];
-      count = r.reports.filter(function(r){
-          return r.form === "infant_child";
-      });
-      return count.length;
-  },
-
-  isChildUnder1AndVisited: function (c)
-  {
-      return extras.isChildUnder1(c) && extras.getVisitCount(c) > 0;
-  },
-
   countReportsSubmitted: function (c, form) {
     var reportsFound = [];
     if(c && c.reports) {
