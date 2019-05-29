@@ -14,6 +14,7 @@ module.exports = {
     }
     return false;
   },
+
   countReportsSubmitted: function (c, form) {
     var reportsFound = [];
     if(c && c.reports) {

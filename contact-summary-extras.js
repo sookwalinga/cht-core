@@ -7,5 +7,14 @@ module.exports = {
       return ageInMonths < 60;
     }
     return false;
-  } 
+  },
+  
+  
+  getVisitCount: function() {
+    var count = [];
+    count = reports.filter(function(r){
+      return r.form === "infant_child";
+    });
+    return count.length;
+  }
 };
