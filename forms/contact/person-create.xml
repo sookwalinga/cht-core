@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Ongeza Mtu</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/data/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/data/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/data/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/data/person/age_estimate_contact:jr:constraintMsg">
+            <value>Age must be between 5 and 100. For children under 5 years of age, a more exact birthdate must be captured. Please select "Yes" to the prior question and do your best to capture a more exact birthdate.</value>
+          </text>
+          <text id="/data/person/age_estimate_contact:label">
+            <value>ASK: What is <output value=" /data/person/first_name_c "/>'s estimated age in years?</value>
+          </text>
+          <text id="/data/person/debug_note:label">
+            <value>date of birth: <output value=" /data/person/date_of_birth_c "/> under_5_flag: <output value=" /data/person/is_under_5_binary "/> is reproductive age: <output value=" /data/person/reproductive_age "/></value></text>
+          <text id="/data/person/dob:jr:constraintMsg">
+            <value>You've entered a birthdate either in the future or very long ago - confirm that you've entered it properly.</value>
+          </text>
+          <text id="/data/person/dob:label">
+            <value>ASK: What is <output value=" /data/person/first_name_c "/>'s date of birth?</value>
+          </text>
+          <text id="/data/person/exact_dob_known/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/person/exact_dob_known/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/person/exact_dob_known:label">
+            <value>ASK: Do you know <output value=" /data/person/first_name_c "/>'s exact date of birth?</value>
+          </text>
+          <text id="/data/person/family_name:jr:constraintMsg">
+            <value>Enter a family name</value>
+          </text>
+          <text id="/data/person/family_name:label">
+            <value>ASK: What is their family name?</value>
+          </text>
+          <text id="/data/person/first_name:jr:constraintMsg">
+            <value>Enter a first name</value>
+          </text>
+          <text id="/data/person/first_name:label">
+            <value>ASK: What is their first name?</value>
+          </text>
+          <text id="/data/person/hh_member_note:label">
+            <value>Now, please enter information for the other members of the kaya.</value>
+          </text>
+          <text id="/data/person/middle_name:jr:constraintMsg">
+            <value>Enter a middle name</value>
+          </text>
+          <text id="/data/person/middle_name:label">
+            <value>ASK: What is their middle name?</value>
+          </text>
+          <text id="/data/person/return_children_note:label">
+            <value>SAY: From this registration, I've seen that you have a child under 5 who can benefit from this national program. Therefore, I'm asking for your permission to come back and check up on all issues related to their health care, nutrition, and child development. I would be grateful for your permission.</value>
+          </text>
+          <text id="/data/person/return_women_note:label">
+            <value>SAY: I see that there are some women of reproductive age in your family. I'd like to ask your permission to return later to speak with them personally about issues related to health during pregnancy and childbirth.</value>
+          </text>
+          <text id="/data/person/sex/female:label">
+            <value>Female</value>
+          </text>
+          <text id="/data/person/sex/male:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/person/sex:label">
+            <value>Enter <output value=" /data/person/first_name_c "/>'s sex</value>
+          </text>
+          <text id="/data/person:label">
+            <value>Household Member Information</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/data/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user/district:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user/shehia:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/person/age_estimate_contact:jr:constraintMsg">
+            <value>Umri lazima uwe lati ya miaka 5 hadi miaka 100. Kwa watoto walio chini ya umri wa miaka 5, tarehe yake yao ya kuzaliwa nilazima ichukuliwe.</value>
+          </text>
+          <text id="/data/person/age_estimate_contact:label">
+            <value>ULIZA: Je kwa makadirio <output value=" /data/person/first_name_c "/> ana miaka mingapi?</value>
+          </text>
+          <text id="/data/person/debug_note:label">
+            <value>-</value>
+          </text>
+          <text id="/data/person/dob:jr:constraintMsg">
+            <value>Je umeingiza umri sahihi? Hakikisha umeingiza kwa usahihi. Kwa watoto walio chini ya miaka 5, hakikisha kuwa tarehe yao si ya zaidi ya miaka 5 nyuma.</value>
+          </text>
+          <text id="/data/person/dob:label">
+            <value>ULIZA: Ipi ni tarehe yake kuzaliwa</value>
+          </text>
+          <text id="/data/person/exact_dob_known/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/person/exact_dob_known/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/data/person/exact_dob_known:label">
+            <value>ULIZA: Je unaijua terehe yake ya kuzaliwa kwa usahihi?</value>
+          </text>
+          <text id="/data/person/family_name:jr:constraintMsg">
+            <value>Jaza jina la babu</value>
+          </text>
+          <text id="/data/person/family_name:label">
+            <value>ULIZA: Ni lipi jina la babu yake?</value>
+          </text>
+          <text id="/data/person/first_name:jr:constraintMsg">
+            <value>Jaza jina la kwanza</value>
+          </text>
+          <text id="/data/person/first_name:label">
+            <value>ULIZA: Ni lipi jina lake la kwanza?</value>
+          </text>
+          <text id="/data/person/hh_member_note:label">
+            <value>Sasa, tafadhali ingiza taarifa za watu wengine wanaoishi kwenye kaya.</value>
+          </text>
+          <text id="/data/person/meta:label">
+            <value>-</value>
+          </text>
+          <text id="/data/person/middle_name:jr:constraintMsg">
+            <value>Jaza jina la baba</value>
+          </text>
+          <text id="/data/person/middle_name:label">
+            <value>ULIZA: Ni lipi jina la baba yake?</value>
+          </text>
+          <text id="/data/person/parent:label">
+            <value>-</value>
+          </text>
+          <text id="/data/person/return_children_note:label">
+            <value>SEMA kutokanana usajili huu nimeona kuna watoto walio chini ya umri wa miaka 5 ambao wanaweza kunufaika na mradi huu wa kitaifa. Kwahivyo naomba ridhaa ya kurudi tena ili nije kuangalia maswala yote yanayohusiana na huduma zao za afya, lishe, na maendeleo yao. Nitafurahi kama nitapata ridhaa yenu.</value>
+          </text>
+          <text id="/data/person/return_women_note:label">
+            <value>SEMA: Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
+          </text>
+          <text id="/data/person/sex/female:label">
+            <value>Mwanamke</value>
+          </text>
+          <text id="/data/person/sex/male:label">
+            <value>Mwanamme</value>
+          </text>
+          <text id="/data/person/sex:label">
+            <value>Ingiza jinsia yake</value>
+          </text>
+          <text id="/data/person/type:label">
+            <value>-</value>
+          </text>
+          <text id="/data/person:label">
+            <value>Taarifa za wanakaya</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-05-22  16-02">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+              <district/>
+              <shehia/>
+            </user>
+          </inputs>
+          <person>
+            <hh_member_note/>
+            <type>person</type>
+            <parent>PARENT</parent>
+            <first_name/>
+            <middle_name/>
+            <family_name/>
+            <first_name_c/>
+            <middle_name_c/>
+            <family_name_c/>
+            <name/>
+            <sex/>
+            <sex_c/>
+            <exact_dob_known/>
+            <exact_dob_known_c/>
+            <age_estimate_contact/>
+            <yob/>
+            <dob/>
+            <date_of_birth/>
+            <date_of_birth_c/>
+            <is_exact_dob_in_range/>
+            <reproductive_age/>
+            <is_under_5_binary/>
+            <return_children_note/>
+            <return_women_note/>
+            <debug_note/>
+            <meta tag="hidden">
+              <start/>
+              <end/>
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+            </meta>
+          </person>
+          <contact_id/>
+          <facility_id/>
+          <name/>
+          <district_auto/>
+          <shehia_auto/>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="0"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/user/district" type="string"/>
+      <bind nodeset="/data/inputs/user/shehia" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/data/contact_id" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/data/facility_id" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/data/name" type="string"/>
+      <bind calculate=" /data/inputs/user/district " nodeset="/data/district_auto" type="string"/>
+      <bind calculate=" /data/inputs/user/shehia " nodeset="/data/shehia_auto" type="string"/>
+      <bind nodeset="/data/person/hh_member_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/type" type="string"/>
+      <bind calculate="." nodeset="/data/person/parent" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/first_name:jr:constraintMsg')" nodeset="/data/person/first_name" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/middle_name:jr:constraintMsg')" nodeset="/data/person/middle_name" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/family_name:jr:constraintMsg')" nodeset="/data/person/family_name" required="true()" type="string"/>
+      <bind calculate="../first_name" nodeset="/data/person/first_name_c" type="string"/>
+      <bind calculate="../middle_name" nodeset="/data/person/middle_name_c" type="string"/>
+      <bind calculate="../family_name" nodeset="/data/person/family_name_c" type="string"/>
+      <bind calculate="concat( /data/person/first_name_c ,&quot; &quot;,  /data/person/middle_name_c ,&quot; &quot;,  /data/person/family_name_c )" nodeset="/data/person/name" type="string"/>
+      <bind nodeset="/data/person/sex" required="true()" type="select1"/>
+      <bind calculate="../sex" nodeset="/data/person/sex_c" type="string"/>
+      <bind nodeset="/data/person/exact_dob_known" required="true()" type="select1"/>
+      <bind calculate="../exact_dob_known" nodeset="/data/person/exact_dob_known_c" type="string"/>
+      <bind constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" nodeset="/data/person/age_estimate_contact" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" required="true()" type="int"/>
+      <bind calculate="if(../age_estimate_contact != '', format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact, 1900)" nodeset="/data/person/yob" type="string"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" nodeset="/data/person/dob" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
+      <bind calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')" nodeset="/data/person/date_of_birth" type="string"/>
+      <bind calculate="../date_of_birth" nodeset="/data/person/date_of_birth_c" type="string"/>
+      <bind calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)" nodeset="/data/person/is_exact_dob_in_range" type="string"/>
+      <bind calculate="if( /data/person/sex_c =&quot;female&quot; and ((((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &gt;= 15 and ((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &lt;= 49)),int(1),int(0))" nodeset="/data/person/reproductive_age" type="string"/>
+      <bind calculate="if(((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365.25) &lt; 5,1,0)" nodeset="/data/person/is_under_5_binary" type="string"/>
+      <bind nodeset="/data/person/return_children_note" readonly="true()" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot; and  /data/person/is_under_5_binary =1 and  /data/person/is_exact_dob_in_range  = 1" type="string"/>
+      <bind nodeset="/data/person/return_women_note" readonly="true()" relevant=" /data/person/reproductive_age  = 1" type="string"/>
+      <bind nodeset="/data/person/debug_note" readonly="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/person/meta/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/person/meta/end" type="dateTime"/>
+      <bind calculate="../../../name" nodeset="/data/person/meta/created_by" type="string"/>
+      <bind calculate="../../../contact_id" nodeset="/data/person/meta/created_by_person_uuid" type="string"/>
+      <bind calculate="../../../facility_id" nodeset="/data/person/meta/created_by_place_uuid" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/data/inputs">
+      <group ref="/data/inputs/user">
+        <input ref="/data/inputs/user/contact_id">
+          <label ref="jr:itext('/data/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/data/inputs/user/facility_id">
+          <label ref="jr:itext('/data/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/data/inputs/user/name">
+          <label ref="jr:itext('/data/inputs/user/name:label')"/>
+        </input>
+        <input ref="/data/inputs/user/district"/>
+        <input ref="/data/inputs/user/shehia"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/person">
+      <label ref="jr:itext('/data/person:label')"/>
+      <input ref="/data/person/hh_member_note">
+        <label ref="jr:itext('/data/person/hh_member_note:label')"/>
+      </input>
+      <input appearance="hidden" ref="/data/person/type"/>
+      <input appearance="hidden" ref="/data/person/parent"/>
+      <input ref="/data/person/first_name">
+        <label ref="jr:itext('/data/person/first_name:label')"/>
+      </input>
+      <input ref="/data/person/middle_name">
+        <label ref="jr:itext('/data/person/middle_name:label')"/>
+      </input>
+      <input ref="/data/person/family_name">
+        <label ref="jr:itext('/data/person/family_name:label')"/>
+      </input>
+      <select1 ref="/data/person/sex">
+        <label ref="jr:itext('/data/person/sex:label')"/>
+        <item>
+          <label ref="jr:itext('/data/person/sex/male:label')"/>
+          <value>male</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/person/sex/female:label')"/>
+          <value>female</value>
+        </item>
+      </select1>
+      <select1 ref="/data/person/exact_dob_known">
+        <label ref="jr:itext('/data/person/exact_dob_known:label')"/>
+        <item>
+          <label ref="jr:itext('/data/person/exact_dob_known/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/person/exact_dob_known/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/data/person/age_estimate_contact">
+        <label ref="jr:itext('/data/person/age_estimate_contact:label')"/>
+      </input>
+      <input ref="/data/person/dob">
+        <label ref="jr:itext('/data/person/dob:label')"/>
+      </input>
+      <input ref="/data/person/return_children_note">
+        <label ref="jr:itext('/data/person/return_children_note:label')"/>
+      </input>
+      <input appearance="hidden" ref="/data/person/return_women_note">
+        <label ref="jr:itext('/data/person/return_women_note:label')"/>
+      </input>
+      <input appearance="hidden" ref="/data/person/debug_note">
+        <label ref="jr:itext('/data/person/debug_note:label')"/>
+      </input>
+      <group ref="/data/person/meta"/>
+    </group>
+  </h:body>
+</h:html>
