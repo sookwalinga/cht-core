@@ -22,6 +22,7 @@ module.exports = [
       modifyContent: function(content, contact, report) {
         content.source_form = report.form;
         content.source_id = report._id;
+        content.last_visit_date = report.reported_date;
         content.refer_flag_small_baby = extras.getSmallBabyFlag(report);
         content.refer_neonatal_danger_sign_flag = extras.getNeonatalDangerSignFlag(report);
         content.refer_child_danger_sign_flag = extras.getChildDangerSignFlag(report);
