@@ -15,6 +15,39 @@ module.exports = {
     return false;
   },
 
+  isChildUnder20Days: function (c) {
+    if(c.contact && c.contact.parent && c.contact.parent.parent &&
+       c.contact.parent.parent.parent && c.contact.date_of_birth) {
+          var birthDate = new Date(c.contact.date_of_birth);
+          var ageInMs = new Date(now - birthDate.getTime());
+          var ageInDays = Math.round(ageInMs / (1000*60*60*24));
+          return ageInDays < 20;
+    }
+    return false;
+  },
+
+  isChildInWindow3Or4: function (c) {
+    if(c.contact && c.contact.parent && c.contact.parent.parent &&
+       c.contact.parent.parent.parent && c.contact.date_of_birth) {
+          var birthDate = new Date(c.contact.date_of_birth);
+          var ageInMs = new Date(now - birthDate.getTime());
+          var ageInDays = Math.round(ageInMs / (1000*60*60*24));
+          return ageInDays >= 20 && ageInDays < (this.week * 15);
+    }
+    return false;
+  },
+
+  isChildInWindow5Plus: function(c) {
+    if(c.contact && c.contact.parent && c.contact.parent.parent &&
+      c.contact.parent.parent.parent && c.contact.date_of_birth) {
+         var birthDate = new Date(c.contact.date_of_birth);
+         var ageInMs = new Date(now - birthDate.getTime());
+         var ageInDays = Math.round(ageInMs / (1000*60*60*24));
+         return ageInDays >= (this.week * 15);
+   }
+   return false;
+  },
+
   countReportsSubmitted: function (c, form) {
     var reportsFound = [];
     if(c && c.reports) {
@@ -30,21 +63,127 @@ module.exports = {
     var consentingVisits = [];
     if(c && c.reports) {
       consentingVisits = c.reports.filter(function(r) {
-        if (r.form && r.fields && r.fields.previous_child_consent && r.fields.consent && r.fields.consent.child_consent_today) {
-          return r.form === 'infant_child' && (r.fields.previous_child_consent === 'yes' || r.fields.consent.child_consent_today === 'yes');
-        }
-      });
+        return r.form === 'infant_child' &&
+               r.fields && 
+               ((!r.fields.consent) || 
+                (!r.fields.consent.child_consent_today) || 
+                (r.fields.consent.child_consent_today === 'yes'));
+      });  
       return consentingVisits.length;
     }
     return 0;
   },
 
   daysAfterBirth: function(c, days) {
-    if (c.contact.date_of_birth) {
+    if (c.contact && c.contact.date_of_birth && Number.isInteger(days)) {
       var result = new Date(c.contact.date_of_birth);
       result.setDate(result.getDate() + days);
       return result;
     }
+    return null;
+  },
+
+  getContactReportedDate: function(c) {
+    if (c.contact && c.contact.reported_date){
+      var reported_date = new Date(c.contact.reported_date);
+      return reported_date.getTime();
+    }
+    return null;
+  },
+
+  mapInfantChildVisitType: function(c) {
+    if (c.contact && c.contact.date_of_birth) {
+      var birthDate = new Date(c.contact.date_of_birth);
+      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInDays = Math.round(ageInMs / (1000*60*60*24));
+
+      if (ageInDays < (this.day * 3)) {
+        return 'infant_child_0_2_day_pp_visit';
+      }
+      else if (ageInDays < (this.day * 20)) {
+        return 'infant_child_3_19_day_pp_visit';
+      }
+      else if (ageInDays < (this.week * 11)) {
+        return 'infant_child_day_20_week_11_visit';
+      }
+      else if (ageInDays < (this.week * 15)) {
+        return 'infant_child_week_11_week_15_visit';
+      }
+      else if (ageInDays < (this.month * 6)) {
+        return 'infant_child_week_15_month_6_visit';
+      }
+      else if (ageInDays < (this.month * 9)) {
+        return 'infant_child_month_6_month_9_visit';
+      }
+      else if (ageInDays < (this.month * 12)) {
+        return 'infant_child_month_9_month_12_visit';
+      }
+      else if (ageInDays < (this.month * 15)) {
+        return 'infant_child_month_12_month_15_visit';
+      }
+      else if (ageInDays < (this.month * 18)) {
+        return 'infant_child_month_15_month_18_visit';
+      }
+      else if (ageInDays < (this.month * 24)) {
+        return 'infant_child_month_18_month_24_visit';
+      }
+      else if (ageInDays < (this.month * 36)) {
+        return 'infant_child_year_2_visit';
+      }
+      else if (ageInDays < (this.month * 48)) {
+        return 'infant_child_year_3_visit';
+      }
+      else if (ageInDays < (this.month * 60)) {
+        return 'infant_child_year_4_visit';
+      }
+    }
+    return null;
+  },
+
+  mapInfantChildVisitScheduleDueDates: function(c) {
+    if (c.contact && c.contact.date_of_birth) {
+      var birthDate = new Date(c.contact.date_of_birth);
+      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInDays = Math.round(ageInMs / (1000*60*60*24));
+
+      if (ageInDays < (this.day * 20)) {
+        return this.daysAfterBirth(c, (this.day * 5)).getTime();
+      }
+      else if (ageInDays < (this.week * 11)) {
+        return this.daysAfterBirth(c, (this.week * 4)).getTime();
+      }
+      else if (ageInDays < (this.week * 15)) {
+        return this.daysAfterBirth(c, (this.week * 11)).getTime();
+      }
+      else if (ageInDays < (this.month * 6)) {
+        return this.daysAfterBirth(c, (this.week * 16)).getTime();
+      }  
+      else if (ageInDays < (this.month * 9)) {
+        return this.daysAfterBirth(c, (this.week * 26)).getTime();
+      }
+      else if (ageInDays < (this.month * 12)) {
+        return this.daysAfterBirth(c, (this.week * 42)).getTime();
+      }
+      else if (ageInDays < (this.month * 15)) {
+        return this.daysAfterBirth(c, (this.month * 13)).getTime();
+      }
+      else if (ageInDays < (this.month * 18)) {
+        return this.daysAfterBirth(c, (this.month * 16)).getTime();
+      }
+      else if (ageInDays < (this.month * 24)) {
+        return this.daysAfterBirth(c, (this.month * 20)).getTime();
+      }
+      else if (ageInDays < (this.month * 36)) {
+        return this.daysAfterBirth(c, (this.month * 24)).getTime();
+      }
+      else if (ageInDays < (this.month * 48)) {
+        return this.daysAfterBirth(c, (this.month * 39)).getTime();
+      }
+      else if (ageInDays < (this.month * 60)) {
+        return this.daysAfterBirth(c, (this.month * 51)).getTime();
+      }
+    }
+    
     return null;
   },
 
@@ -90,7 +229,7 @@ module.exports = {
     ) {
       return report.fields.refer_flag_small_baby;
     }
-    return 0;
+    return '0';
   },
 
   getNeonatalDangerSignFlag: function (report) {
@@ -109,7 +248,7 @@ module.exports = {
     ) {
       return report.fields.refer_neonatal_danger_sign_flag;
     }
-    return 0;
+    return '0';
   },
 
   getChildDangerSignFlag: function (report) {
@@ -128,7 +267,7 @@ module.exports = {
     ) {
       return report.fields.refer_child_danger_sign_flag;
     }
-    return 0;
+    return '0';
   },
 
   getMUACFlag: function (report) {
@@ -147,7 +286,7 @@ module.exports = {
     ) {
       return report.fields.refer_muac_flag;
     }
-    return 0;
+    return '0';
   },
 
   getPalmPallorFlag: function (report) {
@@ -166,7 +305,7 @@ module.exports = {
     ) {
       return report.fields.refer_palm_pallor_flag;
     }
-    return 0;
+    return '0';
   },
 
   getVaccinesFlag: function (report) {
@@ -185,7 +324,7 @@ module.exports = {
     ) {
       return report.fields.refer_vaccines_flag;
     }
-    return 0;
+    return '0';
   },
 
   getSlowToLearnSpecificsFlag: function (report) {
@@ -204,7 +343,7 @@ module.exports = {
     ) {
       return report.fields.refer_slow_to_learn_specifics_flag;
     }
-    return 0;
+    return '0';
   },
 
   getBcg: function (c) {

@@ -8,13 +8,13 @@ module.exports = [
     appliesIf: function(c, r) {
       // if infant_child sets has_referral, we can eliminate the other checks
       return extras.hasReferral(r) ||
-        extras.getSmallBabyFlag(r) ||
-        extras.getNeonatalDangerSignFlag(r) ||
-        extras.getChildDangerSignFlag(r) ||
-        extras.getMUACFlag(r) ||
-        extras.getPalmPallorFlag(r) ||
-        extras.getVaccinesFlag(r) ||
-        extras.getSlowToLearnSpecificsFlag(r);
+        extras.getSmallBabyFlag(r) === '1' ||
+        extras.getNeonatalDangerSignFlag(r) === '1' ||
+        extras.getChildDangerSignFlag(r) === '1' ||
+        extras.getMUACFlag(r) === '1' ||
+        extras.getPalmPallorFlag(r) === '1' ||
+        extras.getVaccinesFlag(r) === '1' ||
+        extras.getSlowToLearnSpecificsFlag(r) === '1';
     },
     appliesToType: [ 'infant_child', 'referral_follow_up' ],
     actions: [{
@@ -49,6 +49,10 @@ module.exports = [
         end:7,
       }
     ],
+    priority: {
+      level: 'high',
+      label: 'task.referral.high_priority'
+    },
     resolvedIf: function(c, r, event, dueDate) {
       // Resolved if
       // the form is a referral form with no open referral
@@ -58,29 +62,17 @@ module.exports = [
     },
   },
 
-  // All infant-child visits
+  // First-time infant child visit for children registered at 19 days of age or younger.
+  // Task triggers with the high priority flag set and a due date of the same day the child was registered
   {
     icon: 'child',
-    title: 'task.infant_child',
+    title: 'task.infant_child.first_visit_under_20_days',
     appliesTo: 'contacts',
-    appliesIf: function (c) {
-      // Task applies in one of two conditions:
-      //  1. Person is under 5 and has had no infant-child forms submitted at all - this is for the first infant-child visit
-      //  2. Person is under 5, has had an infant-child form submitted, and has a positive number of consenting visits.  This person has given consent
-      //     and will continue to receive infant-child visits.
-      return ((
-        c.contact.parent &&
-        c.contact.parent.parent &&
-        c.contact.parent.parent.parent &&
-        extras.isChildUnder5(c) &&
-        extras.countConsentingInfantChildVisits(c) > 0
-      ) || (
-        c.contact.parent &&
-        c.contact.parent.parent &&
-        c.contact.parent.parent.parent &&
-        extras.isChildUnder5(c) &&
-        extras.countReportsSubmitted(c, 'infant_child') === 0
-      ));
+    appliesIf: function(c) {
+      return   c.contact.parent &&
+               c.contact.parent.parent &&
+               c.contact.parent.parent.parent &&
+               extras.isChildUnder20Days(c);
     },
     appliesToType: ['person'],
     actions: [{
@@ -104,26 +96,235 @@ module.exports = [
         content.ipv = extras.getIpv(c);
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
+        content.visit_id = extras.mapInfantChildVisitType(c);
+        content.due_date = extras.getContactReportedDate(c);
       }
     }],
     events: [
-      // One event for each potential infant-child visit.  Allowed timing spans until relevancy of following visit
       {
-        id: 'infant_child_0_2_day_pp_visit',
-        dueDate: function (event, c) {
-          return extras.daysAfterBirth(c, (extras.day * 1));
-        },
-        start: (extras.day * 1),
-        end: (extras.day * 1)
+        id: 'infant_child_first_visit_under_20_days',
+        days: 0,
+        start: 0,
+        end: (extras.month * 60)
       },
+    ],
+    priority: {
+      level: 'high',
+      label: 'task.infant_child.high_priority'
+    },
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there are any infant-child forms submitted - this is a first time visit only
+      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+    }
+  },
+
+  // Second infant child visit for children who got a first infant-child visit and are still under 20 days old.
+  // Task triggers with the high priority flag set and a due date based on the child's dob and visit schedule
+  {
+    icon: 'child',
+    title: 'task.infant_child.second_visit_under_20_days',
+    appliesTo: 'contacts',
+    appliesIf: function(c) {
+      return   c.contact.parent &&
+               c.contact.parent.parent &&
+               c.contact.parent.parent.parent &&
+               extras.isChildUnder20Days(c) &&
+               extras.countConsentingInfantChildVisits(c) > 0;
+    },
+    appliesToType: ['person'],
+    actions: [{
+      form: 'infant_child',
+      modifyContent: function (content, c) {
+        content.num_child_visits = extras.countConsentingInfantChildVisits(c);
+        content.small_baby = extras.isSmallBaby(c);
+        content.bcg = extras.getBcg(c);
+        content.bopv0 = extras.getBopv0(c);
+        content.bopv1 = extras.getBopv1(c);
+        content.dtp_hepb_hib1 = extras.getDtp_hepb_hib1(c);
+        content.pcvi1 = extras.getPcvi1(c);
+        content.rota1 = extras.getRota1(c);
+        content.bopv2 = extras.getBopv2(c);
+        content.dtp_hepb_hib2 = extras.getDtp_hepb_hib2(c);
+        content.pcvi2 = extras.getPcvi2(c);
+        content.rota2 = extras.getRota2(c);
+        content.bopv3 = extras.getBopv3(c);
+        content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
+        content.pcvi3 = extras.getPciv3(c);
+        content.ipv = extras.getIpv(c);
+        content.surua_rubella1 = extras.getSurua_rubella1(c);
+        content.surua_rubella2 = extras.getSurua_rubella2(c);
+        content.visit_id = extras.mapInfantChildVisitType(c);
+        content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
+      }
+    }],
+    events: [
       {
-        id: 'infant_child_3_7_day_pp_visit',
+        id: 'infant_child_3_19_day_pp_visit',
         dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.day * 5));
         },
         start: (extras.day * 2),
         end: (extras.day * 14)
       },
+    ],
+    priority: {
+      level: 'high',
+      label: 'task.infant_child.high_priority'
+    },
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there is a form submitted within the time window
+      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child', 
+                                           Utils.addDate(dueDate, -event.start).getTime(),
+                                           Utils.addDate(dueDate, event.end).getTime());
+    }
+  },
+
+  // First-time infant child visit for children registered at between 20 and 105 (15 weeks) days of age.
+  // Task triggers with normal priority and a due date of one week after the date of child registration
+  {
+    icon: 'child',
+    title: 'task.infant_child.first_visit_between_20_105_days',
+    appliesTo: 'contacts',
+    appliesIf: function(c) {
+      return   c.contact.parent &&
+               c.contact.parent.parent &&
+               c.contact.parent.parent.parent &&
+               extras.isChildInWindow3Or4(c);
+    },
+    appliesToType: ['person'],
+    actions: [{
+      form: 'infant_child',
+      modifyContent: function (content, c) {
+        content.num_child_visits = extras.countConsentingInfantChildVisits(c);
+        content.small_baby = extras.isSmallBaby(c);
+        content.bcg = extras.getBcg(c);
+        content.bopv0 = extras.getBopv0(c);
+        content.bopv1 = extras.getBopv1(c);
+        content.dtp_hepb_hib1 = extras.getDtp_hepb_hib1(c);
+        content.pcvi1 = extras.getPcvi1(c);
+        content.rota1 = extras.getRota1(c);
+        content.bopv2 = extras.getBopv2(c);
+        content.dtp_hepb_hib2 = extras.getDtp_hepb_hib2(c);
+        content.pcvi2 = extras.getPcvi2(c);
+        content.rota2 = extras.getRota2(c);
+        content.bopv3 = extras.getBopv3(c);
+        content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
+        content.pcvi3 = extras.getPciv3(c);
+        content.ipv = extras.getIpv(c);
+        content.surua_rubella1 = extras.getSurua_rubella1(c);
+        content.surua_rubella2 = extras.getSurua_rubella2(c);
+        content.visit_id = extras.mapInfantChildVisitType(c);
+        content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.week).getTime(); 
+      }
+    }],
+    events: [
+      {
+        id: 'infant_child_first_visit_between_20_105_days',
+        days: extras.week,
+        start: extras.week,
+        end: (extras.month * 60)
+      },
+    ],
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there are any infant-child forms submitted - this is a first time task only
+      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+    }
+  },
+
+  // First-time infant child visit for children registered at over 105 (15 weeks) days of age.
+  // Task triggers with normal priority and a due date of one month after the date of child registration
+  {
+    icon: 'child',
+    title: 'task.infant_child.first_visit_over_105_days',
+    appliesTo: 'contacts',
+    appliesIf: function(c) {
+      return   c.contact.parent &&
+               c.contact.parent.parent &&
+               c.contact.parent.parent.parent &&
+               extras.isChildInWindow5Plus(c) &&
+               extras.isChildUnder5(c);
+    },
+    appliesToType: ['person'],
+    actions: [{
+      form: 'infant_child',
+      modifyContent: function (content, c) {
+        content.num_child_visits = extras.countConsentingInfantChildVisits(c);
+        content.small_baby = extras.isSmallBaby(c);
+        content.bcg = extras.getBcg(c);
+        content.bopv0 = extras.getBopv0(c);
+        content.bopv1 = extras.getBopv1(c);
+        content.dtp_hepb_hib1 = extras.getDtp_hepb_hib1(c);
+        content.pcvi1 = extras.getPcvi1(c);
+        content.rota1 = extras.getRota1(c);
+        content.bopv2 = extras.getBopv2(c);
+        content.dtp_hepb_hib2 = extras.getDtp_hepb_hib2(c);
+        content.pcvi2 = extras.getPcvi2(c);
+        content.rota2 = extras.getRota2(c);
+        content.bopv3 = extras.getBopv3(c);
+        content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
+        content.pcvi3 = extras.getPciv3(c);
+        content.ipv = extras.getIpv(c);
+        content.surua_rubella1 = extras.getSurua_rubella1(c);
+        content.surua_rubella2 = extras.getSurua_rubella2(c);
+        content.visit_id = extras.mapInfantChildVisitType(c);
+        content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.month).getTime(); 
+      }
+    }],
+    events: [
+      // One event for each potential infant-child visit.  Allowed timing spans until relevancy of following visit
+      {
+        id: 'infant_child_first_visit_over_105_days',
+        days: extras.month,
+        start: extras.month,
+        end: (extras.month * 60)
+      },
+    ],
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there are any infant-child forms submitted - this is a first time task only
+      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+    }
+  },
+
+  // Second infant child visit for children who got a first infant-child visit but are older than 20 days.
+  // Task triggers with the high priority flag set and a due date based on the child's dob and visit schedule
+  {
+    icon: 'child',
+    title: 'task.infant_child.second_plus_visit_over_20_days',
+    appliesTo: 'contacts',
+    appliesIf: function(c) {
+      return   c.contact.parent &&
+               c.contact.parent.parent &&
+               c.contact.parent.parent.parent &&
+               !extras.isChildUnder20Days(c) &&
+               extras.countConsentingInfantChildVisits(c) > 0;
+    },
+    appliesToType: ['person'],
+    actions: [{
+      form: 'infant_child',
+      modifyContent: function (content, c) {
+        content.num_child_visits = extras.countConsentingInfantChildVisits(c);
+        content.small_baby = extras.isSmallBaby(c);
+        content.bcg = extras.getBcg(c);
+        content.bopv0 = extras.getBopv0(c);
+        content.bopv1 = extras.getBopv1(c);
+        content.dtp_hepb_hib1 = extras.getDtp_hepb_hib1(c);
+        content.pcvi1 = extras.getPcvi1(c);
+        content.rota1 = extras.getRota1(c);
+        content.bopv2 = extras.getBopv2(c);
+        content.dtp_hepb_hib2 = extras.getDtp_hepb_hib2(c);
+        content.pcvi2 = extras.getPcvi2(c);
+        content.rota2 = extras.getRota2(c);
+        content.bopv3 = extras.getBopv3(c);
+        content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
+        content.pcvi3 = extras.getPciv3(c);
+        content.ipv = extras.getIpv(c);
+        content.surua_rubella1 = extras.getSurua_rubella1(c);
+        content.surua_rubella2 = extras.getSurua_rubella2(c);
+        content.visit_id = extras.mapInfantChildVisitType(c);
+        content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
+      }
+    }],
+    events: [
       {
         id: 'infant_child_day_20_week_11_visit',
         dueDate: function(event, c){
@@ -135,10 +336,10 @@ module.exports = [
       {
         id: 'infant_child_week_11_week_15_visit',
         dueDate: function(event, c){
-          return extras.daysAfterBirth(c, (extras.week * 11));
+          return extras.daysAfterBirth(c, (extras.week * 12));
         },
-        start: 0,
-        end: (extras.week * 4) - 1
+        start: (extras.week * 1),
+        end: (extras.week * 3) - 1
       },
       {
         id: 'infant_child_week_15_month_6_visit',
@@ -146,23 +347,23 @@ module.exports = [
           return extras.daysAfterBirth(c, (extras.week * 16));
         },
         start: (extras.week * 1),
-        end: (extras.month * 6) - 1
+        end: (extras.day * 68) - 1 
       },
       {
         id: 'infant_child_month_6_month_9_visit',
         dueDate: function(event, c){
           return extras.daysAfterBirth(c, (extras.week * 26));
         },
-        start: (extras.days * 2),
-        end: (extras.month * 9) - 1
+        start: (extras.day * 2),
+        end: (extras.day * 88) - 1
       },
       {
         id: 'infant_child_month_9_month_12_visit',
         dueDate: function(event, c){
           return extras.daysAfterBirth(c, (extras.week * 42));
         },
-        start: (extras.days * 24),
-        end: (extras.month * 12) - 1
+        start: (extras.day * 24),
+        end: (extras.day * 66) - 1
       },
       {
         id: 'infant_child_month_12_month_15_visit',
@@ -191,10 +392,10 @@ module.exports = [
       {
         id: 'infant_child_year_2_visit',
         dueDate: function(event, c){
-          return extras.daysAfterBirth(c, (extras.month * 24));
+          return extras.daysAfterBirth(c, (extras.month * 25));
         },
-        start: 0,
-        end: (extras.month * 12) - 1
+        start: (extras.month * 1),
+        end: (extras.month * 11) - 1
       },
       {
         id: 'infant_child_year_3_visit',
@@ -210,14 +411,15 @@ module.exports = [
           return extras.daysAfterBirth(c, (extras.month * 51));
         },
         start: (extras.month * 3),
-        end: (extras.month * 9) - 1
+        end: (extras.month * 9)
       }
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
-        Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime());
+      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child', 
+                                           Utils.addDate(dueDate, -event.start).getTime(),
+                                           Utils.addDate(dueDate, event.end).getTime());
     }
   }
+
 ];
