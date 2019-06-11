@@ -161,7 +161,7 @@ module.exports = [
       {
         id: 'infant_child_3_19_day_pp_visit',
         dueDate: function (event, c) {
-          return extras.daysAfterBirth(c, (extras.day * 5));
+          return extras.daysAfterBirth(c, extras.day * 5);
         },
         start: (extras.day * 2),
         end: (extras.day * 14)
