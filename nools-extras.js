@@ -251,6 +251,18 @@ module.exports = {
     return '0';
   },
 
+  getSecondaryNeonatalDangerSignFlag: function (report) {
+    if ( 
+      report &&
+      report.fields &&
+      report.fields.neonatal_danger_signs_secondary &&
+      report.fields.neonatal_danger_signs_secondary.refer_secondary_neonatal_danger_sign_flag
+  ) {
+      return report.fields.neonatal_danger_signs_secondary.refer_secondary_neonatal_danger_sign_flag;
+    }
+    return '0';
+  },
+
   getChildDangerSignFlag: function (report) {
     if ( // delete this if after refactoring the infant-child form
       report &&
@@ -331,10 +343,10 @@ module.exports = {
     if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
-      report.fields.problem_solving &&
-      report.fields.problem_solving.refer_slow_to_learn_specifics_flag
+      report.fields.development_concerns &&
+      report.fields.development_concerns.refer_slow_to_learn_specifics_flag
     ) {
-      return report.fields.problem_solving.refer_slow_to_learn_specifics_flag;
+      return report.fields.development_concerns.refer_slow_to_learn_specifics_flag;
     }
     if (
       report &&
