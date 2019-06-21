@@ -10,6 +10,7 @@ module.exports = [
       return extras.hasReferral(r) ||
         extras.getSmallBabyFlag(r) === '1' ||
         extras.getNeonatalDangerSignFlag(r) === '1' ||
+        extras.getSecondaryNeonatalDangerSignFlag(r) === '1' ||
         extras.getChildDangerSignFlag(r) === '1' ||
         extras.getMUACFlag(r) === '1' ||
         extras.getPalmPallorFlag(r) === '1' ||
