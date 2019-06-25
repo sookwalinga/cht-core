@@ -5,6 +5,25 @@
     <model>
       <itext>
         <translation lang="en">
+          <text id="/referral_follow_up/client_information/due_date_note:label">
+            <value>Due date: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/due_date_pretty_print "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/client_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/age_years "/> years, <output value=" /referral_follow_up/age_months "/> months&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Referral Follow-up&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information:label">
+            <value>Client Information</value>
+          </text>
           <text id="/referral_follow_up/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
           </text>
@@ -121,6 +140,25 @@
           </text>
         </translation>
         <translation lang="sw">
+          <text id="/referral_follow_up/client_information/due_date_note:label">
+            <value>Tarehe ya mwisho ya tembeleo: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/due_date_pretty_print "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information/household_note:label">
+            <value>Jina: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/client_name "/>&lt;/span&gt;
+Umri: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/age_years "/> miaka, <output value=" /referral_follow_up/age_months "/> miezi&lt;/span&gt;
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/household_head "/>&lt;/span&gt; 
+Namba ya nyumba: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information/intro_note:label">
+            <value>Aina ya tembeleo: &lt;span style="font-weight:bold"&gt;Ufuatiliaji wa Rufaa&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information/phone_note:label">
+            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/client_information:label">
+            <value>Maelezo ya Mteja</value>
+          </text>
           <text id="/referral_follow_up/inputs/contact/_id:label">
             <value>-</value>
           </text>
@@ -134,6 +172,12 @@
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/due_date_human_readable:label">
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/last_visit_date:label">
@@ -318,6 +362,8 @@
             <refer_palm_pallor_flag/>
             <refer_vaccines_flag/>
             <refer_slow_to_learn_specifics_flag/>
+            <due_date/>
+            <due_date_human_readable/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -344,6 +390,22 @@
           <refer_slow_to_learn_specifics_flag/>
           <client/>
           <client_name/>
+          <client_date_of_birth/>
+          <due_date/>
+          <due_date_pretty_print/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <client_information>
+            <intro_note/>
+            <household_note/>
+            <phone_note/>
+            <due_date_note/>
+          </client_information>
           <referral_follow_up>
             <intro/>
             <reason_refer_flag_small_baby/>
@@ -379,6 +441,7 @@
         </referral_follow_up>
       </instance>
       <instance id="contact-summary"/>
+      <bind nodeset="/referral_follow_up/inputs" relevant="./source = 'user'"/>
       <bind nodeset="/referral_follow_up/inputs/source_form" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/source_id" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/last_visit_date" type="string"/>
@@ -389,6 +452,8 @@
       <bind nodeset="/referral_follow_up/inputs/refer_palm_pallor_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_vaccines_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_slow_to_learn_specifics_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/due_date" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/contact_id" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/facility_id" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/name" type="string"/>
@@ -410,6 +475,20 @@
       <bind calculate="../inputs/refer_slow_to_learn_specifics_flag" nodeset="/referral_follow_up/refer_slow_to_learn_specifics_flag" type="string"/>
       <bind calculate="../inputs/contact/_id" nodeset="/referral_follow_up/client" type="string"/>
       <bind calculate="../inputs/contact/name" nodeset="/referral_follow_up/client_name" type="string"/>
+      <bind calculate="../inputs/contact/date_of_birth" nodeset="/referral_follow_up/client_date_of_birth" type="string"/>
+      <bind calculate="../inputs/due_date" nodeset="/referral_follow_up/due_date" type="string"/>
+      <bind calculate="../inputs/due_date_human_readable" nodeset="/referral_follow_up/due_date_pretty_print" type="string"/>
+      <bind calculate="decimal-date-time(today())-decimal-date-time( /referral_follow_up/client_date_of_birth )" nodeset="/referral_follow_up/age_days" type="string"/>
+      <bind calculate="round( /referral_follow_up/age_days  div 30,0)" nodeset="/referral_follow_up/age_months" type="string"/>
+      <bind calculate="round( /referral_follow_up/age_months  div 12,0)" nodeset="/referral_follow_up/age_years" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/referral_follow_up/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/referral_follow_up/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/referral_follow_up/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/referral_follow_up/phone" type="string"/>
+      <bind nodeset="/referral_follow_up/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/referral_follow_up/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/referral_follow_up/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/referral_follow_up/client_information/due_date_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/intro" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby" readonly="true()" relevant="../../refer_flag_small_baby = 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_neonatal_danger_sign_flag = 1" type="string"/>
@@ -437,7 +516,7 @@
       <bind calculate="concat('uuid:', uuid())" nodeset="/referral_follow_up/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
-  <h:body>
+  <h:body class="pages">
     <group appearance="hidden" ref="/referral_follow_up/inputs">
       <input ref="/referral_follow_up/inputs/source_form"/>
       <input ref="/referral_follow_up/inputs/source_id"/>
@@ -449,6 +528,8 @@
       <input ref="/referral_follow_up/inputs/refer_palm_pallor_flag"/>
       <input ref="/referral_follow_up/inputs/refer_vaccines_flag"/>
       <input ref="/referral_follow_up/inputs/refer_slow_to_learn_specifics_flag"/>
+      <input ref="/referral_follow_up/inputs/due_date"/>
+      <input ref="/referral_follow_up/inputs/due_date_human_readable"/>
       <group ref="/referral_follow_up/inputs/user">
         <input ref="/referral_follow_up/inputs/user/contact_id">
           <label ref="jr:itext('/referral_follow_up/inputs/user/contact_id:label')"/>
@@ -467,7 +548,22 @@
         <input ref="/referral_follow_up/inputs/contact/date_of_birth"/>
       </group>
     </group>
-    <group ref="/referral_follow_up/referral_follow_up">
+    <group appearance="field-list" ref="/referral_follow_up/client_information">
+      <label ref="jr:itext('/referral_follow_up/client_information:label')"/>
+      <input ref="/referral_follow_up/client_information/intro_note">
+        <label ref="jr:itext('/referral_follow_up/client_information/intro_note:label')"/>
+      </input>
+      <input ref="/referral_follow_up/client_information/household_note">
+        <label ref="jr:itext('/referral_follow_up/client_information/household_note:label')"/>
+      </input>
+      <input ref="/referral_follow_up/client_information/phone_note">
+        <label ref="jr:itext('/referral_follow_up/client_information/phone_note:label')"/>
+      </input>
+      <input ref="/referral_follow_up/client_information/due_date_note">
+        <label ref="jr:itext('/referral_follow_up/client_information/due_date_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/referral_follow_up/referral_follow_up">
       <label ref="jr:itext('/referral_follow_up/referral_follow_up:label')"/>
       <input ref="/referral_follow_up/referral_follow_up/intro">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/intro:label')"/>

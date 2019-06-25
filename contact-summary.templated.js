@@ -1,5 +1,9 @@
 module.exports = {
   context: {
+    household_head: extras.getContactHouseholdHead(),
+    house_number: extras.getContactHouseNumber(),
+    kitongoji: extras.getContactHouseKitongoji(),
+    phone: extras.getContactPhone()
   },
 
   fields: [

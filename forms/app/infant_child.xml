@@ -59,20 +59,8 @@
           <text id="/infant_child/assess_behavior/how_interact:label">
             <value>During the visit, how does the caregiver interact and respond to the child's movements, activities or sounds?</value>
           </text>
-          <text id="/infant_child/assess_behavior/instructions_play_comm:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Select 1 play and 1 communication activity from the Play and Communication Guide in the age range of the child.
-
-&lt;span style="display:block;padding-left:1em"&gt;Show the parents the picture and explain the activity.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Let caregivers try the activity. Observe the interaction and help caregivers be sensitive and responsive to child's cues. Aim to help the caregiver and child have a successful two-way interaction with caregiver observing, listening and responding to child.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;If child is not able to do the activity choose from younger age range or suggest ways to make the play simpler. If child is at end of age range and can easily, suggest ways to help the child learn something new or choose activity from next older age range.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Encourage the caregiver to continue to engage in play and communication activities daily.&lt;/span&gt;
-&lt;/span&gt;</value>
-          </text>
           <text id="/infant_child/assess_behavior/observe_interaction:label">
             <value>&lt;span style="color:#f58a1f"&gt;For the following questions, observe interaction between caregiver and child if possible. If have not observed so far during visit, ask caregiver to demonstrate.&lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/assess_behavior/practice_play_comm:label">
-            <value>Now let's practice some new play and communication activities. These activities will help your child learn through seeing, hearing, touching, moving thinking or feeling.</value>
           </text>
           <text id="/infant_child/assess_behavior/praise_comfort:label">
             <value>I can see that you do a very good job comforting the child and showing them love. You are very good at this. For example, it is very important to look into the child's eyes, hold them gently, and speak to them all the time.</value>
@@ -348,16 +336,16 @@ Children communicate with us from a young age, even before learning to speak the
           <text id="/infant_child/child_danger_signs/child_vomit:label">
             <value>ASK: Does the child vomit everything?</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_119:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_133:label">
             <value>Child Danger Signs</value>
           </text>
           <text id="/infant_child/child_danger_signs/no_child_danger_sign_note:label">
             <value>SAY: No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -404,6 +392,25 @@ Where does your child defecate? Where do you dispose your child feces?</value>
           </text>
           <text id="/infant_child/child_visit_intro_note:label">
             <value>Habari mama? Kama tulivyozungumza wakati wa matembeleo yetu yaliyopita kuwa ntakuja kukutembelea kwa ajili ya kujua maendeleo na afya ya mtoto/watoto, na pia kujadiliana na wewe pamoja na familia juu ya malezi na makuzi bora ya mtoto/watoto wako. Nafahamu kuwa unajua jinsi ya kumtunza mtoto wako na kumkuza vizuri, lakini hii ni kama nyongeza tu ya elimu kutokana na ongezeko la maradhi na matatizo mbali mbali yanayoweza kudhoofisha afya na makuzi bora ya mtoto.</value>
+          </text>
+          <text id="/infant_child/client_information/due_date_note:label">
+            <value>Due date: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/due_date_pretty_print "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/child_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/age_years "/> years, <output value=" /infant_child/age_months "/> months&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/kitongoji "/>&lt;/span&gt;.</value>
+          </text>
+          <text id="/infant_child/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Infant/Child&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/client_information:label">
+            <value>Client Information</value>
           </text>
           <text id="/infant_child/consent/child_consent_today/no:label">
             <value>No</value>
@@ -1395,7 +1402,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
           <text id="/infant_child/malnutrition_anemia:label">
             <value>Malnutrition and Anemia Screening</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_86:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_100:label">
             <value>Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -1521,13 +1528,13 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
             <value>Yellow or pale palms and soles (hands and feet), and lips. Soles should be red/pink.</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_104:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_118:label">
             <value>Other Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -1626,10 +1633,10 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;A danger sign has been identified. Advise the mother to go to any nearby health facility within the next 24 hours so a doctor can look at the baby and help.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/problem_solving/challenge_play_comm:label">
@@ -1724,6 +1731,15 @@ On how many days in the past week was the child left alone for more than an hour
           <text id="/infant_child/problem_solving/has_time_concern_play_comm:label">
             <value>Are you concerned about feeling that you don't have enough time to play and communicate?</value>
           </text>
+          <text id="/infant_child/problem_solving/instructions_play_comm:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Select 1 play and 1 communication activity from the Play and Communication Guide in the age range of the child.
+
+&lt;span style="display:block;padding-left:1em"&gt;Show the parents the picture and explain the activity.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Let caregivers try the activity. Observe the interaction and help caregivers be sensitive and responsive to child's cues. Aim to help the caregiver and child have a successful two-way interaction with caregiver observing, listening and responding to child.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;If child is not able to do the activity choose from younger age range or suggest ways to make the play simpler. If child is at end of age range and can easily, suggest ways to help the child learn something new or choose activity from next older age range.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Encourage the caregiver to continue to engage in play and communication activities daily.&lt;/span&gt;
+&lt;/span&gt;</value>
+          </text>
           <text id="/infant_child/problem_solving/message_for_chv_child_protection:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
@@ -1760,6 +1776,9 @@ On how many days in the past week was the child left alone for more than an hour
           <text id="/infant_child/problem_solving/plays_with_toys_manufactured:label">
             <value>Does the child play with toys from a shop or manufactured toys?</value>
           </text>
+          <text id="/infant_child/problem_solving/practice_play_comm:label">
+            <value>Now let's practice some new play and communication activities. These activities will help your child learn through seeing, hearing, touching, moving thinking or feeling.</value>
+          </text>
           <text id="/infant_child/problem_solving/refer_child_protection:label">
             <value>&lt;span style="color:#f58a1f"&gt;If you have concerns that child is not safe due to harsh or physical discipline, refer immediately to the Shehia Women and Children Coordinator or Sheha, who will help you contact the correct authorities or individual. You can also refer to the nearby police station or one stop centre.&lt;/span&gt;</value>
           </text>
@@ -1770,6 +1789,9 @@ On how many days in the past week was the child left alone for more than an hour
             <value>Needing to leave children with others is also a common challenge that mothers and caregivers face. Identify at least one person (over 10 years old) who can care for the child regularly and give the child love and attention. This individual should be advised on how to appropriately care for the child. One challenge if you want your child to get used to another caregiver, is maybe the child doesn't want to leave your side. It only wants to be with you all the time. If you leave your child may cry. This is also very common. But over time, gradually, they can become accustomed to a new person. You just need to give them some time. Don't be afraid. 
 
 &lt;span style="color:#f58a1f"&gt;Encourage the mother and father to spend time with the child when possible&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/problem_solving/tip_leave_child_concern_no:label">
+            <value>-</value>
           </text>
           <text id="/infant_child/problem_solving/tip_stress_concern:label">
             <value>&lt;span style="color:#f58a1f"&gt;
@@ -2065,20 +2087,8 @@ For your newborn baby, you can:</value>
           <text id="/infant_child/assess_behavior/how_interact:label">
             <value>Wakati wa tembeleo ni vipi mlezi aliweza kuingiliana na kujibu mienendo, shughuli na milio ya mtoto?</value>
           </text>
-          <text id="/infant_child/assess_behavior/instructions_play_comm:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Chagua mchezo 1 na shughuli moja ya mawasiliano kutoka kwenye muongozo wa michezo na mawasiliano kulingana na umri wa mtoto.
-
-&lt;span style="display:block;padding-left:1em"&gt;Waoneshe wazee picha na waelezee shughuli.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Wape nafasi walezi wafanye shughuli. Chunguza maingiliano na wasaidie walezi wawe wanafatilia mienendo ya mtoto. Dhamiria kuwasaidia walezi na mtoto kuwa na mafanikio ya maingiliano ya pande mbili jinsi mlezi akiangalia, kusikiliza na kumjibu mtoto.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Ikiwa mtoto hawezi kufanya shughuli yoyote chagua mchezo unaoendana na umri wa mtoto au pendekeza njia ya kufanya mchezo uwe rahisi. Ikiwa mtoto ni mkubwa kidogo na anaweza kwa urahisi, pendekeza njia za kumsaidia mtoto kujifunza kitu kipya au chagua shughuli kutoka kwa umri mkubwa kidogo unaolingana na yeye.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Muhimize mlezi kuendelea na mchezo na shughuli za mawasiliano.&lt;/span&gt;
-&lt;/span&gt;</value>
-          </text>
           <text id="/infant_child/assess_behavior/observe_interaction:label">
             <value>&lt;span style="color:#f58a1f"&gt;Kwa maswali haya yafuatayo, &lt;span style="color:#f58a1f;font-weight: bold"&gt;CHUNGUZA&lt;/span&gt; maingiliano baina ya mlezi na mtoto ikiwa itawezekana. Ikiwa hukuweza kuchunguza mpaka unamaliza tembeleo, muombe mlezi akuoneshe._</value>
-          </text>
-          <text id="/infant_child/assess_behavior/practice_play_comm:label">
-            <value>Wacha tujifunze michezo mipya na njia nyengine za kuwasiliana. Mambo haya yatamsaidia mtoto wako kwenye uoni, usikivu, kugusa, kubadilisha mawazo au hisia.</value>
           </text>
           <text id="/infant_child/assess_behavior/praise_comfort:label">
             <value>Umefanya vizuri sana kumfariji mtoto na kumuonesha upendo. Unajua sana jinsi ya kuwafariji watoto. kwa mfano ni muhimu sana kumcheki mtoto kwenye macho, kuwashika vizuri, na kuongea nao muda wote.</value>
@@ -2360,16 +2370,16 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_danger_signs/child_vomit:label">
             <value>Je mtoto anatapika kila kitu?</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_119:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_133:label">
             <value>Dalili za hatari za mtoto</value>
           </text>
           <text id="/infant_child/child_danger_signs/no_child_danger_sign_note:label">
             <value>Hakuna dalili ya hatari yoyote iliyoonekana kwa mtoto wako, lakini ikitokea mtoto ameonesha dalili yoyote ya hatari tulizojadili, hakikisha unamuwahisha kituo cha afya kilichopo karibu nawe haraka.</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -2417,6 +2427,25 @@ Ni wapi mtoto wako anajisaidia? Ni wapi unapokitupa kinyesi cha mtoto wako?</val
           <text id="/infant_child/child_visit_intro_note:label">
             <value>Habari mama? Kama tulivyozungumza wakati wa matembeleo yetu yaliyopita kuwa ntakuja kukutembelea kwa ajili ya kujua maendeleo na afya ya mtoto/watoto, na pia kujadiliana na wewe pamoja na familia juu ya malezi na makuzi bora ya mtoto/watoto wako. Nafahamu kuwa unajua jinsi ya kumtunza mtoto wako na kumkuza vizuri, lakini hii ni kama nyongeza tu ya elimu kutokana na ongezeko la maradhi na matatizo mbali mbali yanayoweza kudhoofisha afya na makuzi bora ya mtoto.</value>
           </text>
+          <text id="/infant_child/client_information/due_date_note:label">
+            <value>Tarehe ya mwisho ya tembeleo: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/due_date_pretty_print "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/client_information/household_note:label">
+            <value>Jina: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/child_name "/>&lt;/span&gt;
+Umri: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/age_years "/> miaka, <output value=" /infant_child/age_months "/> miezi&lt;/span&gt;
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/household_head "/>&lt;/span&gt; 
+Namba ya nyumba: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/kitongoji "/>&lt;/span&gt;.</value>
+          </text>
+          <text id="/infant_child/client_information/intro_note:label">
+            <value>Aina ya tembeleo: &lt;span style="font-weight:bold"&gt;Mtoto/Mchanga&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/client_information/phone_note:label">
+            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/client_information:label">
+            <value>Maelezo ya Mteja</value>
+          </text>
           <text id="/infant_child/consent/child_consent_today/no:label">
             <value>Hapana</value>
           </text>
@@ -2424,7 +2453,7 @@ Ni wapi mtoto wako anajisaidia? Ni wapi unapokitupa kinyesi cha mtoto wako?</val
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/consent/child_consent_today:label">
-            <value>Ningependa nimsajili mtoto kwenye huduma za afya za mtoto, leo nitaangalia afya yao, na nitakuwa narudia kuwatembelea kadiri wanavyoendelea kukuwa ili kuhakikisha kuwa wanakuwa na afya bora. Je mnakubaliana na hili?</value>
+            <value>Ningependa mtoto kwenye huduma za afya za mtoto, leo nitaangalia afya yake, na nitakuwa narudia kumtembelea kadiri anavyoendelea kukuwa ili kuhakikisha kuwa anakuwa na afya bora. Je mnakubaliana na hili?</value>
           </text>
           <text id="/infant_child/consent/greet_family:label">
             <value>&lt;span style="color:#f58a1f"&gt;Isalimie familia na waalike wengine waliopo washiriki kwenye mazungumzo ikiwa inahitajika.&lt;/span&gt;</value>
@@ -3256,7 +3285,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/vaccines_up_to_date:label">
-            <value>ANGALIA kwenye kadi ya mtoto. Je chanjo zote zimeorodheshwa?</value>
+            <value>HAKIKI kwenye kadi ya mtoto. Je chanjo zote zimeorodheshwa?</value>
           </text>
           <text id="/infant_child/immunizations/why_not_vaccines_up_to_date/asked_to_return:label">
             <value>Nimeambiwa na wahudumu nirudi tarehe nyengine</value>
@@ -3322,6 +3351,9 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>-</value>
           </text>
           <text id="/infant_child/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/inputs/due_date_human_readable:label">
             <value>-</value>
           </text>
           <text id="/infant_child/inputs/ipv:label">
@@ -3493,7 +3525,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/malnutrition_anemia:label">
             <value>Kuchunguza utapia mlo na upungufu wa damu</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_86:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_100:label">
             <value>Kuchunguza Dalili za hatari baada kujifungua</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -3590,7 +3622,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_no_movement:label">
-            <value>Mtoto hachezi</value>
+            <value>Mtoto anacheza pale anapoguswa tu au hachezi hata kama akiguswa.</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_not_able_feed/no:label">
             <value>Hapana</value>
@@ -3619,13 +3651,13 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
             <value>Viganja, mikono na mdomo viko na rangi ya njano au nyeupe (inapaswa iwe nyekundu au pink).</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_104:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_118:label">
             <value>Kuchunguza dalili nyengine za hatari kwa mtoto</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -3644,7 +3676,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color:label">
-            <value>Amefanya kibuluu</value>
+            <value>Amebadilika rangi kuwa buluu,njano au zambarau.</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/no:label">
             <value>Hapana</value>
@@ -3724,10 +3756,10 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Dalili ya hatari imegundulika. Mshauri mama aende kituo cha Afya kilicho karibu nae ndani ya masaa 24 yajayo ili Daktari aweze kumuangalia mtoto na kutoa msaada.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/problem_solving/challenge_play_comm:label">
@@ -3773,7 +3805,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ni siku ngapi katika wiki iliyopita mtoto aliachiwa mtoto mwenziwe aliye chini ya miaka 10 amlee kwa zaidi ya saa moja?</value>
           </text>
           <text id="/infant_child/problem_solving/days_left_alone_more_than_1h:label">
-            <value>Baadhi ya mda walezi huondoka nyumbani na kwenda dukani, kuosha nguo au kwa sababu nyengine btofauti na ikabidi kuwaacha watoto.
+            <value>Baadhi ya mda walezi huondoka nyumbani na kwenda dukani, kuosha nguo au kwa sababu nyengine tofauti na ikabidi kuwaacha watoto.
 
 Ni siku ngapi nyuma mtoto aliachwa peke yake nyumbani kwa zaidi ya saa moja?</value>
           </text>
@@ -3822,6 +3854,15 @@ Ni siku ngapi nyuma mtoto aliachwa peke yake nyumbani kwa zaidi ya saa moja?</va
           <text id="/infant_child/problem_solving/has_time_concern_play_comm:label">
             <value>Je unahisi huna muda wa kutosha wakucheza na kuwasiliana?</value>
           </text>
+          <text id="/infant_child/problem_solving/instructions_play_comm:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Chagua mchezo 1 na shughuli moja ya mawasiliano kutoka kwenye muongozo wa michezo na mawasiliano kulingana na umri wa mtoto.
+
+&lt;span style="display:block;padding-left:1em"&gt;Waoneshe wazee picha na waelezee shughuli.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Wape nafasi walezi wafanye shughuli. Chunguza maingiliano na wasaidie walezi wawe wanafatilia mienendo ya mtoto. Dhamiria kuwasaidia walezi na mtoto kuwa na mafanikio ya maingiliano ya pande mbili jinsi mlezi akiangalia, kusikiliza na kumjibu mtoto.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Ikiwa mtoto hawezi kufanya shughuli yoyote chagua mchezo unaoendana na umri wa mtoto au pendekeza njia ya kufanya mchezo uwe rahisi. Ikiwa mtoto ni mkubwa kidogo na anaweza kwa urahisi, pendekeza njia za kumsaidia mtoto kujifunza kitu kipya au chagua shughuli kutoka kwa umri mkubwa kidogo unaolingana na yeye.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Muhimize mlezi kuendelea na mchezo na shughuli za mawasiliano.&lt;/span&gt;
+&lt;/span&gt;</value>
+          </text>
           <text id="/infant_child/problem_solving/message_for_chv_child_protection:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
@@ -3858,6 +3899,9 @@ Ni siku ngapi nyuma mtoto aliachwa peke yake nyumbani kwa zaidi ya saa moja?</va
           <text id="/infant_child/problem_solving/plays_with_toys_manufactured:label">
             <value>Je mtoto anachezea toiz kutoka madukani au zilizosanifiwa?</value>
           </text>
+          <text id="/infant_child/problem_solving/practice_play_comm:label">
+            <value>Wacha tujifunze michezo mipya na njia nyengine za kuwasiliana. Mambo haya yatamsaidia mtoto wako kwenye uoni, usikivu, kugusa, kubadilisha mawazo au hisia.</value>
+          </text>
           <text id="/infant_child/problem_solving/refer_child_protection:label">
             <value>&lt;span style="color:#f58a1f"&gt;Ikiwa una shaka kwamba huenda mtoto hayupo salama kutokana na adhabu kali mpe rufaa haraka iwezekanavyo kwa Mratibu wa Wanawake na Watoto wa Shehia au Sheha ambaye atakusaidia kuwasiliana na mamlaka sahihi au mtu sahihi. Pia unaweza kumpeleka kituo cha police kilichopo karibu nawe au kituo cha mkono kwa mkono.&lt;/span&gt;</value>
           </text>
@@ -3868,6 +3912,9 @@ Ni siku ngapi nyuma mtoto aliachwa peke yake nyumbani kwa zaidi ya saa moja?</va
             <value>Hali ya kuwaacha watoto kwa mtu mwengine pia ni moja ya changamoto inayowakumba mama na walezi wengi, orodhesha angalau mtu mmoja (aliye na umri wa zaidi ya miaka 10) ambaye atakuwa anawatunza watoto wako, kuwaandalia na kuwapa upendo. Mtu huyu ni lazima ashauri njia mzuri ya kuwatunza watoto. Mmoja kati ya changamoto unazoweza kupata ikiwa mtoto wako analelewa na mlezi mwengine na mtoto hataki kukaa mbali nawe, kila mda anapenda awe na wewe tu, kama ukimuacha mtoto wako atalia hii sana huwa linajitokeza. Ila itafika mda watoto watomzoea mlezi wao mpya, unachopaswa kufanya kuwa na subra. Wala usiogope.
 
 &lt;span style="color:#f58a1f"&gt;Washajihishe mama na baba watenge muda wa kucheza na mtoto ikiwa kuna uwezekano&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/problem_solving/tip_leave_child_concern_no:label">
+            <value>Tafadhali kuwa na tahadhari unapomuacha mtoto na walezi wengine ili kuepuka majanga yanayoweza kutokezea.</value>
           </text>
           <text id="/infant_child/problem_solving/tip_stress_concern:label">
             <value>&lt;span style="color:#f58a1f"&gt;
@@ -3910,7 +3957,7 @@ Cheza na mtoto. Mtoto hujifunza kupitia kucheza na walezi na watu wengine.</valu
             <value>Ndugu wengine</value>
           </text>
           <text id="/infant_child/problem_solving/who_engages:label">
-            <value>Je ni nani huwa anafanya shughuli hizi na mtoto?</value>
+            <value>Je ni nani huwa anacheza na kuwasiliana na mtoto?</value>
           </text>
           <text id="/infant_child/problem_solving/who_engages_how_many_hours:label">
             <value>Ni jumla ya masaa mangapi umetumia wewe au mwanafamilia yoyote aliye na zaidi ya miaka 15 kucheza na mtoto kipindi cha siku tatu nyuma?</value>
@@ -4140,6 +4187,7 @@ Kwa mtoto wako unaweza:</value>
             <surua_rubella2/>
             <visit_id/>
             <due_date/>
+            <due_date_human_readable/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -4157,6 +4205,8 @@ Kwa mtoto wako unaweza:</value>
           <n_child_visits/>
           <child_date_of_birth/>
           <age_days/>
+          <age_months/>
+          <age_years/>
           <previous_small_baby/>
           <previous_bcg/>
           <previous_bopv0/>
@@ -4176,14 +4226,25 @@ Kwa mtoto wako unaweza:</value>
           <previous_surua_rubella2/>
           <visit_id/>
           <due_date/>
+          <due_date_pretty_print/>
           <week/>
           <month/>
           <created_by/>
           <created_by_person_uuid/>
           <created_by_place_uuid/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
           <start/>
           <end/>
           <deviceid/>
+          <client_information>
+            <intro_note/>
+            <household_note/>
+            <phone_note/>
+            <due_date_note/>
+          </client_information>
           <consent>
             <greet_family/>
             <child_consent_today/>
@@ -4204,9 +4265,9 @@ Kwa mtoto wako unaweza:</value>
             <encourage_small_baby_note/>
           </first_visit_6_months>
           <neonatal_danger_signs>
-            <generated_table_list_label_86/>
+            <generated_table_list_label_100/>
             <neonatal_danger_signs_note/>
-            <reserved_name_for_field_list_labels_88/>
+            <reserved_name_for_field_list_labels_102/>
             <neonatal_not_able_feed/>
             <neonatal_had_convulsions/>
             <neonatal_difficulty_fast_breathing/>
@@ -4224,8 +4285,8 @@ Kwa mtoto wako unaweza:</value>
             <has_neonatal_danger_note/>
           </neonatal_danger_signs>
           <neonatal_danger_signs_secondary>
-            <generated_table_list_label_104/>
-            <reserved_name_for_field_list_labels_105/>
+            <generated_table_list_label_118/>
+            <reserved_name_for_field_list_labels_119/>
             <neonatal_not_crying/>
             <neonatal_blue_color/>
             <neonatal_eye_discharge/>
@@ -4241,8 +4302,8 @@ Kwa mtoto wako unaweza:</value>
             <no_secondary_neonatal_danger_sign_note/>
           </neonatal_danger_signs_secondary>
           <child_danger_signs>
-            <generated_table_list_label_119/>
-            <reserved_name_for_field_list_labels_120/>
+            <generated_table_list_label_133/>
+            <reserved_name_for_field_list_labels_134/>
             <child_drink/>
             <child_vomit/>
             <child_convulsions/>
@@ -4448,8 +4509,6 @@ Kwa mtoto wako unaweza:</value>
             </play_communicate_ge_6mo>
           </assess_dev_coach_play_communication>
           <assess_behavior>
-            <practice_play_comm/>
-            <instructions_play_comm/>
             <observe_interaction/>
             <how_interact/>
             <praise_interact/>
@@ -4481,8 +4540,11 @@ Kwa mtoto wako unaweza:</value>
             <number_books/>
             <concern_leave_child/>
             <tip_leave_child_concern/>
+            <tip_leave_child_concern_no/>
             <days_left_alone_more_than_1h/>
             <days_in_care_of_other_child_more_than_1h/>
+            <practice_play_comm/>
+            <instructions_play_comm/>
             <message_for_chv_harsh_treatment/>
             <concern_harsh_treatment/>
             <tip_harsh_treatment_concern/>
@@ -4576,6 +4638,7 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/inputs/surua_rubella2" type="string"/>
       <bind nodeset="/infant_child/inputs/visit_id" type="string"/>
       <bind nodeset="/infant_child/inputs/due_date" type="string"/>
+      <bind nodeset="/infant_child/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/infant_child/inputs/user/contact_id" type="string"/>
       <bind nodeset="/infant_child/inputs/user/facility_id" type="string"/>
       <bind nodeset="/infant_child/inputs/user/name" type="string"/>
@@ -4588,6 +4651,8 @@ Kwa mtoto wako unaweza:</value>
       <bind calculate="../inputs/num_child_visits" nodeset="/infant_child/n_child_visits" type="string"/>
       <bind calculate="../inputs/contact/date_of_birth" nodeset="/infant_child/child_date_of_birth" type="string"/>
       <bind calculate="decimal-date-time(today())-decimal-date-time( /infant_child/child_date_of_birth )" nodeset="/infant_child/age_days" type="string"/>
+      <bind calculate="round( /infant_child/age_days  div 30,0)" nodeset="/infant_child/age_months" type="string"/>
+      <bind calculate="round( /infant_child/age_months  div 12,0)" nodeset="/infant_child/age_years" type="string"/>
       <bind calculate="../inputs/small_baby" nodeset="/infant_child/previous_small_baby" type="string"/>
       <bind calculate="../inputs/bcg" nodeset="/infant_child/previous_bcg" type="string"/>
       <bind calculate="../inputs/bopv0" nodeset="/infant_child/previous_bopv0" type="string"/>
@@ -4607,14 +4672,23 @@ Kwa mtoto wako unaweza:</value>
       <bind calculate="../inputs/surua_rubella2" nodeset="/infant_child/previous_surua_rubella2" type="string"/>
       <bind calculate="../inputs/visit_id" nodeset="/infant_child/visit_id" type="string"/>
       <bind calculate="../inputs/due_date" nodeset="/infant_child/due_date" type="string"/>
+      <bind calculate="../inputs/due_date_human_readable" nodeset="/infant_child/due_date_pretty_print" type="string"/>
       <bind calculate="7" nodeset="/infant_child/week" type="string"/>
       <bind calculate="30" nodeset="/infant_child/month" type="string"/>
-      <bind calculate="../../../name" nodeset="/infant_child/created_by" type="string"/>
-      <bind calculate="../../../contact_id" nodeset="/infant_child/created_by_person_uuid" type="string"/>
-      <bind calculate="../../../facility_id" nodeset="/infant_child/created_by_place_uuid" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/infant_child/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/infant_child/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/infant_child/created_by_place_uuid" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/infant_child/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/infant_child/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/infant_child/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/infant_child/phone" type="string"/>
       <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/infant_child/start" type="dateTime"/>
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/infant_child/end" type="dateTime"/>
       <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/infant_child/deviceid" type="string"/>
+      <bind nodeset="/infant_child/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/client_information/due_date_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/consent" relevant=" /infant_child/n_child_visits =0"/>
       <bind nodeset="/infant_child/consent/greet_family" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/consent/child_consent_today" required="true()" type="select1"/>
@@ -4633,9 +4707,9 @@ Kwa mtoto wako unaweza:</value>
       <bind calculate="if(selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;),1,0)" nodeset="/infant_child/first_visit_6_months/refer_flag_small_baby" type="string"/>
       <bind nodeset="/infant_child/first_visit_6_months/encourage_small_baby_note" readonly="true()" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_86" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_100" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_not_able_feed" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_had_convulsions" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing" required="true()" type="select1"/>
@@ -4652,8 +4726,8 @@ Kwa mtoto wako unaweza:</value>
       <bind calculate="if(selected( /infant_child/neonatal_danger_signs/neonatal_not_able_feed ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_had_convulsions ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_fever ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_cold ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_no_movement ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_cord_bleeding ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_diarrhea ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_eyes_pus ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_skin_boils ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_excessive_vomiting ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_excessive_crying ,'yes'),1,0)" nodeset="/infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/has_neonatal_danger_note" readonly="true()" relevant=" /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_104" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_118" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_not_crying" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge" required="true()" type="select1"/>
@@ -4668,8 +4742,8 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note" readonly="true()" relevant=" /infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_flag =1" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note" readonly="true()" relevant="selected( /infant_child/neonatal_danger_signs_secondary/neonatal_not_crying ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_blue_color ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_skin_rash ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_congenital ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_vomiting ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_urine ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_stool ,'no')" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
-      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_119" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_133" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_drink" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_vomit" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_convulsions" required="true()" type="select1"/>
@@ -4857,8 +4931,6 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_communicate_12mo" readonly="true()" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_12mo_to_2yr&quot;)" type="string"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_communicate_2yr" readonly="true()" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_2yr_plus&quot;)" type="string"/>
       <bind nodeset="/infant_child/assess_behavior" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and (( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 24))"/>
-      <bind nodeset="/infant_child/assess_behavior/practice_play_comm" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/assess_behavior/instructions_play_comm" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/assess_behavior/observe_interaction" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/assess_behavior/how_interact" required="true()" type="select1"/>
       <bind nodeset="/infant_child/assess_behavior/praise_interact" readonly="true()" relevant="selected( /infant_child/assess_behavior/how_interact ,&quot;moves&quot;)" type="string"/>
@@ -4889,8 +4961,11 @@ Kwa mtoto wako unaweza:</value>
       <bind constraint=". &gt;= 0" nodeset="/infant_child/problem_solving/number_books" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" type="int"/>
       <bind nodeset="/infant_child/problem_solving/concern_leave_child" required="true()" type="select1"/>
       <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern" readonly="true()" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern_no" readonly="true()" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;no&quot;)" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt;= 7" nodeset="/infant_child/problem_solving/days_left_alone_more_than_1h" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" type="int"/>
       <bind constraint=". &gt;= 0 and . &lt;= 7" nodeset="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" type="int"/>
+      <bind nodeset="/infant_child/problem_solving/practice_play_comm" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/problem_solving/instructions_play_comm" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/problem_solving/message_for_chv_harsh_treatment" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/problem_solving/concern_harsh_treatment" required="true()" type="select1"/>
       <bind nodeset="/infant_child/problem_solving/tip_harsh_treatment_concern" readonly="true()" relevant="selected( /infant_child/problem_solving/concern_harsh_treatment ,&quot;yes&quot;)" type="string"/>
@@ -4981,6 +5056,7 @@ Kwa mtoto wako unaweza:</value>
       <input ref="/infant_child/inputs/surua_rubella2"/>
       <input ref="/infant_child/inputs/visit_id"/>
       <input ref="/infant_child/inputs/due_date"/>
+      <input ref="/infant_child/inputs/due_date_human_readable"/>
       <group ref="/infant_child/inputs/user">
         <input ref="/infant_child/inputs/user/contact_id">
           <label ref="jr:itext('/infant_child/inputs/user/contact_id:label')"/>
@@ -4998,6 +5074,21 @@ Kwa mtoto wako unaweza:</value>
         <input ref="/infant_child/inputs/contact/sex"/>
         <input ref="/infant_child/inputs/contact/date_of_birth"/>
       </group>
+    </group>
+    <group appearance="field-list" ref="/infant_child/client_information">
+      <label ref="jr:itext('/infant_child/client_information:label')"/>
+      <input ref="/infant_child/client_information/intro_note">
+        <label ref="jr:itext('/infant_child/client_information/intro_note:label')"/>
+      </input>
+      <input ref="/infant_child/client_information/household_note">
+        <label ref="jr:itext('/infant_child/client_information/household_note:label')"/>
+      </input>
+      <input ref="/infant_child/client_information/phone_note">
+        <label ref="jr:itext('/infant_child/client_information/phone_note:label')"/>
+      </input>
+      <input ref="/infant_child/client_information/due_date_note">
+        <label ref="jr:itext('/infant_child/client_information/due_date_note:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/infant_child/consent">
       <label ref="jr:itext('/infant_child/consent:label')"/>
@@ -5102,20 +5193,20 @@ Kwa mtoto wako unaweza:</value>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs">
-      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_86">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_86:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_100">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_100:label')"/>
       </input>
       <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_88/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_102/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5267,17 +5358,17 @@ Kwa mtoto wako unaweza:</value>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs_secondary">
-      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_104">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_104:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_118">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_118:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_105/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_119/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5399,17 +5490,17 @@ Kwa mtoto wako unaweza:</value>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_danger_signs">
-      <input ref="/infant_child/child_danger_signs/generated_table_list_label_119">
-        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_119:label')"/>
+      <input ref="/infant_child/child_danger_signs/generated_table_list_label_133">
+        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_133:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120">
+      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120/yes:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_120/no:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_134/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -6408,12 +6499,6 @@ Kwa mtoto wako unaweza:</value>
     </group>
     <group appearance="field-list" ref="/infant_child/assess_behavior">
       <label ref="jr:itext('/infant_child/assess_behavior:label')"/>
-      <input ref="/infant_child/assess_behavior/practice_play_comm">
-        <label ref="jr:itext('/infant_child/assess_behavior/practice_play_comm:label')"/>
-      </input>
-      <input ref="/infant_child/assess_behavior/instructions_play_comm">
-        <label ref="jr:itext('/infant_child/assess_behavior/instructions_play_comm:label')"/>
-      </input>
       <input ref="/infant_child/assess_behavior/observe_interaction">
         <label ref="jr:itext('/infant_child/assess_behavior/observe_interaction:label')"/>
       </input>
@@ -6640,11 +6725,20 @@ Kwa mtoto wako unaweza:</value>
       <input ref="/infant_child/problem_solving/tip_leave_child_concern">
         <label ref="jr:itext('/infant_child/problem_solving/tip_leave_child_concern:label')"/>
       </input>
+      <input ref="/infant_child/problem_solving/tip_leave_child_concern_no">
+        <label ref="jr:itext('/infant_child/problem_solving/tip_leave_child_concern_no:label')"/>
+      </input>
       <input ref="/infant_child/problem_solving/days_left_alone_more_than_1h">
         <label ref="jr:itext('/infant_child/problem_solving/days_left_alone_more_than_1h:label')"/>
       </input>
       <input ref="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h">
         <label ref="jr:itext('/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h:label')"/>
+      </input>
+      <input ref="/infant_child/problem_solving/practice_play_comm">
+        <label ref="jr:itext('/infant_child/problem_solving/practice_play_comm:label')"/>
+      </input>
+      <input ref="/infant_child/problem_solving/instructions_play_comm">
+        <label ref="jr:itext('/infant_child/problem_solving/instructions_play_comm:label')"/>
       </input>
       <input ref="/infant_child/problem_solving/message_for_chv_harsh_treatment">
         <label ref="jr:itext('/infant_child/problem_solving/message_for_chv_harsh_treatment:label')"/>
