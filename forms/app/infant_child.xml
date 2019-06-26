@@ -401,7 +401,7 @@ Where does your child defecate? Where do you dispose your child feces?</value>
 Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/age_years "/> years, <output value=" /infant_child/age_months "/> months&lt;/span&gt;
 Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/household_head "/>&lt;/span&gt; 
 House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/house_number "/>&lt;/span&gt;
-Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/kitongoji "/>&lt;/span&gt;.</value>
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/kitongoji "/>&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/client_information/intro_note:label">
             <value>Visit type: &lt;span style="font-weight:bold"&gt;Infant/Child&lt;/span&gt;</value>
@@ -616,6 +616,12 @@ ASK: have you ever breastfed?</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding:label">
             <value>Essential Newborn Care: Breastfeeding</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1:label">
+            <value form="image">jr://images/attachment_pic_1.png</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_2:label">
+            <value form="image">jr://images/attachment_pic_2.png</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok/no:label">
             <value>No</value>
@@ -2453,7 +2459,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infan
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/consent/child_consent_today:label">
-            <value>Ningependa mtoto kwenye huduma za afya za mtoto, leo nitaangalia afya yake, na nitakuwa narudia kumtembelea kadiri anavyoendelea kukuwa ili kuhakikisha kuwa anakuwa na afya bora. Je mnakubaliana na hili?</value>
+            <value>Kwa vile nilishamsajili mtoto kwenye huduma za afya za mtoto, leo nitaangalia afya yake, na nitakuwa narudia kumtembelea kadiri anavyoendelea kukuwa ili kuhakikisha kuwa anakuwa na afya bora. Je mnakubaliana na hili?</value>
           </text>
           <text id="/infant_child/consent/greet_family:label">
             <value>&lt;span style="color:#f58a1f"&gt;Isalimie familia na waalike wengine waliopo washiriki kwenye mazungumzo ikiwa inahitajika.&lt;/span&gt;</value>
@@ -2651,6 +2657,12 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding:label">
             <value>Huduma muhimu ya watoto wachanga: kuhifadhi na kunyonyesha</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1:label">
+            <value form="image">jr://images/attachment_pic_1.png</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_2:label">
+            <value form="image">jr://images/attachment_pic_2.png</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok/no:label">
             <value>Hapana</value>
@@ -4341,6 +4353,8 @@ Kwa mtoto wako unaweza:</value>
           </essential_newborn_breastfeeding>
           <essential_newborn_breastfeeding_positioning>
             <is_breastfeeding_positioning_ok/>
+            <attachment_pic_1/>
+            <attachment_pic_2/>
             <ok_breastfeeding_positioning_note/>
             <not_ok_breastfeeding_positioning_note/>
             <suckling_effectively/>
@@ -4777,6 +4791,8 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_2" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/ok_breastfeeding_positioning_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/not_ok_breastfeeding_positioning_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/suckling_effectively" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
@@ -5698,6 +5714,12 @@ Kwa mtoto wako unaweza:</value>
           <value>no</value>
         </item>
       </select1>
+      <input ref="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1">
+        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1:label')"/>
+      </input>
+      <input ref="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_2">
+        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_2:label')"/>
+      </input>
       <input ref="/infant_child/essential_newborn_breastfeeding_positioning/ok_breastfeeding_positioning_note">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding_positioning/ok_breastfeeding_positioning_note:label')"/>
       </input>
