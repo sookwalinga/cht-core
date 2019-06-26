@@ -10,7 +10,7 @@
           </text>
           <text id="/referral_follow_up/client_information/household_note:label">
             <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/client_name "/>&lt;/span&gt;
-Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/age_years "/> years, <output value=" /referral_follow_up/age_months "/> months&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/age_years "/> years, <output value=" /referral_follow_up/age_months "/> months, <output value=" /referral_follow_up/age_days_display "/> days&lt;/span&gt;
 Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/household_head "/>&lt;/span&gt; 
 House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/kitongoji "/>&lt;/span&gt;</value>
@@ -145,7 +145,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           </text>
           <text id="/referral_follow_up/client_information/household_note:label">
             <value>Jina: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/client_name "/>&lt;/span&gt;
-Umri: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/age_years "/> miaka, <output value=" /referral_follow_up/age_months "/> miezi&lt;/span&gt;
+Umri: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/age_years "/> miaka, <output value=" /referral_follow_up/age_months "/> miezi, <output value=" /referral_follow_up/age_days_display "/> siku&lt;/span&gt;
 Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/household_head "/>&lt;/span&gt; 
 Namba ya nyumba: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /referral_follow_up/kitongoji "/>&lt;/span&gt;</value>
@@ -396,6 +396,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <age_days/>
           <age_months/>
           <age_years/>
+          <age_days_display/>
           <household_head/>
           <house_number/>
           <kitongoji/>
@@ -478,9 +479,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind calculate="../inputs/contact/date_of_birth" nodeset="/referral_follow_up/client_date_of_birth" type="string"/>
       <bind calculate="../inputs/due_date" nodeset="/referral_follow_up/due_date" type="string"/>
       <bind calculate="../inputs/due_date_human_readable" nodeset="/referral_follow_up/due_date_pretty_print" type="string"/>
-      <bind calculate="decimal-date-time(today())-decimal-date-time( /referral_follow_up/client_date_of_birth )" nodeset="/referral_follow_up/age_days" type="string"/>
-      <bind calculate="round( /referral_follow_up/age_days  div 30,0)" nodeset="/referral_follow_up/age_months" type="string"/>
-      <bind calculate="round( /referral_follow_up/age_months  div 12,0)" nodeset="/referral_follow_up/age_years" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /referral_follow_up/client_date_of_birth ))" nodeset="/referral_follow_up/age_days" type="string"/>
+      <bind calculate="int(( /referral_follow_up/age_days  - ( /referral_follow_up/age_years  * 12 * 30)) div 30,0)" nodeset="/referral_follow_up/age_months" type="string"/>
+      <bind calculate="int( /referral_follow_up/age_days  div (30 *12),0)" nodeset="/referral_follow_up/age_years" type="string"/>
+      <bind calculate=" /referral_follow_up/age_days  - ( /referral_follow_up/age_months  * 30) - ( /referral_follow_up/age_years  *12*30)" nodeset="/referral_follow_up/age_days_display" type="string"/>
       <bind calculate="instance('contact-summary')/context/household_head" nodeset="/referral_follow_up/household_head" type="string"/>
       <bind calculate="instance('contact-summary')/context/house_number" nodeset="/referral_follow_up/house_number" type="string"/>
       <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/referral_follow_up/kitongoji" type="string"/>
