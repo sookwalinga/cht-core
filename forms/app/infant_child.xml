@@ -1993,6 +1993,12 @@ Emphasize that anyone can do KMC.</value>
 &lt;span style="display:block;padding-left:1em"&gt;Small babies have less fat than larger babies, so low body temperature can be a major issue. Make sure your baby is dry and warm all the time.
 &lt;span style="display:block;padding-left:1em"&gt;Kangaroo mother care (KMC) is an excellent way for mothers to keep these babies warm at all times. The skin-to-skin contact of KMC helps keep the baby's body temperature normal.</value>
           </text>
+          <text id="/infant_child/small_baby_kmc/thermal_care_pic_1:label">
+            <value form="image">jr://images/thermal_care_pic_1.png</value>
+          </text>
+          <text id="/infant_child/small_baby_kmc/thermal_care_pic_2:label">
+            <value form="image">jr://images/thermal_care_pic_2.png</value>
+          </text>
           <text id="/infant_child/small_baby_kmc:label">
             <value>Small baby care -- Skin-to-skin care (KMC)</value>
           </text>
@@ -4086,7 +4092,7 @@ Je ushawahi kunyonyesha?</value>
             <value>Matunzo ya mtoto Njiti- Usafi</value>
           </text>
           <text id="/infant_child/small_baby_kmc/small_baby_kmc_note:label">
-            <value>Kangaroo Mother Care ni njia ya matunzo kwa mtoto Njiti kwa ajili ya kumfanya mtoto aendelee kuwa na joto stahiki. Njia hii huhusisha mtoto kuchukuliwa kwa kutumia makutano ya ngozi kwa ngozi.
+            <value>Matunzo ya ngozi kwa ngozi (KMC) ni njia ya matunzo kwa mtoto Njiti kwa ajili ya kumfanya mtoto aendelee kuwa na joto stahiki. Njia hii huhusisha mtoto kuchukuliwa kwa kutumia makutano ya ngozi kwa ngozi.
 
 _Sisitiza kwamba mtu yoyote anaweza kufanya KMC._</value>
           </text>
@@ -4106,6 +4112,12 @@ _Sisitiza kwamba mtu yoyote anaweza kufanya KMC._</value>
 
 &lt;span style="display:block;padding-left:1em"&gt;Watoto njiti wana mafuta kuliko watoto wakubwa, kwa hyo kuwa na joto lisilotosha linaweza kuwa ni tatizo. Hakikisha mtoto wako yuko mkavu na mwenye joto mda wote.&lt;/span&gt;
 &lt;span style="display:block;padding-left:1em"&gt;Kangaroo mother care (KMC) ni njia nzuri Zaidi kwa mamam kumfanya mtoto awe na joto stahiki mda wote. Muingiliano wa ngozi kwa ngozi unasaidia joto la mtoto kuwa la kawaida. &lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/small_baby_kmc/thermal_care_pic_1:label">
+            <value form="image">jr://images/thermal_care_pic_1.png</value>
+          </text>
+          <text id="/infant_child/small_baby_kmc/thermal_care_pic_2:label">
+            <value form="image">jr://images/thermal_care_pic_2.png</value>
           </text>
           <text id="/infant_child/small_baby_kmc:label">
             <value>Matunzo ya ngozi kwa ngozi (KMC) ni njia ya matunzo kwa mtoto njiti ya kumfanya mtoto aendelee kuwa na joto stahiki. Njia hii huhusisha mtoto kuchukuliwa kwa kutumia makutano ya ngozi kwa ngozi.
@@ -4363,6 +4375,8 @@ Kwa mtoto wako unaweza:</value>
             <small_baby_warmth_note/>
             <small_baby_kmc_note/>
             <small_baby_kmc_practice_note/>
+            <thermal_care_pic_1/>
+            <thermal_care_pic_2/>
           </small_baby_kmc>
           <small_baby_hygiene>
             <small_baby_hygiene_note/>
@@ -4760,13 +4774,13 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/small_baby_ever =0"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/small_baby_ever =0 and selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok" required="true()" type="select1"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_2" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/ok_breastfeeding_positioning_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/not_ok_breastfeeding_positioning_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/suckling_effectively" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/suckling_effectively" required="true()" type="select1"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/suckling_effectively_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding_positioning/suckling_effectively ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/poor_suckling_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding_positioning/suckling_effectively ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_cord" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/age_days  &lt;= ( /infant_child/week  * 2) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/small_baby_ever =0"/>
@@ -4795,6 +4809,8 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/small_baby_kmc/small_baby_warmth_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/small_baby_kmc/small_baby_kmc_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/small_baby_kmc/small_baby_kmc_practice_note" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/small_baby_kmc/thermal_care_pic_1" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/small_baby_kmc/thermal_care_pic_2" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/small_baby_hygiene" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/small_baby_ever  = 1"/>
       <bind nodeset="/infant_child/small_baby_hygiene/small_baby_hygiene_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/small_baby_cord_care" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/age_days  &lt;= ( /infant_child/week  * 2) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/small_baby_ever  = 1"/>
@@ -5860,6 +5876,12 @@ Kwa mtoto wako unaweza:</value>
       </input>
       <input ref="/infant_child/small_baby_kmc/small_baby_kmc_practice_note">
         <label ref="jr:itext('/infant_child/small_baby_kmc/small_baby_kmc_practice_note:label')"/>
+      </input>
+      <input ref="/infant_child/small_baby_kmc/thermal_care_pic_1">
+        <label ref="jr:itext('/infant_child/small_baby_kmc/thermal_care_pic_1:label')"/>
+      </input>
+      <input ref="/infant_child/small_baby_kmc/thermal_care_pic_2">
+        <label ref="jr:itext('/infant_child/small_baby_kmc/thermal_care_pic_2:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/small_baby_hygiene">
