@@ -70,10 +70,10 @@
           <text id="/data/person/return_women_note:label">
             <value>I see that there are some women of reproductive age in your family. I'd like to ask your permission to return later to speak with them personally about issues related to health during pregnancy and childbirth.</value>
           </text>
-          <text id="/data/person/sex/Mwanamke:label">
+          <text id="/data/person/sex/female:label">
             <value>Female</value>
           </text>
-          <text id="/data/person/sex/Mwanamme:label">
+          <text id="/data/person/sex/male:label">
             <value>Male</value>
           </text>
           <text id="/data/person/sex:label">
@@ -171,10 +171,10 @@
           <text id="/data/person/return_women_note:label">
             <value>Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
           </text>
-          <text id="/data/person/sex/Mwanamke:label">
+          <text id="/data/person/sex/female:label">
             <value>Mwanamke</value>
           </text>
-          <text id="/data/person/sex/Mwanamme:label">
+          <text id="/data/person/sex/male:label">
             <value>Mwanamme</value>
           </text>
           <text id="/data/person/sex:label">
@@ -192,7 +192,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-06-18_03-03">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-06-26_22-42">
           <inputs>
             <meta>
               <location>
@@ -347,12 +347,12 @@
       <select1 ref="/data/person/sex">
         <label ref="jr:itext('/data/person/sex:label')"/>
         <item>
-          <label ref="jr:itext('/data/person/sex/Mwanamme:label')"/>
-          <value>Mwanamme</value>
+          <label ref="jr:itext('/data/person/sex/male:label')"/>
+          <value>male</value>
         </item>
         <item>
-          <label ref="jr:itext('/data/person/sex/Mwanamke:label')"/>
-          <value>Mwanamke</value>
+          <label ref="jr:itext('/data/person/sex/female:label')"/>
+          <value>female</value>
         </item>
       </select1>
       <select1 ref="/data/person/exact_dob_known">

@@ -197,10 +197,10 @@
           <text id="/data/init/secondary_phone_contact:label">
             <value>Is there another phone number used by <output value=" /data/init/first_name_contact "/> or another member of the household?</value>
           </text>
-          <text id="/data/init/sex_contact/Mwanamke:label">
+          <text id="/data/init/sex_contact/female:label">
             <value>Female</value>
           </text>
-          <text id="/data/init/sex_contact/Mwanamme:label">
+          <text id="/data/init/sex_contact/male:label">
             <value>Male</value>
           </text>
           <text id="/data/init/sex_contact:label">
@@ -285,10 +285,10 @@ Explain who you are and what your role as a community health volunteer is. Key p
           <text id="/data/repeat/child/return_women_note:label">
             <value>I see that there are some women of reproductive age in your family. I'd like to ask your permission to return later to speak with them personally about issues related to health during pregnancy and childbirth.</value>
           </text>
-          <text id="/data/repeat/child/sex/Mwanamke:label">
+          <text id="/data/repeat/child/sex/female:label">
             <value>Female</value>
           </text>
-          <text id="/data/repeat/child/sex/Mwanamme:label">
+          <text id="/data/repeat/child/sex/male:label">
             <value>Male</value>
           </text>
           <text id="/data/repeat/child/sex:label">
@@ -521,10 +521,10 @@ Explain who you are and what your role as a community health volunteer is. Key p
           <text id="/data/init/secondary_phone_contact:label">
             <value>Je kuna nambari ya ziada anayotumia kuwasiliana?</value>
           </text>
-          <text id="/data/init/sex_contact/Mwanamke:label">
+          <text id="/data/init/sex_contact/female:label">
             <value>Mwanamke</value>
           </text>
-          <text id="/data/init/sex_contact/Mwanamme:label">
+          <text id="/data/init/sex_contact/male:label">
             <value>Mwanamme</value>
           </text>
           <text id="/data/init/sex_contact:label">
@@ -627,10 +627,10 @@ _Taja jina lako na shehia._
           <text id="/data/repeat/child/return_women_note:label">
             <value>Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
           </text>
-          <text id="/data/repeat/child/sex/Mwanamke:label">
+          <text id="/data/repeat/child/sex/female:label">
             <value>Mwanamke</value>
           </text>
-          <text id="/data/repeat/child/sex/Mwanamme:label">
+          <text id="/data/repeat/child/sex/male:label">
             <value>Mwanamme</value>
           </text>
           <text id="/data/repeat/child/sex:label">
@@ -654,7 +654,7 @@ _Taja jina lako na shehia._
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-06-25_22-36">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-06-27_00-46">
           <inputs>
             <meta>
               <location>
@@ -713,6 +713,7 @@ _Taja jina lako na shehia._
             <date_of_birth/>
             <phone/>
             <alternate_phone/>
+            <is_head_of_household/>
             <meta tag="hidden">
               <created_by/>
               <created_by_person_uuid/>
@@ -826,6 +827,7 @@ _Taja jina lako na shehia._
       <bind calculate=" /data/init/dob_contact_calc " nodeset="/data/contact/date_of_birth" type="string"/>
       <bind calculate=" /data/init/primary_phone_contact " nodeset="/data/contact/phone" type="string"/>
       <bind calculate=" /data/init/secondary_phone_contact " nodeset="/data/contact/alternate_phone" type="string"/>
+      <bind calculate="&quot;yes&quot;" nodeset="/data/contact/is_head_of_household" type="string"/>
       <bind calculate="../../../name" nodeset="/data/contact/meta/created_by" type="string"/>
       <bind calculate="../../../contact_id" nodeset="/data/contact/meta/created_by_person_uuid" type="string"/>
       <bind calculate="../../../facility_id" nodeset="/data/contact/meta/created_by_place_uuid" type="string"/>
@@ -850,7 +852,7 @@ _Taja jina lako na shehia._
       <bind calculate="format-date(if(../dob_contact != '', ../dob_contact,concat(../yob_contact, '-01-01')), '%Y-%m-%d')" nodeset="/data/init/dob_contact_calc" type="string"/>
       <bind calculate="(decimal-date-time(today()) - decimal-date-time( /data/init/dob_contact_calc )) div 365" nodeset="/data/init/age_contact_years" type="string"/>
       <bind calculate="if(selected( /data/init/sex_contact ,&quot;female&quot;) and  /data/init/age_contact_years  &gt;= 15 and  /data/init/age_contact_years  &lt;= 49,1,0)" nodeset="/data/init/reproductive_age_c" type="string"/>
-      <bind nodeset="/data/other_members_registration_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/other_members_registration_note" readonly="true()" relevant=" /data/hh_member_count/num_hh_members &gt;1" type="string"/>
       <bind nodeset="/data/repeat" relevant=" /data/hh_member_count/num_hh_members &gt;1"/>
       <bind calculate=" /data/hh_member_count/num_hh_members -1" nodeset="/data/repeat/child_count" readonly="true()" type="string"/>
       <bind nodeset="/data/repeat/child/hh_member_note" readonly="true()" type="string"/>
@@ -962,12 +964,12 @@ _Taja jina lako na shehia._
       <select1 ref="/data/init/sex_contact">
         <label ref="jr:itext('/data/init/sex_contact:label')"/>
         <item>
-          <label ref="jr:itext('/data/init/sex_contact/Mwanamme:label')"/>
-          <value>Mwanamme</value>
+          <label ref="jr:itext('/data/init/sex_contact/male:label')"/>
+          <value>male</value>
         </item>
         <item>
-          <label ref="jr:itext('/data/init/sex_contact/Mwanamke:label')"/>
-          <value>Mwanamke</value>
+          <label ref="jr:itext('/data/init/sex_contact/female:label')"/>
+          <value>female</value>
         </item>
       </select1>
       <select1 ref="/data/init/exact_dob_known_contact">
@@ -1026,12 +1028,12 @@ _Taja jina lako na shehia._
           <select1 ref="/data/repeat/child/sex">
             <label ref="jr:itext('/data/repeat/child/sex:label')"/>
             <item>
-              <label ref="jr:itext('/data/repeat/child/sex/Mwanamme:label')"/>
-              <value>Mwanamme</value>
+              <label ref="jr:itext('/data/repeat/child/sex/male:label')"/>
+              <value>male</value>
             </item>
             <item>
-              <label ref="jr:itext('/data/repeat/child/sex/Mwanamke:label')"/>
-              <value>Mwanamke</value>
+              <label ref="jr:itext('/data/repeat/child/sex/female:label')"/>
+              <value>female</value>
             </item>
           </select1>
           <select1 ref="/data/repeat/child/exact_dob_known">
