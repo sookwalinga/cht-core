@@ -90,16 +90,10 @@
           <text id="/data/inputs/user/contact_id:label">
             <value>-</value>
           </text>
-          <text id="/data/inputs/user/district:label">
-            <value>-</value>
-          </text>
           <text id="/data/inputs/user/facility_id:label">
             <value>-</value>
           </text>
           <text id="/data/inputs/user/name:label">
-            <value>-</value>
-          </text>
-          <text id="/data/inputs/user/shehia:label">
             <value>-</value>
           </text>
           <text id="/data/inputs/user:label">
@@ -192,7 +186,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-06-26_22-42">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-06-29_06-40">
           <inputs>
             <meta>
               <location>
@@ -206,8 +200,6 @@
               <contact_id/>
               <facility_id/>
               <name/>
-              <district/>
-              <shehia/>
             </user>
           </inputs>
           <person>
@@ -241,16 +233,11 @@
               <created_by/>
               <created_by_person_uuid/>
               <created_by_place_uuid/>
-              <start/>
-              <end/>
-              <deviceid/>
             </meta>
           </person>
           <contact_id/>
           <facility_id/>
           <name/>
-          <district_auto/>
-          <shehia_auto/>
           <not_in_household_note/>
           <not_in_household_flag/>
           <meta tag="hidden">
@@ -262,13 +249,9 @@
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/inputs/user/name" type="string"/>
-      <bind nodeset="/data/inputs/user/district" type="string"/>
-      <bind nodeset="/data/inputs/user/shehia" type="string"/>
       <bind calculate="../inputs/user/contact_id" nodeset="/data/contact_id" type="string"/>
       <bind calculate="../inputs/user/facility_id" nodeset="/data/facility_id" type="string"/>
       <bind calculate="../inputs/user/name" nodeset="/data/name" type="string"/>
-      <bind calculate=" /data/inputs/user/district " nodeset="/data/district_auto" type="string"/>
-      <bind calculate=" /data/inputs/user/shehia " nodeset="/data/shehia_auto" type="string"/>
       <bind nodeset="/data/not_in_household_note" readonly="true()" relevant="starts-with( /data/person/parent , ../facility_id)" type="string"/>
       <bind calculate="if(starts-with( /data/person/parent , ../facility_id),1,0)" nodeset="/data/not_in_household_flag" type="string"/>
       <bind nodeset="/data/person/hh_member_note" readonly="true()" relevant=" /data/not_in_household_flag  = 0" type="string"/>
@@ -300,9 +283,6 @@
       <bind calculate="../../../name" nodeset="/data/person/meta/created_by" type="string"/>
       <bind calculate="../../../contact_id" nodeset="/data/person/meta/created_by_person_uuid" type="string"/>
       <bind calculate="../../../facility_id" nodeset="/data/person/meta/created_by_place_uuid" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/person/meta/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/person/meta/end" type="dateTime"/>
-      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/data/person/meta/deviceid" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -318,8 +298,6 @@
         <input ref="/data/inputs/user/name">
           <label ref="jr:itext('/data/inputs/user/name:label')"/>
         </input>
-        <input ref="/data/inputs/user/district"/>
-        <input ref="/data/inputs/user/shehia"/>
       </group>
     </group>
     <input ref="/data/not_in_household_note">

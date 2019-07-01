@@ -11,12 +11,6 @@
           <text id="/data/clinic/house_number:label">
             <value>Household number</value>
           </text>
-          <text id="/data/clinic/household_district:label">
-            <value>District</value>
-          </text>
-          <text id="/data/clinic/household_shehia:label">
-            <value>Shehia</value>
-          </text>
           <text id="/data/clinic/kitongoji:label">
             <value>Kitongoji</value>
           </text>
@@ -74,6 +68,14 @@
           <text id="/data/hh_member_count/num_hh_members:label">
             <value>How many people live in your Kaya?</value>
           </text>
+          <text id="/data/household_location/gps:label">
+            <value>Household GPS</value>
+          </text>
+          <text id="/data/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Press the button below to capture GPS coordinates for the house. You will know the data has been captured if you see numbers appear in the four boxes below - you don't need to write anything yourself in these boxes. It may take some time for the numbers to appear. If you are waiting more than one minute and the numbers have not appeared, you should move on to the rest of the form without them.&lt;/span&gt;</value>
+          </text>
           <text id="/data/household_location/house_number:hint">
             <value>Enter the entire house number separated by slashes</value>
           </text>
@@ -96,7 +98,7 @@
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
           <text id="/data/household_location/location_intro_note:label">
-            <value>_The following questions about this household will help you to locate this household easily for the next visits._</value>
+            <value>&lt;span style="color:#f58a1f"&gt;The following questions about this household will help you to locate this household easily for the next visits.&lt;/span&gt;</value>
           </text>
           <text id="/data/household_location/means_of_travel_house/bicycle:label">
             <value>Bicycle</value>
@@ -222,9 +224,9 @@
             <value>Name of the logged in user</value>
           </text>
           <text id="/data/intro_note:label">
-            <value>_This form is to be used for registering a household that has consented to participate in the Jamii ni Afya program. Remember, if you are speaking to a household and they do not consent to be registered you will need to exit this form using the "X" button rather than submitting it. When speaking to the household, it's important that you try to first speak to the head of household to explain who you are and the project, and to get his consent for the family to participate. Then, you can ask who the best contact person for the family is and begin registering each individual person with them. If the head of household is not available that is ok, you can try to speak with them at a later visit, but it's important to make an effort to speak with them now if possible._
+            <value>&lt;span style="color:#f58a1f"&gt;This form is to be used for registering a household that has consented to participate in the Jamii ni Afya program. Remember, if you are speaking to a household and they do not consent to be registered you will need to exit this form using the "X" button rather than submitting it. When speaking to the household, it's important that you try to first speak to the head of household to explain who you are and the project, and to get his consent for the family to participate. Then, you can ask who the best contact person for the family is and begin registering each individual person with them. If the head of household is not available that is ok, you can try to speak with them at a later visit, but it's important to make an effort to speak with them now if possible.&lt;/span&gt;
 
-Explain who you are and what your role as a community health volunteer is. Key points to mention include:
+&lt;span style="color:#f58a1f"&gt;Explain who you are and what your role as a community health volunteer is. Key points to mention include:&lt;/span&gt;
 
 &lt;span style="display:block;padding-left:1em"&gt;This is a nationwide effort implemented by the Ministry of Health to improve health services for communities in Zanzibar.&lt;/span&gt; 
 &lt;span style="display:block;padding-left:1em"&gt;Every area will now have a CHV who can care for families and children up to age 5 in all issues related to their health care, nutrition, and child development.&lt;/span&gt;</value>
@@ -311,12 +313,6 @@ Explain who you are and what your role as a community health volunteer is. Key p
           <text id="/data/clinic/house_number:label">
             <value>-</value>
           </text>
-          <text id="/data/clinic/household_district:label">
-            <value>-</value>
-          </text>
-          <text id="/data/clinic/household_shehia:label">
-            <value>-</value>
-          </text>
           <text id="/data/clinic/kitongoji:label">
             <value>-</value>
           </text>
@@ -398,6 +394,14 @@ Explain who you are and what your role as a community health volunteer is. Key p
           <text id="/data/hh_member_count:label">
             <value>-</value>
           </text>
+          <text id="/data/household_location/gps:label">
+            <value>GPS ya nyumba</value>
+          </text>
+          <text id="/data/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV).&lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Bonyeza kitufe hichi kupata GPS ya nyumba hii. Utatambua kuwa taarifa zimepatikana endapo utaona nambari zinatokea kwenye jadueli nne chini. Hutakiwi kuandika chochote kwenye jadueli hizi. Inaweza kuchukua muda kidogo mpaka nambari kutokea. Ukiona umesubiria kwa zaidi ya dakika moja na hakuna nambari iliyotokea, tafadhali endelea kujaza fomu yako bila ya kuzisubiria zaidi.&lt;/span&gt;</value>
+          </text>
           <text id="/data/household_location/house_number:hint">
             <value>Ingiza nambari ya nyumba yote na tenganisha kwa kutumia alama ya Mkwaju</value>
           </text>
@@ -420,7 +424,7 @@ Explain who you are and what your role as a community health volunteer is. Key p
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
           <text id="/data/household_location/location_intro_note:label">
-            <value>_Maswali yafuatayo kuhusu kaya hii yatakusaidia kuitambua kaya kwa urahisi kwa metembeleo yajayo._</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Maswali yafuatayo kuhusu kaya hii yatakusaidia kuitambua kaya kwa urahisi kwa metembeleo yajayo.&lt;/span&gt;</value>
           </text>
           <text id="/data/household_location/means_of_travel_house/bicycle:label">
             <value>Baskeli</value>
@@ -539,16 +543,10 @@ Explain who you are and what your role as a community health volunteer is. Key p
           <text id="/data/inputs/user/contact_id:label">
             <value>-</value>
           </text>
-          <text id="/data/inputs/user/district:label">
-            <value>-</value>
-          </text>
           <text id="/data/inputs/user/facility_id:label">
             <value>-</value>
           </text>
           <text id="/data/inputs/user/name:label">
-            <value>-</value>
-          </text>
-          <text id="/data/inputs/user/shehia:label">
             <value>-</value>
           </text>
           <text id="/data/inputs/user:label">
@@ -558,9 +556,9 @@ Explain who you are and what your role as a community health volunteer is. Key p
             <value>-</value>
           </text>
           <text id="/data/intro_note:label">
-            <value>_Fomu hii inatumika kusajili nyumba iliyokubaliwa kushiriki katika mpango wa jamii ni afya. Kumbuka, kama umeenda kwenye nyumba na hawakukubali kushiriki basi inabidi utoke kwenye fomu hii kwa kubonyeza kitufe "X" bila ya kuituma. Ukienda kwenye nyumba, tafadhali jaribu kuzungumza na Mkuu wa familia kwa kumueleza wewe ni nani na unafanya shughuli zipi, Pia Jaribu kumuomba ruhusa ya kushirikisha familia yake kwenye mpango huu. Baada ya hapo, unaweza kuomba kuchagua mtu anaeweza kuratibu na kuwasiliana na wewe mara kwa mara ndani ya familia hii na kisha uanze kusajili kila mtu kwenye nyumba. Kama mkuu wa familia hatapatikana ni sawa kuendelea na kisha kujaribu kumtafuta muda mwengine. Kumbuka ni muhimu sana kumpata mkuu wa familia kabla ya kusajili nyumba yake._
+            <value>&lt;span style="color:#f58a1f"&gt;Fomu hii inatumika kusajili nyumba iliyokubaliwa kushiriki katika mpango wa jamii ni afya. Kumbuka, kama umeenda kwenye nyumba na hawakukubali kushiriki basi inabidi utoke kwenye fomu hii kwa kubonyeza kitufe "X" bila ya kuituma. Ukienda kwenye nyumba, tafadhali jaribu kuzungumza na Mkuu wa familia kwa kumueleza wewe ni nani na unafanya shughuli zipi, Pia Jaribu kumuomba ruhusa ya kushirikisha familia yake kwenye mpango huu. Baada ya hapo, unaweza kuomba kuchagua mtu anaeweza kuratibu na kuwasiliana na wewe mara kwa mara ndani ya familia hii na kisha uanze kusajili kila mtu kwenye nyumba. Kama mkuu wa familia hatapatikana ni sawa kuendelea na kisha kujaribu kumtafuta muda mwengine. Kumbuka ni muhimu sana kumpata mkuu wa familia kabla ya kusajili nyumba yake.&lt;/span&gt;
 
-_Taja jina lako na shehia._
+&lt;span style="color:#f58a1f"&gt;Taja jina lako na shehia.&lt;/span&gt;
 
 &lt;span style="display:block;padding-left:1em"&gt;Mimi ni mhudumu wa afya ya jamii,Nafanya kazi katika mpango wa taifa wa afya ya jamii chini ya wizara ya afya Zanzibar, Kila eneo sasa litakua na mhudumu wa afya ya jamii ambae atashughulika na afya ya familia na watoto chini ya miaka mitano katika masuala ya lishe na makuzi ya mtoto.&lt;/span&gt;</value>
           </text>
@@ -654,7 +652,7 @@ _Taja jina lako na shehia._
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-06-27_00-46">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-07-01_02-09">
           <inputs>
             <meta>
               <location>
@@ -668,8 +666,6 @@ _Taja jina lako na shehia._
               <contact_id/>
               <facility_id/>
               <name/>
-              <district/>
-              <shehia/>
             </user>
           </inputs>
           <clinic>
@@ -677,8 +673,6 @@ _Taja jina lako na shehia._
             <name/>
             <geolocation/>
             <contact/>
-            <household_district/>
-            <household_shehia/>
             <kitongoji/>
             <house_number/>
             <travel_time/>
@@ -689,19 +683,11 @@ _Taja jina lako na shehia._
               <created_by/>
               <created_by_person_uuid/>
               <created_by_place_uuid/>
-              <start/>
-              <end/>
-              <deviceid/>
             </meta>
           </clinic>
           <contact_id/>
           <facility_id/>
           <name/>
-          <district_auto/>
-          <shehia_auto/>
-          <start/>
-          <end/>
-          <deviceid/>
           <contact>
             <parent>PARENT</parent>
             <first_name/>
@@ -787,6 +773,8 @@ _Taja jina lako na shehia._
           </repeat>
           <household_location>
             <location_intro_note/>
+            <gps_note/>
+            <gps/>
             <kitongoji_note/>
             <kitongoji/>
             <house_number_note/>
@@ -807,16 +795,9 @@ _Taja jina lako na shehia._
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/inputs/user/name" type="string"/>
-      <bind nodeset="/data/inputs/user/district" type="string"/>
-      <bind nodeset="/data/inputs/user/shehia" type="string"/>
       <bind calculate="../inputs/user/contact_id" nodeset="/data/contact_id" type="string"/>
       <bind calculate="../inputs/user/facility_id" nodeset="/data/facility_id" type="string"/>
       <bind calculate="../inputs/user/name" nodeset="/data/name" type="string"/>
-      <bind calculate=" /data/inputs/user/district " nodeset="/data/district_auto" type="string"/>
-      <bind calculate=" /data/inputs/user/shehia " nodeset="/data/shehia_auto" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
-      <bind jr:preload="property" jr:preloadParams="deviceid" nodeset="/data/deviceid" type="string"/>
       <bind calculate="." nodeset="/data/contact/parent" type="string"/>
       <bind calculate=" /data/init/first_name_contact " nodeset="/data/contact/first_name" required="true()" type="string"/>
       <bind calculate=" /data/init/middle_name_contact " nodeset="/data/contact/middle_name" type="string"/>
@@ -888,6 +869,8 @@ _Taja jina lako na shehia._
       <bind calculate="../../../end" nodeset="/data/repeat/child/meta/end" type="string"/>
       <bind calculate="../../../deviceid" nodeset="/data/repeat/child/meta/deviceid" type="string"/>
       <bind nodeset="/data/household_location/location_intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/household_location/gps_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/household_location/gps" type="geopoint"/>
       <bind nodeset="/data/household_location/kitongoji_note" readonly="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')" nodeset="/data/household_location/kitongoji" required="true()" type="string"/>
       <bind nodeset="/data/household_location/house_number_note" readonly="true()" type="string"/>
@@ -900,22 +883,17 @@ _Taja jina lako na shehia._
       <bind nodeset="/data/end_registration_note" readonly="true()" type="string"/>
       <bind calculate="." nodeset="/data/clinic/parent" type="string"/>
       <bind calculate="concat(../../contact/first_name, &quot; &quot;, ../../contact/middle_name, &quot; &quot;, ../../contact/last_name, &quot; - &quot;, ../../household_location/house_number )" nodeset="/data/clinic/name" type="string"/>
-      <bind calculate="concat(../../inputs/meta/location/lat, concat(&quot; &quot;, ../../inputs/meta/location/long))" nodeset="/data/clinic/geolocation" type="string"/>
+      <bind calculate="../../household_location/gps" nodeset="/data/clinic/geolocation" type="string"/>
       <bind calculate="&quot;NEW&quot;" nodeset="/data/clinic/contact" type="string"/>
-      <bind calculate=" /data/district_auto " nodeset="/data/clinic/household_district" type="string"/>
-      <bind calculate=" /data/shehia_auto " nodeset="/data/clinic/household_shehia" type="string"/>
       <bind calculate="../../household_location/kitongoji" nodeset="/data/clinic/kitongoji" type="string"/>
       <bind calculate="../../household_location/house_number" nodeset="/data/clinic/house_number" type="string"/>
       <bind calculate="../../household_location/travel_time" nodeset="/data/clinic/travel_time" type="string"/>
       <bind calculate="../../household_location/means_of_travel_house" nodeset="/data/clinic/means_of_travel" type="string"/>
       <bind calculate="../../household_location/means_of_travel_other" nodeset="/data/clinic/means_of_travel_other" type="string"/>
-      <bind calculate="../../household_member_count/num_household_members" nodeset="/data/clinic/number_hh_members" type="string"/>
+      <bind calculate="../../hh_member_count/num_hh_members" nodeset="/data/clinic/number_hh_members" type="string"/>
       <bind calculate="../../../name" nodeset="/data/clinic/meta/created_by" type="string"/>
       <bind calculate="../../../contact_id" nodeset="/data/clinic/meta/created_by_person_uuid" type="string"/>
       <bind calculate="../../../facility_id" nodeset="/data/clinic/meta/created_by_place_uuid" type="string"/>
-      <bind calculate="../../../start" nodeset="/data/clinic/meta/start" type="string"/>
-      <bind calculate="../../../end" nodeset="/data/clinic/meta/end" type="string"/>
-      <bind calculate="../../../deviceid" nodeset="/data/clinic/meta/deviceid" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -931,8 +909,6 @@ _Taja jina lako na shehia._
         <input ref="/data/inputs/user/name">
           <label ref="jr:itext('/data/inputs/user/name:label')"/>
         </input>
-        <input ref="/data/inputs/user/district"/>
-        <input ref="/data/inputs/user/shehia"/>
       </group>
     </group>
     <input ref="/data/intro_note">
@@ -1071,6 +1047,12 @@ _Taja jina lako na shehia._
       <label ref="jr:itext('/data/household_location:label')"/>
       <input appearance="field-list" ref="/data/household_location/location_intro_note">
         <label ref="jr:itext('/data/household_location/location_intro_note:label')"/>
+      </input>
+      <input ref="/data/household_location/gps_note">
+        <label ref="jr:itext('/data/household_location/gps_note:label')"/>
+      </input>
+      <input ref="/data/household_location/gps">
+        <label ref="jr:itext('/data/household_location/gps:label')"/>
       </input>
       <input ref="/data/household_location/kitongoji_note">
         <label ref="jr:itext('/data/household_location/kitongoji_note:label')"/>
