@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Rekebisha taarifa za mtu</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/data/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/data/inputs/user/facility_id:label">
+            <value>Place ID of the logged in user</value>
+          </text>
+          <text id="/data/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/data/person/date_of_birth:jr:constraintMsg">
+            <value>Date of birth cannot be in the future</value>
+          </text>
+          <text id="/data/person/date_of_birth:label">
+            <value>Date of Birth</value>
+          </text>
+          <text id="/data/person/first_name:label">
+            <value>First Name</value>
+          </text>
+          <text id="/data/person/last_name:label">
+            <value>Last Name</value>
+          </text>
+          <text id="/data/person/middle_name:label">
+            <value>Middle Name</value>
+          </text>
+          <text id="/data/person/phone:jr:constraintMsg">
+            <value>Use the following format 0XXXXXXXXX</value>
+          </text>
+          <text id="/data/person/phone:label">
+            <value>Phone Number</value>
+          </text>
+          <text id="/data/person/phone_alternate:jr:constraintMsg">
+            <value>Use the following format 0XXXXXXXXX</value>
+          </text>
+          <text id="/data/person/phone_alternate:label">
+            <value>Alternate Phone Number</value>
+          </text>
+          <text id="/data/person/sex/female:label">
+            <value>Female</value>
+          </text>
+          <text id="/data/person/sex/male:label">
+            <value>Male</value>
+          </text>
+          <text id="/data/person/sex:label">
+            <value>Sex</value>
+          </text>
+          <text id="/data/person:label">
+            <value>Edit Person</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/data/inputs/user/contact_id:label">
+            <value>Mawasiliano ya mtumizi</value>
+          </text>
+          <text id="/data/inputs/user/facility_id:label">
+            <value>Mahali ya kitambulisho ya Mtumizi</value>
+          </text>
+          <text id="/data/inputs/user/name:label">
+            <value>Jina la mtumizi</value>
+          </text>
+          <text id="/data/person/date_of_birth:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/person/date_of_birth:label">
+            <value>Siku ya Kuzaliwa</value>
+          </text>
+          <text id="/data/person/first_name:label">
+            <value>Jina la kwanza</value>
+          </text>
+          <text id="/data/person/last_name:label">
+            <value>Jina la babu</value>
+          </text>
+          <text id="/data/person/middle_name:label">
+            <value>Jina la baba</value>
+          </text>
+          <text id="/data/person/phone:jr:constraintMsg">
+            <value>Tumia mfumo huu 0XXXXXXXXX.</value>
+          </text>
+          <text id="/data/person/phone:label">
+            <value>Namba ya simu</value>
+          </text>
+          <text id="/data/person/phone_alternate:jr:constraintMsg">
+            <value>Tumia mfumo huu 0XXXXXXXXX.</value>
+          </text>
+          <text id="/data/person/phone_alternate:label">
+            <value>Namba nyingine ya simu</value>
+          </text>
+          <text id="/data/person/sex/female:label">
+            <value>Mwanamke</value>
+          </text>
+          <text id="/data/person/sex/male:label">
+            <value>Mwanamme</value>
+          </text>
+          <text id="/data/person/sex:label">
+            <value>Jinsia</value>
+          </text>
+          <text id="/data/person:label">
+            <value>Badilisha maelezo ya mtu</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data delimiter="#" id="contact:person:edit" prefix="J1!contact:person:edit!" version="2019-06-27_12-51">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <person>
+            <_id/>
+            <type>person</type>
+            <first_name/>
+            <middle_name/>
+            <last_name/>
+            <is_head_of_household/>
+            <date_of_birth/>
+            <phone/>
+            <phone_alternate/>
+            <sex/>
+            <first_name_c/>
+            <middle_name_c/>
+            <last_name_c/>
+            <name/>
+            <edited_date/>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+              <last_edited_by/>
+              <last_edited_by_person_uuid/>
+              <last_edited_by_place_uuid/>
+            </meta>
+          </person>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="0"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/person/_id" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/type" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/first_name" required="true()" type="string"/>
+      <bind nodeset="/data/person/middle_name" required="true()" type="string"/>
+      <bind nodeset="/data/person/last_name" required="true()" type="string"/>
+      <bind nodeset="/data/person/is_head_of_household" type="string"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="jr:itext('/data/person/date_of_birth:jr:constraintMsg')" nodeset="/data/person/date_of_birth" type="date"/>
+      <bind constraint="regex(.,'^0[0-9]{9}$')" jr:constraintMsg="jr:itext('/data/person/phone:jr:constraintMsg')" nodeset="/data/person/phone" relevant=" /data/person/is_head_of_household =&quot;yes&quot;" required="true()" type="string"/>
+      <bind constraint="regex(.,'^0[0-9]{9}$')" jr:constraintMsg="jr:itext('/data/person/phone_alternate:jr:constraintMsg')" nodeset="/data/person/phone_alternate" relevant=" /data/person/is_head_of_household =&quot;yes&quot;" type="string"/>
+      <bind nodeset="/data/person/sex" required="true()" type="select1"/>
+      <bind calculate="../first_name" nodeset="/data/person/first_name_c" type="string"/>
+      <bind calculate="../middle_name" nodeset="/data/person/middle_name_c" type="string"/>
+      <bind calculate="../last_name" nodeset="/data/person/last_name_c" type="string"/>
+      <bind calculate="concat( /data/person/first_name_c ,&quot; &quot;,  /data/person/middle_name_c ,&quot; &quot;,  /data/person/last_name_c )" nodeset="/data/person/name" type="string"/>
+      <bind calculate="int(decimal-date-time(now())* 24 *60*60*1000)" nodeset="/data/person/edited_date" type="string"/>
+      <bind nodeset="/data/person/meta/created_by" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/meta/created_by_person_uuid" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/meta/created_by_place_uuid" readonly="true()" type="string"/>
+      <bind calculate="../../../inputs/user/name" nodeset="/data/person/meta/last_edited_by" type="string"/>
+      <bind calculate="../../../inputs/user/contact_id" nodeset="/data/person/meta/last_edited_by_person_uuid" type="string"/>
+      <bind calculate="../../../inputs/user/facility_id" nodeset="/data/person/meta/last_edited_by_place_uuid" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/data/inputs">
+      <group ref="/data/inputs/user">
+        <input ref="/data/inputs/user/contact_id">
+          <label ref="jr:itext('/data/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/data/inputs/user/facility_id">
+          <label ref="jr:itext('/data/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/data/inputs/user/name">
+          <label ref="jr:itext('/data/inputs/user/name:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/person">
+      <label ref="jr:itext('/data/person:label')"/>
+      <input ref="/data/person/first_name">
+        <label ref="jr:itext('/data/person/first_name:label')"/>
+      </input>
+      <input ref="/data/person/middle_name">
+        <label ref="jr:itext('/data/person/middle_name:label')"/>
+      </input>
+      <input ref="/data/person/last_name">
+        <label ref="jr:itext('/data/person/last_name:label')"/>
+      </input>
+      <input appearance="hidden" ref="/data/person/is_head_of_household"/>
+      <input ref="/data/person/date_of_birth">
+        <label ref="jr:itext('/data/person/date_of_birth:label')"/>
+      </input>
+      <input appearance="numbers" ref="/data/person/phone">
+        <label ref="jr:itext('/data/person/phone:label')"/>
+      </input>
+      <input appearance="numbers" ref="/data/person/phone_alternate">
+        <label ref="jr:itext('/data/person/phone_alternate:label')"/>
+      </input>
+      <select1 appearance="vertical" ref="/data/person/sex">
+        <label ref="jr:itext('/data/person/sex:label')"/>
+        <item>
+          <label ref="jr:itext('/data/person/sex/male:label')"/>
+          <value>male</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/person/sex/female:label')"/>
+          <value>female</value>
+        </item>
+      </select1>
+      <group appearance="hidden" ref="/data/person/meta"/>
+    </group>
+  </h:body>
+</h:html>

@@ -31,6 +31,11 @@ module.exports = [
         content.refer_refer_palm_pallor_flag = extras.getPalmPallorFlag(report);
         content.refer_vaccines_flag = extras.getVaccinesFlag(report);
         content.refer_slow_to_learn_specifics_flag = extras.getSlowToLearnSpecificsFlag(report);
+        content.due_date = Utils.addDate(new Date(report.reported_date), 3).getTime();
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
+                                                                                              year: 'numeric',
+                                                                                              month: 'long',
+                                                                                              day: 'numeric'});
       }
     }],
     events: [
@@ -99,6 +104,10 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.getContactReportedDate(c);
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
+                                                                                              year: 'numeric',
+                                                                                              month: 'long',
+                                                                                              day: 'numeric'});
       }
     }],
     events: [
@@ -156,6 +165,10 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
+                                                                                              year: 'numeric',
+                                                                                              month: 'long',
+                                                                                              day: 'numeric'});
       }
     }],
     events: [
@@ -215,7 +228,11 @@ module.exports = [
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
-        content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.week).getTime(); 
+        content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.week).getTime();
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
+                                                                                              year: 'numeric',
+                                                                                              month: 'long',
+                                                                                              day: 'numeric'}); 
       }
     }],
     events: [
@@ -268,7 +285,11 @@ module.exports = [
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
-        content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.month).getTime(); 
+        content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.month).getTime();
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
+                                                                                              year: 'numeric',
+                                                                                              month: 'long',
+                                                                                              day: 'numeric'}); 
       }
     }],
     events: [
@@ -323,6 +344,10 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
+                                                                                              year: 'numeric',
+                                                                                              month: 'long',
+                                                                                              day: 'numeric'});
       }
     }],
     events: [
