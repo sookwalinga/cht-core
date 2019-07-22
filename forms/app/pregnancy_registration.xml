@@ -60,7 +60,7 @@
             <value>Yes</value>
           </text>
           <text id="/pregnancy_registration/pregnancy_form/is_pregnant:label">
-            <value>Are you preganant ?</value>
+            <value>Are you pregnant ?</value>
           </text>
         </translation>
         <translation lang="sw">
@@ -88,7 +88,13 @@
           <text id="/pregnancy_registration/age_below_15:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy_registration/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_registration/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_registration/inputs/contact/name:label">
             <value>-</value>
           </text>
           <text id="/pregnancy_registration/inputs/contact:label">
@@ -162,8 +168,16 @@
             </user>
             <contact>
               <date_of_birth/>
+              <_id/>
+              <name/>
             </contact>
           </inputs>
+          <client_name/>
+          <patient_id/>
+          <date_of_birth_c/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
           <age_in_years/>
           <age_below_15>
             <below_15_confirmation/>
@@ -188,7 +202,15 @@
       <bind nodeset="/pregnancy_registration/inputs/user/facility_id" type="string"/>
       <bind nodeset="/pregnancy_registration/inputs/user/name" type="string"/>
       <bind nodeset="/pregnancy_registration/inputs/contact/date_of_birth" type="string"/>
-      <bind calculate="(decimal-date-time(today()) - decimal-date-time( /pregnancy_registration/inputs/contact/date_of_birth )) div 365" nodeset="/pregnancy_registration/age_in_years" type="string"/>
+      <bind nodeset="/pregnancy_registration/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/pregnancy_registration/inputs/contact/name" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/pregnancy_registration/client_name" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/pregnancy_registration/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/date_of_birth" nodeset="/pregnancy_registration/date_of_birth_c" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/pregnancy_registration/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/pregnancy_registration/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/pregnancy_registration/created_by_place_uuid" type="string"/>
+      <bind calculate="(decimal-date-time(today()) - decimal-date-time( /pregnancy_registration/date_of_birth_c )) div 365" nodeset="/pregnancy_registration/age_in_years" type="string"/>
       <bind nodeset="/pregnancy_registration/age_below_15/below_15_confirmation" relevant=" /pregnancy_registration/age_in_years  &lt; 15" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_registration/age_above_49/above_49_confirmation" relevant=" /pregnancy_registration/age_in_years  &gt; 49" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_registration/pregnancy_form" relevant="not(selected( /pregnancy_registration/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy_registration/age_above_49/above_49_confirmation ,&quot;no&quot;))"/>
@@ -214,6 +236,8 @@
       </group>
       <group ref="/pregnancy_registration/inputs/contact">
         <input ref="/pregnancy_registration/inputs/contact/date_of_birth"/>
+        <input appearance="db-object" ref="/pregnancy_registration/inputs/contact/_id"/>
+        <input ref="/pregnancy_registration/inputs/contact/name"/>
       </group>
     </group>
     <group appearance="field-list" ref="/pregnancy_registration/age_below_15">
