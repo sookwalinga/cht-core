@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Pregnancy Registration Form"
+    },
+    {
+      "locale": "sw",
+      "content": ""
+    }
+  ],
+  "icon": "icon-pregnant",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "contact.type === 'person' && contact.sex === 'female'"
+  }
+}
