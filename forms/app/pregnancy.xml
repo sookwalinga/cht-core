@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Pregnancy Screening</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/pregnancy/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/pregnancy/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/pregnancy/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/delivery_form_note:label">
+            <value>Fill out delivery the delivery form</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_delivered/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_delivered/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_delivered:label">
+            <value>Is the pregnancy still viable?</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_given_birth/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_given_birth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_given_birth:label">
+            <value>See and ask if the mother has had her baby – Has she given birth?</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/introduction:label">
+            <value>In this visit, I will go over all the important information that you need to know about pregnancy as well as refer you to health facility in case of any danger signs.</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/sympathy_note:label">
+            <value>Sympathize with the mother.</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/pregnancy/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/num_pregnancy_visits:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/delivery_form_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_delivered/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_delivered/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_delivered:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_given_birth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_given_birth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/has_given_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/introduction:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/sympathy_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/visit_introduction:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <pregnancy delimiter="#" id="pregnancy" prefix="J1!pregnancy!" version="20/06/2019">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <num_pregnancy_visits/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <n_pregnancy_visits/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <visit_introduction>
+            <introduction/>
+            <has_given_birth/>
+            <delivery_form_note/>
+            <has_delivered/>
+            <sympathy_note/>
+          </visit_introduction>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </pregnancy>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/pregnancy/inputs" relevant="false()"/>
+      <bind nodeset="/pregnancy/inputs/num_pregnancy_visits" type="string"/>
+      <bind nodeset="/pregnancy/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/pregnancy/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/pregnancy/inputs/user/name" type="string"/>
+      <bind nodeset="/pregnancy/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/pregnancy/inputs/contact/name" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/pregnancy/client_name" type="string"/>
+      <bind calculate="2" nodeset="/pregnancy/n_pregnancy_visits" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/pregnancy/patient_id" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/pregnancy/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/pregnancy/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/pregnancy/created_by_place_uuid" type="string"/>
+      <bind nodeset="/pregnancy/visit_introduction/introduction" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/visit_introduction/has_given_birth" relevant=" /pregnancy/n_pregnancy_visits  &gt; 1" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/visit_introduction/delivery_form_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/visit_introduction/has_delivered" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/visit_introduction/sympathy_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/has_delivered ,&quot;no&quot;)" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/pregnancy/inputs">
+      <input ref="/pregnancy/inputs/num_pregnancy_visits"/>
+      <group ref="/pregnancy/inputs/user">
+        <input ref="/pregnancy/inputs/user/contact_id">
+          <label ref="jr:itext('/pregnancy/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/pregnancy/inputs/user/facility_id">
+          <label ref="jr:itext('/pregnancy/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/pregnancy/inputs/user/name">
+          <label ref="jr:itext('/pregnancy/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/pregnancy/inputs/contact">
+        <input appearance="db-object" ref="/pregnancy/inputs/contact/_id"/>
+        <input ref="/pregnancy/inputs/contact/name"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/pregnancy/visit_introduction">
+      <input ref="/pregnancy/visit_introduction/introduction">
+        <label ref="jr:itext('/pregnancy/visit_introduction/introduction:label')"/>
+      </input>
+      <select1 ref="/pregnancy/visit_introduction/has_given_birth">
+        <label ref="jr:itext('/pregnancy/visit_introduction/has_given_birth:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/visit_introduction/has_given_birth/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/visit_introduction/has_given_birth/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/visit_introduction/delivery_form_note">
+        <label ref="jr:itext('/pregnancy/visit_introduction/delivery_form_note:label')"/>
+      </input>
+      <select1 ref="/pregnancy/visit_introduction/has_delivered">
+        <label ref="jr:itext('/pregnancy/visit_introduction/has_delivered:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/visit_introduction/has_delivered/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/visit_introduction/has_delivered/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/visit_introduction/sympathy_note">
+        <label ref="jr:itext('/pregnancy/visit_introduction/sympathy_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>
