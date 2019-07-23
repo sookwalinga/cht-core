@@ -92,6 +92,63 @@
           <text id="/pregnancy/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
+          <text id="/pregnancy/pmtct/disclose_hiv_status/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pmtct/disclose_hiv_status/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pmtct/disclose_hiv_status:label">
+            <value>Are you comfortable to disclose your HIV status?</value>
+          </text>
+          <text id="/pregnancy/pmtct/discuss_further_note:label">
+            <value>I understand. If you'd like, we can discuss this further at my next visit.</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_negative_note:label">
+            <value>Remind client of the importance of safe sex practices, and ensuring both she and her partner are tested and know their status so they can protect themselves and their unborn child.</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_not_tested_note:label">
+            <value>Discuss importance of knowing her HIV status to be able to protect herself and her unborn child and the only way she can do this is through knowing her status by going to health facility to get HIV test</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_status/hiv_negative:label">
+            <value>HIV-negative</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_status/hiv_positive:label">
+            <value>HIV-positive</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_status:label">
+            <value>Enter HIV status</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_test/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_test/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_test:label">
+            <value>Have you been tested for HIV during this pregnancy?</value>
+          </text>
+          <text id="/pregnancy/pmtct/mother_mentor_note:label">
+            <value>As you visit the health facility there are some women called Mother Mentor who can help you/guide through on how you can take care of your self during pregnancy and after delivery so that you can give birth safely and to a healthy HIV free Baby. Please ask the medical worker in order to connect you and give you more information on this. This are HIV positive women who managed to managed to follow and complete PMTCT care cascade and they gave birth to healthy and free HIV baby, they will help throughout your journey so that you can also give birth to a free HIV baby.</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art:label">
+            <value>Are you already taking ART?</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art_no:label">
+            <value>Encourage client to go to nearest ART clinic.</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art_yes:label">
+            <value>Encourage client to continue treatment</value>
+          </text>
+          <text id="/pregnancy/pmtct:label">
+            <value>PMTCT Screening and Counselling</value>
+          </text>
           <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label">
             <value>Afya Bora flipchart comes here. 
 - (top left) Vaginal bleeding in late pregnancy, even a minimal amount
@@ -313,6 +370,63 @@ Have you experienced:</value>
           <text id="/pregnancy/inputs:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy/pmtct/disclose_hiv_status/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pmtct/disclose_hiv_status/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pmtct/disclose_hiv_status:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/discuss_further_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_negative_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_not_tested_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_status/hiv_negative:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_status/hiv_positive:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_status:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_test/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_test/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pmtct/hiv_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/mother_mentor_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art_no:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct/take_art_yes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pmtct:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label">
             <value>-</value>
           </text>
@@ -495,6 +609,18 @@ Have you experienced:</value>
               <afya_bora_flip_chart/>
             </additional_danger_signs>
           </pregnancy_issues_group>
+          <pmtct>
+            <hiv_test/>
+            <hiv_not_tested_note/>
+            <disclose_hiv_status/>
+            <hiv_status/>
+            <hiv_negative_note/>
+            <take_art/>
+            <take_art_yes/>
+            <take_art_no/>
+            <mother_mentor_note/>
+            <discuss_further_note/>
+          </pmtct>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -565,6 +691,17 @@ Have you experienced:</value>
 (selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;no&quot;) ))" type="string"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pmtct" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,'no')"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_test" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_not_tested_note" readonly="true()" relevant="selected( /pregnancy/pmtct/hiv_test ,'no')" type="string"/>
+      <bind nodeset="/pregnancy/pmtct/disclose_hiv_status" relevant="selected( /pregnancy/pmtct/hiv_test ,'yes')" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_status" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'yes')" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_negative_note" readonly="true()" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_negative')" type="string"/>
+      <bind nodeset="/pregnancy/pmtct/take_art" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/pmtct/take_art_yes" readonly="true()" relevant="selected( /pregnancy/pmtct/take_art ,'yes')" type="string"/>
+      <bind nodeset="/pregnancy/pmtct/take_art_no" readonly="true()" relevant="selected( /pregnancy/pmtct/take_art ,'no')" type="string"/>
+      <bind nodeset="/pregnancy/pmtct/mother_mentor_note" readonly="true()" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')" type="string"/>
+      <bind nodeset="/pregnancy/pmtct/discuss_further_note" readonly="true()" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'no')" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -822,6 +959,71 @@ Have you experienced:</value>
           <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label')"/>
         </input>
       </group>
+    </group>
+    <group appearance="field-list" ref="/pregnancy/pmtct">
+      <label ref="jr:itext('/pregnancy/pmtct:label')"/>
+      <select1 ref="/pregnancy/pmtct/hiv_test">
+        <label ref="jr:itext('/pregnancy/pmtct/hiv_test:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/hiv_test/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/hiv_test/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pmtct/hiv_not_tested_note">
+        <label ref="jr:itext('/pregnancy/pmtct/hiv_not_tested_note:label')"/>
+      </input>
+      <select1 ref="/pregnancy/pmtct/disclose_hiv_status">
+        <label ref="jr:itext('/pregnancy/pmtct/disclose_hiv_status:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/disclose_hiv_status/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/disclose_hiv_status/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/pmtct/hiv_status">
+        <label ref="jr:itext('/pregnancy/pmtct/hiv_status:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/hiv_status/hiv_positive:label')"/>
+          <value>hiv_positive</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/hiv_status/hiv_negative:label')"/>
+          <value>hiv_negative</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pmtct/hiv_negative_note">
+        <label ref="jr:itext('/pregnancy/pmtct/hiv_negative_note:label')"/>
+      </input>
+      <select1 ref="/pregnancy/pmtct/take_art">
+        <label ref="jr:itext('/pregnancy/pmtct/take_art:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/take_art/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pmtct/take_art/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pmtct/take_art_yes">
+        <label ref="jr:itext('/pregnancy/pmtct/take_art_yes:label')"/>
+      </input>
+      <input ref="/pregnancy/pmtct/take_art_no">
+        <label ref="jr:itext('/pregnancy/pmtct/take_art_no:label')"/>
+      </input>
+      <input ref="/pregnancy/pmtct/mother_mentor_note">
+        <label ref="jr:itext('/pregnancy/pmtct/mother_mentor_note:label')"/>
+      </input>
+      <input ref="/pregnancy/pmtct/discuss_further_note">
+        <label ref="jr:itext('/pregnancy/pmtct/discuss_further_note:label')"/>
+      </input>
     </group>
   </h:body>
 </h:html>
