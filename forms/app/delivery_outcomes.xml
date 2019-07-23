@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Delivery Outcomes</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/delivery_outcomes/child/child_document_creation:label">
+            <value>get child data</value>
+          </text>
+          <text id="/delivery_outcomes/child:label">
+            <value>Capture Child Data</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
+            <value>Dates of death can be up to 6 months ago</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:label">
+            <value>When did the death occur?</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_death_before_after_birth/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_death_before_after_birth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_death_before_after_birth:label">
+            <value>Was the child born before it died?</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data:label">
+            <value>Child Death Data</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/client_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/age_years "/> years, <output value=" /delivery_outcomes/age_months "/> months, <output value=" /delivery_outcomes/age_days_display "/> days&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Record pregnancy delivery outcome&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/client_information:label">
+            <value>Client Information</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver:label">
+            <value>Did <output value=" /delivery_outcomes/client_name "/> deliver her baby?</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery:label">
+            <value>Confirm Delivery</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child_data_note:label">
+            <value>I'd like to ask you some questions about your baby</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/multiple_child_data_note:label">
+            <value>I'd like to ask you some questions about your babies - I will ask the same set of questions for each, one by one</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture:label">
+            <value>Capture Child Data</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label">
+            <value>More than one</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label">
+            <value>One</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries:label">
+            <value>Did <output value=" /delivery_outcomes/client_name "/> deliver one baby or more than one baby</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth:label">
+            <value>Is the baby alive?</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
+            <value>Delivery of between 2 and 4 babies is supported</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:label">
+            <value>How many babies did <output value=" /delivery_outcomes/client_name "/> deliver?</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
+            <value>Enter a number between 0 and the total number of babies delivered</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:label">
+            <value>How many of the babies are alive?</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries:label">
+            <value>Number of Deliveries</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/delivery_outcomes/child/child_document_creation:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_death_before_after_birth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_death_before_after_birth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_death_before_after_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/household_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/intro_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/phone_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/EDD:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child_data_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/multiple_child_data_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <delivery_outcomes delimiter="#" id="delivery_outcomes" prefix="J1!delivery_outcomes!" version="2019-04-25 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+              <EDD/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <patient_id/>
+          <client_name/>
+          <client_date_of_birth/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <age_days_display/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <client_EDD/>
+          <week/>
+          <month/>
+          <client_information>
+            <intro_note/>
+            <household_note/>
+            <phone_note/>
+          </client_information>
+          <confirm_delivery>
+            <did_deliver/>
+          </confirm_delivery>
+          <number_deliveries>
+            <check_multiple_deliveries/>
+            <num_babies_delivered/>
+            <live_birth/>
+            <num_live_births/>
+          </number_deliveries>
+          <child_death_count/>
+          <child_death_data_count/>
+          <child_death_data jr:template="">
+            <child_death_before_after_birth/>
+            <child_date_of_death/>
+            <miscarriage_or_stillbirth/>
+          </child_death_data>
+          <child_repeat_count/>
+          <intro_data_capture>
+            <child_data_note/>
+            <multiple_child_data_note/>
+          </intro_data_capture>
+          <child_count/>
+          <child jr:template="">
+            <child_document_creation/>
+          </child>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </delivery_outcomes>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/delivery_outcomes/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/name" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/EDD" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/name" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/sex" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/date_of_birth" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/delivery_outcomes/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/delivery_outcomes/client_name" type="string"/>
+      <bind calculate="../inputs/contact/date_of_birth" nodeset="/delivery_outcomes/client_date_of_birth" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /delivery_outcomes/client_date_of_birth ))" nodeset="/delivery_outcomes/age_days" type="string"/>
+      <bind calculate="int(( /delivery_outcomes/age_days  - ( /delivery_outcomes/age_years  * 12 * 30)) div 30,0)" nodeset="/delivery_outcomes/age_months" type="string"/>
+      <bind calculate="int( /delivery_outcomes/age_days  div (30 *12),0)" nodeset="/delivery_outcomes/age_years" type="string"/>
+      <bind calculate=" /delivery_outcomes/age_days  - ( /delivery_outcomes/age_months  * 30) - ( /delivery_outcomes/age_years  *12*30)" nodeset="/delivery_outcomes/age_days_display" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/delivery_outcomes/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/delivery_outcomes/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/delivery_outcomes/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/delivery_outcomes/phone" type="string"/>
+      <bind calculate="today()" nodeset="/delivery_outcomes/client_EDD" type="string"/>
+      <bind calculate="7" nodeset="/delivery_outcomes/week" type="string"/>
+      <bind calculate="30" nodeset="/delivery_outcomes/month" type="string"/>
+      <bind nodeset="/delivery_outcomes/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/confirm_delivery/did_deliver" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/number_deliveries" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
+      <bind nodeset="/delivery_outcomes/number_deliveries/check_multiple_deliveries" required="true()" type="select1"/>
+      <bind constraint="2 &lt;= . and . &lt;= 4" jr:constraintMsg="jr:itext('/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')" nodeset="/delivery_outcomes/number_deliveries/num_babies_delivered" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
+      <bind nodeset="/delivery_outcomes/number_deliveries/live_birth" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" required="true()" type="select1"/>
+      <bind constraint="0 &lt;= . and . &lt;=  /delivery_outcomes/number_deliveries/num_babies_delivered " jr:constraintMsg="jr:itext('/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg')" nodeset="/delivery_outcomes/number_deliveries/num_live_births" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
+      <bind calculate="if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),
+ 0,
+ if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;no&quot;),
+ 1,
+  /delivery_outcomes/number_deliveries/num_babies_delivered  -  /delivery_outcomes/number_deliveries/num_live_births ))" nodeset="/delivery_outcomes/child_death_count" type="string"/>
+      <bind calculate=" /delivery_outcomes/child_death_count " nodeset="/delivery_outcomes/child_death_data_count" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/child_death_data" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_death_count  &gt; 0"/>
+      <bind nodeset="/delivery_outcomes/child_death_data/child_death_before_after_birth" required="true()" type="select1"/>
+      <bind constraint="(decimal-date-time(today()) - ( /delivery_outcomes/month  * 6)) &lt;= decimal-date-time(.) and decimal-date-time(.) &lt;= decimal-date-time(today())" jr:constraintMsg="jr:itext('/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')" nodeset="/delivery_outcomes/child_death_data/child_date_of_death" relevant="selected( /delivery_outcomes/child_death_data/child_death_before_after_birth ,&quot;no&quot;)" required="true()" type="date"/>
+      <bind calculate="if((decimal-date-time( /delivery_outcomes/client_EDD ) - decimal-date-time( /delivery_outcomes/child_death_data/child_date_of_death )) &gt; ( /delivery_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/delivery_outcomes/child_death_data/miscarriage_or_stillbirth" type="string"/>
+      <bind calculate="if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),1,if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;no&quot;),0, /delivery_outcomes/number_deliveries/num_live_births ))" nodeset="/delivery_outcomes/child_repeat_count" type="string"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/child_data_note" readonly="true()" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" type="string"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/multiple_child_data_note" readonly="true()" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" type="string"/>
+      <bind calculate=" /delivery_outcomes/child_repeat_count " nodeset="/delivery_outcomes/child_count" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/child" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/delivery_outcomes/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="hidden" ref="/delivery_outcomes/inputs">
+      <group ref="/delivery_outcomes/inputs/user">
+        <input ref="/delivery_outcomes/inputs/user/contact_id">
+          <label ref="jr:itext('/delivery_outcomes/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/delivery_outcomes/inputs/user/facility_id">
+          <label ref="jr:itext('/delivery_outcomes/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/delivery_outcomes/inputs/user/name">
+          <label ref="jr:itext('/delivery_outcomes/inputs/user/name:label')"/>
+        </input>
+        <input ref="/delivery_outcomes/inputs/user/EDD"/>
+      </group>
+      <group ref="/delivery_outcomes/inputs/contact">
+        <input ref="/delivery_outcomes/inputs/contact/_id"/>
+        <input ref="/delivery_outcomes/inputs/contact/name"/>
+        <input ref="/delivery_outcomes/inputs/contact/sex"/>
+        <input ref="/delivery_outcomes/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/client_information">
+      <label ref="jr:itext('/delivery_outcomes/client_information:label')"/>
+      <input ref="/delivery_outcomes/client_information/intro_note">
+        <label ref="jr:itext('/delivery_outcomes/client_information/intro_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/client_information/household_note">
+        <label ref="jr:itext('/delivery_outcomes/client_information/household_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/client_information/phone_note">
+        <label ref="jr:itext('/delivery_outcomes/client_information/phone_note:label')"/>
+      </input>
+    </group>
+    <group ref="/delivery_outcomes/confirm_delivery">
+      <label ref="jr:itext('/delivery_outcomes/confirm_delivery:label')"/>
+      <select1 ref="/delivery_outcomes/confirm_delivery/did_deliver">
+        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/number_deliveries">
+      <label ref="jr:itext('/delivery_outcomes/number_deliveries:label')"/>
+      <select1 ref="/delivery_outcomes/number_deliveries/check_multiple_deliveries">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label')"/>
+          <value>one</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label')"/>
+          <value>more</value>
+        </item>
+      </select1>
+      <input ref="/delivery_outcomes/number_deliveries/num_babies_delivered">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/num_babies_delivered:label')"/>
+      </input>
+      <select1 ref="/delivery_outcomes/number_deliveries/live_birth">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/delivery_outcomes/number_deliveries/num_live_births">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/num_live_births:label')"/>
+      </input>
+    </group>
+    <group ref="/delivery_outcomes/child_death_data">
+      <label ref="jr:itext('/delivery_outcomes/child_death_data:label')"/>
+      <repeat appearance="field-list" jr:count=" /delivery_outcomes/child_death_data_count " nodeset="/delivery_outcomes/child_death_data">
+        <select1 ref="/delivery_outcomes/child_death_data/child_death_before_after_birth">
+          <label ref="jr:itext('/delivery_outcomes/child_death_data/child_death_before_after_birth:label')"/>
+          <item>
+            <label ref="jr:itext('/delivery_outcomes/child_death_data/child_death_before_after_birth/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/delivery_outcomes/child_death_data/child_death_before_after_birth/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/delivery_outcomes/child_death_data/child_date_of_death">
+          <label ref="jr:itext('/delivery_outcomes/child_death_data/child_date_of_death:label')"/>
+        </input>
+      </repeat>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/intro_data_capture">
+      <label ref="jr:itext('/delivery_outcomes/intro_data_capture:label')"/>
+      <input ref="/delivery_outcomes/intro_data_capture/child_data_note">
+        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child_data_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/intro_data_capture/multiple_child_data_note">
+        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/multiple_child_data_note:label')"/>
+      </input>
+    </group>
+    <group ref="/delivery_outcomes/child">
+      <label ref="jr:itext('/delivery_outcomes/child:label')"/>
+      <repeat appearance="field-list" jr:count=" /delivery_outcomes/child_count " nodeset="/delivery_outcomes/child">
+        <group ref="/delivery_outcomes/child/child_document_creation">
+          <label ref="jr:itext('/delivery_outcomes/child/child_document_creation:label')"/>
+        </group>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>
