@@ -21,7 +21,6 @@ CREATE MATERIALIZED VIEW useview_household AS
     doc ->> 'number_hh_members' AS number_hh_members,
     doc #>> '{meta,created_by}' AS created_by,
     doc #>> '{meta,created_by_person_uuid}' AS chv_uuid,
-    doc #>> '{meta,created_by_place_uuid}' AS created_by_place_uuid,
     doc ->> 'type' AS type,
     to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date
   FROM 

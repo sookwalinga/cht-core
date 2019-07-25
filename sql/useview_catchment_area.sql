@@ -13,7 +13,7 @@ CREATE MATERIALIZED VIEW useview_catchment_area AS
     doc #>> '{parent,_id}' AS supervisory_area_uuid,
     doc ->> 'shehia' AS shehia,
     doc #>> '{contact,_id}' AS chv_uuid,
-    doc ->> 'imported_date' AS imported_date,
+    to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
     to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date
   FROM 
     couchdb	

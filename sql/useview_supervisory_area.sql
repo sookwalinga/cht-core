@@ -16,7 +16,7 @@ CREATE MATERIALIZED VIEW useview_supervisory_area AS
     doc #>> '{contact,phone}' AS supervisor_phone,
     to_timestamp((NULLIF(doc #>> '{contact,reported_date}', '')::bigint / 1000)::double precision) AS supervisor_reported_date,
     doc ->> 'district' AS district,
-    doc ->> 'imported_date' AS imported_date,
+    to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
     to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date
   FROM 
     couchdb	
