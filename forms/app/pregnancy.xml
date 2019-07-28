@@ -101,6 +101,34 @@
           <text id="/pregnancy/anc_visit/rch_card/is_rch_card_available:label">
             <value>Is your RCH card available?</value>
           </text>
+          <text id="/pregnancy/birth_plan/labor_signs/early_signs_of_labor:label">
+            <value>Now we will discuss early signs of labor. Go through each sign with the mother and indicate why it's important to get to the facility as early as possible:
+ § Nesting - sudden spurt of energy
+ § Shivering - Even when not cold 
+ § Lightening - This process makes you feel "lighter". Lightening may cause a feeling of pressure on your bladder, leading to more trips to the bathroom
+ § Diarrhea
+ § Lower back ache
+ § Loss of mucus plug - Mucus may be tinged with blood and, for this reason, is often called a "bloody show.
+ § Labor Contractions - Strong and regular contractions (usually about 3-5 minutes apart) are often a sign you are in labor.</value>
+          </text>
+          <text id="/pregnancy/birth_plan/labor_signs:label">
+            <value>Early signs of labor</value>
+          </text>
+          <text id="/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label">
+            <value>Explain the importance of savings for transport to the health facility, other costs associated with her care and delivery, and especially in case of an emergency. For example, you can keep a piggy bank. Or, you can use mobile money. Or, you can join a savings group.</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transfusion_and_backup/backup_person:label">
+            <value>Prepare the person who will stay in the home to take care of other children while you are at the hospital.</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label">
+            <value>In case of any blood transfusion, prepare at least two blood donors.</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transport/prepare_transport:label">
+            <value>It's important to have a plan for how you will get to the health facility to deliver. Explain that you can connect the woman with a driver who can transport her to the health facility quickly once labor begins.</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transport/taxi_phones_chv_note:label">
+            <value>Provide the mother with phone number(s) for taxi drivers and the prices for health facilities.</value>
+          </text>
           <text id="/pregnancy/danger_signs/danger_sign_abdominal_pain/no:label">
             <value>No</value>
           </text>
@@ -178,6 +206,57 @@
           </text>
           <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/yes:label">
             <value>Yes</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/age_and_dob/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/age_and_dob/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/age_and_dob:label">
+            <value>Your DOB is <output value=" /pregnancy/date_of_birth_c "/> and age is <output value=" /pregnancy/age_in_years "/>. Is this correct ?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/home:label">
+            <value>Home (mother's or other's)</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/hospital:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/local_health_facility:label">
+            <value>Local health facility/clinic</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location:label">
+            <value>Where did you deliver you last child?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/edit_dob:label">
+            <value>Edit the client's DOB or age after completing this form.</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility:label">
+            <value>Encourage mother if delivered at local health facility or hospital</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant:label">
+            <value>Is this the first time you have been pregnant?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/important_of_facility_delivery:label">
+            <value>It is important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:jr:constraintMsg">
+            <value>Count of deliveries should be between 0 and 20.</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:label">
+            <value>How many previous deliveries did you have?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance:label">
+            <value>Importance of Facility Delivery</value>
           </text>
           <text id="/pregnancy/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
@@ -466,6 +545,39 @@ Have you experienced:</value>
           <text id="/pregnancy/anc_visit:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy/birth_plan/labor_signs/early_signs_of_labor:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/labor_signs:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/savings:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transfusion_and_backup/backup_person:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transfusion_and_backup:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transport/prepare_transport:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transport/taxi_phones_chv_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transport:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/birth_plan:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy/danger_signs/danger_sign_abdominal_pain/no:label">
             <value>Hapana</value>
           </text>
@@ -543,6 +655,57 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/yes:label">
             <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/age_and_dob/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/age_and_dob/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/age_and_dob:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/home:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/hospital:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/local_health_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location/other:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/delivery_location:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/edit_dob:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/important_of_facility_delivery:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance:label">
+            <value>-</value>
           </text>
           <text id="/pregnancy/inputs/contact/_id:label">
             <value>-</value>
@@ -849,6 +1012,31 @@ Have you experienced:</value>
             <anc_visit_count_zero/>
             <attend_anc_visit_note/>
           </anc_screening_and_counseling>
+          <facility_delivery_importance>
+            <age_and_dob/>
+            <edit_dob/>
+            <first_time_pregnant/>
+            <previous_deliveries/>
+            <delivery_location/>
+            <important_of_facility_delivery/>
+            <encourage_mother_if_delivered_at_facility/>
+          </facility_delivery_importance>
+          <birth_plan>
+            <labor_signs>
+              <early_signs_of_labor/>
+            </labor_signs>
+            <savings>
+              <importance_of_saving_chv_note/>
+            </savings>
+            <transfusion_and_backup>
+              <blood_transfusion/>
+              <backup_person/>
+            </transfusion_and_backup>
+            <transport>
+              <prepare_transport/>
+              <taxi_phones_chv_note/>
+            </transport>
+          </birth_plan>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -948,6 +1136,21 @@ Have you experienced:</value>
       <bind constraint=". &gt;= 0 and . &lt;= 8" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/anc_screening_count:jr:constraintMsg')" nodeset="/pregnancy/anc_screening_and_counseling/anc_screening_count" required="true()" type="int"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" relevant="string-length( /pregnancy/anc_screening_and_counseling/anc_screening_count ) != 0 and  /pregnancy/anc_screening_and_counseling/anc_screening_count  = 0" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note" readonly="true()" relevant="string-length( /pregnancy/anc_screening_and_counseling/anc_screening_count ) != 0 and  /pregnancy/anc_screening_and_counseling/anc_screening_count  = 0" type="string"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/age_and_dob" type="select1"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/edit_dob" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/age_and_dob ,'no')" type="string"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/first_time_pregnant" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 20" jr:constraintMsg="jr:itext('/pregnancy/facility_delivery_importance/previous_deliveries:jr:constraintMsg')" nodeset="/pregnancy/facility_delivery_importance/previous_deliveries" relevant="selected( /pregnancy/facility_delivery_importance/first_time_pregnant ,'no')" required="true()" type="int"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/delivery_location" relevant="selected( /pregnancy/facility_delivery_importance/first_time_pregnant ,'no')" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/important_of_facility_delivery" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'home') or selected( /pregnancy/facility_delivery_importance/delivery_location ,'other')" type="string"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'local_health_facility') or selected( /pregnancy/facility_delivery_importance/delivery_location ,'hospital')" type="string"/>
+      <bind nodeset="/pregnancy/birth_plan" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/birth_plan/labor_signs/early_signs_of_labor" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/birth_plan/savings/importance_of_saving_chv_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/birth_plan/transfusion_and_backup/backup_person" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/birth_plan/transport/prepare_transport" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/birth_plan/transport/taxi_phones_chv_note" readonly="true()" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -1379,6 +1582,91 @@ Have you experienced:</value>
       <input ref="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note">
         <label ref="jr:itext('/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label')"/>
       </input>
+    </group>
+    <group appearance="field-list" ref="/pregnancy/facility_delivery_importance">
+      <label ref="jr:itext('/pregnancy/facility_delivery_importance:label')"/>
+      <select1 ref="/pregnancy/facility_delivery_importance/age_and_dob">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/age_and_dob:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/age_and_dob/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/age_and_dob/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/facility_delivery_importance/edit_dob">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/edit_dob:label')"/>
+      </input>
+      <select1 ref="/pregnancy/facility_delivery_importance/first_time_pregnant">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/first_time_pregnant:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/first_time_pregnant/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/first_time_pregnant/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/facility_delivery_importance/previous_deliveries">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/previous_deliveries:label')"/>
+      </input>
+      <select1 ref="/pregnancy/facility_delivery_importance/delivery_location">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/delivery_location:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/delivery_location/home:label')"/>
+          <value>home</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/delivery_location/local_health_facility:label')"/>
+          <value>local_health_facility</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/delivery_location/hospital:label')"/>
+          <value>hospital</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/delivery_location/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/facility_delivery_importance/important_of_facility_delivery">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/important_of_facility_delivery:label')"/>
+      </input>
+      <input ref="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility:label')"/>
+      </input>
+    </group>
+    <group ref="/pregnancy/birth_plan">
+      <group appearance="field-list" ref="/pregnancy/birth_plan/labor_signs">
+        <label ref="jr:itext('/pregnancy/birth_plan/labor_signs:label')"/>
+        <input ref="/pregnancy/birth_plan/labor_signs/early_signs_of_labor">
+          <label ref="jr:itext('/pregnancy/birth_plan/labor_signs/early_signs_of_labor:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/birth_plan/savings">
+        <input ref="/pregnancy/birth_plan/savings/importance_of_saving_chv_note">
+          <label ref="jr:itext('/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/birth_plan/transfusion_and_backup">
+        <input ref="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion">
+          <label ref="jr:itext('/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label')"/>
+        </input>
+        <input ref="/pregnancy/birth_plan/transfusion_and_backup/backup_person">
+          <label ref="jr:itext('/pregnancy/birth_plan/transfusion_and_backup/backup_person:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/birth_plan/transport">
+        <input ref="/pregnancy/birth_plan/transport/prepare_transport">
+          <label ref="jr:itext('/pregnancy/birth_plan/transport/prepare_transport:label')"/>
+        </input>
+        <input ref="/pregnancy/birth_plan/transport/taxi_phones_chv_note">
+          <label ref="jr:itext('/pregnancy/birth_plan/transport/taxi_phones_chv_note:label')"/>
+        </input>
+      </group>
     </group>
   </h:body>
 </h:html>
