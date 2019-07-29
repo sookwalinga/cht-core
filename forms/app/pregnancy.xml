@@ -5,12 +5,6 @@
     <model>
       <itext>
         <translation lang="en">
-          <text id="/pregnancy/anc_screening_and_counseling/anc_screening_count:jr:constraintMsg">
-            <value>Please enter a value between 0 and 8</value>
-          </text>
-          <text id="/pregnancy/anc_screening_and_counseling/anc_screening_count:label">
-            <value>How many ANC visits have you attended?</value>
-          </text>
           <text id="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero/afraid_of_specific_service:label">
             <value>Afraid of a specific service provided at ANC</value>
           </text>
@@ -37,6 +31,12 @@
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label">
             <value>EXPLAIN: It's very important that you attend all four visits because life-threatening complications are often only seen at the third or fourth visit.</value>
+          </text>
+          <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg">
+            <value>Please enter a value between 0 and 8</value>
+          </text>
+          <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:label">
+            <value>How many ANC visits have you attended?</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling:label">
             <value>ANC Screening and Counseling</value>
@@ -195,16 +195,16 @@
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
             <value>This woman is experiencing or has experienced an emergency danger sign. Urge the woman and her family to get the woman medical help as the lives of the mother and her baby are potentially in danger.</value>
           </text>
-          <text id="/pregnancy/danger_signs/generated_table_list_label_32:label">
+          <text id="/pregnancy/danger_signs/generated_table_list_label_34:label">
             <value>Now I will ask you some questions about pregnancy danger signs.</value>
           </text>
           <text id="/pregnancy/danger_signs/no_danger_sign_note_to_chv:label">
             <value>An emergency referral condition was NOT identified.</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/no:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/yes:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breast_problem:label">
@@ -289,6 +289,33 @@
           </text>
           <text id="/pregnancy/inputs/user/name:label">
             <value>Name of the logged in user</value>
+          </text>
+          <text id="/pregnancy/llints/malaria_discussion:label">
+            <value>Do you know that you and your child are susceptible to malaria? You and your baby are at most risk of malaria. Malaria will continue to be an important danger throughout your child's early years of life. Malaria can cause :
+•	premature birth – birth before 37 weeks of pregnancy.
+•	low birth weight.
+•	restricted growth of the baby in the womb.
+•	stillbirth.
+•	miscarriage.
+•	death of the mother
+•	anemia
+
+ If you sleep under mosquito net you can protect yourself and your child from the above effects</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/free_mosquito_net:label">
+            <value>You can get a free mosquito net at the health facility.</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/has_mosquito_net/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/has_mosquito_net/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/has_mosquito_net:label">
+            <value>Do you have mosquito net?</value>
+          </text>
+          <text id="/pregnancy/llints:label">
+            <value>LLINTS</value>
           </text>
           <text id="/pregnancy/maternal_nutrition/anemia_risk:label">
             <value>All pregnant women are at risk of anemia. It's very important to take iron and folic acid tablets to prevent anemia during pregnancy and for at least 3 months after your baby's birth. ALL pregnant women need to take iron and folic acid, even if they don't have headache.</value>
@@ -455,6 +482,213 @@
             <value>Continue with the following questions. Indicate if the client has any of the following common pregnancy issues. 
 Have you experienced:</value>
           </text>
+          <text id="/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg">
+            <value>Please enter an amount between Tsh. 100 and Tsh. 300,000</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/amount_paid:label">
+            <value>How much money did you pay for the services?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/consent_for_questions/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/consent_for_questions/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/consent_for_questions:label">
+            <value>I'd like to ask you a few questions about the quality of the services you received last time you went to the health facility. We will anonymously share this information with DHMT or other persons in the MOH so that they can improve the services that are provided. You can choose not to answer any question you don't want to. Is it ok for us to proceed?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/chakechake:label">
+            <value>Chake Chake</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/micheweni:label">
+            <value>Micheweni</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/mkoani:label">
+            <value>Mkoani</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/wete:label">
+            <value>Wete</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba:label">
+            <value>Which district is the health facility located?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/central:label">
+            <value>Central</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/north_a:label">
+            <value>North A</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/north_b:label">
+            <value>North B</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/south:label">
+            <value>South</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/urban:label">
+            <value>Urban</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/west:label">
+            <value>West</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja:label">
+            <value>Which district is the health facility located?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/facility_location/pemba:label">
+            <value>Pemba</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/facility_location/unguja:label">
+            <value>Unguja</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/facility_location:label">
+            <value>Where is the health facility located?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/health_facility_name:label">
+            <value>Enter the name of the health facility:</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received/no:label">
+            <value>No, I didn't get an service</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received/yes:label">
+            <value>Yes, I got all the services at the faciltiy</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received/yes_but:label">
+            <value>Yes, I got some services but also had to go to another place as well for tests/invenstigations/other services.</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received:label">
+            <value>Did you get the services at the facility you went to ?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/closed_facility:label">
+            <value>The facility was closed</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/no_money:label">
+            <value>I had no money to pay for the services</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/no_reagents:label">
+            <value>There was no regeants/tests at the faciltiy</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/no_staff:label">
+            <value>There was no staff</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/waiting_too_long:label">
+            <value>The waiting time was too long. I decided to come back home.</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason:label">
+            <value>Why did you not get the services?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/blood_sugar_test:label">
+            <value>Blood Sugar Test</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/hb_test:label">
+            <value>Hb Test</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/other:label">
+            <value>other</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/rch_card:label">
+            <value>RCH Card</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/service_fee:label">
+            <value>Visit/Service fee</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/urine_analysis:label">
+            <value>Urine Analysis</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for:label">
+            <value>What did you pay for?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit:label">
+            <value>Would you recommend your sister or relative to attend the same clinic for ANC?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/bp_reading:label">
+            <value>Blood pressure reading</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/bp_test:label">
+            <value>Blood group test</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/hb_test:label">
+            <value>Hb Test</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/pregnancy_supplements:label">
+            <value>Pregnancy supplements/FeFol</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/ultrasound:label">
+            <value>Ultrasound</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/urine_test:label">
+            <value>Urine Test (Urinalysis)</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility:label">
+            <value>What did you go to the 2nd facility/pharmacy for?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/service_pay/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/service_pay/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/service_pay:label">
+            <value>Did you pay for any service?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/blood_pressure:label">
+            <value>Blood pressure measured</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/blood_test:label">
+            <value>Blood Test</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/danger_sign_education:label">
+            <value>Danger sign education</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/discusses_birth_plan:label">
+            <value>Discussed birth plan</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/discusses_postpartum_family_planning:label">
+            <value>Discusses postpartum family plan</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/hiv_test:label">
+            <value>HIV Test</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/iron_folate_mabendazole:label">
+            <value>Iron, folate, and mabendazole tablets</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/llitn:label">
+            <value>LLITN</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/tt_vaccine:label">
+            <value>TT Vaccine</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/urine_test:label">
+            <value>Urine Test</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received:label">
+            <value>During your most recent ANC visit, which services did you receive?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period/ok:label">
+            <value>Ok</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period/short:label">
+            <value>Short</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period/too_long:label">
+            <value>Too long</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period:label">
+            <value>How long was the wait?</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care:label">
+            <value>Quality of Survey Care</value>
+          </text>
           <text id="/pregnancy/visit_introduction/delivery_form_note:label">
             <value>Fill out the delivery form</value>
           </text>
@@ -484,12 +718,6 @@ Have you experienced:</value>
           </text>
         </translation>
         <translation lang="sw">
-          <text id="/pregnancy/anc_screening_and_counseling/anc_screening_count:jr:constraintMsg">
-            <value>-</value>
-          </text>
-          <text id="/pregnancy/anc_screening_and_counseling/anc_screening_count:label">
-            <value>-</value>
-          </text>
           <text id="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero/afraid_of_specific_service:label">
             <value>-</value>
           </text>
@@ -515,6 +743,12 @@ Have you experienced:</value>
             <value>-</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling:label">
@@ -688,16 +922,16 @@ Have you experienced:</value>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/generated_table_list_label_32:label">
+          <text id="/pregnancy/danger_signs/generated_table_list_label_34:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/danger_signs/no_danger_sign_note_to_chv:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/no:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/yes:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breast_problem:label">
@@ -787,6 +1021,9 @@ Have you experienced:</value>
           <text id="/pregnancy/inputs/num_pregnancy_visits:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy/inputs/num_previous_anc_visits:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy/inputs/user/contact_id:label">
             <value>-</value>
           </text>
@@ -800,6 +1037,27 @@ Have you experienced:</value>
             <value>-</value>
           </text>
           <text id="/pregnancy/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/llints/malaria_discussion:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/free_mosquito_net:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/has_mosquito_net/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/has_mosquito_net/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn/has_mosquito_net:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/llints/mosquito_net_qn:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/llints:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/maternal_nutrition/anemia_risk:label">
@@ -964,6 +1222,213 @@ Have you experienced:</value>
           <text id="/pregnancy/pregnancy_issues_group:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/amount_paid:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/consent_for_questions/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/consent_for_questions/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/consent_for_questions:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/chakechake:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/micheweni:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/mkoani:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba/wete:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_pemba:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/central:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/north_a:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/north_b:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/south:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/urban:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja/west:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/district_location_unguja:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/facility_location/pemba:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/facility_location/unguja:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/facility_location:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/health_facility_name:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received/no:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received/yes_but:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/is_service_received:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/closed_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/no_money:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/no_reagents:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/no_staff:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/other:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason/waiting_too_long:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/no_service_reason:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/blood_sugar_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/hb_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/other:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/rch_card:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/service_fee:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for/urine_analysis:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/paid_for:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/bp_reading:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/bp_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/hb_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/other:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/pregnancy_supplements:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/ultrasound:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility/urine_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/second_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/service_pay/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/service_pay/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/service_pay:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/blood_pressure:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/blood_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/danger_sign_education:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/discusses_birth_plan:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/discusses_postpartum_family_planning:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/hiv_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/iron_folate_mabendazole:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/llitn:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/tt_vaccine:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received/urine_test:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/services_received:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period/ok:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period/short:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period/too_long:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care/wait_period:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/quality_of_survery_care:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy/visit_introduction/delivery_form_note:label">
             <value>-</value>
           </text>
@@ -1008,6 +1473,7 @@ Have you experienced:</value>
               </location>
             </meta>
             <num_pregnancy_visits/>
+            <num_previous_anc_visits/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -1021,6 +1487,7 @@ Have you experienced:</value>
           </inputs>
           <client_name/>
           <n_pregnancy_visits/>
+          <n_previous_anc_visits/>
           <patient_id/>
           <created_by/>
           <created_by_person_uuid/>
@@ -1037,8 +1504,8 @@ Have you experienced:</value>
             <sympathy_note/>
           </visit_introduction>
           <danger_signs>
-            <generated_table_list_label_32/>
-            <reserved_name_for_field_list_labels_33/>
+            <generated_table_list_label_34/>
+            <reserved_name_for_field_list_labels_35/>
             <danger_sign_vaginal_bleeding/>
             <danger_sign_convulsions/>
             <danger_sign_unconsciouss/>
@@ -1091,7 +1558,7 @@ Have you experienced:</value>
             </rch_card>
           </anc_visit>
           <anc_screening_and_counseling>
-            <anc_screening_count/>
+            <num_anc_visits/>
             <anc_visit_count_zero/>
             <attend_anc_visit_note/>
           </anc_screening_and_counseling>
@@ -1135,6 +1602,29 @@ Have you experienced:</value>
             <avoid_cahrcoal_and_soil/>
             <anemia_risk/>
           </maternal_nutrition>
+          <llints>
+            <malaria_discussion/>
+            <mosquito_net_qn>
+              <has_mosquito_net/>
+              <free_mosquito_net/>
+            </mosquito_net_qn>
+          </llints>
+          <quality_of_survery_care>
+            <consent_for_questions/>
+            <facility_location/>
+            <district_location_unguja/>
+            <district_location_pemba/>
+            <health_facility_name/>
+            <is_service_received/>
+            <no_service_reason/>
+            <second_facility/>
+            <services_received/>
+            <service_pay/>
+            <amount_paid/>
+            <paid_for/>
+            <wait_period/>
+            <recommendation_for_anc_visit/>
+          </quality_of_survery_care>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -1143,6 +1633,7 @@ Have you experienced:</value>
       <instance id="contact-summary"/>
       <bind nodeset="/pregnancy/inputs" relevant="false()"/>
       <bind nodeset="/pregnancy/inputs/num_pregnancy_visits" type="string"/>
+      <bind nodeset="/pregnancy/inputs/num_previous_anc_visits" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/contact_id" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/facility_id" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/name" type="string"/>
@@ -1151,6 +1642,7 @@ Have you experienced:</value>
       <bind nodeset="/pregnancy/inputs/contact/date_of_birth" type="string"/>
       <bind calculate="../inputs/contact/name" nodeset="/pregnancy/client_name" type="string"/>
       <bind calculate="2" nodeset="/pregnancy/n_pregnancy_visits" type="string"/>
+      <bind calculate="0" nodeset="/pregnancy/n_previous_anc_visits" type="string"/>
       <bind calculate="../inputs/contact/_id" nodeset="/pregnancy/patient_id" type="string"/>
       <bind calculate="../inputs/user/name" nodeset="/pregnancy/created_by" type="string"/>
       <bind calculate="../inputs/user/contact_id" nodeset="/pregnancy/created_by_person_uuid" type="string"/>
@@ -1165,8 +1657,8 @@ Have you experienced:</value>
       <bind nodeset="/pregnancy/visit_introduction/viable_pregnancy" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/visit_introduction/sympathy_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/pregnancy/danger_signs" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
-      <bind nodeset="/pregnancy/danger_signs/generated_table_list_label_32" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/generated_table_list_label_34" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_vaginal_bleeding" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_convulsions" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_unconsciouss" required="true()" type="select1"/>
@@ -1231,9 +1723,9 @@ Have you experienced:</value>
       <bind calculate="if(selected( /pregnancy/anc_visit/rch_card/is_delivery_date_written ,'yes'),40 - round((decimal-date-time( /pregnancy/anc_visit/rch_card/estimated_delivery_date_input ) - decimal-date-time(today())) div  /pregnancy/week ), /pregnancy/anc_visit/rch_card/estimated_months_pregnant *4)" nodeset="/pregnancy/anc_visit/rch_card/gestation_in_weeks" type="string"/>
       <bind calculate="if(selected( /pregnancy/anc_visit/rch_card/is_delivery_date_written ,'yes'),  /pregnancy/anc_visit/rch_card/estimated_delivery_date_input ,date-time(decimal-date-time(today())+ (40 -  /pregnancy/anc_visit/rch_card/gestation_in_weeks  ) *  /pregnancy/week  ))" nodeset="/pregnancy/anc_visit/rch_card/EDD" type="string"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
-      <bind constraint=". &gt;= 0 and . &lt;= 8" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/anc_screening_count:jr:constraintMsg')" nodeset="/pregnancy/anc_screening_and_counseling/anc_screening_count" required="true()" type="int"/>
-      <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" relevant="string-length( /pregnancy/anc_screening_and_counseling/anc_screening_count ) != 0 and  /pregnancy/anc_screening_and_counseling/anc_screening_count  = 0" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note" readonly="true()" relevant="string-length( /pregnancy/anc_screening_and_counseling/anc_screening_count ) != 0 and  /pregnancy/anc_screening_and_counseling/anc_screening_count  = 0" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 8" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg')" nodeset="/pregnancy/anc_screening_and_counseling/num_anc_visits" required="true()" type="int"/>
+      <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" relevant="string-length( /pregnancy/anc_screening_and_counseling/num_anc_visits ) != 0 and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0" required="true()" type="select"/>
+      <bind nodeset="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note" readonly="true()" relevant="string-length( /pregnancy/anc_screening_and_counseling/num_anc_visits ) != 0 and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0" type="string"/>
       <bind nodeset="/pregnancy/facility_delivery_importance" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/facility_delivery_importance/age_and_dob" type="select1"/>
       <bind nodeset="/pregnancy/facility_delivery_importance/edit_dob" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/age_and_dob ,'no')" type="string"/>
@@ -1262,12 +1754,32 @@ Have you experienced:</value>
       <bind nodeset="/pregnancy/maternal_nutrition/avoid_tea_coffee" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/avoid_cahrcoal_and_soil" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/anemia_risk" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/llints" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/llints/malaria_discussion" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/llints/mosquito_net_qn/has_mosquito_net" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/llints/mosquito_net_qn/free_mosquito_net" readonly="true()" relevant="selected( /pregnancy/llints/mosquito_net_qn/has_mosquito_net ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_previous_anc_visits  = 0 and  /pregnancy/anc_screening_and_counseling/num_anc_visits  &gt; 0"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/consent_for_questions" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/facility_location" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/district_location_unguja" relevant="selected( /pregnancy/quality_of_survery_care/facility_location ,&quot;unguja&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/district_location_pemba" relevant="selected( /pregnancy/quality_of_survery_care/facility_location ,&quot;pemba&quot;)" required="true()" type="select1"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" nodeset="/pregnancy/quality_of_survery_care/health_facility_name" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="string"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/is_service_received" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/no_service_reason" relevant="selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;) or selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;no&quot;)" required="true()" type="select"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/second_facility" relevant="selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;)" required="true()" type="select"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/services_received" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;) and (selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;) or selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes&quot;))" required="true()" type="select"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/service_pay" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 100 and . &lt;= 300000" jr:constraintMsg="jr:itext('/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg')" nodeset="/pregnancy/quality_of_survery_care/amount_paid" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()" type="int"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/paid_for" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()" type="select"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/wait_period" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">
     <group ref="/pregnancy/inputs">
       <input ref="/pregnancy/inputs/num_pregnancy_visits"/>
+      <input ref="/pregnancy/inputs/num_previous_anc_visits"/>
       <group ref="/pregnancy/inputs/user">
         <input ref="/pregnancy/inputs/user/contact_id">
           <label ref="jr:itext('/pregnancy/inputs/user/contact_id:label')"/>
@@ -1319,17 +1831,17 @@ Have you experienced:</value>
       </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/danger_signs">
-      <input ref="/pregnancy/danger_signs/generated_table_list_label_32">
-        <label ref="jr:itext('/pregnancy/danger_signs/generated_table_list_label_32:label')"/>
+      <input ref="/pregnancy/danger_signs/generated_table_list_label_34">
+        <label ref="jr:itext('/pregnancy/danger_signs/generated_table_list_label_34:label')"/>
       </input>
-      <select1 appearance="label" ref="/pregnancy/danger_signs/reserved_name_for_field_list_labels_33">
+      <select1 appearance="label" ref="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35">
         <label></label>
         <item>
-          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/yes:label')"/>
+          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_33/no:label')"/>
+          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -1656,10 +2168,10 @@ Have you experienced:</value>
     </group>
     <group appearance="field-list" ref="/pregnancy/anc_screening_and_counseling">
       <label ref="jr:itext('/pregnancy/anc_screening_and_counseling:label')"/>
-      <input ref="/pregnancy/anc_screening_and_counseling/anc_screening_count">
-        <label ref="jr:itext('/pregnancy/anc_screening_and_counseling/anc_screening_count:label')"/>
+      <input ref="/pregnancy/anc_screening_and_counseling/num_anc_visits">
+        <label ref="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:label')"/>
       </input>
-      <select1 ref="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero">
+      <select ref="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero">
         <label ref="jr:itext('/pregnancy/anc_screening_and_counseling/anc_visit_count_zero:label')"/>
         <item>
           <label ref="jr:itext('/pregnancy/anc_screening_and_counseling/anc_visit_count_zero/not_important_to_her:label')"/>
@@ -1689,7 +2201,7 @@ Have you experienced:</value>
           <label ref="jr:itext('/pregnancy/anc_screening_and_counseling/anc_visit_count_zero/lack_of_privary:label')"/>
           <value>lack_of_privary</value>
         </item>
-      </select1>
+      </select>
       <input ref="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note">
         <label ref="jr:itext('/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label')"/>
       </input>
@@ -1817,6 +2329,285 @@ Have you experienced:</value>
       <input ref="/pregnancy/maternal_nutrition/anemia_risk">
         <label ref="jr:itext('/pregnancy/maternal_nutrition/anemia_risk:label')"/>
       </input>
+    </group>
+    <group ref="/pregnancy/llints">
+      <label ref="jr:itext('/pregnancy/llints:label')"/>
+      <input ref="/pregnancy/llints/malaria_discussion">
+        <label ref="jr:itext('/pregnancy/llints/malaria_discussion:label')"/>
+      </input>
+      <group appearance="field-list" ref="/pregnancy/llints/mosquito_net_qn">
+        <select1 ref="/pregnancy/llints/mosquito_net_qn/has_mosquito_net">
+          <label ref="jr:itext('/pregnancy/llints/mosquito_net_qn/has_mosquito_net:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/llints/mosquito_net_qn/has_mosquito_net/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/llints/mosquito_net_qn/has_mosquito_net/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/pregnancy/llints/mosquito_net_qn/free_mosquito_net">
+          <label ref="jr:itext('/pregnancy/llints/mosquito_net_qn/free_mosquito_net:label')"/>
+        </input>
+      </group>
+    </group>
+    <group ref="/pregnancy/quality_of_survery_care">
+      <label ref="jr:itext('/pregnancy/quality_of_survery_care:label')"/>
+      <select1 ref="/pregnancy/quality_of_survery_care/consent_for_questions">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/consent_for_questions:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/consent_for_questions/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/consent_for_questions/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/quality_of_survery_care/facility_location">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/facility_location:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/facility_location/unguja:label')"/>
+          <value>unguja</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/facility_location/pemba:label')"/>
+          <value>pemba</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/quality_of_survery_care/district_location_unguja">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_unguja:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_unguja/urban:label')"/>
+          <value>urban</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_unguja/north_a:label')"/>
+          <value>north_a</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_unguja/north_b:label')"/>
+          <value>north_b</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_unguja/west:label')"/>
+          <value>west</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_unguja/south:label')"/>
+          <value>south</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_unguja/central:label')"/>
+          <value>central</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/quality_of_survery_care/district_location_pemba">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_pemba:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_pemba/mkoani:label')"/>
+          <value>mkoani</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_pemba/chakechake:label')"/>
+          <value>chakechake</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_pemba/micheweni:label')"/>
+          <value>micheweni</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/district_location_pemba/wete:label')"/>
+          <value>wete</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/quality_of_survery_care/health_facility_name">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/health_facility_name:label')"/>
+      </input>
+      <select1 ref="/pregnancy/quality_of_survery_care/is_service_received">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/is_service_received:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/is_service_received/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/is_service_received/yes_but:label')"/>
+          <value>yes_but</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/is_service_received/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/pregnancy/quality_of_survery_care/no_service_reason">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/no_service_reason:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/no_service_reason/no_staff:label')"/>
+          <value>no_staff</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/no_service_reason/closed_facility:label')"/>
+          <value>closed_facility</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/no_service_reason/no_reagents:label')"/>
+          <value>no_reagents</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/no_service_reason/waiting_too_long:label')"/>
+          <value>waiting_too_long</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/no_service_reason/no_money:label')"/>
+          <value>no_money</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/no_service_reason/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <select ref="/pregnancy/quality_of_survery_care/second_facility">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility/pregnancy_supplements:label')"/>
+          <value>pregnancy_supplements</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility/bp_reading:label')"/>
+          <value>bp_reading</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility/hb_test:label')"/>
+          <value>hb_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility/bp_test:label')"/>
+          <value>bp_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility/urine_test:label')"/>
+          <value>urine_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility/ultrasound:label')"/>
+          <value>ultrasound</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/second_facility/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <select ref="/pregnancy/quality_of_survery_care/services_received">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/tt_vaccine:label')"/>
+          <value>tt_vaccine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/iron_folate_mabendazole:label')"/>
+          <value>iron_folate_mabendazole</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/llitn:label')"/>
+          <value>llitn</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/hiv_test:label')"/>
+          <value>hiv_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/blood_pressure:label')"/>
+          <value>blood_pressure</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/urine_test:label')"/>
+          <value>urine_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/blood_test:label')"/>
+          <value>blood_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/danger_sign_education:label')"/>
+          <value>danger_sign_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/discusses_birth_plan:label')"/>
+          <value>discusses_birth_plan</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/services_received/discusses_postpartum_family_planning:label')"/>
+          <value>discusses_postpartum_family_planning</value>
+        </item>
+      </select>
+      <select1 ref="/pregnancy/quality_of_survery_care/service_pay">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/service_pay:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/service_pay/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/service_pay/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/quality_of_survery_care/amount_paid">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/amount_paid:label')"/>
+      </input>
+      <select ref="/pregnancy/quality_of_survery_care/paid_for">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/paid_for:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/paid_for/service_fee:label')"/>
+          <value>service_fee</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/paid_for/hb_test:label')"/>
+          <value>hb_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/paid_for/urine_analysis:label')"/>
+          <value>urine_analysis</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/paid_for/rch_card:label')"/>
+          <value>rch_card</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/paid_for/blood_sugar_test:label')"/>
+          <value>blood_sugar_test</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/paid_for/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <select1 ref="/pregnancy/quality_of_survery_care/wait_period">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/wait_period:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/wait_period/short:label')"/>
+          <value>short</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/wait_period/ok:label')"/>
+          <value>ok</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/wait_period/too_long:label')"/>
+          <value>too_long</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit">
+        <label ref="jr:itext('/pregnancy/quality_of_survery_care/recommendation_for_anc_visit:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/recommendation_for_anc_visit/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/quality_of_survery_care/recommendation_for_anc_visit/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
     </group>
   </h:body>
 </h:html>
