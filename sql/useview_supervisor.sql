@@ -12,8 +12,8 @@ CREATE MATERIALIZED VIEW useview_supervisor AS
     doc ->> 'type' AS type,
     doc ->> 'phone' AS phone,
     doc #>> '{parent,_id}' AS supervisory_area_uuid,
-    to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
-    to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date,
+    TO_TIMESTAMP(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
+    TO_TIMESTAMP((NULLIF(doc ->> 'reported_date', '')::BIGINT / 1000)::DOUBLE PRECISION) AS reported_date,
     doc ->> 'retired' AS retired
   FROM 
 	  couchdb	
