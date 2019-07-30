@@ -26,6 +26,7 @@ module.exports = [
         content.last_visit_date = report.reported_date;
         content.refer_flag_small_baby = extras.getSmallBabyFlag(report);
         content.refer_neonatal_danger_sign_flag = extras.getNeonatalDangerSignFlag(report);
+        content.refer_secondary_neonatal_danger_sign_flag = extras.getSecondaryNeonatalDangerSignFlag(report);
         content.refer_child_danger_sign_flag = extras.getChildDangerSignFlag(report);
         content.refer_muac_flag = extras.getMUACFlag(report);
         content.refer_refer_palm_pallor_flag = extras.getPalmPallorFlag(report);
