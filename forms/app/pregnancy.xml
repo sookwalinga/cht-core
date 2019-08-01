@@ -24,10 +24,10 @@
             <value>Not enough money for transport or paying for services and supplies</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero/not_important_to_her:label">
-            <value>Not important to her</value>
+            <value>Not important to you</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero:label">
-            <value>Ask woman reasons why she has not attended her ANC visits:</value>
+            <value>Why have you not attended any ANC visits?</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label">
             <value>EXPLAIN: It's very important that you attend all four visits because life-threatening complications are often only seen at the third or fourth visit.</value>
@@ -117,17 +117,45 @@
           <text id="/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label">
             <value>Explain the importance of savings for transport to the health facility, other costs associated with her care and delivery, and especially in case of an emergency. For example, you can keep a piggy bank. Or, you can use mobile money. Or, you can join a savings group.</value>
           </text>
+          <text id="/pregnancy/birth_plan/savings:label">
+            <value>Importance of saving</value>
+          </text>
           <text id="/pregnancy/birth_plan/transfusion_and_backup/backup_person:label">
             <value>Prepare the person who will stay in the home to take care of other children while you are at the hospital.</value>
           </text>
           <text id="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label">
             <value>In case of any blood transfusion, prepare at least two blood donors.</value>
           </text>
+          <text id="/pregnancy/birth_plan/transfusion_and_backup:label">
+            <value>Blood transfusion and backup person</value>
+          </text>
           <text id="/pregnancy/birth_plan/transport/prepare_transport:label">
             <value>It's important to have a plan for how you will get to the health facility to deliver. Explain that you can connect the woman with a driver who can transport her to the health facility quickly once labor begins.</value>
           </text>
           <text id="/pregnancy/birth_plan/transport/taxi_phones_chv_note:label">
             <value>Provide the mother with phone number(s) for taxi drivers and the prices for health facilities.</value>
+          </text>
+          <text id="/pregnancy/birth_plan/transport:label">
+            <value>Transportation</value>
+          </text>
+          <text id="/pregnancy/client_information/due_date_note:label">
+            <value>Due date: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/age_years "/> years, <output value=" /pregnancy/age_months "/> months, <output value=" /pregnancy/age_days_display "/> days&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Pregnancy&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/client_information:label">
+            <value>Client Information</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_abdominal_pain/no:label">
             <value>No</value>
@@ -195,16 +223,16 @@
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
             <value>This woman is experiencing or has experienced an emergency danger sign. Urge the woman and her family to get the woman medical help as the lives of the mother and her baby are potentially in danger.</value>
           </text>
-          <text id="/pregnancy/danger_signs/generated_table_list_label_34:label">
+          <text id="/pregnancy/danger_signs/generated_table_list_label_53:label">
             <value>Now I will ask you some questions about pregnancy danger signs.</value>
           </text>
           <text id="/pregnancy/danger_signs/no_danger_sign_note_to_chv:label">
             <value>An emergency referral condition was NOT identified.</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/no:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_54/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/yes:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_54/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breast_problem:label">
@@ -281,6 +309,21 @@
           <text id="/pregnancy/facility_delivery_importance:label">
             <value>Importance of Facility Delivery</value>
           </text>
+          <text id="/pregnancy/group_summary/healthy_note:label">
+            <value>You are doing well and you don't need to go to the health facility urgently at this time. I'll return for another checkup when it's time for the next visit.</value>
+          </text>
+          <text id="/pregnancy/group_summary/needs_referral_danger_signs:label">
+            <value>To address emergency pregnancy danger signs</value>
+          </text>
+          <text id="/pregnancy/group_summary/needs_referral_neonatal_note:label">
+            <value>To address other pregnancy danger signs</value>
+          </text>
+          <text id="/pregnancy/group_summary/needs_referral_note:label">
+            <value>You need to go to the health facility for the following reasons:</value>
+          </text>
+          <text id="/pregnancy/group_summary:label">
+            <value>Visit Summary</value>
+          </text>
           <text id="/pregnancy/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
           </text>
@@ -337,6 +380,237 @@
           </text>
           <text id="/pregnancy/maternal_nutrition:label">
             <value>Maternal Nutriton</value>
+          </text>
+          <text id="/pregnancy/personal_information/can_proceed_with_survey/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/personal_information/can_proceed_with_survey/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/personal_information/can_proceed_with_survey:label">
+            <value>I would like to ask you a few questions that will help us improve the health services provided in your community in the future. You can decide you do not want to answer a question – just let me know if you prefer not to answer. Can we proceed?</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone/decline_to_answer:label">
+            <value>Don't know / Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone:label">
+            <value>Did someone come to your house and register you using a phone during a previous pregnancy?</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/completed_high_school:label">
+            <value>Completed high school (Form 6)</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/incomplete_primary:label">
+            <value>Incomplete/some primary school (KG-Standard 5)</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/incomplete_secondary:label">
+            <value>Incomplete/some secondary school (Form 1-3)</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/more_than_high_school:label">
+            <value>More than high school</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/no_formal_education:label">
+            <value>No formal education/None</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/primary_education:label">
+            <value>Completed primary education (Standard 6)</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/school_level_dont_know_decline:label">
+            <value>Don't know/Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/secondary:label">
+            <value>Completed secondary school (Form 4)</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level:label">
+            <value>What is the highest level of school you attended?</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_completed_high_school:label">
+            <value>Completed high school (Form 6)</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_incomplete_primary:label">
+            <value>Incomplete/some primary school (KG-Standard 5)</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_incomplete_secondary:label">
+            <value>Incomplete/some secondary school (Form 1-3)</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_more_than_high_school:label">
+            <value>More than high school</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_no_formal_education:label">
+            <value>No formal education/None</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_primary_education:label">
+            <value>Completed primary education (Standard 6)</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_school_level_dont_know_decline:label">
+            <value>Don't know / Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_secondary:label">
+            <value>Completed secondary school (Form 4)</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level:label">
+            <value>What is the highest level of school your husband/partner has attended?</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg">
+            <value>Please enter an age between 18 and 90</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/subgroup_partner_age:label">
+            <value>What is your husband/partner's age?</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment/decline_to_answer:label">
+            <value>Don't know / Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment:label">
+            <value>Were you previously/ever enrolled in Safer Deliveries Program?</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/decision_maker_dont_know_decline:label">
+            <value>Don't know / Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/herself:label">
+            <value>You only</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/herself_and_husband:label">
+            <value>You and your husband/partner (or other family member) jointly</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/husband:label">
+            <value>Your husband/partner only</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/other:label">
+            <value>Someone else</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker:label">
+            <value>Who usually makes decisions about your health care? [Primary or ultimate decision-maker]</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/divorced:label">
+            <value>Divorced</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/marital_status_dont_know_decline:label">
+            <value>Don't know/Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/single:label">
+            <value>Single</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/widowed:label">
+            <value>Widowed</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status:label">
+            <value>What is the woman's marital status?</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/msg_for_chv_marital_status:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label">
+            <value>Don't know / Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation:label">
+            <value>Is the client you are attending currently married or living together with a man as if married?</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label">
+            <value>Don't know / Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife:label">
+            <value>Does your (husband/partner) have other wives or does he live with other women as if married?</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg">
+            <value>Please enter a value between 1 and 10.</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/num_wives:label">
+            <value>Including you, in total, how many wives or live-in partners does your partner have?</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/decline_to_answer:label">
+            <value>Don't know / Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together:label">
+            <value>Does the woman's (husband/partner) usually live here with her?</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/other_means:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/bicycle:label">
+            <value>Bicycle</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/boat:label">
+            <value>Boat</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/health_facility_vehicle:label">
+            <value>Health facility vehicle</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/moto:label">
+            <value>Moto</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/private_car:label">
+            <value>Private Car</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/public_bus:label">
+            <value>Public Bus</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/travel_means_dont_know_decline:label">
+            <value>Don't know/Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/walk:label">
+            <value>Walk</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means:label">
+            <value>How do you typically travel from your home to the healthcare facility for routine/non-emergency visits?</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/30_to_1hr:label">
+            <value>30 mins - 1 hr</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/less_than_30:label">
+            <value>less than  30 mins</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/more_than_1hr:label">
+            <value>more than 1 hr</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/travel_time_dont_know_decline:label">
+            <value>Don't know/Decline to answer</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time:label">
+            <value>Typically, how long does it take for you to travel from your home to the nearest healthcare facility for a routine/non-emergency visit?</value>
+          </text>
+          <text id="/pregnancy/personal_information:label">
+            <value>Personal Information</value>
           </text>
           <text id="/pregnancy/pmtct/disclose_hiv_status/no:label">
             <value>No</value>
@@ -416,7 +690,7 @@
             <value>Do you feel the baby moving on a daily basis, at least every six hours?</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note:label">
-            <value>I am referring you to health facility for management.</value>
+            <value>I am referring you to health facility because I have identified that you have danger sign(s)</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant/no:label">
             <value>No</value>
@@ -439,48 +713,51 @@
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor:label">
             <value>Does the client have pallor? Compare your palm with client's palm. If client's palms are paler than yours, this is pallor.</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/blurred_vision:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/blurred_vision:label">
             <value>Blurred vision</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/difficulty_breathing:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/difficulty_breathing:label">
             <value>Difficulty Breathing</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/dizziness:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/dizziness:label">
             <value>Dizziness</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/early_labor:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/early_labor:label">
             <value>Early labor pain before 9 months gestation</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/fatigue:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fatigue:label">
             <value>Fatigue, lethergy</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/fever:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fever:label">
             <value>Fever</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/foul_smelling:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/foul_smelling:label">
             <value>Foul smelling vaginal discharge</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/frontal_headache:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/frontal_headache:label">
             <value>Severe Frontal Headache</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/gastric_pain:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/gastric_pain:label">
             <value>Severe gastric pain</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/liquid_leaking:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/liquid_leaking:label">
             <value>Liquid leaking from vagina</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/malaria_signs:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/malaria_signs:label">
             <value>Signs of malaria (feeling cold, fever, vomiting)</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/swelling:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/swelling:label">
             <value>Swelling of face, arms, fingers, or legs</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/tinnitus:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/tinnitus:label">
             <value>Tinnitus</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label">
             <value>Continue with the following questions. Indicate if the client has any of the following common pregnancy issues. 
 Have you experienced:</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label">
+            <value>I am referring you to health facility because I have identified that you have danger sign(s)</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg">
             <value>Please enter an amount between Tsh. 100 and Tsh. 300,000</value>
@@ -689,6 +966,12 @@ Have you experienced:</value>
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>Quality of Survey Care</value>
           </text>
+          <text id="/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg">
+            <value>The pregnancy loss date cannot be in the future</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/date_of_pregnancy_loss:label">
+            <value>When did <output value=" /pregnancy/client_name "/> lose the pregnancy?</value>
+          </text>
           <text id="/pregnancy/visit_introduction/delivery_form_note:label">
             <value>Fill out the delivery form</value>
           </text>
@@ -856,6 +1139,21 @@ Have you experienced:</value>
           <text id="/pregnancy/birth_plan:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy/client_information/due_date_note:label">
+            <value>Tarehe ya mwisho ya tembeleo: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/client_information/household_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/client_information/intro_note:label">
+            <value>Aina ya tembeleo: &lt;span style="font-weight:bold"&gt;&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/client_information/phone_note:label">
+            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/client_information:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy/danger_signs/danger_sign_abdominal_pain/no:label">
             <value>Hapana</value>
           </text>
@@ -922,16 +1220,16 @@ Have you experienced:</value>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/generated_table_list_label_34:label">
+          <text id="/pregnancy/danger_signs/generated_table_list_label_53:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/danger_signs/no_danger_sign_note_to_chv:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/no:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_54/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/yes:label">
+          <text id="/pregnancy/danger_signs/reserved_name_for_field_list_labels_54/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breast_problem:label">
@@ -1006,6 +1304,21 @@ Have you experienced:</value>
           <text id="/pregnancy/facility_delivery_importance:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy/group_summary/healthy_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/group_summary/needs_referral_danger_signs:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/group_summary/needs_referral_neonatal_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/group_summary/needs_referral_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/group_summary:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy/inputs/contact/_id:label">
             <value>-</value>
           </text>
@@ -1016,6 +1329,9 @@ Have you experienced:</value>
             <value>-</value>
           </text>
           <text id="/pregnancy/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/due_date_human_readable:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/inputs/num_pregnancy_visits:label">
@@ -1076,6 +1392,258 @@ Have you experienced:</value>
             <value>-</value>
           </text>
           <text id="/pregnancy/maternal_nutrition:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/can_proceed_with_survey/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/personal_information/can_proceed_with_survey/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/personal_information/can_proceed_with_survey:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone/decline_to_answer:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone/no:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/enrollment_via_phone:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/completed_high_school:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/incomplete_primary:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/incomplete_secondary:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/more_than_high_school:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/no_formal_education:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/primary_education:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/school_level_dont_know_decline:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level/secondary:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/highest_school_level:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_completed_high_school:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_incomplete_primary:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_incomplete_secondary:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_more_than_high_school:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_no_formal_education:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_primary_education:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_school_level_dont_know_decline:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_secondary:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info/subgroup_partner_age:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/partner_info:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment/decline_to_answer:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment/no:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/previous_uzazi_salama_enrollment:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/decision_maker_dont_know_decline:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/herself:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/herself_and_husband:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/husband:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker/other:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/decision_maker:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_decision_maker:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/divorced:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/marital_status_dont_know_decline:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/single:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/widowed:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/msg_for_chv_marital_status:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/no:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/no:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives/num_wives:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_multiple_wives:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/decline_to_answer:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/no:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/personal_information/subgroup_partner_info:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/other_means:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/bicycle:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/boat:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/health_facility_vehicle:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/moto:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/other:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/private_car:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/public_bus:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/travel_means_dont_know_decline:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means/walk:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport/travel_means:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/transport:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/30_to_1hr:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/less_than_30:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/more_than_1hr:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time/travel_time_dont_know_decline:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information/travel_time:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/personal_information:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/pmtct/disclose_hiv_status/no:label">
@@ -1177,46 +1745,52 @@ Have you experienced:</value>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/blurred_vision:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/blurred_vision:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/difficulty_breathing:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/difficulty_breathing:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/dizziness:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/dizziness:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/early_labor:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/early_labor:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/fatigue:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fatigue:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/fever:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fever:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/foul_smelling:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/foul_smelling:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/frontal_headache:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/frontal_headache:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/gastric_pain:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/gastric_pain:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/liquid_leaking:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/liquid_leaking:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/malaria_signs:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/malaria_signs:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/swelling:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/swelling:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues/tinnitus:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/tinnitus:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/pregnancy_issues:label">
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group:label">
@@ -1429,6 +2003,12 @@ Have you experienced:</value>
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/visit_introduction/date_of_pregnancy_loss:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy/visit_introduction/delivery_form_note:label">
             <value>-</value>
           </text>
@@ -1474,6 +2054,7 @@ Have you experienced:</value>
             </meta>
             <num_pregnancy_visits/>
             <num_previous_anc_visits/>
+            <due_date_human_readable/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -1493,19 +2074,37 @@ Have you experienced:</value>
           <created_by_person_uuid/>
           <created_by_place_uuid/>
           <date_of_birth_c/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
           <age_in_years/>
+          <age_days_display/>
           <week/>
           <month/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <due_date_pretty_print/>
+          <client_EDD/>
+          <client_information>
+            <intro_note/>
+            <household_note/>
+            <phone_note/>
+            <due_date_note/>
+          </client_information>
           <visit_introduction>
             <introduction/>
             <has_given_birth/>
             <delivery_form_note/>
             <viable_pregnancy/>
             <sympathy_note/>
+            <date_of_pregnancy_loss/>
+            <miscarriage_or_stillbirth/>
           </visit_introduction>
           <danger_signs>
-            <generated_table_list_label_34/>
-            <reserved_name_for_field_list_labels_35/>
+            <generated_table_list_label_53/>
+            <reserved_name_for_field_list_labels_54/>
             <danger_sign_vaginal_bleeding/>
             <danger_sign_convulsions/>
             <danger_sign_unconsciouss/>
@@ -1518,7 +2117,11 @@ Have you experienced:</value>
             <no_danger_sign_note_to_chv/>
           </danger_signs>
           <pregnancy_issues_group>
-            <pregnancy_issues/>
+            <subgroup_pregnancy_issues>
+              <pregnancy_issues/>
+              <refer_pregnancy_issues/>
+              <refer_pregnancy_issues_note/>
+            </subgroup_pregnancy_issues>
             <pregnancy_and_pallor>
               <more_than_24_weeks_pregnant/>
               <baby_moving/>
@@ -1625,6 +2228,48 @@ Have you experienced:</value>
             <wait_period/>
             <recommendation_for_anc_visit/>
           </quality_of_survery_care>
+          <personal_information>
+            <can_proceed_with_survey/>
+            <travel_time/>
+            <transport>
+              <travel_means/>
+              <other_means/>
+            </transport>
+            <highest_school_level/>
+            <previous_uzazi_salama_enrollment/>
+            <enrollment_via_phone/>
+            <subgroup_decision_maker>
+              <decision_maker/>
+              <some_other_decision_maker/>
+            </subgroup_decision_maker>
+            <subgroup_married_or_livein_relation>
+              <msg_for_chv_married_or_livein_relation/>
+              <married_or_livein_relation/>
+            </subgroup_married_or_livein_relation>
+            <subgroup_marital_status>
+              <msg_for_chv_marital_status/>
+              <marital_status/>
+            </subgroup_marital_status>
+            <subgroup_partner_info>
+              <msg_for_chv_partner_live_together/>
+              <does_partner_live_together/>
+            </subgroup_partner_info>
+            <partner_info>
+              <subgroup_partner_age/>
+              <partner_highest_school_level/>
+            </partner_info>
+            <subgroup_multiple_wives>
+              <more_than_one_wife/>
+              <num_wives/>
+            </subgroup_multiple_wives>
+          </personal_information>
+          <group_summary>
+            <any_referral/>
+            <healthy_note/>
+            <needs_referral_note/>
+            <needs_referral_danger_signs/>
+            <needs_referral_neonatal_note/>
+          </group_summary>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -1634,6 +2279,7 @@ Have you experienced:</value>
       <bind nodeset="/pregnancy/inputs" relevant="false()"/>
       <bind nodeset="/pregnancy/inputs/num_pregnancy_visits" type="string"/>
       <bind nodeset="/pregnancy/inputs/num_previous_anc_visits" type="string"/>
+      <bind nodeset="/pregnancy/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/contact_id" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/facility_id" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/name" type="string"/>
@@ -1641,24 +2287,40 @@ Have you experienced:</value>
       <bind nodeset="/pregnancy/inputs/contact/name" type="string"/>
       <bind nodeset="/pregnancy/inputs/contact/date_of_birth" type="string"/>
       <bind calculate="../inputs/contact/name" nodeset="/pregnancy/client_name" type="string"/>
-      <bind calculate="2" nodeset="/pregnancy/n_pregnancy_visits" type="string"/>
+      <bind calculate="1" nodeset="/pregnancy/n_pregnancy_visits" type="string"/>
       <bind calculate="0" nodeset="/pregnancy/n_previous_anc_visits" type="string"/>
       <bind calculate="../inputs/contact/_id" nodeset="/pregnancy/patient_id" type="string"/>
       <bind calculate="../inputs/user/name" nodeset="/pregnancy/created_by" type="string"/>
       <bind calculate="../inputs/user/contact_id" nodeset="/pregnancy/created_by_person_uuid" type="string"/>
       <bind calculate="../inputs/user/facility_id" nodeset="/pregnancy/created_by_place_uuid" type="string"/>
       <bind calculate="../inputs/contact/date_of_birth" nodeset="/pregnancy/date_of_birth_c" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /pregnancy/date_of_birth_c ))" nodeset="/pregnancy/age_days" type="string"/>
+      <bind calculate="int(( /pregnancy/age_days  - ( /pregnancy/age_years  * 12 * 30)) div 30,0)" nodeset="/pregnancy/age_months" type="string"/>
+      <bind calculate="int( /pregnancy/age_days  div (30 *12),0)" nodeset="/pregnancy/age_years" type="string"/>
       <bind calculate="round((decimal-date-time(today()) - decimal-date-time( /pregnancy/date_of_birth_c )) div 365,0)" nodeset="/pregnancy/age_in_years" type="string"/>
+      <bind calculate=" /pregnancy/age_days  - ( /pregnancy/age_months  * 30) - ( /pregnancy/age_years  *12*30)" nodeset="/pregnancy/age_days_display" type="string"/>
       <bind calculate="7" nodeset="/pregnancy/week" type="string"/>
       <bind calculate="30" nodeset="/pregnancy/month" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/pregnancy/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/pregnancy/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/pregnancy/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/pregnancy/phone" type="string"/>
+      <bind calculate="../inputs/due_date_human_readable" nodeset="/pregnancy/due_date_pretty_print" type="string"/>
+      <bind calculate="today()" nodeset="/pregnancy/client_EDD" type="string"/>
+      <bind nodeset="/pregnancy/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/client_information/due_date_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/visit_introduction/introduction" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/visit_introduction/has_given_birth" relevant=" /pregnancy/n_pregnancy_visits  &gt; 1" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/visit_introduction/has_given_birth" relevant=" /pregnancy/n_pregnancy_visits  &gt;= 1" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/visit_introduction/delivery_form_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/pregnancy/visit_introduction/viable_pregnancy" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/visit_introduction/sympathy_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" type="string"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg')" nodeset="/pregnancy/visit_introduction/date_of_pregnancy_loss" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" required="true()" type="date"/>
+      <bind calculate="if((decimal-date-time( /pregnancy/client_EDD ) - decimal-date-time( /pregnancy/visit_introduction/date_of_pregnancy_loss )) &gt; ( /pregnancy/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/pregnancy/visit_introduction/miscarriage_or_stillbirth" type="string"/>
       <bind nodeset="/pregnancy/danger_signs" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
-      <bind nodeset="/pregnancy/danger_signs/generated_table_list_label_34" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/generated_table_list_label_53" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/reserved_name_for_field_list_labels_54" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_vaginal_bleeding" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_convulsions" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_unconsciouss" required="true()" type="select1"/>
@@ -1676,28 +2338,29 @@ Have you experienced:</value>
  selected( /pregnancy/danger_signs/danger_sign_difficult_breathing ,'no') and 
  selected( /pregnancy/danger_signs/danger_sign_vaginal_bleeding ,'no')" type="string"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_issues" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" type="select"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" type="select"/>
+      <bind calculate="if(selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;difficulty_breathing&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fatigue&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fever&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;tinnitus&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;dizziness&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;frontal_headache&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;blurred_vision&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;gastric_pain&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;swelling&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;early_labor&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;liquid_leaking&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;malaria_signs&quot;) or 
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;foul_smelling&quot;)1,0)" nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1" type="string"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving" relevant="selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" required="true()" type="select1"/>
-      <bind calculate="if(selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;difficulty_breathing&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;fatigue&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;fever&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;tinnitus&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;dizziness&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;frontal_headache&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;blurred_vision&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;gastric_pain&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;swelling&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;early_labor&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;liquid_leaking&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;malaria_signs&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/pregnancy_issues ,&quot;foul_smelling&quot;) or 
- (selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;no&quot;)) or 
+      <bind calculate="if((selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;no&quot;) ) or 
  selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;yes&quot;),1,0)" nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications" type="string"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1" type="string"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0 and 
+      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0 and  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =0 and
 ((selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant ,&quot;no&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;no&quot;) ) or 
 (selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;no&quot;) ))" type="string"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0"/>
@@ -1718,7 +2381,7 @@ Have you experienced:</value>
       <bind nodeset="/pregnancy/anc_visit/fam_engagement/invite_family_member_note" readonly="true()" relevant="selected( /pregnancy/anc_visit/fam_engagement/family_engagement ,'no_one_available')" type="string"/>
       <bind nodeset="/pregnancy/anc_visit/rch_card/is_rch_card_available" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/anc_visit/rch_card/is_delivery_date_written" relevant="selected( /pregnancy/anc_visit/rch_card/is_rch_card_available ,'yes')" required="true()" type="select1"/>
-      <bind constraint=". &gt;= date-time(decimal-date-time(today())) and . &lt;= date(decimal-date-time(today()) + ( /pregnancy/month  * 10))" jr:constraintMsg="jr:itext('/pregnancy/anc_visit/rch_card/estimated_delivery_date_input:jr:constraintMsg')" nodeset="/pregnancy/anc_visit/rch_card/estimated_delivery_date_input" relevant="selected( /pregnancy/anc_visit/rch_card/is_delivery_date_written ,'yes')" required="true()" type="date"/>
+      <bind constraint="You've declined to consent for  /pregnancy/client_name  to receive community health services. You will not receive any more visits from me." jr:constraintMsg="jr:itext('/pregnancy/anc_visit/rch_card/estimated_delivery_date_input:jr:constraintMsg')" nodeset="/pregnancy/anc_visit/rch_card/estimated_delivery_date_input" relevant="selected( /pregnancy/anc_visit/rch_card/is_delivery_date_written ,'yes')" required="true()" type="date"/>
       <bind constraint=". &gt; 0 and . &lt;= 9" jr:constraintMsg="jr:itext('/pregnancy/anc_visit/rch_card/estimated_months_pregnant:jr:constraintMsg')" nodeset="/pregnancy/anc_visit/rch_card/estimated_months_pregnant" relevant="selected( /pregnancy/anc_visit/rch_card/is_delivery_date_written ,'no') or selected( /pregnancy/anc_visit/rch_card/is_rch_card_available ,'no')" required="true()" type="int"/>
       <bind calculate="if(selected( /pregnancy/anc_visit/rch_card/is_delivery_date_written ,'yes'),40 - round((decimal-date-time( /pregnancy/anc_visit/rch_card/estimated_delivery_date_input ) - decimal-date-time(today())) div  /pregnancy/week ), /pregnancy/anc_visit/rch_card/estimated_months_pregnant *4)" nodeset="/pregnancy/anc_visit/rch_card/gestation_in_weeks" type="string"/>
       <bind calculate="if(selected( /pregnancy/anc_visit/rch_card/is_delivery_date_written ,'yes'),  /pregnancy/anc_visit/rch_card/estimated_delivery_date_input ,date-time(decimal-date-time(today())+ (40 -  /pregnancy/anc_visit/rch_card/gestation_in_weeks  ) *  /pregnancy/week  ))" nodeset="/pregnancy/anc_visit/rch_card/EDD" type="string"/>
@@ -1773,6 +2436,34 @@ Have you experienced:</value>
       <bind nodeset="/pregnancy/quality_of_survery_care/paid_for" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()" type="select"/>
       <bind nodeset="/pregnancy/quality_of_survery_care/wait_period" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  = 1"/>
+      <bind nodeset="/pregnancy/personal_information/can_proceed_with_survey" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/travel_time" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/transport/travel_means" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/transport/other_means" relevant="selected( /pregnancy/personal_information/transport/travel_means ,&quot;other&quot;)" required="true()" type="string"/>
+      <bind nodeset="/pregnancy/personal_information/highest_school_level" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/previous_uzazi_salama_enrollment" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/enrollment_via_phone" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/decision_maker" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker" relevant="selected( /pregnancy/personal_information/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()" type="string"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation" readonly="true()" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_marital_status/msg_for_chv_marital_status" readonly="true()" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_marital_status/marital_status" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;no&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together" readonly="true()" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/pregnancy/personal_information/partner_info/subgroup_partner_age" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" type="int"/>
+      <bind nodeset="/pregnancy/personal_information/partner_info/partner_highest_school_level" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/pregnancy/personal_information/subgroup_multiple_wives/num_wives" relevant="selected( /pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
+      <bind calculate="if( /pregnancy/danger_signs/emergency_danger_sign_referral =1 or
+ /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
+ /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1, 1, 0)" nodeset="/pregnancy/group_summary/any_referral" type="string"/>
+      <bind nodeset="/pregnancy/group_summary/healthy_note" readonly="true()" relevant=" /pregnancy/group_summary/any_referral =0 and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/group_summary/needs_referral_note" readonly="true()" relevant=" /pregnancy/group_summary/any_referral =1" type="string"/>
+      <bind nodeset="/pregnancy/group_summary/needs_referral_danger_signs" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral =1" type="string"/>
+      <bind nodeset="/pregnancy/group_summary/needs_referral_neonatal_note" readonly="true()" relevant=" /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
+ /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -1780,6 +2471,7 @@ Have you experienced:</value>
     <group ref="/pregnancy/inputs">
       <input ref="/pregnancy/inputs/num_pregnancy_visits"/>
       <input ref="/pregnancy/inputs/num_previous_anc_visits"/>
+      <input ref="/pregnancy/inputs/due_date_human_readable"/>
       <group ref="/pregnancy/inputs/user">
         <input ref="/pregnancy/inputs/user/contact_id">
           <label ref="jr:itext('/pregnancy/inputs/user/contact_id:label')"/>
@@ -1796,6 +2488,21 @@ Have you experienced:</value>
         <input ref="/pregnancy/inputs/contact/name"/>
         <input ref="/pregnancy/inputs/contact/date_of_birth"/>
       </group>
+    </group>
+    <group appearance="field-list" ref="/pregnancy/client_information">
+      <label ref="jr:itext('/pregnancy/client_information:label')"/>
+      <input ref="/pregnancy/client_information/intro_note">
+        <label ref="jr:itext('/pregnancy/client_information/intro_note:label')"/>
+      </input>
+      <input ref="/pregnancy/client_information/household_note">
+        <label ref="jr:itext('/pregnancy/client_information/household_note:label')"/>
+      </input>
+      <input ref="/pregnancy/client_information/phone_note">
+        <label ref="jr:itext('/pregnancy/client_information/phone_note:label')"/>
+      </input>
+      <input ref="/pregnancy/client_information/due_date_note">
+        <label ref="jr:itext('/pregnancy/client_information/due_date_note:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/visit_introduction">
       <input ref="/pregnancy/visit_introduction/introduction">
@@ -1829,19 +2536,22 @@ Have you experienced:</value>
       <input ref="/pregnancy/visit_introduction/sympathy_note">
         <label ref="jr:itext('/pregnancy/visit_introduction/sympathy_note:label')"/>
       </input>
+      <input ref="/pregnancy/visit_introduction/date_of_pregnancy_loss">
+        <label ref="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/danger_signs">
-      <input ref="/pregnancy/danger_signs/generated_table_list_label_34">
-        <label ref="jr:itext('/pregnancy/danger_signs/generated_table_list_label_34:label')"/>
+      <input ref="/pregnancy/danger_signs/generated_table_list_label_53">
+        <label ref="jr:itext('/pregnancy/danger_signs/generated_table_list_label_53:label')"/>
       </input>
-      <select1 appearance="label" ref="/pregnancy/danger_signs/reserved_name_for_field_list_labels_35">
+      <select1 appearance="label" ref="/pregnancy/danger_signs/reserved_name_for_field_list_labels_54">
         <label></label>
         <item>
-          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/yes:label')"/>
+          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_54/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_35/no:label')"/>
+          <label ref="jr:itext('/pregnancy/danger_signs/reserved_name_for_field_list_labels_54/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -1930,61 +2640,66 @@ Have you experienced:</value>
       </input>
     </group>
     <group ref="/pregnancy/pregnancy_issues_group">
-      <select appearance="field-list" ref="/pregnancy/pregnancy_issues_group/pregnancy_issues">
-        <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/difficulty_breathing:label')"/>
-          <value>difficulty_breathing</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/fatigue:label')"/>
-          <value>fatigue</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/fever:label')"/>
-          <value>fever</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/tinnitus:label')"/>
-          <value>tinnitus</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/dizziness:label')"/>
-          <value>dizziness</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/frontal_headache:label')"/>
-          <value>frontal_headache</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/blurred_vision:label')"/>
-          <value>blurred_vision</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/gastric_pain:label')"/>
-          <value>gastric_pain</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/swelling:label')"/>
-          <value>swelling</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/early_labor:label')"/>
-          <value>early_labor</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/liquid_leaking:label')"/>
-          <value>liquid_leaking</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/malaria_signs:label')"/>
-          <value>malaria_signs</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_issues/foul_smelling:label')"/>
-          <value>foul_smelling</value>
-        </item>
-      </select>
+      <group appearance="field-list" ref="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues">
+        <select appearance="field-list" ref="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/difficulty_breathing:label')"/>
+            <value>difficulty_breathing</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fatigue:label')"/>
+            <value>fatigue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fever:label')"/>
+            <value>fever</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/tinnitus:label')"/>
+            <value>tinnitus</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/dizziness:label')"/>
+            <value>dizziness</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/frontal_headache:label')"/>
+            <value>frontal_headache</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/blurred_vision:label')"/>
+            <value>blurred_vision</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/gastric_pain:label')"/>
+            <value>gastric_pain</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/swelling:label')"/>
+            <value>swelling</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/early_labor:label')"/>
+            <value>early_labor</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/liquid_leaking:label')"/>
+            <value>liquid_leaking</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/malaria_signs:label')"/>
+            <value>malaria_signs</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/foul_smelling:label')"/>
+            <value>foul_smelling</value>
+          </item>
+        </select>
+        <input ref="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label')"/>
+        </input>
+      </group>
       <group appearance="field-list" ref="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor">
         <select1 ref="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant">
           <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/more_than_24_weeks_pregnant:label')"/>
@@ -2270,11 +2985,13 @@ Have you experienced:</value>
         </input>
       </group>
       <group appearance="field-list" ref="/pregnancy/birth_plan/savings">
+        <label ref="jr:itext('/pregnancy/birth_plan/savings:label')"/>
         <input ref="/pregnancy/birth_plan/savings/importance_of_saving_chv_note">
           <label ref="jr:itext('/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label')"/>
         </input>
       </group>
       <group appearance="field-list" ref="/pregnancy/birth_plan/transfusion_and_backup">
+        <label ref="jr:itext('/pregnancy/birth_plan/transfusion_and_backup:label')"/>
         <input ref="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion">
           <label ref="jr:itext('/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label')"/>
         </input>
@@ -2283,6 +3000,7 @@ Have you experienced:</value>
         </input>
       </group>
       <group appearance="field-list" ref="/pregnancy/birth_plan/transport">
+        <label ref="jr:itext('/pregnancy/birth_plan/transport:label')"/>
         <input ref="/pregnancy/birth_plan/transport/prepare_transport">
           <label ref="jr:itext('/pregnancy/birth_plan/transport/prepare_transport:label')"/>
         </input>
@@ -2608,6 +3326,315 @@ Have you experienced:</value>
           <value>no</value>
         </item>
       </select1>
+    </group>
+    <group ref="/pregnancy/personal_information">
+      <label ref="jr:itext('/pregnancy/personal_information:label')"/>
+      <select1 ref="/pregnancy/personal_information/can_proceed_with_survey">
+        <label ref="jr:itext('/pregnancy/personal_information/can_proceed_with_survey:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/can_proceed_with_survey/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/can_proceed_with_survey/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/personal_information/travel_time">
+        <label ref="jr:itext('/pregnancy/personal_information/travel_time:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/travel_time/less_than_30:label')"/>
+          <value>less_than_30</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/travel_time/30_to_1hr:label')"/>
+          <value>30_to_1hr</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/travel_time/more_than_1hr:label')"/>
+          <value>more_than_1hr</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/travel_time/travel_time_dont_know_decline:label')"/>
+          <value>travel_time_dont_know_decline</value>
+        </item>
+      </select1>
+      <group appearance="field-list" ref="/pregnancy/personal_information/transport">
+        <select1 ref="/pregnancy/personal_information/transport/travel_means">
+          <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/walk:label')"/>
+            <value>walk</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/bicycle:label')"/>
+            <value>bicycle</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/moto:label')"/>
+            <value>moto</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/private_car:label')"/>
+            <value>private_car</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/public_bus:label')"/>
+            <value>public_bus</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/health_facility_vehicle:label')"/>
+            <value>health_facility_vehicle</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/boat:label')"/>
+            <value>boat</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/other:label')"/>
+            <value>other</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/transport/travel_means/travel_means_dont_know_decline:label')"/>
+            <value>travel_means_dont_know_decline</value>
+          </item>
+        </select1>
+        <input ref="/pregnancy/personal_information/transport/other_means">
+          <label ref="jr:itext('/pregnancy/personal_information/transport/other_means:label')"/>
+        </input>
+      </group>
+      <select1 ref="/pregnancy/personal_information/highest_school_level">
+        <label ref="jr:itext('/pregnancy/personal_information/highest_school_level:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/no_formal_education:label')"/>
+          <value>no_formal_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/incomplete_primary:label')"/>
+          <value>incomplete_primary</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/primary_education:label')"/>
+          <value>primary_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/incomplete_secondary:label')"/>
+          <value>incomplete_secondary</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/secondary:label')"/>
+          <value>secondary</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/completed_high_school:label')"/>
+          <value>completed_high_school</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/more_than_high_school:label')"/>
+          <value>more_than_high_school</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/highest_school_level/school_level_dont_know_decline:label')"/>
+          <value>school_level_dont_know_decline</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/personal_information/previous_uzazi_salama_enrollment">
+        <label ref="jr:itext('/pregnancy/personal_information/previous_uzazi_salama_enrollment:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/previous_uzazi_salama_enrollment/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/previous_uzazi_salama_enrollment/no:label')"/>
+          <value>no</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/previous_uzazi_salama_enrollment/decline_to_answer:label')"/>
+          <value>decline_to_answer</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/personal_information/enrollment_via_phone">
+        <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone/no:label')"/>
+          <value>no</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone/decline_to_answer:label')"/>
+          <value>decline_to_answer</value>
+        </item>
+      </select1>
+      <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_decision_maker">
+        <select1 ref="/pregnancy/personal_information/subgroup_decision_maker/decision_maker">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/decision_maker:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/decision_maker/herself:label')"/>
+            <value>herself</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/decision_maker/husband:label')"/>
+            <value>husband</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/decision_maker/herself_and_husband:label')"/>
+            <value>herself_and_husband</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/decision_maker/other:label')"/>
+            <value>other</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/decision_maker/decision_maker_dont_know_decline:label')"/>
+            <value>decision_maker_dont_know_decline</value>
+          </item>
+        </select1>
+        <input ref="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_married_or_livein_relation">
+        <input ref="/pregnancy/personal_information/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation:label')"/>
+        </input>
+        <select1 ref="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/no:label')"/>
+            <value>no</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label')"/>
+            <value>decline_to_answer</value>
+          </item>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_marital_status">
+        <input ref="/pregnancy/personal_information/subgroup_marital_status/msg_for_chv_marital_status">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/msg_for_chv_marital_status:label')"/>
+        </input>
+        <select1 ref="/pregnancy/personal_information/subgroup_marital_status/marital_status">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status/single:label')"/>
+            <value>single</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status/widowed:label')"/>
+            <value>widowed</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status/divorced:label')"/>
+            <value>divorced</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status/marital_status_dont_know_decline:label')"/>
+            <value>marital_status_dont_know_decline</value>
+          </item>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_partner_info">
+        <input ref="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together:label')"/>
+        </input>
+        <select1 ref="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/no:label')"/>
+            <value>no</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together/decline_to_answer:label')"/>
+            <value>decline_to_answer</value>
+          </item>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/personal_information/partner_info">
+        <input ref="/pregnancy/personal_information/partner_info/subgroup_partner_age">
+          <label ref="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:label')"/>
+        </input>
+        <select1 ref="/pregnancy/personal_information/partner_info/partner_highest_school_level">
+          <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_no_formal_education:label')"/>
+            <value>partner_no_formal_education</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_incomplete_primary:label')"/>
+            <value>partner_incomplete_primary</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_primary_education:label')"/>
+            <value>partner_primary_education</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_incomplete_secondary:label')"/>
+            <value>partner_incomplete_secondary</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_secondary:label')"/>
+            <value>partner_secondary</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_completed_high_school:label')"/>
+            <value>partner_completed_high_school</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_more_than_high_school:label')"/>
+            <value>partner_more_than_high_school</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_school_level_dont_know_decline:label')"/>
+            <value>partner_school_level_dont_know_decline</value>
+          </item>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_multiple_wives">
+        <select1 ref="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/no:label')"/>
+            <value>no</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label')"/>
+            <value>decline_to_answer</value>
+          </item>
+        </select1>
+        <input ref="/pregnancy/personal_information/subgroup_multiple_wives/num_wives">
+          <label ref="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/pregnancy/group_summary">
+      <label ref="jr:itext('/pregnancy/group_summary:label')"/>
+      <input ref="/pregnancy/group_summary/healthy_note">
+        <label ref="jr:itext('/pregnancy/group_summary/healthy_note:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/needs_referral_note">
+        <label ref="jr:itext('/pregnancy/group_summary/needs_referral_note:label')"/>
+      </input>
+      <input appearance="li" ref="/pregnancy/group_summary/needs_referral_danger_signs">
+        <label ref="jr:itext('/pregnancy/group_summary/needs_referral_danger_signs:label')"/>
+      </input>
+      <input appearance="li" ref="/pregnancy/group_summary/needs_referral_neonatal_note">
+        <label ref="jr:itext('/pregnancy/group_summary/needs_referral_neonatal_note:label')"/>
+      </input>
     </group>
   </h:body>
 </h:html>
