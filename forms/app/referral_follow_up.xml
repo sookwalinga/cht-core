@@ -120,6 +120,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;To address issues of anemia.&lt;/span&gt;</value>
           </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_secondary_neonatal_danger_sign_flag:label">
+            <value>&lt;span style="display:block;padding-left:1em"&gt;To address a neonatal danger sign.&lt;/span&gt;</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;To address issues around learning and child development.&lt;/span&gt;</value>
           </text>
@@ -196,6 +199,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/refer_palm_pallor_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_secondary_neonatal_danger_sign_flag:label">
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/refer_slow_to_learn_specifics_flag:label">
@@ -321,6 +327,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kushughulikia upungufu wa damu.&lt;/span&gt;</value>
           </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_secondary_neonatal_danger_sign_flag:label">
+            <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kushughulikia dalili za hatari za mtoto mchanga.&lt;/span&gt;</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kushughulikia maswala ya kujifunza na maendeleo ya mtoto.&lt;/span&gt;</value>
           </text>
@@ -357,6 +366,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <last_visit_date/>
             <refer_flag_small_baby/>
             <refer_neonatal_danger_sign_flag/>
+            <refer_secondary_neonatal_danger_sign_flag/>
             <refer_child_danger_sign_flag/>
             <refer_muac_flag/>
             <refer_palm_pallor_flag/>
@@ -383,6 +393,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <last_visit_formatted/>
           <refer_flag_small_baby/>
           <refer_neonatal_danger_sign_flag/>
+          <refer_secondary_neonatal_danger_sign_flag/>
           <refer_child_danger_sign_flag/>
           <refer_muac_flag/>
           <refer_palm_pallor_flag/>
@@ -411,6 +422,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <intro/>
             <reason_refer_flag_small_baby/>
             <reason_refer_neonatal_danger_sign_flag/>
+            <reason_refer_secondary_neonatal_danger_sign_flag/>
             <reason_refer_child_danger_sign_flag/>
             <reason_refer_muac_flag/>
             <reason_refer_palm_pallor_flag/>
@@ -448,6 +460,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/inputs/last_visit_date" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_flag_small_baby" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_neonatal_danger_sign_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_secondary_neonatal_danger_sign_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_child_danger_sign_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_muac_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_palm_pallor_flag" type="string"/>
@@ -469,6 +482,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind calculate="format-date-time(../inputs/last_visit_date div (1000*60*60*24), &quot;%d/%m/%Y&quot;)" nodeset="/referral_follow_up/last_visit_formatted" type="string"/>
       <bind calculate="../inputs/refer_flag_small_baby" nodeset="/referral_follow_up/refer_flag_small_baby" type="string"/>
       <bind calculate="../inputs/refer_neonatal_danger_sign_flag" nodeset="/referral_follow_up/refer_neonatal_danger_sign_flag" type="string"/>
+      <bind calculate="../inputs/refer_secondary_neonatal_danger_sign_flag" nodeset="/referral_follow_up/refer_secondary_neonatal_danger_sign_flag" type="string"/>
       <bind calculate="../inputs/refer_child_danger_sign_flag" nodeset="/referral_follow_up/refer_child_danger_sign_flag" type="string"/>
       <bind calculate="../inputs/refer_muac_flag" nodeset="/referral_follow_up/refer_muac_flag" type="string"/>
       <bind calculate="../inputs/refer_refer_palm_pallor_flag" nodeset="/referral_follow_up/refer_palm_pallor_flag" type="string"/>
@@ -494,6 +508,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/referral_follow_up/intro" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby" readonly="true()" relevant="../../refer_flag_small_baby = 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_neonatal_danger_sign_flag = 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_secondary_neonatal_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_secondary_neonatal_danger_sign_flag = 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_child_danger_sign_flag = 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_muac_flag" readonly="true()" relevant="../../inputs/refer_muac_flag = 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag" readonly="true()" relevant="../../inputs/refer_refer_palm_pallor_flag = 1" type="string"/>
@@ -525,6 +540,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <input ref="/referral_follow_up/inputs/last_visit_date"/>
       <input ref="/referral_follow_up/inputs/refer_flag_small_baby"/>
       <input ref="/referral_follow_up/inputs/refer_neonatal_danger_sign_flag"/>
+      <input ref="/referral_follow_up/inputs/refer_secondary_neonatal_danger_sign_flag"/>
       <input ref="/referral_follow_up/inputs/refer_child_danger_sign_flag"/>
       <input ref="/referral_follow_up/inputs/refer_muac_flag"/>
       <input ref="/referral_follow_up/inputs/refer_palm_pallor_flag"/>
@@ -575,6 +591,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       </input>
       <input ref="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_secondary_neonatal_danger_sign_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_secondary_neonatal_danger_sign_flag:label')"/>
       </input>
       <input ref="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label')"/>

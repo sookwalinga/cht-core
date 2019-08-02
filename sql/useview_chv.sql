@@ -13,9 +13,10 @@ CREATE MATERIALIZED VIEW useview_chv AS
     doc ->> 'phone' AS phone,
     doc #>> '{parent,_id}' AS catchment_area_uuid,
     doc #>> '{parent,parent,_id}' AS supervisory_area_uuid,
-    doc ->> 'imported_date' AS imported_date,
+    to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
     to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date,
-    doc ->> 'alternate_phone' AS alternate_phone
+    doc ->> 'alternate_phone' AS alternate_phone,
+    doc ->> 'retired' AS retired
   FROM 
 	  couchdb	
   WHERE 
