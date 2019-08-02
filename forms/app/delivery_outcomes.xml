@@ -1,0 +1,2429 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Delivery Outcomes</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
+            <value>Dates of death must be between today and the date of delivery</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:label">
+            <value>When did the death occur?</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data:label">
+            <value>Child Death Data</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_note:label">
+            <value>I'm very sorry for your loss</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/client_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/age_years "/> years, <output value=" /delivery_outcomes/age_months "/> months, <output value=" /delivery_outcomes/age_days_display "/> days&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Record pregnancy delivery outcome&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/client_information:label">
+            <value>Client Information</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg">
+            <value>Deliveries can be up to 3 months ago</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:label">
+            <value>When did <output value=" /delivery_outcomes/client_name "/> deliver?</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
+            <value>When did <output value=" /delivery_outcomes/client_name "/> lose the pregnancy?</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver:label">
+            <value>Did <output value=" /delivery_outcomes/client_name "/> deliver her baby?</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_loss_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Sympathise with the mother for her loss.&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable:label">
+            <value>Is the pregnancy still viable?</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery:label">
+            <value>Confirm Delivery</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/admitted_after_birth:label">
+            <value>Was baby admitted to neonatal unit/special care area/hospital within the first 24 hours after birth?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/born_early/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/born_early/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/born_early:label">
+            <value>Was the baby born preterm or too early?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note:label">
+            <value>Congratulations on the birth of your baby. Now, it is very important for you to take them to a healthcare facility in order to check you and your baby's health and for them to get the vaccines and other important services they need. You should go to the facility as soon as possible for this care – even today.</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/caesarian:label">
+            <value>Caesarian section</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label">
+            <value>Skilled normal vaginal delivery</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label">
+            <value>Vacuum extraction or forceps</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method:label">
+            <value>What was the method of delivery?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc:label">
+            <value>Since the birth of the child, have you and your baby gone to a healthcare facility for postnatal care?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc_note:label">
+            <value>Great! Congratulations on everything.</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/family_member:label">
+            <value>Family member</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label">
+            <value>Neighbor / friend</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/no_one:label">
+            <value>No one</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label">
+            <value>Traditional birth attendant</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper:label">
+            <value>Who was the main person who helped you deliver the baby?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/immediate_cry/no:label">
+            <value>No: Had difficulty breathing at birth or require resuscitation.</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/immediate_cry/yes:label">
+            <value>Yes: Cried immediately, no problem breathing.</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/immediate_cry:label">
+            <value>Did the baby cry immediately after birth?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label">
+            <value>Antepartum hemorrhage</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/dont_know:label">
+            <value>Does not know</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/infection:label">
+            <value>Infection (high fever right after delivery)</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label">
+            <value>Intrapartum hemorrhage</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/large_perineal_tear:label">
+            <value>Large perineal tear</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/none:label">
+            <value>None of the above</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label">
+            <value>Postpartum hemorrhage</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label">
+            <value>Preeclampsia, eclampsia, or hypertension related</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/prolonged_labor:label">
+            <value>Prolonged labor</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/retained_placenta:label">
+            <value>Retained placenta</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications:label">
+            <value>Did the woman experience any of these major medical complications during her most recent delivery?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information:label">
+            <value>Delivery Information</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_facility:label">
+            <value>Which facility did you deliver in?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/facility:label">
+            <value>Healthcare facility</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/home:label">
+            <value>At home / in the community</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/in_transit:label">
+            <value>On the way to a healthcare facility</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location:label">
+            <value>Where did you deliver?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_district:label">
+            <value>What district was the facility in?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/pemba:label">
+            <value>Pemba</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/unguja:label">
+            <value>Unguja</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island:label">
+            <value>Did you deliver in a facility in Unguja or Pemba?</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment:label">
+            <value>Delivery Location</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/_id:label">
+            <value>Household UUID</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/parent/_id:label">
+            <value>Catchment area UUID</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/parent/parent/_id:label">
+            <value>Supervisory area UUID</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/first_name:label">
+            <value>What is their first name?</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/last_name:label">
+            <value>What is their family name?</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/middle_name:label">
+            <value>What is their middle name?</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/_id:label">
+            <value>Household</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/_id:label">
+            <value>Catchment Area</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/parent/_id:label">
+            <value>Supervisory Area</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/sex/female:label">
+            <value>Female</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/sex/male:label">
+            <value>Male</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/sex:label">
+            <value>What is <output value=" /delivery_outcomes/intro_data_capture/child/first_name "/>'s sex?</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/type:label">
+            <value>Type</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child_data_note:label">
+            <value>I'd like to ask you some questions about your baby</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/multiple_child_data_note:label">
+            <value>I'd like to ask you some questions about your babies - I will ask the same set of questions for each, one by one</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture:label">
+            <value>Capture Child Data</value>
+          </text>
+          <text id="/delivery_outcomes/multiple_child_death_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Ask the mother for the dates of death for each child that she has lost.&lt;/span&gt;</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label">
+            <value>More than one</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label">
+            <value>One</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries:label">
+            <value>Did <output value=" /delivery_outcomes/client_name "/> deliver one baby or more than one baby</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/no:label">
+            <value>No</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth:label">
+            <value>Is the baby alive?</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
+            <value>Delivery of between 2 and 4 babies is supported</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:label">
+            <value>How many babies did <output value=" /delivery_outcomes/client_name "/> deliver?</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
+            <value>Enter a number between 0 and the total number of babies delivered</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:label">
+            <value>How many of the babies are alive?</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries:label">
+            <value>Number of Deliveries</value>
+          </text>
+          <text id="static_instance-delivery_facility-0">
+            <value>Chake Chake District Hospital</value>
+          </text>
+          <text id="static_instance-delivery_facility-1">
+            <value>Pujini PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-10">
+            <value>Kiuyu Mbuyuni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-11">
+            <value>Bogoa PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-12">
+            <value>Kengeja PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-13">
+            <value>Abdallah Mzee District Hospital</value>
+          </text>
+          <text id="static_instance-delivery_facility-14">
+            <value>Michenzani PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-15">
+            <value>Fundo PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-16">
+            <value>Kojani PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-17">
+            <value>Makongeni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-18">
+            <value>Wete District Hospital</value>
+          </text>
+          <text id="static_instance-delivery_facility-19">
+            <value>Mzambarauni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-2">
+            <value>Tundauwa PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-20">
+            <value>Junguni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-21">
+            <value>Ukunjwi PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-22">
+            <value>Uondwe PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-23">
+            <value>Chwaka PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-24">
+            <value>Mwera PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-25">
+            <value>Unguja Ukuu PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-26">
+            <value>Uzini PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-27">
+            <value>Uroa PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-28">
+            <value>Kivunge District Hospital</value>
+          </text>
+          <text id="static_instance-delivery_facility-29">
+            <value>Matemwe PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-3">
+            <value>Vitongoji PHCC</value>
+          </text>
+          <text id="static_instance-delivery_facility-30">
+            <value>Nungwi PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-31">
+            <value>Pwani Mchangani PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-32">
+            <value>Tumbatu Gomani PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-33">
+            <value>Kendwa PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-34">
+            <value>Bumbwini Misufini PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-35">
+            <value>Donge Vijibweni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-36">
+            <value>Kiongwe PHCU</value>
+          </text>
+          <text id="static_instance-delivery_facility-37">
+            <value>Kitope PHCU</value>
+          </text>
+          <text id="static_instance-delivery_facility-38">
+            <value>Mahonda PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-39">
+            <value>Jambiani PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-4">
+            <value>Wesha PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-40">
+            <value>Makunduchi District Hospital</value>
+          </text>
+          <text id="static_instance-delivery_facility-41">
+            <value>Muyuni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-42">
+            <value>Bwejuu PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-43">
+            <value>Chumbuni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-44">
+            <value>Mnazi Mmoja Hospital</value>
+          </text>
+          <text id="static_instance-delivery_facility-45">
+            <value>Mwembeladu MCH Clinic</value>
+          </text>
+          <text id="static_instance-delivery_facility-46">
+            <value>Sebleni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-47">
+            <value>Chukwani PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-48">
+            <value>Fuoni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-49">
+            <value>Kombeni PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-5">
+            <value>Konde PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-50">
+            <value>Mtofaani PHCU+ (Kinuni)</value>
+          </text>
+          <text id="static_instance-delivery_facility-51">
+            <value>Bumbwisudi PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-52">
+            <value>Selem PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-53">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-54">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-55">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-56">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-57">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-58">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-59">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-6">
+            <value>Makangale PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-60">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-61">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-62">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-63">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-delivery_facility-7">
+            <value>Maziwa Ngombe PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_facility-8">
+            <value>Micheweni PHCC</value>
+          </text>
+          <text id="static_instance-delivery_facility-9">
+            <value>Wingwi PHCU+</value>
+          </text>
+          <text id="static_instance-delivery_location-0">
+            <value>Healthcare facility</value>
+          </text>
+          <text id="static_instance-delivery_location-1">
+            <value>On the way to a healthcare facility</value>
+          </text>
+          <text id="static_instance-delivery_location-2">
+            <value>At home / in the community</value>
+          </text>
+          <text id="static_instance-facility_district-0">
+            <value>North A</value>
+          </text>
+          <text id="static_instance-facility_district-1">
+            <value>North B</value>
+          </text>
+          <text id="static_instance-facility_district-10">
+            <value>Wete</value>
+          </text>
+          <text id="static_instance-facility_district-2">
+            <value>Central</value>
+          </text>
+          <text id="static_instance-facility_district-3">
+            <value>South</value>
+          </text>
+          <text id="static_instance-facility_district-4">
+            <value>West A</value>
+          </text>
+          <text id="static_instance-facility_district-5">
+            <value>West B</value>
+          </text>
+          <text id="static_instance-facility_district-6">
+            <value>Urban</value>
+          </text>
+          <text id="static_instance-facility_district-7">
+            <value>Chake Chake</value>
+          </text>
+          <text id="static_instance-facility_district-8">
+            <value>Micheweni</value>
+          </text>
+          <text id="static_instance-facility_district-9">
+            <value>Mkoani</value>
+          </text>
+          <text id="static_instance-facility_island-0">
+            <value>Unguja</value>
+          </text>
+          <text id="static_instance-facility_island-1">
+            <value>Pemba</value>
+          </text>
+          <text id="static_instance-facility_island-2">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-0">
+            <value>Traditional birth attendant</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-1">
+            <value>Family member</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-2">
+            <value>Neighbor / friend</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-3">
+            <value>No one</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-4">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-immediate_cry-0">
+            <value>Yes: Cried immediately, no problem breathing.</value>
+          </text>
+          <text id="static_instance-immediate_cry-1">
+            <value>No: Had difficulty breathing at birth or require resuscitation.</value>
+          </text>
+          <text id="static_instance-major_complications-0">
+            <value>Antepartum hemorrhage</value>
+          </text>
+          <text id="static_instance-major_complications-1">
+            <value>Intrapartum hemorrhage</value>
+          </text>
+          <text id="static_instance-major_complications-10">
+            <value>None of the above</value>
+          </text>
+          <text id="static_instance-major_complications-2">
+            <value>Postpartum hemorrhage</value>
+          </text>
+          <text id="static_instance-major_complications-3">
+            <value>Preeclampsia, eclampsia, or hypertension related</value>
+          </text>
+          <text id="static_instance-major_complications-4">
+            <value>Infection (high fever right after delivery)</value>
+          </text>
+          <text id="static_instance-major_complications-5">
+            <value>Prolonged labor</value>
+          </text>
+          <text id="static_instance-major_complications-6">
+            <value>Large perineal tear</value>
+          </text>
+          <text id="static_instance-major_complications-7">
+            <value>Retained placenta</value>
+          </text>
+          <text id="static_instance-major_complications-8">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-major_complications-9">
+            <value>Does not know</value>
+          </text>
+          <text id="static_instance-method_facility_delivery-0">
+            <value>Skilled normal vaginal delivery</value>
+          </text>
+          <text id="static_instance-method_facility_delivery-1">
+            <value>Caesarian section</value>
+          </text>
+          <text id="static_instance-method_facility_delivery-2">
+            <value>Vacuum extraction or forceps</value>
+          </text>
+          <text id="static_instance-num_deliveries-0">
+            <value>One</value>
+          </text>
+          <text id="static_instance-num_deliveries-1">
+            <value>More than one</value>
+          </text>
+          <text id="static_instance-sex-0">
+            <value>Male</value>
+          </text>
+          <text id="static_instance-sex-1">
+            <value>Female</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data/child_date_of_death:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_data:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/child_death_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/household_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/intro_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information/phone_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/client_information:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/did_deliver:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_loss_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/confirm_delivery:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/admitted_after_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/born_early/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/born_early/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/born_early:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/caesarian:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/facility_delivery_method:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/got_facility_pnc_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/family_member:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/no_one:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/other:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/home_delivery_helper:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/immediate_cry/no:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/immediate_cry/yes:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/immediate_cry:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/dont_know:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/infection:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/large_perineal_tear:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/none:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/other:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/prolonged_labor:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications/retained_placenta:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information/major_complications:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_information:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/facility:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/home:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/in_transit:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_district:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/other:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/pemba:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/unguja:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment/facility_island:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/delivery_location_assessment:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/parent/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/parent/parent/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/parent/parent:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent/parent:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/parent:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/EDD:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/first_name:label">
+            <value>Ni lipi jina lake la kwanza?</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/last_name:label">
+            <value>Ni lipi jina la babu yake?</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/middle_name:label">
+            <value>Ni lipi jina la baba yake?</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/parent/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/parent:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/parent:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/sex/female:label">
+            <value>Mwanamke</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/sex/male:label">
+            <value>Mwanamme</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child/type:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/child_data_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture/multiple_child_data_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/intro_data_capture:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/multiple_child_death_note:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/live_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries/num_live_births:label">
+            <value>-</value>
+          </text>
+          <text id="/delivery_outcomes/number_deliveries:label">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-10">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-11">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-12">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-13">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-14">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-15">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-16">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-17">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-18">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-19">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-20">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-21">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-22">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-23">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-24">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-25">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-26">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-27">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-28">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-29">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-3">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-30">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-31">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-32">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-33">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-34">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-35">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-36">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-37">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-38">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-39">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-4">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-40">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-41">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-42">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-43">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-44">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-45">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-46">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-47">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-48">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-49">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-5">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-50">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-51">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-52">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-53">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-54">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-55">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-56">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-57">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-58">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-59">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-6">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-60">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-61">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-62">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-63">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-7">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-8">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_facility-9">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_location-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_location-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-delivery_location-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-10">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-3">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-4">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-5">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-6">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-7">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-8">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_district-9">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_island-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_island-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-facility_island-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-3">
+            <value>-</value>
+          </text>
+          <text id="static_instance-home_delivery_helper-4">
+            <value>-</value>
+          </text>
+          <text id="static_instance-immediate_cry-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-immediate_cry-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-10">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-3">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-4">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-5">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-6">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-7">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-8">
+            <value>-</value>
+          </text>
+          <text id="static_instance-major_complications-9">
+            <value>-</value>
+          </text>
+          <text id="static_instance-method_facility_delivery-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-method_facility_delivery-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-method_facility_delivery-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-num_deliveries-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-num_deliveries-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-sex-0">
+            <value>Mwanamme</value>
+          </text>
+          <text id="static_instance-sex-1">
+            <value>Mwanamke</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Ndiyo</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>Hapana</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <delivery_outcomes delimiter="#" id="delivery_outcomes" prefix="J1!delivery_outcomes!" version="2019-04-25 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+              <EDD/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+              <parent>
+                <_id/>
+                <parent>
+                  <_id/>
+                  <parent>
+                    <_id/>
+                  </parent>
+                </parent>
+              </parent>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <household_uuid/>
+          <supervisory_area_uuid/>
+          <patient_id/>
+          <client_name/>
+          <client_date_of_birth/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <age_days_display/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <client_EDD/>
+          <week/>
+          <month/>
+          <client_information>
+            <intro_note/>
+            <household_note/>
+            <phone_note/>
+          </client_information>
+          <confirm_delivery>
+            <did_deliver/>
+            <date_of_delivery/>
+            <pregnancy_viable/>
+            <pregnancy_loss_note/>
+            <date_of_pregnancy_loss/>
+            <miscarriage_or_stillbirth/>
+          </confirm_delivery>
+          <number_deliveries>
+            <check_multiple_deliveries/>
+            <num_babies_delivered/>
+            <live_birth/>
+            <num_live_births/>
+          </number_deliveries>
+          <child_death_count/>
+          <child_death_note/>
+          <multiple_child_death_note/>
+          <child_death_data_count/>
+          <child_death_data jr:template="">
+            <child_date_of_death/>
+          </child_death_data>
+          <child_repeat_count/>
+          <delivery_location_assessment>
+            <delivery_location/>
+            <facility_island/>
+            <facility_district/>
+            <delivery_facility/>
+          </delivery_location_assessment>
+          <delivery_information>
+            <facility_delivery_method/>
+            <home_delivery_helper/>
+            <got_facility_pnc/>
+            <got_facility_pnc_note/>
+            <didnt_get_facility_pnc_note/>
+            <refer_flag_no_facility_pnc/>
+            <born_early/>
+            <immediate_cry/>
+            <admitted_after_birth/>
+            <major_complications/>
+          </delivery_information>
+          <intro_data_capture>
+            <child_data_note/>
+            <multiple_child_data_note/>
+            <child_count/>
+            <child db-doc="true" jr:template="">
+              <first_name/>
+              <middle_name/>
+              <last_name/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+              <child_doc db-doc-ref=" /delivery_outcomes/intro_data_capture/child "/>
+              <created_by_doc db-doc-ref="/delivery_outcomes"/>
+              <parent>
+                <_id/>
+                <parent>
+                  <_id/>
+                  <parent>
+                    <_id/>
+                  </parent>
+                </parent>
+              </parent>
+              <type>person</type>
+            </child>
+          </intro_data_capture>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </delivery_outcomes>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="num_deliveries">
+        <root>
+          <item>
+            <itextId>static_instance-num_deliveries-0</itextId>
+            <name>one</name>
+          </item>
+          <item>
+            <itextId>static_instance-num_deliveries-1</itextId>
+            <name>more</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sex">
+        <root>
+          <item>
+            <itextId>static_instance-sex-0</itextId>
+            <name>male</name>
+          </item>
+          <item>
+            <itextId>static_instance-sex-1</itextId>
+            <name>female</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="delivery_location">
+        <root>
+          <item>
+            <itextId>static_instance-delivery_location-0</itextId>
+            <name>facility</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_location-1</itextId>
+            <name>in_transit</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_location-2</itextId>
+            <name>home</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_island">
+        <root>
+          <item>
+            <itextId>static_instance-facility_island-0</itextId>
+            <name>unguja</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-1</itextId>
+            <name>pemba</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-2</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_district">
+        <root>
+          <item>
+            <itextId>static_instance-facility_district-0</itextId>
+            <name>north_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-1</itextId>
+            <name>north_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-2</itextId>
+            <name>central</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-3</itextId>
+            <name>south</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-4</itextId>
+            <name>west_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-5</itextId>
+            <name>west_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-6</itextId>
+            <name>urban</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-7</itextId>
+            <name>chakechake</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-8</itextId>
+            <name>micheweni</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-9</itextId>
+            <name>mkoani</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-10</itextId>
+            <name>wete</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="delivery_facility">
+        <root>
+          <item>
+            <itextId>static_instance-delivery_facility-0</itextId>
+            <name>chakechakedistricthospital</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-1</itextId>
+            <name>pujiniphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-2</itextId>
+            <name>tundauwaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-3</itextId>
+            <name>vitongojiphcc</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-4</itextId>
+            <name>weshaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-5</itextId>
+            <name>kondephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-6</itextId>
+            <name>makangalephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-7</itextId>
+            <name>maziwangombephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-8</itextId>
+            <name>micheweniphcc</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-9</itextId>
+            <name>wingwiphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-10</itextId>
+            <name>kiuyumbuyuniphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-11</itextId>
+            <name>bogoaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-12</itextId>
+            <name>kengejaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-13</itextId>
+            <name>abdallahmzeedistricthospital</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-14</itextId>
+            <name>michenzaniphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-15</itextId>
+            <name>fundophcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-16</itextId>
+            <name>kojaniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-17</itextId>
+            <name>makongeniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-18</itextId>
+            <name>wetedistricthospital</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-19</itextId>
+            <name>mzambarauniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-20</itextId>
+            <name>junguniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-21</itextId>
+            <name>ukunjwiphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-22</itextId>
+            <name>uondwephcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-23</itextId>
+            <name>chwakaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-24</itextId>
+            <name>mweraphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-25</itextId>
+            <name>ungujaukuuphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-26</itextId>
+            <name>uziniphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-27</itextId>
+            <name>uroaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-28</itextId>
+            <name>kivungedistricthospital</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-29</itextId>
+            <name>matemwephcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-30</itextId>
+            <name>nungwiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-31</itextId>
+            <name>pwanimchanganiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-32</itextId>
+            <name>tumbatugomaniphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-33</itextId>
+            <name>kendwaphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-34</itextId>
+            <name>bumbwinimisufiniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-35</itextId>
+            <name>dongevijibweniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-36</itextId>
+            <name>kiongwephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-37</itextId>
+            <name>kitopephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-38</itextId>
+            <name>mahondaphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-39</itextId>
+            <name>jambianiphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-40</itextId>
+            <name>makunduchidistricthospital</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-41</itextId>
+            <name>muyuniphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-42</itextId>
+            <name>bwejuuphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-43</itextId>
+            <name>chumbuniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-44</itextId>
+            <name>mnazimmojahospital</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-45</itextId>
+            <name>mwembeladumchclinic</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-46</itextId>
+            <name>sebleniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-47</itextId>
+            <name>chukwaniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-48</itextId>
+            <name>fuoniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-49</itextId>
+            <name>kombeniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-50</itextId>
+            <name>mtofaaniphcu+(kinuni)</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-51</itextId>
+            <name>bumbwisudiphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-52</itextId>
+            <name>selemphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-53</itextId>
+            <name>other</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-54</itextId>
+            <name>other</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-55</itextId>
+            <name>other</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-56</itextId>
+            <name>other</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-57</itextId>
+            <name>other</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-58</itextId>
+            <name>other</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-59</itextId>
+            <name>other</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-60</itextId>
+            <name>other</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-61</itextId>
+            <name>other</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-62</itextId>
+            <name>other</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-63</itextId>
+            <name>other</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="method_facility_delivery">
+        <root>
+          <item>
+            <itextId>static_instance-method_facility_delivery-0</itextId>
+            <name>normal_vaginal</name>
+          </item>
+          <item>
+            <itextId>static_instance-method_facility_delivery-1</itextId>
+            <name>caesarian</name>
+          </item>
+          <item>
+            <itextId>static_instance-method_facility_delivery-2</itextId>
+            <name>vacuum_forceps</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="home_delivery_helper">
+        <root>
+          <item>
+            <itextId>static_instance-home_delivery_helper-0</itextId>
+            <name>traditional_birth_attendant</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-1</itextId>
+            <name>family_member</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-2</itextId>
+            <name>neighbor_friend</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-3</itextId>
+            <name>no_one</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-4</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="immediate_cry">
+        <root>
+          <item>
+            <itextId>static_instance-immediate_cry-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-immediate_cry-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="major_complications">
+        <root>
+          <item>
+            <itextId>static_instance-major_complications-0</itextId>
+            <name>antepartum_hemorrhage</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-1</itextId>
+            <name>intrapartum_hemorrhage</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-2</itextId>
+            <name>postpartum_hemorrhage</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-3</itextId>
+            <name>preeclampsia_eclampsia</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-4</itextId>
+            <name>infection</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-5</itextId>
+            <name>prolonged_labor</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-6</itextId>
+            <name>large_perineal_tear</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-7</itextId>
+            <name>retained_placenta</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-8</itextId>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-9</itextId>
+            <name>dont_know</name>
+          </item>
+          <item>
+            <itextId>static_instance-major_complications-10</itextId>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/delivery_outcomes/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/name" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/user/EDD" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/name" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/sex" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/parent/_id" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/parent/parent/_id" type="string"/>
+      <bind nodeset="/delivery_outcomes/inputs/contact/parent/parent/parent/_id" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/delivery_outcomes/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/delivery_outcomes/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/delivery_outcomes/created_by_place_uuid" type="string"/>
+      <bind calculate="../inputs/contact/parent/_id" nodeset="/delivery_outcomes/household_uuid" type="string"/>
+      <bind calculate="../inputs/contact/parent/parent/parent/_id" nodeset="/delivery_outcomes/supervisory_area_uuid" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/delivery_outcomes/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/delivery_outcomes/client_name" type="string"/>
+      <bind calculate="../inputs/contact/date_of_birth" nodeset="/delivery_outcomes/client_date_of_birth" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /delivery_outcomes/client_date_of_birth ))" nodeset="/delivery_outcomes/age_days" type="string"/>
+      <bind calculate="int(( /delivery_outcomes/age_days  - ( /delivery_outcomes/age_years  * 12 * 30)) div 30,0)" nodeset="/delivery_outcomes/age_months" type="string"/>
+      <bind calculate="int( /delivery_outcomes/age_days  div (30 *12),0)" nodeset="/delivery_outcomes/age_years" type="string"/>
+      <bind calculate=" /delivery_outcomes/age_days  - ( /delivery_outcomes/age_months  * 30) - ( /delivery_outcomes/age_years  *12*30)" nodeset="/delivery_outcomes/age_days_display" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/delivery_outcomes/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/delivery_outcomes/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/delivery_outcomes/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/delivery_outcomes/phone" type="string"/>
+      <bind calculate="today()" nodeset="/delivery_outcomes/client_EDD" type="string"/>
+      <bind calculate="7" nodeset="/delivery_outcomes/week" type="string"/>
+      <bind calculate="30" nodeset="/delivery_outcomes/month" type="string"/>
+      <bind nodeset="/delivery_outcomes/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/confirm_delivery/did_deliver" required="true()" type="select1"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /delivery_outcomes/month  * 3)))" jr:constraintMsg="jr:itext('/delivery_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" nodeset="/delivery_outcomes/confirm_delivery/date_of_delivery" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)" required="true()" type="date"/>
+      <bind nodeset="/delivery_outcomes/confirm_delivery/pregnancy_viable" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;no&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" relevant="selected( /delivery_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss" relevant="selected( /delivery_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" required="true()" type="date"/>
+      <bind calculate="if((decimal-date-time( /delivery_outcomes/client_EDD ) - decimal-date-time( /delivery_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /delivery_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/delivery_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string"/>
+      <bind nodeset="/delivery_outcomes/number_deliveries" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
+      <bind nodeset="/delivery_outcomes/number_deliveries/check_multiple_deliveries" required="true()" type="select1"/>
+      <bind constraint="2 &lt;= . and . &lt;= 4" jr:constraintMsg="jr:itext('/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')" nodeset="/delivery_outcomes/number_deliveries/num_babies_delivered" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
+      <bind nodeset="/delivery_outcomes/number_deliveries/live_birth" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" required="true()" type="select1"/>
+      <bind constraint="0 &lt;= . and . &lt;=  /delivery_outcomes/number_deliveries/num_babies_delivered " jr:constraintMsg="jr:itext('/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg')" nodeset="/delivery_outcomes/number_deliveries/num_live_births" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
+      <bind calculate="if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),
+ 0,
+ if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;no&quot;),
+ 1,
+  /delivery_outcomes/number_deliveries/num_babies_delivered  -  /delivery_outcomes/number_deliveries/num_live_births ))" nodeset="/delivery_outcomes/child_death_count" type="string"/>
+      <bind nodeset="/delivery_outcomes/child_death_note" readonly="true()" relevant=" /delivery_outcomes/child_death_count  &gt; 0" type="string"/>
+      <bind nodeset="/delivery_outcomes/multiple_child_death_note" readonly="true()" relevant=" /delivery_outcomes/child_death_count  &gt; 1" type="string"/>
+      <bind calculate=" /delivery_outcomes/child_death_count " nodeset="/delivery_outcomes/child_death_data_count" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/child_death_data" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_death_count  &gt; 0"/>
+      <bind constraint="date-time(decimal-date-time( /delivery_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')" nodeset="/delivery_outcomes/child_death_data/child_date_of_death" required="true()" type="date"/>
+      <bind calculate="if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),1,if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;no&quot;),0, /delivery_outcomes/number_deliveries/num_live_births ))" nodeset="/delivery_outcomes/child_repeat_count" type="string"/>
+      <bind nodeset="/delivery_outcomes/delivery_location_assessment" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/delivery_outcomes/delivery_location_assessment/delivery_location" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_location_assessment/facility_island" relevant="selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_location_assessment/facility_district" relevant="selected( /delivery_outcomes/delivery_location_assessment/facility_island ,&quot;unguja&quot;) or selected( /delivery_outcomes/delivery_location_assessment/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_location_assessment/delivery_facility" relevant="selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;north_a&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;north_b&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;central&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;south&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;west_a&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;west_b&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;urban&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;chakechake&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;micheweni&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;mkoani&quot;) or 
+selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_information" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/facility_delivery_method" relevant="selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/home_delivery_helper" relevant="not(selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/got_facility_pnc" relevant="not(selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/got_facility_pnc_note" readonly="true()" relevant="selected( /delivery_outcomes/delivery_information/got_facility_pnc ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note" readonly="true()" relevant="selected( /delivery_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;)" type="string"/>
+      <bind calculate="if(selected( /delivery_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;),1,0)" nodeset="/delivery_outcomes/delivery_information/refer_flag_no_facility_pnc" type="string"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/born_early" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/immediate_cry" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/admitted_after_birth" required="true()" type="select1"/>
+      <bind nodeset="/delivery_outcomes/delivery_information/major_complications" required="true()" type="select"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/child_data_note" readonly="true()" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" type="string"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/multiple_child_data_note" readonly="true()" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" type="string"/>
+      <bind calculate=" /delivery_outcomes/child_repeat_count " nodeset="/delivery_outcomes/intro_data_capture/child_count" readonly="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/child/first_name" required="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/child/middle_name" required="true()" type="string"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/child/last_name" required="true()" type="string"/>
+      <bind calculate="concat( /delivery_outcomes/intro_data_capture/child/first_name ,&quot; &quot;,  /delivery_outcomes/intro_data_capture/child/middle_name ,&quot; &quot;,  /delivery_outcomes/intro_data_capture/child/last_name )" nodeset="/delivery_outcomes/intro_data_capture/child/name" type="string"/>
+      <bind nodeset="/delivery_outcomes/intro_data_capture/child/sex" required="true()" type="select1"/>
+      <bind calculate=" /delivery_outcomes/confirm_delivery/date_of_delivery " nodeset="/delivery_outcomes/intro_data_capture/child/date_of_birth" type="string"/>
+      <bind calculate=" /delivery_outcomes/intro_data_capture/child " nodeset="/delivery_outcomes/intro_data_capture/child/child_doc" type="string"/>
+      <bind calculate="." nodeset="/delivery_outcomes/intro_data_capture/child/created_by_doc" type="string"/>
+      <bind calculate=" /delivery_outcomes/household_uuid " nodeset="/delivery_outcomes/intro_data_capture/child/parent/_id" type="string"/>
+      <bind calculate=" /delivery_outcomes/created_by_place_uuid " nodeset="/delivery_outcomes/intro_data_capture/child/parent/parent/_id" type="string"/>
+      <bind calculate=" /delivery_outcomes/supervisory_area_uuid " nodeset="/delivery_outcomes/intro_data_capture/child/parent/parent/parent/_id" type="string"/>
+      <bind calculate="&quot;person&quot;" nodeset="/delivery_outcomes/intro_data_capture/child/type" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/delivery_outcomes/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="hidden" ref="/delivery_outcomes/inputs">
+      <group ref="/delivery_outcomes/inputs/user">
+        <input ref="/delivery_outcomes/inputs/user/contact_id">
+          <label ref="jr:itext('/delivery_outcomes/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/delivery_outcomes/inputs/user/facility_id">
+          <label ref="jr:itext('/delivery_outcomes/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/delivery_outcomes/inputs/user/name">
+          <label ref="jr:itext('/delivery_outcomes/inputs/user/name:label')"/>
+        </input>
+        <input ref="/delivery_outcomes/inputs/user/EDD"/>
+      </group>
+      <group ref="/delivery_outcomes/inputs/contact">
+        <input ref="/delivery_outcomes/inputs/contact/_id"/>
+        <input ref="/delivery_outcomes/inputs/contact/name"/>
+        <input ref="/delivery_outcomes/inputs/contact/sex"/>
+        <input ref="/delivery_outcomes/inputs/contact/date_of_birth"/>
+        <group ref="/delivery_outcomes/inputs/contact/parent">
+          <input ref="/delivery_outcomes/inputs/contact/parent/_id">
+            <label ref="jr:itext('/delivery_outcomes/inputs/contact/parent/_id:label')"/>
+          </input>
+          <group ref="/delivery_outcomes/inputs/contact/parent/parent">
+            <input ref="/delivery_outcomes/inputs/contact/parent/parent/_id">
+              <label ref="jr:itext('/delivery_outcomes/inputs/contact/parent/parent/_id:label')"/>
+            </input>
+            <group ref="/delivery_outcomes/inputs/contact/parent/parent/parent">
+              <input ref="/delivery_outcomes/inputs/contact/parent/parent/parent/_id">
+                <label ref="jr:itext('/delivery_outcomes/inputs/contact/parent/parent/parent/_id:label')"/>
+              </input>
+            </group>
+          </group>
+        </group>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/client_information">
+      <label ref="jr:itext('/delivery_outcomes/client_information:label')"/>
+      <input ref="/delivery_outcomes/client_information/intro_note">
+        <label ref="jr:itext('/delivery_outcomes/client_information/intro_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/client_information/household_note">
+        <label ref="jr:itext('/delivery_outcomes/client_information/household_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/client_information/phone_note">
+        <label ref="jr:itext('/delivery_outcomes/client_information/phone_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/confirm_delivery">
+      <label ref="jr:itext('/delivery_outcomes/confirm_delivery:label')"/>
+      <select1 ref="/delivery_outcomes/confirm_delivery/did_deliver">
+        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/delivery_outcomes/confirm_delivery/date_of_delivery">
+        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/date_of_delivery:label')"/>
+      </input>
+      <select1 ref="/delivery_outcomes/confirm_delivery/pregnancy_viable">
+        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_viable:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_viable/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_viable/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/delivery_outcomes/confirm_delivery/pregnancy_loss_note">
+        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_loss_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss">
+        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/number_deliveries">
+      <label ref="jr:itext('/delivery_outcomes/number_deliveries:label')"/>
+      <select1 ref="/delivery_outcomes/number_deliveries/check_multiple_deliveries">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label')"/>
+          <value>one</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label')"/>
+          <value>more</value>
+        </item>
+      </select1>
+      <input ref="/delivery_outcomes/number_deliveries/num_babies_delivered">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/num_babies_delivered:label')"/>
+      </input>
+      <select1 ref="/delivery_outcomes/number_deliveries/live_birth">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/delivery_outcomes/number_deliveries/num_live_births">
+        <label ref="jr:itext('/delivery_outcomes/number_deliveries/num_live_births:label')"/>
+      </input>
+    </group>
+    <input ref="/delivery_outcomes/child_death_note">
+      <label ref="jr:itext('/delivery_outcomes/child_death_note:label')"/>
+    </input>
+    <input ref="/delivery_outcomes/multiple_child_death_note">
+      <label ref="jr:itext('/delivery_outcomes/multiple_child_death_note:label')"/>
+    </input>
+    <group ref="/delivery_outcomes/child_death_data">
+      <label ref="jr:itext('/delivery_outcomes/child_death_data:label')"/>
+      <repeat appearance="field-list" jr:count=" /delivery_outcomes/child_death_data_count " nodeset="/delivery_outcomes/child_death_data">
+        <input ref="/delivery_outcomes/child_death_data/child_date_of_death">
+          <label ref="jr:itext('/delivery_outcomes/child_death_data/child_date_of_death:label')"/>
+        </input>
+      </repeat>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/delivery_location_assessment">
+      <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment:label')"/>
+      <select1 ref="/delivery_outcomes/delivery_location_assessment/delivery_location">
+        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location/facility:label')"/>
+          <value>facility</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location/in_transit:label')"/>
+          <value>in_transit</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location/home:label')"/>
+          <value>home</value>
+        </item>
+      </select1>
+      <select1 ref="/delivery_outcomes/delivery_location_assessment/facility_island">
+        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island/unguja:label')"/>
+          <value>unguja</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island/pemba:label')"/>
+          <value>pemba</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <select1 ref="/delivery_outcomes/delivery_location_assessment/facility_district">
+        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_district:label')"/>
+        <itemset nodeset="instance('facility_district')/root/item[choice_filter= /delivery_outcomes/delivery_location_assessment/facility_island ]">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/delivery_outcomes/delivery_location_assessment/delivery_facility">
+        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_facility:label')"/>
+        <itemset nodeset="instance('delivery_facility')/root/item[choice_filter= /delivery_outcomes/delivery_location_assessment/facility_district ]">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/delivery_outcomes/delivery_information">
+      <label ref="jr:itext('/delivery_outcomes/delivery_information:label')"/>
+      <select1 ref="/delivery_outcomes/delivery_information/facility_delivery_method">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label')"/>
+          <value>normal_vaginal</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method/caesarian:label')"/>
+          <value>caesarian</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label')"/>
+          <value>vacuum_forceps</value>
+        </item>
+      </select1>
+      <select1 ref="/delivery_outcomes/delivery_information/home_delivery_helper">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label')"/>
+          <value>traditional_birth_attendant</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/family_member:label')"/>
+          <value>family_member</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label')"/>
+          <value>neighbor_friend</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/no_one:label')"/>
+          <value>no_one</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <select1 ref="/delivery_outcomes/delivery_information/got_facility_pnc">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/delivery_outcomes/delivery_information/got_facility_pnc_note">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note:label')"/>
+      </input>
+      <select1 ref="/delivery_outcomes/delivery_information/born_early">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/born_early:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/born_early/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/born_early/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/delivery_outcomes/delivery_information/immediate_cry">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/immediate_cry:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/immediate_cry/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/immediate_cry/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/delivery_outcomes/delivery_information/admitted_after_birth">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/admitted_after_birth:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/admitted_after_birth/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/admitted_after_birth/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/delivery_outcomes/delivery_information/major_complications">
+        <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications:label')"/>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label')"/>
+          <value>antepartum_hemorrhage</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label')"/>
+          <value>intrapartum_hemorrhage</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label')"/>
+          <value>postpartum_hemorrhage</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label')"/>
+          <value>preeclampsia_eclampsia</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/infection:label')"/>
+          <value>infection</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/prolonged_labor:label')"/>
+          <value>prolonged_labor</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/large_perineal_tear:label')"/>
+          <value>large_perineal_tear</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/retained_placenta:label')"/>
+          <value>retained_placenta</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/other:label')"/>
+          <value>other</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/dont_know:label')"/>
+          <value>dont_know</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/none:label')"/>
+          <value>none</value>
+        </item>
+      </select>
+    </group>
+    <group appearance="field-list" ref="/delivery_outcomes/intro_data_capture">
+      <label ref="jr:itext('/delivery_outcomes/intro_data_capture:label')"/>
+      <input ref="/delivery_outcomes/intro_data_capture/child_data_note">
+        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child_data_note:label')"/>
+      </input>
+      <input ref="/delivery_outcomes/intro_data_capture/multiple_child_data_note">
+        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/multiple_child_data_note:label')"/>
+      </input>
+      <group ref="/delivery_outcomes/intro_data_capture/child">
+        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child:label')"/>
+        <repeat appearance="field-list" jr:count=" /delivery_outcomes/intro_data_capture/child_count " nodeset="/delivery_outcomes/intro_data_capture/child">
+          <input ref="/delivery_outcomes/intro_data_capture/child/first_name">
+            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/first_name:label')"/>
+          </input>
+          <input ref="/delivery_outcomes/intro_data_capture/child/middle_name">
+            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/middle_name:label')"/>
+          </input>
+          <input ref="/delivery_outcomes/intro_data_capture/child/last_name">
+            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/last_name:label')"/>
+          </input>
+          <select1 ref="/delivery_outcomes/intro_data_capture/child/sex">
+            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/sex:label')"/>
+            <item>
+              <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/sex/male:label')"/>
+              <value>male</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/sex/female:label')"/>
+              <value>female</value>
+            </item>
+          </select1>
+          <group ref="/delivery_outcomes/intro_data_capture/child/parent">
+            <group ref="/delivery_outcomes/intro_data_capture/child/parent/parent">
+              <group ref="/delivery_outcomes/intro_data_capture/child/parent/parent/parent"/>
+            </group>
+          </group>
+        </repeat>
+      </group>
+    </group>
+  </h:body>
+</h:html>
