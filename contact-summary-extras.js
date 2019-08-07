@@ -53,4 +53,43 @@ module.exports = {
     }
     return null;
   },
+
+  getPositiveConsentingPregnancyRegistrations: function() {
+    var positiveConsentingPregnancyRegistrations = [];
+    positiveConsentingPregnancyRegistrations = reports.filter(function(r) {
+      return r.form === 'pregnancy' &&
+             r.form.fields &&
+             r.form.fields.pregnancy_form &&
+             r.form.fields.pregnancy_form.consent === 'yes';
+    });
+    return positiveConsentingPregnancyRegistrations.length;
+  },
+
+  getPregnancyOutcomes: function() {
+    var deliveryOutcomes = [];
+    var earlyTerminations = [];
+    deliveryOutcomes = reports.filter(function(r) {
+      return r.form === 'delivery_outcomes' &&
+             r.form.fields &&
+             r.form.fields.confirm_delivery &&
+             (r.form.fields.confirm_delivery.did_deliver === 'yes' ||
+             r.form.fields.confirm_delivery.pregnancy_viable === 'no');
+    });
+    earlyTerminations = reports.filter(function(r) {
+      return r.form === 'pregnancy' &&
+             r.form.fields &&
+             r.form.fields.visit_introduction &&
+             r.form.fields.visit_introduction.viable_pregnancy === 'no';
+    });
+    return deliveryOutcomes.length + earlyTerminations.length;
+  },
+
+  currentlyPregnant: function() {
+    if (this.getPositiveConsentingPregnancyRegistrations() > this.getPregnancyOutcomes()) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  },
 };

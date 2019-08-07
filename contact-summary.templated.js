@@ -3,7 +3,8 @@ module.exports = {
     household_head: extras.getContactHouseholdHead(),
     house_number: extras.getContactHouseNumber(),
     kitongoji: extras.getContactHouseKitongoji(),
-    phone: extras.getContactPhone()
+    phone: extras.getContactPhone(),
+    currently_pregnant: extras.currentlyPregnant(),
   },
 
   fields: [

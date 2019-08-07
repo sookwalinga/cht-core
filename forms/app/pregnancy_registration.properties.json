@@ -13,6 +13,6 @@
   "context": {
     "person": true,
     "place": false,
-    "expression": "contact.type === 'person' && contact.sex === 'female'"
+    "expression": "contact.type === 'person' && contact.sex === 'female' && contact.summary.currently_pregnant === 0"
   }
 }
