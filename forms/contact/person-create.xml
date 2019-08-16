@@ -163,7 +163,7 @@
             <value>Baada ya usajili huu, nimeona kuwa una mtoto mwenye umri chini ya miaka 5 ambaye atafaidika na mpango huu wa taifa, kwa hivyo ningependa kurudi baadae kwa ajili ya kuangalia afya yake, lishe na Makuzi ya mtoto. Je una swali lolote kufikia hapa?</value>
           </text>
           <text id="/data/person/return_women_note:label">
-            <value>Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
+            <value>Umri wa <output value=" /data/person/first_name_c "/> unaonesha kwamba anaweza kupata ujauzito. Ningeomba ridhaa yako kurudia ili kuja kuzungumza naye mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
           </text>
           <text id="/data/person/sex/female:label">
             <value>Mwanamke</value>
@@ -186,7 +186,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-06-29_06-40">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-08-15_06-55">
           <inputs>
             <meta>
               <location>
@@ -354,7 +354,7 @@
       <input ref="/data/person/return_children_note">
         <label ref="jr:itext('/data/person/return_children_note:label')"/>
       </input>
-      <input appearance="hidden" ref="/data/person/return_women_note">
+      <input ref="/data/person/return_women_note">
         <label ref="jr:itext('/data/person/return_women_note:label')"/>
       </input>
       <input appearance="hidden" ref="/data/person/debug_note">

@@ -151,6 +151,9 @@
           <text id="/data/init/age_estimate_contact:label">
             <value>What is <output value=" /data/init/first_name_contact "/>'s estimated age in years?</value>
           </text>
+          <text id="/data/init/contact_reproductive_age_note:label">
+            <value>You are of reproductive age. I'd like to ask your permission to return later to speak with you personally about issues related to health during pregnancy and childbirth.</value>
+          </text>
           <text id="/data/init/dob_contact:jr:constraintMsg">
             <value>Calculated age must be between 12 and 100!</value>
           </text>
@@ -229,7 +232,8 @@
 &lt;span style="color:#f58a1f"&gt;Explain who you are and what your role as a community health volunteer is. Key points to mention include:&lt;/span&gt;
 
 &lt;span style="display:block;padding-left:1em"&gt;This is a nationwide effort implemented by the Ministry of Health to improve health services for communities in Zanzibar.&lt;/span&gt; 
-&lt;span style="display:block;padding-left:1em"&gt;Every area will now have a CHV who can care for families and children up to age 5 in all issues related to their health care, nutrition, and child development.&lt;/span&gt;</value>
+&lt;span style="display:block;padding-left:1em"&gt;Every area will now have a CHV who can care for families and children up to age 5 in all issues related to their health care, nutrition, and child development.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;The CHVs will also be visiting and providing counseling for pregnant women and mothers who have delivered. &lt;/span&gt;</value>
           </text>
           <text id="/data/other_members_registration_note:label">
             <value>Now that I've registered your households primary contact person, I'll continue to register all of the other members of your household.</value>
@@ -286,6 +290,9 @@
           </text>
           <text id="/data/repeat/child/return_women_note:label">
             <value>I see that there are some women of reproductive age in your family. I'd like to ask your permission to return later to speak with them personally about issues related to health during pregnancy and childbirth.</value>
+          </text>
+          <text id="/data/repeat/child/return_women_note_to_chv:label">
+            <value>Please adapt the explanation below depending on who is of reproductive age.</value>
           </text>
           <text id="/data/repeat/child/sex/female:label">
             <value>Female</value>
@@ -477,6 +484,9 @@
           <text id="/data/init/age_estimate_contact:label">
             <value>Je kwa makadirio <output value=" /data/init/first_name_contact "/> ana miaka mingapi?</value>
           </text>
+          <text id="/data/init/contact_reproductive_age_note:label">
+            <value>Umri wako unaonesha kwamba unaweza kupata ujauzito. Ningeomba ridhaa yako kurudia ili kuja kuzungumza na wewe mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
+          </text>
           <text id="/data/init/dob_contact:jr:constraintMsg">
             <value>Umri uliohesabiwa ni lazima uwe kati ya miaka 12 na 100</value>
           </text>
@@ -560,7 +570,7 @@
 
 &lt;span style="color:#f58a1f"&gt;Taja jina lako na shehia.&lt;/span&gt;
 
-&lt;span style="display:block;padding-left:1em"&gt;Mimi ni mhudumu wa afya ya jamii,Nafanya kazi katika mpango wa taifa wa afya ya jamii chini ya wizara ya afya Zanzibar, Kila eneo sasa litakua na mhudumu wa afya ya jamii ambae atashughulika na afya ya familia na watoto chini ya miaka mitano katika masuala ya lishe na makuzi ya mtoto.&lt;/span&gt;</value>
+&lt;span style="display:block;padding-left:1em"&gt;Mimi ni mhudumu wa afya ya jamii. Nafanya kazi katika mpango wa taifa wa afya ya jamii chini ya wizara ya afya Zanzibar. Kila eneo sasa litakua na mhudumu wa afya ya jamii ambae atashughulika afya ya mama mjamzito, mama aliyejifungua, na watoto chini ya miaka mitano katika masuala ya lishe na makuzi ya mtoto.&lt;/span&gt;</value>
           </text>
           <text id="/data/other_members_registration_note:label">
             <value>Sasa kwa vile nishasajili mtu wa karibu kwa ajili ya mawasiliano na mimi kwenye nyumba hii, nitaendelea kusajili kila mtu anaeishi nyumbani kwako.</value>
@@ -625,6 +635,9 @@
           <text id="/data/repeat/child/return_women_note:label">
             <value>Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
           </text>
+          <text id="/data/repeat/child/return_women_note_to_chv:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali zingatia kwamba ikiwa mkuu wa kaya ni mwanamke ambaye anaweza kushika ujauzito, tafadhali mjumuishe katika maelezo yafuatayo.&lt;/span&gt;</value>
+          </text>
           <text id="/data/repeat/child/sex/female:label">
             <value>Mwanamke</value>
           </text>
@@ -652,7 +665,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-07-01_02-09">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-08-16_00-25">
           <inputs>
             <meta>
               <location>
@@ -730,6 +743,7 @@
             <dob_contact_calc/>
             <age_contact_years/>
             <reproductive_age_c/>
+            <contact_reproductive_age_note/>
           </init>
           <other_members_registration_note/>
           <repeat>
@@ -759,6 +773,7 @@
               <reproductive_age/>
               <is_under_5_binary/>
               <return_children_note/>
+              <return_women_note_to_chv/>
               <return_women_note/>
               <debug_note/>
               <meta tag="hidden">
@@ -833,6 +848,7 @@
       <bind calculate="format-date(if(../dob_contact != '', ../dob_contact,concat(../yob_contact, '-01-01')), '%Y-%m-%d')" nodeset="/data/init/dob_contact_calc" type="string"/>
       <bind calculate="(decimal-date-time(today()) - decimal-date-time( /data/init/dob_contact_calc )) div 365" nodeset="/data/init/age_contact_years" type="string"/>
       <bind calculate="if(selected( /data/init/sex_contact ,&quot;female&quot;) and  /data/init/age_contact_years  &gt;= 15 and  /data/init/age_contact_years  &lt;= 49,1,0)" nodeset="/data/init/reproductive_age_c" type="string"/>
+      <bind nodeset="/data/init/contact_reproductive_age_note" readonly="true()" relevant=" /data/init/reproductive_age_c =1 and  /data/hh_member_count/num_hh_members  = 1" type="string"/>
       <bind nodeset="/data/other_members_registration_note" readonly="true()" relevant=" /data/hh_member_count/num_hh_members &gt;1" type="string"/>
       <bind nodeset="/data/repeat" relevant=" /data/hh_member_count/num_hh_members &gt;1"/>
       <bind calculate=" /data/hh_member_count/num_hh_members -1" nodeset="/data/repeat/child_count" readonly="true()" type="string"/>
@@ -860,6 +876,7 @@
       <bind calculate="if( /data/repeat/child/sex_c =&quot;female&quot; and ((((decimal-date-time(today()) - decimal-date-time( /data/repeat/child/date_of_birth_c )) div 365) &gt;= 15 and ((decimal-date-time(today()) - decimal-date-time( /data/repeat/child/date_of_birth_c )) div 365) &lt;= 49)),int(1),int(0))" nodeset="/data/repeat/child/reproductive_age" type="string"/>
       <bind calculate="if(selected( /data/repeat/child/exact_dob_known_c ,&quot;yes&quot;),if(((decimal-date-time(today()) - decimal-date-time( /data/repeat/child/date_of_birth_c )) div 30) &lt; 60,1,0),0)" nodeset="/data/repeat/child/is_under_5_binary" type="string"/>
       <bind nodeset="/data/repeat/child/return_children_note" readonly="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and  /data/repeat/child/is_under_5_binary =1 and  /data/repeat/child/is_exact_dob_in_range  = 1" type="string"/>
+      <bind nodeset="/data/repeat/child/return_women_note_to_chv" readonly="true()" relevant=" /data/repeat/child/reproductive_age  = 1 or  /data/init/reproductive_age_c  = 1" type="string"/>
       <bind nodeset="/data/repeat/child/return_women_note" readonly="true()" relevant=" /data/repeat/child/reproductive_age  = 1 or  /data/init/reproductive_age_c  = 1" type="string"/>
       <bind nodeset="/data/repeat/child/debug_note" readonly="true()" type="string"/>
       <bind calculate="../../../../name" nodeset="/data/repeat/child/meta/created_by" type="string"/>
@@ -972,6 +989,9 @@
         <label ref="jr:itext('/data/init/secondary_phone_contact:label')"/>
         <hint ref="jr:itext('/data/init/secondary_phone_contact:hint')"/>
       </input>
+      <input ref="/data/init/contact_reproductive_age_note">
+        <label ref="jr:itext('/data/init/contact_reproductive_age_note:label')"/>
+      </input>
       <group appearance="field-list" ref="/data/contact">
         <input appearance="hidden" ref="/data/contact/parent"/>
         <group ref="/data/contact/meta"/>
@@ -1033,7 +1053,10 @@
           <input ref="/data/repeat/child/return_children_note">
             <label ref="jr:itext('/data/repeat/child/return_children_note:label')"/>
           </input>
-          <input appearance="hidden" ref="/data/repeat/child/return_women_note">
+          <input ref="/data/repeat/child/return_women_note_to_chv">
+            <label ref="jr:itext('/data/repeat/child/return_women_note_to_chv:label')"/>
+          </input>
+          <input ref="/data/repeat/child/return_women_note">
             <label ref="jr:itext('/data/repeat/child/return_women_note:label')"/>
           </input>
           <input appearance="hidden" ref="/data/repeat/child/debug_note">
