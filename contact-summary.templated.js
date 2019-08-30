@@ -5,15 +5,21 @@ module.exports = {
     kitongoji: extras.getContactHouseKitongoji(),
     phone: extras.getContactPhone(),
     currently_pregnant: extras.currentlyPregnant(),
+    n_pregnancy_visits: extras.countPregnancyVisitsForThisPregnancy(),
+    show_research_questions: extras.shouldResearchQnsBeShown(),
+    n_previous_anc_visits: extras.getRecentANCCountForThisPregnancy(),
+    previous_hiv_status: extras.showPMTCT(),
+    previous_rchcard_status: extras.showPregnancyEDDEstimation(),
+    hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant()
   },
 
   fields: [
-    { appliesToType:'person', appliesIf:function() { return contact.parent && lineage[1];},  label:'contact.age', value:contact.date_of_birth, width: 4, filter: 'age' },
-    { appliesToType:'person', appliesIf:function() { return contact.parent && lineage[1];}, label:'contact.sex', value:contact.sex === 'male'?'Mwanamme':'Mwanamke', width: 4},
-    { appliesToType:'person',  appliesIf:function() { return contact.phone; }, label:'contact.phone', value:contact.phone, width: 4, filter:'phone'},
-    { appliesToType:'person',  appliesIf:function() { return contact.parent && !contact.phone && lineage[1] && lineage[1].parent;},label:'contact.phone',value: lineage[0] && lineage[0].contact?lineage[0].contact.phone:'',width: 4,filter:'phone'},
-    { appliesToType:'person', appliesIf:function() { return contact.parent && lineage[1];} , label:'contact.parent', value:lineage[0], filter: 'lineage' },
-    { appliesToType:'person',appliesIf: function() { return !contact.parent.parent.parent;}, label:'contact.grandparent', value:lineage[0], filter: 'lineage' }
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, label: 'contact.age', value: contact.date_of_birth, width: 4, filter: 'age' },
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, label: 'contact.sex', value: contact.sex === 'male' ? 'Mwanamme' : 'Mwanamke', width: 4 },
+    { appliesToType: 'person', appliesIf: function () { return contact.phone; }, label: 'contact.phone', value: contact.phone, width: 4, filter: 'phone' },
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && !contact.phone && lineage[1] && lineage[1].parent; }, label: 'contact.phone', value: lineage[0] && lineage[0].contact ? lineage[0].contact.phone : '', width: 4, filter: 'phone' },
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, label: 'contact.parent', value: lineage[0], filter: 'lineage' },
+    { appliesToType: 'person', appliesIf: function () { return !contact.parent.parent.parent; }, label: 'contact.grandparent', value: lineage[0], filter: 'lineage' }
   ],
 
   cards: [
