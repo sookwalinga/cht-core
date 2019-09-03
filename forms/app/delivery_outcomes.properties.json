@@ -2,17 +2,17 @@
   "title": [
     {
       "locale": "en",
-      "content": "Delivery Outcomes"
+      "content": "Register Pregnancy Outcome"
     },
     {
       "locale": "sw",
-      "content": ""
+      "content": "Sajili matokeo ya ujauzito"
     }
   ],
   "icon": "mother-child",
   "context": {
     "person": true,
     "place": false,
-    "expression": "contact.type === 'person' && contact.sex === 'female'"
+    "expression": "contact.type === 'person' && contact.sex === 'female' && summary.currently_pregnant === true"
   }
 }

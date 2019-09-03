@@ -746,9 +746,10 @@ module.exports = {
           r.fields &&
           r.fields.confirm_delivery &&
           r.fields.confirm_delivery.did_deliver &&
+          ((r.fields.confirm_delivery.did_deliver === 'yes') ||
+          (r.fields.confirm_delivery.did_deliver === 'no' &&
           r.fields.confirm_delivery.pregnancy_viable &&
-          (r.fields.confirm_delivery.did_deliver === 'yes' ||
-            r.fields.confirm_delivery.pregnancy_viable === 'no');
+          r.fields.confirm_delivery.pregnancy_viable === 'no'));
       });
       earlyTerminations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
