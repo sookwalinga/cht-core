@@ -747,9 +747,9 @@ module.exports = {
           r.fields.confirm_delivery &&
           r.fields.confirm_delivery.did_deliver &&
           ((r.fields.confirm_delivery.did_deliver === 'yes') ||
-          (r.fields.confirm_delivery.did_deliver === 'no' &&
-          r.fields.confirm_delivery.pregnancy_viable &&
-          r.fields.confirm_delivery.pregnancy_viable === 'no'));
+            (r.fields.confirm_delivery.did_deliver === 'no' &&
+              r.fields.confirm_delivery.pregnancy_viable &&
+              r.fields.confirm_delivery.pregnancy_viable === 'no'));
       });
       earlyTerminations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -770,4 +770,42 @@ module.exports = {
       return false;
     }
   },
+
+  hadCSection: function (c) {
+    var report = '';
+    var flag = false;
+    if (c && c.reports) {
+      report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      if (report && report.fields && report.fields.delivery_information &&
+        report.fields.delivery_information.facility_delivery_method &&
+        report.fields.delivery_information.facility_delivery_method === 'caesarian') {
+        flag = true;
+      }
+    }
+    return flag;
+  },
+
+  getDeliveryDate: function (c) {
+    var delivery_date = null;
+    if (c && c.reports) {
+      var report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      if (report && report.fields && report.fields.confirm_delivery && r.fields.confirm_delivery.date_of_delivery) {
+        delivery_date = new Date(report.fields.confirm_delivery.date_of_delivery);
+      }
+    }
+    return delivery_date;
+  },
+
+  showQualityOfCare: function (c) {
+    var deliveryDate = this.getDeliveryDate(c);
+    var flag = false;
+    if (deliveryDate !== null) {
+      var daysPassedInMs = new Date(now - deliveryDate.getTime());
+      var daysPassed = Math.round(daysPassedInMs / (1000 * 60 * 60 * 24));
+      if (daysPassed >= 3) {
+        flag = true;
+      }
+    }
+    return flag;
+  }
 };
