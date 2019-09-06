@@ -519,6 +519,93 @@ module.exports = [
         Utils.addDate(dueDate, event.end).getTime());
       return isResolved;
     }
-  }
+  },
 
+  // 1st postpartum visit 
+  {
+    icon: 'mother-child',
+    title: 'task.postpartum',
+    appliesTo: 'reports',
+    appliesIf: function (c, r) {
+      return extras.didClientDeliver(c) &&
+        extras.noPostpartumVisitsCurrentPregnancy(c);
+    },
+    appliesToType: ['delivery_outcomes'],
+    actions: [{
+      form: 'postpartum',
+      modifyContent: function (content, c) {
+        content.visit_id = extras.mapPostPartumVisitType(c);
+        content.due_date = now;
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        content.c_section = extras.hadCSection(c);
+        content.is_atleast_one_baby_alive = extras.isAtleastOneBabyAlive(c);
+        content.show_quality_care = extras.showQualityOfCare(c); 
+      }
+    }],
+    events: [
+      {
+        id: 'postpartum_initial_visit',
+        days: 0,
+        start: 0,
+        end: (extras.month * 60),  //setting end date high so that CHV gets ample of time to complete
+      }
+    ],
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there is a form submitted within the time window
+      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end).getTime());
+      return isResolved;
+    }
+  },
+
+  // 2nd postpartum visit 
+  {
+    icon: 'mother-child',
+    title: 'task.postpartum',
+    appliesTo: 'reports',
+    appliesIf: function (c, r) {
+      return extras.didClientDeliver(c) && !(extras.noPostpartumVisitsCurrentPregnancy(c));
+    },
+    appliesToType: ['delivery_outcomes'],
+    actions: [{
+      form: 'postpartum',
+      modifyContent: function (content, c) {
+        content.visit_id = extras.mapPostPartumVisitType(c);
+        content.due_date = Utils.addDate(extras.getDeliveryDate(c), 5);
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        content.c_section = extras.hadCSection(c);
+        content.is_atleast_one_baby_alive = extras.isAtleastOneBabyAlive(c);
+        content.show_quality_care = extras.showQualityOfCare(c); 
+      }
+    }],
+    events: [
+      {
+        id: 'postpartum_visit_3_or_more_days',
+        dueDate: function (event, c) {
+          var dueDate = Utils.addDate(extras.getDeliveryDate(c), 5);
+          return dueDate;
+        },
+        start: (extras.day * 2),
+        end: (extras.month * 60),  //setting end date high so that CHV gets ample of time to complete
+      }
+    ],
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there is a form submitted within the time window
+      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end).getTime());
+      return isResolved;
+    }
+  }
 ];

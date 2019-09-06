@@ -807,5 +807,59 @@ module.exports = {
       }
     }
     return flag;
+  },
+
+  noPostpartumVisitsCurrentPregnancy: function (c) {
+    var flag = true;
+    var reportsFound = [];
+    if (c && c.reports) {
+      var report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      if (report) {
+        var delivery_reported_date = report.reported_date;
+        reportsFound = c.reports.filter(function (r) {
+          return r.form === 'postpartum' &&
+            r.reported_date &&
+            r.reported_date >= delivery_reported_date;
+        });
+      }
+      if (reportsFound.length > 0) {
+        flag = false;
+      }
+    }
+    return flag;
+  },
+
+  isAtleastOneBabyAlive: function (report) {
+    var flag = false;
+    if (report &&
+      report.fields &&
+      report.fields.number_deliveries &&
+      (report.fields.number_deliveries.live_birth === 'yes' ||
+        report.fields.number_deliveries.num_live_births > 0)) {
+      flag = true;
+    }
+    return flag;
+  },
+
+  mapPostPartumVisitType: function (c) {
+    if (this.noPostpartumVisitsCurrentPregnancy(c)) {
+      return 'postpartum_initial_visit';
+    }
+    else {
+      return 'postpartum_visit_3_or_more_days';
+    }
+  },
+
+  didClientDeliver: function (c) {
+    var flag = false;
+    if (c && c.reports) {
+      var report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      if (report && report.fields && report.fields.confirm_delivery &&
+        report.fields.confirm_delivery.did_deliver &&
+        report.fields.confirm_delivery.did_deliver === 'yes') {
+        flag = true;
+      }
+    }
+    return flag;
   }
 };
