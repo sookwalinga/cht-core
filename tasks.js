@@ -527,8 +527,7 @@ module.exports = [
     title: 'task.postpartum',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      return extras.didClientDeliver(c) &&
-        extras.noPostpartumVisitsCurrentPregnancy(c);
+      return extras.didClientDeliver(c);
     },
     appliesToType: ['delivery_outcomes'],
     actions: [{
@@ -556,11 +555,8 @@ module.exports = [
       }
     ],
     resolvedIf: function (c, r, event, dueDate) {
-      // Resolved if there is a form submitted within the time window
-      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
-        Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime());
-      return isResolved;
+      // Resolved if there are any postpartum forms submitted for the current pregnancy
+      return !extras.noPostpartumVisitsCurrentPregnancy(c);
     }
   },
 
