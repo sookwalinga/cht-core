@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Confirm Meeting</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/confirm_meeting/user/confirm_meeting/iam_attending:label">
+            <value>I am attending a monthly meeting with the CHVs and my supervisor</value>
+          </text>
+          <text id="/confirm_meeting/user/confirm_meeting/my_supervisor_is:label">
+            <value>My supervisor is visiting me in the field</value>
+          </text>
+          <text id="/confirm_meeting/user/confirm_meeting/my_supervisor_is_attending:label">
+            <value>My supervisor is attending a group counseling meeting in my catchment area</value>
+          </text>
+          <text id="/confirm_meeting/user/confirm_meeting:label">
+            <value>Confirm meeting with the supervisor</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/confirm_meeting/user/confirm_meeting/iam_attending:label">
+            <value>Nahudhuria kikao cha mwezi na chv wenzangu pamoja na msimamizi wangu</value>
+          </text>
+          <text id="/confirm_meeting/user/confirm_meeting/my_supervisor_is:label">
+            <value>Msimamizi wangu ananitembelea nikiwa kazini</value>
+          </text>
+          <text id="/confirm_meeting/user/confirm_meeting/my_supervisor_is_attending:label">
+            <value>Msimamizi wangu anahudhuria vikao vya ushauri wa vikundi katika eneo langu la kazi</value>
+          </text>
+          <text id="/confirm_meeting/user/confirm_meeting:label">
+            <value>Uthibitisho wa mkutano na msimamizi</value>
+          </text>
+          <text id="/confirm_meeting/user:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <confirm_meeting delimiter="#" id="confirm_meeting" prefix="J1!confirm_meeting!">
+          <user>
+            <confirm_meeting/>
+          </user>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </confirm_meeting>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/confirm_meeting/user/confirm_meeting" required="true()" type="select1"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/confirm_meeting/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/confirm_meeting/user">
+      <select1 appearance="field-list" ref="/confirm_meeting/user/confirm_meeting">
+        <label ref="jr:itext('/confirm_meeting/user/confirm_meeting:label')"/>
+        <item>
+          <label ref="jr:itext('/confirm_meeting/user/confirm_meeting/iam_attending:label')"/>
+          <value>iam_attending</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/confirm_meeting/user/confirm_meeting/my_supervisor_is:label')"/>
+          <value>my_supervisor_is</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/confirm_meeting/user/confirm_meeting/my_supervisor_is_attending:label')"/>
+          <value>my_supervisor_is_attending</value>
+        </item>
+      </select1>
+    </group>
+  </h:body>
+</h:html>
