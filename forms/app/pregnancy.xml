@@ -154,10 +154,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Severe Vaginal Bleeding</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -196,10 +196,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Unconsciousness</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
@@ -237,15 +237,6 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/early_breastfeeding:label">
             <value>Early Initiation of breast feeding</value>
           </text>
-          <text id="/pregnancy/facility_delivery_importance/age_and_dob/no:label">
-            <value>No</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/age_and_dob/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/age_and_dob:label">
-            <value>Your DOB is <output value=" /pregnancy/date_of_birth_c "/> and age is <output value=" /pregnancy/age_in_years "/>. Is this correct ?</value>
-          </text>
           <text id="/pregnancy/facility_delivery_importance/delivery_location/home:label">
             <value>Home (mother's or other's)</value>
           </text>
@@ -258,35 +249,11 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/facility_delivery_importance/delivery_location:label">
             <value>Where did you deliver you last child?</value>
           </text>
-          <text id="/pregnancy/facility_delivery_importance/edit_dob:label">
-            <value>Edit the client's DOB or age after completing this form.</value>
-          </text>
           <text id="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility:label">
             <value>&lt;span style="color:#f58a1f"&gt;Encourage mother to continue delivering at local health facility or hospital.&lt;/span&gt;</value>
           </text>
-          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/no:label">
-            <value>No</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant:label">
-            <value>Is this the first time you have been pregnant?</value>
-          </text>
           <text id="/pregnancy/facility_delivery_importance/important_of_facility_delivery:label">
             <value>It is important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:jr:constraintMsg">
-            <value>Count of deliveries should be less than or equal to count of previous pregnancies</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:label">
-            <value>How many of these pregnanices resulted in deliveries?</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_pregnancies:jr:constraintMsg">
-            <value>Valid values are between 1 and 20.</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_pregnancies:label">
-            <value>How many times have you been pregnant in the past?</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance:label">
             <value>Importance of Facility Delivery</value>
@@ -783,6 +750,42 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group:label">
             <value>Pregnancy Issues</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/age_and_dob/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/age_and_dob/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/age_and_dob:label">
+            <value>Your DOB is <output value=" /pregnancy/date_of_birth_c "/> and age is <output value=" /pregnancy/age_in_years "/>. Is this correct ?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/edit_dob:label">
+            <value>Edit the client's DOB or age after completing this form.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/first_time_pregnant:label">
+            <value>Is this the first time you have been pregnant?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_deliveries:jr:constraintMsg">
+            <value>Count of deliveries should be less than or equal to count of previous pregnancies</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_deliveries:label">
+            <value>How many of these pregnanices resulted in deliveries?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg">
+            <value>Valid values are between 1 and 20.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_pregnancies:label">
+            <value>How many times have you been pregnant in the past?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information:label">
+            <value>Important information about pregnant woman</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg">
             <value>Please enter an amount between Tsh. 100 and Tsh. 300,000</value>
@@ -1700,7 +1703,7 @@ Have you experienced:</value>
             <value>Dalili za Awali za kujifungua</value>
           </text>
           <text id="/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label">
-            <value>Eleza umuhimu wa kuweka akiba kwa ajiliya usafiri wa kwenda kituo cha afya, gharama nyengine zinazohusiana na matunzo na kujifungua kwake na Zaidi katika kipindi cha dharura. Kwamfano, unaweza kuweka bank. Au unaweza kutumia huduma za fedha katika simu au unaweza kujiunga na vikundi vya kueka na kukopa.</value>
+            <value>Eleza umuhimu wa kuweka akiba kwa ajiliya usafiri wa kwenda kituo cha afya, gharama nyengine zinazohusiana na matunzo na kujifungua kwake na zaidi katika kipindi cha dharura. Kwa mfano, unaweza kuweka bank. Au unaweza kutumia huduma za fedha katika simu au unaweza kujiunga na vikundi vya kueka na kukopa.</value>
           </text>
           <text id="/pregnancy/birth_plan/savings:label">
             <value>Umuhimu wa kuweka akiba</value>
@@ -1712,13 +1715,13 @@ Have you experienced:</value>
             <value>Ikitokea kutokea kwa upungufu wa damu, andaa angalau watu wawili kuchangia damu</value>
           </text>
           <text id="/pregnancy/birth_plan/transfusion_and_backup:label">
-            <value>Ukosefu wa damu na mtu wakusaidia kupatikana</value>
+            <value>Upungufu wa damu na mtu wakusaidia kupatikana kwa damu</value>
           </text>
           <text id="/pregnancy/birth_plan/transport/prepare_transport:label">
             <value>Ni muhimu kuandaa mpango wa kuenda kujifungulia kituo cha afya. Eleza kuwa unaweza kumuunganisha mama mjamzito na driver ambaye atakuja kumbeba kumpelekeka kituo cha afya punde akikaribia kujifungua.</value>
           </text>
           <text id="/pregnancy/birth_plan/transport/taxi_phones_chv_note:label">
-            <value>Mpe mama namba ya dereva na gharama za kituo cha afya.</value>
+            <value>Mpe mama namba ya dereva na umueleze gharama za kwenda kituo cha afya.</value>
           </text>
           <text id="/pregnancy/birth_plan/transport:label">
             <value>Usafiri</value>
@@ -1781,13 +1784,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Unatokwa na damu nyingi ukeni?</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_98:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_100:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -1826,13 +1829,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Kupoteza fahamu</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_105:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_107:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
@@ -1848,7 +1851,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Dalili Hatari Kwa Mama Wajawazito</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breast_problem:label">
-            <value>Ukiwa unatatizo la nywato/chuchu au maziwa, Muone muuguzi kwa ajili ya matibabu.</value>
+            <value>Ukiwa unatatizo la nywato/chuchu au maziwa, muone muuguzi kwa ajili ya matibabu.</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breastfeed_after_birth:label">
             <value>Je mama walioko katika jamii yako wanamnyonyesha mtoto punde tu baada ya kujifungua, hata kama wakiwa hawajatolewa kondo la nyuma?. Jadiliana na mama.</value>
@@ -1870,15 +1873,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/early_breastfeeding:label">
             <value>Unyonyeshaji wa mapema</value>
           </text>
-          <text id="/pregnancy/facility_delivery_importance/age_and_dob/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/age_and_dob/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/age_and_dob:label">
-            <value>Tarehe yako ya kuzaliwa ni <output value=" /pregnancy/date_of_birth_c "/> na umri wako ni <output value=" /pregnancy/age_in_years "/>. Je, tarehe yako ya kuzaliwa ni sahihi?</value>
-          </text>
           <text id="/pregnancy/facility_delivery_importance/delivery_location/home:label">
             <value>Nyumbani (Kwa mama au nyengine)</value>
           </text>
@@ -1891,35 +1885,11 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/facility_delivery_importance/delivery_location:label">
             <value>Ni wapi umejifungua mtoto wako wa mwisho?</value>
           </text>
-          <text id="/pregnancy/facility_delivery_importance/edit_dob:label">
-            <value>Badili tarehe ya kuzaliwa ya mteja au umri baada ya kujaza fomu hii.</value>
-          </text>
           <text id="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility:label">
             <value>&lt;span style="color:#f58a1f"&gt;Muhamasishe mama kujifungulia kituo cha afya.&lt;/span&gt;</value>
           </text>
-          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/first_time_pregnant:label">
-            <value>Je hii ni mara yako ya kwanza kuwa mjamzito?</value>
-          </text>
           <text id="/pregnancy/facility_delivery_importance/important_of_facility_delivery:label">
             <value>Ni muhimu kwa kila mtu kujifungua kituo cha afya. Kwasababu huwezi kujua kama unaweza kupatwa na tatizo au dharura yoyote wakati wa kujifungua. Kama umepatwa na tatizo wakati wa kujifungua ni lazima ufike kituo cha afya ili kupata huduma muhimu kwa ajili yako na mtoto ili kuhakikisha usalama wako na mtoto. Kama uliwahi kupata matatizo yoyote kipindi cha nyuma katika ujauzito wako uliopita au wakati wa kujifungua. Pia ni muhimu zaidi kuenda kituo cha afya muda huu ili kuhakikisha usalama wako na mtoto.</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:jr:constraintMsg">
-            <value>Idadi ya kujifungua iwe ni ndogo au sawa sawa na idadi ya ujauzito.</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_deliveries:label">
-            <value>Je ni mimba ngapi umeweza kujifungua mara zote za ujauzito wako?</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_pregnancies:jr:constraintMsg">
-            <value>Hakikisha umeingiza nambari kati ya 1 na 20.</value>
-          </text>
-          <text id="/pregnancy/facility_delivery_importance/previous_pregnancies:label">
-            <value>Ni mara ngapi umekuwa mjamzito kabla ya ujauzito huu?</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance:label">
             <value>Umuhimu wa Kujifungua Kituo cha afya</value>
@@ -2375,7 +2345,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
 &lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/pmtct:label">
-            <value>Huduma za vipimo na ushairu wa kumkinga mtoto na maambukizi ya mama</value>
+            <value>Huduma za vipimo na ushauri wa kumkinga mtoto na maambukizi ya mama</value>
           </text>
           <text id="/pregnancy/pregnancy_form/consent/no:label">
             <value>Hapana</value>
@@ -2424,7 +2394,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor:label">
-            <value>Je! Mteja rangi yake haionekani kawaida? Linganisha kiganja chako na cha mteja. Ikiwa Ikiwa kiganja cha mteja kimepauka sana kuliko chako hili ni tatizo.</value>
+            <value>Je! Mteja rangi yake haionekani kawaida? Linganisha kiganja chako na cha mteja. Ikiwa kiganja cha mteja kimepauka sana kuliko chako hili ni tatizo.</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor:label">
             <value>-</value>
@@ -2485,6 +2455,42 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group:label">
             <value>Maswala ya ujauzito</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/age_and_dob/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/age_and_dob/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/age_and_dob:label">
+            <value>Tarehe yako ya kuzaliwa ni <output value=" /pregnancy/date_of_birth_c "/> na umri wako ni <output value=" /pregnancy/age_in_years "/>. Je, tarehe yako ya kuzaliwa ni sahihi?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/edit_dob:label">
+            <value>Badili tarehe ya kuzaliwa ya mteja au umri baada ya kujaza fomu hii.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/first_time_pregnant:label">
+            <value>Je hii ni mara yako ya kwanza kuwa mjamzito?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_deliveries:jr:constraintMsg">
+            <value>Idadi ya kujifungua iwe ni ndogo au sawa sawa na idadi ya ujauzito.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_deliveries:label">
+            <value>Je ni mimba ngapi umeweza kujifungua mara zote za ujauzito wako?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg">
+            <value>Hakikisha umeingiza nambari kati ya 1 na 20.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_pregnancies:label">
+            <value>Ni mara ngapi umekuwa mjamzito kabla ya ujauzito huu?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information:label">
+            <value>Taarifa muhimu za mama mjamzito</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg">
             <value>Tafadhali ingiza kiwango kati ya shilinigi 100 na shilingi laki tatu</value>
@@ -3411,12 +3417,14 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <date_of_pregnancy_loss/>
             <miscarriage_or_stillbirth/>
           </visit_introduction>
-          <facility_delivery_importance>
+          <pregnant_woman_information>
             <age_and_dob/>
             <edit_dob/>
             <first_time_pregnant/>
             <previous_pregnancies/>
             <previous_deliveries/>
+          </pregnant_woman_information>
+          <facility_delivery_importance>
             <delivery_location/>
             <important_of_facility_delivery/>
             <encourage_mother_if_delivered_at_facility/>
@@ -3435,8 +3443,8 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <danger_signs>
             <danger_sign_intro/>
             <danger_sign_table_1>
-              <generated_table_list_label_98/>
-              <reserved_name_for_field_list_labels_99/>
+              <generated_table_list_label_100/>
+              <reserved_name_for_field_list_labels_101/>
               <danger_sign_vaginal_bleeding/>
               <danger_sign_abdominal_pain/>
               <danger_sign_severe_headache/>
@@ -3444,8 +3452,8 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <danger_sign_note_to_chv/>
             <observe_danger_signs/>
             <danger_sign_table_2>
-              <generated_table_list_label_105/>
-              <reserved_name_for_field_list_labels_106/>
+              <generated_table_list_label_107/>
+              <reserved_name_for_field_list_labels_108/>
               <danger_sign_unconsciouss/>
               <danger_sign_fever/>
               <danger_sign_difficult_breathing/>
@@ -4586,14 +4594,16 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
       <bind nodeset="/pregnancy/visit_introduction/sympathy_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" type="string"/>
       <bind constraint=". &lt;= today()" jr:constraintMsg="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg')" nodeset="/pregnancy/visit_introduction/date_of_pregnancy_loss" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" required="true()" type="date"/>
       <bind calculate="if((decimal-date-time( /pregnancy/client_EDD_c ) - decimal-date-time( /pregnancy/visit_introduction/date_of_pregnancy_loss )) &gt; ( /pregnancy/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/pregnancy/visit_introduction/miscarriage_or_stillbirth" type="string"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
+      <bind nodeset="/pregnancy/pregnant_woman_information" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0)"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/age_and_dob" type="select1"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/edit_dob" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/age_and_dob ,'no')" type="string"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/first_time_pregnant" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 1 and . &lt;= 20" jr:constraintMsg="jr:itext('/pregnancy/facility_delivery_importance/previous_pregnancies:jr:constraintMsg')" nodeset="/pregnancy/facility_delivery_importance/previous_pregnancies" relevant="selected( /pregnancy/facility_delivery_importance/first_time_pregnant ,'no')" required="true()" type="int"/>
-      <bind constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/facility_delivery_importance/previous_pregnancies )" jr:constraintMsg="jr:itext('/pregnancy/facility_delivery_importance/previous_deliveries:jr:constraintMsg')" nodeset="/pregnancy/facility_delivery_importance/previous_deliveries" relevant="selected( /pregnancy/facility_delivery_importance/first_time_pregnant ,'no')" required="true()" type="int"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/delivery_location" relevant="selected( /pregnancy/facility_delivery_importance/first_time_pregnant ,'no')" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/age_and_dob" type="select1"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/edit_dob" readonly="true()" relevant="selected( /pregnancy/pregnant_woman_information/age_and_dob ,'no')" type="string"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/first_time_pregnant" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 1 and . &lt;= 20" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg')" nodeset="/pregnancy/pregnant_woman_information/previous_pregnancies" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="int"/>
+      <bind constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/pregnant_woman_information/previous_pregnancies )" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_deliveries:jr:constraintMsg')" nodeset="/pregnancy/pregnant_woman_information/previous_deliveries" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="int"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
+not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) and selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/delivery_location" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/facility_delivery_importance/important_of_facility_delivery" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'home') or selected( /pregnancy/facility_delivery_importance/delivery_location ,'on_the_way')" type="string"/>
       <bind nodeset="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'local_health_facility')" type="string"/>
       <bind nodeset="/pregnancy/rch_card" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
@@ -4621,15 +4631,15 @@ not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnanc
       <bind nodeset="/pregnancy/danger_signs" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) or ( /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/visit_introduction/has_given_birth =&quot;no&quot; and  /pregnancy/visit_introduction/viable_pregnancy =&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_intro" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_98" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_100" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_note_to_chv" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/danger_signs/observe_danger_signs" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_105" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_107" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_fever" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" required="true()" type="select1"/>
@@ -4922,39 +4932,42 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:label')"/>
       </input>
     </group>
+    <group appearance="field-list" ref="/pregnancy/pregnant_woman_information">
+      <label ref="jr:itext('/pregnancy/pregnant_woman_information:label')"/>
+      <select1 ref="/pregnancy/pregnant_woman_information/age_and_dob">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/age_and_dob:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/age_and_dob/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/age_and_dob/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pregnant_woman_information/edit_dob">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/edit_dob:label')"/>
+      </input>
+      <select1 ref="/pregnancy/pregnant_woman_information/first_time_pregnant">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/first_time_pregnant:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/first_time_pregnant/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/first_time_pregnant/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pregnant_woman_information/previous_pregnancies">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_pregnancies:label')"/>
+      </input>
+      <input ref="/pregnancy/pregnant_woman_information/previous_deliveries">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_deliveries:label')"/>
+      </input>
+    </group>
     <group appearance="field-list" ref="/pregnancy/facility_delivery_importance">
       <label ref="jr:itext('/pregnancy/facility_delivery_importance:label')"/>
-      <select1 ref="/pregnancy/facility_delivery_importance/age_and_dob">
-        <label ref="jr:itext('/pregnancy/facility_delivery_importance/age_and_dob:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy/facility_delivery_importance/age_and_dob/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/facility_delivery_importance/age_and_dob/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/pregnancy/facility_delivery_importance/edit_dob">
-        <label ref="jr:itext('/pregnancy/facility_delivery_importance/edit_dob:label')"/>
-      </input>
-      <select1 ref="/pregnancy/facility_delivery_importance/first_time_pregnant">
-        <label ref="jr:itext('/pregnancy/facility_delivery_importance/first_time_pregnant:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy/facility_delivery_importance/first_time_pregnant/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/facility_delivery_importance/first_time_pregnant/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/pregnancy/facility_delivery_importance/previous_pregnancies">
-        <label ref="jr:itext('/pregnancy/facility_delivery_importance/previous_pregnancies:label')"/>
-      </input>
-      <input ref="/pregnancy/facility_delivery_importance/previous_deliveries">
-        <label ref="jr:itext('/pregnancy/facility_delivery_importance/previous_deliveries:label')"/>
-      </input>
       <select1 ref="/pregnancy/facility_delivery_importance/delivery_location">
         <label ref="jr:itext('/pregnancy/facility_delivery_importance/delivery_location:label')"/>
         <item>
@@ -5031,15 +5044,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_intro:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_1">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_98"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_100"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_101/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -5084,15 +5097,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/observe_danger_signs:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_2">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_105"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_107"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_108/no:label')"/>
             <value>no</value>
           </item>
         </select1>
