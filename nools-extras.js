@@ -212,13 +212,25 @@ module.exports = {
     return small;
   },
 
-  hasReferral: function (report) {
-    if (
-      report &&
-      report.fields &&
-      report.fields.has_referral
-    ) {
-      return report.fields.has_referral === '1';
+  hasReferral: function (report, referral_type) {
+    if (report && report.fields) {
+      if (referral_type === "infant_child") {
+        return report.fields.has_infant_child_referral === 'true';
+      }
+      else if (referral_type === "pregnancy") {
+        return report.fields.has_pregnancy_referral === 'true';
+      }
+      else if (referral_type === "postpartum") {
+        return report.fields.has_postpartum_referral === 'true';
+      }
+    }
+    return false;
+  },
+
+  shouldVisitAgain: function (report) {
+    if (report && report.fields && report.fields.should_visit_again &&
+      report.fields.should_visit_again === '1') {
+      return true;
     }
     return false;
   },
@@ -252,6 +264,28 @@ module.exports = {
       report.fields.refer_flag_pregnancy_complications
     ) {
       return report.fields.refer_flag_pregnancy_complications;
+    }
+    return '0';
+  },
+
+  getPostpartumEmergencyDangerSigns: function (report) {
+    if (report &&
+      report.fields &&
+      report.fields.refer_postpartum_emergency_danger_sign_flag &&
+      report.fields.refer_postpartum_emergency_danger_sign_flag === "1"
+    ) {
+      return '1';
+    }
+    return '0';
+  },
+
+  getPostpartumOtherDangerSigns: function (report) {
+    if (report &&
+      report.fields &&
+      report.fields.refer_postpartum_other_danger_sign_flag &&
+      report.fields.refer_postpartum_other_danger_sign_flag === "1"
+    ) {
+      return '1';
     }
     return '0';
   },

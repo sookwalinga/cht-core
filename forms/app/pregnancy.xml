@@ -102,6 +102,9 @@
           <text id="/pregnancy/client_information/due_date_note:label">
             <value>Due date: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print "/>&lt;/span&gt;</value>
           </text>
+          <text id="/pregnancy/client_information/edd_intro_note:label">
+            <value>EDD: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_EDD_pretty_print "/>&lt;/span&gt;</value>
+          </text>
           <text id="/pregnancy/client_information/household_note:label">
             <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_name "/>&lt;/span&gt;
 Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/age_years "/> years, <output value=" /pregnancy/age_months "/> months, <output value=" /pregnancy/age_days_display "/> days&lt;/span&gt;
@@ -151,10 +154,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Severe Vaginal Bleeding</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -193,10 +196,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Unconsciousness</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
@@ -699,8 +702,8 @@ Please refer to page 2 of bango kitita.</value>
             <value>OK, I understand that you don't want services from me now. It's important that you are checked on during your pregnancy so I will come back later and see if you have changed your mind.</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label">
-            <value>Refer to page 6 of bango kitita</value>
             <value form="image">jr://images/flipchart.png</value>
+            <value>Refer to page 6 of bango kitita</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/no:label">
             <value>No</value>
@@ -960,6 +963,9 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>Quality of Survey Care</value>
+          </text>
+          <text id="/pregnancy/rch_card/edd_note:label">
+            <value>Your EDD is <output value=" /pregnancy/EDD "/></value>
           </text>
           <text id="/pregnancy/rch_card/estimated_delivery_date_input:jr:constraintMsg">
             <value>Estimated delivery date can be up to 9 months from today</value>
@@ -1694,7 +1700,7 @@ Have you experienced:</value>
             <value>Dalili za Awali za kujifungua</value>
           </text>
           <text id="/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label">
-            <value>Eleza umuhimu wa kuweka akiba kwa ajiliya usafiri wa kwenda kituo cha afya, gharama nyengine zinazohusiana na matunzo na kujifungua kwake na Zaidi katika kipindi cha dharura. Kwamfano, unaweza kuweka bank. Au unaweza kutumia huduma za fedha katika simu au unaweza kujianga na vikundi vya kueka na kukopa.</value>
+            <value>Eleza umuhimu wa kuweka akiba kwa ajiliya usafiri wa kwenda kituo cha afya, gharama nyengine zinazohusiana na matunzo na kujifungua kwake na Zaidi katika kipindi cha dharura. Kwamfano, unaweza kuweka bank. Au unaweza kutumia huduma za fedha katika simu au unaweza kujiunga na vikundi vya kueka na kukopa.</value>
           </text>
           <text id="/pregnancy/birth_plan/savings:label">
             <value>Umuhimu wa kuweka akiba</value>
@@ -1723,6 +1729,9 @@ Have you experienced:</value>
           <text id="/pregnancy/client_information/due_date_note:label">
             <value>Tarehe ya mwisho ya tembeleo: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print "/>&lt;/span&gt;</value>
           </text>
+          <text id="/pregnancy/client_information/edd_intro_note:label">
+            <value>Makadirio ya ujauzito: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_EDD_pretty_print "/>&lt;/span&gt;</value>
+          </text>
           <text id="/pregnancy/client_information/household_note:label">
             <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy/client_name "/>&lt;/span&gt;
 Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy/age_years "/> miaka, <output value=" /pregnancy/age_months "/> miezi, <output value=" /pregnancy/age_days_display "/> siku&lt;/span&gt;
@@ -1740,7 +1749,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Taarifa za mteja</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_intro:label">
-            <value>Sahivi naomba kukuliza maswali yanayohusiana na dalili za hatari kwa ujauzito. Je uliwahi kupatwa na moja kati ya dalili hizi?</value>
+            <value>Sahivi naomba kukuliza maswali yanayohusiana na dalili za hatari kwa ujauzito. Je una dalizi za hatari kati ya hizi zifuatazo?</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_note_to_chv:label">
             <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
@@ -1752,7 +1761,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain:label">
-            <value>Maumivu makali ya tumbo</value>
+            <value>Una maumivu makali ya tumbo?</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache/no:label">
             <value>Hapana</value>
@@ -1761,7 +1770,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache:label">
-            <value>Maumivu makali Kichwa</value>
+            <value>Una maumivu makali ya kichwa ?</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding/no:label">
             <value>Hapana</value>
@@ -1770,15 +1779,15 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
-            <value>Kutokwa na damu nyingi ukeni</value>
+            <value>Unatokwa na damu nyingi ukeni?</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_94:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_98:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -1817,29 +1826,29 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Kupoteza fahamu</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_101:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_105:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
             <value>Mwanamke huyu anadalili za hatari au aliwahi kupata dalili za hatari za ghafla. Mtake Mama na familia yake kupata msaada wa kimatibabu kwasababu maisha ya mama na mtoto wake yapo katika hatari.</value>
           </text>
           <text id="/pregnancy/danger_signs/no_danger_sign_note_to_chv:label">
-            <value>Hali ya rufaa ya dharura haikubainika</value>
+            <value>Kwa sasa, hauna dalili yoyote ya hatari iliyogundulika. Lakini ukipata dalili yote kati ya hizi tulizozijadili, tafadhali nenda kituo cha afya haraka iwezakanavyo.</value>
           </text>
           <text id="/pregnancy/danger_signs/observe_danger_signs:label">
-            <value>&lt;span style="color:#f58a1f"&gt;chunguza kama mteja ana dalili za hatari kwa wajawazito hizi zifuatazo.&lt;/span&gt;</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Angalia kama mteja ana dalili za hatari kwa wajawazito hizi zifuatazo.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/danger_signs:label">
             <value>Dalili Hatari Kwa Mama Wajawazito</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breast_problem:label">
-            <value>Ukiwa unatatizo la nyato au maziwa, Muone muuguzi kwa ajili ya matibabu.</value>
+            <value>Ukiwa unatatizo la nywato/chuchu au maziwa, Muone muuguzi kwa ajili ya matibabu.</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/breastfeed_after_birth:label">
             <value>Je mama walioko katika jamii yako wanamnyonyesha mtoto punde tu baada ya kujifungua, hata kama wakiwa hawajatolewa kondo la nyuma?. Jadiliana na mama.</value>
@@ -1851,7 +1860,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Kumnyonyesha mtoto punde tu baada ya kujifungua inasaidia kutoka kondo la uzazi na kupunguza kutokwa na damu inatoka baada ya kujifunga.</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/feeding_other_food_items:label">
-            <value>Kulisha mtoto vitu vyengine kama vile Maji ya sukari, asali ,maji, maziwa ya unga, maziwa ya ng'ombe au maziwa ya mbuzi kuliko kumnyinyesha—inaweza kukwaza uanzilishaji mzuri wa lishe ya mtoto.</value>
+            <value>Kulisha mtoto vitu vyengine kama vile Maji ya sukari, asali ,maji, au maziwa mengine yasiyokuwa ya mama kwa mfano ( maziwa ya unga, maziwa ya ng'ombe au maziwa ya mbuzi)—inaweza kukwaza uanzilishaji mzuri wa lishe ya mtoto.</value>
           </text>
           <text id="/pregnancy/early_breastfeeding/yellow_milk:label">
             <value>Maziwa ya mwanzo(danga) hufanya kazi mbili muhimu.
@@ -1874,7 +1883,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Nyumbani (Kwa mama au nyengine)</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance/delivery_location/local_health_facility:label">
-            <value>Kitua cha afya kidogo/kliniki</value>
+            <value>Kituo cha afya kidogo/kliniki</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance/delivery_location/on_the_way:label">
             <value>Njiani</value>
@@ -1883,7 +1892,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ni wapi umejifungua mtoto wako wa mwisho?</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance/edit_dob:label">
-            <value>Hariri tarehe ya kuzaliwa ya mteja au umri baada ya kujaza fomu hii.</value>
+            <value>Badili tarehe ya kuzaliwa ya mteja au umri baada ya kujaza fomu hii.</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility:label">
             <value>&lt;span style="color:#f58a1f"&gt;Muhamasishe mama kujifungulia kituo cha afya.&lt;/span&gt;</value>
@@ -1964,6 +1973,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Muhtasari wa Tembeleo</value>
           </text>
           <text id="/pregnancy/inputs/client_EDD:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy/inputs/client_EDD_human_readable:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/inputs/contact/_id:label">
@@ -2384,8 +2396,8 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>-</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label">
-            <value>Angalia katika ukurasa namba 6 kwenye bango kitita</value>
             <value form="image">jr://images/flipchart.png</value>
+            <value>Angalia katika ukurasa namba 6 kwenye bango kitita</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs:label">
             <value>-</value>
@@ -2463,7 +2475,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label">
-            <value>Endelea na maswali yafuatayo. Onesha kama mteja ana moja katika mambo haya yafuatayo yanayohusu ujauzito:</value>
+            <value>Endelea na maswali yafuatayo. Angalia kama mteja ana moja kati ya matatizo haya yafuatayo yanayohusu ujauzito:</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label">
             <value>Nakupa rufaa uende kituo cha afya kwasababu nimekugundua una dalili za hatari.</value>
@@ -2657,6 +2669,9 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>Ubora wa huduma</value>
           </text>
+          <text id="/pregnancy/rch_card/edd_note:label">
+            <value>Makisio ya tarehe yako ya kujifungua ni <output value=" /pregnancy/EDD "/></value>
+          </text>
           <text id="/pregnancy/rch_card/estimated_delivery_date_input:jr:constraintMsg">
             <value>Makisio ya tarehe ya kujifungua iwe baina ya leo na miezi 9 ilopita</value>
           </text>
@@ -2676,7 +2691,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/rch_card/is_delivery_date_written:label">
-            <value>Je tarehe anayotajia kujifungua imeandikwa kwenye kadi lake?</value>
+            <value>Je tarehe anayotarajia kujifungua imeandikwa kwenye kadi lake?</value>
           </text>
           <text id="/pregnancy/rch_card/is_rch_card_available/no:label">
             <value>Hapana</value>
@@ -2976,7 +2991,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Nyumbani (Kwa mama au nyengine)</value>
           </text>
           <text id="static_instance-delivery_location-1">
-            <value>Kitua cha afya kidogo/kliniki</value>
+            <value>Kituo cha afya kidogo/kliniki</value>
           </text>
           <text id="static_instance-delivery_location-2">
             <value>Njiani</value>
@@ -3328,6 +3343,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <due_date_human_readable/>
             <client_EDD/>
             <visit_id/>
+            <client_EDD_human_readable/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -3363,6 +3379,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <phone/>
           <due_date/>
           <due_date_pretty_print/>
+          <client_EDD_pretty_print/>
           <client_EDD_c/>
           <currently_pregnant/>
           <hide_lmp_or_months_pregnant/>
@@ -3372,6 +3389,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <household_note/>
             <phone_note/>
             <due_date_note/>
+            <edd_intro_note/>
           </client_information>
           <age_below_15>
             <below_15_confirmation/>
@@ -3410,14 +3428,15 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <remember_lmp/>
             <last_lmp_date/>
             <estimated_months_pregnant/>
+            <edd_note/>
           </rch_card>
           <EDD/>
           <gestation_in_weeks/>
           <danger_signs>
             <danger_sign_intro/>
             <danger_sign_table_1>
-              <generated_table_list_label_94/>
-              <reserved_name_for_field_list_labels_95/>
+              <generated_table_list_label_98/>
+              <reserved_name_for_field_list_labels_99/>
               <danger_sign_vaginal_bleeding/>
               <danger_sign_abdominal_pain/>
               <danger_sign_severe_headache/>
@@ -3425,8 +3444,8 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <danger_sign_note_to_chv/>
             <observe_danger_signs/>
             <danger_sign_table_2>
-              <generated_table_list_label_101/>
-              <reserved_name_for_field_list_labels_102/>
+              <generated_table_list_label_105/>
+              <reserved_name_for_field_list_labels_106/>
               <danger_sign_unconsciouss/>
               <danger_sign_fever/>
               <danger_sign_difficult_breathing/>
@@ -3490,6 +3509,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
               <taxi_phones_chv_note/>
             </transport>
           </birth_plan>
+          <pregnancy_months_left/>
           <early_breastfeeding>
             <breastfeed_after_birth/>
             <breastfeed_within_one_hour/>
@@ -3581,6 +3601,329 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
         </pregnancy>
       </instance>
       <instance id="contact-summary"/>
+      <instance id="highest_school_level">
+        <root>
+          <item>
+            <itextId>static_instance-highest_school_level-0</itextId>
+            <name>no_formal_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-1</itextId>
+            <name>incomplete_primary</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-2</itextId>
+            <name>primary_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-3</itextId>
+            <name>incomplete_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-4</itextId>
+            <name>secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-5</itextId>
+            <name>completed_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-6</itextId>
+            <name>more_than_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-7</itextId>
+            <name>school_level_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="wait_period">
+        <root>
+          <item>
+            <itextId>static_instance-wait_period-0</itextId>
+            <name>short</name>
+          </item>
+          <item>
+            <itextId>static_instance-wait_period-1</itextId>
+            <name>ok</name>
+          </item>
+          <item>
+            <itextId>static_instance-wait_period-2</itextId>
+            <name>too_long</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="travel_time">
+        <root>
+          <item>
+            <itextId>static_instance-travel_time-0</itextId>
+            <name>less_than_30</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-1</itextId>
+            <name>30_to_1hr</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-2</itextId>
+            <name>more_than_1hr</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-3</itextId>
+            <name>travel_time_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_district">
+        <root>
+          <item>
+            <itextId>static_instance-facility_district-0</itextId>
+            <name>north_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-1</itextId>
+            <name>north_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-2</itextId>
+            <name>central</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-3</itextId>
+            <name>south</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-4</itextId>
+            <name>west_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-5</itextId>
+            <name>west_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-6</itextId>
+            <name>urban</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-7</itextId>
+            <name>chakechake</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-8</itextId>
+            <name>micheweni</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-9</itextId>
+            <name>mkoani</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-10</itextId>
+            <name>wete</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="decision_maker">
+        <root>
+          <item>
+            <itextId>static_instance-decision_maker-0</itextId>
+            <name>herself</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-1</itextId>
+            <name>husband</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-2</itextId>
+            <name>herself_and_husband</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-3</itextId>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-4</itextId>
+            <name>decision_maker_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="partner_highest_school_level">
+        <root>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-0</itextId>
+            <name>partner_no_formal_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-1</itextId>
+            <name>partner_incomplete_primary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-2</itextId>
+            <name>partner_primary_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-3</itextId>
+            <name>partner_incomplete_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-4</itextId>
+            <name>partner_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-5</itextId>
+            <name>partner_completed_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-6</itextId>
+            <name>partner_more_than_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-7</itextId>
+            <name>partner_school_level_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no_decline_to_answer">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-1</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-2</itextId>
+            <name>decline_to_answer</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="is_service_received">
+        <root>
+          <item>
+            <itextId>static_instance-is_service_received-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-is_service_received-1</itextId>
+            <name>yes_but</name>
+          </item>
+          <item>
+            <itextId>static_instance-is_service_received-2</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="second_facility">
+        <root>
+          <item>
+            <itextId>static_instance-second_facility-0</itextId>
+            <name>pregnancy_supplements</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-1</itextId>
+            <name>bp_reading</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-2</itextId>
+            <name>hb_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-3</itextId>
+            <name>bp_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-4</itextId>
+            <name>urine_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-5</itextId>
+            <name>ultrasound</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-6</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="travel_means">
+        <root>
+          <item>
+            <itextId>static_instance-travel_means-0</itextId>
+            <name>walk</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-1</itextId>
+            <name>bicycle</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-2</itextId>
+            <name>moto</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-3</itextId>
+            <name>private_car</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-4</itextId>
+            <name>public_bus</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-5</itextId>
+            <name>health_facility_vehicle</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-6</itextId>
+            <name>boat</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-7</itextId>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-8</itextId>
+            <name>travel_means_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="paid_for">
+        <root>
+          <item>
+            <itextId>static_instance-paid_for-0</itextId>
+            <name>service_fee</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-1</itextId>
+            <name>hb_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-2</itextId>
+            <name>urine_analysis</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-3</itextId>
+            <name>rch_card</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-4</itextId>
+            <name>blood_sugar_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-5</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
       <instance id="yes_no">
         <root>
           <item>
@@ -3590,6 +3933,34 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <item>
             <itextId>static_instance-yes_no-1</itextId>
             <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="hiv_status">
+        <root>
+          <item>
+            <itextId>static_instance-hiv_status-0</itextId>
+            <name>hiv_positive</name>
+          </item>
+          <item>
+            <itextId>static_instance-hiv_status-1</itextId>
+            <name>hiv_negative</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="delivery_location">
+        <root>
+          <item>
+            <itextId>static_instance-delivery_location-0</itextId>
+            <name>home</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_location-1</itextId>
+            <name>local_health_facility</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_location-2</itextId>
+            <name>on_the_way</name>
           </item>
         </root>
       </instance>
@@ -3653,47 +4024,19 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           </item>
         </root>
       </instance>
-      <instance id="hiv_status">
+      <instance id="facility_island">
         <root>
           <item>
-            <itextId>static_instance-hiv_status-0</itextId>
-            <name>hiv_positive</name>
+            <itextId>static_instance-facility_island-0</itextId>
+            <name>unguja</name>
           </item>
           <item>
-            <itextId>static_instance-hiv_status-1</itextId>
-            <name>hiv_negative</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="family_engagement">
-        <root>
-          <item>
-            <itextId>static_instance-family_engagement-0</itextId>
-            <name>husband</name>
+            <itextId>static_instance-facility_island-1</itextId>
+            <name>pemba</name>
           </item>
           <item>
-            <itextId>static_instance-family_engagement-1</itextId>
-            <name>mother</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-2</itextId>
-            <name>mother_in_law</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-3</itextId>
-            <name>sister</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-4</itextId>
-            <name>aunt</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-5</itextId>
-            <name>other_family</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-6</itextId>
-            <name>no_one_available</name>
+            <itextId>static_instance-facility_island-2</itextId>
+            <name>other</name>
           </item>
         </root>
       </instance>
@@ -3733,94 +4076,107 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           </item>
         </root>
       </instance>
-      <instance id="delivery_location">
+      <instance id="family_engagement">
         <root>
           <item>
-            <itextId>static_instance-delivery_location-0</itextId>
-            <name>home</name>
+            <itextId>static_instance-family_engagement-0</itextId>
+            <name>husband</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_location-1</itextId>
-            <name>local_health_facility</name>
+            <itextId>static_instance-family_engagement-1</itextId>
+            <name>mother</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_location-2</itextId>
-            <name>on_the_way</name>
+            <itextId>static_instance-family_engagement-2</itextId>
+            <name>mother_in_law</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-3</itextId>
+            <name>sister</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-4</itextId>
+            <name>aunt</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-5</itextId>
+            <name>other_family</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-6</itextId>
+            <name>no_one_available</name>
           </item>
         </root>
       </instance>
-      <instance id="facility_island">
+      <instance id="service_reason">
         <root>
           <item>
-            <itextId>static_instance-facility_island-0</itextId>
-            <name>unguja</name>
+            <itextId>static_instance-service_reason-0</itextId>
+            <name>no_staff</name>
           </item>
           <item>
-            <itextId>static_instance-facility_island-1</itextId>
-            <name>pemba</name>
+            <itextId>static_instance-service_reason-1</itextId>
+            <name>closed_facility</name>
           </item>
           <item>
-            <itextId>static_instance-facility_island-2</itextId>
+            <itextId>static_instance-service_reason-2</itextId>
+            <name>no_reagents</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-3</itextId>
+            <name>waiting_too_long</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-4</itextId>
+            <name>no_money</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-5</itextId>
             <name>other</name>
           </item>
         </root>
       </instance>
-      <instance id="facility_district">
+      <instance id="services_received">
         <root>
           <item>
-            <itextId>static_instance-facility_district-0</itextId>
-            <name>north_a</name>
-            <choice_filter>unguja</choice_filter>
+            <itextId>static_instance-services_received-0</itextId>
+            <name>tt_vaccine</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-1</itextId>
-            <name>north_b</name>
-            <choice_filter>unguja</choice_filter>
+            <itextId>static_instance-services_received-1</itextId>
+            <name>iron_folate_mabendazole</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-2</itextId>
-            <name>central</name>
-            <choice_filter>unguja</choice_filter>
+            <itextId>static_instance-services_received-2</itextId>
+            <name>llitn</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-3</itextId>
-            <name>south</name>
-            <choice_filter>unguja</choice_filter>
+            <itextId>static_instance-services_received-3</itextId>
+            <name>hiv_test</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-4</itextId>
-            <name>west_a</name>
-            <choice_filter>unguja</choice_filter>
+            <itextId>static_instance-services_received-4</itextId>
+            <name>blood_pressure</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-5</itextId>
-            <name>west_b</name>
-            <choice_filter>unguja</choice_filter>
+            <itextId>static_instance-services_received-5</itextId>
+            <name>urine_test</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-6</itextId>
-            <name>urban</name>
-            <choice_filter>unguja</choice_filter>
+            <itextId>static_instance-services_received-6</itextId>
+            <name>blood_test</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-7</itextId>
-            <name>chakechake</name>
-            <choice_filter>pemba</choice_filter>
+            <itextId>static_instance-services_received-7</itextId>
+            <name>danger_sign_education</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-8</itextId>
-            <name>micheweni</name>
-            <choice_filter>pemba</choice_filter>
+            <itextId>static_instance-services_received-8</itextId>
+            <name>discusses_birth_plan</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-9</itextId>
-            <name>mkoani</name>
-            <choice_filter>pemba</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-10</itextId>
-            <name>wete</name>
-            <choice_filter>pemba</choice_filter>
+            <itextId>static_instance-services_received-9</itextId>
+            <name>discusses_postpartum_family_planning</name>
           </item>
         </root>
       </instance>
@@ -4148,290 +4504,6 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           </item>
         </root>
       </instance>
-      <instance id="is_service_received">
-        <root>
-          <item>
-            <itextId>static_instance-is_service_received-0</itextId>
-            <name>yes</name>
-          </item>
-          <item>
-            <itextId>static_instance-is_service_received-1</itextId>
-            <name>yes_but</name>
-          </item>
-          <item>
-            <itextId>static_instance-is_service_received-2</itextId>
-            <name>no</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="service_reason">
-        <root>
-          <item>
-            <itextId>static_instance-service_reason-0</itextId>
-            <name>no_staff</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-1</itextId>
-            <name>closed_facility</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-2</itextId>
-            <name>no_reagents</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-3</itextId>
-            <name>waiting_too_long</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-4</itextId>
-            <name>no_money</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-5</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="second_facility">
-        <root>
-          <item>
-            <itextId>static_instance-second_facility-0</itextId>
-            <name>pregnancy_supplements</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-1</itextId>
-            <name>bp_reading</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-2</itextId>
-            <name>hb_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-3</itextId>
-            <name>bp_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-4</itextId>
-            <name>urine_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-5</itextId>
-            <name>ultrasound</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-6</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="services_received">
-        <root>
-          <item>
-            <itextId>static_instance-services_received-0</itextId>
-            <name>tt_vaccine</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-1</itextId>
-            <name>iron_folate_mabendazole</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-2</itextId>
-            <name>llitn</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-3</itextId>
-            <name>hiv_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-4</itextId>
-            <name>blood_pressure</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-5</itextId>
-            <name>urine_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-6</itextId>
-            <name>blood_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-7</itextId>
-            <name>danger_sign_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-8</itextId>
-            <name>discusses_birth_plan</name>
-          </item>
-          <item>
-            <itextId>static_instance-services_received-9</itextId>
-            <name>discusses_postpartum_family_planning</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="paid_for">
-        <root>
-          <item>
-            <itextId>static_instance-paid_for-0</itextId>
-            <name>service_fee</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-1</itextId>
-            <name>hb_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-2</itextId>
-            <name>urine_analysis</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-3</itextId>
-            <name>rch_card</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-4</itextId>
-            <name>blood_sugar_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-5</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="wait_period">
-        <root>
-          <item>
-            <itextId>static_instance-wait_period-0</itextId>
-            <name>short</name>
-          </item>
-          <item>
-            <itextId>static_instance-wait_period-1</itextId>
-            <name>ok</name>
-          </item>
-          <item>
-            <itextId>static_instance-wait_period-2</itextId>
-            <name>too_long</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="travel_time">
-        <root>
-          <item>
-            <itextId>static_instance-travel_time-0</itextId>
-            <name>less_than_30</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_time-1</itextId>
-            <name>30_to_1hr</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_time-2</itextId>
-            <name>more_than_1hr</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_time-3</itextId>
-            <name>travel_time_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="travel_means">
-        <root>
-          <item>
-            <itextId>static_instance-travel_means-0</itextId>
-            <name>walk</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-1</itextId>
-            <name>bicycle</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-2</itextId>
-            <name>moto</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-3</itextId>
-            <name>private_car</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-4</itextId>
-            <name>public_bus</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-5</itextId>
-            <name>health_facility_vehicle</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-6</itextId>
-            <name>boat</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-7</itextId>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-8</itextId>
-            <name>travel_means_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="highest_school_level">
-        <root>
-          <item>
-            <itextId>static_instance-highest_school_level-0</itextId>
-            <name>no_formal_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-1</itextId>
-            <name>incomplete_primary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-2</itextId>
-            <name>primary_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-3</itextId>
-            <name>incomplete_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-4</itextId>
-            <name>secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-5</itextId>
-            <name>completed_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-6</itextId>
-            <name>more_than_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-7</itextId>
-            <name>school_level_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="decision_maker">
-        <root>
-          <item>
-            <itextId>static_instance-decision_maker-0</itextId>
-            <name>herself</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-1</itextId>
-            <name>husband</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-2</itextId>
-            <name>herself_and_husband</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-3</itextId>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-4</itextId>
-            <name>decision_maker_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
       <instance id="marital_status">
         <root>
           <item>
@@ -4452,63 +4524,12 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           </item>
         </root>
       </instance>
-      <instance id="partner_highest_school_level">
-        <root>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-0</itextId>
-            <name>partner_no_formal_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-1</itextId>
-            <name>partner_incomplete_primary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-2</itextId>
-            <name>partner_primary_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-3</itextId>
-            <name>partner_incomplete_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-4</itextId>
-            <name>partner_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-5</itextId>
-            <name>partner_completed_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-6</itextId>
-            <name>partner_more_than_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-7</itextId>
-            <name>partner_school_level_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="yes_no_decline_to_answer">
-        <root>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-0</itextId>
-            <name>yes</name>
-          </item>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-1</itextId>
-            <name>no</name>
-          </item>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-2</itextId>
-            <name>decline_to_answer</name>
-          </item>
-        </root>
-      </instance>
       <bind nodeset="/pregnancy/inputs" relevant="false()"/>
       <bind nodeset="/pregnancy/inputs/due_date" type="string"/>
       <bind nodeset="/pregnancy/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/pregnancy/inputs/client_EDD" type="string"/>
       <bind nodeset="/pregnancy/inputs/visit_id" type="string"/>
+      <bind nodeset="/pregnancy/inputs/client_EDD_human_readable" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/contact_id" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/facility_id" type="string"/>
       <bind nodeset="/pregnancy/inputs/user/name" type="string"/>
@@ -4539,6 +4560,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
       <bind calculate="instance('contact-summary')/context/phone" nodeset="/pregnancy/phone" type="string"/>
       <bind calculate="../inputs/due_date" nodeset="/pregnancy/due_date" type="string"/>
       <bind calculate="../inputs/due_date_human_readable" nodeset="/pregnancy/due_date_pretty_print" type="string"/>
+      <bind calculate="../inputs/client_EDD_human_readable" nodeset="/pregnancy/client_EDD_pretty_print" type="string"/>
       <bind calculate="../inputs/client_EDD" nodeset="/pregnancy/client_EDD_c" type="string"/>
       <bind calculate="instance('contact-summary')/context/currently_pregnant" nodeset="/pregnancy/currently_pregnant" type="string"/>
       <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)" nodeset="/pregnancy/hide_lmp_or_months_pregnant" type="string"/>
@@ -4547,6 +4569,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
       <bind nodeset="/pregnancy/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/client_information/due_date_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/client_information/edd_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/age_below_15" relevant=" /pregnancy/n_pregnancy_visits  = 0"/>
       <bind nodeset="/pregnancy/age_below_15/below_15_confirmation" relevant=" /pregnancy/age_in_years  &lt; 15" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/age_above_49" relevant=" /pregnancy/n_pregnancy_visits  = 0"/>
@@ -4581,6 +4604,7 @@ not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnanc
       <bind nodeset="/pregnancy/rch_card/remember_lmp" relevant="(selected( /pregnancy/rch_card/is_rch_card_available ,'no') or selected( /pregnancy/rch_card/is_delivery_date_written ,'no')) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="select1"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy/week  * 40)))" jr:constraintMsg="jr:itext('/pregnancy/rch_card/last_lmp_date:jr:constraintMsg')" nodeset="/pregnancy/rch_card/last_lmp_date" relevant="selected( /pregnancy/rch_card/remember_lmp ,'yes') and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="date"/>
       <bind constraint=". &gt; 0 and . &lt;= 9" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_months_pregnant:jr:constraintMsg')" nodeset="/pregnancy/rch_card/estimated_months_pregnant" relevant="((selected( /pregnancy/rch_card/is_rch_card_available ,'no') or (selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and selected( /pregnancy/rch_card/is_delivery_date_written ,'no'))) and selected( /pregnancy/rch_card/remember_lmp ,'no') ) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="int"/>
+      <bind nodeset="/pregnancy/rch_card/edd_note" readonly="true()" relevant=" /pregnancy/EDD  != &quot;&quot;" type="string"/>
       <bind calculate="if( /pregnancy/previous_rchcard_status =&quot;true&quot;, 
   /pregnancy/client_EDD_c , 
  if( /pregnancy/hide_lmp_or_months_pregnant =&quot;true&quot;,
@@ -4591,20 +4615,21 @@ not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnanc
   /pregnancy/rch_card/estimated_delivery_date_input ,
  if(selected( /pregnancy/rch_card/remember_lmp ,'yes'),
  format-date(decimal-date-time( /pregnancy/rch_card/last_lmp_date ) + 40* /pregnancy/week , &quot;%Y-%m-%d&quot;),
- format-date(decimal-date-time(today())+ ((40 -  /pregnancy/rch_card/estimated_months_pregnant *4.5 )* /pregnancy/week ), &quot;%Y-%m-%d&quot;)))))" nodeset="/pregnancy/EDD" type="string"/>
+ if( /pregnancy/rch_card/estimated_months_pregnant  != &quot;&quot;,
+ format-date(decimal-date-time(today())+ ((40 -  /pregnancy/rch_card/estimated_months_pregnant *4.5 )* /pregnancy/week ), &quot;%Y-%m-%d&quot;),&quot;&quot;)))))" nodeset="/pregnancy/EDD" type="string"/>
       <bind calculate="40 - round((decimal-date-time( /pregnancy/EDD ) - decimal-date-time(today())) div  /pregnancy/week )" nodeset="/pregnancy/gestation_in_weeks" type="string"/>
       <bind nodeset="/pregnancy/danger_signs" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) or ( /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/visit_introduction/has_given_birth =&quot;no&quot; and  /pregnancy/visit_introduction/viable_pregnancy =&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_intro" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_94" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_98" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_note_to_chv" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/danger_signs/observe_danger_signs" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_101" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_105" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_fever" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" required="true()" type="select1"/>
@@ -4686,10 +4711,11 @@ not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnanc
       <bind nodeset="/pregnancy/birth_plan/transfusion_and_backup/backup_person" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/transport/prepare_transport" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/transport/taxi_phones_chv_note" readonly="true()" type="string"/>
+      <bind calculate="int((decimal-date-time( /pregnancy/client_EDD_c ) - (decimal-date-time(now()))) div  /pregnancy/month )" nodeset="/pregnancy/pregnancy_months_left" type="string"/>
       <bind nodeset="/pregnancy/early_breastfeeding" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
-not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
+not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_months_left  &gt;= 3) or 
 
-(selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
+(selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_months_left  &gt;= 3)"/>
       <bind nodeset="/pregnancy/early_breastfeeding/breastfeed_after_birth" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/early_breastfeeding/breastfeed_within_one_hour" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/early_breastfeeding/yellow_milk" readonly="true()" type="string"/>
@@ -4778,6 +4804,7 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <input ref="/pregnancy/inputs/due_date_human_readable"/>
       <input ref="/pregnancy/inputs/client_EDD"/>
       <input ref="/pregnancy/inputs/visit_id"/>
+      <input ref="/pregnancy/inputs/client_EDD_human_readable"/>
       <group ref="/pregnancy/inputs/user">
         <input ref="/pregnancy/inputs/user/contact_id">
           <label ref="jr:itext('/pregnancy/inputs/user/contact_id:label')"/>
@@ -4808,6 +4835,9 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       </input>
       <input ref="/pregnancy/client_information/due_date_note">
         <label ref="jr:itext('/pregnancy/client_information/due_date_note:label')"/>
+      </input>
+      <input ref="/pregnancy/client_information/edd_intro_note">
+        <label ref="jr:itext('/pregnancy/client_information/edd_intro_note:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/age_below_15">
@@ -4991,6 +5021,9 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <input ref="/pregnancy/rch_card/estimated_months_pregnant">
         <label ref="jr:itext('/pregnancy/rch_card/estimated_months_pregnant:label')"/>
       </input>
+      <input ref="/pregnancy/rch_card/edd_note">
+        <label ref="jr:itext('/pregnancy/rch_card/edd_note:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/danger_signs">
       <label ref="jr:itext('/pregnancy/danger_signs:label')"/>
@@ -4998,15 +5031,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_intro:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_1">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_94"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_98"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_95/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_99/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -5051,15 +5084,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/observe_danger_signs:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_2">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_101"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_105"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_102/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_106/no:label')"/>
             <value>no</value>
           </item>
         </select1>

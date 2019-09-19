@@ -2556,15 +2556,15 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
               <num_wives/>
             </subgroup_multiple_wives>
           </research_questions>
-          <refer_postpartum_emergency_danger_sign_flag/>
-          <refer_postpartum_other_danger_sign_flag/>
-          <any_referral/>
           <group_summary>
             <healthy_note/>
             <needs_referral_note/>
             <needs_referral_emergency_danger_sign_note/>
             <needs_referral_other_danger_sign_note/>
           </group_summary>
+          <refer_postpartum_emergency_danger_sign_flag/>
+          <refer_postpartum_other_danger_sign_flag/>
+          <has_referral/>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -3502,13 +3502,13 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
       <bind nodeset="/postpartum/research_questions/partner_info/partner_highest_school_level" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/postpartum/research_questions/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/postpartum/research_questions/subgroup_multiple_wives/num_wives" relevant="selected( /postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
-      <bind calculate="if((selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;yes&quot;)) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;yes&quot;) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;yes&quot;),1,0)" nodeset="/postpartum/refer_postpartum_emergency_danger_sign_flag" type="string"/>
-      <bind calculate="if(selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;yes&quot;) or selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;no&quot;),1,0)" nodeset="/postpartum/refer_postpartum_other_danger_sign_flag" type="string"/>
-      <bind calculate="if( /postpartum/refer_postpartum_emergency_danger_sign_flag =1 or  /postpartum/refer_postpartum_other_danger_sign_flag =1,1,0)" nodeset="/postpartum/any_referral" type="string"/>
-      <bind nodeset="/postpartum/group_summary/healthy_note" readonly="true()" relevant=" /postpartum/any_referral =0" type="string"/>
-      <bind nodeset="/postpartum/group_summary/needs_referral_note" readonly="true()" relevant=" /postpartum/any_referral =1" type="string"/>
+      <bind nodeset="/postpartum/group_summary/healthy_note" readonly="true()" relevant=" /postpartum/has_referral =0" type="string"/>
+      <bind nodeset="/postpartum/group_summary/needs_referral_note" readonly="true()" relevant=" /postpartum/has_referral =1" type="string"/>
       <bind nodeset="/postpartum/group_summary/needs_referral_emergency_danger_sign_note" readonly="true()" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =1" type="string"/>
       <bind nodeset="/postpartum/group_summary/needs_referral_other_danger_sign_note" readonly="true()" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag =1" type="string"/>
+      <bind calculate="if((selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;yes&quot;)) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;yes&quot;) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;yes&quot;),1,0)" nodeset="/postpartum/refer_postpartum_emergency_danger_sign_flag" type="string"/>
+      <bind calculate="if(selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;yes&quot;) or selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;no&quot;),1,0)" nodeset="/postpartum/refer_postpartum_other_danger_sign_flag" type="string"/>
+      <bind calculate="if( /postpartum/refer_postpartum_emergency_danger_sign_flag =1 or  /postpartum/refer_postpartum_other_danger_sign_flag =1,1,0)" nodeset="/postpartum/has_referral" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/postpartum/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
