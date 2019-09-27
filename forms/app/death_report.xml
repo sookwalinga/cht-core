@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Death Report</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/death_report/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death_report/client_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death_report/age_in_years "/> years, <output value=" /death_report/age_months "/> months, <output value=" /death_report/age_days_display "/> days&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death_report/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death_report/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death_report/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/death_report/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Death report&lt;/span&gt;</value>
+          </text>
+          <text id="/death_report/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death_report/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/death_report/client_information:label">
+            <value>Client Information</value>
+          </text>
+          <text id="/death_report/death_report_intro/intro:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Sympathize with the family for their loss. Describe why you are asking these questions and how the information will be shared and used.&lt;/span&gt;</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/after_2_3_mo:label">
+            <value>The woman died within 2 to 3 months after the end of a pregnancy or childbirth</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/childbirth:label">
+            <value>The woman died during childbirth</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/none_of_the_above:label">
+            <value>None of the above</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/pregnancy:label">
+            <value>The woman was pregnant when she died</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death:label">
+            <value>When did the death occur?</value>
+          </text>
+          <text id="/death_report/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/death_report/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/death_report/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg">
+            <value>Enter a district</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_district:label">
+            <value>District</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg">
+            <value>Enter a name</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_name:label">
+            <value>Name</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg">
+            <value>Use the following format 0XXXXXXXXX</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_phone:label">
+            <value>Phone</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg">
+            <value>Enter the relationship with the deceased</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_rel_w_deceased:label">
+            <value>Relationship with deceased</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg">
+            <value>Enter a street/shehia</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_street_shehia:label">
+            <value>Street/shehia</value>
+          </text>
+          <text id="/death_report/next_of_kin:label">
+            <value>Contact details next of kin</value>
+          </text>
+          <text id="/death_report/other/date_of_death_other:jr:constraintMsg">
+            <value>The date of death must be between the date of birth (<output value=" /death_report/date_of_birth_c "/>) and today.</value>
+          </text>
+          <text id="/death_report/other/date_of_death_other:label">
+            <value>Date of death</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg">
+            <value>The date of death must be between the date of birth (<output value=" /death_report/date_of_birth_c "/>) and today.</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/date_of_death_maternal:label">
+            <value>Date of death</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:jr:constraintMsg">
+            <value>The date of pregnancy loss must be between the date of birth (<output value=" /death_report/date_of_birth_c "/>) and the date of death.</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:label">
+            <value>When did the pregnancy end?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/home:label">
+            <value>At home</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/outside_home:label">
+            <value>Outside home</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/tba:label">
+            <value>At TBA</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death:label">
+            <value>Where did she die?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/health_facility:label">
+            <value>At health facility</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/home:label">
+            <value>At home</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/outside_home:label">
+            <value>Outside home</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/tba:label">
+            <value>At TBA</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end:label">
+            <value>Where did the pregnancy end?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death:label">
+            <value>Suspected maternal death</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/death_report/client_information/household_note:label">
+            <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /death_report/client_name "/>&lt;/span&gt;
+Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /death_report/age_in_years "/> miaka, <output value=" /death_report/age_months "/> miezi, <output value=" /death_report/age_days_display "/> siku&lt;/span&gt;
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /death_report/household_head "/>&lt;/span&gt; 
+Namba ya nyumba: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /death_report/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /death_report/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/death_report/client_information/intro_note:label">
+            <value>Aina ya tembeleo: &lt;span style="font-weight:bold"&gt;Taarifa ya kifo&lt;/span&gt;</value>
+          </text>
+          <text id="/death_report/client_information/phone_note:label">
+            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death_report/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/death_report/client_information:label">
+            <value>Taarifa za mteja</value>
+          </text>
+          <text id="/death_report/death_report_intro/intro:label">
+            <value>Wape pole familia kwa kufiwa na mtu wao. Waeleze kwa nini unauliza maswali haya na ni vipi hizi taarifa zitawasilishwa na kufanyiwa kazi.</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/after_2_3_mo:label">
+            <value>Mama alifariki miezi miwili hadi mitatu baada ya ujauzito au baada ya kujifungua</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/childbirth:label">
+            <value>Mama alifariki wakati wa kujifungua</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/none_of_the_above:label">
+            <value>Hakuna kati ya hizo</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death/pregnancy:label">
+            <value>Mama alikuwa mjamzito alipofariki</value>
+          </text>
+          <text id="/death_report/death_report_intro/when_death:label">
+            <value>Kifo kilitokea lini?</value>
+          </text>
+          <text id="/death_report/death_report_intro:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg">
+            <value>Jaza wilaya</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_district:label">
+            <value>Wilaya</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg">
+            <value>Jaza jina</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_name:label">
+            <value>Jina</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg">
+            <value>Tumia mfumo huu 0XXXXXXXXX</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_phone:label">
+            <value>Namba ya Simu</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg">
+            <value>Jaza mahusiano na marehemu</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_rel_w_deceased:label">
+            <value>Mahusiano na marehemu</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg">
+            <value>Jaza mtaa/shehia</value>
+          </text>
+          <text id="/death_report/next_of_kin/next_of_kin_street_shehia:label">
+            <value>Mtaa/shehia</value>
+          </text>
+          <text id="/death_report/next_of_kin:label">
+            <value>Mawasiliano na mtu wakaribu</value>
+          </text>
+          <text id="/death_report/other/date_of_death_other:jr:constraintMsg">
+            <value>Tarehe ya kifo iwe baina ya leo na tarehe ya kuzaliwa</value>
+          </text>
+          <text id="/death_report/other/date_of_death_other:label">
+            <value>Tarehe ya kifo</value>
+          </text>
+          <text id="/death_report/other:label">
+            <value>-</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg">
+            <value>Tarehe ya kifo iwe baina ya leo na tarehe ya kuzaliwa</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/date_of_death_maternal:label">
+            <value>Tarehe ya kifo</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:jr:constraintMsg">
+            <value>Tarehe ya kuharibika ujauzito iwe baina ya tarehe ya kifo na tarehe ya kuzaliwa</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:label">
+            <value>Je alijifungua au mimba ilitoka lini</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/home:label">
+            <value>Nyumbani</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/other:label">
+            <value>Penginepo</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/outside_home:label">
+            <value>Nje ya nyumbani</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/tba:label">
+            <value>Kwa mkunga wa jadi</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death:label">
+            <value>Amefia wapi</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/health_facility:label">
+            <value>Kwenye kituo cha afya</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/home:label">
+            <value>Nyumbani</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/outside_home:label">
+            <value>Nje ya nyumbani</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/tba:label">
+            <value>Kwa mkunga wa jadi</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_pregnancy_end:label">
+            <value>Alijifungua au kutoka mimba wapi</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death:label">
+            <value>Utambuzi wa vifo vya akina mama</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <death_report delimiter="#" id="death_report" prefix="J1!death_report!" version="2019-09-27_15-55">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <date_of_birth/>
+              <_id/>
+              <name/>
+              <sex/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <date_of_birth_c/>
+          <sex_c/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <age_in_years/>
+          <age_days_display/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <client_information>
+            <intro_note/>
+            <household_note/>
+            <phone_note/>
+          </client_information>
+          <death_report_intro>
+            <intro/>
+            <when_death/>
+          </death_report_intro>
+          <suspected_maternal_death>
+            <date_of_death_maternal/>
+            <where_death/>
+            <when_pregnancy_end/>
+            <where_pregnancy_end/>
+          </suspected_maternal_death>
+          <next_of_kin>
+            <next_of_kin_name/>
+            <next_of_kin_rel_w_deceased/>
+            <next_of_kin_street_shehia/>
+            <next_of_kin_district/>
+            <next_of_kin_phone/>
+          </next_of_kin>
+          <other>
+            <date_of_death_other/>
+          </other>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </death_report>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/death_report/inputs" relevant="false()"/>
+      <bind nodeset="/death_report/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/death_report/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/death_report/inputs/user/name" type="string"/>
+      <bind nodeset="/death_report/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/death_report/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/death_report/inputs/contact/name" type="string"/>
+      <bind nodeset="/death_report/inputs/contact/sex" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/death_report/client_name" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/death_report/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/date_of_birth" nodeset="/death_report/date_of_birth_c" type="string"/>
+      <bind calculate="../inputs/contact/sex" nodeset="/death_report/sex_c" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/death_report/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/death_report/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/death_report/created_by_place_uuid" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /death_report/date_of_birth_c ))" nodeset="/death_report/age_days" type="string"/>
+      <bind calculate="int(( /death_report/age_days  - ( /death_report/age_years  * 12 * 30)) div 30,0)" nodeset="/death_report/age_months" type="string"/>
+      <bind calculate="int( /death_report/age_days  div (30 *12),0)" nodeset="/death_report/age_years" type="string"/>
+      <bind calculate="round((decimal-date-time(today()) - decimal-date-time( /death_report/date_of_birth_c )) div 365,0)" nodeset="/death_report/age_in_years" type="string"/>
+      <bind calculate=" /death_report/age_days  - ( /death_report/age_months  * 30) - ( /death_report/age_years  *12*30)" nodeset="/death_report/age_days_display" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/death_report/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/death_report/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/death_report/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/death_report/phone" type="string"/>
+      <bind nodeset="/death_report/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/death_report/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/death_report/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/death_report/death_report_intro/intro" readonly="true()" type="string"/>
+      <bind nodeset="/death_report/death_report_intro/when_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot;" required="true()" type="select1"/>
+      <bind nodeset="/death_report/suspected_maternal_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/death_report_intro/when_death  != &quot;none_of_the_above&quot;"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg')" nodeset="/death_report/suspected_maternal_death/date_of_death_maternal" required="true()" type="date"/>
+      <bind nodeset="/death_report/suspected_maternal_death/where_death" required="true()" type="select1"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time( /death_report/suspected_maternal_death/date_of_death_maternal )) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/when_pregnancy_end:jr:constraintMsg')" nodeset="/death_report/suspected_maternal_death/when_pregnancy_end" required="true()" type="date"/>
+      <bind nodeset="/death_report/suspected_maternal_death/where_pregnancy_end" required="true()" type="select1"/>
+      <bind nodeset="/death_report/next_of_kin" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/death_report_intro/when_death  != &quot;none_of_the_above&quot;"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_name" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_rel_w_deceased" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_street_shehia" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_district" required="true()" type="string"/>
+      <bind constraint="regex(.,'^0[0-9]{9}$')" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_phone" required="true()" type="string"/>
+      <bind nodeset="/death_report/other" relevant=" /death_report/inputs/contact/sex  = &quot;male&quot; or  /death_report/death_report_intro/when_death  = &quot;none_of_the_above&quot;"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/other/date_of_death_other:jr:constraintMsg')" nodeset="/death_report/other/date_of_death_other" required="true()" type="date"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/death_report/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/death_report/inputs">
+      <group ref="/death_report/inputs/user">
+        <input ref="/death_report/inputs/user/contact_id">
+          <label ref="jr:itext('/death_report/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/death_report/inputs/user/facility_id">
+          <label ref="jr:itext('/death_report/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/death_report/inputs/user/name">
+          <label ref="jr:itext('/death_report/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/death_report/inputs/contact">
+        <input ref="/death_report/inputs/contact/date_of_birth"/>
+        <input appearance="db-object" ref="/death_report/inputs/contact/_id"/>
+        <input ref="/death_report/inputs/contact/name"/>
+        <input ref="/death_report/inputs/contact/sex"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/death_report/client_information">
+      <label ref="jr:itext('/death_report/client_information:label')"/>
+      <input ref="/death_report/client_information/intro_note">
+        <label ref="jr:itext('/death_report/client_information/intro_note:label')"/>
+      </input>
+      <input ref="/death_report/client_information/household_note">
+        <label ref="jr:itext('/death_report/client_information/household_note:label')"/>
+      </input>
+      <input ref="/death_report/client_information/phone_note">
+        <label ref="jr:itext('/death_report/client_information/phone_note:label')"/>
+      </input>
+    </group>
+    <group ref="/death_report/death_report_intro">
+      <input ref="/death_report/death_report_intro/intro">
+        <label ref="jr:itext('/death_report/death_report_intro/intro:label')"/>
+      </input>
+      <select1 ref="/death_report/death_report_intro/when_death">
+        <label ref="jr:itext('/death_report/death_report_intro/when_death:label')"/>
+        <item>
+          <label ref="jr:itext('/death_report/death_report_intro/when_death/pregnancy:label')"/>
+          <value>pregnancy</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/death_report_intro/when_death/childbirth:label')"/>
+          <value>childbirth</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/death_report_intro/when_death/after_2_3_mo:label')"/>
+          <value>after_2_3_mo</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/death_report_intro/when_death/none_of_the_above:label')"/>
+          <value>none_of_the_above</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/death_report/suspected_maternal_death">
+      <label ref="jr:itext('/death_report/suspected_maternal_death:label')"/>
+      <input ref="/death_report/suspected_maternal_death/date_of_death_maternal">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:label')"/>
+      </input>
+      <select1 ref="/death_report/suspected_maternal_death/where_death">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/where_death:label')"/>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_death/home:label')"/>
+          <value>home</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_death/outside_home:label')"/>
+          <value>outside_home</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_death/tba:label')"/>
+          <value>tba</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_death/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/death_report/suspected_maternal_death/when_pregnancy_end">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/when_pregnancy_end:label')"/>
+      </input>
+      <select1 ref="/death_report/suspected_maternal_death/where_pregnancy_end">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end:label')"/>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/home:label')"/>
+          <value>home</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/outside_home:label')"/>
+          <value>outside_home</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/tba:label')"/>
+          <value>tba</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/health_facility:label')"/>
+          <value>health_facility</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/death_report/next_of_kin">
+      <label ref="jr:itext('/death_report/next_of_kin:label')"/>
+      <input ref="/death_report/next_of_kin/next_of_kin_name">
+        <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_name:label')"/>
+      </input>
+      <input ref="/death_report/next_of_kin/next_of_kin_rel_w_deceased">
+        <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_rel_w_deceased:label')"/>
+      </input>
+      <input ref="/death_report/next_of_kin/next_of_kin_street_shehia">
+        <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_street_shehia:label')"/>
+      </input>
+      <input ref="/death_report/next_of_kin/next_of_kin_district">
+        <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_district:label')"/>
+      </input>
+      <input appearance="numbers" ref="/death_report/next_of_kin/next_of_kin_phone">
+        <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_phone:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/death_report/other">
+      <input ref="/death_report/other/date_of_death_other">
+        <label ref="jr:itext('/death_report/other/date_of_death_other:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

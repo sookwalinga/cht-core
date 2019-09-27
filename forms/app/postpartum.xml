@@ -32,7 +32,7 @@
           <text id="/postpartum/client_information/household_note:label">
             <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/client_name "/>&lt;/span&gt;
 Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/age_years "/> years, <output value=" /postpartum/age_months "/> months, <output value=" /postpartum/age_days_display "/> days&lt;/span&gt;
-Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt; 
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt;
 House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/kitongoji "/>&lt;/span&gt;</value>
           </text>
@@ -152,8 +152,8 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postp
           </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_referral_note:label">
             <value>This is an URGENT and serious emergency. You should go to the nearest facility immediately. If it is near closing time for this facility, you should directly to nearest hospital.
- 
-I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey. 
+
+I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey.
 
 I will return in 3 days to make sure you completed this referral
 
@@ -203,9 +203,9 @@ Have you, in the past 3 days, gone to a health facility for any of these identif
             <value>No danger signs were identified, but if you develop any of the signs we discussed, you should go to a health facility immediately.</value>
           </text>
           <text id="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_referral_note:label">
-            <value>You should go to a health facility as soon as possible and within 24 hours for further screening. 
+            <value>You should go to a health facility as soon as possible and within 24 hours for further screening.
 
-I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey. 
+I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey.
 
 I will return in 3 days to make sure you completed this referral
 
@@ -1197,7 +1197,7 @@ If you have any problems before that time, please call me.</value>
           <text id="/postpartum/client_information/household_note:label">
             <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/client_name "/>&lt;/span&gt;
 Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/age_years "/> miaka, <output value=" /postpartum/age_months "/> miezi, <output value=" /postpartum/age_days_display "/> siku&lt;/span&gt;
-Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt; 
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt;
 Namba ya nyumba: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/kitongoji "/>&lt;/span&gt;</value>
           </text>
@@ -3075,43 +3075,35 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="travel_means">
+      <instance id="second_facility">
         <root>
           <item>
-            <itextId>static_instance-travel_means-0</itextId>
-            <name>walk</name>
+            <itextId>static_instance-second_facility-0</itextId>
+            <name>pregnancy_supplements</name>
           </item>
           <item>
-            <itextId>static_instance-travel_means-1</itextId>
-            <name>bicycle</name>
+            <itextId>static_instance-second_facility-1</itextId>
+            <name>bp_reading</name>
           </item>
           <item>
-            <itextId>static_instance-travel_means-2</itextId>
-            <name>moto</name>
+            <itextId>static_instance-second_facility-2</itextId>
+            <name>hb_test</name>
           </item>
           <item>
-            <itextId>static_instance-travel_means-3</itextId>
-            <name>private_car</name>
+            <itextId>static_instance-second_facility-3</itextId>
+            <name>bp_test</name>
           </item>
           <item>
-            <itextId>static_instance-travel_means-4</itextId>
-            <name>public_bus</name>
+            <itextId>static_instance-second_facility-4</itextId>
+            <name>urine_test</name>
           </item>
           <item>
-            <itextId>static_instance-travel_means-5</itextId>
-            <name>health_facility_vehicle</name>
+            <itextId>static_instance-second_facility-5</itextId>
+            <name>ultrasound</name>
           </item>
           <item>
-            <itextId>static_instance-travel_means-6</itextId>
-            <name>boat</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-7</itextId>
+            <itextId>static_instance-second_facility-6</itextId>
             <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-8</itextId>
-            <name>travel_means_dont_know_decline</name>
           </item>
         </root>
       </instance>
@@ -3276,6 +3268,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <itextId>static_instance-service_reason-1</itextId>
             <name>closed_facility</name>
           </item>
+        </root>
+      </instance>
+      <instance id="baby_services_received">
+        <root>
           <item>
             <itextId>static_instance-service_reason-2</itextId>
             <name>no_reagents</name>
@@ -3404,7 +3400,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior" required="true()" type="select1"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast" required="true()" type="select1"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/c_section_condition" relevant=" /postpartum/had_c_section =&quot;yes&quot;" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or 
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision ,&quot;yes&quot;) or
@@ -3464,16 +3460,16 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
       <bind nodeset="/postpartum/quality_of_care" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and selected( /postpartum/check_facility_pnc/quality_of_care_consent ,&quot;yes&quot;) and selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)"/>
       <bind nodeset="/postpartum/quality_of_care/facility_island" required="true()" type="select1"/>
       <bind nodeset="/postpartum/quality_of_care/facility_district" relevant="selected( /postpartum/quality_of_care/facility_island ,&quot;unguja&quot;) or selected( /postpartum/quality_of_care/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;north_b&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;central&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;south&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;west_a&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;west_b&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;urban&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;chakechake&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;micheweni&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;mkoani&quot;) or 
+      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;north_b&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;central&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;south&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;west_a&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;west_b&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;urban&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;chakechake&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;micheweni&quot;) or
+selected( /postpartum/quality_of_care/facility_district ,&quot;mkoani&quot;) or
 selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
       <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility_other" relevant="selected( /postpartum/quality_of_care/subgroup_facility/anc_visit_facility ,&quot;other&quot;)" required="true()" type="string"/>
       <bind nodeset="/postpartum/quality_of_care/is_service_received" required="true()" type="select1"/>

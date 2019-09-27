@@ -1812,39 +1812,43 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         </delivery_outcomes>
       </instance>
       <instance id="contact-summary"/>
-      <instance id="yes_no">
+      <instance id="why_handled_bad">
         <root>
           <item>
-            <itextId>static_instance-yes_no-0</itextId>
-            <name>yes</name>
+            <itextId>static_instance-why_handled_bad-0</itextId>
+            <name>shouted</name>
           </item>
           <item>
-            <itextId>static_instance-yes_no-1</itextId>
-            <name>no</name>
+            <itextId>static_instance-why_handled_bad-1</itextId>
+            <name>hit</name>
+          </item>
+          <item>
+            <itextId>static_instance-why_handled_bad-2</itextId>
+            <name>ignored</name>
+          </item>
+          <item>
+            <itextId>static_instance-why_handled_bad-3</itextId>
+            <name>unfriendly</name>
+          </item>
+          <item>
+            <itextId>static_instance-why_handled_bad-4</itextId>
+            <name>other</name>
           </item>
         </root>
       </instance>
-      <instance id="num_deliveries">
+      <instance id="how_handled">
         <root>
           <item>
-            <itextId>static_instance-num_deliveries-0</itextId>
-            <name>one</name>
+            <itextId>static_instance-how_handled-0</itextId>
+            <name>good</name>
           </item>
           <item>
-            <itextId>static_instance-num_deliveries-1</itextId>
-            <name>more</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="sex">
-        <root>
-          <item>
-            <itextId>static_instance-sex-0</itextId>
-            <name>male</name>
+            <itextId>static_instance-how_handled-1</itextId>
+            <name>ok</name>
           </item>
           <item>
-            <itextId>static_instance-sex-1</itextId>
-            <name>female</name>
+            <itextId>static_instance-how_handled-2</itextId>
+            <name>bad</name>
           </item>
         </root>
       </instance>
@@ -1864,6 +1868,34 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
+      <instance id="method_facility_delivery">
+        <root>
+          <item>
+            <itextId>static_instance-method_facility_delivery-0</itextId>
+            <name>normal_vaginal</name>
+          </item>
+          <item>
+            <itextId>static_instance-method_facility_delivery-1</itextId>
+            <name>caesarian</name>
+          </item>
+          <item>
+            <itextId>static_instance-method_facility_delivery-2</itextId>
+            <name>vacuum_forceps</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="immediate_cry">
+        <root>
+          <item>
+            <itextId>static_instance-immediate_cry-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-immediate_cry-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
       <instance id="facility_island">
         <root>
           <item>
@@ -1880,402 +1912,47 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="facility_district">
+      <instance id="sex">
         <root>
           <item>
-            <itextId>static_instance-facility_district-0</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>north_a</name>
+            <itextId>static_instance-sex-0</itextId>
+            <name>male</name>
           </item>
           <item>
-            <itextId>static_instance-facility_district-1</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>north_b</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-2</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>central</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-3</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>south</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-4</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>west_a</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-5</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>west_b</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-6</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>urban</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-7</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>chakechake</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-8</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>micheweni</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-9</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>mkoani</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-10</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>wete</name>
+            <itextId>static_instance-sex-1</itextId>
+            <name>female</name>
           </item>
         </root>
       </instance>
-      <instance id="delivery_facility">
+      <instance id="what_supplies_purchased">
         <root>
           <item>
-            <itextId>static_instance-delivery_facility-0</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>chakechakedistricthospital</name>
+            <itextId>static_instance-what_supplies_purchased-0</itextId>
+            <name>gloves</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_facility-1</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>pujiniphcu+</name>
+            <itextId>static_instance-what_supplies_purchased-1</itextId>
+            <name>plastic_sheet</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_facility-2</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>tundauwaphcu+</name>
+            <itextId>static_instance-what_supplies_purchased-2</itextId>
+            <name>medicine</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_facility-3</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>vitongojiphcc</name>
+            <itextId>static_instance-what_supplies_purchased-3</itextId>
+            <name>cleaning_supplies</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_facility-4</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>weshaphcu+</name>
+            <itextId>static_instance-what_supplies_purchased-4</itextId>
+            <name>needles</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_facility-5</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>kondephcu+</name>
+            <itextId>static_instance-what_supplies_purchased-5</itextId>
+            <name>iv_infusion</name>
           </item>
           <item>
-            <itextId>static_instance-delivery_facility-6</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>makangalephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-7</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>maziwangombephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-8</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>micheweniphcc</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-9</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>wingwiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-10</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>kiuyumbuyuniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-11</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>bogoaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-12</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>kengejaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-13</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>abdallahmzeedistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-14</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>michenzaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-15</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>fundophcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-16</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>kojaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-17</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>makongeniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-18</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>wetedistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-19</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>mzambarauniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-20</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>junguniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-21</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>ukunjwiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-22</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>uondwephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-23</itextId>
-            <choice_filter>central</choice_filter>
-            <name>chwakaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-24</itextId>
-            <choice_filter>central</choice_filter>
-            <name>mweraphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-25</itextId>
-            <choice_filter>central</choice_filter>
-            <name>ungujaukuuphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-26</itextId>
-            <choice_filter>central</choice_filter>
-            <name>uziniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-27</itextId>
-            <choice_filter>central</choice_filter>
-            <name>uroaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-28</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>kivungedistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-29</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>matemwephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-30</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>nungwiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-31</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>pwanimchanganiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-32</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>tumbatugomaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-33</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>kendwaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-34</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>bumbwinimisufiniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-35</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>dongevijibweniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-36</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>kiongwephcu</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-37</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>kitopephcu</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-38</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>mahondaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-39</itextId>
-            <choice_filter>south</choice_filter>
-            <name>jambianiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-40</itextId>
-            <choice_filter>south</choice_filter>
-            <name>makunduchidistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-41</itextId>
-            <choice_filter>south</choice_filter>
-            <name>muyuniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-42</itextId>
-            <choice_filter>south</choice_filter>
-            <name>bwejuuphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-43</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>chumbuniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-44</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>mnazimmojahospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-45</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>mwembeladumchclinic</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-46</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>sebleniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-47</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>chukwaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-48</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>fuoniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-49</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>kombeniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-50</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>mtofaaniphcu+(kinuni)</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-51</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>bumbwisudiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-52</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>selemphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-53</itextId>
-            <choice_filter>chakechake</choice_filter>
+            <itextId>static_instance-what_supplies_purchased-6</itextId>
             <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-54</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-55</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-56</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-57</itextId>
-            <choice_filter>central</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-58</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-59</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-60</itextId>
-            <choice_filter>south</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-61</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-62</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_facility-63</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="method_facility_delivery">
-        <root>
-          <item>
-            <itextId>static_instance-method_facility_delivery-0</itextId>
-            <name>normal_vaginal</name>
-          </item>
-          <item>
-            <itextId>static_instance-method_facility_delivery-1</itextId>
-            <name>caesarian</name>
-          </item>
-          <item>
-            <itextId>static_instance-method_facility_delivery-2</itextId>
-            <name>vacuum_forceps</name>
           </item>
         </root>
       </instance>
@@ -2303,14 +1980,421 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="immediate_cry">
+      <instance id="facility_district">
         <root>
           <item>
-            <itextId>static_instance-immediate_cry-0</itextId>
+            <itextId>static_instance-facility_district-0</itextId>
+            <name>north_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-1</itextId>
+            <name>north_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-2</itextId>
+            <name>central</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-3</itextId>
+            <name>south</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-4</itextId>
+            <name>west_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-5</itextId>
+            <name>west_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-6</itextId>
+            <name>urban</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-7</itextId>
+            <name>chakechake</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-8</itextId>
+            <name>micheweni</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-9</itextId>
+            <name>mkoani</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-10</itextId>
+            <name>wete</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="delivery_facility">
+        <root>
+          <item>
+            <itextId>static_instance-delivery_facility-0</itextId>
+            <name>chakechakedistricthospital</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-1</itextId>
+            <name>pujiniphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-2</itextId>
+            <name>tundauwaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-3</itextId>
+            <name>vitongojiphcc</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-4</itextId>
+            <name>weshaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-5</itextId>
+            <name>kondephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-6</itextId>
+            <name>makangalephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-7</itextId>
+            <name>maziwangombephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-8</itextId>
+            <name>micheweniphcc</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-9</itextId>
+            <name>wingwiphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-10</itextId>
+            <name>kiuyumbuyuniphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-11</itextId>
+            <name>bogoaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-12</itextId>
+            <name>kengejaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-13</itextId>
+            <name>abdallahmzeedistricthospital</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-14</itextId>
+            <name>michenzaniphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-15</itextId>
+            <name>fundophcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-16</itextId>
+            <name>kojaniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-17</itextId>
+            <name>makongeniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-18</itextId>
+            <name>wetedistricthospital</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-19</itextId>
+            <name>mzambarauniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-20</itextId>
+            <name>junguniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-21</itextId>
+            <name>ukunjwiphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-22</itextId>
+            <name>uondwephcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-23</itextId>
+            <name>chwakaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-24</itextId>
+            <name>mweraphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-25</itextId>
+            <name>ungujaukuuphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-26</itextId>
+            <name>uziniphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-27</itextId>
+            <name>uroaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-28</itextId>
+            <name>kivungedistricthospital</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-29</itextId>
+            <name>matemwephcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-30</itextId>
+            <name>nungwiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-31</itextId>
+            <name>pwanimchanganiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-32</itextId>
+            <name>tumbatugomaniphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-33</itextId>
+            <name>kendwaphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-34</itextId>
+            <name>bumbwinimisufiniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-35</itextId>
+            <name>dongevijibweniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-36</itextId>
+            <name>kiongwephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-37</itextId>
+            <name>kitopephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-38</itextId>
+            <name>mahondaphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-39</itextId>
+            <name>jambianiphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-40</itextId>
+            <name>makunduchidistricthospital</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-41</itextId>
+            <name>muyuniphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-42</itextId>
+            <name>bwejuuphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-43</itextId>
+            <name>chumbuniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-44</itextId>
+            <name>mnazimmojahospital</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-45</itextId>
+            <name>mwembeladumchclinic</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-46</itextId>
+            <name>sebleniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-47</itextId>
+            <name>chukwaniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-48</itextId>
+            <name>fuoniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-49</itextId>
+            <name>kombeniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-50</itextId>
+            <name>mtofaaniphcu+(kinuni)</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-51</itextId>
+            <name>bumbwisudiphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-52</itextId>
+            <name>selemphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-53</itextId>
+            <name>other</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-54</itextId>
+            <name>other</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-55</itextId>
+            <name>other</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-56</itextId>
+            <name>other</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-57</itextId>
+            <name>other</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-58</itextId>
+            <name>other</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-59</itextId>
+            <name>other</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-60</itextId>
+            <name>other</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-61</itextId>
+            <name>other</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-62</itextId>
+            <name>other</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_facility-63</itextId>
+            <name>other</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="how_much_paid">
+        <root>
+          <item>
+            <itextId>static_instance-how_much_paid-0</itextId>
+            <name>&lt;1,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-1</itextId>
+            <name>1,000 - 10,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-2</itextId>
+            <name>10,000 - 20,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-3</itextId>
+            <name>20,000 - 50,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-4</itextId>
+            <name>&gt;50,000</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no-0</itextId>
             <name>yes</name>
           </item>
           <item>
-            <itextId>static_instance-immediate_cry-1</itextId>
+            <itextId>static_instance-yes_no-1</itextId>
             <name>no</name>
           </item>
         </root>
@@ -2363,99 +2447,15 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="how_handled">
+      <instance id="num_deliveries">
         <root>
           <item>
-            <itextId>static_instance-how_handled-0</itextId>
-            <name>good</name>
+            <itextId>static_instance-num_deliveries-0</itextId>
+            <name>one</name>
           </item>
           <item>
-            <itextId>static_instance-how_handled-1</itextId>
-            <name>ok</name>
-          </item>
-          <item>
-            <itextId>static_instance-how_handled-2</itextId>
-            <name>bad</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="why_handled_bad">
-        <root>
-          <item>
-            <itextId>static_instance-why_handled_bad-0</itextId>
-            <name>shouted</name>
-          </item>
-          <item>
-            <itextId>static_instance-why_handled_bad-1</itextId>
-            <name>hit</name>
-          </item>
-          <item>
-            <itextId>static_instance-why_handled_bad-2</itextId>
-            <name>ignored</name>
-          </item>
-          <item>
-            <itextId>static_instance-why_handled_bad-3</itextId>
-            <name>unfriendly</name>
-          </item>
-          <item>
-            <itextId>static_instance-why_handled_bad-4</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="how_much_paid">
-        <root>
-          <item>
-            <itextId>static_instance-how_much_paid-0</itextId>
-            <name>&lt;1,000</name>
-          </item>
-          <item>
-            <itextId>static_instance-how_much_paid-1</itextId>
-            <name>1,000 - 10,000</name>
-          </item>
-          <item>
-            <itextId>static_instance-how_much_paid-2</itextId>
-            <name>10,000 - 20,000</name>
-          </item>
-          <item>
-            <itextId>static_instance-how_much_paid-3</itextId>
-            <name>20,000 - 50,000</name>
-          </item>
-          <item>
-            <itextId>static_instance-how_much_paid-4</itextId>
-            <name>&gt;50,000</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="what_supplies_purchased">
-        <root>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-0</itextId>
-            <name>gloves</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-1</itextId>
-            <name>plastic_sheet</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-2</itextId>
-            <name>medicine</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-3</itextId>
-            <name>cleaning_supplies</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-4</itextId>
-            <name>needles</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-5</itextId>
-            <name>iv_infusion</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-6</itextId>
-            <name>other</name>
+            <itextId>static_instance-num_deliveries-1</itextId>
+            <name>more</name>
           </item>
         </root>
       </instance>

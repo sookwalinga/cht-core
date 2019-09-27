@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Death Report"
+    },
+    {
+      "locale": "sw",
+      "content": "Taarifa ya kifo"
+    }
+  ],
+  "icon": "death",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "contact && contact.type === 'person' && contact.parent && contact.parent.parent && contact.parent.parent.parent && !contact.date_of_death"
+  }
+}
