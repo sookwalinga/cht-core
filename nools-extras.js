@@ -895,5 +895,53 @@ module.exports = {
       }
     }
     return flag;
+  },
+  
+  consentingVisitsThisMonth: function (c, form_type) {
+    var flag = false;
+    var isReportedThisMonth = this.isOnSameMonth;
+    if (c && c.reports) {
+      var counter = [];
+      counter = c.reports.filter(function (r) {
+        switch (form_type) {
+          case 'pregnancy':
+            return r.form === 'pregnancy' && r.fields && r.fields.pregnancy_form &&
+              r.fields.pregnancy_form.consent && r.fields.pregnancy_form.consent === 'yes' &&
+              r.reported_date && isReportedThisMonth(new Date(r.reported_date), new Date());
+          case 'infant_child':
+            return r.form === 'infant_child' &&
+              r.fields && r.fields.consent && r.fields.consent.child_consent_today &&
+              r.fields.consent.child_consent_today === 'yes' &&
+              isReportedThisMonth(new Date(r.reported_date), new Date());
+        }
+      });
+      if (counter.length > 0) {
+        flag = true;
+      }
+    }
+    return flag;
+  },
+
+  isOnSameMonth: function (date1, date2) {
+    var firstDate = date1;
+    var secondDate = date2;
+    return firstDate.getFullYear() === secondDate.getFullYear() &&
+      firstDate.getMonth() + 1 === secondDate.getMonth() + 1;
+  },
+
+  isFormSubmittedThisMonth: function (c, form_type) {
+    var flag = false;
+    var isReportedThisMonth = this.isOnSameMonth;
+    if (c && c.reports) {
+      var counter = [];
+      counter = c.reports.filter(function (r) {
+        return r.form === form_type &&
+          r.reported_date && isReportedThisMonth(new Date(r.reported_date), new Date());
+      });
+      if (counter.length > 0) {
+        flag = true;
+      }
+    }
+    return flag;
   }
 };
