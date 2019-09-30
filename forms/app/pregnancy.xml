@@ -51,7 +51,7 @@
             <value>Why have you not attended any ANC visits?</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label">
-            <value>EXPLAIN: It's very important that you attend all four visits because life-threatening complications are often only seen at the third or fourth visit.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;EXPLAIN: &lt;/span&gt;It's very important that you attend all four visits because life-threatening complications are often only seen at the third or fourth visit.</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg">
             <value>Please enter a value between 1 and 8</value>
@@ -63,20 +63,25 @@
             <value>ANC Screening and Counseling</value>
           </text>
           <text id="/pregnancy/birth_plan/labor_signs/early_signs_of_labor:label">
-            <value>Now we will discuss early signs of labor. Go through each sign with the mother and indicate why it's important to get to the facility as early as possible:
- § Nesting - sudden spurt of energy
- § Shivering - Even when not cold 
- § Lightening - This process makes you feel "lighter". Lightening may cause a feeling of pressure on your bladder, leading to more trips to the bathroom
- § Diarrhea
- § Lower back ache
- § Loss of mucus plug - Mucus may be tinged with blood and, for this reason, is often called a "bloody show.
- § Labor Contractions - Strong and regular contractions (usually about 3-5 minutes apart) are often a sign you are in labor.</value>
+            <value>Now we will discuss early signs of labor. 
+
+&lt;span style="color:#f58a1f"&gt;Go through each sign with the mother and indicate why it's important to get to the facility as early as possible: &lt;/span&gt;
+
+ • Nesting - sudden spurt of energy
+ • Shivering - Even when not cold 
+ • Lightening - This process makes you feel "lighter". Lightening may cause a feeling of pressure on your bladder, leading to more trips to the bathroom
+ • Diarrhea
+ • Lower back ache
+ • Loss of mucus plug - Mucus may be tinged with blood and, for this reason, is often called a "bloody show.
+ • Labor Contractions - Strong and regular contractions (usually about 3-5 minutes apart) are often a sign you are in labor.</value>
           </text>
           <text id="/pregnancy/birth_plan/labor_signs:label">
             <value>Early signs of labor</value>
           </text>
           <text id="/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label">
-            <value>Explain the importance of savings for transport to the health facility, other costs associated with her care and delivery, and especially in case of an emergency. For example, you can keep a piggy bank. Or, you can use mobile money. Or, you can join a savings group.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Explain the importance of savings for transport to the health facility, other costs associated with her care and delivery, and especially in case of an emergency.&lt;/span&gt; 
+
+For example, you can keep a piggy bank. Or, you can use mobile money. Or, you can join a savings group.</value>
           </text>
           <text id="/pregnancy/birth_plan/savings:label">
             <value>Importance of saving</value>
@@ -84,30 +89,29 @@
           <text id="/pregnancy/birth_plan/transfusion_and_backup/backup_person:label">
             <value>Prepare the person who will stay in the home to take care of other children while you are at the hospital.</value>
           </text>
-          <text id="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label">
-            <value>In case of any blood transfusion, prepare at least two blood donors.</value>
-          </text>
           <text id="/pregnancy/birth_plan/transfusion_and_backup:label">
-            <value>Blood transfusion and backup person</value>
+            <value>Preparing for child care during delivery</value>
           </text>
           <text id="/pregnancy/birth_plan/transport/prepare_transport:label">
-            <value>It's important to have a plan for how you will get to the health facility to deliver. Explain that you can connect the woman with a driver who can transport her to the health facility quickly once labor begins.</value>
+            <value>It's important to have a plan for how you will get to the health facility to deliver. 
+
+&lt;span style="color:#f58a1f"&gt;Explain that you can connect the woman with a driver who can transport her to the health facility quickly once labor begins.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/birth_plan/transport/taxi_phones_chv_note:label">
-            <value>Provide the mother with phone number(s) for taxi drivers and the prices for health facilities.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Provide the mother with phone number(s) for taxi drivers and the prices for health facilities.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/birth_plan/transport:label">
             <value>Transportation</value>
           </text>
           <text id="/pregnancy/client_information/due_date_note:label">
-            <value>Due date: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print "/>&lt;/span&gt;</value>
+            <value>Due date: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print_english "/>&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/client_information/edd_intro_note:label">
-            <value>EDD: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_EDD_pretty_print "/>&lt;/span&gt;</value>
+            <value>EDD: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_EDD_pretty_print_english "/>&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/client_information/household_note:label">
             <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_name "/>&lt;/span&gt;
-Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/age_years "/> years, <output value=" /pregnancy/age_months "/> months, <output value=" /pregnancy/age_days_display "/> days&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/age_years "/> years&lt;/span&gt;
 Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/household_head "/>&lt;/span&gt; 
 House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/kitongoji "/>&lt;/span&gt;</value>
@@ -203,13 +207,13 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
-            <value>This woman is experiencing or has experienced an emergency danger sign. Urge the woman and her family to get the woman medical help as the lives of the mother and her baby are potentially in danger.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;This woman is experiencing or has experienced an emergency danger sign. Urge the woman and her family to get the woman medical help as the lives of the mother and her baby are potentially in danger.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/danger_signs/no_danger_sign_note_to_chv:label">
-            <value>An emergency referral condition was NOT identified.</value>
+            <value>No emergency referral condition was identified.</value>
           </text>
           <text id="/pregnancy/danger_signs/observe_danger_signs:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Observe if the client has the following pregnancy danger signs.&lt;/span&gt;</value>
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;OBSERVE: &lt;/span&gt;&lt;span style="color:#f58a1f"&gt; if the client has the following pregnancy danger signs.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/danger_signs:label">
             <value>Pregnancy Danger Signs</value>
@@ -231,8 +235,8 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="/pregnancy/early_breastfeeding/yellow_milk:label">
             <value>The first yellow milk (colostrum) does two important things 
- 1) it helps to protect the infant from illness, and 
- 2) it helps the infant to expel its first dark stool.</value>
+• It helps to protect the infant from illness
+• It helps the infant to expel its first dark stool</value>
           </text>
           <text id="/pregnancy/early_breastfeeding:label">
             <value>Early Initiation of breast feeding</value>
@@ -317,13 +321,13 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="/pregnancy/llints/malaria_discussion:label">
             <value>Do you know that you and your child are susceptible to malaria? You and your baby are at most risk of malaria. Malaria will continue to be an important danger throughout your child's early years of life. Malaria can cause :
-•	premature birth – birth before 37 weeks of pregnancy.
-•	low birth weight.
-•	restricted growth of the baby in the womb.
-•	stillbirth.
-•	miscarriage.
-•	death of the mother
-•	anemia
+• Premature birth – birth before 37 weeks of pregnancy.
+• Low birth weight.
+• Restricted growth of the baby in the womb.
+• Stillbirth.
+• Miscarriage.
+• Death of the mother
+• Anemia
 
  If you sleep under mosquito net you can protect yourself and your child from the above effects</value>
           </text>
@@ -353,6 +357,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="/pregnancy/maternal_nutrition/eat_more_vegetables:label">
             <value>It is important, especially for pregnant woman to eat more vegetables, fruits, and proteins. Use iodized salt to help your baby's brain and body develop well. For example, here are some of the absolute BEST foods that you should increase eating: 
+
  • Kula mbogamboga kwa wingi sana mfano: mchicha, mtoriro (matembele), kisambu. 
  • Matunda pia mfano: machungwa, mapapai, embe, na ndizi.
  • Na pia uongeze vyakula vya protein kidogo mfano: madagaa, samaki, kuku, na mayai.
@@ -668,9 +673,26 @@ Please refer to page 2 of bango kitita.</value>
           <text id="/pregnancy/pregnancy_form/no_consent_note:label">
             <value>OK, I understand that you don't want services from me now. It's important that you are checked on during your pregnancy so I will come back later and see if you have changed your mind.</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label">
-            <value form="image">jr://images/flipchart.png</value>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart_note:label">
             <value>Refer to page 6 of bango kitita</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_1:label">
+            <value form="image">jr://images/bangokitita_img1.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_2:label">
+            <value form="image">jr://images/bangokitita_img2.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_3:label">
+            <value form="image">jr://images/bangokitita_img3.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_4:label">
+            <value form="image">jr://images/bangokitita_img4.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_5:label">
+            <value form="image">jr://images/bangokitita_img5.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_6:label">
+            <value form="image">jr://images/bangokitita_img6.png</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/no:label">
             <value>No</value>
@@ -682,10 +704,10 @@ Please refer to page 2 of bango kitita.</value>
             <value>Do you feel the baby moving on a daily basis, at least every six hours?</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note:label">
-            <value>I am referring you to health facility because I have identified that you have danger sign(s)</value>
+            <value>I am referring you to a health facility because I have identified that you have danger sign(s)</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note:label">
-            <value>No health issues were identified, but if you develop any of the signs we discussed today, you should go to a health facility immediately</value>
+            <value>Based on our conversation, I did not identify any health issues, but if you develop any of the signs we discussed today, you should go to a health facility immediately</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor/no:label">
             <value>No</value>
@@ -743,25 +765,14 @@ Please refer to page 2 of bango kitita.</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label">
             <value>Continue with the following questions. Indicate if the client has any of the following common pregnancy issues. 
+
 Have you experienced:</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label">
-            <value>I am referring you to health facility because I have identified that you have danger sign(s)</value>
+            <value>I am referring you to a health facility because I have identified that you have danger sign(s)</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group:label">
             <value>Pregnancy Issues</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/age_and_dob/no:label">
-            <value>No</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/age_and_dob/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/age_and_dob:label">
-            <value>Your DOB is <output value=" /pregnancy/date_of_birth_c "/> and age is <output value=" /pregnancy/age_in_years "/>. Is this correct ?</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/edit_dob:label">
-            <value>Edit the client's DOB or age after completing this form.</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
             <value>No</value>
@@ -965,7 +976,7 @@ Have you experienced:</value>
             <value>How long was the wait?</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care:label">
-            <value>Quality of Survey Care</value>
+            <value>Quality of Care Survey</value>
           </text>
           <text id="/pregnancy/rch_card/edd_note:label">
             <value>Your EDD is <output value=" /pregnancy/EDD "/></value>
@@ -1001,7 +1012,7 @@ Have you experienced:</value>
             <value>Is your RCH card available?</value>
           </text>
           <text id="/pregnancy/rch_card/last_lmp_date:jr:constraintMsg">
-            <value>LMP date can be between today and 40 weeks ago</value>
+            <value>LMP date can be between today and 44 weeks ago</value>
           </text>
           <text id="/pregnancy/rch_card/last_lmp_date:label">
             <value>Enter Last Menstrual Period (LMP) date</value>
@@ -1678,7 +1689,7 @@ Have you experienced:</value>
             <value>Ni kwanini haujawahi kuhudhuria hata Mara mmoja klinik ya mama wajawazijto?</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label">
-            <value>ELEZA: Ni muhimu sana kuwa umehudhuria mara zote nne kwasababu hali ya hatari inayoweza kutishia maisha ya mama mjamzito mara nyingi huonekana katika tembeleo la tatu au la nne.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;ELEZA:&lt;/span&gt; Ni muhimu sana kuwa umehudhuria mara zote nne kwasababu hali ya hatari inayoweza kutishia maisha ya mama mjamzito mara nyingi huonekana katika tembeleo la tatu au la nne.</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg">
             <value>-</value>
@@ -1690,20 +1701,25 @@ Have you experienced:</value>
             <value>Huduma ya Vipimo na Ushauri ya awali ya mama wajawazito.</value>
           </text>
           <text id="/pregnancy/birth_plan/labor_signs/early_signs_of_labor:label">
-            <value>Sasa hivi tutajadili dalili za awali za uchungu wa kujifungua. Jadiliana na mama kila dalili na onesha ni kwanini kuna umuhimu wa kuenda kituo cha afya mapema kadiri inavyowezekana.
-§ Kuwa na wasiwasi na mwili kudhoofu.
-§ Kutetemeka hata kama hakuna baridi
-§ Kujiskia kwenda haja ndogo kila mda
-§ Kuharisha
-§ Kuwa na maumivu makali chini ya kiuno
-§ Kuvunja chupa
-§ Kujiskia uchungu</value>
+            <value>Sasa hivi tutajadili dalili za awali za uchungu wa kujifungua. 
+
+&lt;span style="color:#f58a1f"&gt;Jadiliana na mama kila dalili na onesha ni kwanini kuna umuhimu wa kuenda kituo cha afya mapema kadiri inavyowezekana.&lt;/span&gt;
+
+ • Kuwa na wasiwasi na mwili kudhoofu.
+ • Kutetemeka hata kama hakuna baridi
+ • Kujiskia kwenda haja ndogo kila mda.
+ • Kuharisha
+ • Kuwa na maumivu makali chini ya kiuno
+ • Kuvunja chupa
+ • Kujiskia uchungu</value>
           </text>
           <text id="/pregnancy/birth_plan/labor_signs:label">
             <value>Dalili za Awali za kujifungua</value>
           </text>
           <text id="/pregnancy/birth_plan/savings/importance_of_saving_chv_note:label">
-            <value>Eleza umuhimu wa kuweka akiba kwa ajiliya usafiri wa kwenda kituo cha afya, gharama nyengine zinazohusiana na matunzo na kujifungua kwake na zaidi katika kipindi cha dharura. Kwa mfano, unaweza kuweka bank. Au unaweza kutumia huduma za fedha katika simu au unaweza kujiunga na vikundi vya kueka na kukopa.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Eleza umuhimu wa kuweka akiba kwa ajiliya usafiri wa kwenda kituo cha afya, gharama nyengine zinazohusiana na matunzo na kujifungua kwake na zaidi katika kipindi cha dharura.&lt;/span&gt; 
+
+Kwa mfano, unaweza kuweka bank. Au unaweza kutumia huduma za fedha katika simu au unaweza kujiunga na vikundi vya kueka na kukopa.</value>
           </text>
           <text id="/pregnancy/birth_plan/savings:label">
             <value>Umuhimu wa kuweka akiba</value>
@@ -1711,17 +1727,16 @@ Have you experienced:</value>
           <text id="/pregnancy/birth_plan/transfusion_and_backup/backup_person:label">
             <value>Andaa mtu ambaye atakaa na watoto nyumbani katika kipindi chote ambacho utakuwa hospitali</value>
           </text>
-          <text id="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label">
-            <value>Ikitokea kutokea kwa upungufu wa damu, andaa angalau watu wawili kuchangia damu</value>
-          </text>
           <text id="/pregnancy/birth_plan/transfusion_and_backup:label">
-            <value>Upungufu wa damu na mtu wakusaidia kupatikana kwa damu</value>
+            <value>Kuandaa mtu wa kukaa na watoto wakati wa kujifungua</value>
           </text>
           <text id="/pregnancy/birth_plan/transport/prepare_transport:label">
-            <value>Ni muhimu kuandaa mpango wa kuenda kujifungulia kituo cha afya. Eleza kuwa unaweza kumuunganisha mama mjamzito na driver ambaye atakuja kumbeba kumpelekeka kituo cha afya punde akikaribia kujifungua.</value>
+            <value>Ni muhimu kuandaa mpango wa kuenda kujifungulia kituo cha afya. 
+
+&lt;span style="color:#f58a1f"&gt;Eleza kuwa unaweza kumuunganisha mama mjamzito na driver ambaye atakuja kumbeba kumpelekeka kituo cha afya punde akikaribia kujifungua.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/birth_plan/transport/taxi_phones_chv_note:label">
-            <value>Mpe mama namba ya dereva na umueleze gharama za kwenda kituo cha afya.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Mpe mama namba ya dereva na umueleze gharama za kwenda kituo cha afya.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/birth_plan/transport:label">
             <value>Usafiri</value>
@@ -1730,14 +1745,14 @@ Have you experienced:</value>
             <value>-</value>
           </text>
           <text id="/pregnancy/client_information/due_date_note:label">
-            <value>Tarehe ya mwisho ya tembeleo: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print "/>&lt;/span&gt;</value>
+            <value>Tarehe ya mwisho ya tembeleo: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/due_date_pretty_print_swahili "/>&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/client_information/edd_intro_note:label">
-            <value>Makadirio ya ujauzito: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_EDD_pretty_print "/>&lt;/span&gt;</value>
+            <value>Makadirio ya ujauzito: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy/client_EDD_pretty_print_swahili "/>&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/client_information/household_note:label">
             <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy/client_name "/>&lt;/span&gt;
-Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy/age_years "/> miaka, <output value=" /pregnancy/age_months "/> miezi, <output value=" /pregnancy/age_days_display "/> siku&lt;/span&gt;
+Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;miaka <output value=" /pregnancy/age_years "/>&lt;/span&gt;
 Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy/household_head "/>&lt;/span&gt; 
 Namba ya nyumba: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy/kitongoji "/>&lt;/span&gt;</value>
@@ -1839,13 +1854,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
-            <value>Mwanamke huyu anadalili za hatari au aliwahi kupata dalili za hatari za ghafla. Mtake Mama na familia yake kupata msaada wa kimatibabu kwasababu maisha ya mama na mtoto wake yapo katika hatari.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Mwanamke huyu anadalili za hatari au aliwahi kupata dalili za hatari za ghafla. Mtake Mama na familia yake kupata msaada wa kimatibabu kwasababu maisha ya mama na mtoto wake yapo katika hatari.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/danger_signs/no_danger_sign_note_to_chv:label">
             <value>Kwa sasa, hauna dalili yoyote ya hatari iliyogundulika. Lakini ukipata dalili yote kati ya hizi tulizozijadili, tafadhali nenda kituo cha afya haraka iwezakanavyo.</value>
           </text>
           <text id="/pregnancy/danger_signs/observe_danger_signs:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Angalia kama mteja ana dalili za hatari kwa wajawazito hizi zifuatazo.&lt;/span&gt;</value>
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;ANGALIA: &lt;/span&gt; &lt;span style="color:#f58a1f"&gt;kama mteja ana dalili za hatari kwa wajawazito hizi zifuatazo.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/danger_signs:label">
             <value>Dalili Hatari Kwa Mama Wajawazito</value>
@@ -1867,8 +1882,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy/early_breastfeeding/yellow_milk:label">
             <value>Maziwa ya mwanzo(danga) hufanya kazi mbili muhimu.
-1 yanamlinda mtoto na magonjwa 
-2 yanamsaidia mtoto mchanga kutoa choo cheusi.</value>
+• Yanamlinda mtoto na magonjwa. 
+• Yanamsaidia mtoto mchanga kutoa choo cheusi.</value>
           </text>
           <text id="/pregnancy/early_breastfeeding:label">
             <value>Unyonyeshaji wa mapema</value>
@@ -1996,7 +2011,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
 Ikiwa utalala kwenye chandarua kilicho na viatilifu utajikinga wewe na mtoto wako kutokana na athari hizo zilizotajatwa awali</value>
           </text>
           <text id="/pregnancy/llints/mosquito_net_qn/free_mosquito_net:label">
-            <value>unaweza kupata chandarua bure kituo cha afya.</value>
+            <value>Unaweza kupata chandarua bure kituo cha afya.</value>
           </text>
           <text id="/pregnancy/llints/mosquito_net_qn/has_mosquito_net/no:label">
             <value>Hapana</value>
@@ -2024,6 +2039,7 @@ Ikiwa utalala kwenye chandarua kilicho na viatilifu utajikinga wewe na mtoto wak
           </text>
           <text id="/pregnancy/maternal_nutrition/eat_more_vegetables:label">
             <value>Ni Muhimu kwa mama mjamzito kula Zaidi mbogamboga, matunda na protini, Kutumia chumvi yenye madini joto inasaidia kukua kwa mwili na ubongo wa mtoto, Kwa mfano, hizi ni aina za chakula unapaswa kula zaidi kwa sasa:
+
  • Kula mbogamboga kwa wingi sana mfano: mchicha, mtoriro (matembele), kisambu. 
  • Matunda pia mfano: machungwa, mapapai, embe, na ndizi.
  • Na pia uongeze vyakula vya protein kidogo mfano: madagaa, samaki, kuku, na mayai.
@@ -2365,9 +2381,26 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <text id="/pregnancy/pregnancy_form:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label">
-            <value form="image">jr://images/flipchart.png</value>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart_note:label">
             <value>Angalia katika ukurasa namba 6 kwenye bango kitita</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_1:label">
+            <value form="image">jr://images/bangokitita_img1.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_2:label">
+            <value form="image">jr://images/bangokitita_img2.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_3:label">
+            <value form="image">jr://images/bangokitita_img3.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_4:label">
+            <value form="image">jr://images/bangokitita_img4.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_5:label">
+            <value form="image">jr://images/bangokitita_img5.png</value>
+          </text>
+          <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_6:label">
+            <value form="image">jr://images/bangokitita_img6.png</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/additional_danger_signs:label">
             <value>-</value>
@@ -2455,18 +2488,6 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group:label">
             <value>Maswala ya ujauzito</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/age_and_dob/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/age_and_dob/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/age_and_dob:label">
-            <value>Tarehe yako ya kuzaliwa ni <output value=" /pregnancy/date_of_birth_c "/> na umri wako ni <output value=" /pregnancy/age_in_years "/>. Je, tarehe yako ya kuzaliwa ni sahihi?</value>
-          </text>
-          <text id="/pregnancy/pregnant_woman_information/edit_dob:label">
-            <value>Badili tarehe ya kuzaliwa ya mteja au umri baada ya kujaza fomu hii.</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
             <value>Hapana</value>
@@ -2673,7 +2694,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Ulisubiri kwa mda gani kituoni ili kupatiwa huduma?</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care:label">
-            <value>Ubora wa huduma</value>
+            <value>Utafiti wa huduma bora</value>
           </text>
           <text id="/pregnancy/rch_card/edd_note:label">
             <value>Makisio ya tarehe yako ya kujifungua ni <output value=" /pregnancy/EDD "/></value>
@@ -2709,7 +2730,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Je unalo kadi lako la kliniki?</value>
           </text>
           <text id="/pregnancy/rch_card/last_lmp_date:jr:constraintMsg">
-            <value>Tarehe ya kupata hedhi iwe baina ya leo na wiki 40 zilopita.</value>
+            <value>Tarehe ya kupata hedhi iwe baina ya leo na wiki 44 zilopita.</value>
           </text>
           <text id="/pregnancy/rch_card/last_lmp_date:label">
             <value>Ingiza tarehe yake ya mwisho alopata hedhi.</value>
@@ -3384,8 +3405,10 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <kitongoji/>
           <phone/>
           <due_date/>
-          <due_date_pretty_print/>
-          <client_EDD_pretty_print/>
+          <due_date_pretty_print_english/>
+          <due_date_pretty_print_swahili/>
+          <client_EDD_pretty_print_english/>
+          <client_EDD_pretty_print_swahili/>
           <client_EDD_c/>
           <currently_pregnant/>
           <hide_lmp_or_months_pregnant/>
@@ -3418,8 +3441,6 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <miscarriage_or_stillbirth/>
           </visit_introduction>
           <pregnant_woman_information>
-            <age_and_dob/>
-            <edit_dob/>
             <first_time_pregnant/>
             <previous_pregnancies/>
             <previous_deliveries/>
@@ -3477,7 +3498,13 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
               <no_pregnancy_complication_note/>
             </pregnancy_and_pallor>
             <additional_danger_signs>
-              <afya_bora_flip_chart/>
+              <afya_bora_flip_chart_note/>
+              <bangokitita_img_1/>
+              <bangokitita_img_2/>
+              <bangokitita_img_3/>
+              <bangokitita_img_4/>
+              <bangokitita_img_5/>
+              <bangokitita_img_6/>
             </additional_danger_signs>
           </pregnancy_issues_group>
           <pmtct>
@@ -3509,7 +3536,6 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
               <importance_of_saving_chv_note/>
             </savings>
             <transfusion_and_backup>
-              <blood_transfusion/>
               <backup_person/>
             </transfusion_and_backup>
             <transport>
@@ -4567,8 +4593,10 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
       <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/pregnancy/kitongoji" type="string"/>
       <bind calculate="instance('contact-summary')/context/phone" nodeset="/pregnancy/phone" type="string"/>
       <bind calculate="../inputs/due_date" nodeset="/pregnancy/due_date" type="string"/>
-      <bind calculate="../inputs/due_date_human_readable" nodeset="/pregnancy/due_date_pretty_print" type="string"/>
-      <bind calculate="../inputs/client_EDD_human_readable" nodeset="/pregnancy/client_EDD_pretty_print" type="string"/>
+      <bind calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Unknown&quot;)" nodeset="/pregnancy/due_date_pretty_print_english" type="string"/>
+      <bind calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Haijulikani&quot;)" nodeset="/pregnancy/due_date_pretty_print_swahili" type="string"/>
+      <bind calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Unknown&quot;)" nodeset="/pregnancy/client_EDD_pretty_print_english" type="string"/>
+      <bind calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Haijulikani&quot;)" nodeset="/pregnancy/client_EDD_pretty_print_swahili" type="string"/>
       <bind calculate="../inputs/client_EDD" nodeset="/pregnancy/client_EDD_c" type="string"/>
       <bind calculate="instance('contact-summary')/context/currently_pregnant" nodeset="/pregnancy/currently_pregnant" type="string"/>
       <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)" nodeset="/pregnancy/hide_lmp_or_months_pregnant" type="string"/>
@@ -4596,8 +4624,6 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
       <bind calculate="if((decimal-date-time( /pregnancy/client_EDD_c ) - decimal-date-time( /pregnancy/visit_introduction/date_of_pregnancy_loss )) &gt; ( /pregnancy/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/pregnancy/visit_introduction/miscarriage_or_stillbirth" type="string"/>
       <bind nodeset="/pregnancy/pregnant_woman_information" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0)"/>
-      <bind nodeset="/pregnancy/pregnant_woman_information/age_and_dob" type="select1"/>
-      <bind nodeset="/pregnancy/pregnant_woman_information/edit_dob" readonly="true()" relevant="selected( /pregnancy/pregnant_woman_information/age_and_dob ,'no')" type="string"/>
       <bind nodeset="/pregnancy/pregnant_woman_information/first_time_pregnant" required="true()" type="select1"/>
       <bind constraint=". &gt;= 1 and . &lt;= 20" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg')" nodeset="/pregnancy/pregnant_woman_information/previous_pregnancies" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="int"/>
       <bind constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/pregnant_woman_information/previous_pregnancies )" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_deliveries:jr:constraintMsg')" nodeset="/pregnancy/pregnant_woman_information/previous_deliveries" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="int"/>
@@ -4612,7 +4638,7 @@ not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnanc
       <bind nodeset="/pregnancy/rch_card/is_delivery_date_written" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes')" required="true()" type="select1"/>
       <bind constraint=". &gt;= date-time(decimal-date-time(today())) and . &lt;= date-time((decimal-date-time(today()) + ( /pregnancy/month  * 9)))" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_delivery_date_input:jr:constraintMsg')" nodeset="/pregnancy/rch_card/estimated_delivery_date_input" relevant="selected( /pregnancy/rch_card/is_delivery_date_written ,'yes')" required="true()" type="date"/>
       <bind nodeset="/pregnancy/rch_card/remember_lmp" relevant="(selected( /pregnancy/rch_card/is_rch_card_available ,'no') or selected( /pregnancy/rch_card/is_delivery_date_written ,'no')) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="select1"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy/week  * 40)))" jr:constraintMsg="jr:itext('/pregnancy/rch_card/last_lmp_date:jr:constraintMsg')" nodeset="/pregnancy/rch_card/last_lmp_date" relevant="selected( /pregnancy/rch_card/remember_lmp ,'yes') and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="date"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy/week  * 44)))" jr:constraintMsg="jr:itext('/pregnancy/rch_card/last_lmp_date:jr:constraintMsg')" nodeset="/pregnancy/rch_card/last_lmp_date" relevant="selected( /pregnancy/rch_card/remember_lmp ,'yes') and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="date"/>
       <bind constraint=". &gt; 0 and . &lt;= 9" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_months_pregnant:jr:constraintMsg')" nodeset="/pregnancy/rch_card/estimated_months_pregnant" relevant="((selected( /pregnancy/rch_card/is_rch_card_available ,'no') or (selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and selected( /pregnancy/rch_card/is_delivery_date_written ,'no'))) and selected( /pregnancy/rch_card/remember_lmp ,'no') ) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="int"/>
       <bind nodeset="/pregnancy/rch_card/edd_note" readonly="true()" relevant=" /pregnancy/EDD  != &quot;&quot;" type="string"/>
       <bind calculate="if( /pregnancy/previous_rchcard_status =&quot;true&quot;, 
@@ -4683,7 +4709,13 @@ not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnanc
 not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0)"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_1" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_2" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_3" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_4" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_5" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_6" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/pmtct" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/previous_hiv_status =&quot;false&quot;) or 
 
@@ -4717,15 +4749,14 @@ not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnanc
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
       <bind nodeset="/pregnancy/birth_plan/labor_signs/early_signs_of_labor" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/savings/importance_of_saving_chv_note" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/transfusion_and_backup/backup_person" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/transport/prepare_transport" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/transport/taxi_phones_chv_note" readonly="true()" type="string"/>
-      <bind calculate="int((decimal-date-time( /pregnancy/client_EDD_c ) - (decimal-date-time(now()))) div  /pregnancy/month )" nodeset="/pregnancy/pregnancy_months_left" type="string"/>
+      <bind calculate="int((decimal-date-time( /pregnancy/EDD ) - (decimal-date-time(now()))) div  /pregnancy/month )" nodeset="/pregnancy/pregnancy_months_left" type="string"/>
       <bind nodeset="/pregnancy/early_breastfeeding" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
-not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_months_left  &gt;= 3) or 
+not(selected( /pregnancy/pregnancy_form/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3) or 
 
-(selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_months_left  &gt;= 3)"/>
+(selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3)"/>
       <bind nodeset="/pregnancy/early_breastfeeding/breastfeed_after_birth" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/early_breastfeeding/breastfeed_within_one_hour" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/early_breastfeeding/yellow_milk" readonly="true()" type="string"/>
@@ -4934,20 +4965,6 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
     </group>
     <group appearance="field-list" ref="/pregnancy/pregnant_woman_information">
       <label ref="jr:itext('/pregnancy/pregnant_woman_information:label')"/>
-      <select1 ref="/pregnancy/pregnant_woman_information/age_and_dob">
-        <label ref="jr:itext('/pregnancy/pregnant_woman_information/age_and_dob:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnant_woman_information/age_and_dob/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/pregnant_woman_information/age_and_dob/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/pregnancy/pregnant_woman_information/edit_dob">
-        <label ref="jr:itext('/pregnancy/pregnant_woman_information/edit_dob:label')"/>
-      </input>
       <select1 ref="/pregnancy/pregnant_woman_information/first_time_pregnant">
         <label ref="jr:itext('/pregnancy/pregnant_woman_information/first_time_pregnant:label')"/>
         <item>
@@ -5258,8 +5275,26 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         </input>
       </group>
       <group appearance="field-list" ref="/pregnancy/pregnancy_issues_group/additional_danger_signs">
-        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart">
-          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart:label')"/>
+        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart_note">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/afya_bora_flip_chart_note:label')"/>
+        </input>
+        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_1">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_1:label')"/>
+        </input>
+        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_2">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_2:label')"/>
+        </input>
+        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_3">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_3:label')"/>
+        </input>
+        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_4">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_4:label')"/>
+        </input>
+        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_5">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_5:label')"/>
+        </input>
+        <input ref="/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_6">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/additional_danger_signs/bangokitita_img_6:label')"/>
         </input>
       </group>
     </group>
@@ -5424,9 +5459,6 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       </group>
       <group appearance="field-list" ref="/pregnancy/birth_plan/transfusion_and_backup">
         <label ref="jr:itext('/pregnancy/birth_plan/transfusion_and_backup:label')"/>
-        <input ref="/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion">
-          <label ref="jr:itext('/pregnancy/birth_plan/transfusion_and_backup/blood_transfusion:label')"/>
-        </input>
         <input ref="/pregnancy/birth_plan/transfusion_and_backup/backup_person">
           <label ref="jr:itext('/pregnancy/birth_plan/transfusion_and_backup/backup_person:label')"/>
         </input>
