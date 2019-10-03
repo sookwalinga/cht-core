@@ -706,10 +706,10 @@ module.exports = {
       var EDD = new Date(this.getRecentEDDForThisPregnancy(c));
       var gestation_in_weeks = this.getCurrentGestationAge(c);
       if (gestation_in_weeks >= 22.5 && gestation_in_weeks < 31.5) {
-        dueDate = new Date(EDD.setDate(EDD.getDate() - (13.5 * this.week)));
+        dueDate = new Date(EDD.setDate(EDD.getDate() - (13 * this.week)));
       }
       else if (gestation_in_weeks >= 31.5) {
-        dueDate = new Date(EDD.setDate(EDD.getDate() - (4.5 * this.week)));
+        dueDate = new Date(EDD.setDate(EDD.getDate() - (4 * this.week)));
       }
     }
     return dueDate;
