@@ -776,7 +776,7 @@ module.exports = {
     var earlyTerminations = [];
     if (c && c.reports) {
       deliveryOutcomes = c.reports.filter(function (r) {
-        return r.form === 'delivery_outcomes' &&
+        return r.form === 'pregnancy_outcomes' &&
           r.fields &&
           r.fields.confirm_delivery &&
           r.fields.confirm_delivery.did_deliver &&
@@ -809,7 +809,7 @@ module.exports = {
     var report = '';
     var flag = false;
     if (c && c.reports) {
-      report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report && report.fields && report.fields.delivery_information &&
         report.fields.delivery_information.facility_delivery_method &&
         report.fields.delivery_information.facility_delivery_method === 'caesarian') {
@@ -822,7 +822,7 @@ module.exports = {
   getDeliveryDate: function (c) {
     var delivery_date = null;
     if (c && c.reports) {
-      var report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report && report.fields && report.fields.confirm_delivery && r.fields.confirm_delivery.date_of_delivery) {
         delivery_date = new Date(report.fields.confirm_delivery.date_of_delivery);
       }
@@ -847,7 +847,7 @@ module.exports = {
     var flag = true;
     var reportsFound = [];
     if (c && c.reports) {
-      var report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report) {
         var delivery_reported_date = report.reported_date;
         reportsFound = c.reports.filter(function (r) {
@@ -887,7 +887,7 @@ module.exports = {
   didClientDeliver: function (c) {
     var flag = false;
     if (c && c.reports) {
-      var report = Utils.getMostRecentReport(c.reports, 'delivery_outcomes');
+      var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report && report.fields && report.fields.confirm_delivery &&
         report.fields.confirm_delivery.did_deliver &&
         report.fields.confirm_delivery.did_deliver === 'yes') {

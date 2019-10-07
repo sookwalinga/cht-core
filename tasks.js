@@ -641,7 +641,7 @@ module.exports = [
     appliesIf: function (c, r) {
       return extras.didClientDeliver(c);
     },
-    appliesToType: ['delivery_outcomes'],
+    appliesToType: ['pregnancy_outcomes'],
     actions: [{
       form: 'postpartum',
       modifyContent: function (content, c) {
@@ -680,7 +680,7 @@ module.exports = [
     appliesIf: function (c, r) {
       return extras.didClientDeliver(c) && !(extras.noPostpartumVisitsCurrentPregnancy(c));
     },
-    appliesToType: ['delivery_outcomes'],
+    appliesToType: ['pregnancy_outcomes'],
     actions: [{
       form: 'postpartum',
       modifyContent: function (content, c) {

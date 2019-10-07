@@ -72,7 +72,7 @@ module.exports = {
     var deliveryOutcomes = [];
     var earlyTerminations = [];
     deliveryOutcomes = reports.filter(function (r) {
-      return r.form === 'delivery_outcomes' &&
+      return r.form === 'pregnancy_outcomes' &&
         r.fields &&
         r.fields.confirm_delivery &&
         r.fields.confirm_delivery.did_deliver &&

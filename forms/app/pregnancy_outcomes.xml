@@ -1,435 +1,435 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>delivery_outcomes</h:title>
+    <h:title>Pregnancy Outcomes</h:title>
     <model>
       <itext>
         <translation lang="en">
-          <text id="/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
             <value>Dates of death must be between today and the date of delivery</value>
           </text>
-          <text id="/delivery_outcomes/child_death_data/child_date_of_death:label">
+          <text id="/pregnancy_outcomes/child_death_data/child_date_of_death:label">
             <value>When did the death occur?</value>
           </text>
-          <text id="/delivery_outcomes/child_death_data:label">
+          <text id="/pregnancy_outcomes/child_death_data:label">
             <value>Child Death Data</value>
           </text>
-          <text id="/delivery_outcomes/child_death_note:label">
+          <text id="/pregnancy_outcomes/child_death_note:label">
             <value>I'm very sorry for your loss</value>
           </text>
-          <text id="/delivery_outcomes/client_information/household_note:label">
-            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/client_name "/>&lt;/span&gt;
-Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/age_years "/> years, <output value=" /delivery_outcomes/age_months "/> months, <output value=" /delivery_outcomes/age_days_display "/> days&lt;/span&gt;
-Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/household_head "/>&lt;/span&gt; 
-House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/house_number "/>&lt;/span&gt;
-Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/kitongoji "/>&lt;/span&gt;</value>
+          <text id="/pregnancy_outcomes/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_outcomes/client_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_outcomes/age_years "/> years, <output value=" /pregnancy_outcomes/age_months "/> months, <output value=" /pregnancy_outcomes/age_days_display "/> days&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_outcomes/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_outcomes/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_outcomes/kitongoji "/>&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/client_information/intro_note:label">
-            <value>Visit type: &lt;span style="font-weight:bold"&gt;Record pregnancy delivery outcome&lt;/span&gt;</value>
+          <text id="/pregnancy_outcomes/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Record pregnancy outcome&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/client_information/phone_note:label">
-            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/phone "/>&lt;/span&gt;</value>
+          <text id="/pregnancy_outcomes/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_outcomes/phone "/>&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/client_information:label">
+          <text id="/pregnancy_outcomes/client_information:label">
             <value>Client Information</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg">
             <value>Deliveries can be up to 3 months ago</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:label">
-            <value>When did <output value=" /delivery_outcomes/client_name "/> deliver?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/date_of_delivery:label">
+            <value>When did <output value=" /pregnancy_outcomes/client_name "/> deliver?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
-            <value>When did <output value=" /delivery_outcomes/client_name "/> lose the pregnancy?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
+            <value>When did <output value=" /pregnancy_outcomes/client_name "/> lose the pregnancy?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/did_deliver/no:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/did_deliver/yes:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/did_deliver:label">
-            <value>Did <output value=" /delivery_outcomes/client_name "/> deliver her baby?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver:label">
+            <value>Did <output value=" /pregnancy_outcomes/client_name "/> deliver her baby?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_loss_note:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sympathise with the mother for her loss.&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/no:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/yes:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable:label">
             <value>Is the pregnancy still viable?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery:label">
+          <text id="/pregnancy_outcomes/confirm_delivery:label">
             <value>Confirm Delivery</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/admitted_after_birth/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/admitted_after_birth/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/admitted_after_birth:label">
+          <text id="/pregnancy_outcomes/delivery_information/admitted_after_birth:label">
             <value>Was baby admitted to neonatal unit/special care area/hospital within the first 24 hours after birth?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/born_early/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/born_early/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/born_early/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/born_early/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/born_early:label">
+          <text id="/pregnancy_outcomes/delivery_information/born_early:label">
             <value>Was the baby born preterm or too early?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note:label">
+          <text id="/pregnancy_outcomes/delivery_information/didnt_get_facility_pnc_note:label">
             <value>Congratulations on the birth of your baby. Now, it is very important for you to take them to a healthcare facility in order to check you and your baby's health and for them to get the vaccines and other important services they need. You should go to the facility as soon as possible for this care – even today.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/caesarian:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method/caesarian:label">
             <value>Caesarian section</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label">
             <value>Skilled normal vaginal delivery</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label">
             <value>Vacuum extraction or forceps</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method:label">
             <value>What was the method of delivery?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc:label">
             <value>Since the birth of the child, have you and your baby gone to a healthcare facility for postnatal care?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc_note:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc_note:label">
             <value>Great! Congratulations on everything.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/family_member:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/family_member:label">
             <value>Family member</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label">
             <value>Neighbor / friend</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/no_one:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/no_one:label">
             <value>No one</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/other:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/other:label">
             <value>Other</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label">
             <value>Traditional birth attendant</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper:label">
             <value>Who was the main person who helped you deliver the baby?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/immediate_cry/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/immediate_cry/no:label">
             <value>No: Had difficulty breathing at birth or require resuscitation.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/immediate_cry/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/immediate_cry/yes:label">
             <value>Yes: Cried immediately, no problem breathing.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/immediate_cry:label">
+          <text id="/pregnancy_outcomes/delivery_information/immediate_cry:label">
             <value>Did the baby cry immediately after birth?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label">
             <value>Antepartum hemorrhage</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/dont_know:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/dont_know:label">
             <value>Does not know</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/infection:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/infection:label">
             <value>Infection (high fever right after delivery)</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label">
             <value>Intrapartum hemorrhage</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/large_perineal_tear:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/large_perineal_tear:label">
             <value>Large perineal tear</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/none:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/none:label">
             <value>None of the above</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/other:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/other:label">
             <value>Other</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label">
             <value>Postpartum hemorrhage</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label">
             <value>Preeclampsia, eclampsia, or hypertension related</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/prolonged_labor:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/prolonged_labor:label">
             <value>Prolonged labor</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/retained_placenta:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/retained_placenta:label">
             <value>Retained placenta</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications:label">
             <value>Did the woman experience any of these major medical complications during her most recent delivery?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information:label">
+          <text id="/pregnancy_outcomes/delivery_information:label">
             <value>Delivery Information</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_facility:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_facility:label">
             <value>Which facility did you deliver in?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/facility:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location/facility:label">
             <value>Healthcare facility</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/home:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location/home:label">
             <value>At home / in the community</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/in_transit:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location/in_transit:label">
             <value>On the way to a healthcare facility</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location:label">
             <value>Where did you deliver?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_district:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_district:label">
             <value>What district was the facility in?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/other:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island/other:label">
             <value>Other</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/pemba:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island/pemba:label">
             <value>Pemba</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/unguja:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island/unguja:label">
             <value>Unguja</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island:label">
             <value>Did you deliver in a facility in Unguja or Pemba?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment:label">
             <value>Delivery Location</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/_id:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/_id:label">
             <value>Household UUID</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/parent/_id:label">
             <value>Catchment area UUID</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/parent/parent/_id:label">
             <value>Supervisory area UUID</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user/contact_id:label">
+          <text id="/pregnancy_outcomes/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user/facility_id:label">
+          <text id="/pregnancy_outcomes/inputs/user/facility_id:label">
             <value>Facility ID for the parent user</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user/name:label">
+          <text id="/pregnancy_outcomes/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/first_name:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/first_name:label">
             <value>What is their first name?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/last_name:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/last_name:label">
             <value>What is their family name?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/middle_name:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/middle_name:label">
             <value>What is their middle name?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/_id:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/_id:label">
             <value>Household</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/parent/_id:label">
             <value>Catchment Area</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent/_id:label">
             <value>Supervisory Area</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/sex/female:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/sex/female:label">
             <value>Female</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/sex/male:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/sex/male:label">
             <value>Male</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/sex:label">
-            <value>What is <output value=" /delivery_outcomes/intro_data_capture/child/first_name "/>'s sex?</value>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/sex:label">
+            <value>What is <output value=" /pregnancy_outcomes/intro_data_capture/child/first_name "/>'s sex?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/type:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/type:label">
             <value>Type</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child_data_note:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child_data_note:label">
             <value>I'd like to ask you some questions about your baby</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/multiple_child_data_note:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/multiple_child_data_note:label">
             <value>I'd like to ask you some questions about your babies - I will ask the same set of questions for each, one by one</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture:label">
+          <text id="/pregnancy_outcomes/intro_data_capture:label">
             <value>Capture Child Data</value>
           </text>
-          <text id="/delivery_outcomes/multiple_child_death_note:label">
+          <text id="/pregnancy_outcomes/multiple_child_death_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Ask the mother for the dates of death for each child that she has lost.&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label">
+          <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/more:label">
             <value>More than one</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label">
+          <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/one:label">
             <value>One</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries:label">
-            <value>Did <output value=" /delivery_outcomes/client_name "/> deliver one baby or more than one baby</value>
+          <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries:label">
+            <value>Did <output value=" /pregnancy_outcomes/client_name "/> deliver one baby or more than one baby</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/live_birth/no:label">
+          <text id="/pregnancy_outcomes/number_deliveries/live_birth/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/live_birth/yes:label">
+          <text id="/pregnancy_outcomes/number_deliveries/live_birth/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/live_birth:label">
+          <text id="/pregnancy_outcomes/number_deliveries/live_birth:label">
             <value>Is the baby alive?</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
             <value>Delivery of between 2 and 4 babies is supported</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:label">
-            <value>How many babies did <output value=" /delivery_outcomes/client_name "/> deliver?</value>
+          <text id="/pregnancy_outcomes/number_deliveries/num_babies_delivered:label">
+            <value>How many babies did <output value=" /pregnancy_outcomes/client_name "/> deliver?</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
             <value>Enter a number between 0 and the total number of babies delivered</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_live_births:label">
+          <text id="/pregnancy_outcomes/number_deliveries/num_live_births:label">
             <value>How many of the babies are alive?</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries:label">
+          <text id="/pregnancy_outcomes/number_deliveries:label">
             <value>Number of Deliveries</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility/bad:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/bad:label">
             <value>Bad</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility/good:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/good:label">
             <value>Good/great</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility/ok:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/ok:label">
             <value>Somehow good / ok</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility:label">
             <value>How do you feel you were handled while you were at the health facility?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label">
             <value>Between one thousand and ten thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label">
             <value>Between ten thousand and twenty thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label">
             <value>Between twenty thousand and fifty thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label">
             <value>Less than one thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label">
             <value>Over fifty thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery:label">
             <value>How much money did you spend on delivery fees?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label">
             <value>Between one thousand and ten thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label">
             <value>Between ten thousand and twenty thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label">
             <value>Between twenty thousand and fifty thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label">
             <value>Less than one thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label">
             <value>Over fifty thousand</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies:label">
             <value>How much money did you spend on these supplies?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees:label">
             <value>Were you asked to pay for delivery fees?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/purchased_supplies/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/purchased_supplies/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/purchased_supplies:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies:label">
             <value>Were you asked to purchase any supplies?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent:label">
             <value>I'd like to ask you a few questions about the quality of the services you received last time you went to the health facility. We will anonymously share this information with DHMT or other persons in the MOH so that they can improve the services that are provided. You can choose not to answer any question you don't want to. Is it ok for us to proceed?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/cleaning_supplies:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/cleaning_supplies:label">
             <value>Cleaning supplies</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/gloves:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/gloves:label">
             <value>Gloves</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/iv_infusion:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/iv_infusion:label">
             <value>IV Infusion</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/medicine:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/medicine:label">
             <value>Medicine</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/needles:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/needles:label">
             <value>Needles/syringe</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/other:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/other:label">
             <value>Other</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/plastic_sheet:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/plastic_sheet:label">
             <value>Plastic sheet</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased:label">
             <value>Which supplies did you purchase?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/hit:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/hit:label">
             <value>Slapped or hit</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/ignored:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/ignored:label">
             <value>Ignored</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/other:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/other:label">
             <value>Other</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/shouted:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/shouted:label">
             <value>Shouted at</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/unfriendly:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/unfriendly:label">
             <value>People were not friendly</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly:label">
             <value>Why do you feel you were handled badly?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/would_recommend_facility/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility/no:label">
             <value>No</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/would_recommend_facility/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/would_recommend_facility:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility:label">
             <value>Would you recommend your sister or relative to deliver at the same facility?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey:label">
             <value>Quality of Care</value>
           </text>
           <text id="static_instance-delivery_facility-0">
@@ -818,473 +818,473 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /deliv
           </text>
         </translation>
         <translation lang="sw">
-          <text id="/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg">
             <value>Tarehe ya kifo lazima iwe baina ya leo na tarehe aliozaliwa.</value>
           </text>
-          <text id="/delivery_outcomes/child_death_data/child_date_of_death:label">
+          <text id="/pregnancy_outcomes/child_death_data/child_date_of_death:label">
             <value>Lini mtoto alipofariki?</value>
           </text>
-          <text id="/delivery_outcomes/child_death_data:label">
+          <text id="/pregnancy_outcomes/child_death_data:label">
             <value>Taarifa za kifo cha mtoto</value>
           </text>
-          <text id="/delivery_outcomes/child_death_note:label">
+          <text id="/pregnancy_outcomes/child_death_note:label">
             <value>Pole sana kwa kupoteza mtoto wako.</value>
           </text>
-          <text id="/delivery_outcomes/client_information/household_note:label">
-            <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /delivery_outcomes/client_name "/>&lt;/span&gt;
-Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /delivery_outcomes/age_years "/> miaka, <output value=" /delivery_outcomes/age_months "/> miezi, <output value=" /delivery_outcomes/age_days_display "/> siku&lt;/span&gt;
-Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /delivery_outcomes/household_head "/>&lt;/span&gt; 
-Namba ya nyumba: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /delivery_outcomes/house_number "/>&lt;/span&gt;
-Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /delivery_outcomes/kitongoji "/>&lt;/span&gt;</value>
+          <text id="/pregnancy_outcomes/client_information/household_note:label">
+            <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_outcomes/client_name "/>&lt;/span&gt;
+Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_outcomes/age_years "/> miaka, <output value=" /pregnancy_outcomes/age_months "/> miezi, <output value=" /pregnancy_outcomes/age_days_display "/> siku&lt;/span&gt;
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_outcomes/household_head "/>&lt;/span&gt; 
+Namba ya nyumba: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_outcomes/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_outcomes/kitongoji "/>&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/client_information/intro_note:label">
+          <text id="/pregnancy_outcomes/client_information/intro_note:label">
             <value>Aina ya tembeleo: &lt;span style="font-weight:bold"&gt;Kurekodi matokeo ya ujauzito&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/client_information/phone_note:label">
-            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /delivery_outcomes/phone "/>&lt;/span&gt;</value>
+          <text id="/pregnancy_outcomes/client_information/phone_note:label">
+            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_outcomes/phone "/>&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/client_information:label">
+          <text id="/pregnancy_outcomes/client_information:label">
             <value>Taarifa za mteja</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg">
             <value>Tarehe ya kujifungua iwe baina ya leo na miezi mitatu nyuma.</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/date_of_delivery:label">
-            <value><output value=" /delivery_outcomes/client_name "/> amejifungua lini?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/date_of_delivery:label">
+            <value><output value=" /pregnancy_outcomes/client_name "/> amejifungua lini?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
-            <value>Mimba ya <output value=" /delivery_outcomes/client_name "/> iliharibika lini?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
+            <value>Mimba ya <output value=" /pregnancy_outcomes/client_name "/> iliharibika lini?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/did_deliver/no:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/did_deliver/yes:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/did_deliver:label">
-            <value>Je, <output value=" /delivery_outcomes/client_name "/> ameshajifungua ?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver:label">
+            <value>Je, <output value=" /pregnancy_outcomes/client_name "/> ameshajifungua ?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_loss_note:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Mpe pole mama kwa kuharibika mimba yake.&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/no:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable/yes:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery/pregnancy_viable:label">
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable:label">
             <value>Je, mimba bado unao?</value>
           </text>
-          <text id="/delivery_outcomes/confirm_delivery:label">
+          <text id="/pregnancy_outcomes/confirm_delivery:label">
             <value>Mama aliejifungua</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/admitted_after_birth/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/admitted_after_birth/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/admitted_after_birth/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/admitted_after_birth:label">
+          <text id="/pregnancy_outcomes/delivery_information/admitted_after_birth:label">
             <value>Je, mtoto aliwahi kulazwa hospital katika wodi maalum ya watoto wachanga ndani ya masaa 24 ya mwanzo baada ya kuzaliwa?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/born_early/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/born_early/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/born_early/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/born_early/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/born_early:label">
-            <value>Je mtoto alifika muda wake wa kuzaliwa au kazalia kabla wa muda wake?</value>
+          <text id="/pregnancy_outcomes/delivery_information/born_early:label">
+            <value>Je mtoto alifika muda wake wa kuzaliwa?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note:label">
+          <text id="/pregnancy_outcomes/delivery_information/didnt_get_facility_pnc_note:label">
             <value>Hongera sana kwa kupata mtoto, Ila kwa sasa, ni muhimu sana kwenda nae (nao) katika kituo cha afya ili wewe na yeye (wao) mukachekiwe afya zenu, na mtoto/watoto kupata chanjo na huduma nyengine muhimu ambazo wanazihitaji. Na ni vizuri kwenda katika kituo cha afya haraka iwezekezekanavyo - hata leo hii.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/caesarian:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method/caesarian:label">
             <value>Kujifungua kwa njia ya upasuaji.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label">
             <value>Kujifungua kwa njia ya kawaida kwa msaada mtaalam wa afya</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label">
             <value>Kujifungua kwa msaada wa kuvutwa au kututmia vifaa tiba.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/facility_delivery_method:label">
+          <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method:label">
             <value>Ulijifungua kwa njia gani?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc:label">
             <value>Tokea umzae mtoto wako, wewe na mtoto wako mumesha wahi kwenda kituo cha afya kupata huduma za baada ya kujifungua?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/got_facility_pnc_note:label">
+          <text id="/pregnancy_outcomes/delivery_information/got_facility_pnc_note:label">
             <value>Nzuri !! Hongera sana upo vizuri.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/family_member:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/family_member:label">
             <value>Kwa msaada wa wanafamilia</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label">
             <value>Jirani/Rafika</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/no_one:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/no_one:label">
             <value>Hapana kati ya hizo</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/other:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/other:label">
             <value>Nyengine</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label">
             <value>Kujifungua kwa mkunga wa kienyeji/jadi.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/home_delivery_helper:label">
+          <text id="/pregnancy_outcomes/delivery_information/home_delivery_helper:label">
             <value>Nani muhusika mkuu aliekusaidia wakati ukimzaa mtoto wako?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/immediate_cry/no:label">
+          <text id="/pregnancy_outcomes/delivery_information/immediate_cry/no:label">
             <value>Hapana: Alipata tatizo la upumuwaji alipozaliwa au alihitaji msaada wa kidaktari ili aweze kupumua</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/immediate_cry/yes:label">
+          <text id="/pregnancy_outcomes/delivery_information/immediate_cry/yes:label">
             <value>Ndio: Alilia punde tu baada ya kujifungua, hapana hakuwa na tatizo la kupumua</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/immediate_cry:label">
+          <text id="/pregnancy_outcomes/delivery_information/immediate_cry:label">
             <value>Je mtoto alilia punde tu baada ya kuzaliwa?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label">
-            <value>Alitokwa na damu nyingi kabla ya kujifungua</value>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label">
+            <value>Je ulitokwa na damu nyingi kabla ya kujifungua?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/dont_know:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/dont_know:label">
             <value>Sijui</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/infection:label">
-            <value>Maambukizo ( Homa kali baada tu ya kujifungua)</value>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/infection:label">
+            <value>Je ulipata Maambukizi ( Homa kali baada tu ya kujifungua) ?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label">
-            <value>Alitokwa na damu nyingi wakati wa kujifungua</value>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label">
+            <value>Je ulitokwa na damu nyingi wakati wa kujifungua?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/large_perineal_tear:label">
-            <value>Mtoto alichana msamba/njia ya uzazi kwa kiasi kikubwa</value>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/large_perineal_tear:label">
+            <value>Je mtoto alichana msamba/njia ya uzazi kwa kiasi kikubwa ?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/none:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/none:label">
             <value>Hakuna iliotokezea</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/other:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/other:label">
             <value>Nyengine</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label">
-            <value>Alitokwa na damu nyingi baada ya kujifungua</value>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label">
+            <value>Je ulitokwa na damu nyingi baada ya kujifungua?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label">
             <value>Kifafa cha mimba kabla ya kujifungua, Kifafa cha mimba or pressuere ya kupanda.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/prolonged_labor:label">
-            <value>Uchungu wa muda mrefu sana.</value>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/prolonged_labor:label">
+            <value>Je ulipata uchungu wa muda mrefu sana ?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications/retained_placenta:label">
-            <value>Zalio/kondo la nyuma halikutoka.</value>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications/retained_placenta:label">
+            <value>Je zalio/kondo la nyuma lilichelewa ?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information/major_complications:label">
+          <text id="/pregnancy_outcomes/delivery_information/major_complications:label">
             <value>Je mama alipata matatizo makubwa ya kiafya muda mfupi baada ya kujifungua?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_information:label">
+          <text id="/pregnancy_outcomes/delivery_information:label">
             <value>Taarifa za kujifungua.</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_facility:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_facility:label">
             <value>Ni kituo gani cha afya ulichojifungulia?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/facility:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location/facility:label">
             <value>Kituo cha afya</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/home:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location/home:label">
             <value>Nyumbani/ ndani ya jamii</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location/in_transit:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location/in_transit:label">
             <value>Njiani kueleka kituo cha afya</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/delivery_location:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/delivery_location:label">
             <value>Wapi umejifungua?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_district:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_district:label">
             <value>Kituo cha afya ulichojifungua kipo katika wilaya gani?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/other:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island/other:label">
             <value>Sehemu Nyengine</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/pemba:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island/pemba:label">
             <value>Pemba</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island/unguja:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island/unguja:label">
             <value>Unguja</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment/facility_island:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island:label">
             <value>Ulijifungua katika kituo cha afya kilichopo Unguja au Pemba?</value>
           </text>
-          <text id="/delivery_outcomes/delivery_location_assessment:label">
+          <text id="/pregnancy_outcomes/delivery_location_assessment:label">
             <value>Pahali pa kujifungulia</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/_id:label">
+          <text id="/pregnancy_outcomes/inputs/contact/_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/date_of_birth:label">
+          <text id="/pregnancy_outcomes/inputs/contact/date_of_birth:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/name:label">
+          <text id="/pregnancy_outcomes/inputs/contact/name:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/_id:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/parent/_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/parent/parent/_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/parent/parent:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/parent/parent:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent/parent:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent/parent:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/parent:label">
+          <text id="/pregnancy_outcomes/inputs/contact/parent:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact/sex:label">
+          <text id="/pregnancy_outcomes/inputs/contact/sex:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/contact:label">
+          <text id="/pregnancy_outcomes/inputs/contact:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user/EDD:label">
+          <text id="/pregnancy_outcomes/inputs/user/EDD:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user/contact_id:label">
+          <text id="/pregnancy_outcomes/inputs/user/contact_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user/facility_id:label">
+          <text id="/pregnancy_outcomes/inputs/user/facility_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user/name:label">
+          <text id="/pregnancy_outcomes/inputs/user/name:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs/user:label">
+          <text id="/pregnancy_outcomes/inputs/user:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/inputs:label">
+          <text id="/pregnancy_outcomes/inputs:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/first_name:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/first_name:label">
             <value>Ni lipi jina lake la kwanza?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/last_name:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/last_name:label">
             <value>Ni lipi jina la babu yake?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/middle_name:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/middle_name:label">
             <value>Ni lipi jina la baba yake?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/_id:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/parent/_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/parent/_id:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent/_id:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent/parent:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent/parent:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent/parent:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/parent:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/parent:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/sex/female:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/sex/female:label">
             <value>Mwanamke</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/sex/male:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/sex/male:label">
             <value>Mwanamme</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/sex:label">
-            <value>Ni ipi jinsia ya <output value=" /delivery_outcomes/intro_data_capture/child/first_name "/>?</value>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/sex:label">
+            <value>Ni ipi jinsia ya <output value=" /pregnancy_outcomes/intro_data_capture/child/first_name "/>?</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child/type:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child/type:label">
             <value>-</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/child_data_note:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/child_data_note:label">
             <value>Ningelipenda kukuuliza baadhi ya maswali machache kuhusu mtoto wako.</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture/multiple_child_data_note:label">
+          <text id="/pregnancy_outcomes/intro_data_capture/multiple_child_data_note:label">
             <value>Ningelipenda kukuuliza baadhi ya maswali machache kuhusu watoto wako - Nitakuuliza maswali yenye kufanana kwa kila mtoto, mmoja mmoja.</value>
           </text>
-          <text id="/delivery_outcomes/intro_data_capture:label">
+          <text id="/pregnancy_outcomes/intro_data_capture:label">
             <value>Taarifa za mtoto.</value>
           </text>
-          <text id="/delivery_outcomes/multiple_child_death_note:label">
+          <text id="/pregnancy_outcomes/multiple_child_death_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Muombe mama tarehe za kifo cha kila mtoto aliefariki.&lt;/span&gt;</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label">
-            <value>Zaidi ya moja</value>
+          <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/more:label">
+            <value>Zaidi ya mmoja</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label">
-            <value>Mara moja</value>
+          <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/one:label">
+            <value>Mtoto mmoja</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/check_multiple_deliveries:label">
-            <value><output value=" /delivery_outcomes/client_name "/> amejifungua mtoto mmoja au zaidi ya mtoto mmoja?</value>
+          <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries:label">
+            <value><output value=" /pregnancy_outcomes/client_name "/> amejifungua mtoto mmoja au zaidi ya mtoto mmoja?</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/live_birth/no:label">
+          <text id="/pregnancy_outcomes/number_deliveries/live_birth/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/live_birth/yes:label">
+          <text id="/pregnancy_outcomes/number_deliveries/live_birth/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/live_birth:label">
+          <text id="/pregnancy_outcomes/number_deliveries/live_birth:label">
             <value>Mtoto yuko hai?</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg">
             <value>Tafadhali ingiza idadi kati ya 2 na 4.</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_babies_delivered:label">
-            <value><output value=" /delivery_outcomes/client_name "/> amejifungua watoto wangapi?</value>
+          <text id="/pregnancy_outcomes/number_deliveries/num_babies_delivered:label">
+            <value><output value=" /pregnancy_outcomes/client_name "/> amejifungua watoto wangapi?</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
+          <text id="/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
             <value>Ingiza nambari baina ya 0 na jumla ya watoto waliozaliwa.</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries/num_live_births:label">
+          <text id="/pregnancy_outcomes/number_deliveries/num_live_births:label">
             <value>Watoto wangapi wako hai?</value>
           </text>
-          <text id="/delivery_outcomes/number_deliveries:label">
-            <value>Idadi ya mimba alizojifungua /alizozaa.</value>
+          <text id="/pregnancy_outcomes/number_deliveries:label">
+            <value>Idadi ya watoto alioifungua /aliozaa.</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility/bad:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/bad:label">
             <value>Vibaya</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility/good:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/good:label">
             <value>Vizuri</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility/ok:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/ok:label">
             <value>Afadhali</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_handled_facility:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility:label">
             <value>Ulipokelewa vipi ulipofika kituo cha afya?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label">
             <value>Kati ya shilingi elfu na shilingi elfu kumi</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label">
             <value>Kati ya shilingi elfu kumi  na shilingi elfu ishirini</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label">
             <value>Kati ya shilingi elfu ishirini na shilingi elfu hamsini</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label">
             <value>Chini ya Shilingi elfu moja</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label">
             <value>Zaidi ya shilingi elfu hamsini</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery:label">
             <value>Ulilipia kiasi gani ?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label">
             <value>Kati ya shilingi elfu na shilingi elfu kumi</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label">
             <value>Kati ya shilingi elfu kumi  na shilingi elfu ishirini</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label">
             <value>Kati ya shilingi elfu ishirini na shilingi elfu hamsini</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label">
             <value>Chini ya Shilingi elfu moja</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label">
             <value>Zaidi ya shilingi elfu hamsini</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies:label">
             <value>Ulilipia kiasi gani?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees:label">
             <value>Je, ulitakiwa ulipie pesa kwajili ya kujifungua?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/purchased_supplies/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/purchased_supplies/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/purchased_supplies:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies:label">
             <value>Je ulitakiwa kununua kifaa chochote kwajili ya kujifungua?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent:label">
             <value>Ningependa kukuuliza maswali machache kuhusu ubora wa huduma ulizopata katika kipindi cha mwisho ulipokwenda kituo cha Afya. Tutapeleka maoni yako bila ya kukutaja jina lako.</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/cleaning_supplies:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/cleaning_supplies:label">
             <value>Vifaa vya kusafishia</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/gloves:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/gloves:label">
             <value>Gloves</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/iv_infusion:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/iv_infusion:label">
             <value>Dripu</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/medicine:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/medicine:label">
             <value>Dawa</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/needles:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/needles:label">
             <value>Sindano</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/other:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/other:label">
             <value>Nyengine</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/plastic_sheet:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/plastic_sheet:label">
             <value>Mpira</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased:label">
             <value>Ulinunua vifaa gani?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/hit:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/hit:label">
             <value>Kupigwa</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/ignored:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/ignored:label">
             <value>Kudharauliwa</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/other:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/other:label">
             <value>Nyengine</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/shouted:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/shouted:label">
             <value>Kukaripiwa</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/unfriendly:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/unfriendly:label">
             <value>Sio wakarimu</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly:label">
             <value>Kwanini unafikiria ulipokelewa vibaya?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/would_recommend_facility/no:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/would_recommend_facility/yes:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey/would_recommend_facility:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility:label">
             <value>Je utamshauri dada yako au ndugu yako wa karibu kujifungulia katika kituo hicho?</value>
           </text>
-          <text id="/delivery_outcomes/quality_of_care_survey:label">
+          <text id="/pregnancy_outcomes/quality_of_care_survey:label">
             <value>Ubora wa huduma</value>
           </text>
           <text id="static_instance-delivery_facility-0">
@@ -1576,31 +1576,31 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Hapana: Alipata tatizo la upumuwaji alipozaliwa au alihitaji msaada wa kidaktari ili aweze kupumua</value>
           </text>
           <text id="static_instance-major_complications-0">
-            <value>Alitokwa na damu nyingi kabla ya kujifungua</value>
+            <value>Je ulitokwa na damu nyingi kabla ya kujifungua?</value>
           </text>
           <text id="static_instance-major_complications-1">
-            <value>Alitokwa na damu nyingi wakati wa kujifungua</value>
+            <value>Je ulitokwa na damu nyingi wakati wa kujifungua?</value>
           </text>
           <text id="static_instance-major_complications-10">
             <value>Hakuna iliotokezea</value>
           </text>
           <text id="static_instance-major_complications-2">
-            <value>Alitokwa na damu nyingi baada ya kujifungua</value>
+            <value>Je ulitokwa na damu nyingi baada ya kujifungua?</value>
           </text>
           <text id="static_instance-major_complications-3">
             <value>Kifafa cha mimba kabla ya kujifungua, Kifafa cha mimba or pressuere ya kupanda.</value>
           </text>
           <text id="static_instance-major_complications-4">
-            <value>Maambukizo ( Homa kali baada tu ya kujifungua)</value>
+            <value>Je ulipata Maambukizi ( Homa kali baada tu ya kujifungua) ?</value>
           </text>
           <text id="static_instance-major_complications-5">
-            <value>Uchungu wa muda mrefu sana.</value>
+            <value>Je ulipata uchungu wa muda mrefu sana ?</value>
           </text>
           <text id="static_instance-major_complications-6">
-            <value>Mtoto alichana msamba/njia ya uzazi kwa kiasi kikubwa</value>
+            <value>Je mtoto alichana msamba/njia ya uzazi kwa kiasi kikubwa ?</value>
           </text>
           <text id="static_instance-major_complications-7">
-            <value>Zalio/kondo la nyuma halikutoka.</value>
+            <value>Je zalio/kondo la nyuma lilichelewa ?</value>
           </text>
           <text id="static_instance-major_complications-8">
             <value>Nyengine</value>
@@ -1618,10 +1618,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Kujifungua kwa msaada wa kuvutwa au kututmia vifaa tiba.</value>
           </text>
           <text id="static_instance-num_deliveries-0">
-            <value>Mara moja</value>
+            <value>Mtoto mmoja</value>
           </text>
           <text id="static_instance-num_deliveries-1">
-            <value>Zaidi ya moja</value>
+            <value>Zaidi ya mmoja</value>
           </text>
           <text id="static_instance-sex-0">
             <value>Mwanamme</value>
@@ -1674,7 +1674,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         </translation>
       </itext>
       <instance>
-        <delivery_outcomes delimiter="#" id="delivery_outcomes" prefix="J1!delivery_outcomes!" version="2019-04-25 00:00:00">
+        <pregnancy_outcomes delimiter="#" id="pregnancy_outcomes" prefix="J1!pregnancy_outcomes!" version="2019-04-25 00:00:00">
           <inputs>
             <meta>
               <location>
@@ -1792,7 +1792,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
               <name/>
               <sex/>
               <date_of_birth/>
-              <child_doc db-doc-ref=" /delivery_outcomes/intro_data_capture/child "/>
+              <child_doc db-doc-ref=" /pregnancy_outcomes/intro_data_capture/child "/>
               <created_by_doc db-doc-ref="/delivery_outcomes"/>
               <parent>
                 <_id/>
@@ -1809,7 +1809,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <meta tag="hidden">
             <instanceID/>
           </meta>
-        </delivery_outcomes>
+        </pregnancy_outcomes>
       </instance>
       <instance id="contact-summary"/>
       <instance id="why_handled_bad">
@@ -2459,625 +2459,625 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <bind nodeset="/delivery_outcomes/inputs" relevant="./source = 'user'"/>
-      <bind nodeset="/delivery_outcomes/inputs/user/contact_id" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/user/facility_id" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/user/name" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/user/EDD" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/contact/_id" type="db:person"/>
-      <bind nodeset="/delivery_outcomes/inputs/contact/name" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/contact/sex" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/contact/date_of_birth" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/contact/parent/_id" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/contact/parent/parent/_id" type="string"/>
-      <bind nodeset="/delivery_outcomes/inputs/contact/parent/parent/parent/_id" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/delivery_outcomes/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/delivery_outcomes/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/delivery_outcomes/created_by_place_uuid" type="string"/>
-      <bind calculate="../inputs/contact/parent/_id" nodeset="/delivery_outcomes/household_uuid" type="string"/>
-      <bind calculate="../inputs/contact/parent/parent/parent/_id" nodeset="/delivery_outcomes/supervisory_area_uuid" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/delivery_outcomes/patient_id" type="string"/>
-      <bind calculate="../inputs/contact/name" nodeset="/delivery_outcomes/client_name" type="string"/>
-      <bind calculate="../inputs/contact/date_of_birth" nodeset="/delivery_outcomes/client_date_of_birth" type="string"/>
-      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /delivery_outcomes/client_date_of_birth ))" nodeset="/delivery_outcomes/age_days" type="string"/>
-      <bind calculate="int(( /delivery_outcomes/age_days  - ( /delivery_outcomes/age_years  * 12 * 30)) div 30,0)" nodeset="/delivery_outcomes/age_months" type="string"/>
-      <bind calculate="int( /delivery_outcomes/age_days  div (30 *12),0)" nodeset="/delivery_outcomes/age_years" type="string"/>
-      <bind calculate=" /delivery_outcomes/age_days  - ( /delivery_outcomes/age_months  * 30) - ( /delivery_outcomes/age_years  *12*30)" nodeset="/delivery_outcomes/age_days_display" type="string"/>
-      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/delivery_outcomes/household_head" type="string"/>
-      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/delivery_outcomes/house_number" type="string"/>
-      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/delivery_outcomes/kitongoji" type="string"/>
-      <bind calculate="instance('contact-summary')/context/phone" nodeset="/delivery_outcomes/phone" type="string"/>
-      <bind calculate="today()" nodeset="/delivery_outcomes/client_EDD" type="string"/>
-      <bind calculate="7" nodeset="/delivery_outcomes/week" type="string"/>
-      <bind calculate="30" nodeset="/delivery_outcomes/month" type="string"/>
-      <bind nodeset="/delivery_outcomes/client_information/intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/delivery_outcomes/client_information/household_note" readonly="true()" type="string"/>
-      <bind nodeset="/delivery_outcomes/client_information/phone_note" readonly="true()" type="string"/>
-      <bind nodeset="/delivery_outcomes/confirm_delivery/did_deliver" required="true()" type="select1"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /delivery_outcomes/month  * 3)))" jr:constraintMsg="jr:itext('/delivery_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" nodeset="/delivery_outcomes/confirm_delivery/date_of_delivery" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)" required="true()" type="date"/>
-      <bind nodeset="/delivery_outcomes/confirm_delivery/pregnancy_viable" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;no&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" relevant="selected( /delivery_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss" relevant="selected( /delivery_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" required="true()" type="date"/>
-      <bind calculate="if((decimal-date-time( /delivery_outcomes/client_EDD ) - decimal-date-time( /delivery_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /delivery_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/delivery_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string"/>
-      <bind nodeset="/delivery_outcomes/number_deliveries" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
-      <bind nodeset="/delivery_outcomes/number_deliveries/check_multiple_deliveries" required="true()" type="select1"/>
-      <bind constraint="2 &lt;= . and . &lt;= 4" jr:constraintMsg="jr:itext('/delivery_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')" nodeset="/delivery_outcomes/number_deliveries/num_babies_delivered" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
-      <bind nodeset="/delivery_outcomes/number_deliveries/live_birth" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" required="true()" type="select1"/>
-      <bind constraint="0 &lt;= . and . &lt;=  /delivery_outcomes/number_deliveries/num_babies_delivered " jr:constraintMsg="jr:itext('/delivery_outcomes/number_deliveries/num_live_births:jr:constraintMsg')" nodeset="/delivery_outcomes/number_deliveries/num_live_births" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
-      <bind calculate="if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),
+      <bind nodeset="/pregnancy_outcomes/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/user/name" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/user/EDD" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/contact/name" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/contact/sex" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/contact/parent/_id" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/contact/parent/parent/_id" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/inputs/contact/parent/parent/parent/_id" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/pregnancy_outcomes/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/pregnancy_outcomes/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/pregnancy_outcomes/created_by_place_uuid" type="string"/>
+      <bind calculate="../inputs/contact/parent/_id" nodeset="/pregnancy_outcomes/household_uuid" type="string"/>
+      <bind calculate="../inputs/contact/parent/parent/parent/_id" nodeset="/pregnancy_outcomes/supervisory_area_uuid" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/pregnancy_outcomes/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/pregnancy_outcomes/client_name" type="string"/>
+      <bind calculate="../inputs/contact/date_of_birth" nodeset="/pregnancy_outcomes/client_date_of_birth" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /pregnancy_outcomes/client_date_of_birth ))" nodeset="/pregnancy_outcomes/age_days" type="string"/>
+      <bind calculate="int(( /pregnancy_outcomes/age_days  - ( /pregnancy_outcomes/age_years  * 12 * 30)) div 30,0)" nodeset="/pregnancy_outcomes/age_months" type="string"/>
+      <bind calculate="int( /pregnancy_outcomes/age_days  div (30 *12),0)" nodeset="/pregnancy_outcomes/age_years" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/age_days  - ( /pregnancy_outcomes/age_months  * 30) - ( /pregnancy_outcomes/age_years  *12*30)" nodeset="/pregnancy_outcomes/age_days_display" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/pregnancy_outcomes/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/pregnancy_outcomes/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/pregnancy_outcomes/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/pregnancy_outcomes/phone" type="string"/>
+      <bind calculate="today()" nodeset="/pregnancy_outcomes/client_EDD" type="string"/>
+      <bind calculate="7" nodeset="/pregnancy_outcomes/week" type="string"/>
+      <bind calculate="30" nodeset="/pregnancy_outcomes/month" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/did_deliver" required="true()" type="select1"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)" required="true()" type="date"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_viable" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;no&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" required="true()" type="date"/>
+      <bind calculate="if((decimal-date-time( /pregnancy_outcomes/client_EDD ) - decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /pregnancy_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/pregnancy_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries" required="true()" type="select1"/>
+      <bind constraint="2 &lt;= . and . &lt;= 4" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')" nodeset="/pregnancy_outcomes/number_deliveries/num_babies_delivered" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries/live_birth" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" required="true()" type="select1"/>
+      <bind constraint="0 &lt;= . and . &lt;=  /pregnancy_outcomes/number_deliveries/num_babies_delivered " jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg')" nodeset="/pregnancy_outcomes/number_deliveries/num_live_births" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
+      <bind calculate="if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),
  0,
- if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;no&quot;),
+ if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;no&quot;),
  1,
-  /delivery_outcomes/number_deliveries/num_babies_delivered  -  /delivery_outcomes/number_deliveries/num_live_births ))" nodeset="/delivery_outcomes/child_death_count" type="string"/>
-      <bind nodeset="/delivery_outcomes/child_death_note" readonly="true()" relevant=" /delivery_outcomes/child_death_count  &gt; 0" type="string"/>
-      <bind nodeset="/delivery_outcomes/multiple_child_death_note" readonly="true()" relevant=" /delivery_outcomes/child_death_count  &gt; 1" type="string"/>
-      <bind calculate=" /delivery_outcomes/child_death_count " nodeset="/delivery_outcomes/child_death_data_count" readonly="true()" type="string"/>
-      <bind nodeset="/delivery_outcomes/child_death_data" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_death_count  &gt; 0"/>
-      <bind constraint="date-time(decimal-date-time( /delivery_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/delivery_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')" nodeset="/delivery_outcomes/child_death_data/child_date_of_death" required="true()" type="date"/>
-      <bind calculate="if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),1,if(selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /delivery_outcomes/number_deliveries/live_birth ,&quot;no&quot;),0, /delivery_outcomes/number_deliveries/num_live_births ))" nodeset="/delivery_outcomes/child_repeat_count" type="string"/>
-      <bind nodeset="/delivery_outcomes/delivery_location_assessment" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
-      <bind nodeset="/delivery_outcomes/delivery_location_assessment/delivery_location" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_location_assessment/facility_island" relevant="selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_location_assessment/facility_district" relevant="selected( /delivery_outcomes/delivery_location_assessment/facility_island ,&quot;unguja&quot;) or selected( /delivery_outcomes/delivery_location_assessment/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_location_assessment/delivery_facility" relevant="selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;north_a&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;north_b&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;central&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;south&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;west_a&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;west_b&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;urban&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;chakechake&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;micheweni&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;mkoani&quot;) or 
-selected( /delivery_outcomes/delivery_location_assessment/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_information" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/facility_delivery_method" relevant="selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/home_delivery_helper" relevant="not(selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/got_facility_pnc" relevant="not(selected( /delivery_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/got_facility_pnc_note" readonly="true()" relevant="selected( /delivery_outcomes/delivery_information/got_facility_pnc ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note" readonly="true()" relevant="selected( /delivery_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;)" type="string"/>
-      <bind calculate="if(selected( /delivery_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;),1,0)" nodeset="/delivery_outcomes/delivery_information/refer_flag_no_facility_pnc" type="string"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/born_early" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/immediate_cry" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/admitted_after_birth" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/delivery_information/major_complications" required="true()" type="select"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0 and  /delivery_outcomes/delivery_location_assessment/delivery_location  = &quot;facility&quot;"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/how_handled_facility" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /delivery_outcomes/quality_of_care_survey/how_handled_facility ,&quot;bad&quot;)" required="true()" type="select"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /delivery_outcomes/quality_of_care_survey/paid_delivery_fees ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/purchased_supplies" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /delivery_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /delivery_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)" required="true()" type="select"/>
-      <bind nodeset="/delivery_outcomes/quality_of_care_survey/would_recommend_facility" relevant="selected( /delivery_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/delivery_outcomes/intro_data_capture" relevant="selected( /delivery_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /delivery_outcomes/child_repeat_count  &gt; 0"/>
-      <bind nodeset="/delivery_outcomes/intro_data_capture/child_data_note" readonly="true()" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" type="string"/>
-      <bind nodeset="/delivery_outcomes/intro_data_capture/multiple_child_data_note" readonly="true()" relevant="selected( /delivery_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" type="string"/>
-      <bind calculate=" /delivery_outcomes/child_repeat_count " nodeset="/delivery_outcomes/intro_data_capture/child_count" readonly="true()" type="string"/>
-      <bind nodeset="/delivery_outcomes/intro_data_capture/child/first_name" required="true()" type="string"/>
-      <bind nodeset="/delivery_outcomes/intro_data_capture/child/middle_name" required="true()" type="string"/>
-      <bind nodeset="/delivery_outcomes/intro_data_capture/child/last_name" required="true()" type="string"/>
-      <bind calculate="concat( /delivery_outcomes/intro_data_capture/child/first_name ,&quot; &quot;,  /delivery_outcomes/intro_data_capture/child/middle_name ,&quot; &quot;,  /delivery_outcomes/intro_data_capture/child/last_name )" nodeset="/delivery_outcomes/intro_data_capture/child/name" type="string"/>
-      <bind nodeset="/delivery_outcomes/intro_data_capture/child/sex" required="true()" type="select1"/>
-      <bind calculate=" /delivery_outcomes/confirm_delivery/date_of_delivery " nodeset="/delivery_outcomes/intro_data_capture/child/date_of_birth" type="string"/>
-      <bind calculate=" /delivery_outcomes/intro_data_capture/child " nodeset="/delivery_outcomes/intro_data_capture/child/child_doc" type="string"/>
-      <bind calculate="." nodeset="/delivery_outcomes/intro_data_capture/child/created_by_doc" type="string"/>
-      <bind calculate=" /delivery_outcomes/household_uuid " nodeset="/delivery_outcomes/intro_data_capture/child/parent/_id" type="string"/>
-      <bind calculate=" /delivery_outcomes/created_by_place_uuid " nodeset="/delivery_outcomes/intro_data_capture/child/parent/parent/_id" type="string"/>
-      <bind calculate=" /delivery_outcomes/supervisory_area_uuid " nodeset="/delivery_outcomes/intro_data_capture/child/parent/parent/parent/_id" type="string"/>
-      <bind calculate="&quot;person&quot;" nodeset="/delivery_outcomes/intro_data_capture/child/type" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/delivery_outcomes/meta/instanceID" readonly="true()" type="string"/>
+  /pregnancy_outcomes/number_deliveries/num_babies_delivered  -  /pregnancy_outcomes/number_deliveries/num_live_births ))" nodeset="/pregnancy_outcomes/child_death_count" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/child_death_note" readonly="true()" relevant=" /pregnancy_outcomes/child_death_count  &gt; 0" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/multiple_child_death_note" readonly="true()" relevant=" /pregnancy_outcomes/child_death_count  &gt; 1" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/child_death_count " nodeset="/pregnancy_outcomes/child_death_data_count" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/child_death_data" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/child_death_count  &gt; 0"/>
+      <bind constraint="date-time(decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')" nodeset="/pregnancy_outcomes/child_death_data/child_date_of_death" required="true()" type="date"/>
+      <bind calculate="if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),1,if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;no&quot;),0, /pregnancy_outcomes/number_deliveries/num_live_births ))" nodeset="/pregnancy_outcomes/child_repeat_count" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_location" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_island" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_district" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;unguja&quot;) or selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_facility" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;north_a&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;north_b&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;central&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;south&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;west_a&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;west_b&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;urban&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;chakechake&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;micheweni&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;mkoani&quot;) or 
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/facility_delivery_method" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/home_delivery_helper" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/got_facility_pnc" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/got_facility_pnc_note" readonly="true()" relevant="selected( /pregnancy_outcomes/delivery_information/got_facility_pnc ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/didnt_get_facility_pnc_note" readonly="true()" relevant="selected( /pregnancy_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;)" type="string"/>
+      <bind calculate="if(selected( /pregnancy_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;),1,0)" nodeset="/pregnancy_outcomes/delivery_information/refer_flag_no_facility_pnc" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/born_early" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/immediate_cry" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/admitted_after_birth" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/major_complications" required="true()" type="select"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0 and  /pregnancy_outcomes/delivery_location_assessment/delivery_location  = &quot;facility&quot;"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/how_handled_facility ,&quot;bad&quot;)" required="true()" type="select"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)" required="true()" type="select"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture/child_data_note" readonly="true()" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture/multiple_child_data_note" readonly="true()" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/child_repeat_count " nodeset="/pregnancy_outcomes/intro_data_capture/child_count" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/first_name" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/middle_name" required="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/last_name" required="true()" type="string"/>
+      <bind calculate="concat( /pregnancy_outcomes/intro_data_capture/child/first_name ,&quot; &quot;,  /pregnancy_outcomes/intro_data_capture/child/middle_name ,&quot; &quot;,  /pregnancy_outcomes/intro_data_capture/child/last_name )" nodeset="/pregnancy_outcomes/intro_data_capture/child/name" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/sex" required="true()" type="select1"/>
+      <bind calculate=" /pregnancy_outcomes/confirm_delivery/date_of_delivery " nodeset="/pregnancy_outcomes/intro_data_capture/child/date_of_birth" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/intro_data_capture/child " nodeset="/pregnancy_outcomes/intro_data_capture/child/child_doc" type="string"/>
+      <bind calculate="." nodeset="/pregnancy_outcomes/intro_data_capture/child/created_by_doc" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/household_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/_id" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/created_by_place_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/parent/_id" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/supervisory_area_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent/_id" type="string"/>
+      <bind calculate="&quot;person&quot;" nodeset="/pregnancy_outcomes/intro_data_capture/child/type" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy_outcomes/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">
-    <group appearance="hidden" ref="/delivery_outcomes/inputs">
-      <group ref="/delivery_outcomes/inputs/user">
-        <input ref="/delivery_outcomes/inputs/user/contact_id">
-          <label ref="jr:itext('/delivery_outcomes/inputs/user/contact_id:label')"/>
+    <group appearance="hidden" ref="/pregnancy_outcomes/inputs">
+      <group ref="/pregnancy_outcomes/inputs/user">
+        <input ref="/pregnancy_outcomes/inputs/user/contact_id">
+          <label ref="jr:itext('/pregnancy_outcomes/inputs/user/contact_id:label')"/>
         </input>
-        <input ref="/delivery_outcomes/inputs/user/facility_id">
-          <label ref="jr:itext('/delivery_outcomes/inputs/user/facility_id:label')"/>
+        <input ref="/pregnancy_outcomes/inputs/user/facility_id">
+          <label ref="jr:itext('/pregnancy_outcomes/inputs/user/facility_id:label')"/>
         </input>
-        <input ref="/delivery_outcomes/inputs/user/name">
-          <label ref="jr:itext('/delivery_outcomes/inputs/user/name:label')"/>
+        <input ref="/pregnancy_outcomes/inputs/user/name">
+          <label ref="jr:itext('/pregnancy_outcomes/inputs/user/name:label')"/>
         </input>
-        <input ref="/delivery_outcomes/inputs/user/EDD"/>
+        <input ref="/pregnancy_outcomes/inputs/user/EDD"/>
       </group>
-      <group ref="/delivery_outcomes/inputs/contact">
-        <input ref="/delivery_outcomes/inputs/contact/_id"/>
-        <input ref="/delivery_outcomes/inputs/contact/name"/>
-        <input ref="/delivery_outcomes/inputs/contact/sex"/>
-        <input ref="/delivery_outcomes/inputs/contact/date_of_birth"/>
-        <group ref="/delivery_outcomes/inputs/contact/parent">
-          <input ref="/delivery_outcomes/inputs/contact/parent/_id">
-            <label ref="jr:itext('/delivery_outcomes/inputs/contact/parent/_id:label')"/>
+      <group ref="/pregnancy_outcomes/inputs/contact">
+        <input ref="/pregnancy_outcomes/inputs/contact/_id"/>
+        <input ref="/pregnancy_outcomes/inputs/contact/name"/>
+        <input ref="/pregnancy_outcomes/inputs/contact/sex"/>
+        <input ref="/pregnancy_outcomes/inputs/contact/date_of_birth"/>
+        <group ref="/pregnancy_outcomes/inputs/contact/parent">
+          <input ref="/pregnancy_outcomes/inputs/contact/parent/_id">
+            <label ref="jr:itext('/pregnancy_outcomes/inputs/contact/parent/_id:label')"/>
           </input>
-          <group ref="/delivery_outcomes/inputs/contact/parent/parent">
-            <input ref="/delivery_outcomes/inputs/contact/parent/parent/_id">
-              <label ref="jr:itext('/delivery_outcomes/inputs/contact/parent/parent/_id:label')"/>
+          <group ref="/pregnancy_outcomes/inputs/contact/parent/parent">
+            <input ref="/pregnancy_outcomes/inputs/contact/parent/parent/_id">
+              <label ref="jr:itext('/pregnancy_outcomes/inputs/contact/parent/parent/_id:label')"/>
             </input>
-            <group ref="/delivery_outcomes/inputs/contact/parent/parent/parent">
-              <input ref="/delivery_outcomes/inputs/contact/parent/parent/parent/_id">
-                <label ref="jr:itext('/delivery_outcomes/inputs/contact/parent/parent/parent/_id:label')"/>
+            <group ref="/pregnancy_outcomes/inputs/contact/parent/parent/parent">
+              <input ref="/pregnancy_outcomes/inputs/contact/parent/parent/parent/_id">
+                <label ref="jr:itext('/pregnancy_outcomes/inputs/contact/parent/parent/parent/_id:label')"/>
               </input>
             </group>
           </group>
         </group>
       </group>
     </group>
-    <group appearance="field-list" ref="/delivery_outcomes/client_information">
-      <label ref="jr:itext('/delivery_outcomes/client_information:label')"/>
-      <input ref="/delivery_outcomes/client_information/intro_note">
-        <label ref="jr:itext('/delivery_outcomes/client_information/intro_note:label')"/>
+    <group appearance="field-list" ref="/pregnancy_outcomes/client_information">
+      <label ref="jr:itext('/pregnancy_outcomes/client_information:label')"/>
+      <input ref="/pregnancy_outcomes/client_information/intro_note">
+        <label ref="jr:itext('/pregnancy_outcomes/client_information/intro_note:label')"/>
       </input>
-      <input ref="/delivery_outcomes/client_information/household_note">
-        <label ref="jr:itext('/delivery_outcomes/client_information/household_note:label')"/>
+      <input ref="/pregnancy_outcomes/client_information/household_note">
+        <label ref="jr:itext('/pregnancy_outcomes/client_information/household_note:label')"/>
       </input>
-      <input ref="/delivery_outcomes/client_information/phone_note">
-        <label ref="jr:itext('/delivery_outcomes/client_information/phone_note:label')"/>
+      <input ref="/pregnancy_outcomes/client_information/phone_note">
+        <label ref="jr:itext('/pregnancy_outcomes/client_information/phone_note:label')"/>
       </input>
     </group>
-    <group appearance="field-list" ref="/delivery_outcomes/confirm_delivery">
-      <label ref="jr:itext('/delivery_outcomes/confirm_delivery:label')"/>
-      <select1 ref="/delivery_outcomes/confirm_delivery/did_deliver">
-        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver:label')"/>
+    <group appearance="field-list" ref="/pregnancy_outcomes/confirm_delivery">
+      <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery:label')"/>
+      <select1 ref="/pregnancy_outcomes/confirm_delivery/did_deliver">
+        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/did_deliver:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/did_deliver/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/did_deliver/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/did_deliver/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <input ref="/delivery_outcomes/confirm_delivery/date_of_delivery">
-        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/date_of_delivery:label')"/>
+      <input ref="/pregnancy_outcomes/confirm_delivery/date_of_delivery">
+        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:label')"/>
       </input>
-      <select1 ref="/delivery_outcomes/confirm_delivery/pregnancy_viable">
-        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_viable:label')"/>
+      <select1 ref="/pregnancy_outcomes/confirm_delivery/pregnancy_viable">
+        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_viable:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_viable/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_viable/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_viable/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_viable/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <input ref="/delivery_outcomes/confirm_delivery/pregnancy_loss_note">
-        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/pregnancy_loss_note:label')"/>
+      <input ref="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note">
+        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label')"/>
       </input>
-      <input ref="/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss">
-        <label ref="jr:itext('/delivery_outcomes/confirm_delivery/date_of_pregnancy_loss:label')"/>
+      <input ref="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss">
+        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss:label')"/>
       </input>
     </group>
-    <group appearance="field-list" ref="/delivery_outcomes/number_deliveries">
-      <label ref="jr:itext('/delivery_outcomes/number_deliveries:label')"/>
-      <select1 ref="/delivery_outcomes/number_deliveries/check_multiple_deliveries">
-        <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries:label')"/>
+    <group appearance="field-list" ref="/pregnancy_outcomes/number_deliveries">
+      <label ref="jr:itext('/pregnancy_outcomes/number_deliveries:label')"/>
+      <select1 ref="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries">
+        <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/check_multiple_deliveries:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries/one:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/one:label')"/>
           <value>one</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/number_deliveries/check_multiple_deliveries/more:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/more:label')"/>
           <value>more</value>
         </item>
       </select1>
-      <input ref="/delivery_outcomes/number_deliveries/num_babies_delivered">
-        <label ref="jr:itext('/delivery_outcomes/number_deliveries/num_babies_delivered:label')"/>
+      <input ref="/pregnancy_outcomes/number_deliveries/num_babies_delivered">
+        <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/num_babies_delivered:label')"/>
       </input>
-      <select1 ref="/delivery_outcomes/number_deliveries/live_birth">
-        <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth:label')"/>
+      <select1 ref="/pregnancy_outcomes/number_deliveries/live_birth">
+        <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/live_birth:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/live_birth/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/number_deliveries/live_birth/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/live_birth/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <input ref="/delivery_outcomes/number_deliveries/num_live_births">
-        <label ref="jr:itext('/delivery_outcomes/number_deliveries/num_live_births:label')"/>
+      <input ref="/pregnancy_outcomes/number_deliveries/num_live_births">
+        <label ref="jr:itext('/pregnancy_outcomes/number_deliveries/num_live_births:label')"/>
       </input>
     </group>
-    <input ref="/delivery_outcomes/child_death_note">
-      <label ref="jr:itext('/delivery_outcomes/child_death_note:label')"/>
+    <input ref="/pregnancy_outcomes/child_death_note">
+      <label ref="jr:itext('/pregnancy_outcomes/child_death_note:label')"/>
     </input>
-    <input ref="/delivery_outcomes/multiple_child_death_note">
-      <label ref="jr:itext('/delivery_outcomes/multiple_child_death_note:label')"/>
+    <input ref="/pregnancy_outcomes/multiple_child_death_note">
+      <label ref="jr:itext('/pregnancy_outcomes/multiple_child_death_note:label')"/>
     </input>
-    <group ref="/delivery_outcomes/child_death_data">
-      <label ref="jr:itext('/delivery_outcomes/child_death_data:label')"/>
-      <repeat appearance="field-list" jr:count=" /delivery_outcomes/child_death_data_count " nodeset="/delivery_outcomes/child_death_data">
-        <input ref="/delivery_outcomes/child_death_data/child_date_of_death">
-          <label ref="jr:itext('/delivery_outcomes/child_death_data/child_date_of_death:label')"/>
+    <group ref="/pregnancy_outcomes/child_death_data">
+      <label ref="jr:itext('/pregnancy_outcomes/child_death_data:label')"/>
+      <repeat appearance="field-list" jr:count=" /pregnancy_outcomes/child_death_data_count " nodeset="/pregnancy_outcomes/child_death_data">
+        <input ref="/pregnancy_outcomes/child_death_data/child_date_of_death">
+          <label ref="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:label')"/>
         </input>
       </repeat>
     </group>
-    <group appearance="field-list" ref="/delivery_outcomes/delivery_location_assessment">
-      <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment:label')"/>
-      <select1 ref="/delivery_outcomes/delivery_location_assessment/delivery_location">
-        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location:label')"/>
+    <group appearance="field-list" ref="/pregnancy_outcomes/delivery_location_assessment">
+      <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_location_assessment/delivery_location">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/delivery_location:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location/facility:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/delivery_location/facility:label')"/>
           <value>facility</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location/in_transit:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/delivery_location/in_transit:label')"/>
           <value>in_transit</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_location/home:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/delivery_location/home:label')"/>
           <value>home</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/delivery_location_assessment/facility_island">
-        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_location_assessment/facility_island">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/facility_island:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island/unguja:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/facility_island/unguja:label')"/>
           <value>unguja</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island/pemba:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/facility_island/pemba:label')"/>
           <value>pemba</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_island/other:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/facility_island/other:label')"/>
           <value>other</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/delivery_location_assessment/facility_district">
-        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/facility_district:label')"/>
-        <itemset nodeset="instance('facility_district')/root/item[choice_filter= /delivery_outcomes/delivery_location_assessment/facility_island ]">
+      <select1 ref="/pregnancy_outcomes/delivery_location_assessment/facility_district">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/facility_district:label')"/>
+        <itemset nodeset="instance('facility_district')/root/item[choice_filter= /pregnancy_outcomes/delivery_location_assessment/facility_island ]">
           <value ref="name"/>
           <label ref="jr:itext(itextId)"/>
         </itemset>
       </select1>
-      <select1 ref="/delivery_outcomes/delivery_location_assessment/delivery_facility">
-        <label ref="jr:itext('/delivery_outcomes/delivery_location_assessment/delivery_facility:label')"/>
-        <itemset nodeset="instance('delivery_facility')/root/item[choice_filter= /delivery_outcomes/delivery_location_assessment/facility_district ]">
+      <select1 ref="/pregnancy_outcomes/delivery_location_assessment/delivery_facility">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/delivery_facility:label')"/>
+        <itemset nodeset="instance('delivery_facility')/root/item[choice_filter= /pregnancy_outcomes/delivery_location_assessment/facility_district ]">
           <value ref="name"/>
           <label ref="jr:itext(itextId)"/>
         </itemset>
       </select1>
     </group>
-    <group ref="/delivery_outcomes/delivery_information">
-      <label ref="jr:itext('/delivery_outcomes/delivery_information:label')"/>
-      <select1 ref="/delivery_outcomes/delivery_information/facility_delivery_method">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method:label')"/>
+    <group ref="/pregnancy_outcomes/delivery_information">
+      <label ref="jr:itext('/pregnancy_outcomes/delivery_information:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_information/facility_delivery_method">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/facility_delivery_method:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/facility_delivery_method/normal_vaginal:label')"/>
           <value>normal_vaginal</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method/caesarian:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/facility_delivery_method/caesarian:label')"/>
           <value>caesarian</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label')"/>
           <value>vacuum_forceps</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/delivery_information/home_delivery_helper">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_information/home_delivery_helper">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/home_delivery_helper:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/home_delivery_helper/traditional_birth_attendant:label')"/>
           <value>traditional_birth_attendant</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/family_member:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/home_delivery_helper/family_member:label')"/>
           <value>family_member</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/home_delivery_helper/neighbor_friend:label')"/>
           <value>neighbor_friend</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/no_one:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/home_delivery_helper/no_one:label')"/>
           <value>no_one</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/home_delivery_helper/other:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/home_delivery_helper/other:label')"/>
           <value>other</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/delivery_information/got_facility_pnc">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_information/got_facility_pnc">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/got_facility_pnc:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/got_facility_pnc/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/got_facility_pnc/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <input ref="/delivery_outcomes/delivery_information/got_facility_pnc_note">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/got_facility_pnc_note:label')"/>
+      <input ref="/pregnancy_outcomes/delivery_information/got_facility_pnc_note">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/got_facility_pnc_note:label')"/>
       </input>
-      <input ref="/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/didnt_get_facility_pnc_note:label')"/>
+      <input ref="/pregnancy_outcomes/delivery_information/didnt_get_facility_pnc_note">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/didnt_get_facility_pnc_note:label')"/>
       </input>
-      <select1 ref="/delivery_outcomes/delivery_information/born_early">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/born_early:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_information/born_early">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/born_early:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/born_early/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/born_early/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/born_early/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/born_early/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/delivery_information/immediate_cry">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/immediate_cry:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_information/immediate_cry">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/immediate_cry:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/immediate_cry/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/immediate_cry/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/immediate_cry/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/immediate_cry/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/delivery_information/admitted_after_birth">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/admitted_after_birth:label')"/>
+      <select1 ref="/pregnancy_outcomes/delivery_information/admitted_after_birth">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/admitted_after_birth:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/admitted_after_birth/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/admitted_after_birth/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/admitted_after_birth/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/admitted_after_birth/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select ref="/delivery_outcomes/delivery_information/major_complications">
-        <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications:label')"/>
+      <select ref="/pregnancy_outcomes/delivery_information/major_complications">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/antepartum_hemorrhage:label')"/>
           <value>antepartum_hemorrhage</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/intrapartum_hemorrhage:label')"/>
           <value>intrapartum_hemorrhage</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/postpartum_hemorrhage:label')"/>
           <value>postpartum_hemorrhage</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/preeclampsia_eclampsia:label')"/>
           <value>preeclampsia_eclampsia</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/infection:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/infection:label')"/>
           <value>infection</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/prolonged_labor:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/prolonged_labor:label')"/>
           <value>prolonged_labor</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/large_perineal_tear:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/large_perineal_tear:label')"/>
           <value>large_perineal_tear</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/retained_placenta:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/retained_placenta:label')"/>
           <value>retained_placenta</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/other:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/other:label')"/>
           <value>other</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/dont_know:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/dont_know:label')"/>
           <value>dont_know</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/delivery_information/major_complications/none:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/delivery_information/major_complications/none:label')"/>
           <value>none</value>
         </item>
       </select>
     </group>
-    <group ref="/delivery_outcomes/quality_of_care_survey">
-      <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey:label')"/>
-      <select1 ref="/delivery_outcomes/quality_of_care_survey/quality_of_care_consent">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/quality_of_care_consent:label')"/>
+    <group ref="/pregnancy_outcomes/quality_of_care_survey">
+      <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey:label')"/>
+      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/quality_of_care_consent/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/quality_of_care_consent/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/quality_of_care_survey/how_handled_facility">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_handled_facility:label')"/>
+      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_handled_facility:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_handled_facility/good:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/good:label')"/>
           <value>good</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_handled_facility/ok:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/ok:label')"/>
           <value>ok</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_handled_facility/bad:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_handled_facility/bad:label')"/>
           <value>bad</value>
         </item>
       </select1>
-      <select ref="/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly:label')"/>
+      <select ref="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/shouted:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/shouted:label')"/>
           <value>shouted</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/hit:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/hit:label')"/>
           <value>hit</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/ignored:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/ignored:label')"/>
           <value>ignored</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/unfriendly:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/unfriendly:label')"/>
           <value>unfriendly</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/why_feel_handled_badly/other:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly/other:label')"/>
           <value>other</value>
         </item>
       </select>
-      <select1 ref="/delivery_outcomes/quality_of_care_survey/paid_delivery_fees">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/paid_delivery_fees:label')"/>
+      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/paid_delivery_fees/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/paid_delivery_fees/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery:label')"/>
+      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label')"/>
           <value>&lt;1,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label')"/>
           <value>1,000 - 10,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label')"/>
           <value>10,000 - 20,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label')"/>
           <value>20,000 - 50,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label')"/>
           <value>&gt;50,000</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/quality_of_care_survey/purchased_supplies">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/purchased_supplies:label')"/>
+      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/purchased_supplies:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/purchased_supplies/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/purchased_supplies/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/purchased_supplies/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/purchased_supplies/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies:label')"/>
+      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label')"/>
           <value>&lt;1,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label')"/>
           <value>1,000 - 10,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label')"/>
           <value>10,000 - 20,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label')"/>
           <value>20,000 - 50,000</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label')"/>
           <value>&gt;50,000</value>
         </item>
       </select1>
-      <select ref="/delivery_outcomes/quality_of_care_survey/what_supplies_purchased">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased:label')"/>
+      <select ref="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/gloves:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/gloves:label')"/>
           <value>gloves</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/plastic_sheet:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/plastic_sheet:label')"/>
           <value>plastic_sheet</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/medicine:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/medicine:label')"/>
           <value>medicine</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/cleaning_supplies:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/cleaning_supplies:label')"/>
           <value>cleaning_supplies</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/needles:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/needles:label')"/>
           <value>needles</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/iv_infusion:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/iv_infusion:label')"/>
           <value>iv_infusion</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/what_supplies_purchased/other:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased/other:label')"/>
           <value>other</value>
         </item>
       </select>
-      <select1 ref="/delivery_outcomes/quality_of_care_survey/would_recommend_facility">
-        <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/would_recommend_facility:label')"/>
+      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility">
+        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility:label')"/>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/would_recommend_facility/yes:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/delivery_outcomes/quality_of_care_survey/would_recommend_facility/no:label')"/>
+          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility/no:label')"/>
           <value>no</value>
         </item>
       </select1>
     </group>
-    <group appearance="field-list" ref="/delivery_outcomes/intro_data_capture">
-      <label ref="jr:itext('/delivery_outcomes/intro_data_capture:label')"/>
-      <input ref="/delivery_outcomes/intro_data_capture/child_data_note">
-        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child_data_note:label')"/>
+    <group appearance="field-list" ref="/pregnancy_outcomes/intro_data_capture">
+      <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture:label')"/>
+      <input ref="/pregnancy_outcomes/intro_data_capture/child_data_note">
+        <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child_data_note:label')"/>
       </input>
-      <input ref="/delivery_outcomes/intro_data_capture/multiple_child_data_note">
-        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/multiple_child_data_note:label')"/>
+      <input ref="/pregnancy_outcomes/intro_data_capture/multiple_child_data_note">
+        <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/multiple_child_data_note:label')"/>
       </input>
-      <group ref="/delivery_outcomes/intro_data_capture/child">
-        <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child:label')"/>
-        <repeat appearance="field-list" jr:count=" /delivery_outcomes/intro_data_capture/child_count " nodeset="/delivery_outcomes/intro_data_capture/child">
-          <input ref="/delivery_outcomes/intro_data_capture/child/first_name">
-            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/first_name:label')"/>
+      <group ref="/pregnancy_outcomes/intro_data_capture/child">
+        <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child:label')"/>
+        <repeat appearance="field-list" jr:count=" /pregnancy_outcomes/intro_data_capture/child_count " nodeset="/pregnancy_outcomes/intro_data_capture/child">
+          <input ref="/pregnancy_outcomes/intro_data_capture/child/first_name">
+            <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/first_name:label')"/>
           </input>
-          <input ref="/delivery_outcomes/intro_data_capture/child/middle_name">
-            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/middle_name:label')"/>
+          <input ref="/pregnancy_outcomes/intro_data_capture/child/middle_name">
+            <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/middle_name:label')"/>
           </input>
-          <input ref="/delivery_outcomes/intro_data_capture/child/last_name">
-            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/last_name:label')"/>
+          <input ref="/pregnancy_outcomes/intro_data_capture/child/last_name">
+            <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/last_name:label')"/>
           </input>
-          <select1 ref="/delivery_outcomes/intro_data_capture/child/sex">
-            <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/sex:label')"/>
+          <select1 ref="/pregnancy_outcomes/intro_data_capture/child/sex">
+            <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/sex:label')"/>
             <item>
-              <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/sex/male:label')"/>
+              <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/sex/male:label')"/>
               <value>male</value>
             </item>
             <item>
-              <label ref="jr:itext('/delivery_outcomes/intro_data_capture/child/sex/female:label')"/>
+              <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/sex/female:label')"/>
               <value>female</value>
             </item>
           </select1>
-          <group ref="/delivery_outcomes/intro_data_capture/child/parent">
-            <group ref="/delivery_outcomes/intro_data_capture/child/parent/parent">
-              <group ref="/delivery_outcomes/intro_data_capture/child/parent/parent/parent"/>
+          <group ref="/pregnancy_outcomes/intro_data_capture/child/parent">
+            <group ref="/pregnancy_outcomes/intro_data_capture/child/parent/parent">
+              <group ref="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent"/>
             </group>
           </group>
         </repeat>
