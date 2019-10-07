@@ -603,12 +603,12 @@ module.exports = {
     return result;
   },
 
-  getPciv3: function () {
+  getPcvi3: function () {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pciv3 === 'yes';
+        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi3 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
