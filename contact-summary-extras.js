@@ -62,8 +62,8 @@ module.exports = {
     positiveConsentingPregnancyRegistrations = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.fields &&
-        r.fields.pregnancy_form &&
-        r.fields.pregnancy_form.consent === 'yes';
+        r.fields.pregnancy_consent &&
+        r.fields.pregnancy_consent.consent === 'yes';
     });
     return positiveConsentingPregnancyRegistrations.length;
   },
@@ -118,9 +118,9 @@ module.exports = {
     reportsFound = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.fields &&
-        r.fields.pregnancy_form &&
-        r.fields.pregnancy_form.consent &&
-        r.fields.pregnancy_form.consent === 'yes';
+        r.fields.pregnancy_consent &&
+        r.fields.pregnancy_consent.consent &&
+        r.fields.pregnancy_consent.consent === 'yes';
     });
     if (reportsFound.length > 0) {
       var report = this.getMostRecentReport(reportsFound, 'pregnancy');
@@ -140,8 +140,8 @@ module.exports = {
       return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
         r.fields &&
-        ((r.fields.pregnancy_form && r.fields.pregnancy_form.consent &&
-          r.fields.pregnancy_form.consent === 'yes') ||
+        ((r.fields.pregnancy_consent && r.fields.pregnancy_consent.consent &&
+          r.fields.pregnancy_consent.consent === 'yes') ||
           (r.fields.visit_introduction &&
             r.fields.visit_introduction.has_given_birth &&
             r.fields.visit_introduction.has_given_birth === 'no'));

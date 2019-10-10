@@ -730,9 +730,9 @@ module.exports = {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
           r.fields &&
-          r.fields.pregnancy_form &&
-          r.fields.pregnancy_form.consent &&
-          r.fields.pregnancy_form.consent === 'yes';
+          r.fields.pregnancy_consent &&
+          r.fields.pregnancy_consent.consent &&
+          r.fields.pregnancy_consent.consent === 'yes';
       });
     }
     if (reportsFound.length > 0) {
@@ -764,8 +764,8 @@ module.exports = {
       positiveConsentingPregnancyRegistrations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
           r.fields &&
-          r.fields.pregnancy_form &&
-          r.fields.pregnancy_form.consent === 'yes';
+          r.fields.pregnancy_consent &&
+          r.fields.pregnancy_consent.consent === 'yes';
       });
     }
     return positiveConsentingPregnancyRegistrations.length;
@@ -905,8 +905,8 @@ module.exports = {
       counter = c.reports.filter(function (r) {
         switch (form_type) {
           case 'pregnancy':
-            return r.form === 'pregnancy' && r.fields && r.fields.pregnancy_form &&
-              r.fields.pregnancy_form.consent && r.fields.pregnancy_form.consent === 'yes' &&
+            return r.form === 'pregnancy' && r.fields && r.fields.pregnancy_consent &&
+              r.fields.pregnancy_consent.consent && r.fields.pregnancy_consent.consent === 'yes' &&
               r.reported_date && isReportedThisMonth(new Date(r.reported_date), new Date());
           case 'infant_child':
             return r.form === 'infant_child' &&

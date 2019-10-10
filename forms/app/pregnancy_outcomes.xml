@@ -37,7 +37,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>Deliveries can be up to 3 months ago</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/date_of_delivery:label">
-            <value>When did <output value=" /pregnancy_outcomes/client_name "/> deliver?</value>
+            <value>When did you deliver?</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
             <value>When did <output value=" /pregnancy_outcomes/client_name "/> lose the pregnancy?</value>
@@ -49,7 +49,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>Yes</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/did_deliver:label">
-            <value>Did <output value=" /pregnancy_outcomes/client_name "/> deliver her baby?</value>
+            <value>Did you deliver your baby?</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sympathise with the mother for her loss.&lt;/span&gt;</value>
@@ -277,7 +277,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>One</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries:label">
-            <value>Did <output value=" /pregnancy_outcomes/client_name "/> deliver one baby or more than one baby</value>
+            <value>Did you deliver one baby or more than one baby</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/live_birth/no:label">
             <value>No</value>
@@ -292,7 +292,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>Delivery of between 2 and 4 babies is supported</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/num_babies_delivered:label">
-            <value>How many babies did <output value=" /pregnancy_outcomes/client_name "/> deliver?</value>
+            <value>How many babies did you deliver?</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
             <value>Enter a number between 0 and the total number of babies delivered</value>
@@ -850,7 +850,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Tarehe ya kujifungua iwe baina ya leo na miezi mitatu nyuma.</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/date_of_delivery:label">
-            <value><output value=" /pregnancy_outcomes/client_name "/> amejifungua lini?</value>
+            <value>Je umejifungua lini?</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
             <value>Mimba ya <output value=" /pregnancy_outcomes/client_name "/> iliharibika lini?</value>
@@ -862,7 +862,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/did_deliver:label">
-            <value>Je, <output value=" /pregnancy_outcomes/client_name "/> ameshajifungua ?</value>
+            <value>Je umeshajifungua ?</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Mpe pole mama kwa kuharibika mimba yake.&lt;/span&gt;</value>
@@ -1132,7 +1132,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Mtoto mmoja</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries:label">
-            <value><output value=" /pregnancy_outcomes/client_name "/> amejifungua mtoto mmoja au zaidi ya mtoto mmoja?</value>
+            <value>Je umejifungua mtoto mmoja au zaidi ya mtoto mmoja?</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/live_birth/no:label">
             <value>Hapana</value>
@@ -1147,7 +1147,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Tafadhali ingiza idadi kati ya 2 na 4.</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/num_babies_delivered:label">
-            <value><output value=" /pregnancy_outcomes/client_name "/> amejifungua watoto wangapi?</value>
+            <value>Je umejifungua watoto wangapi?</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg">
             <value>Ingiza nambari baina ya 0 na jumla ya watoto waliozaliwa.</value>
@@ -1793,7 +1793,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
               <sex/>
               <date_of_birth/>
               <child_doc db-doc-ref=" /pregnancy_outcomes/intro_data_capture/child "/>
-              <created_by_doc db-doc-ref="/delivery_outcomes"/>
+              <created_by_doc db-doc-ref="/pregnancy_outcomes"/>
               <parent>
                 <_id/>
                 <parent>
@@ -2585,7 +2585,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
         <input ref="/pregnancy_outcomes/inputs/user/EDD"/>
       </group>
       <group ref="/pregnancy_outcomes/inputs/contact">
-        <input ref="/pregnancy_outcomes/inputs/contact/_id"/>
+        <input appearance="db-object" ref="/pregnancy_outcomes/inputs/contact/_id"/>
         <input ref="/pregnancy_outcomes/inputs/contact/name"/>
         <input ref="/pregnancy_outcomes/inputs/contact/sex"/>
         <input ref="/pregnancy_outcomes/inputs/contact/date_of_birth"/>

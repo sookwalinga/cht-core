@@ -32,7 +32,7 @@
           <text id="/postpartum/client_information/household_note:label">
             <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/client_name "/>&lt;/span&gt;
 Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/age_years "/> years, <output value=" /postpartum/age_months "/> months, <output value=" /postpartum/age_days_display "/> days&lt;/span&gt;
-Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt; 
 House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postpartum/kitongoji "/>&lt;/span&gt;</value>
           </text>
@@ -152,8 +152,8 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postp
           </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_referral_note:label">
             <value>This is an URGENT and serious emergency. You should go to the nearest facility immediately. If it is near closing time for this facility, you should directly to nearest hospital.
-
-I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey.
+ 
+I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey. 
 
 I will return in 3 days to make sure you completed this referral
 
@@ -203,9 +203,9 @@ Have you, in the past 3 days, gone to a health facility for any of these identif
             <value>No danger signs were identified, but if you develop any of the signs we discussed, you should go to a health facility immediately.</value>
           </text>
           <text id="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_referral_note:label">
-            <value>You should go to a health facility as soon as possible and within 24 hours for further screening.
+            <value>You should go to a health facility as soon as possible and within 24 hours for further screening. 
 
-I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey.
+I can help you arrange a driver to get to the health facility, but as I told you before that the program doesn't provide transport, so you are responsible for paying the full amount of the journey. 
 
 I will return in 3 days to make sure you completed this referral
 
@@ -487,33 +487,6 @@ If you have any problems before that time, please call me.</value>
           <text id="/postpartum/research_questions/enrollment_via_phone:label">
             <value>Did someone come to your house and register you using a phone during a previous pregnancy?</value>
           </text>
-          <text id="/postpartum/research_questions/highest_school_level/completed_high_school:label">
-            <value>Completed high school (Form 6)</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/incomplete_primary:label">
-            <value>Incomplete/some primary school (KG-Standard 5)</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/incomplete_secondary:label">
-            <value>Incomplete/some secondary school (Form 1-3)</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/more_than_high_school:label">
-            <value>More than high school</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/no_formal_education:label">
-            <value>No formal education/None</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/primary_education:label">
-            <value>Completed primary education (Standard 6)</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/school_level_dont_know_decline:label">
-            <value>Don't know/Decline to answer</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/secondary:label">
-            <value>Completed secondary school (Form 4)</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level:label">
-            <value>What is the highest level of school you attended?</value>
-          </text>
           <text id="/postpartum/research_questions/partner_info/partner_highest_school_level/partner_completed_high_school:label">
             <value>Completed high school (Form 6)</value>
           </text>
@@ -546,18 +519,6 @@ If you have any problems before that time, please call me.</value>
           </text>
           <text id="/postpartum/research_questions/partner_info/subgroup_partner_age:label">
             <value>What is your husband/partner's age?</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment/decline_to_answer:label">
-            <value>Don't know / Decline to answer</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment/no:label">
-            <value>No</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment:label">
-            <value>Were you previously/ever enrolled in Safer Deliveries Program?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_decision_maker/decision_maker/decision_maker_dont_know_decline:label">
             <value>Don't know / Decline to answer</value>
@@ -593,10 +554,7 @@ If you have any problems before that time, please call me.</value>
             <value>Widowed</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_marital_status/marital_status:label">
-            <value>What is the woman's marital status?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_marital_status/msg_for_chv_marital_status:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+            <value>What is your marital status?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label">
             <value>Don't know / Decline to answer</value>
@@ -608,10 +566,7 @@ If you have any problems before that time, please call me.</value>
             <value>Yes</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation:label">
-            <value>Is the client you are attending currently married or living together with a man as if married?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+            <value>Are you currently married or living together with a man as if married?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label">
             <value>Don't know / Decline to answer</value>
@@ -1197,7 +1152,7 @@ If you have any problems before that time, please call me.</value>
           <text id="/postpartum/client_information/household_note:label">
             <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/client_name "/>&lt;/span&gt;
 Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/age_years "/> miaka, <output value=" /postpartum/age_months "/> miezi, <output value=" /postpartum/age_days_display "/> siku&lt;/span&gt;
-Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt;
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/household_head "/>&lt;/span&gt; 
 Namba ya nyumba: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/house_number "/>&lt;/span&gt;
 Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /postpartum/kitongoji "/>&lt;/span&gt;</value>
           </text>
@@ -1687,33 +1642,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/postpartum/research_questions/enrollment_via_phone:label">
             <value>Je kuna mtu yeyote alikuja kukusajili kwa simu ya mkononi wakati wa uja uzito wako uliopita?</value>
           </text>
-          <text id="/postpartum/research_questions/highest_school_level/completed_high_school:label">
-            <value>Kamaliza kidatu cha sita</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/incomplete_primary:label">
-            <value>Hakumaliza/ kapata elimu ya nasari kaishia darasa la tano.</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/incomplete_secondary:label">
-            <value>Hakumaliza elimu ya secondari kaishia darasa la kumi na moja</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/more_than_high_school:label">
-            <value>Elimu yake zaidi ya elimu ya juu/ zaidi ya kidatu cha sita</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/no_formal_education:label">
-            <value>Hakusoma skuli/Hakusoma</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/primary_education:label">
-            <value>Kamalizia elimu ya msingi (darasa la sita)</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/school_level_dont_know_decline:label">
-            <value>Sijui / Siwezi kujibu</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level/secondary:label">
-            <value>Kaliza darasa la kumi na mbili</value>
-          </text>
-          <text id="/postpartum/research_questions/highest_school_level:label">
-            <value>Una kiwango gani cha elimu?</value>
-          </text>
           <text id="/postpartum/research_questions/partner_info/partner_highest_school_level/partner_completed_high_school:label">
             <value>Kamaliza kidatu cha sita</value>
           </text>
@@ -1749,18 +1677,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/postpartum/research_questions/partner_info:label">
             <value>-</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment/decline_to_answer:label">
-            <value>Sijui / Siwezi kujibu</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment/yes:label">
-            <value>Ndio</value>
-          </text>
-          <text id="/postpartum/research_questions/previous_uzazi_salama_enrollment:label">
-            <value>Je ulishawahi kusajiliwa kwenye mradi wa Uzazi salama?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_decision_maker/decision_maker/decision_maker_dont_know_decline:label">
             <value>Sijui / Siwezi kujibu</value>
@@ -1799,10 +1715,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Mjane</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_marital_status/marital_status:label">
-            <value>Je ni ipi hali ya ndoa ya mama?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_marital_status/msg_for_chv_marital_status:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>Je ni ipi hali yako ya ndoa?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_marital_status:label">
             <value>-</value>
@@ -1817,10 +1730,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ndio</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation:label">
-            <value>Je mteja unaemuhudumia sasa ana mume/mwenza ambae wanaishi pamoja?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>Je una mwenza ambae munaishi pamoja?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_married_or_livein_relation:label">
             <value>-</value>
@@ -2528,19 +2438,15 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
               <travel_means/>
               <other_means/>
             </transport>
-            <highest_school_level/>
-            <previous_uzazi_salama_enrollment/>
             <enrollment_via_phone/>
             <subgroup_decision_maker>
               <decision_maker/>
               <some_other_decision_maker/>
             </subgroup_decision_maker>
             <subgroup_married_or_livein_relation>
-              <msg_for_chv_married_or_livein_relation/>
               <married_or_livein_relation/>
             </subgroup_married_or_livein_relation>
             <subgroup_marital_status>
-              <msg_for_chv_marital_status/>
               <marital_status/>
             </subgroup_marital_status>
             <subgroup_partner_info>
@@ -3075,35 +2981,43 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="second_facility">
+      <instance id="travel_means">
         <root>
           <item>
-            <itextId>static_instance-second_facility-0</itextId>
-            <name>pregnancy_supplements</name>
+            <itextId>static_instance-travel_means-0</itextId>
+            <name>walk</name>
           </item>
           <item>
-            <itextId>static_instance-second_facility-1</itextId>
-            <name>bp_reading</name>
+            <itextId>static_instance-travel_means-1</itextId>
+            <name>bicycle</name>
           </item>
           <item>
-            <itextId>static_instance-second_facility-2</itextId>
-            <name>hb_test</name>
+            <itextId>static_instance-travel_means-2</itextId>
+            <name>moto</name>
           </item>
           <item>
-            <itextId>static_instance-second_facility-3</itextId>
-            <name>bp_test</name>
+            <itextId>static_instance-travel_means-3</itextId>
+            <name>private_car</name>
           </item>
           <item>
-            <itextId>static_instance-second_facility-4</itextId>
-            <name>urine_test</name>
+            <itextId>static_instance-travel_means-4</itextId>
+            <name>public_bus</name>
           </item>
           <item>
-            <itextId>static_instance-second_facility-5</itextId>
-            <name>ultrasound</name>
+            <itextId>static_instance-travel_means-5</itextId>
+            <name>health_facility_vehicle</name>
           </item>
           <item>
-            <itextId>static_instance-second_facility-6</itextId>
+            <itextId>static_instance-travel_means-6</itextId>
+            <name>boat</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-7</itextId>
             <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-8</itextId>
+            <name>travel_means_dont_know_decline</name>
           </item>
         </root>
       </instance>
@@ -3268,10 +3182,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <itextId>static_instance-service_reason-1</itextId>
             <name>closed_facility</name>
           </item>
-        </root>
-      </instance>
-      <instance id="baby_services_received">
-        <root>
           <item>
             <itextId>static_instance-service_reason-2</itextId>
             <name>no_reagents</name>
@@ -3400,7 +3310,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior" required="true()" type="select1"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast" required="true()" type="select1"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/c_section_condition" relevant=" /postpartum/had_c_section =&quot;yes&quot;" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or 
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision ,&quot;yes&quot;) or
@@ -3460,16 +3370,16 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
       <bind nodeset="/postpartum/quality_of_care" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and selected( /postpartum/check_facility_pnc/quality_of_care_consent ,&quot;yes&quot;) and selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)"/>
       <bind nodeset="/postpartum/quality_of_care/facility_island" required="true()" type="select1"/>
       <bind nodeset="/postpartum/quality_of_care/facility_district" relevant="selected( /postpartum/quality_of_care/facility_island ,&quot;unguja&quot;) or selected( /postpartum/quality_of_care/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;north_b&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;central&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;south&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;west_a&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;west_b&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;urban&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;chakechake&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;micheweni&quot;) or
-selected( /postpartum/quality_of_care/facility_district ,&quot;mkoani&quot;) or
+      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;north_b&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;central&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;south&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;west_a&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;west_b&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;urban&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;chakechake&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;micheweni&quot;) or 
+selected( /postpartum/quality_of_care/facility_district ,&quot;mkoani&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
       <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility_other" relevant="selected( /postpartum/quality_of_care/subgroup_facility/anc_visit_facility ,&quot;other&quot;)" required="true()" type="string"/>
       <bind nodeset="/postpartum/quality_of_care/is_service_received" required="true()" type="select1"/>
@@ -3483,14 +3393,10 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
       <bind nodeset="/postpartum/research_questions/travel_time" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/transport/travel_means" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/transport/other_means" relevant="selected( /postpartum/research_questions/transport/travel_means ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/postpartum/research_questions/highest_school_level" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/previous_uzazi_salama_enrollment" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/enrollment_via_phone" type="select1"/>
       <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/decision_maker" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/some_other_decision_maker" relevant="selected( /postpartum/research_questions/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_marital_status/msg_for_chv_marital_status" readonly="true()" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/postpartum/research_questions/subgroup_marital_status/marital_status" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;no&quot;)" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/subgroup_partner_info/msg_for_chv_partner_live_together" readonly="true()" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
@@ -4139,56 +4045,6 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
           <label ref="jr:itext('/postpartum/research_questions/transport/other_means:label')"/>
         </input>
       </group>
-      <select1 ref="/postpartum/research_questions/highest_school_level">
-        <label ref="jr:itext('/postpartum/research_questions/highest_school_level:label')"/>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/no_formal_education:label')"/>
-          <value>no_formal_education</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/incomplete_primary:label')"/>
-          <value>incomplete_primary</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/primary_education:label')"/>
-          <value>primary_education</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/incomplete_secondary:label')"/>
-          <value>incomplete_secondary</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/secondary:label')"/>
-          <value>secondary</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/completed_high_school:label')"/>
-          <value>completed_high_school</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/more_than_high_school:label')"/>
-          <value>more_than_high_school</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/highest_school_level/school_level_dont_know_decline:label')"/>
-          <value>school_level_dont_know_decline</value>
-        </item>
-      </select1>
-      <select1 ref="/postpartum/research_questions/previous_uzazi_salama_enrollment">
-        <label ref="jr:itext('/postpartum/research_questions/previous_uzazi_salama_enrollment:label')"/>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/previous_uzazi_salama_enrollment/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/previous_uzazi_salama_enrollment/no:label')"/>
-          <value>no</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/previous_uzazi_salama_enrollment/decline_to_answer:label')"/>
-          <value>decline_to_answer</value>
-        </item>
-      </select1>
       <select1 ref="/postpartum/research_questions/enrollment_via_phone">
         <label ref="jr:itext('/postpartum/research_questions/enrollment_via_phone:label')"/>
         <item>
@@ -4233,9 +4089,6 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
         </input>
       </group>
       <group appearance="field-list" ref="/postpartum/research_questions/subgroup_married_or_livein_relation">
-        <input ref="/postpartum/research_questions/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation">
-          <label ref="jr:itext('/postpartum/research_questions/subgroup_married_or_livein_relation/msg_for_chv_married_or_livein_relation:label')"/>
-        </input>
         <select1 ref="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation">
           <label ref="jr:itext('/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation:label')"/>
           <item>
@@ -4253,9 +4106,6 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
         </select1>
       </group>
       <group appearance="field-list" ref="/postpartum/research_questions/subgroup_marital_status">
-        <input ref="/postpartum/research_questions/subgroup_marital_status/msg_for_chv_marital_status">
-          <label ref="jr:itext('/postpartum/research_questions/subgroup_marital_status/msg_for_chv_marital_status:label')"/>
-        </input>
         <select1 ref="/postpartum/research_questions/subgroup_marital_status/marital_status">
           <label ref="jr:itext('/postpartum/research_questions/subgroup_marital_status/marital_status:label')"/>
           <item>
