@@ -1454,8 +1454,10 @@ SAY: Your child is in need of special care and attention to keep from getting ma
             <value>Palm is yellow or pale</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor:label">
-            <value>I will now check your child for anemia.
-Is there palm pallor? Compare CHV palm with that of a child.</value>
+            <value>I will now check your child for anemia.</value>
+          </text>
+          <text id="/infant_child/malnutrition_anemia/palm_pallor_chv_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Is there palm pallor? Compare CHV palm with that of a child.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor_referral_note:label">
             <value>In order to assist you in providing proper care to your child, I will conduct a referral for anemia.</value>
@@ -3648,7 +3650,10 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Kiganja ni cha njano au kina mpauko</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor:label">
-            <value>Sasa nitaangalia wingi wa damu wa mtoto wako? Je kiganja chake cha mkono ni cheupe sana? Linganisha kiganja cha CHV na cha mtoto.</value>
+            <value>Sasa nitaangalia wingi wa damu wa mtoto wako?ha mtoto.&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/malnutrition_anemia/palm_pallor_chv_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Je kiganja chake cha mkono ni cheupe sana?Linganisha kiganja cha CHV na c</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor_referral_note:label">
             <value>Ili kukusaidia mtoto wako apate matibabu, nitahakikisha nitampa rufaa ya wa tatizo la upungufu wa damu.</value>
@@ -4469,6 +4474,7 @@ Kwa mtoto wako unaweza:</value>
             <muac_yellow_note/>
             <muac_red_note/>
             <refer_muac_flag/>
+            <palm_pallor_chv_note/>
             <palm_pallor/>
             <palm_pallor_referral_note/>
             <refer_palm_pallor_flag/>
@@ -4939,6 +4945,7 @@ selected( /infant_child/child_danger_signs/child_skin_boils ,&quot;no&quot;)" ty
       <bind nodeset="/infant_child/malnutrition_anemia/muac_yellow_note" readonly="true()" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;yellow&quot;)" type="string"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_red_note" readonly="true()" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;)" type="string"/>
       <bind calculate="if(selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;),1,0)" nodeset="/infant_child/malnutrition_anemia/refer_muac_flag" type="string"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_chv_note" readonly="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" type="string"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_referral_note" readonly="true()" relevant="selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;)" type="string"/>
       <bind calculate="if(selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;),1,0)" nodeset="/infant_child/malnutrition_anemia/refer_palm_pallor_flag" type="string"/>
@@ -5875,6 +5882,9 @@ selected( /infant_child/child_danger_signs/child_skin_boils ,&quot;no&quot;)" ty
       </input>
       <input ref="/infant_child/malnutrition_anemia/muac_red_note">
         <label ref="jr:itext('/infant_child/malnutrition_anemia/muac_red_note:label')"/>
+      </input>
+      <input ref="/infant_child/malnutrition_anemia/palm_pallor_chv_note">
+        <label ref="jr:itext('/infant_child/malnutrition_anemia/palm_pallor_chv_note:label')"/>
       </input>
       <select1 ref="/infant_child/malnutrition_anemia/palm_pallor">
         <label ref="jr:itext('/infant_child/malnutrition_anemia/palm_pallor:label')"/>
