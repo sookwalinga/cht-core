@@ -207,6 +207,12 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island:label">
             <value>Did you deliver in a facility in Unguja or Pemba?</value>
           </text>
+          <text id="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other:label">
+            <value>Please specify</value>
+          </text>
           <text id="/pregnancy_outcomes/delivery_location_assessment:label">
             <value>Delivery Location</value>
           </text>
@@ -259,10 +265,12 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>Type</value>
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture/child_data_note:label">
-            <value>I'd like to ask you some questions about your baby</value>
+            <value>Now I will register your child as a new household member. 
+
+&lt;span style="color:#f58a1f"&gt;Please enter information for the member you would like to add.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture/multiple_child_data_note:label">
-            <value>I'd like to ask you some questions about your babies - I will ask the same set of questions for each, one by one</value>
+            <value>Now I will register your children as new household members - I will ask the same set of questions for each, one by one</value>
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture:label">
             <value>Capture Child Data</value>
@@ -314,42 +322,6 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility:label">
             <value>How do you feel you were handled while you were at the health facility?</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label">
-            <value>Between one thousand and ten thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label">
-            <value>Between ten thousand and twenty thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label">
-            <value>Between twenty thousand and fifty thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label">
-            <value>Less than one thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label">
-            <value>Over fifty thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery:label">
-            <value>How much money did you spend on delivery fees?</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label">
-            <value>Between one thousand and ten thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label">
-            <value>Between ten thousand and twenty thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label">
-            <value>Between twenty thousand and fifty thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label">
-            <value>Less than one thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label">
-            <value>Over fifty thousand</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies:label">
-            <value>How much money did you spend on these supplies?</value>
           </text>
           <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/no:label">
             <value>No</value>
@@ -907,7 +879,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Kujifungua kwa njia ya kawaida kwa msaada mtaalam wa afya</value>
           </text>
           <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method/vacuum_forceps:label">
-            <value>Kujifungua kwa msaada wa kuvutwa au kututmia vifaa tiba.</value>
+            <value>Kujifungua kwa msaada wa kuvutwa au kutumia vifaa tiba.</value>
           </text>
           <text id="/pregnancy_outcomes/delivery_information/facility_delivery_method:label">
             <value>Ulijifungua kwa njia gani?</value>
@@ -946,7 +918,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Hapana: Alipata tatizo la upumuwaji alipozaliwa au alihitaji msaada wa kidaktari ili aweze kupumua</value>
           </text>
           <text id="/pregnancy_outcomes/delivery_information/immediate_cry/yes:label">
-            <value>Ndio: Alilia punde tu baada ya kujifungua, hapana hakuwa na tatizo la kupumua</value>
+            <value>Ndio: Alilia punde tu baada ya kuzaliwa, na hakuwa na tatatizo la kupumua.</value>
           </text>
           <text id="/pregnancy_outcomes/delivery_information/immediate_cry:label">
             <value>Je mtoto alilia punde tu baada ya kuzaliwa?</value>
@@ -1019,6 +991,12 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy_outcomes/delivery_location_assessment/facility_island:label">
             <value>Ulijifungua katika kituo cha afya kilichopo Unguja au Pemba?</value>
+          </text>
+          <text id="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other:label">
+            <value>Tafadhali orodhesha</value>
+          </text>
+          <text id="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other:label">
+            <value>Tafadhali orodhesha</value>
           </text>
           <text id="/pregnancy_outcomes/delivery_location_assessment:label">
             <value>Pahali pa kujifungulia</value>
@@ -1114,10 +1092,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>-</value>
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture/child_data_note:label">
-            <value>Ningelipenda kukuuliza baadhi ya maswali machache kuhusu mtoto wako.</value>
+            <value>Sasa nitamsajili mtoto wako kama mwanafamilia mpya kwa nyumba hii.</value>
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture/multiple_child_data_note:label">
-            <value>Ningelipenda kukuuliza baadhi ya maswali machache kuhusu watoto wako - Nitakuuliza maswali yenye kufanana kwa kila mtoto, mmoja mmoja.</value>
+            <value>Sasa nitamsajili watoto wako kama mwanafamilia mpya kwa nyumba hii - Nitakuuliza maswali yenye kufanana kwa kila mtoto, mmoja mmoja.</value>
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture:label">
             <value>Taarifa za mtoto.</value>
@@ -1126,7 +1104,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>&lt;span style="color:#f58a1f"&gt;Muombe mama tarehe za kifo cha kila mtoto aliefariki.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/more:label">
-            <value>Zaidi ya mmoja</value>
+            <value>Mtoto zaidi ya mmoja</value>
           </text>
           <text id="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries/one:label">
             <value>Mtoto mmoja</value>
@@ -1169,42 +1147,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility:label">
             <value>Ulipokelewa vipi ulipofika kituo cha afya?</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label">
-            <value>Kati ya shilingi elfu na shilingi elfu kumi</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label">
-            <value>Kati ya shilingi elfu kumi  na shilingi elfu ishirini</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label">
-            <value>Kati ya shilingi elfu ishirini na shilingi elfu hamsini</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label">
-            <value>Chini ya Shilingi elfu moja</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label">
-            <value>Zaidi ya shilingi elfu hamsini</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery:label">
-            <value>Ulilipia kiasi gani ?</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label">
-            <value>Kati ya shilingi elfu na shilingi elfu kumi</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label">
-            <value>Kati ya shilingi elfu kumi  na shilingi elfu ishirini</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label">
-            <value>Kati ya shilingi elfu ishirini na shilingi elfu hamsini</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label">
-            <value>Chini ya Shilingi elfu moja</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label">
-            <value>Zaidi ya shilingi elfu hamsini</value>
-          </text>
-          <text id="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies:label">
-            <value>Ulilipia kiasi gani?</value>
           </text>
           <text id="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees/no:label">
             <value>Hapana</value>
@@ -1570,7 +1512,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Zaidi ya shilingi elfu hamsini</value>
           </text>
           <text id="static_instance-immediate_cry-0">
-            <value>Ndio: Alilia punde tu baada ya kujifungua, hapana hakuwa na tatizo la kupumua</value>
+            <value>Ndio: Alilia punde tu baada ya kuzaliwa, na hakuwa na tatatizo la kupumua.</value>
           </text>
           <text id="static_instance-immediate_cry-1">
             <value>Hapana: Alipata tatizo la upumuwaji alipozaliwa au alihitaji msaada wa kidaktari ili aweze kupumua</value>
@@ -1615,13 +1557,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Kujifungua kwa njia ya upasuaji.</value>
           </text>
           <text id="static_instance-method_facility_delivery-2">
-            <value>Kujifungua kwa msaada wa kuvutwa au kututmia vifaa tiba.</value>
+            <value>Kujifungua kwa msaada wa kuvutwa au kutumia vifaa tiba.</value>
           </text>
           <text id="static_instance-num_deliveries-0">
             <value>Mtoto mmoja</value>
           </text>
           <text id="static_instance-num_deliveries-1">
-            <value>Zaidi ya mmoja</value>
+            <value>Mtoto zaidi ya mmoja</value>
           </text>
           <text id="static_instance-sex-0">
             <value>Mwanamme</value>
@@ -1741,8 +1683,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <delivery_location_assessment>
             <delivery_location/>
             <facility_island/>
+            <pnc_visit_island_other/>
             <facility_district/>
             <delivery_facility/>
+            <pnc_visit_facility_other/>
           </delivery_location_assessment>
           <delivery_information>
             <facility_delivery_method/>
@@ -1800,9 +1744,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <how_handled_facility/>
             <why_feel_handled_badly/>
             <paid_delivery_fees/>
-            <how_much_paid_delivery/>
             <purchased_supplies/>
-            <how_much_paid_supplies/>
             <what_supplies_purchased/>
             <would_recommend_facility/>
           </quality_of_care_survey>
@@ -2502,6 +2444,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_location" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_island" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;other&quot;)" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_district" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;unguja&quot;) or selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_facility" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;north_a&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;north_b&quot;) or 
@@ -2514,6 +2457,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;micheweni&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;mkoani&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_facility ,&quot;other&quot;)" required="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/facility_delivery_method" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/home_delivery_helper" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
@@ -2562,9 +2506,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/how_handled_facility ,&quot;bad&quot;)" required="true()" type="select"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)" required="true()" type="select"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy_outcomes/meta/instanceID" readonly="true()" type="string"/>
@@ -2684,6 +2626,9 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
           <value>other</value>
         </item>
       </select1>
+      <input ref="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other:label')"/>
+      </input>
       <select1 ref="/pregnancy_outcomes/delivery_location_assessment/facility_district">
         <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/facility_district:label')"/>
         <itemset nodeset="instance('facility_district')/root/item[choice_filter= /pregnancy_outcomes/delivery_location_assessment/facility_island ]">
@@ -2698,6 +2643,9 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
           <label ref="jr:itext(itextId)"/>
         </itemset>
       </select1>
+      <input ref="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other">
+        <label ref="jr:itext('/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other:label')"/>
+      </input>
     </group>
     <group ref="/pregnancy_outcomes/delivery_information">
       <label ref="jr:itext('/pregnancy_outcomes/delivery_information:label')"/>
@@ -2983,29 +2931,6 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery">
-        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&lt;1,000:label')"/>
-          <value>&lt;1,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/1,000 - 10,000:label')"/>
-          <value>1,000 - 10,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/10,000 - 20,000:label')"/>
-          <value>10,000 - 20,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/20,000 - 50,000:label')"/>
-          <value>20,000 - 50,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_delivery/&gt;50,000:label')"/>
-          <value>&gt;50,000</value>
-        </item>
-      </select1>
       <select1 ref="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies">
         <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/purchased_supplies:label')"/>
         <item>
@@ -3015,29 +2940,6 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
         <item>
           <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/purchased_supplies/no:label')"/>
           <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies">
-        <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&lt;1,000:label')"/>
-          <value>&lt;1,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/1,000 - 10,000:label')"/>
-          <value>1,000 - 10,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/10,000 - 20,000:label')"/>
-          <value>10,000 - 20,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/20,000 - 50,000:label')"/>
-          <value>20,000 - 50,000</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/quality_of_care_survey/how_much_paid_supplies/&gt;50,000:label')"/>
-          <value>&gt;50,000</value>
         </item>
       </select1>
       <select ref="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased">

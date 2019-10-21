@@ -123,6 +123,17 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postp
           <text id="/postpartum/personal_information_consent:label">
             <value>Personal Information</value>
           </text>
+          <text id="/postpartum/pnc_care_visit/pn_care_visit_message:label">
+            <value>You and your baby are required to attend the clinic for PNC services four times after your delivery as follows:
+
+• Within 24 hours after your delivery
+• 3 days to 7 days after your delivery
+• 8 days to 28 days after your delivery
+• 29 days to 42 days after your delivery</value>
+          </text>
+          <text id="/postpartum/pnc_care_visit:label">
+            <value>Encouraging mother to attend the clinic for PNC services</value>
+          </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_danger_signs_note:label">
             <value>First, I'm going to check for any postpartum danger signs.</value>
           </text>
@@ -1324,6 +1335,17 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/postpartum/personal_information_consent:label">
             <value>Taarifa Binafsi</value>
           </text>
+          <text id="/postpartum/pnc_care_visit/pn_care_visit_message:label">
+            <value>Unatakiwa kuhudhuria mara nne kliniki baada ya kujifungua kwaajili ya uchunguzi kwako pamoja na mtoto wako na mahudhurio ni haya:
+
+• Ndani ya masaa 24 baada ya kujifungua
+• Siku ya 3 hadi ya siku ya 7 baada ya kujifungua
+• Siku ya 8 hadi siku ya 28 baada ya kujifungua 
+• Siku 29 hadi siku ya 42 baada ya kujifungua</value>
+          </text>
+          <text id="/postpartum/pnc_care_visit:label">
+            <value>Kumhimiza mama kuhudhuria kituo cha afya baada ya kujifungua</value>
+          </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_danger_signs_note:label">
             <value>Kwanza kabisa nitakuchunguza kam unadalili za hatari baada ya kujifungua</value>
           </text>
@@ -2495,6 +2517,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <postpartum_other_danger_sign_no_referral_note/>
             <postpartum_other_danger_sign_not_found_note/>
           </postpartum_other_danger_signs>
+          <pnc_care_visit>
+            <pn_care_visit_message/>
+          </pnc_care_visit>
           <nutrition>
             <eat_healthy_note/>
             <eat_healthy_note_no_baby/>
@@ -3481,6 +3506,8 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;no&quot;))" type="string"/>
+      <bind nodeset="/postpartum/pnc_care_visit" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 0"/>
+      <bind nodeset="/postpartum/pnc_care_visit/pn_care_visit_message" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/nutrition" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0"/>
       <bind nodeset="/postpartum/nutrition/eat_healthy_note" readonly="true()" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" type="string"/>
       <bind nodeset="/postpartum/nutrition/eat_healthy_note_no_baby" readonly="true()" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;false&quot;" type="string"/>
@@ -3865,6 +3892,12 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
       </input>
       <input ref="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_not_found_note">
         <label ref="jr:itext('/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_not_found_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/postpartum/pnc_care_visit">
+      <label ref="jr:itext('/postpartum/pnc_care_visit:label')"/>
+      <input ref="/postpartum/pnc_care_visit/pn_care_visit_message">
+        <label ref="jr:itext('/postpartum/pnc_care_visit/pn_care_visit_message:label')"/>
       </input>
     </group>
     <group ref="/postpartum/nutrition">
