@@ -235,6 +235,17 @@ module.exports = {
     return false;
   },
 
+  getANCVisitAfter6MonthsFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_flag_anc_visit_6m_or_more
+    ) {
+      return report.fields.refer_flag_anc_visit_6m_or_more;
+    }
+    return '0';
+  },
+
   getPregnancyEmergencyDangerSigns: function (report) {
     if (
       report &&
@@ -896,7 +907,7 @@ module.exports = {
     }
     return flag;
   },
-  
+
   consentingVisitsThisMonth: function (c, form_type) {
     var flag = false;
     var isReportedThisMonth = this.isOnSameMonth;

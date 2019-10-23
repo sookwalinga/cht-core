@@ -108,6 +108,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;To address an urgent child danger sign.&lt;/span&gt;</value>
           </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more:label">
+            <value>&lt;span style="display:block;padding-left:1em"&gt;To get ANC services since your pregnancy is 6 months or more.&lt;/span&gt;</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;To receive specialized care for small babies.&lt;/span&gt;</value>
           </text>
@@ -202,6 +205,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/refer_child_danger_sign_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_flag_anc_visit_6m_or_more:label">
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/refer_flag_emergency_danger_sign:label">
@@ -345,6 +351,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kushughulikia dalili za hatari za dharura za mtoto.&lt;/span&gt;</value>
           </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more:label">
+            <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kupatiwa huduma za mama mjamzito kwa vile mimba yako ni miezi sita au zaidi.&lt;/span&gt;</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;Apate huduma maalum kwa ajili ya watoto wadogo.&lt;/span&gt;</value>
           </text>
@@ -422,6 +431,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <refer_flag_pregnancy_complications/>
             <refer_flag_postpartum_danger_signs/>
             <refer_flag_postpartum_other_signs/>
+            <refer_flag_anc_visit_6m_or_more/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -458,6 +468,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <refer_flag_pregnancy_complications/>
           <refer_flag_postpartum_danger_signs/>
           <refer_flag_postpartum_other_signs/>
+          <refer_flag_anc_visit_6m_or_more/>
           <age_days/>
           <age_months/>
           <age_years/>
@@ -486,6 +497,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <reason_refer_pregnancy_other_danger_signs/>
             <reason_refer_postpartum_danger_sings/>
             <reason_refer_postpartum_other_danger_signs/>
+            <reason_refer_flag_anc_visit_6m_or_more/>
             <went_to_facility/>
             <did_go>
               <congratulate/>
@@ -535,6 +547,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/inputs/refer_flag_pregnancy_complications" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_flag_postpartum_danger_signs" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_flag_postpartum_other_signs" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_flag_anc_visit_6m_or_more" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/contact_id" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/facility_id" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/user/name" type="string"/>
@@ -566,6 +579,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind calculate="../inputs/refer_flag_pregnancy_complications" nodeset="/referral_follow_up/refer_flag_pregnancy_complications" type="string"/>
       <bind calculate="../inputs/refer_flag_postpartum_danger_signs" nodeset="/referral_follow_up/refer_flag_postpartum_danger_signs" type="string"/>
       <bind calculate="../inputs/refer_flag_postpartum_other_signs" nodeset="/referral_follow_up/refer_flag_postpartum_other_signs" type="string"/>
+      <bind calculate="../inputs/refer_flag_anc_visit_6m_or_more" nodeset="/referral_follow_up/refer_flag_anc_visit_6m_or_more" type="string"/>
       <bind calculate="int(decimal-date-time(now())-decimal-date-time( /referral_follow_up/client_date_of_birth ))" nodeset="/referral_follow_up/age_days" type="string"/>
       <bind calculate="int(( /referral_follow_up/age_days  - ( /referral_follow_up/age_years  * 12 * 30)) div 30,0)" nodeset="/referral_follow_up/age_months" type="string"/>
       <bind calculate="int( /referral_follow_up/age_days  div (30 *12),0)" nodeset="/referral_follow_up/age_years" type="string"/>
@@ -591,6 +605,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_pregnancy_other_danger_signs" readonly="true()" relevant="../../inputs/refer_flag_pregnancy_complications= 1 or ../../inputs/refer_flag_pregnancy_issues= 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_postpartum_danger_sings" readonly="true()" relevant="../../inputs/refer_flag_postpartum_danger_signs= 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_postpartum_other_danger_signs" readonly="true()" relevant="../../inputs/refer_flag_postpartum_other_signs= 1" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more" readonly="true()" relevant="../../inputs/refer_flag_anc_visit_6m_or_more= 1" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/went_to_facility" required="true()" type="select1"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/congratulate" readonly="true()" type="string"/>
@@ -606,7 +621,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind calculate="../../../client_name" nodeset="/referral_follow_up/referral_follow_up/next_follow_up/client_name_loc" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/report_no_follow_up" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;no&quot;)" type="string"/>
       <bind calculate="if(selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;yes&quot;),1,0)" nodeset="/referral_follow_up/should_visit_again" type="string"/>
-      <bind calculate="../inputs/refer_flag_emergency_danger_sign = 1 or ../inputs/refer_flag_pregnancy_issues = 1 or ../inputs/refer_flag_pregnancy_complications = 1" nodeset="/referral_follow_up/has_pregnancy_referral" type="string"/>
+      <bind calculate="../inputs/refer_flag_emergency_danger_sign = 1 or ../inputs/refer_flag_pregnancy_issues = 1 or ../inputs/refer_flag_pregnancy_complications = 1 or ../inputs/refer_flag_anc_visit_6m_or_more = 1" nodeset="/referral_follow_up/has_pregnancy_referral" type="string"/>
       <bind calculate="./../inputs/refer_flag_small_baby= 1 or ../../inputs/refer_neonatal_danger_sign_flag = 1 or ../../inputs/refer_secondary_neonatal_danger_sign_flag = 1 or ../../inputs/refer_child_danger_sign_flag = 1 or ../../inputs/refer_muac_flag= 1 or ../../inputs/refer_refer_palm_pallor_flag = 1 or ../../inputs/refer_vaccines_flag = 1 or ../../inputs/refer_slow_to_learn_specifics_flag = 1" nodeset="/referral_follow_up/has_infant_child_referral" type="string"/>
       <bind calculate="../inputs/refer_flag_postpartum_danger_signs = 1 or ../inputs/refer_flag_postpartum_other_signs = 1" nodeset="/referral_follow_up/has_postpartum_referral" type="string"/>
       <bind calculate="3" nodeset="/referral_follow_up/referral_days" type="string"/>
@@ -634,6 +649,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <input ref="/referral_follow_up/inputs/refer_flag_pregnancy_complications"/>
       <input ref="/referral_follow_up/inputs/refer_flag_postpartum_danger_signs"/>
       <input ref="/referral_follow_up/inputs/refer_flag_postpartum_other_signs"/>
+      <input ref="/referral_follow_up/inputs/refer_flag_anc_visit_6m_or_more"/>
       <group ref="/referral_follow_up/inputs/user">
         <input ref="/referral_follow_up/inputs/user/contact_id">
           <label ref="jr:itext('/referral_follow_up/inputs/user/contact_id:label')"/>
@@ -707,6 +723,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       </input>
       <input ref="/referral_follow_up/referral_follow_up/reason_refer_postpartum_other_danger_signs">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_postpartum_other_danger_signs:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more:label')"/>
       </input>
       <select1 ref="/referral_follow_up/referral_follow_up/went_to_facility">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/went_to_facility:label')"/>

@@ -373,6 +373,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/group_summary/healthy_note:label">
             <value>You are doing well and you don't need to go to the health facility urgently at this time. I'll return for another checkup when it's time for the next visit.</value>
           </text>
+          <text id="/pregnancy/group_summary/needs_anc_referral_note:label">
+            <value>To get ANC services since you are 6 months or more into pregnancy</value>
+          </text>
           <text id="/pregnancy/group_summary/needs_referral_danger_signs:label">
             <value>To address emergency pregnancy danger signs</value>
           </text>
@@ -2032,6 +2035,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/group_summary/healthy_note:label">
             <value>Unaaendelea vyema na huhitaji kwenda kituo cha Afya kwa sasa. Utarudi kumkagua tena wakati wa tembeleo jengine.</value>
           </text>
+          <text id="/pregnancy/group_summary/needs_anc_referral_note:label">
+            <value>Ili kupatiwa huduma za mama mjamzito kwasababu una ujauzito wa miezi 6 au zaidi.</value>
+          </text>
           <text id="/pregnancy/group_summary/needs_referral_danger_signs:label">
             <value>Ili kushughulikia dalili za hatari za dharura za mama mjamzito.</value>
           </text>
@@ -3646,11 +3652,13 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <needs_referral_note/>
             <needs_referral_danger_signs/>
             <needs_referral_neonatal_note/>
+            <needs_anc_referral_note/>
           </group_summary>
           <has_referral/>
           <refer_flag_emergency_danger_sign/>
           <refer_flag_pregnancy_issues/>
           <refer_flag_pregnancy_complications/>
+          <refer_flag_anc_visit_6m_or_more/>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -4849,17 +4857,21 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/pregnancy/personal_information/subgroup_multiple_wives/num_wives" relevant="selected( /pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
       <bind nodeset="/pregnancy/group_summary" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;))"/>
-      <bind nodeset="/pregnancy/group_summary/healthy_note" readonly="true()" relevant="( /pregnancy/has_referral =0 and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1) or ( /pregnancy/has_referral =0 and  /pregnancy/n_pregnancy_visits  =0)" type="string"/>
+      <bind nodeset="/pregnancy/group_summary/healthy_note" readonly="true()" relevant="( /pregnancy/has_referral =0 and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0) or ( /pregnancy/has_referral =0 and  /pregnancy/n_pregnancy_visits  =0 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0)" type="string"/>
       <bind nodeset="/pregnancy/group_summary/needs_referral_note" readonly="true()" relevant=" /pregnancy/has_referral =1" type="string"/>
       <bind nodeset="/pregnancy/group_summary/needs_referral_danger_signs" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral =1" type="string"/>
       <bind nodeset="/pregnancy/group_summary/needs_referral_neonatal_note" readonly="true()" relevant=" /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1" type="string"/>
+      <bind nodeset="/pregnancy/group_summary/needs_anc_referral_note" readonly="true()" type="string"/>
       <bind calculate="if( /pregnancy/danger_signs/emergency_danger_sign_referral =1 or
  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
- /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1, 1, 0)" nodeset="/pregnancy/has_referral" type="string"/>
+ /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1 or 
+ /pregnancy/refer_flag_anc_visit_6m_or_more  = 1,
+1, 0)" nodeset="/pregnancy/has_referral" type="string"/>
       <bind calculate="../danger_signs/emergency_danger_sign_referral" nodeset="/pregnancy/refer_flag_emergency_danger_sign" type="string"/>
       <bind calculate="../pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" nodeset="/pregnancy/refer_flag_pregnancy_issues" type="string"/>
       <bind calculate="../pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications" nodeset="/pregnancy/refer_flag_pregnancy_complications" type="string"/>
+      <bind calculate="if( /pregnancy/n_previous_anc_visits  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3, 1,0)" nodeset="/pregnancy/refer_flag_anc_visit_6m_or_more" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -6104,6 +6116,9 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       </input>
       <input appearance="li" ref="/pregnancy/group_summary/needs_referral_neonatal_note">
         <label ref="jr:itext('/pregnancy/group_summary/needs_referral_neonatal_note:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/needs_anc_referral_note">
+        <label ref="jr:itext('/pregnancy/group_summary/needs_anc_referral_note:label')"/>
       </input>
     </group>
   </h:body>

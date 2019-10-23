@@ -77,7 +77,8 @@ module.exports = [
     appliesTo: 'reports',
     appliesIf: function (c, r) {
       return extras.hasReferral(r, "pregnancy") || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1';
+        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' || 
+        extras.getANCVisitAfter6MonthsFlag(r) === '1';
     },
     appliesToType: ['referral_follow_up', 'pregnancy'],
     actions: [{
@@ -97,6 +98,7 @@ module.exports = [
         content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
         content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
         content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
+        content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report); 
       }
     }],
     events: [
