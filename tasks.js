@@ -65,8 +65,12 @@ module.exports = [
     resolvedIf: function (c, r, event, dueDate) {
       //Resolve this form if there is a referral form in couch where the woman
       // does not need to be visited again OR there is a form in couch whose referral_source_id = infant child form. 
-      return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
-        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id);
+      var text = extras.isContactDeceased(c);
+      console.log(text);
+
+      return ((r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
+        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
+        extras.isContactDeceased(c));
     },
   },
 
@@ -124,7 +128,8 @@ module.exports = [
     },
     resolvedIf: function (c, r, event, dueDate) {
       return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
-        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id);
+        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
+        extras.isContactDeceased(c);
     },
   },
 
@@ -178,7 +183,8 @@ module.exports = [
     },
     resolvedIf: function (c, r, event, dueDate) {
       return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
-        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id);
+        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
+        extras.isContactDeceased(c);
     },
   },
 
@@ -240,7 +246,8 @@ module.exports = [
     },
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there are any infant-child forms submitted - this is a first time visit only
-      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+      return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
+        extras.isContactDeceased(c);
     }
   },
 
@@ -307,7 +314,8 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime());
+        Utils.addDate(dueDate, event.end).getTime()) ||
+        extras.isContactDeceased(c);
     }
   },
 
@@ -365,7 +373,8 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there are any infant-child forms submitted - this is a first time task only
-      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+      return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
+        extras.isContactDeceased(c);
     }
   },
 
@@ -425,7 +434,8 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there are any infant-child forms submitted - this is a first time task only
-      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+      return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
+        extras.isContactDeceased(c);
     }
   },
 
@@ -568,7 +578,8 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime());
+        Utils.addDate(dueDate, event.end).getTime()) ||
+        extras.isContactDeceased(c);
     }
   },
 
@@ -630,7 +641,8 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'pregnancy',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime());
+        Utils.addDate(dueDate, event.end).getTime()) || 
+        extras.isContactDeceased(c);
       return isResolved;
     }
   },
@@ -670,7 +682,8 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there are any postpartum forms submitted for the current pregnancy
-      return !extras.noPostpartumVisitsCurrentPregnancy(c);
+      return !extras.noPostpartumVisitsCurrentPregnancy(c) ||
+        extras.isContactDeceased(c);
     }
   },
 
@@ -714,7 +727,8 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime());
+        Utils.addDate(dueDate, event.end).getTime()) ||
+        extras.isContactDeceased(c);
       return isResolved;
     }
   }

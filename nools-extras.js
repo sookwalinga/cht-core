@@ -953,5 +953,13 @@ module.exports = {
       }
     }
     return flag;
+  },
+
+  isContactDeceased: function (c) {
+    var isDeceased = false;
+    if (c && c.contact && c.contact.date_of_death) {
+      isDeceased = true;
+    }
+    return isDeceased;
   }
 };
