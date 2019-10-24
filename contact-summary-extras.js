@@ -75,11 +75,9 @@ module.exports = {
       return r.form === 'pregnancy_outcomes' &&
         r.fields &&
         r.fields.confirm_delivery &&
-        r.fields.confirm_delivery.did_deliver &&
-        ((r.fields.confirm_delivery.did_deliver === 'yes') ||
-        (r.fields.confirm_delivery.did_deliver === 'no' &&
-        r.fields.confirm_delivery.pregnancy_viable &&
-        r.fields.confirm_delivery.pregnancy_viable === 'no'));
+        r.fields.confirm_delivery.pregnancy_outcome &&
+        ((r.fields.confirm_delivery.pregnancy_outcome === 'did_deliver') ||
+        (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
     });
     earlyTerminations = reports.filter(function (r) {
       return r.form === 'pregnancy' &&

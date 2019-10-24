@@ -42,26 +42,17 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
             <value>When did <output value=" /pregnancy_outcomes/client_name "/> lose the pregnancy?</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/no:label">
-            <value>No</value>
-          </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver:label">
-            <value>Did you deliver your baby?</value>
-          </text>
           <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sympathise with the mother for her loss.&lt;/span&gt;</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/no:label">
-            <value>No</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome/did_deliver:label">
+            <value>Mother has delivered</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/yes:label">
-            <value>Yes</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome/miscarriage_or_stillbirth:label">
+            <value>Mother suffered a miscarriage or stillbirth</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable:label">
-            <value>Is the pregnancy still viable?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome:label">
+            <value>What is the outcome of the pregnancy?</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery:label">
             <value>Confirm Delivery</value>
@@ -171,8 +162,11 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_outcomes/delivery_information/major_complications/retained_placenta:label">
             <value>Retained placenta</value>
           </text>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications:jr:constraintMsg">
+            <value>Cannot select "None of the above" with other options</value>
+          </text>
           <text id="/pregnancy_outcomes/delivery_information/major_complications:label">
-            <value>Did the woman experience any of these major medical complications during her most recent delivery?</value>
+            <value>Did the woman experience any of these major medical complications during this delivery?</value>
           </text>
           <text id="/pregnancy_outcomes/delivery_information:label">
             <value>Delivery Information</value>
@@ -740,6 +734,12 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="static_instance-num_deliveries-1">
             <value>More than one</value>
           </text>
+          <text id="static_instance-pregnancy_outcome-0">
+            <value>Mother has delivered</value>
+          </text>
+          <text id="static_instance-pregnancy_outcome-1">
+            <value>Mother suffered a miscarriage or stillbirth</value>
+          </text>
           <text id="static_instance-sex-0">
             <value>Male</value>
           </text>
@@ -827,26 +827,17 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss:label">
             <value>Mimba ya <output value=" /pregnancy_outcomes/client_name "/> iliharibika lini?</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/did_deliver:label">
-            <value>Je umeshajifungua ?</value>
-          </text>
           <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Mpe pole mama kwa kuharibika mimba yake.&lt;/span&gt;</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/no:label">
-            <value>Hapana</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome/did_deliver:label">
+            <value>Mama amejifungua</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable/yes:label">
-            <value>Ndiyo</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome/miscarriage_or_stillbirth:label">
+            <value>Mimba imeharibika au mtoto kafa tumboni</value>
           </text>
-          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_viable:label">
-            <value>Je, mimba bado unao?</value>
+          <text id="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome:label">
+            <value>Nini matokeo ya ujauzito?</value>
           </text>
           <text id="/pregnancy_outcomes/confirm_delivery:label">
             <value>Mama aliejifungua</value>
@@ -955,6 +946,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy_outcomes/delivery_information/major_complications/retained_placenta:label">
             <value>Je zalio/kondo la nyuma lilichelewa ?</value>
+          </text>
+          <text id="/pregnancy_outcomes/delivery_information/major_complications:jr:constraintMsg">
+            <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
           </text>
           <text id="/pregnancy_outcomes/delivery_information/major_complications:label">
             <value>Je mama alipata matatizo makubwa ya kiafya muda mfupi baada ya kujifungua?</value>
@@ -1565,6 +1559,12 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="static_instance-num_deliveries-1">
             <value>Mtoto zaidi ya mmoja</value>
           </text>
+          <text id="static_instance-pregnancy_outcome-0">
+            <value>Mama amejifungua</value>
+          </text>
+          <text id="static_instance-pregnancy_outcome-1">
+            <value>Mimba imeharibika au mtoto kafa tumboni</value>
+          </text>
           <text id="static_instance-sex-0">
             <value>Mwanamme</value>
           </text>
@@ -1673,9 +1673,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <phone_note/>
           </client_information>
           <confirm_delivery>
-            <did_deliver/>
+            <pregnancy_outcome/>
             <date_of_delivery/>
-            <pregnancy_viable/>
             <pregnancy_loss_note/>
             <date_of_pregnancy_loss/>
             <miscarriage_or_stillbirth/>
@@ -1807,6 +1806,18 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <item>
             <itextId>static_instance-delivery_location-2</itextId>
             <name>home</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="pregnancy_outcome">
+        <root>
+          <item>
+            <itextId>static_instance-pregnancy_outcome-0</itextId>
+            <name>did_deliver</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_outcome-1</itextId>
+            <name>miscarriage_or_stillbirth</name>
           </item>
         </root>
       </instance>
@@ -2435,13 +2446,12 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_outcomes/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/client_information/phone_note" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcomes/confirm_delivery/did_deliver" required="true()" type="select1"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)" required="true()" type="date"/>
-      <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_viable" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;no&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_viable ,&quot;no&quot;)" required="true()" type="date"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome" required="true()" type="select1"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)" required="true()" type="date"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)" type="string"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)" required="true()" type="date"/>
       <bind calculate="if((decimal-date-time( /pregnancy_outcomes/client_EDD ) - decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /pregnancy_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/pregnancy_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_location" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_island" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;other&quot;)" required="true()" type="string"/>
@@ -2458,7 +2468,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;mkoani&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_facility ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_information" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/facility_delivery_method" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/home_delivery_helper" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/got_facility_pnc" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()" type="select1"/>
@@ -2468,8 +2478,8 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/delivery_information/born_early" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/immediate_cry" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/admitted_after_birth" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_information/major_complications" required="true()" type="select"/>
-      <bind nodeset="/pregnancy_outcomes/number_deliveries" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;)"/>
+      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/delivery_information/major_complications:jr:constraintMsg')" nodeset="/pregnancy_outcomes/delivery_information/major_complications" required="true()" type="select"/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries" required="true()" type="select1"/>
       <bind constraint="2 &lt;= . and . &lt;= 4" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')" nodeset="/pregnancy_outcomes/number_deliveries/num_babies_delivered" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" required="true()" type="int"/>
       <bind nodeset="/pregnancy_outcomes/number_deliveries/live_birth" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" required="true()" type="select1"/>
@@ -2482,10 +2492,10 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/child_death_note" readonly="true()" relevant=" /pregnancy_outcomes/child_death_count  &gt; 0" type="string"/>
       <bind nodeset="/pregnancy_outcomes/multiple_child_death_note" readonly="true()" relevant=" /pregnancy_outcomes/child_death_count  &gt; 1" type="string"/>
       <bind calculate=" /pregnancy_outcomes/child_death_count " nodeset="/pregnancy_outcomes/child_death_data_count" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_outcomes/child_death_data" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/child_death_count  &gt; 0"/>
+      <bind nodeset="/pregnancy_outcomes/child_death_data" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/child_death_count  &gt; 0"/>
       <bind constraint="date-time(decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')" nodeset="/pregnancy_outcomes/child_death_data/child_date_of_death" required="true()" type="date"/>
       <bind calculate="if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),1,if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;no&quot;),0, /pregnancy_outcomes/number_deliveries/num_live_births ))" nodeset="/pregnancy_outcomes/child_repeat_count" type="string"/>
-      <bind nodeset="/pregnancy_outcomes/intro_data_capture" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0"/>
       <bind nodeset="/pregnancy_outcomes/intro_data_capture/child_data_note" readonly="true()" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" type="string"/>
       <bind nodeset="/pregnancy_outcomes/intro_data_capture/multiple_child_data_note" readonly="true()" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" type="string"/>
       <bind calculate=" /pregnancy_outcomes/child_repeat_count " nodeset="/pregnancy_outcomes/intro_data_capture/child_count" readonly="true()" type="string"/>
@@ -2501,7 +2511,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind calculate=" /pregnancy_outcomes/created_by_place_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/parent/_id" type="string"/>
       <bind calculate=" /pregnancy_outcomes/supervisory_area_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent/_id" type="string"/>
       <bind calculate="&quot;person&quot;" nodeset="/pregnancy_outcomes/intro_data_capture/child/type" type="string"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey" relevant="selected( /pregnancy_outcomes/confirm_delivery/did_deliver ,&quot;yes&quot;) and  /pregnancy_outcomes/delivery_location_assessment/delivery_location  = &quot;facility&quot;"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/delivery_location_assessment/delivery_location  = &quot;facility&quot;"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/how_handled_facility ,&quot;bad&quot;)" required="true()" type="select"/>
@@ -2562,31 +2572,20 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
     </group>
     <group appearance="field-list" ref="/pregnancy_outcomes/confirm_delivery">
       <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery:label')"/>
-      <select1 ref="/pregnancy_outcomes/confirm_delivery/did_deliver">
-        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/did_deliver:label')"/>
+      <select1 ref="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome">
+        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_outcome:label')"/>
         <item>
-          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/did_deliver/yes:label')"/>
-          <value>yes</value>
+          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_outcome/did_deliver:label')"/>
+          <value>did_deliver</value>
         </item>
         <item>
-          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/did_deliver/no:label')"/>
-          <value>no</value>
+          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_outcome/miscarriage_or_stillbirth:label')"/>
+          <value>miscarriage_or_stillbirth</value>
         </item>
       </select1>
       <input ref="/pregnancy_outcomes/confirm_delivery/date_of_delivery">
         <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:label')"/>
       </input>
-      <select1 ref="/pregnancy_outcomes/confirm_delivery/pregnancy_viable">
-        <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_viable:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_viable/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_viable/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
       <input ref="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note">
         <label ref="jr:itext('/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note:label')"/>
       </input>

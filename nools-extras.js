@@ -790,11 +790,9 @@ module.exports = {
         return r.form === 'pregnancy_outcomes' &&
           r.fields &&
           r.fields.confirm_delivery &&
-          r.fields.confirm_delivery.did_deliver &&
-          ((r.fields.confirm_delivery.did_deliver === 'yes') ||
-            (r.fields.confirm_delivery.did_deliver === 'no' &&
-              r.fields.confirm_delivery.pregnancy_viable &&
-              r.fields.confirm_delivery.pregnancy_viable === 'no'));
+          r.fields.confirm_delivery.pregnancy_outcome &&
+          ((r.fields.confirm_delivery.pregnancy_outcome === 'did_deliver') ||
+          (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
       });
       earlyTerminations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -900,8 +898,9 @@ module.exports = {
     if (c && c.reports) {
       var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report && report.fields && report.fields.confirm_delivery &&
-        report.fields.confirm_delivery.did_deliver &&
-        report.fields.confirm_delivery.did_deliver === 'yes') {
+        report.fields.confirm_delivery.pregnancy_outcome &&
+        report.fields.confirm_delivery.pregnancy_outcome === 'did_deliver'
+      ) {
         flag = true;
       }
     }
