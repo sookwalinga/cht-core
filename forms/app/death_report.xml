@@ -24,20 +24,23 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death
           <text id="/death_report/death_report_intro/intro:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sympathize with the family for their loss. Describe why you are asking these questions and how the information will be shared and used.&lt;/span&gt;</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/after_2_3_mo:label">
-            <value>The woman died within 2 to 3 months after the end of a pregnancy or childbirth</value>
+          <text id="/death_report/death_report_intro/reason_death/accident:label">
+            <value>Accident</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/childbirth:label">
-            <value>The woman died during childbirth</value>
+          <text id="/death_report/death_report_intro/reason_death/fever:label">
+            <value>Fever</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/none_of_the_above:label">
-            <value>None of the above</value>
+          <text id="/death_report/death_report_intro/reason_death/other:label">
+            <value>Other</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/pregnancy:label">
-            <value>The woman was pregnant when she died</value>
+          <text id="/death_report/death_report_intro/reason_death/pregnancy_delivery:label">
+            <value>Death related to pregnancy or recent delivery</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death:label">
-            <value>When did the death occur?</value>
+          <text id="/death_report/death_report_intro/reason_death/sickness:label">
+            <value>Long-term sickness</value>
+          </text>
+          <text id="/death_report/death_report_intro/reason_death:label">
+            <value>What is the reason for the person's death?</value>
           </text>
           <text id="/death_report/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
@@ -93,11 +96,38 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death
           <text id="/death_report/suspected_maternal_death/date_of_death_maternal:label">
             <value>Date of death</value>
           </text>
-          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:jr:constraintMsg">
-            <value>The date of pregnancy loss must be between the date of birth (<output value=" /death_report/date_of_birth_c "/>) and the date of death.</value>
+          <text id="/death_report/suspected_maternal_death/during_childbirth/no:label">
+            <value>No</value>
           </text>
-          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:label">
-            <value>When did the pregnancy end?</value>
+          <text id="/death_report/suspected_maternal_death/during_childbirth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/during_childbirth:label">
+            <value>Did she die during childbirth?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth/no:label">
+            <value>No</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth:label">
+            <value>Did she die within 2 to 3 months after the end of a pregnancy or childbirth?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant/dont_know:label">
+            <value>I don't know</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant/no:label">
+            <value>No</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant:label">
+            <value>Was <output value=" /death_report/client_name "/> pregnant when she died?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/health_facility:label">
+            <value>At health facility</value>
           </text>
           <text id="/death_report/suspected_maternal_death/where_death/home:label">
             <value>At home</value>
@@ -113,21 +143,6 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death
           </text>
           <text id="/death_report/suspected_maternal_death/where_death:label">
             <value>Where did she die?</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/health_facility:label">
-            <value>At health facility</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/home:label">
-            <value>At home</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/outside_home:label">
-            <value>Outside home</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/tba:label">
-            <value>At TBA</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end:label">
-            <value>Where did the pregnancy end?</value>
           </text>
           <text id="/death_report/suspected_maternal_death:label">
             <value>Suspected maternal death</value>
@@ -151,22 +166,25 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Taarifa za mteja</value>
           </text>
           <text id="/death_report/death_report_intro/intro:label">
-            <value>Wape pole familia kwa kufiwa na mtu wao. Waeleze kwa nini unauliza maswali haya na ni vipi hizi taarifa zitawasilishwa na kufanyiwa kazi.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Wape pole familia kwa kufiwa na mtu wao. Waeleze kwa nini unauliza maswali haya na ni vipi hizi taarifa zitawasilishwa na kufanyiwa kazi.&lt;/span&gt;</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/after_2_3_mo:label">
-            <value>Mama alifariki miezi miwili hadi mitatu baada ya ujauzito au baada ya kujifungua</value>
+          <text id="/death_report/death_report_intro/reason_death/accident:label">
+            <value>Ajali</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/childbirth:label">
-            <value>Mama alifariki wakati wa kujifungua</value>
+          <text id="/death_report/death_report_intro/reason_death/fever:label">
+            <value>Homa</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/none_of_the_above:label">
-            <value>Hakuna kati ya hizo</value>
+          <text id="/death_report/death_report_intro/reason_death/other:label">
+            <value>Nyenginezo</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death/pregnancy:label">
-            <value>Mama alikuwa mjamzito alipofariki</value>
+          <text id="/death_report/death_report_intro/reason_death/pregnancy_delivery:label">
+            <value>Vifo vinavyotokana na ujauzito au kujifungua karibuni</value>
           </text>
-          <text id="/death_report/death_report_intro/when_death:label">
-            <value>Kifo kilitokea lini?</value>
+          <text id="/death_report/death_report_intro/reason_death/sickness:label">
+            <value>Magonjwa ya muda mrefu</value>
+          </text>
+          <text id="/death_report/death_report_intro/reason_death:label">
+            <value>Ni sababu ipi ilipelekea kifo cha marehemu?</value>
           </text>
           <text id="/death_report/death_report_intro:label">
             <value>-</value>
@@ -249,11 +267,38 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/death_report/suspected_maternal_death/date_of_death_maternal:label">
             <value>Tarehe ya kifo</value>
           </text>
-          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:jr:constraintMsg">
-            <value>Tarehe ya kuharibika ujauzito iwe baina ya tarehe ya kifo na tarehe ya kuzaliwa</value>
+          <text id="/death_report/suspected_maternal_death/during_childbirth/no:label">
+            <value>Hapana</value>
           </text>
-          <text id="/death_report/suspected_maternal_death/when_pregnancy_end:label">
-            <value>Je alijifungua au mimba ilitoka lini</value>
+          <text id="/death_report/suspected_maternal_death/during_childbirth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/during_childbirth:label">
+            <value>Je alifariki wakati wa kujifungua?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth:label">
+            <value>Je alifariki ndani ya miezi 2-3 baada ya kujifungua au mimbakutoka?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant/dont_know:label">
+            <value>Sijui</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/was_pregnant:label">
+            <value>Je alipofariki alikuwa mjamzito?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death/health_facility:label">
+            <value>Kwenye kituo cha afya</value>
           </text>
           <text id="/death_report/suspected_maternal_death/where_death/home:label">
             <value>Nyumbani</value>
@@ -270,28 +315,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/death_report/suspected_maternal_death/where_death:label">
             <value>Amefia wapi</value>
           </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/health_facility:label">
-            <value>Kwenye kituo cha afya</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/home:label">
-            <value>Nyumbani</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/outside_home:label">
-            <value>Nje ya nyumbani</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end/tba:label">
-            <value>Kwa mkunga wa jadi</value>
-          </text>
-          <text id="/death_report/suspected_maternal_death/where_pregnancy_end:label">
-            <value>Alijifungua au kutoka mimba wapi</value>
-          </text>
           <text id="/death_report/suspected_maternal_death:label">
             <value>Utambuzi wa vifo vya akina mama</value>
           </text>
         </translation>
       </itext>
       <instance>
-        <death_report delimiter="#" id="death_report" prefix="J1!death_report!" version="2019-09-27_15-55">
+        <death_report delimiter="#" id="death_report" prefix="J1!death_report!" version="2019-10-24_11-11">
           <inputs>
             <meta>
               <location>
@@ -336,13 +366,14 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </client_information>
           <death_report_intro>
             <intro/>
-            <when_death/>
+            <reason_death/>
           </death_report_intro>
           <suspected_maternal_death>
             <date_of_death_maternal/>
             <where_death/>
-            <when_pregnancy_end/>
-            <where_pregnancy_end/>
+            <was_pregnant/>
+            <during_childbirth/>
+            <two_to_three_mo_after_pregnancy_childbirth/>
           </suspected_maternal_death>
           <next_of_kin>
             <next_of_kin_name/>
@@ -388,19 +419,20 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/death_report/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/death_report_intro/intro" readonly="true()" type="string"/>
-      <bind nodeset="/death_report/death_report_intro/when_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot;" required="true()" type="select1"/>
-      <bind nodeset="/death_report/suspected_maternal_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/death_report_intro/when_death  != &quot;none_of_the_above&quot;"/>
+      <bind nodeset="/death_report/death_report_intro/reason_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12" required="true()" type="select1"/>
+      <bind nodeset="/death_report/suspected_maternal_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg')" nodeset="/death_report/suspected_maternal_death/date_of_death_maternal" required="true()" type="date"/>
       <bind nodeset="/death_report/suspected_maternal_death/where_death" required="true()" type="select1"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time( /death_report/suspected_maternal_death/date_of_death_maternal )) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/when_pregnancy_end:jr:constraintMsg')" nodeset="/death_report/suspected_maternal_death/when_pregnancy_end" required="true()" type="date"/>
-      <bind nodeset="/death_report/suspected_maternal_death/where_pregnancy_end" required="true()" type="select1"/>
-      <bind nodeset="/death_report/next_of_kin" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/death_report_intro/when_death  != &quot;none_of_the_above&quot;"/>
+      <bind nodeset="/death_report/suspected_maternal_death/was_pregnant" required="true()" type="select1"/>
+      <bind nodeset="/death_report/suspected_maternal_death/during_childbirth" required="true()" type="select1"/>
+      <bind nodeset="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth" required="true()" type="select1"/>
+      <bind nodeset="/death_report/next_of_kin" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_name" required="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_rel_w_deceased" required="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_street_shehia" required="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_district" required="true()" type="string"/>
       <bind constraint="regex(.,'^0[0-9]{9}$')" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg')" nodeset="/death_report/next_of_kin/next_of_kin_phone" required="true()" type="string"/>
-      <bind nodeset="/death_report/other" relevant=" /death_report/inputs/contact/sex  = &quot;male&quot; or  /death_report/death_report_intro/when_death  = &quot;none_of_the_above&quot;"/>
+      <bind nodeset="/death_report/other" relevant="not( /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;)"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/other/date_of_death_other:jr:constraintMsg')" nodeset="/death_report/other/date_of_death_other" required="true()" type="date"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/death_report/meta/instanceID" readonly="true()" type="string"/>
     </model>
@@ -441,23 +473,27 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <input ref="/death_report/death_report_intro/intro">
         <label ref="jr:itext('/death_report/death_report_intro/intro:label')"/>
       </input>
-      <select1 ref="/death_report/death_report_intro/when_death">
-        <label ref="jr:itext('/death_report/death_report_intro/when_death:label')"/>
+      <select1 ref="/death_report/death_report_intro/reason_death">
+        <label ref="jr:itext('/death_report/death_report_intro/reason_death:label')"/>
         <item>
-          <label ref="jr:itext('/death_report/death_report_intro/when_death/pregnancy:label')"/>
-          <value>pregnancy</value>
+          <label ref="jr:itext('/death_report/death_report_intro/reason_death/pregnancy_delivery:label')"/>
+          <value>pregnancy_delivery</value>
         </item>
         <item>
-          <label ref="jr:itext('/death_report/death_report_intro/when_death/childbirth:label')"/>
-          <value>childbirth</value>
+          <label ref="jr:itext('/death_report/death_report_intro/reason_death/accident:label')"/>
+          <value>accident</value>
         </item>
         <item>
-          <label ref="jr:itext('/death_report/death_report_intro/when_death/after_2_3_mo:label')"/>
-          <value>after_2_3_mo</value>
+          <label ref="jr:itext('/death_report/death_report_intro/reason_death/sickness:label')"/>
+          <value>sickness</value>
         </item>
         <item>
-          <label ref="jr:itext('/death_report/death_report_intro/when_death/none_of_the_above:label')"/>
-          <value>none_of_the_above</value>
+          <label ref="jr:itext('/death_report/death_report_intro/reason_death/fever:label')"/>
+          <value>fever</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/death_report_intro/reason_death/other:label')"/>
+          <value>other</value>
         </item>
       </select1>
     </group>
@@ -481,30 +517,49 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <value>tba</value>
         </item>
         <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/where_death/health_facility:label')"/>
+          <value>health_facility</value>
+        </item>
+        <item>
           <label ref="jr:itext('/death_report/suspected_maternal_death/where_death/other:label')"/>
           <value>other</value>
         </item>
       </select1>
-      <input ref="/death_report/suspected_maternal_death/when_pregnancy_end">
-        <label ref="jr:itext('/death_report/suspected_maternal_death/when_pregnancy_end:label')"/>
-      </input>
-      <select1 ref="/death_report/suspected_maternal_death/where_pregnancy_end">
-        <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end:label')"/>
+      <select1 ref="/death_report/suspected_maternal_death/was_pregnant">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/was_pregnant:label')"/>
         <item>
-          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/home:label')"/>
-          <value>home</value>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/was_pregnant/yes:label')"/>
+          <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/outside_home:label')"/>
-          <value>outside_home</value>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/was_pregnant/no:label')"/>
+          <value>no</value>
         </item>
         <item>
-          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/tba:label')"/>
-          <value>tba</value>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/was_pregnant/dont_know:label')"/>
+          <value>dont_know</value>
+        </item>
+      </select1>
+      <select1 ref="/death_report/suspected_maternal_death/during_childbirth">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/during_childbirth:label')"/>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/during_childbirth/yes:label')"/>
+          <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/death_report/suspected_maternal_death/where_pregnancy_end/health_facility:label')"/>
-          <value>health_facility</value>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/during_childbirth/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth:label')"/>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
     </group>
