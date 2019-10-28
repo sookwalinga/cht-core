@@ -24,7 +24,7 @@ module.exports = [
     icon: 'icon-people-person-general',
     goal: 16,
     appliesTo: 'reports',
-    appliesToType: ['infant_child'],
+    appliesToType: ['infant_child', 'pregnancy'],
     idType: 'report',  //counts multiple reports per contact
     appliesIf: function (c) {    
      return extras.isFormSubmittedThisMonth(c,'infant_child') || extras.isFormSubmittedThisMonth(c,'pregnancy'); 
