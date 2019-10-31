@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Replace person</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/unmute_person/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/client_name "/>&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/unmute_person/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/unmute_person/client_information:label">
+            <value>Client Information</value>
+          </text>
+          <text id="/unmute_person/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/unmute_person/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/unmute_person/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason/for_delivery:label">
+            <value>Client is a woman that has come to this household for delivery</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason/other:label">
+            <value>Other reason</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason/with_mother:label">
+            <value>Client is a child of a woman that has come to this household for delivery</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason:label">
+            <value>Why has <output value=" /unmute_person/client_name "/> returned to the household?</value>
+          </text>
+          <text id="/unmute_person/return_reason:label">
+            <value>Reasons for returning</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/unmute_person/client_information/household_note:label">
+            <value>Jina: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/client_name "/>&lt;/span&gt;
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/household_head "/>&lt;/span&gt; 
+Namba ya nyumba: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/kitongoji "/>&lt;/span&gt;.</value>
+          </text>
+          <text id="/unmute_person/client_information/phone_note:label">
+            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmute_person/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/unmute_person/client_information:label">
+            <value>Maelezo ya Mteja</value>
+          </text>
+          <text id="/unmute_person/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason/for_delivery:label">
+            <value>Mteja ni mama ambaye amekuja katika kaya hii kwajili ya kujifungua</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason/other:label">
+            <value>Sababu nyengine</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason/with_mother:label">
+            <value>Mteja ni mtoto ambaye ameletwa na mama yake katika kaya hii wakati wa kujifungua</value>
+          </text>
+          <text id="/unmute_person/return_reason/return_reason:label">
+            <value>Ni kwanini <output value=" /unmute_person/client_name "/> amerudi katika kaya hii?</value>
+          </text>
+          <text id="/unmute_person/return_reason:label">
+            <value>Sababu za kurudi</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <unmute_person delimiter="#" id="unmute_person" prefix="J1!unmute_person!">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <patient_id/>
+          <client_name/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <client_information>
+            <household_note/>
+            <phone_note/>
+          </client_information>
+          <return_reason>
+            <return_reason/>
+          </return_reason>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </unmute_person>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/unmute_person/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/unmute_person/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/unmute_person/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/unmute_person/inputs/user/name" type="string"/>
+      <bind nodeset="/unmute_person/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/unmute_person/inputs/contact/name" type="string"/>
+      <bind nodeset="/unmute_person/inputs/contact/sex" type="string"/>
+      <bind nodeset="/unmute_person/inputs/contact/date_of_birth" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/unmute_person/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/unmute_person/client_name" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/unmute_person/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/unmute_person/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/unmute_person/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/unmute_person/phone" type="string"/>
+      <bind nodeset="/unmute_person/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/unmute_person/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/unmute_person/return_reason/return_reason" required="true()" type="select1"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/unmute_person/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="hidden" ref="/unmute_person/inputs">
+      <group ref="/unmute_person/inputs/user">
+        <input ref="/unmute_person/inputs/user/contact_id">
+          <label ref="jr:itext('/unmute_person/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/unmute_person/inputs/user/facility_id">
+          <label ref="jr:itext('/unmute_person/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/unmute_person/inputs/user/name">
+          <label ref="jr:itext('/unmute_person/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/unmute_person/inputs/contact">
+        <input appearance="db-object" ref="/unmute_person/inputs/contact/_id"/>
+        <input ref="/unmute_person/inputs/contact/name"/>
+        <input ref="/unmute_person/inputs/contact/sex"/>
+        <input ref="/unmute_person/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/unmute_person/client_information">
+      <label ref="jr:itext('/unmute_person/client_information:label')"/>
+      <input ref="/unmute_person/client_information/household_note">
+        <label ref="jr:itext('/unmute_person/client_information/household_note:label')"/>
+      </input>
+      <input ref="/unmute_person/client_information/phone_note">
+        <label ref="jr:itext('/unmute_person/client_information/phone_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/unmute_person/return_reason">
+      <label ref="jr:itext('/unmute_person/return_reason:label')"/>
+      <select1 ref="/unmute_person/return_reason/return_reason">
+        <label ref="jr:itext('/unmute_person/return_reason/return_reason:label')"/>
+        <item>
+          <label ref="jr:itext('/unmute_person/return_reason/return_reason/for_delivery:label')"/>
+          <value>for_delivery</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/unmute_person/return_reason/return_reason/with_mother:label')"/>
+          <value>with_mother</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/unmute_person/return_reason/return_reason/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+    </group>
+  </h:body>
+</h:html>

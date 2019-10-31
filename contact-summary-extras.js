@@ -249,6 +249,21 @@ module.exports = {
       return true;
     }
     return false;
-  }
+  },
 
+  isContactDeceased: function () {
+    var isDeceased = false;
+    if (contact && contact.date_of_death) {
+      isDeceased = true;
+    }
+    return isDeceased;
+  },
+
+  isContactMuted: function () {
+    var isMuted = false;
+    if (contact && contact.muted) {
+      isMuted = true;
+    }
+    return isMuted;
+  }
 };

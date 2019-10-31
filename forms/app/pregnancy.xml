@@ -3625,329 +3625,6 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
         </pregnancy>
       </instance>
       <instance id="contact-summary"/>
-      <instance id="highest_school_level">
-        <root>
-          <item>
-            <itextId>static_instance-highest_school_level-0</itextId>
-            <name>no_formal_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-1</itextId>
-            <name>incomplete_primary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-2</itextId>
-            <name>primary_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-3</itextId>
-            <name>incomplete_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-4</itextId>
-            <name>secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-5</itextId>
-            <name>completed_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-6</itextId>
-            <name>more_than_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-7</itextId>
-            <name>school_level_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="wait_period">
-        <root>
-          <item>
-            <itextId>static_instance-wait_period-0</itextId>
-            <name>short</name>
-          </item>
-          <item>
-            <itextId>static_instance-wait_period-1</itextId>
-            <name>ok</name>
-          </item>
-          <item>
-            <itextId>static_instance-wait_period-2</itextId>
-            <name>too_long</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="travel_time">
-        <root>
-          <item>
-            <itextId>static_instance-travel_time-0</itextId>
-            <name>less_than_30</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_time-1</itextId>
-            <name>30_to_1hr</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_time-2</itextId>
-            <name>more_than_1hr</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_time-3</itextId>
-            <name>travel_time_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="facility_district">
-        <root>
-          <item>
-            <itextId>static_instance-facility_district-0</itextId>
-            <name>north_a</name>
-            <choice_filter>unguja</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-1</itextId>
-            <name>north_b</name>
-            <choice_filter>unguja</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-2</itextId>
-            <name>central</name>
-            <choice_filter>unguja</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-3</itextId>
-            <name>south</name>
-            <choice_filter>unguja</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-4</itextId>
-            <name>west_a</name>
-            <choice_filter>unguja</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-5</itextId>
-            <name>west_b</name>
-            <choice_filter>unguja</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-6</itextId>
-            <name>urban</name>
-            <choice_filter>unguja</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-7</itextId>
-            <name>chakechake</name>
-            <choice_filter>pemba</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-8</itextId>
-            <name>micheweni</name>
-            <choice_filter>pemba</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-9</itextId>
-            <name>mkoani</name>
-            <choice_filter>pemba</choice_filter>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-10</itextId>
-            <name>wete</name>
-            <choice_filter>pemba</choice_filter>
-          </item>
-        </root>
-      </instance>
-      <instance id="decision_maker">
-        <root>
-          <item>
-            <itextId>static_instance-decision_maker-0</itextId>
-            <name>herself</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-1</itextId>
-            <name>husband</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-2</itextId>
-            <name>herself_and_husband</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-3</itextId>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-4</itextId>
-            <name>decision_maker_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="partner_highest_school_level">
-        <root>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-0</itextId>
-            <name>partner_no_formal_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-1</itextId>
-            <name>partner_incomplete_primary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-2</itextId>
-            <name>partner_primary_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-3</itextId>
-            <name>partner_incomplete_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-4</itextId>
-            <name>partner_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-5</itextId>
-            <name>partner_completed_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-6</itextId>
-            <name>partner_more_than_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-7</itextId>
-            <name>partner_school_level_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="yes_no_decline_to_answer">
-        <root>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-0</itextId>
-            <name>yes</name>
-          </item>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-1</itextId>
-            <name>no</name>
-          </item>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-2</itextId>
-            <name>decline_to_answer</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="is_service_received">
-        <root>
-          <item>
-            <itextId>static_instance-is_service_received-0</itextId>
-            <name>yes</name>
-          </item>
-          <item>
-            <itextId>static_instance-is_service_received-1</itextId>
-            <name>yes_but</name>
-          </item>
-          <item>
-            <itextId>static_instance-is_service_received-2</itextId>
-            <name>no</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="second_facility">
-        <root>
-          <item>
-            <itextId>static_instance-second_facility-0</itextId>
-            <name>pregnancy_supplements</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-1</itextId>
-            <name>bp_reading</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-2</itextId>
-            <name>hb_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-3</itextId>
-            <name>bp_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-4</itextId>
-            <name>urine_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-5</itextId>
-            <name>ultrasound</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-6</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="travel_means">
-        <root>
-          <item>
-            <itextId>static_instance-travel_means-0</itextId>
-            <name>walk</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-1</itextId>
-            <name>bicycle</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-2</itextId>
-            <name>moto</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-3</itextId>
-            <name>private_car</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-4</itextId>
-            <name>public_bus</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-5</itextId>
-            <name>health_facility_vehicle</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-6</itextId>
-            <name>boat</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-7</itextId>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-travel_means-8</itextId>
-            <name>travel_means_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="paid_for">
-        <root>
-          <item>
-            <itextId>static_instance-paid_for-0</itextId>
-            <name>service_fee</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-1</itextId>
-            <name>hb_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-2</itextId>
-            <name>urine_analysis</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-3</itextId>
-            <name>rch_card</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-4</itextId>
-            <name>blood_sugar_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-paid_for-5</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
       <instance id="yes_no">
         <root>
           <item>
@@ -3957,34 +3634,6 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <item>
             <itextId>static_instance-yes_no-1</itextId>
             <name>no</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="hiv_status">
-        <root>
-          <item>
-            <itextId>static_instance-hiv_status-0</itextId>
-            <name>hiv_positive</name>
-          </item>
-          <item>
-            <itextId>static_instance-hiv_status-1</itextId>
-            <name>hiv_negative</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="delivery_location">
-        <root>
-          <item>
-            <itextId>static_instance-delivery_location-0</itextId>
-            <name>home</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_location-1</itextId>
-            <name>local_health_facility</name>
-          </item>
-          <item>
-            <itextId>static_instance-delivery_location-2</itextId>
-            <name>on_the_way</name>
           </item>
         </root>
       </instance>
@@ -4048,19 +3697,47 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </item>
         </root>
       </instance>
-      <instance id="facility_island">
+      <instance id="hiv_status">
         <root>
           <item>
-            <itextId>static_instance-facility_island-0</itextId>
-            <name>unguja</name>
+            <itextId>static_instance-hiv_status-0</itextId>
+            <name>hiv_positive</name>
           </item>
           <item>
-            <itextId>static_instance-facility_island-1</itextId>
-            <name>pemba</name>
+            <itextId>static_instance-hiv_status-1</itextId>
+            <name>hiv_negative</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="family_engagement">
+        <root>
+          <item>
+            <itextId>static_instance-family_engagement-0</itextId>
+            <name>husband</name>
           </item>
           <item>
-            <itextId>static_instance-facility_island-2</itextId>
-            <name>other</name>
+            <itextId>static_instance-family_engagement-1</itextId>
+            <name>mother</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-2</itextId>
+            <name>mother_in_law</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-3</itextId>
+            <name>sister</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-4</itextId>
+            <name>aunt</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-5</itextId>
+            <name>other_family</name>
+          </item>
+          <item>
+            <itextId>static_instance-family_engagement-6</itextId>
+            <name>no_one_available</name>
           </item>
         </root>
       </instance>
@@ -4100,107 +3777,94 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </item>
         </root>
       </instance>
-      <instance id="family_engagement">
+      <instance id="delivery_location">
         <root>
           <item>
-            <itextId>static_instance-family_engagement-0</itextId>
-            <name>husband</name>
+            <itextId>static_instance-delivery_location-0</itextId>
+            <name>home</name>
           </item>
           <item>
-            <itextId>static_instance-family_engagement-1</itextId>
-            <name>mother</name>
+            <itextId>static_instance-delivery_location-1</itextId>
+            <name>local_health_facility</name>
           </item>
           <item>
-            <itextId>static_instance-family_engagement-2</itextId>
-            <name>mother_in_law</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-3</itextId>
-            <name>sister</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-4</itextId>
-            <name>aunt</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-5</itextId>
-            <name>other_family</name>
-          </item>
-          <item>
-            <itextId>static_instance-family_engagement-6</itextId>
-            <name>no_one_available</name>
+            <itextId>static_instance-delivery_location-2</itextId>
+            <name>on_the_way</name>
           </item>
         </root>
       </instance>
-      <instance id="service_reason">
+      <instance id="facility_island">
         <root>
           <item>
-            <itextId>static_instance-service_reason-0</itextId>
-            <name>no_staff</name>
+            <itextId>static_instance-facility_island-0</itextId>
+            <name>unguja</name>
           </item>
           <item>
-            <itextId>static_instance-service_reason-1</itextId>
-            <name>closed_facility</name>
+            <itextId>static_instance-facility_island-1</itextId>
+            <name>pemba</name>
           </item>
           <item>
-            <itextId>static_instance-service_reason-2</itextId>
-            <name>no_reagents</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-3</itextId>
-            <name>waiting_too_long</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-4</itextId>
-            <name>no_money</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-5</itextId>
+            <itextId>static_instance-facility_island-2</itextId>
             <name>other</name>
           </item>
         </root>
       </instance>
-      <instance id="services_received">
+      <instance id="facility_district">
         <root>
           <item>
-            <itextId>static_instance-services_received-0</itextId>
-            <name>tt_vaccine</name>
+            <itextId>static_instance-facility_district-0</itextId>
+            <name>north_a</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-1</itextId>
-            <name>iron_folate_mabendazole</name>
+            <itextId>static_instance-facility_district-1</itextId>
+            <name>north_b</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-2</itextId>
-            <name>llitn</name>
+            <itextId>static_instance-facility_district-2</itextId>
+            <name>central</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-3</itextId>
-            <name>hiv_test</name>
+            <itextId>static_instance-facility_district-3</itextId>
+            <name>south</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-4</itextId>
-            <name>blood_pressure</name>
+            <itextId>static_instance-facility_district-4</itextId>
+            <name>west_a</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-5</itextId>
-            <name>urine_test</name>
+            <itextId>static_instance-facility_district-5</itextId>
+            <name>west_b</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-6</itextId>
-            <name>blood_test</name>
+            <itextId>static_instance-facility_district-6</itextId>
+            <name>urban</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-7</itextId>
-            <name>danger_sign_education</name>
+            <itextId>static_instance-facility_district-7</itextId>
+            <name>chakechake</name>
+            <choice_filter>pemba</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-8</itextId>
-            <name>discusses_birth_plan</name>
+            <itextId>static_instance-facility_district-8</itextId>
+            <name>micheweni</name>
+            <choice_filter>pemba</choice_filter>
           </item>
           <item>
-            <itextId>static_instance-services_received-9</itextId>
-            <name>discusses_postpartum_family_planning</name>
+            <itextId>static_instance-facility_district-9</itextId>
+            <name>mkoani</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-10</itextId>
+            <name>wete</name>
+            <choice_filter>pemba</choice_filter>
           </item>
         </root>
       </instance>
@@ -4528,6 +4192,290 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </item>
         </root>
       </instance>
+      <instance id="is_service_received">
+        <root>
+          <item>
+            <itextId>static_instance-is_service_received-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-is_service_received-1</itextId>
+            <name>yes_but</name>
+          </item>
+          <item>
+            <itextId>static_instance-is_service_received-2</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="service_reason">
+        <root>
+          <item>
+            <itextId>static_instance-service_reason-0</itextId>
+            <name>no_staff</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-1</itextId>
+            <name>closed_facility</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-2</itextId>
+            <name>no_reagents</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-3</itextId>
+            <name>waiting_too_long</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-4</itextId>
+            <name>no_money</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-5</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="second_facility">
+        <root>
+          <item>
+            <itextId>static_instance-second_facility-0</itextId>
+            <name>pregnancy_supplements</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-1</itextId>
+            <name>bp_reading</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-2</itextId>
+            <name>hb_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-3</itextId>
+            <name>bp_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-4</itextId>
+            <name>urine_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-5</itextId>
+            <name>ultrasound</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-6</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="services_received">
+        <root>
+          <item>
+            <itextId>static_instance-services_received-0</itextId>
+            <name>tt_vaccine</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-1</itextId>
+            <name>iron_folate_mabendazole</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-2</itextId>
+            <name>llitn</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-3</itextId>
+            <name>hiv_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-4</itextId>
+            <name>blood_pressure</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-5</itextId>
+            <name>urine_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-6</itextId>
+            <name>blood_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-7</itextId>
+            <name>danger_sign_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-8</itextId>
+            <name>discusses_birth_plan</name>
+          </item>
+          <item>
+            <itextId>static_instance-services_received-9</itextId>
+            <name>discusses_postpartum_family_planning</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="paid_for">
+        <root>
+          <item>
+            <itextId>static_instance-paid_for-0</itextId>
+            <name>service_fee</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-1</itextId>
+            <name>hb_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-2</itextId>
+            <name>urine_analysis</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-3</itextId>
+            <name>rch_card</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-4</itextId>
+            <name>blood_sugar_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-paid_for-5</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="wait_period">
+        <root>
+          <item>
+            <itextId>static_instance-wait_period-0</itextId>
+            <name>short</name>
+          </item>
+          <item>
+            <itextId>static_instance-wait_period-1</itextId>
+            <name>ok</name>
+          </item>
+          <item>
+            <itextId>static_instance-wait_period-2</itextId>
+            <name>too_long</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="travel_time">
+        <root>
+          <item>
+            <itextId>static_instance-travel_time-0</itextId>
+            <name>less_than_30</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-1</itextId>
+            <name>30_to_1hr</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-2</itextId>
+            <name>more_than_1hr</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-3</itextId>
+            <name>travel_time_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="travel_means">
+        <root>
+          <item>
+            <itextId>static_instance-travel_means-0</itextId>
+            <name>walk</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-1</itextId>
+            <name>bicycle</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-2</itextId>
+            <name>moto</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-3</itextId>
+            <name>private_car</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-4</itextId>
+            <name>public_bus</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-5</itextId>
+            <name>health_facility_vehicle</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-6</itextId>
+            <name>boat</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-7</itextId>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_means-8</itextId>
+            <name>travel_means_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="highest_school_level">
+        <root>
+          <item>
+            <itextId>static_instance-highest_school_level-0</itextId>
+            <name>no_formal_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-1</itextId>
+            <name>incomplete_primary</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-2</itextId>
+            <name>primary_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-3</itextId>
+            <name>incomplete_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-4</itextId>
+            <name>secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-5</itextId>
+            <name>completed_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-6</itextId>
+            <name>more_than_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-7</itextId>
+            <name>school_level_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="decision_maker">
+        <root>
+          <item>
+            <itextId>static_instance-decision_maker-0</itextId>
+            <name>herself</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-1</itextId>
+            <name>husband</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-2</itextId>
+            <name>herself_and_husband</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-3</itextId>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-decision_maker-4</itextId>
+            <name>decision_maker_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
       <instance id="marital_status">
         <root>
           <item>
@@ -4549,6 +4497,58 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <item>
             <itextId>static_instance-marital_status-4</itextId>
             <name>marital_status_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="partner_highest_school_level">
+        <root>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-0</itextId>
+            <name>partner_no_formal_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-1</itextId>
+            <name>partner_incomplete_primary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-2</itextId>
+            <name>partner_primary_education</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-3</itextId>
+            <name>partner_incomplete_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-4</itextId>
+            <name>partner_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-5</itextId>
+            <name>partner_completed_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-6</itextId>
+            <name>partner_more_than_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-7</itextId>
+            <name>partner_school_level_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no_decline_to_answer">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-1</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-2</itextId>
+            <name>decline_to_answer</name>
           </item>
         </root>
       </instance>

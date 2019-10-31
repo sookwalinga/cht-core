@@ -961,5 +961,13 @@ module.exports = {
       isDeceased = true;
     }
     return isDeceased;
+  },
+
+  isContactMuted: function (c) {
+    var isMuted = false;
+    if (c && c.contact && c.contact.muted) {
+      isMuted = true;
+    }
+    return isMuted;
   }
 };
