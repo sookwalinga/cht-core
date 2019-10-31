@@ -19,7 +19,10 @@ module.exports = {
     { appliesToType: 'person', appliesIf: function () { return contact.phone; }, label: 'contact.phone', value: contact.phone, width: 4, filter: 'phone' },
     { appliesToType: 'person', appliesIf: function () { return contact.parent && !contact.phone && lineage[1] && lineage[1].parent; }, label: 'contact.phone', value: lineage[0] && lineage[0].contact ? lineage[0].contact.phone : '', width: 4, filter: 'phone' },
     { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, label: 'contact.parent', value: lineage[0], filter: 'lineage' },
-    { appliesToType: 'person', appliesIf: function () { return !contact.parent.parent.parent; }, label: 'contact.grandparent', value: lineage[0], filter: 'lineage' }
+    { appliesToType: 'person', appliesIf: function () { return !contact.parent.parent.parent; }, label: 'contact.grandparent', value: lineage[0], filter: 'lineage' },
+    { appliesToType: 'person', appliesIf: function () { return contact.temp_hh_member === 'temporary';}, label: 'contact.temporary_member', icon: 'moving'},
+    { appliesToType: 'person', appliesIf: function () { return extras.isChildUnder5(); }, label: 'contact.child_under_5', icon: 'child'},
+    { appliesToType: 'person', appliesIf: function () { return extras.currentlyPregnant(); }, label: 'contact.is_pregnant', icon: 'pregnancy-1'}
   ],
 
   cards: [

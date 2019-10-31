@@ -255,6 +255,15 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_outcomes/intro_data_capture/child/sex:label">
             <value>What is <output value=" /pregnancy_outcomes/intro_data_capture/child/first_name "/>'s sex?</value>
           </text>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member/permanent:label">
+            <value>Permanent household member - not planning to move elsewhere</value>
+          </text>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member/temporary:label">
+            <value>Temporary household member - planning to move elsewhere soon</value>
+          </text>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member:label">
+            <value>Does <output value=" /pregnancy_outcomes/intro_data_capture/child/first_name "/> live in this household permanently, or are they here temporarily but later will leave?</value>
+          </text>
           <text id="/pregnancy_outcomes/intro_data_capture/child/type:label">
             <value>Type</value>
           </text>
@@ -746,6 +755,12 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="static_instance-sex-1">
             <value>Female</value>
           </text>
+          <text id="static_instance-temp_perm-0">
+            <value>Permanent household member - not planning to move elsewhere</value>
+          </text>
+          <text id="static_instance-temp_perm-1">
+            <value>Temporary household member - planning to move elsewhere soon</value>
+          </text>
           <text id="static_instance-what_supplies_purchased-0">
             <value>Gloves</value>
           </text>
@@ -1081,6 +1096,15 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture/child/sex:label">
             <value>Ni ipi jinsia ya <output value=" /pregnancy_outcomes/intro_data_capture/child/first_name "/>?</value>
+          </text>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member/permanent:label">
+            <value>Mkaazi wa kudumu - Hatohamia sehemu nyengine</value>
+          </text>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member/temporary:label">
+            <value>Mkaazi wa muda - Atahamia sehemu nyengine</value>
+          </text>
+          <text id="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member:label">
+            <value>Je <output value=" /pregnancy_outcomes/intro_data_capture/child/first_name "/> ni mkazi wa kudumu katika nyumba hii au ni mkazi wa muda tu?</value>
           </text>
           <text id="/pregnancy_outcomes/intro_data_capture/child/type:label">
             <value>-</value>
@@ -1571,6 +1595,12 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="static_instance-sex-1">
             <value>Mwanamke</value>
           </text>
+          <text id="static_instance-temp_perm-0">
+            <value>Mkaazi wa kudumu - Hatohamia sehemu nyengine</value>
+          </text>
+          <text id="static_instance-temp_perm-1">
+            <value>Mkaazi wa muda - Atahamia sehemu nyengine</value>
+          </text>
           <text id="static_instance-what_supplies_purchased-0">
             <value>Gloves</value>
           </text>
@@ -1723,6 +1753,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
               <last_name/>
               <name/>
               <sex/>
+              <temp_hh_member/>
               <date_of_birth/>
               <child_doc db-doc-ref=" /pregnancy_outcomes/intro_data_capture/child "/>
               <created_by_doc db-doc-ref="/pregnancy_outcomes"/>
@@ -1753,43 +1784,39 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         </pregnancy_outcomes>
       </instance>
       <instance id="contact-summary"/>
-      <instance id="why_handled_bad">
+      <instance id="yes_no">
         <root>
           <item>
-            <itextId>static_instance-why_handled_bad-0</itextId>
-            <name>shouted</name>
+            <itextId>static_instance-yes_no-0</itextId>
+            <name>yes</name>
           </item>
           <item>
-            <itextId>static_instance-why_handled_bad-1</itextId>
-            <name>hit</name>
-          </item>
-          <item>
-            <itextId>static_instance-why_handled_bad-2</itextId>
-            <name>ignored</name>
-          </item>
-          <item>
-            <itextId>static_instance-why_handled_bad-3</itextId>
-            <name>unfriendly</name>
-          </item>
-          <item>
-            <itextId>static_instance-why_handled_bad-4</itextId>
-            <name>other</name>
+            <itextId>static_instance-yes_no-1</itextId>
+            <name>no</name>
           </item>
         </root>
       </instance>
-      <instance id="how_handled">
+      <instance id="num_deliveries">
         <root>
           <item>
-            <itextId>static_instance-how_handled-0</itextId>
-            <name>good</name>
+            <itextId>static_instance-num_deliveries-0</itextId>
+            <name>one</name>
           </item>
           <item>
-            <itextId>static_instance-how_handled-1</itextId>
-            <name>ok</name>
+            <itextId>static_instance-num_deliveries-1</itextId>
+            <name>more</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="sex">
+        <root>
+          <item>
+            <itextId>static_instance-sex-0</itextId>
+            <name>male</name>
           </item>
           <item>
-            <itextId>static_instance-how_handled-2</itextId>
-            <name>bad</name>
+            <itextId>static_instance-sex-1</itextId>
+            <name>female</name>
           </item>
         </root>
       </instance>
@@ -1809,46 +1836,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="pregnancy_outcome">
-        <root>
-          <item>
-            <itextId>static_instance-pregnancy_outcome-0</itextId>
-            <name>did_deliver</name>
-          </item>
-          <item>
-            <itextId>static_instance-pregnancy_outcome-1</itextId>
-            <name>miscarriage_or_stillbirth</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="method_facility_delivery">
-        <root>
-          <item>
-            <itextId>static_instance-method_facility_delivery-0</itextId>
-            <name>normal_vaginal</name>
-          </item>
-          <item>
-            <itextId>static_instance-method_facility_delivery-1</itextId>
-            <name>caesarian</name>
-          </item>
-          <item>
-            <itextId>static_instance-method_facility_delivery-2</itextId>
-            <name>vacuum_forceps</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="immediate_cry">
-        <root>
-          <item>
-            <itextId>static_instance-immediate_cry-0</itextId>
-            <name>yes</name>
-          </item>
-          <item>
-            <itextId>static_instance-immediate_cry-1</itextId>
-            <name>no</name>
-          </item>
-        </root>
-      </instance>
       <instance id="facility_island">
         <root>
           <item>
@@ -1861,74 +1848,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
           <item>
             <itextId>static_instance-facility_island-2</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="sex">
-        <root>
-          <item>
-            <itextId>static_instance-sex-0</itextId>
-            <name>male</name>
-          </item>
-          <item>
-            <itextId>static_instance-sex-1</itextId>
-            <name>female</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="what_supplies_purchased">
-        <root>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-0</itextId>
-            <name>gloves</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-1</itextId>
-            <name>plastic_sheet</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-2</itextId>
-            <name>medicine</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-3</itextId>
-            <name>cleaning_supplies</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-4</itextId>
-            <name>needles</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-5</itextId>
-            <name>iv_infusion</name>
-          </item>
-          <item>
-            <itextId>static_instance-what_supplies_purchased-6</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="home_delivery_helper">
-        <root>
-          <item>
-            <itextId>static_instance-home_delivery_helper-0</itextId>
-            <name>traditional_birth_attendant</name>
-          </item>
-          <item>
-            <itextId>static_instance-home_delivery_helper-1</itextId>
-            <name>family_member</name>
-          </item>
-          <item>
-            <itextId>static_instance-home_delivery_helper-2</itextId>
-            <name>neighbor_friend</name>
-          </item>
-          <item>
-            <itextId>static_instance-home_delivery_helper-3</itextId>
-            <name>no_one</name>
-          </item>
-          <item>
-            <itextId>static_instance-home_delivery_helper-4</itextId>
             <name>other</name>
           </item>
         </root>
@@ -2316,38 +2235,54 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="how_much_paid">
+      <instance id="method_facility_delivery">
         <root>
           <item>
-            <itextId>static_instance-how_much_paid-0</itextId>
-            <name>&lt;1,000</name>
+            <itextId>static_instance-method_facility_delivery-0</itextId>
+            <name>normal_vaginal</name>
           </item>
           <item>
-            <itextId>static_instance-how_much_paid-1</itextId>
-            <name>1,000 - 10,000</name>
+            <itextId>static_instance-method_facility_delivery-1</itextId>
+            <name>caesarian</name>
           </item>
           <item>
-            <itextId>static_instance-how_much_paid-2</itextId>
-            <name>10,000 - 20,000</name>
-          </item>
-          <item>
-            <itextId>static_instance-how_much_paid-3</itextId>
-            <name>20,000 - 50,000</name>
-          </item>
-          <item>
-            <itextId>static_instance-how_much_paid-4</itextId>
-            <name>&gt;50,000</name>
+            <itextId>static_instance-method_facility_delivery-2</itextId>
+            <name>vacuum_forceps</name>
           </item>
         </root>
       </instance>
-      <instance id="yes_no">
+      <instance id="home_delivery_helper">
         <root>
           <item>
-            <itextId>static_instance-yes_no-0</itextId>
+            <itextId>static_instance-home_delivery_helper-0</itextId>
+            <name>traditional_birth_attendant</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-1</itextId>
+            <name>family_member</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-2</itextId>
+            <name>neighbor_friend</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-3</itextId>
+            <name>no_one</name>
+          </item>
+          <item>
+            <itextId>static_instance-home_delivery_helper-4</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="immediate_cry">
+        <root>
+          <item>
+            <itextId>static_instance-immediate_cry-0</itextId>
             <name>yes</name>
           </item>
           <item>
-            <itextId>static_instance-yes_no-1</itextId>
+            <itextId>static_instance-immediate_cry-1</itextId>
             <name>no</name>
           </item>
         </root>
@@ -2400,15 +2335,123 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
-      <instance id="num_deliveries">
+      <instance id="how_handled">
         <root>
           <item>
-            <itextId>static_instance-num_deliveries-0</itextId>
-            <name>one</name>
+            <itextId>static_instance-how_handled-0</itextId>
+            <name>good</name>
           </item>
           <item>
-            <itextId>static_instance-num_deliveries-1</itextId>
-            <name>more</name>
+            <itextId>static_instance-how_handled-1</itextId>
+            <name>ok</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_handled-2</itextId>
+            <name>bad</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="why_handled_bad">
+        <root>
+          <item>
+            <itextId>static_instance-why_handled_bad-0</itextId>
+            <name>shouted</name>
+          </item>
+          <item>
+            <itextId>static_instance-why_handled_bad-1</itextId>
+            <name>hit</name>
+          </item>
+          <item>
+            <itextId>static_instance-why_handled_bad-2</itextId>
+            <name>ignored</name>
+          </item>
+          <item>
+            <itextId>static_instance-why_handled_bad-3</itextId>
+            <name>unfriendly</name>
+          </item>
+          <item>
+            <itextId>static_instance-why_handled_bad-4</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="how_much_paid">
+        <root>
+          <item>
+            <itextId>static_instance-how_much_paid-0</itextId>
+            <name>&lt;1,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-1</itextId>
+            <name>1,000 - 10,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-2</itextId>
+            <name>10,000 - 20,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-3</itextId>
+            <name>20,000 - 50,000</name>
+          </item>
+          <item>
+            <itextId>static_instance-how_much_paid-4</itextId>
+            <name>&gt;50,000</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="what_supplies_purchased">
+        <root>
+          <item>
+            <itextId>static_instance-what_supplies_purchased-0</itextId>
+            <name>gloves</name>
+          </item>
+          <item>
+            <itextId>static_instance-what_supplies_purchased-1</itextId>
+            <name>plastic_sheet</name>
+          </item>
+          <item>
+            <itextId>static_instance-what_supplies_purchased-2</itextId>
+            <name>medicine</name>
+          </item>
+          <item>
+            <itextId>static_instance-what_supplies_purchased-3</itextId>
+            <name>cleaning_supplies</name>
+          </item>
+          <item>
+            <itextId>static_instance-what_supplies_purchased-4</itextId>
+            <name>needles</name>
+          </item>
+          <item>
+            <itextId>static_instance-what_supplies_purchased-5</itextId>
+            <name>iv_infusion</name>
+          </item>
+          <item>
+            <itextId>static_instance-what_supplies_purchased-6</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="pregnancy_outcome">
+        <root>
+          <item>
+            <itextId>static_instance-pregnancy_outcome-0</itextId>
+            <name>did_deliver</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_outcome-1</itextId>
+            <name>miscarriage_or_stillbirth</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="temp_perm">
+        <root>
+          <item>
+            <itextId>static_instance-temp_perm-0</itextId>
+            <name>permanent</name>
+          </item>
+          <item>
+            <itextId>static_instance-temp_perm-1</itextId>
+            <name>temporary</name>
           </item>
         </root>
       </instance>
@@ -2504,6 +2547,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/last_name" required="true()" type="string"/>
       <bind calculate="concat( /pregnancy_outcomes/intro_data_capture/child/first_name ,&quot; &quot;,  /pregnancy_outcomes/intro_data_capture/child/middle_name ,&quot; &quot;,  /pregnancy_outcomes/intro_data_capture/child/last_name )" nodeset="/pregnancy_outcomes/intro_data_capture/child/name" type="string"/>
       <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/sex" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member" required="true()" type="select1"/>
       <bind calculate=" /pregnancy_outcomes/confirm_delivery/date_of_delivery " nodeset="/pregnancy_outcomes/intro_data_capture/child/date_of_birth" type="string"/>
       <bind calculate=" /pregnancy_outcomes/intro_data_capture/child " nodeset="/pregnancy_outcomes/intro_data_capture/child/child_doc" type="string"/>
       <bind calculate="." nodeset="/pregnancy_outcomes/intro_data_capture/child/created_by_doc" type="string"/>
@@ -2858,6 +2902,17 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
             <item>
               <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/sex/female:label')"/>
               <value>female</value>
+            </item>
+          </select1>
+          <select1 ref="/pregnancy_outcomes/intro_data_capture/child/temp_hh_member">
+            <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/temp_hh_member:label')"/>
+            <item>
+              <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/temp_hh_member/permanent:label')"/>
+              <value>permanent</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/temp_hh_member/temporary:label')"/>
+              <value>temporary</value>
             </item>
           </select1>
           <group ref="/pregnancy_outcomes/intro_data_capture/child/parent">

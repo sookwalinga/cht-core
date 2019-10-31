@@ -309,6 +309,15 @@
           <text id="/data/repeat/child/sex_note:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
+          <text id="/data/repeat/child/temp_hh_member/permanent:label">
+            <value>Permanent household member - not planning to move elsewhere</value>
+          </text>
+          <text id="/data/repeat/child/temp_hh_member/temporary:label">
+            <value>Temporary household member - planning to move elsewhere soon</value>
+          </text>
+          <text id="/data/repeat/child/temp_hh_member:label">
+            <value>Does <output value=" /data/repeat/child/first_name_c "/> live in this household permanently, or are they here temporarily but later will leave?</value>
+          </text>
           <text id="/data/repeat/child:label">
             <value>Household Member Information</value>
           </text>
@@ -656,6 +665,15 @@
           <text id="/data/repeat/child/sex_note:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
+          <text id="/data/repeat/child/temp_hh_member/permanent:label">
+            <value>Mkaazi wa kudumu - Hatohamia sehemu nyengine</value>
+          </text>
+          <text id="/data/repeat/child/temp_hh_member/temporary:label">
+            <value>Mkaazi wa muda - Atahamia sehemu nyengine</value>
+          </text>
+          <text id="/data/repeat/child/temp_hh_member:label">
+            <value>Je <output value=" /data/repeat/child/first_name_c "/> ni mkazi wa kudumu katika nyumba hii au ni mkazi wa muda tu?</value>
+          </text>
           <text id="/data/repeat/child/type:label">
             <value>-</value>
           </text>
@@ -671,7 +689,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-10-16_01-35">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2019-10-24_05-20">
           <inputs>
             <meta>
               <location>
@@ -773,6 +791,7 @@
               <age_estimate/>
               <yob/>
               <dob/>
+              <temp_hh_member/>
               <date_of_birth/>
               <date_of_birth_c/>
               <is_exact_dob_in_range/>
@@ -878,6 +897,7 @@
       <bind constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')" nodeset="/data/repeat/child/age_estimate" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;" required="true()" type="int"/>
       <bind calculate="if(../age_estimate != &quot;&quot;, format-date-time(today(),&quot;%Y&quot;) - ../age_estimate, 1900)" nodeset="/data/repeat/child/yob" type="string"/>
       <bind constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')" nodeset="/data/repeat/child/dob" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
+      <bind nodeset="/data/repeat/child/temp_hh_member" required="true()" type="select1"/>
       <bind calculate="format-date(if(../dob != &quot;&quot;, ../dob,concat(../yob, &quot;-01-01&quot;)), '%Y-%m-%d')" nodeset="/data/repeat/child/date_of_birth" type="string"/>
       <bind calculate="../date_of_birth" nodeset="/data/repeat/child/date_of_birth_c" type="string"/>
       <bind calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)" nodeset="/data/repeat/child/is_exact_dob_in_range" type="string"/>
@@ -1060,6 +1080,17 @@
           <input ref="/data/repeat/child/dob">
             <label ref="jr:itext('/data/repeat/child/dob:label')"/>
           </input>
+          <select1 ref="/data/repeat/child/temp_hh_member">
+            <label ref="jr:itext('/data/repeat/child/temp_hh_member:label')"/>
+            <item>
+              <label ref="jr:itext('/data/repeat/child/temp_hh_member/permanent:label')"/>
+              <value>permanent</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/repeat/child/temp_hh_member/temporary:label')"/>
+              <value>temporary</value>
+            </item>
+          </select1>
           <input ref="/data/repeat/child/return_child_note_20_or_above_days">
             <label ref="jr:itext('/data/repeat/child/return_child_note_20_or_above_days:label')"/>
           </input>
