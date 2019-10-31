@@ -1705,6 +1705,12 @@ SAY: Your child is in need of special care and attention to keep from getting ma
           <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/yes:label">
             <value>Yes</value>
           </text>
+          <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
+            <value>If you haven't already, and if you've been providing pregnancy services to <output value=" /infant_child/child_name "/>'s mother , you should conduct the postpartum visit with her as soon as you finish the infant/child visit.</value>
+          </text>
+          <text id="/infant_child/next_task_reminder:label">
+            <value>Pospartum Visit Reminder</value>
+          </text>
           <text id="/infant_child/problem_solving/challenge_play_comm:label">
             <value>Many people may face challenges when it comes to playing and communicating with their child to stimulate child development. I want to talk to you about some common challenges parents face.</value>
           </text>
@@ -3901,6 +3907,12 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/yes:label">
             <value>Ndiyo</value>
           </text>
+          <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
+            <value>Ikiwa ulikuwa unamtebelea mama yake <output value=" /infant_child/child_name "/> wakati wa ujauzito, basi punde tu utakapomaliza temebeleo la mtoto, tafadhali endelea na tembeleo la baada ya kujigungua.</value>
+          </text>
+          <text id="/infant_child/next_task_reminder:label">
+            <value>Ukumbusho wa kufanya tembeleo la mama mjamzito</value>
+          </text>
           <text id="/infant_child/problem_solving/challenge_play_comm:label">
             <value>Watu wengi hupata changamoto wakati wanapocheza na kuwasiliana na watoto wao, ili kuhamasisha maendeleo ya mtoto. Ningependa nizungumze nawe kuhusu baadhi ya changamoto maarufu ambazo wazee zinawakuta.</value>
           </text>
@@ -4753,6 +4765,9 @@ Kwa mtoto wako unaweza:</value>
             <has_mosquito_net/>
             <free_mosquito_net/>
           </llints>
+          <next_task_reminder>
+            <chvnote_next_task/>
+          </next_task_reminder>
           <group_summary>
             <non_consent_note/>
             <any_referral/>
@@ -5200,6 +5215,8 @@ selected( /infant_child/child_danger_signs/child_skin_boils ,&quot;no&quot;)" ty
       <bind nodeset="/infant_child/llints/note_malaria" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/llints/has_mosquito_net" required="true()" type="select1"/>
       <bind nodeset="/infant_child/llints/free_mosquito_net" readonly="true()" relevant="selected( /infant_child/llints/has_mosquito_net ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/infant_child/next_task_reminder" relevant="../inputs/visit_id = &quot;infant_child_0_2_day_pp_visit&quot; or ../inputs/visit_id = &quot;infant_child_3_19_day_pp_visit&quot;"/>
+      <bind nodeset="/infant_child/next_task_reminder/chvnote_next_task" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/group_summary/non_consent_note" readonly="true()" relevant="selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)" type="string"/>
       <bind calculate="if( /infant_child/first_visit_6_months/refer_flag_small_baby =1 or
  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1 or
@@ -7320,6 +7337,12 @@ selected( /infant_child/child_danger_signs/child_skin_boils ,&quot;no&quot;)" ty
       </select1>
       <input ref="/infant_child/llints/free_mosquito_net">
         <label ref="jr:itext('/infant_child/llints/free_mosquito_net:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/infant_child/next_task_reminder">
+      <label ref="jr:itext('/infant_child/next_task_reminder:label')"/>
+      <input ref="/infant_child/next_task_reminder/chvnote_next_task">
+        <label ref="jr:itext('/infant_child/next_task_reminder/chvnote_next_task:label')"/>
       </input>
     </group>
     <group appearance="field-list summary" ref="/infant_child/group_summary">

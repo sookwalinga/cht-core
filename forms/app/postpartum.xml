@@ -93,20 +93,17 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postp
           <text id="/postpartum/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
-          <text id="/postpartum/nutrition/eat_healthy_note:label">
-            <value>Please continue to eat healthy and have more snacks to make sure that your baby gets enough milk from breastfeeding. It is very important for you to eat a balanced diet with a lot of vegetables and fruits and drink lots of water.</value>
+          <text id="/postpartum/next_task_reminder/chvnote_next_task:label">
+            <value>If you haven't already, you should conduct the visit with <output value=" /postpartum/client_name "/>'s baby after you finish her postpartum visit</value>
           </text>
-          <text id="/postpartum/nutrition/eat_healthy_note_no_baby:label">
-            <value>Please continue to eat healthy and have more snacks. It is very important for you to eat a balanced diet with a lot of vegetables and fruits and drink lots of water.</value>
+          <text id="/postpartum/next_task_reminder:label">
+            <value>Infant/Child Visit Reminder</value>
           </text>
-          <text id="/postpartum/nutrition/iron_folic_acid_note:label">
-            <value>It's very important to Take iron and folic acid tablets to prevent anemia for at least 3 months after your baby's birth. Continue taking your iron and folic acid as directed by physician.</value>
+          <text id="/postpartum/nutrition/ask_about_nutrition:label">
+            <value>How much do you know about health postparum nutrition? Can you describe what kinds of foods are good to eat at this time?</value>
           </text>
-          <text id="/postpartum/nutrition/iron_folic_acid_note_no_baby:label">
-            <value>It's very important to Take iron and folic acid tablets to prevent anemia for at least 3 months. Continue taking your iron and folic acid as directed by physician.</value>
-          </text>
-          <text id="/postpartum/nutrition/vitamin_a_note:label">
-            <value>Within 6 weeks of your delivery, you should go to the health facility for a postnatal care visit to get Vitamin A supplements.</value>
+          <text id="/postpartum/nutrition/chv_note_nutritio_bangokitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Please refer to card 2 of bango kitita to continue the discussion. &lt;/span&gt;</value>
           </text>
           <text id="/postpartum/nutrition:label">
             <value>Nutrition</value>
@@ -510,18 +507,6 @@ If you have any problems before that time, please call me.</value>
           <text id="/postpartum/quality_of_care:label">
             <value>Quality of Care</value>
           </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone/decline_to_answer:label">
-            <value>Don't know / Decline to answer</value>
-          </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone/no:label">
-            <value>No</value>
-          </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone:label">
-            <value>Did someone come to your house and register you using a phone during a previous pregnancy?</value>
-          </text>
           <text id="/postpartum/research_questions/partner_info/partner_highest_school_level/partner_completed_high_school:label">
             <value>Completed high school (Form 6)</value>
           </text>
@@ -582,6 +567,9 @@ If you have any problems before that time, please call me.</value>
           <text id="/postpartum/research_questions/subgroup_marital_status/marital_status/marital_status_dont_know_decline:label">
             <value>Don't know/Decline to answer</value>
           </text>
+          <text id="/postpartum/research_questions/subgroup_marital_status/marital_status/married:label">
+            <value>Married</value>
+          </text>
           <text id="/postpartum/research_questions/subgroup_marital_status/marital_status/single:label">
             <value>Single</value>
           </text>
@@ -590,18 +578,6 @@ If you have any problems before that time, please call me.</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_marital_status/marital_status:label">
             <value>What is your marital status?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label">
-            <value>Don't know / Decline to answer</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/no:label">
-            <value>No</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation:label">
-            <value>Are you currently married or living together with a man as if married?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label">
             <value>Don't know / Decline to answer</value>
@@ -631,10 +607,7 @@ If you have any problems before that time, please call me.</value>
             <value>Yes</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together:label">
-            <value>Does the woman's (husband/partner) usually live here with her?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_partner_info/msg_for_chv_partner_live_together:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+            <value>Are you living together with your husband?</value>
           </text>
           <text id="/postpartum/research_questions/transport/other_means:label">
             <value>Please specify</value>
@@ -1000,15 +973,18 @@ If you have any problems before that time, please call me.</value>
             <value>No, I didn't get a service</value>
           </text>
           <text id="static_instance-marital_status-0">
-            <value>Single</value>
+            <value>Married</value>
           </text>
           <text id="static_instance-marital_status-1">
-            <value>Widowed</value>
+            <value>Single</value>
           </text>
           <text id="static_instance-marital_status-2">
-            <value>Divorced</value>
+            <value>Widowed</value>
           </text>
           <text id="static_instance-marital_status-3">
+            <value>Divorced</value>
+          </text>
+          <text id="static_instance-marital_status-4">
             <value>Don't know/Decline to answer</value>
           </text>
           <text id="static_instance-partner_highest_school_level-0">
@@ -1305,20 +1281,17 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/postpartum/inputs:label">
             <value>-</value>
           </text>
-          <text id="/postpartum/nutrition/eat_healthy_note:label">
-            <value>Tafadhali endelea kula vyakula vya afya na kupata asusa mara nyingi zaidi ili mtoto aendelee kupata maziwa mengi zaidi, Ni Muhimu kulamlo kamili wenye wingi wa mbogamboga,matunda na kunywa maji mengi.</value>
+          <text id="/postpartum/next_task_reminder/chvnote_next_task:label">
+            <value>Punde tu utakapomaliza temebeleo la baada ya kujifungua, tafadhali endelea na tembeleo la mtoto ikiwa bado hujalifanya.</value>
           </text>
-          <text id="/postpartum/nutrition/eat_healthy_note_no_baby:label">
-            <value>Tafadhali endelea kula vyakula vya afya na kupata asusa mara nyingi zaidi. Ni Muhimu kula mlo kamili wenye wingi wa mbogamboga,matunda na kunywa maji mengi.</value>
+          <text id="/postpartum/next_task_reminder:label">
+            <value>Ukumbusho wa kufanya tembeleo la mtoto</value>
           </text>
-          <text id="/postpartum/nutrition/iron_folic_acid_note:label">
-            <value>Ni muhimu kumeza vidonge vya kuongeza damu kwa ajili ya kuzuia upungufu wa damu miezi miatatu baada ya mtoto kuzaliwa,daktari atashauri jinsi ya kuendelea kumeza vidonge vya kuongeza damu.</value>
+          <text id="/postpartum/nutrition/ask_about_nutrition:label">
+            <value>-</value>
           </text>
-          <text id="/postpartum/nutrition/iron_folic_acid_note_no_baby:label">
-            <value>Ni muhimu kumeza vidonge vya kuongeza damu kwa ajili ya kuzuia upungufu wa damu kwa muda wa miezi miatatu, daktari atashauri jinsi ya kuendelea kumeza vidonge vya kuongeza damu.</value>
-          </text>
-          <text id="/postpartum/nutrition/vitamin_a_note:label">
-            <value>Ndani ya wiki sita baada ya kujifungua,unatakiwa uhudhurie kliniki ya mama waliojifungua kwa kupata vitamini A.</value>
+          <text id="/postpartum/nutrition/chv_note_nutritio_bangokitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Tafadhali fungua ukurasa namba 2 kwenye bango kitita ili undelee na mazungumzo. &lt;/span&gt;</value>
           </text>
           <text id="/postpartum/nutrition:label">
             <value>Lishe</value>
@@ -1721,18 +1694,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/postpartum/quality_of_care:label">
             <value>Ubora wa Huduma</value>
           </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone/decline_to_answer:label">
-            <value>Sijui / Siwezi kujibu</value>
-          </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone/yes:label">
-            <value>Ndio</value>
-          </text>
-          <text id="/postpartum/research_questions/enrollment_via_phone:label">
-            <value>Je kuna mtu yeyote alikuja kukusajili kwa simu ya mkononi wakati wa uja uzito wako uliopita?</value>
-          </text>
           <text id="/postpartum/research_questions/partner_info/partner_highest_school_level/partner_completed_high_school:label">
             <value>Kamaliza kidatu cha sita</value>
           </text>
@@ -1799,6 +1760,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/postpartum/research_questions/subgroup_marital_status/marital_status/marital_status_dont_know_decline:label">
             <value>Sijui / Siwezi kujibu</value>
           </text>
+          <text id="/postpartum/research_questions/subgroup_marital_status/marital_status/married:label">
+            <value>Nishaolewa</value>
+          </text>
           <text id="/postpartum/research_questions/subgroup_marital_status/marital_status/single:label">
             <value>Sina mume</value>
           </text>
@@ -1809,21 +1773,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Je ni ipi hali yako ya ndoa?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_marital_status:label">
-            <value>-</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label">
-            <value>Sijui / Siwezi kujibu</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label">
-            <value>Ndio</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation:label">
-            <value>Je una mwenza ambae munaishi pamoja?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_married_or_livein_relation:label">
             <value>-</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label">
@@ -1857,10 +1806,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ndio</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together:label">
-            <value>Je mwenza wa mama huyu wanaishi pamoja?</value>
-          </text>
-          <text id="/postpartum/research_questions/subgroup_partner_info/msg_for_chv_partner_live_together:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>Je unaishi na mwenza wako?</value>
           </text>
           <text id="/postpartum/research_questions/subgroup_partner_info:label">
             <value>-</value>
@@ -2232,15 +2178,18 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Hapana, Sikupata huduma.</value>
           </text>
           <text id="static_instance-marital_status-0">
-            <value>Sina mume</value>
+            <value>Nishaolewa</value>
           </text>
           <text id="static_instance-marital_status-1">
-            <value>Mjane</value>
+            <value>Sina mume</value>
           </text>
           <text id="static_instance-marital_status-2">
-            <value>Mume amefariki</value>
+            <value>Mjane</value>
           </text>
           <text id="static_instance-marital_status-3">
+            <value>Mume amefariki</value>
+          </text>
+          <text id="static_instance-marital_status-4">
             <value>Sijui / Siwezi kujibu</value>
           </text>
           <text id="static_instance-partner_highest_school_level-0">
@@ -2521,11 +2470,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <pn_care_visit_message/>
           </pnc_care_visit>
           <nutrition>
-            <eat_healthy_note/>
-            <eat_healthy_note_no_baby/>
-            <iron_folic_acid_note/>
-            <iron_folic_acid_note_no_baby/>
-            <vitamin_a_note/>
+            <ask_about_nutrition/>
+            <chv_note_nutritio_bangokitita/>
           </nutrition>
           <check_facility_pnc>
             <has_attended_facility_pnc/>
@@ -2554,19 +2500,14 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
               <travel_means/>
               <other_means/>
             </transport>
-            <enrollment_via_phone/>
             <subgroup_decision_maker>
               <decision_maker/>
               <some_other_decision_maker/>
             </subgroup_decision_maker>
-            <subgroup_married_or_livein_relation>
-              <married_or_livein_relation/>
-            </subgroup_married_or_livein_relation>
             <subgroup_marital_status>
               <marital_status/>
             </subgroup_marital_status>
             <subgroup_partner_info>
-              <msg_for_chv_partner_live_together/>
               <does_partner_live_together/>
             </subgroup_partner_info>
             <partner_info>
@@ -2578,6 +2519,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
               <num_wives/>
             </subgroup_multiple_wives>
           </research_questions>
+          <next_task_reminder>
+            <chvnote_next_task/>
+          </next_task_reminder>
           <group_summary>
             <healthy_note/>
             <needs_referral_note/>
@@ -2617,18 +2561,22 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         <root>
           <item>
             <itextId>static_instance-marital_status-0</itextId>
-            <name>single</name>
+            <name>married</name>
           </item>
           <item>
             <itextId>static_instance-marital_status-1</itextId>
-            <name>widowed</name>
+            <name>single</name>
           </item>
           <item>
             <itextId>static_instance-marital_status-2</itextId>
-            <name>divorced</name>
+            <name>widowed</name>
           </item>
           <item>
             <itextId>static_instance-marital_status-3</itextId>
+            <name>divorced</name>
+          </item>
+          <item>
+            <itextId>static_instance-marital_status-4</itextId>
             <name>marital_status_dont_know_decline</name>
           </item>
         </root>
@@ -3509,11 +3457,8 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
       <bind nodeset="/postpartum/pnc_care_visit" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 0"/>
       <bind nodeset="/postpartum/pnc_care_visit/pn_care_visit_message" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/nutrition" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0"/>
-      <bind nodeset="/postpartum/nutrition/eat_healthy_note" readonly="true()" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" type="string"/>
-      <bind nodeset="/postpartum/nutrition/eat_healthy_note_no_baby" readonly="true()" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;false&quot;" type="string"/>
-      <bind nodeset="/postpartum/nutrition/iron_folic_acid_note" readonly="true()" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" type="string"/>
-      <bind nodeset="/postpartum/nutrition/iron_folic_acid_note_no_baby" readonly="true()" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;false&quot;" type="string"/>
-      <bind nodeset="/postpartum/nutrition/vitamin_a_note" readonly="true()" type="string"/>
+      <bind nodeset="/postpartum/nutrition/ask_about_nutrition" readonly="true()" type="string"/>
+      <bind nodeset="/postpartum/nutrition/chv_note_nutritio_bangokitita" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/check_facility_pnc" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and  /postpartum/show_quality_care_c =&quot;true&quot;"/>
       <bind nodeset="/postpartum/check_facility_pnc/has_attended_facility_pnc" required="true()" type="select1"/>
       <bind nodeset="/postpartum/check_facility_pnc/pnc_visit_count_zero" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,'no')" required="true()" type="select"/>
@@ -3544,17 +3489,15 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
       <bind nodeset="/postpartum/research_questions/travel_time" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/transport/travel_means" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/transport/other_means" relevant="selected( /postpartum/research_questions/transport/travel_means ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/postpartum/research_questions/enrollment_via_phone" type="select1"/>
       <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/decision_maker" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/some_other_decision_maker" relevant="selected( /postpartum/research_questions/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_marital_status/marital_status" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;no&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_partner_info/msg_for_chv_partner_live_together" readonly="true()" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/postpartum/research_questions/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/postpartum/research_questions/partner_info/subgroup_partner_age" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" type="int"/>
-      <bind nodeset="/postpartum/research_questions/partner_info/partner_highest_school_level" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_marital_status/marital_status" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/postpartum/research_questions/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/postpartum/research_questions/partner_info/subgroup_partner_age" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" type="int"/>
+      <bind nodeset="/postpartum/research_questions/partner_info/partner_highest_school_level" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
       <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/postpartum/research_questions/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/postpartum/research_questions/subgroup_multiple_wives/num_wives" relevant="selected( /postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
+      <bind nodeset="/postpartum/next_task_reminder/chvnote_next_task" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/group_summary/healthy_note" readonly="true()" relevant=" /postpartum/has_referral =0" type="string"/>
       <bind nodeset="/postpartum/group_summary/needs_referral_note" readonly="true()" relevant=" /postpartum/has_referral =1" type="string"/>
       <bind nodeset="/postpartum/group_summary/needs_referral_emergency_danger_sign_note" readonly="true()" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =1" type="string"/>
@@ -3900,22 +3843,13 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
         <label ref="jr:itext('/postpartum/pnc_care_visit/pn_care_visit_message:label')"/>
       </input>
     </group>
-    <group ref="/postpartum/nutrition">
+    <group appearance="field-list" ref="/postpartum/nutrition">
       <label ref="jr:itext('/postpartum/nutrition:label')"/>
-      <input ref="/postpartum/nutrition/eat_healthy_note">
-        <label ref="jr:itext('/postpartum/nutrition/eat_healthy_note:label')"/>
+      <input ref="/postpartum/nutrition/ask_about_nutrition">
+        <label ref="jr:itext('/postpartum/nutrition/ask_about_nutrition:label')"/>
       </input>
-      <input ref="/postpartum/nutrition/eat_healthy_note_no_baby">
-        <label ref="jr:itext('/postpartum/nutrition/eat_healthy_note_no_baby:label')"/>
-      </input>
-      <input ref="/postpartum/nutrition/iron_folic_acid_note">
-        <label ref="jr:itext('/postpartum/nutrition/iron_folic_acid_note:label')"/>
-      </input>
-      <input ref="/postpartum/nutrition/iron_folic_acid_note_no_baby">
-        <label ref="jr:itext('/postpartum/nutrition/iron_folic_acid_note_no_baby:label')"/>
-      </input>
-      <input ref="/postpartum/nutrition/vitamin_a_note">
-        <label ref="jr:itext('/postpartum/nutrition/vitamin_a_note:label')"/>
+      <input ref="/postpartum/nutrition/chv_note_nutritio_bangokitita">
+        <label ref="jr:itext('/postpartum/nutrition/chv_note_nutritio_bangokitita:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/postpartum/check_facility_pnc">
@@ -4233,21 +4167,6 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
           <label ref="jr:itext('/postpartum/research_questions/transport/other_means:label')"/>
         </input>
       </group>
-      <select1 ref="/postpartum/research_questions/enrollment_via_phone">
-        <label ref="jr:itext('/postpartum/research_questions/enrollment_via_phone:label')"/>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/enrollment_via_phone/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/enrollment_via_phone/no:label')"/>
-          <value>no</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/postpartum/research_questions/enrollment_via_phone/decline_to_answer:label')"/>
-          <value>decline_to_answer</value>
-        </item>
-      </select1>
       <group appearance="field-list" ref="/postpartum/research_questions/subgroup_decision_maker">
         <select1 ref="/postpartum/research_questions/subgroup_decision_maker/decision_maker">
           <label ref="jr:itext('/postpartum/research_questions/subgroup_decision_maker/decision_maker:label')"/>
@@ -4276,26 +4195,13 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
           <label ref="jr:itext('/postpartum/research_questions/subgroup_decision_maker/some_other_decision_maker:label')"/>
         </input>
       </group>
-      <group appearance="field-list" ref="/postpartum/research_questions/subgroup_married_or_livein_relation">
-        <select1 ref="/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation">
-          <label ref="jr:itext('/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation:label')"/>
-          <item>
-            <label ref="jr:itext('/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label')"/>
-            <value>yes</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/no:label')"/>
-            <value>no</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/postpartum/research_questions/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label')"/>
-            <value>decline_to_answer</value>
-          </item>
-        </select1>
-      </group>
       <group appearance="field-list" ref="/postpartum/research_questions/subgroup_marital_status">
         <select1 ref="/postpartum/research_questions/subgroup_marital_status/marital_status">
           <label ref="jr:itext('/postpartum/research_questions/subgroup_marital_status/marital_status:label')"/>
+          <item>
+            <label ref="jr:itext('/postpartum/research_questions/subgroup_marital_status/marital_status/married:label')"/>
+            <value>married</value>
+          </item>
           <item>
             <label ref="jr:itext('/postpartum/research_questions/subgroup_marital_status/marital_status/single:label')"/>
             <value>single</value>
@@ -4315,9 +4221,6 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
         </select1>
       </group>
       <group appearance="field-list" ref="/postpartum/research_questions/subgroup_partner_info">
-        <input ref="/postpartum/research_questions/subgroup_partner_info/msg_for_chv_partner_live_together">
-          <label ref="jr:itext('/postpartum/research_questions/subgroup_partner_info/msg_for_chv_partner_live_together:label')"/>
-        </input>
         <select1 ref="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together">
           <label ref="jr:itext('/postpartum/research_questions/subgroup_partner_info/does_partner_live_together:label')"/>
           <item>
@@ -4394,6 +4297,12 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" requ
           <label ref="jr:itext('/postpartum/research_questions/subgroup_multiple_wives/num_wives:label')"/>
         </input>
       </group>
+    </group>
+    <group appearance="field-list" ref="/postpartum/next_task_reminder">
+      <label ref="jr:itext('/postpartum/next_task_reminder:label')"/>
+      <input ref="/postpartum/next_task_reminder/chvnote_next_task">
+        <label ref="jr:itext('/postpartum/next_task_reminder/chvnote_next_task:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/postpartum/group_summary">
       <label ref="jr:itext('/postpartum/group_summary:label')"/>

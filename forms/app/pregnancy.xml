@@ -445,6 +445,10 @@ Please refer to page 2 of bango kitita.</value>
           <text id="/pregnancy/maternal_nutrition/nutrition_advantage:label">
             <value>As you may know, nutrition is extremely important for pregnant women. Poor nutrition can have a negative effect on your health, and the health of your baby.</value>
           </text>
+          <text id="/pregnancy/maternal_nutrition/traditional_medicine:label">
+            <value>I would like to discuss about the use of traditional medicine during pregnancy and the effects they have to your health and that of your unborn child.
+Most women use herbs like Mpambawake, Shajaratul Maryam, Mzalia nyuma,Tangawizi and Henna to induce labor, heal abdominal pain, reduce morning sickness and increase blood during pregnancy. However, if these herbs are used in excess and without doctor's consultation, they can lead to high/low blood pressure, miscarriage, birth of a mentally/physically ill baby and sometimes death to either mom, baby or both.</value>
+          </text>
           <text id="/pregnancy/maternal_nutrition:label">
             <value>Maternal Nutriton</value>
           </text>
@@ -456,18 +460,6 @@ Please refer to page 2 of bango kitita.</value>
           </text>
           <text id="/pregnancy/personal_information/can_proceed_with_survey:label">
             <value>I would like to ask you a few questions that will help us improve the health services provided in your community in the future. You can decide you do not want to answer a question – just let me know if you prefer not to answer. Can we proceed?</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone/decline_to_answer:label">
-            <value>Don't know / Decline to answer</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone/no:label">
-            <value>No</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone:label">
-            <value>Did someone come to your house and register you using a phone during a previous pregnancy?</value>
           </text>
           <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_completed_high_school:label">
             <value>Completed high school (Form 6)</value>
@@ -529,6 +521,9 @@ Please refer to page 2 of bango kitita.</value>
           <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/marital_status_dont_know_decline:label">
             <value>Don't know/Decline to answer</value>
           </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/married:label">
+            <value>Married</value>
+          </text>
           <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/single:label">
             <value>Single</value>
           </text>
@@ -537,18 +532,6 @@ Please refer to page 2 of bango kitita.</value>
           </text>
           <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status:label">
             <value>What is your marital status?</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label">
-            <value>Don't know / Decline to answer</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/no:label">
-            <value>No</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation:label">
-            <value>Are you currently married or living together with a man as if married?</value>
           </text>
           <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label">
             <value>Don't know / Decline to answer</value>
@@ -578,10 +561,7 @@ Please refer to page 2 of bango kitita.</value>
             <value>Yes</value>
           </text>
           <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together:label">
-            <value>Does the woman's (husband/partner) usually live here with her?</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+            <value>Are you living together with your husband?</value>
           </text>
           <text id="/pregnancy/personal_information/transport/other_means:label">
             <value>Please specify</value>
@@ -1423,15 +1403,18 @@ Have you experienced:</value>
             <value>No, I didn't get a service</value>
           </text>
           <text id="static_instance-marital_status-0">
-            <value>Single</value>
+            <value>Married</value>
           </text>
           <text id="static_instance-marital_status-1">
-            <value>Widowed</value>
+            <value>Single</value>
           </text>
           <text id="static_instance-marital_status-2">
-            <value>Divorced</value>
+            <value>Widowed</value>
           </text>
           <text id="static_instance-marital_status-3">
+            <value>Divorced</value>
+          </text>
+          <text id="static_instance-marital_status-4">
             <value>Don't know/Decline to answer</value>
           </text>
           <text id="static_instance-paid_for-0">
@@ -2142,6 +2125,11 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <text id="/pregnancy/maternal_nutrition/nutrition_advantage:label">
             <value>Kama unavyojua, Lishe ni muhimu sana kwa Mama wajawazito. Lishe duni inaweza kuathiriri vibaya afya yako na mtoto.</value>
           </text>
+          <text id="/pregnancy/maternal_nutrition/traditional_medicine:label">
+            <value>Ningependa tuzungumze kuhusu dawa za mitishamba wakati wa ujauzito na hatari zake kwa mama mjamzito na mtoto wake.
+Wanawake wengi wanatumia mitishamba kama mpamba wake, shajaratul Maryam, mzalia nyuma na tangawizi kuongeza uchungu, kuponya tumbo, kupunguza homa za asubuhi au hata kuongeza damu. Lakini mitishamba inapotumiwa kwa wingi bila ya ushauri wa daktari husababisha uharibikaji wa ujauzito, kuzaa mtoto mlemavu na hata vifo. 
+Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipimo muafaka, si vyema mjamzito kutumia kwa usalama wake na wa mtoto wake, mama anpohisi kutumia lazima amueleze daktari wake au mhudumu wa kliniki.</value>
+          </text>
           <text id="/pregnancy/maternal_nutrition:label">
             <value>Lishe ya Mama Mjamzito</value>
           </text>
@@ -2152,19 +2140,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/personal_information/can_proceed_with_survey:label">
-            <value>Ningependa kukuuliza maswali machache ambayo yatasaidia kuboreshahuduma za afya katika jamii yako hapo baadae, Unaweza kuamua kutojibu maswali- Niambie tu kama hutapendelea kujibu swali. Tunaweza kuendelea?</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone/decline_to_answer:label">
-            <value>Sijui/siwezi kujibu</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone/yes:label">
-            <value>Ndio.</value>
-          </text>
-          <text id="/pregnancy/personal_information/enrollment_via_phone:label">
-            <value>Je kuna mtu ashawahi kuja nyumbani kwako na kukusajili kwa kutumia simu ya mkononi wakati wa ujauzito wako uliopita?</value>
+            <value>Ningependa kukuuliza maswali machache yanayokuhusu wewe na familia yako katika kuendesha shughuli za kijamii. Maswala haya yatawezesha kuboresha huduma za Afya katika jamii yako. Unaweza kuamua kutojibu maswali- Niambie tu kama hutapendelea kujibu swali. Tunaweza kuendelea?</value>
           </text>
           <text id="/pregnancy/personal_information/partner_info/partner_highest_school_level/partner_completed_high_school:label">
             <value>Nimemaliza sekondari ya juu (fom 6)</value>
@@ -2232,6 +2208,9 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/marital_status_dont_know_decline:label">
             <value>Sijui/siwezi kujibu</value>
           </text>
+          <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/married:label">
+            <value>Nishaolewa</value>
+          </text>
           <text id="/pregnancy/personal_information/subgroup_marital_status/marital_status/single:label">
             <value>Sijaolewa</value>
           </text>
@@ -2242,21 +2221,6 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Ni ipi hali yako ya ndoa?</value>
           </text>
           <text id="/pregnancy/personal_information/subgroup_marital_status:label">
-            <value>-</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label">
-            <value>Sijui/siwezi kujibu</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label">
-            <value>Ndio.</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation:label">
-            <value>Je una mwenza ambae munaishi pamoja?</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_married_or_livein_relation:label">
             <value>-</value>
           </text>
           <text id="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife/decline_to_answer:label">
@@ -2290,10 +2254,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Ndio.</value>
           </text>
           <text id="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together:label">
-            <value>Je mwenza wa mama anaishi nae hapa kwa kawaida?</value>
-          </text>
-          <text id="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>Je unaishi na mwenza wako?</value>
           </text>
           <text id="/pregnancy/personal_information/subgroup_partner_info:label">
             <value>-</value>
@@ -3150,15 +3111,18 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <value>Hapana, sikupata huduma yoyote</value>
           </text>
           <text id="static_instance-marital_status-0">
-            <value>Sijaolewa</value>
+            <value>Nishaolewa</value>
           </text>
           <text id="static_instance-marital_status-1">
-            <value>Mjane</value>
+            <value>Sijaolewa</value>
           </text>
           <text id="static_instance-marital_status-2">
-            <value>Nimeachwa</value>
+            <value>Mjane</value>
           </text>
           <text id="static_instance-marital_status-3">
+            <value>Nimeachwa</value>
+          </text>
+          <text id="static_instance-marital_status-4">
             <value>Sijui/siwezi kujibu</value>
           </text>
           <text id="static_instance-paid_for-0">
@@ -3590,6 +3554,7 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
             <avoid_tea_coffee/>
             <avoid_cahrcoal_and_soil/>
             <anemia_risk/>
+            <traditional_medicine/>
           </maternal_nutrition>
           <llints>
             <malaria_discussion/>
@@ -3623,19 +3588,14 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
               <travel_means/>
               <other_means/>
             </transport>
-            <enrollment_via_phone/>
             <subgroup_decision_maker>
               <decision_maker/>
               <some_other_decision_maker/>
             </subgroup_decision_maker>
-            <subgroup_married_or_livein_relation>
-              <married_or_livein_relation/>
-            </subgroup_married_or_livein_relation>
             <subgroup_marital_status>
               <marital_status/>
             </subgroup_marital_status>
             <subgroup_partner_info>
-              <msg_for_chv_partner_live_together/>
               <does_partner_live_together/>
             </subgroup_partner_info>
             <partner_info>
@@ -4572,18 +4532,22 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
         <root>
           <item>
             <itextId>static_instance-marital_status-0</itextId>
-            <name>single</name>
+            <name>married</name>
           </item>
           <item>
             <itextId>static_instance-marital_status-1</itextId>
-            <name>widowed</name>
+            <name>single</name>
           </item>
           <item>
             <itextId>static_instance-marital_status-2</itextId>
-            <name>divorced</name>
+            <name>widowed</name>
           </item>
           <item>
             <itextId>static_instance-marital_status-3</itextId>
+            <name>divorced</name>
+          </item>
+          <item>
+            <itextId>static_instance-marital_status-4</itextId>
             <name>marital_status_dont_know_decline</name>
           </item>
         </root>
@@ -4808,6 +4772,7 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
       <bind nodeset="/pregnancy/maternal_nutrition/avoid_tea_coffee" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/avoid_cahrcoal_and_soil" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/anemia_risk" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/maternal_nutrition/traditional_medicine" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/llints" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
@@ -4845,16 +4810,13 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <bind nodeset="/pregnancy/personal_information/travel_time" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/personal_information/transport/travel_means" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/personal_information/transport/other_means" relevant="selected( /pregnancy/personal_information/transport/travel_means ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/pregnancy/personal_information/enrollment_via_phone" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" type="select1"/>
       <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/decision_maker" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker" relevant="selected( /pregnancy/personal_information/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_marital_status/marital_status" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;no&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together" readonly="true()" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/pregnancy/personal_information/partner_info/subgroup_partner_age" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" type="int"/>
-      <bind nodeset="/pregnancy/personal_information/partner_info/partner_highest_school_level" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_marital_status/marital_status" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/pregnancy/personal_information/partner_info/subgroup_partner_age" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" type="int"/>
+      <bind nodeset="/pregnancy/personal_information/partner_info/partner_highest_school_level" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
       <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/pregnancy/personal_information/subgroup_multiple_wives/num_wives" relevant="selected( /pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
       <bind nodeset="/pregnancy/group_summary" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;))"/>
       <bind nodeset="/pregnancy/group_summary/healthy_note" readonly="true()" relevant="( /pregnancy/has_referral =0 and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0) or ( /pregnancy/has_referral =0 and  /pregnancy/n_pregnancy_visits  =0 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0)" type="string"/>
@@ -5611,6 +5573,9 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <input ref="/pregnancy/maternal_nutrition/anemia_risk">
         <label ref="jr:itext('/pregnancy/maternal_nutrition/anemia_risk:label')"/>
       </input>
+      <input ref="/pregnancy/maternal_nutrition/traditional_medicine">
+        <label ref="jr:itext('/pregnancy/maternal_nutrition/traditional_medicine:label')"/>
+      </input>
     </group>
     <group ref="/pregnancy/llints">
       <label ref="jr:itext('/pregnancy/llints:label')"/>
@@ -5941,21 +5906,6 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
           <label ref="jr:itext('/pregnancy/personal_information/transport/other_means:label')"/>
         </input>
       </group>
-      <select1 ref="/pregnancy/personal_information/enrollment_via_phone">
-        <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone:label')"/>
-        <item>
-          <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone/no:label')"/>
-          <value>no</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/pregnancy/personal_information/enrollment_via_phone/decline_to_answer:label')"/>
-          <value>decline_to_answer</value>
-        </item>
-      </select1>
       <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_decision_maker">
         <select1 ref="/pregnancy/personal_information/subgroup_decision_maker/decision_maker">
           <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/decision_maker:label')"/>
@@ -5984,26 +5934,13 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
           <label ref="jr:itext('/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker:label')"/>
         </input>
       </group>
-      <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_married_or_livein_relation">
-        <select1 ref="/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation">
-          <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation:label')"/>
-          <item>
-            <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/yes:label')"/>
-            <value>yes</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/no:label')"/>
-            <value>no</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/pregnancy/personal_information/subgroup_married_or_livein_relation/married_or_livein_relation/decline_to_answer:label')"/>
-            <value>decline_to_answer</value>
-          </item>
-        </select1>
-      </group>
       <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_marital_status">
         <select1 ref="/pregnancy/personal_information/subgroup_marital_status/marital_status">
           <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status/married:label')"/>
+            <value>married</value>
+          </item>
           <item>
             <label ref="jr:itext('/pregnancy/personal_information/subgroup_marital_status/marital_status/single:label')"/>
             <value>single</value>
@@ -6023,9 +5960,6 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         </select1>
       </group>
       <group appearance="field-list" ref="/pregnancy/personal_information/subgroup_partner_info">
-        <input ref="/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together">
-          <label ref="jr:itext('/pregnancy/personal_information/subgroup_partner_info/msg_for_chv_partner_live_together:label')"/>
-        </input>
         <select1 ref="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together">
           <label ref="jr:itext('/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together:label')"/>
           <item>
