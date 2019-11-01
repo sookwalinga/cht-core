@@ -115,7 +115,7 @@
             <value>-</value>
           </text>
           <text id="/data/not_in_household_note:label">
-            <value>&lt;span style="color:red;font-weight: bold"&gt;Unajaribu mkumsajili mtu asiye na kaya. Tafadhali ondoka kwenye fomu hii na uchague kaya sahihi.&lt;/span&gt;</value>
+            <value>&lt;span style="color:red;font-weight: bold"&gt;Unajaribu kumsajili mtu asiye na kaya. Tafadhali ondoka kwenye fomu hii na uchague kaya sahihi.&lt;/span&gt;</value>
           </text>
           <text id="/data/person/age_estimate_contact:jr:constraintMsg">
             <value>Umri lazima uwe lati ya miaka 5 hadi miaka 100. Kwa watoto walio chini ya umri wa miaka 5, tarehe yake yao ya kuzaliwa nilazima ichukuliwe.</value>
@@ -210,7 +210,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-10-24_05-20">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-10-31_08-41">
           <inputs>
             <meta>
               <location>
@@ -299,7 +299,7 @@
       <bind constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" nodeset="/data/person/age_estimate_contact" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" required="true()" type="int"/>
       <bind calculate="if(../age_estimate_contact != '', format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact, 1900)" nodeset="/data/person/yob" type="string"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" nodeset="/data/person/dob" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
-      <bind nodeset="/data/person/temp_hh_member" required="true()" type="select1"/>
+      <bind nodeset="/data/person/temp_hh_member" relevant=" /data/not_in_household_flag  = 0" required="true()" type="select1"/>
       <bind calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')" nodeset="/data/person/date_of_birth" type="string"/>
       <bind calculate="../date_of_birth" nodeset="/data/person/date_of_birth_c" type="string"/>
       <bind calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)" nodeset="/data/person/is_exact_dob_in_range" type="string"/>
