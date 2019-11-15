@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Remove person from household"
+    },
+    {
+      "locale": "sw",
+      "content": "Muondoe mteja katika kaya hii"
+    }
+  ],
+  "icon": "moving",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "contact && contact.type === 'person' && contact.parent && contact.parent.parent && contact.parent.parent.parent && !contact.date_of_death && !contact.muted"
+  }
+}

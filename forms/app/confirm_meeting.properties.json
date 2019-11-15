@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Confirm Meeting"
+    },
+    {
+      "locale": "sw",
+      "content": "Uthibisho wa Mkutano"
+    }
+  ],
+  "icon": "confirm-meeting",
+  "context": {
+    "person": false,
+    "place": true,
+    "expression": "!contact.parent.parent.parent && !contact.parent.parent"
+  }
+}

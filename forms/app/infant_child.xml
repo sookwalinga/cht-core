@@ -19,9 +19,7 @@
             <value>&lt;span style="color:#f58a1f;font-weight:bold"&gt;ADVISE FOR CONCERN:&lt;/span&gt; &lt;span style="color:#f58a1f"&gt;Ask the caregiver to copy the child's movements, to follow the child's lead.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/assess_behavior/discuss_correcting:label">
-            <value>I want to discuss with you ways to correct the child when they are acting/doing an unwanted behavior. For example, maybe the child is trying to take a very hot cup of chai. This is bad, because the child might spill the cup and get burnt. Can you show me how you would correct the child in this situation?
-
-&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>I want to discuss with you ways to correct the child when they are acting/doing an unwanted behavior. For example, maybe the child is trying to take a very hot cup of chai. This is bad, because the child might spill the cup and get burnt. Can you show me how you would correct the child in this situation?</value>
           </text>
           <text id="/infant_child/assess_behavior/has_observed_comforting/no:label">
             <value>No</value>
@@ -297,6 +295,15 @@ Children communicate with us from a young age, even before learning to speak the
           <text id="/infant_child/assess_dev_coach_play_communication:label">
             <value>Care for child development (CCD): Assess Development and Coach on Play and Communication</value>
           </text>
+          <text id="/infant_child/child_danger_signs/child_cold/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_cold/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_cold:label">
+            <value>Is the child having cold or low temperature?</value>
+          </text>
           <text id="/infant_child/child_danger_signs/child_convulsions/no:label">
             <value>No</value>
           </text>
@@ -304,19 +311,73 @@ Children communicate with us from a young age, even before learning to speak the
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_danger_signs/child_convulsions:label">
-            <value>ASK: Has the child recently had any convulsions?</value>
+            <value>Has the child recently had any convulsions?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_coughing/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_coughing/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_coughing:label">
+            <value>Is the child coughing ?</value>
           </text>
           <text id="/infant_child/child_danger_signs/child_danger_sign_note:label">
             <value>The child has a danger sign. Advise the mother to go to any nearby health facility within the next 24 hours so a doctor can look at the child and help.</value>
           </text>
-          <text id="/infant_child/child_danger_signs/child_drink/no:label">
+          <text id="/infant_child/child_danger_signs/child_diarrhea/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/child_danger_signs/child_drink/yes:label">
+          <text id="/infant_child/child_danger_signs/child_diarrhea/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/infant_child/child_danger_signs/child_drink:label">
-            <value>ASK: Is the child able to drink or breastfeed?</value>
+          <text id="/infant_child/child_danger_signs/child_diarrhea:label">
+            <value>Does the child have diarrhea ?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_difficulty_fast_breathing/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_difficulty_fast_breathing/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_difficulty_fast_breathing:label">
+            <value>Is the child having difficulty or fast breathing (Two counts of 60 breaths or more in one minute)?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_6_months_to_2_years/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_6_months_to_2_years/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_6_months_to_2_years:label">
+            <value>Is the child able to drink or breastfeed?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_above_2_years/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_above_2_years/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_above_2_years:label">
+            <value>Is the child able to eat and drink?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_below_6_months/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_below_6_months/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_below_6_months:label">
+            <value>Is the child able to breastfeed?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_fever/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_fever/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_fever:label">
+            <value>Does the child have fever or high temperature ?</value>
           </text>
           <text id="/infant_child/child_danger_signs/child_lethargic/no:label">
             <value>No</value>
@@ -325,7 +386,16 @@ Children communicate with us from a young age, even before learning to speak the
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_danger_signs/child_lethargic:label">
-            <value>ASK: Is the child lethargic or unconscious?</value>
+            <value>Is the child lethargic or unconscious?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_skin_boils/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_skin_boils/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_skin_boils:label">
+            <value>Does the child have skin boils ?</value>
           </text>
           <text id="/infant_child/child_danger_signs/child_vomit/no:label">
             <value>No</value>
@@ -334,18 +404,18 @@ Children communicate with us from a young age, even before learning to speak the
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_danger_signs/child_vomit:label">
-            <value>ASK: Does the child vomit everything?</value>
+            <value>Does the child vomit everything?</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_131:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_132:label">
             <value>Child Danger Signs</value>
           </text>
           <text id="/infant_child/child_danger_signs/no_child_danger_sign_note:label">
-            <value>SAY: No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
+            <value>No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -552,7 +622,7 @@ Thank you for talking about this issues with me today. I noticed a concern that 
           <text id="/infant_child/essential_newborn_breastfeeding/baby_warm_note:label">
             <value>How is the baby being kept warm? 
 
-&lt;span style="color:#f58a1f"&gt;Praise the family if the baby is kept well wrapped and close to the mother, and is bathed with warm water and dried and wrapped immediately. If not, try to solve any problems.&lt;/span&gt;</value>
+&lt;span style="color:#f58a1f"&gt;Praise the family if the baby is kept well wrapped and close to the mother, and is bathed with warm water and dried and wrapped immediately. If not, try to solve any problems. Refer to page 10 of Bango Kitita for more information.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/breastfeeding_positions_length_note:label">
             <value>What positions are you using? How frequently do you breastfeed? How long will the baby feed at one time?
@@ -572,6 +642,9 @@ Thank you for talking about this issues with me today. I noticed a concern that 
             <value>I'd like to talk to you more about breastfeeding.
 
 ASK: have you ever breastfed?</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusive_breastfeeding_bango_kitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Educate the mother about the importance of exclusive breastfeeding in the first 6 months and the importance of frequently breastfeeding the child. Please refer to page number 13 of bango kitita. &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding/no:label">
             <value>No</value>
@@ -616,6 +689,9 @@ ASK: have you ever breastfed?</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding:label">
             <value>Essential Newborn Care: Breastfeeding</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_bango_kitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Educate the mother about the proper positioning and attachment of the baby during breastfeeding. Refer to page numbers 16 and 17 of Bango Kitita.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1:label">
             <value form="image">jr://images/attachment_pic_1.png</value>
@@ -671,12 +747,18 @@ ASK: have you ever breastfed?</value>
           <text id="/infant_child/essential_newborn_breastfeeding_positioning:label">
             <value>Essential Newborn Care: Positioning</value>
           </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_note:label">
+          <text id="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_above_6_months:label">
             <value>Hygiene is very important during complimentary feeding, advise this to the mother:
 
-&lt;span style="display:block;padding-left:1em"&gt;Good hygiene is important to avoid diarrhea
-&lt;span style="display:block;padding-left:1em"&gt;Use a clean spoon or cup to give foods or liquids to your baby.
-&lt;span style="display:block;padding-left:1em"&gt;Wash your hands with soap and running water frequently.</value>
+&lt;span style="display:block;padding-left:1em"&gt;Good hygiene is important to avoid diarrhea&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Use a clean spoon or cup to give foods or liquids to your baby.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Wash your hands with soap and running water frequently.&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_below_6_months:label">
+            <value>Hygiene is very important during complimentary feeding, advise this to the mother:
+
+&lt;span style="display:block;padding-left:1em"&gt;Good hygiene is important to avoid diarrhea. &lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Wash your hands with soap and running water frequently.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/food_hygiene_note:label">
             <value>Let's talk about food Hygiene:
@@ -711,7 +793,7 @@ ASK: have you ever breastfed?</value>
             <value>Essential Newborn Care -- Nutrition</value>
           </text>
           <text id="/infant_child/essential_newborn_cord/cord_care_note:label">
-            <value>SAY: Your baby's umbilical cord stump dries out and eventually falls off - usually within one to two weeks after birth. In the meantime, treat the area gently:
+            <value>Your baby's umbilical cord stump dries out and eventually falls off - usually within one to two weeks after birth. In the meantime, treat the area gently:
 
 &lt;span style="display:block;padding-left:1em"&gt;Keep the stump dry._Expose the stump to air to help dry out the base. Keep the front of your baby's diaper folded down to avoid covering the stump.&lt;/span&gt;
 &lt;span style="display:block;padding-left:1em"&gt;DO NOT apply any substance to the cord._ It may be dangerous to your baby to apply any substances to his or her cord.&lt;/span&gt;
@@ -736,7 +818,7 @@ ASK: have you ever breastfed?</value>
 &lt;span style="display:block;padding-left:1em"&gt;COMMUNICATE: Smile and laugh with your child. Talk to your child. Get a conversation going by copying your child's sounds or gestures. &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_stimulation/newborn_stimulation_note:label">
-            <value>SAY: You and your partner/ husband or family members are responsible for the infant's brain and mind development, and these early months and years should be used for his/her growth.
+            <value>You and your partner/ husband or family members are responsible for the infant's brain and mind development, and these early months and years should be used for his/her growth.
 
 A newborn baby can see things, feel things, and can respond to the voices and sounds she or he hears. A baby can tell us she or he is hungry or unhappy by the sounds he makes. A baby loves to see faces of her or his mum and dad (or other important caregiver). [see translation in EFFECTS job aids]
 
@@ -772,7 +854,7 @@ For your newborn baby, you can:</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/first_visit_6_months/child_card_available:label">
-            <value>ASK: Is the child card available?</value>
+            <value>Is the child card available?</value>
           </text>
           <text id="/infant_child/first_visit_6_months/child_size_birth/large:label">
             <value>Large</value>
@@ -784,7 +866,7 @@ For your newborn baby, you can:</value>
             <value>Small</value>
           </text>
           <text id="/infant_child/first_visit_6_months/child_size_birth:label">
-            <value>ASK: Approximately how large was the baby at birth?</value>
+            <value>Approximately how large was the baby at birth?</value>
           </text>
           <text id="/infant_child/first_visit_6_months/delivery_location/at_home:label">
             <value>At home</value>
@@ -796,7 +878,7 @@ For your newborn baby, you can:</value>
             <value>On the way to the health facility</value>
           </text>
           <text id="/infant_child/first_visit_6_months/delivery_location:label">
-            <value>ASK: Where was the child born?</value>
+            <value>Where was the child born?</value>
           </text>
           <text id="/infant_child/first_visit_6_months/encourage_small_baby_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Look at child card and/or KMC booklet for next scheduled follow-up visit. Advise mother to return to the facility for scheduled follow up visits&lt;/span&gt;</value>
@@ -886,7 +968,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Hand Washing</value>
           </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
-            <value>Ask mother to make sure facility staff records vaccinations on Child Health Card.</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Ask mother to make sure facility staff records vaccinations on Child Health Card.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/immunizations/family_refused_note:label">
             <value>Please invite your husband and family so we can explain the importance of vaccinations.</value>
@@ -900,71 +982,56 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/immunizations/has_health_card:label">
             <value>Now I would like to review your child's health card to make sure they have received all their vaccines so far. Do you have your child's health card?</value>
           </text>
-          <text id="/infant_child/immunizations/msg_for_chv_next_vaccine_14:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
-          </text>
           <text id="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14/no:label">
-            <value>No</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14:label">
-            <value>LOOK at the health card. Is the next dose to be given the week 14 dose?</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14_note:label">
-            <value>Next time you get vaccines, your child will get the IPV vaccine (polio vaccine shot instead of drops). Please don't be worried – it is safe and good for your child to receive these vaccines.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bcg_date:label">
-            <value>Enter the date that the child received the BCG vaccine</value>
+            <value>Enter the date that the child received the BCG (TB) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv0_date:label">
-            <value>Enter the date that the child received the bOPV0 vaccine</value>
+            <value>Enter the date that the child received the bOPV 0 (Polio, at birth) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:label">
-            <value>Enter the date that the child received the bOPV1 vaccine</value>
+            <value>Enter the date that the child received the bOPV 1 (Polio, week 6) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv2_date:label">
-            <value>Enter the date that the child received the bOPV2 vaccine</value>
+            <value>Enter the date that the child received the bOPV 2 (Polio, week 10) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv3_date:label">
-            <value>Enter the date that the child received the bOPV3 vaccine</value>
+            <value>Enter the date that the child received the bOPV 3 (Polio, week 14) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:label">
-            <value>Enter the date that the child received the DTP-HepB-Hib1 vaccine</value>
+            <value>Enter the date that the child received the DTP-HepB-Hib 1 (Penta, Week 6) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:label">
-            <value>Enter the date that the child received the DTP-HepB-Hib2 vaccine</value>
+            <value>Enter the date that the child received the DTP-HepB-Hib 2 (Penta, Week 10) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:label">
-            <value>Enter the date that the child received the DTP-HepB-Hib3 vaccine</value>
+            <value>Enter the date that the child received the DTP-HepB-Hib 3 (Penta, Week 14) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
@@ -1023,23 +1090,26 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Normally, when an infant receives BCG vaccination, a vaccine mark should be visible on the right arm after 3 months. If the vaccine mark is not visible, then advice the mother to take her child to the health facility to receive another BCG vaccination.&lt;/span&gt;</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:label">
-            <value>Enter the date that the child received the PCVI 1 vaccine</value>
+            <value>Enter the date that the child received the PCV 1 (Penumococcal , Pneumonia, Week 6) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:label">
-            <value>Enter the date that the child received the PCVI 2 vaccine</value>
+            <value>Enter the date that the child received the PCV 2 (Penumococcal , Pneumonia, Week 10) .</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:label">
-            <value>Enter the date that the child received the PCVI 3 vaccine</value>
+            <value>Enter the date that the child received the PCV 3 (Penumococcal , Pneumonia, Week 14) .</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bcg/no:label">
             <value>No</value>
@@ -1048,7 +1118,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bcg:label">
-            <value>Did the child receive the BCG vaccine?</value>
+            <value>Did the child receive the BCG (TB) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv0/no:label">
             <value>No</value>
@@ -1057,7 +1127,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv0:label">
-            <value>Did the child receive the bOPV0 vaccine?</value>
+            <value>Did the child receive the bOPV 0 (Polio, at birth) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv1/no:label">
             <value>No</value>
@@ -1066,7 +1136,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv1:label">
-            <value>Did the child receive the bOPV1 vaccine?</value>
+            <value>Did the child receive the bOPV 1 (Polio, week 6) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv2/no:label">
             <value>No</value>
@@ -1075,7 +1145,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv2:label">
-            <value>Did the child receive the bOPV2 vaccine?</value>
+            <value>Did the child receive the bOPV 2 (Polio, week 10) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv3/no:label">
             <value>No</value>
@@ -1084,7 +1154,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv3:label">
-            <value>Did the child receive the bOPV3 vaccine?</value>
+            <value>Did the child receive the bOPV 3 (Polio, week 14) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1/no:label">
             <value>No</value>
@@ -1093,7 +1163,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1:label">
-            <value>Did the child receive the DTP-HepB-Hib1 vaccine?</value>
+            <value>Did the child receive the DTP-HepB-Hib 1 (Penta, Week 6) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2/no:label">
             <value>No</value>
@@ -1102,7 +1172,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2:label">
-            <value>Did the child receive the DTP-HepB-Hib2 vaccine?</value>
+            <value>Did the child receive the DTP-HepB-Hib 2 (Penta, Week 10) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3/no:label">
             <value>No</value>
@@ -1111,7 +1181,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3:label">
-            <value>Did the child receive the DTP-HepB-Hib3 vaccine?</value>
+            <value>Did the child receive the DTP-HepB-Hib 3 (Penta, Week 14) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_ipv/no:label">
             <value>No</value>
@@ -1129,7 +1199,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi1:label">
-            <value>Did the child receive the PCVI 1 vaccine?</value>
+            <value>Did the child receive the PCV 1 (Penumococcal , Pneumonia, Week 6) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi2/no:label">
             <value>No</value>
@@ -1138,7 +1208,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi2:label">
-            <value>Did the child receive the PCVI 2 vaccine?</value>
+            <value>Did the child receive the PCV 2 (Penumococcal , Pneumonia, Week 10) ?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi3/no:label">
             <value>No</value>
@@ -1147,7 +1217,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi3:label">
-            <value>Did the child receive the PCVI 3 vaccine?</value>
+            <value>Did the child receive the PCV 3 (Penumococcal , Pneumonia, Week 14) ?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota1/no:label">
             <value>No</value>
@@ -1156,7 +1226,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota1:label">
-            <value>Did the child receive the Rota 1 vaccine?</value>
+            <value>Did the child receive the Rota 1 (Week 6) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota2/no:label">
             <value>No</value>
@@ -1165,7 +1235,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota2:label">
-            <value>Did the child receive the Rota 2 vaccine?</value>
+            <value>Did the child receive the Rota 2 (Week 10) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella1/no:label">
             <value>No</value>
@@ -1174,7 +1244,7 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella1:label">
-            <value>Did the child receive the Surua - Rubella 1 vaccine?</value>
+            <value>Did the child receive the Surua - Rubella 1 (9 months) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella2/no:label">
             <value>No</value>
@@ -1183,31 +1253,31 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Yes</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella2:label">
-            <value>Did the child receive the Surua - Rubella 2 vaccine?</value>
+            <value>Did the child receive the Surua - Rubella 2 (18 months) vaccine?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota1_date:label">
-            <value>Enter the date that the child received the Rota 1 vaccine</value>
+            <value>Enter the date that the child received the Rota 1 (Week 6) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota2_date:label">
-            <value>Enter the date that the child received the Rota 2 vaccine</value>
+            <value>Enter the date that the child received the Rota 2 (Week 10) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:label">
-            <value>Enter the date that the child received the Surua - Rubella 1 vaccine</value>
+            <value>Enter the date that the child received the Surua - Rubella 1 (9 months) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg">
             <value>You have entered the date in the future</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:label">
-            <value>Enter the date that the child received the Surua - Rubella 2 vaccine</value>
+            <value>Enter the date that the child received the Surua - Rubella 2 (18 months) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/too_old_note:label">
             <value>Okay, please continue taking care of your child.</value>
@@ -1338,7 +1408,7 @@ Do you have a mosquito net?</value>
             <value>Male Involvement</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/child_underweight_note:label">
-            <value>SAY: Your child is underweight. You should go to the nearest healthcare facility to see a doctor to check on your baby.</value>
+            <value>Your child is underweight. You should go to the nearest healthcare facility to see a doctor to check on your baby.</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/growth_graph_range/above_2:label">
             <value>Above 2</value>
@@ -1371,7 +1441,7 @@ Do you have a mosquito net?</value>
             <value>Baby is okay. Praise the caregiver.</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/muac_red_note:label">
-            <value>SAY: Based on your child's MUAC, he/she is severely malnourished. In order to assist you in providing proper nutrition to your child, I am conducting a referral and will return in a few days to follow up on the referral.</value>
+            <value>Based on your child's MUAC, he/she is severely malnourished. In order to assist you in providing proper nutrition to your child, I am conducting a referral and will return in a few days to follow up on the referral.</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/muac_yellow_note:label">
             <value>The child is at risk for malnutrition.
@@ -1384,8 +1454,10 @@ SAY: Your child is in need of special care and attention to keep from getting ma
             <value>Palm is yellow or pale</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor:label">
-            <value>SAY: I will now check your child for anemia.
-Is there palm pallor? Compare CHV palm with that of a child.</value>
+            <value>I will now check your child for anemia.</value>
+          </text>
+          <text id="/infant_child/malnutrition_anemia/palm_pallor_chv_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Is there palm pallor? Compare CHV palm with that of a child.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor_referral_note:label">
             <value>In order to assist you in providing proper care to your child, I will conduct a referral for anemia.</value>
@@ -1406,7 +1478,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_cold:label">
-            <value>Cold or low temperature</value>
+            <value>Is the baby feeling cold or has low temperature?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_cord_bleeding/no:label">
             <value>No</value>
@@ -1415,10 +1487,13 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_cord_bleeding:label">
-            <value>Cord red, bleeding, or draining pus</value>
+            <value>Is the baby's cord red, bleeding, or draining pus?</value>
+          </text>
+          <text id="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Educate the mother on how to identify neonatal danger signs and the importance of seeking medical assistance at the health facility as soon as possible. Please refer to bango kitita, page number 18. &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label">
-            <value>SAY: I'm now going to screen your baby for neonatal danger signs. Has your baby exhibited any of these symptoms within the past 24 hours?</value>
+            <value>I'm now going to screen your baby for neonatal danger signs. Has your baby exhibited any of these symptoms within the past 24 hours?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_diarrhea/no:label">
             <value>No</value>
@@ -1427,7 +1502,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_diarrhea:label">
-            <value>Diarrhea</value>
+            <value>Does the baby have diarrhea?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/no:label">
             <value>No</value>
@@ -1436,7 +1511,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing:label">
-            <value>Difficulty or fast breathing (Two counts of 60 breaths or more in one minute)</value>
+            <value>Is the baby having difficulty or fast breathing (Two counts of 60 breaths or more in one minute)?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_crying/no:label">
             <value>No</value>
@@ -1445,7 +1520,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_crying:label">
-            <value>Excessive crying or restlessness for more than one hour, non-stop</value>
+            <value>is the baby excessively crying or restlessness for more than one hour, non-stop?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_vomiting/no:label">
             <value>No</value>
@@ -1454,7 +1529,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_vomiting:label">
-            <value>Excessive vomiting</value>
+            <value>Is the baby vomiting excessively?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_eyes_pus/no:label">
             <value>No</value>
@@ -1463,7 +1538,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_eyes_pus:label">
-            <value>Eyes draining pus</value>
+            <value>Are the baby's eyes draining pus?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_fever/no:label">
             <value>No</value>
@@ -1472,7 +1547,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_fever:label">
-            <value>Fever or high temperature</value>
+            <value>Does the baby have fever or high temperature?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_had_convulsions/no:label">
             <value>No</value>
@@ -1481,7 +1556,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_had_convulsions:label">
-            <value>Had convulsions</value>
+            <value>Has the baby had convulsions?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_no_movement/no:label">
             <value>No</value>
@@ -1490,7 +1565,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_no_movement:label">
-            <value>Movement only when stimulated, or no movement even on stimulation</value>
+            <value>Is the baby only moving when stimulated?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_not_able_feed/no:label">
             <value>No</value>
@@ -1499,7 +1574,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_not_able_feed:label">
-            <value>Not able to feed since birth, or stopped feeding well</value>
+            <value>Has the baby not been able to feed since birth, or stopped feeding well?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils/no:label">
             <value>No</value>
@@ -1508,7 +1583,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils:label">
-            <value>Skin boils</value>
+            <value>Does the baby have skin boils?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms/no:label">
             <value>No</value>
@@ -1517,15 +1592,15 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
-            <value>Yellow or pale palms and soles (hands and feet), and lips. Soles should be red/pink.</value>
+            <value>Does the baby have yellow or pale palms and soles (hands and feet), and lips? Soles should be red/pink.</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_116:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_117:label">
             <value>Other Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -1535,7 +1610,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension:label">
-            <value>Abdominal distension</value>
+            <value>Does the baby have abdominal distension?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color/no:label">
             <value>No</value>
@@ -1544,7 +1619,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color:label">
-            <value>Blue in color</value>
+            <value>Is the baby blue in color?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/no:label">
             <value>No</value>
@@ -1553,7 +1628,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel:label">
-            <value>Bulging anterior fontanel</value>
+            <value>Does the baby have a bulging anterior fontanel?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_congenital/no:label">
             <value>No</value>
@@ -1562,7 +1637,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_congenital:label">
-            <value>Congenital abnormality</value>
+            <value>Does the baby have congenital abnormality?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge/no:label">
             <value>No</value>
@@ -1571,7 +1646,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge:label">
-            <value>Eye discharge or swollen eyes</value>
+            <value>Is the baby experiencing eye discharge or swollen eyes?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_stool/no:label">
             <value>No</value>
@@ -1580,7 +1655,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_stool:label">
-            <value>Not passing stool for a day</value>
+            <value>Is the baby not passing stool for a day?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_urine/no:label">
             <value>No</value>
@@ -1589,7 +1664,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_urine:label">
-            <value>Not passing urine for a day</value>
+            <value>Is the child not passing urine for a day?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_not_crying/no:label">
             <value>No</value>
@@ -1598,7 +1673,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_not_crying:label">
-            <value>Not crying or breathing normally</value>
+            <value>Is the baby not crying or not breathing normally?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_skin_rash/no:label">
             <value>No</value>
@@ -1607,7 +1682,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_skin_rash:label">
-            <value>Skin rash</value>
+            <value>Is the baby having skin rash?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_vomiting/no:label">
             <value>No</value>
@@ -1616,7 +1691,7 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
             <value>Yes</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_vomiting:label">
-            <value>Occasional vomiting</value>
+            <value>Is the baby occasionally vomiting?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note:label">
             <value>No danger signs were identified in your baby, but if the baby develops any of the signs we discussed, you should go the health facility immediately.</value>
@@ -1624,11 +1699,17 @@ Is there palm pallor? Compare CHV palm with that of a child.</value>
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;A danger sign has been identified. Advise the mother to go to any nearby health facility within the next 24 hours so a doctor can look at the baby and help.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/yes:label">
             <value>Yes</value>
+          </text>
+          <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
+            <value>If you haven't already, and if you've been providing pregnancy services to <output value=" /infant_child/child_name "/>'s mother , you should conduct the postpartum visit with her as soon as you finish the infant/child visit.</value>
+          </text>
+          <text id="/infant_child/next_task_reminder:label">
+            <value>Pospartum Visit Reminder</value>
           </text>
           <text id="/infant_child/problem_solving/challenge_play_comm:label">
             <value>Many people may face challenges when it comes to playing and communicating with their child to stimulate child development. I want to talk to you about some common challenges parents face.</value>
@@ -2044,9 +2125,7 @@ For your newborn baby, you can:</value>
             <value>&lt;span style="color:#f58a1f;font-weight:bold"&gt;MSHAURI:&lt;/span&gt; &lt;span style="color:#f58a1f"&gt;Muombe mlezi kuiga mienendo ya mtoto na kufata vile mtoto anavyotaka.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/assess_behavior/discuss_correcting:label">
-            <value>Naomba kujadiliana na wewe njia mzuri ya kuwarekebisha watoto wakiwa wamefanya makosa, kwa mfano jaalia mtoto anataka kuchukua kikombe cha chai moto, hili ni kosa, kwasababu huenda chai ikamwagikia akaungua. Je unaweza kunionesha ni vipi unaweza kumrekebisha mtoto katika hali hii?
-
-&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>Naomba kujadiliana na wewe njia mzuri ya kuwarekebisha watoto wakiwa wamefanya makosa, kwa mfano jaalia mtoto anataka kuchukua kikombe cha chai moto, hili ni kosa, kwasababu huenda chai ikamwagikia akaungua. Je unaweza kunionesha ni vipi unaweza kumrekebisha mtoto katika hali hii?</value>
           </text>
           <text id="/infant_child/assess_behavior/has_observed_comforting/no:label">
             <value>Hapana</value>
@@ -2328,6 +2407,15 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/assess_dev_coach_play_communication:label">
             <value>Matunzo kwa ajili ya Maendeleo ya Mtoto. (CCD): Tathmini maendeleo na fundisha kuhusu mawasiliano na michezo</value>
           </text>
+          <text id="/infant_child/child_danger_signs/child_cold/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_cold/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_cold:label">
+            <value>Je mtoto anaona baridi au ana kiwango cha chini cha joto?</value>
+          </text>
           <text id="/infant_child/child_danger_signs/child_convulsions/no:label">
             <value>Hapana</value>
           </text>
@@ -2337,17 +2425,71 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_danger_signs/child_convulsions:label">
             <value>Je mtoto amewahi kupata degedege kwa siku za karibuni?</value>
           </text>
+          <text id="/infant_child/child_danger_signs/child_coughing/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_coughing/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_coughing:label">
+            <value>Je mtoto anakohoa?</value>
+          </text>
           <text id="/infant_child/child_danger_signs/child_danger_sign_note:label">
             <value>Mtoto anaonesha kuwa ana dalili za hatari. Mshauri mama aende kituo cha afya kilichopo karibu naye ndani ya saa 24 ili daktari amuone mtoto na kumsaidia.</value>
           </text>
-          <text id="/infant_child/child_danger_signs/child_drink/no:label">
+          <text id="/infant_child/child_danger_signs/child_diarrhea/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/child_danger_signs/child_drink/yes:label">
+          <text id="/infant_child/child_danger_signs/child_diarrhea/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/infant_child/child_danger_signs/child_drink:label">
+          <text id="/infant_child/child_danger_signs/child_diarrhea:label">
+            <value>Je mtoto anaharisha?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_difficulty_fast_breathing/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_difficulty_fast_breathing/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_difficulty_fast_breathing:label">
+            <value>Je mtoto anapumua kwa tabu au kwa haraka (anapumua mara 60 au zaidi kwa daikika moja)?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_6_months_to_2_years/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_6_months_to_2_years/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_6_months_to_2_years:label">
             <value>Je mtoto anaweza kunywa au kunyonya maziwa ya mama?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_above_2_years/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_above_2_years/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_above_2_years:label">
+            <value>Je mtoto anaweza kula na kunywa?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_below_6_months/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_below_6_months/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_drink_below_6_months:label">
+            <value>Je mtoto anaweza kunyonya maziwa ya mama?</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_fever/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_fever/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_fever:label">
+            <value>Je mtoto an homa au joto kali?</value>
           </text>
           <text id="/infant_child/child_danger_signs/child_lethargic/no:label">
             <value>Hapana</value>
@@ -2358,6 +2500,15 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_danger_signs/child_lethargic:label">
             <value>Je mtoto analegea na kupoteza fahamu?</value>
           </text>
+          <text id="/infant_child/child_danger_signs/child_skin_boils/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_skin_boils/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/child_danger_signs/child_skin_boils:label">
+            <value>Je mtoto ana majipu katika ngozi?</value>
+          </text>
           <text id="/infant_child/child_danger_signs/child_vomit/no:label">
             <value>Hapana</value>
           </text>
@@ -2367,16 +2518,16 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_danger_signs/child_vomit:label">
             <value>Je mtoto anatapika kila kitu?</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_131:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_132:label">
             <value>Dalili za hatari za mtoto</value>
           </text>
           <text id="/infant_child/child_danger_signs/no_child_danger_sign_note:label">
             <value>Hakuna dalili ya hatari yoyote iliyoonekana kwa mtoto wako, lakini ikitokea mtoto ameonesha dalili yoyote ya hatari tulizojadili, hakikisha unamuwahisha kituo cha afya kilichopo karibu nawe haraka.</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -2583,7 +2734,7 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
           <text id="/infant_child/essential_newborn_breastfeeding/baby_warm_note:label">
             <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;ULIZA na CHUNGUZA: &lt;/span&gt; Je vipi mtoto anahifadhiwa? 
 
-&lt;span style="color:#f58a1f"&gt;Mpongeze mlezi ikiwa mtoto huwa anafungwa vizuri na kuwa karibu na mama yake, na ikiwa anakoshwa kwa maji ya vuguvugu na kukaushwa haraka. Ikiwa sio, jaribu kutatua tatizo.&lt;/span&gt;</value>
+&lt;span style="color:#f58a1f"&gt;Mpongeze mlezi ikiwa mtoto huwa anafunikwa vizuri na kuwa karibu na mama yake, na ikiwa anakoshwa kwa maji ya vuguvugu na kukaushwa haraka. Ikiwa sio, jaribu kutatua tatizo. Angalia ukurasa wa 10 wa Bango Kitita kwa melezo zaidi.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/breastfeeding_positions_length_note:label">
             <value>Je unamuekaje mtoto ukitaka kumnyonyesha? Unanyonyesha kila baada ya kipindi gani? mtoto anachukua muda gani kunyonya kwa mara moja? 
@@ -2597,10 +2748,13 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding:label">
-            <value>Je unanyonyesha sasa hivi?</value>
+            <value>Je bado mtoto wako ananyonya?</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/ever_breastfed:label">
             <value>Ningependa kuzungumza na wewe kuhusu unyonyeshaji wa mtoto.</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusive_breastfeeding_bango_kitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Muelimishe mama umuhimu wa kumnyonyesha mwanawe maziwa ya mama pekee kwa miezi sita ya mwanzo na muhamasishe kunyonesha mtoto mwara kwa mara. Fungua kadi namba 13 katika bango kitita kwa maelezo zaidi. &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding/no:label">
             <value>Hapana</value>
@@ -2647,7 +2801,10 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
             <value>-</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding:label">
-            <value>Huduma muhimu ya watoto wachanga: kuhifadhi na kunyonyesha</value>
+            <value>Huduma muhimu ya watoto wachanga: Kuhifadhi na kunyonyesha</value>
+          </text>
+          <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_bango_kitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Muelimishe mama njia nzuri za upakataji na uwekaji wa mtoto katika ziwa ili kufanikisha unyonyrshaji. Fungua bango kitita kadi namba 16 na 17.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1:label">
             <value form="image">jr://images/attachment_pic_1.png</value>
@@ -2704,11 +2861,17 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
           <text id="/infant_child/essential_newborn_breastfeeding_positioning:label">
             <value>Huduma muhimu ya watoto wachanga: Upakataji na uwekaji wa mtoto katika titi.</value>
           </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_note:label">
+          <text id="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_above_6_months:label">
             <value>Usafi ni muhimu wakati wa chakula cha ziada, mshauri hivi mama:
 
 &lt;span style="display:block;padding-left:1em"&gt;Usafi ni muhimu huzuiya mtoto kuharisha.&lt;/span&gt;
 &lt;span style="display:block;padding-left:1em"&gt;Tumia kjiko na kikombe safi wakati wa kumlisha na kumnywesha mtoto.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Kosha mikono yako kwa sabuni na maji yanaotiririka mara kwa mara.&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_below_6_months:label">
+            <value>Usafi ni muhimu wakati wa chakula cha ziada, mshauri hivi mama:
+
+&lt;span style="display:block;padding-left:1em"&gt;Usafi ni muhimu huzuiya mtoto kuharisha.&lt;/span&gt;
 &lt;span style="display:block;padding-left:1em"&gt;Kosha mikono yako kwa sabuni na maji yanaotiririka mara kwa mara.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/food_hygiene_note:label">
@@ -2736,7 +2899,7 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
           <text id="/infant_child/essential_newborn_care_nutrition/variety_foods_note:label">
             <value>Jaribu kupika vyakula tofauti tofauti kwa ajili ya mtoto:
 
-&lt;span style="display:block;padding-left:1em"&gt;Kila wiki unaweza kuongeza aina mpya ya chakula kwa mtoto. Mlishe mtoto chakula cha ziada mara mbili kwa siku. Mpe mtoto tastes mara mbili au tatu kwenye kila mlo. Maziwa ya mama yabaki kuwa ni chakula kikuu kwenye umri huu wa mtoto. Endelea kunyonyesha kwa mujibu wa mahitaji ya mtoto.&lt;/span&gt;
+&lt;span style="display:block;padding-left:1em"&gt;Kila wiki unaweza kuongeza aina mpya ya chakula kwa mtoto. Mlishe mtoto chakula cha ziada mara mbili kwa siku. Mpe mtoto ladha tofauti mara mbili au tatu kwenye kila mlo. Maziwa ya mama yabaki kuwa ni chakula kikuu kwenye umri huu wa mtoto. Endelea kunyonyesha kwa mujibu wa mahitaji ya mtoto.&lt;/span&gt;
 &lt;span style="display:block;padding-left:1em"&gt;Kunywa maji masafi na ya kawaida ni kitu kizuri kwa afya ya mtoto.&lt;/span&gt;
 &lt;span style="display:block;padding-left:1em"&gt;Mlishe mtoto kwenye chombo cha peke yake.&lt;/span&gt;</value>
           </text>
@@ -2919,7 +3082,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Uoshaji wa mikono</value>
           </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
-            <value>_Muombe mama ahakikishe kuwa wahudumu wa kituo cha afya wanaandika rikodi kuhusu chanjo kwenye kadi la afya la mtoto._</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Muombe mama ahakikishe kuwa wahudumu wa kituo cha afya wanaandika rikodi kuhusu chanjo kwenye kadi la afya la mtoto.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/immunizations/family_refused_note:label">
             <value>Naomba uniitie Mumeo au wanafamilia ili nipate kuwaeleza umuhimu wa chanjo.</value>
@@ -2933,71 +3096,56 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/immunizations/has_health_card:label">
             <value>Sasa nitapendelea kupitia kadi la kliniki la mtoto kuhakikisha amepata/wamepata chanjo zote stahiki mpaka sasa. Je, Una kadi la kliniki la mtoto wako?</value>
           </text>
-          <text id="/infant_child/immunizations/msg_for_chv_next_vaccine_14:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
-          </text>
           <text id="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14:label">
-            <value>ANGALIA kwenye kadi ya afya. Je, dozi anayotakiwa kupewa baadae ni dozi ya wiki 14?</value>
-          </text>
-          <text id="/infant_child/immunizations/next_vaccine_14_note:label">
-            <value>Mara nyengine utafika mda wa chanjo: mtoto wako atapatiwa chanjo ya IPV (ni chanjo ya polio itakuwa ni ya sindano siyo ya matone) tafadhali usiogope ipo salama na vizuri mtoto wako akiapatiwa chanjo hizi.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bcg_date:label">
-            <value>Ingiza tarehe mtoto aliyopata chanjo ya BCG.</value>
+            <value>Ingiza tarehe mtoto aliyopata chanjo ya BCG (Kifua kikuu).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv0_date:label">
-            <value>Ingiza tarehe mtoto aliyopata chanjo ya boPV0.</value>
+            <value>Ingiza tarehe mtoto aliyopata chanjo ya bOPV 0 (Polio, Kupooza, anapozaliwa).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:label">
-            <value>Ingiza tarehe mtoto aliyopata chanjo ya boPV1.</value>
+            <value>Ingiza tarehe mtoto aliyopata chanjo ya bOPV 1 (Polio, Kupooza, wiki 6).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv2_date:label">
-            <value>Ingiza tarehe mtoto aliyopata chanjo ya bOPV2.</value>
+            <value>Ingiza tarehe mtoto aliyopata chanjo ya bOPV 2 (Polio, kupooza, wiki 10).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv3_date:label">
-            <value>Ingiza tarehe ya ambayo mtoto amepata chanjo ya bOPV3.</value>
+            <value>Ingiza tarehe ya ambayo mtoto amepata chanjo ya bOPV 3 (Polio, kupooza, wiki 14).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:label">
-            <value>Ingiza tarehe mtoto aliyopata chanjo ya DTP-HepB-Hib1.</value>
+            <value>Ingiza tarehe mtoto aliyopata chanjo ya DTP-HepB-Hib 1 (Penta) (Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 6).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:label">
-            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya DTP-HepB-Hib2</value>
+            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya DTP-HepB-Hib2 (Penta) (Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 10).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:label">
-            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya DTP-HepB-Hib3.</value>
+            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya DTP-HepB-Hib 3 (Penta, Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 14).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
@@ -3056,23 +3204,26 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kawaida mtoto akishachomwa sindano ya chanjo ya BCG inabidi baada ya miezi mitatu kovu ionekanwe kwenye bega la kulia la mtoto. Kama hutoona kovu imetokea, mshauri mama ampeleke mtoto kituo cha Afya na kuwaambia watoa huduma waliopo kituo cha Afya ili apatiwe chanjo tena. &lt;/span&gt;</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:label">
-            <value>Ingiza tarehe mtoto aliyopata chanjo ya PCVI1.</value>
+            <value>Ingiza tarehe mtoto aliyopata chanjo ya PCV 1 (Penumococcal , Nimonia, Wiki 6).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:label">
-            <value>Ingiza tarehe mtoto ambayo amepata chanjo ya PCVI2.</value>
+            <value>Ingiza tarehe mtoto ambayo amepata chanjo ya PCV 2 (Penumococcal , Nimonia, Wiki 10).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:label">
-            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya PCVI3.</value>
+            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya PCV 3 (Penumococcal , Nimonia, Week 14).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bcg/no:label">
             <value>Hapana</value>
@@ -3081,7 +3232,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bcg:label">
-            <value>Je mtoto amepata chanjo ya BCG?</value>
+            <value>Je mtoto amepata chanjo ya BCG (Kifua kikuu)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv0/no:label">
             <value>Hapana</value>
@@ -3090,7 +3241,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv0:label">
-            <value>Je mtoto amepata chanjo ya boPV0?</value>
+            <value>Je mtoto amepata chanjo ya bOPV 0 (Polio, Kupooza, anapozaliwa)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv1/no:label">
             <value>Hapana</value>
@@ -3099,7 +3250,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv1:label">
-            <value>Je mtoto amepata chanjo ya boPV1?</value>
+            <value>Je mtoto amepata chanjo ya bOPV 1 (Polio, Kupooza, wiki 6)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv2/no:label">
             <value>Hapana</value>
@@ -3108,7 +3259,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv2:label">
-            <value>Je mtoto amepata chanjo ya bOPV2?</value>
+            <value>Je mtoto amepata chanjo ya bOPV 2 (Polio, kupooza, wiki 10) ?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv3/no:label">
             <value>Hapana</value>
@@ -3117,7 +3268,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bopv3:label">
-            <value>Je mtoto amepata chanjo ya bOPV3?</value>
+            <value>Je mtoto amepata chanjo ya bOPV 3 (Polio, kupooza, wiki 14)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1/no:label">
             <value>Hapana</value>
@@ -3126,7 +3277,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1:label">
-            <value>Je mtoto amepata chanjo ya DTP-HepB-Hib1?</value>
+            <value>Je mtoto amepata chanjo ya DTP-HepB-Hib1 (Penta) (Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 6)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2/no:label">
             <value>Hapana</value>
@@ -3135,7 +3286,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2:label">
-            <value>Je mtoto amepata chanjo ya DTP-HepB-Hib2?</value>
+            <value>Je mtoto amepata chanjo ya DTP-HepB-Hib2 (Penta, Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 10)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3/no:label">
             <value>Hapana</value>
@@ -3144,7 +3295,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3:label">
-            <value>Je mtoto amepata chanjo ya DTP-HepB-Hib3?</value>
+            <value>Je mtoto amepata chanjo ya Penta DTP-HepB-Hib 3 (Penta, Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 14)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_ipv/no:label">
             <value>Hapana</value>
@@ -3162,7 +3313,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi1:label">
-            <value>Je mtoto amepata chanjo ya PCVI1?</value>
+            <value>Je mtoto amepata chanjo ya PCV 1 (Penumococcal, Nimonia, Wiki 6)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi2/no:label">
             <value>Hapana</value>
@@ -3171,7 +3322,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi2:label">
-            <value>Je mtoto amepata chanjo ya PCVI2?</value>
+            <value>Je mtoto amepata chanjo ya PCV 2 (Penumococcal , Nimonia, Wiki 10)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi3/no:label">
             <value>Hapana</value>
@@ -3180,7 +3331,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_pcvi3:label">
-            <value>Je mtoto amepata chanjo ya PCVI3?</value>
+            <value>Je mtoto amepata chanjo ya PCV 3 (Penumococcal , Nimonia, Week 14) ?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota1/no:label">
             <value>Hapana</value>
@@ -3189,7 +3340,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota1:label">
-            <value>Je mtoto amepata chanjo ya Rota 1?</value>
+            <value>Je mtoto amepata chanjo ya Rota 1 (Kuharisha, Wiki 6)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota2/no:label">
             <value>Hapana</value>
@@ -3198,7 +3349,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_rota2:label">
-            <value>Je mtoto amepata chanjo ya Rota 2?</value>
+            <value>Je mtoto amepata chanjo ya Rota 2 (Kuharisha, Wiki 10)?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella1/no:label">
             <value>Hapana</value>
@@ -3207,7 +3358,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella1:label">
-            <value>Je mtoto amepata chanjo ya Surua -Rubella 1?</value>
+            <value>Je mtoto amepata chanjo ya Surua -Rubella 1 (Miezi 9) ?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella2/no:label">
             <value>Hapana</value>
@@ -3216,31 +3367,31 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella2:label">
-            <value>Je mtoto amepata chanjo ya Surua-Rubella 2?</value>
+            <value>Je mtoto amepata chanjo ya Surua-Rubella 2 (miezi 18) ?</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota1_date:label">
-            <value>Ingiza tarehe mtoto aliyopata chanjo ya Rota 1.</value>
+            <value>Ingiza tarehe mtoto aliyopata chanjo ya Rota 1 (Kuharisha, Wiki 6) .</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota2_date:label">
-            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Rota 2.</value>
+            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Rota 2 (kuharisha, Wiki 10).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:label">
-            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Surua-Rubella1.</value>
+            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Surua-Rubella1 (Miezi 9).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg">
             <value>Hakikisha umeingiza tarehe sahihi</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:label">
-            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Surua-Rubella 2.</value>
+            <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Surua-Rubella 2 (Miezi 18).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines:label">
             <value>-</value>
@@ -3473,7 +3624,7 @@ Je unacho chandarua?</value>
             <value>kati ya chini ya 2 na chini ya 3</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/growth_graph_range:label">
-            <value>Tazama kijitabu cha mtoto cha makuzi. Ingiza makadirio ya picha ambayo mtoto yupo.</value>
+            <value>Tazama kitabu cha mtoto cha makuzi. Ingiza makadirio ya grafu ambayo mtoto yupo.</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/muac_color/green:label">
             <value>Kijani</value>
@@ -3494,7 +3645,7 @@ Je unacho chandarua?</value>
             <value>Kutokana na kipimo cha lishe cha mtoto wako kinaonesha ana utapia mlo mkali. Ili kukusaidia mtoto wako kurudia katika hali yake bora ya lishe, nakupatia rufaa na nitarudia siku chache kufatilia kuhusu rufaa.</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/muac_yellow_note:label">
-            <value>Mtoto yupo katika hatari ya utapialo
+            <value>Mtoto yupo katika hatari ya utapia mlo
 
 Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja kukutembelea tena tutajadili kuhusu lishe na kipi cha kufanya ili kupata lishe b</value>
           </text>
@@ -3505,7 +3656,10 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Kiganja ni cha njano au kina mpauko</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor:label">
-            <value>Sasa nitaangalia wingi wa damu wa mtoto wako? Je kiganja chake cha mkono ni cheupe sana? Linganisha kiganja cha CHV na cha mtoto.</value>
+            <value>Sasa nitaangalia wingi wa damu wa mtoto wako?ha mtoto.&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/malnutrition_anemia/palm_pallor_chv_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Je kiganja chake cha mkono ni cheupe sana?Linganisha kiganja cha CHV na c</value>
           </text>
           <text id="/infant_child/malnutrition_anemia/palm_pallor_referral_note:label">
             <value>Ili kukusaidia mtoto wako apate matibabu, nitahakikisha nitampa rufaa ya wa tatizo la upungufu wa damu.</value>
@@ -3514,7 +3668,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Kuchunguza utapia mlo na upungufu wa damu</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_98:label">
-            <value>Kuchunguza Dalili za hatari baada kujifungua</value>
+            <value>Kuchunguza Dalili za hatari kwa mtoto mchanga</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
             <value>Mtoto wako ana dalili za hatari hizi zinahitaji kushungulikiwa kwa haraka. Mpeleke mtoto kituo cha afya kilichopo karibu. Ikiwa kituo kimefungwa nenda hospitali iliyopo karibu nawe.</value>
@@ -3526,7 +3680,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_cold:label">
-            <value>Baridi au anakiwango cha chini cha joto</value>
+            <value>Je mtoto anajisikia baridi au ana kiwango cha chini cha joto?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_cord_bleeding/no:label">
             <value>Hapana</value>
@@ -3535,7 +3689,10 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_cord_bleeding:label">
-            <value>Kitovu kuwa chekundu, kutoka damu au usaha</value>
+            <value>Je kitovu cha mtoto ni chekundu, kutoka damu au usaha?</value>
+          </text>
+          <text id="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Muelimishe mama jinsi ya kutambua dalili za hatari kwa mtoto mchanga na umuhimu wa kutafuta msaada wa matibabu katika kituo cha afya haraka. Tumia bango kitita kadi namba 18. &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label">
             <value>Nihitaji kumchunguza mtoto wako dalili za hatari. Je, mwanao ameonesha dalili zote kati ya hizi katika masaa 24 yaliyo pita?</value>
@@ -3547,7 +3704,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_diarrhea:label">
-            <value>Kuharisha</value>
+            <value>Je mtoto anaharisha?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/no:label">
             <value>Hapana</value>
@@ -3556,7 +3713,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing:label">
-            <value>Anapumua kwa tabu au kwa haraka (anapumua mara 60 au zaidi kwa daikika moja)</value>
+            <value>Je mtoto anapumua kwa tabu au kwa haraka (anapumua mara 60 au zaidi kwa daikika moja)?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_crying/no:label">
             <value>Hapana</value>
@@ -3565,7 +3722,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_crying:label">
-            <value>Kulia sana au kwa mfululizo bila kumpuzika kwa zaidi ya saa moja</value>
+            <value>Je mtoto analia sana au kwa mfululizo bila kumpuzika kwa zaidi ya saa moja?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_vomiting/no:label">
             <value>Hapana</value>
@@ -3574,7 +3731,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_excessive_vomiting:label">
-            <value>Kutapika sana</value>
+            <value>Je mtoto anatapika sana ?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_eyes_pus/no:label">
             <value>Hapana</value>
@@ -3583,7 +3740,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_eyes_pus:label">
-            <value>Macho kutoka usaha</value>
+            <value>Je macho ya mtoto yanatoka usaha?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_fever/no:label">
             <value>Hapana</value>
@@ -3592,7 +3749,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_fever:label">
-            <value>Homa au joto kali</value>
+            <value>Je mtoto ana homa au joto kali?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_had_convulsions/no:label">
             <value>Hapana</value>
@@ -3601,7 +3758,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_had_convulsions:label">
-            <value>Kuwa na degedege</value>
+            <value>Je mtoto ana degedege?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_no_movement/no:label">
             <value>Hapana</value>
@@ -3610,7 +3767,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_no_movement:label">
-            <value>Mtoto anacheza pale anapoguswa tu au hachezi hata kama akiguswa.</value>
+            <value>Je mtoto anacheza pale anapoguswa tu?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_not_able_feed/no:label">
             <value>Hapana</value>
@@ -3619,7 +3776,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_not_able_feed:label">
-            <value>Hawezi kunyonya tangu azaliwe au Amesita kunyonya vizuri</value>
+            <value>Je mtoto hawezi kunyonya tangu azaliwe au amesita kunyonya vizuri?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils/no:label">
             <value>Hapana</value>
@@ -3628,7 +3785,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils:label">
-            <value>Majipu katika ngozi</value>
+            <value>Je mtoto ana majipu katika ngozi?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms/no:label">
             <value>Hapana</value>
@@ -3637,15 +3794,15 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms:label">
-            <value>Viganja, mikono na mdomo viko na rangi ya njano au nyeupe (inapaswa iwe nyekundu au pink).</value>
+            <value>Je viganja, mikono na mdomo viko na rangi ya njano au nyeupe ? (inapaswa iwe nyekundu au pink).</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_116:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_117:label">
             <value>Kuchunguza dalili nyengine za hatari kwa mtoto</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -3655,7 +3812,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension:label">
-            <value>Kuvimba tumbo</value>
+            <value>Je mtoto amevimba tumbo?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color/no:label">
             <value>Hapana</value>
@@ -3664,7 +3821,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color:label">
-            <value>Amebadilika rangi kuwa buluu,njano au zambarau.</value>
+            <value>Je mtoto amebadilika rangi kuwa buluu,njano au zambarau?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel/no:label">
             <value>Hapana</value>
@@ -3673,7 +3830,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel:label">
-            <value>Kuvimba utosi</value>
+            <value>Je mtoto amevimba utosi?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_congenital/no:label">
             <value>Hapana</value>
@@ -3682,7 +3839,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_congenital:label">
-            <value>Ulemavu wakuzaliwa nao/Kasoro za kuzaliwa nazo</value>
+            <value>Je mtoto ana ulemavu wakuzaliwa nao au kasoro za kuzaliwa nazo?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge/no:label">
             <value>Hapana</value>
@@ -3691,7 +3848,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge:label">
-            <value>Macho yamezama ndani</value>
+            <value>Je macho yamezama ndani?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_stool/no:label">
             <value>Hapana</value>
@@ -3700,7 +3857,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_stool:label">
-            <value>Kutopata choo kikubwa kwa siku</value>
+            <value>Je mtoto ana tatizo la kutopata choo kikubwa kwa siku?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_urine/no:label">
             <value>Hapana</value>
@@ -3709,7 +3866,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_no_urine:label">
-            <value>Kutokukojoa kwa siku</value>
+            <value>Je mtoto ana tatizo la kutokukojoa kwa siku?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_not_crying/no:label">
             <value>Hapana</value>
@@ -3718,7 +3875,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_not_crying:label">
-            <value>Halii au hapumui kama kawaida</value>
+            <value>Je mtoto halii au hapumui kama kawaida?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_skin_rash/no:label">
             <value>Hapana</value>
@@ -3727,7 +3884,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_skin_rash:label">
-            <value>Upele kwenye ngozi</value>
+            <value>Je ana upele kwenye ngozi?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_vomiting/no:label">
             <value>Hapana</value>
@@ -3736,7 +3893,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_vomiting:label">
-            <value>Kutapika mara moja moja</value>
+            <value>Je mtoto ana tapika mara moja moja?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note:label">
             <value>Hakuna dalili yoyote ya hatari iliyogundulika, lakini iwapo mtoto ataonesha dalili yoyote kati ya tulizojadili, unapaswa kwenda kituo cha Afya haraka iwezekanavyo.</value>
@@ -3744,11 +3901,17 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Dalili ya hatari imegundulika. Mshauri mama aende kituo cha Afya kilicho karibu nae ndani ya masaa 24 yajayo ili Daktari aweze kumuangalia mtoto na kutoa msaada.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/yes:label">
             <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
+            <value>Ikiwa ulikuwa unamtebelea mama yake <output value=" /infant_child/child_name "/> wakati wa ujauzito, basi punde tu utakapomaliza temebeleo la mtoto, tafadhali endelea na tembeleo la baada ya kujigungua.</value>
+          </text>
+          <text id="/infant_child/next_task_reminder:label">
+            <value>Ukumbusho wa kufanya tembeleo la mama mjamzito</value>
           </text>
           <text id="/infant_child/problem_solving/challenge_play_comm:label">
             <value>Watu wengi hupata changamoto wakati wanapocheza na kuwasiliana na watoto wao, ili kuhamasisha maendeleo ya mtoto. Ningependa nizungumze nawe kuhusu baadhi ya changamoto maarufu ambazo wazee zinawakuta.</value>
@@ -4122,7 +4285,7 @@ _Sisitiza kwamba mtu yoyote anaweza kufanya KMC._</value>
           <text id="/infant_child/small_baby_kmc:label">
             <value>Matunzo ya ngozi kwa ngozi (KMC) ni njia ya matunzo kwa mtoto njiti ya kumfanya mtoto aendelee kuwa na joto stahiki. Njia hii huhusisha mtoto kuchukuliwa kwa kutumia makutano ya ngozi kwa ngozi.
 
-_Sisitiza kwamba mtu yoyote anaweza kufanya KMC._</value>
+Sisitiza kwamba mtu yoyote anaweza kufanya KMC.</value>
           </text>
           <text id="/infant_child/small_baby_stimulation/small_baby_stimulation_note:label">
             <value>Wewe na mwenzako/ mume wako au familia muna jukumu la kuhakikisha maendeleo ya akili ya mtoto na katika kipindi hiki cha miezi na miaka ya mwanzoni ni vyema kutumiwa vyema ili kuifanya akili yake ikuwe vizuri 
@@ -4260,8 +4423,9 @@ Kwa mtoto wako unaweza:</value>
           </first_visit_6_months>
           <neonatal_danger_signs>
             <generated_table_list_label_98/>
+            <neonatal_danger_sign_bango_kitita/>
             <neonatal_danger_signs_note/>
-            <reserved_name_for_field_list_labels_100/>
+            <reserved_name_for_field_list_labels_101/>
             <neonatal_not_able_feed/>
             <neonatal_had_convulsions/>
             <neonatal_difficulty_fast_breathing/>
@@ -4279,8 +4443,8 @@ Kwa mtoto wako unaweza:</value>
             <has_neonatal_danger_note/>
           </neonatal_danger_signs>
           <neonatal_danger_signs_secondary>
-            <generated_table_list_label_116/>
-            <reserved_name_for_field_list_labels_117/>
+            <generated_table_list_label_117/>
+            <reserved_name_for_field_list_labels_118/>
             <neonatal_not_crying/>
             <neonatal_blue_color/>
             <neonatal_eye_discharge/>
@@ -4296,12 +4460,20 @@ Kwa mtoto wako unaweza:</value>
             <no_secondary_neonatal_danger_sign_note/>
           </neonatal_danger_signs_secondary>
           <child_danger_signs>
-            <generated_table_list_label_131/>
-            <reserved_name_for_field_list_labels_132/>
-            <child_drink/>
+            <generated_table_list_label_132/>
+            <reserved_name_for_field_list_labels_133/>
+            <child_drink_below_6_months/>
+            <child_drink_6_months_to_2_years/>
+            <child_drink_above_2_years/>
             <child_vomit/>
             <child_convulsions/>
             <child_lethargic/>
+            <child_fever/>
+            <child_difficulty_fast_breathing/>
+            <child_diarrhea/>
+            <child_coughing/>
+            <child_cold/>
+            <child_skin_boils/>
             <refer_child_danger_sign_flag/>
             <child_danger_sign_note/>
             <no_child_danger_sign_note/>
@@ -4314,6 +4486,7 @@ Kwa mtoto wako unaweza:</value>
             <muac_yellow_note/>
             <muac_red_note/>
             <refer_muac_flag/>
+            <palm_pallor_chv_note/>
             <palm_pallor/>
             <palm_pallor_referral_note/>
             <refer_palm_pallor_flag/>
@@ -4331,9 +4504,11 @@ Kwa mtoto wako unaweza:</value>
               <exclusively_breastfeeding/>
               <exclusively_breastfeeding_note/>
               <not_exclusively_breastfeeding_note/>
+              <exclusive_breastfeeding_bango_kitita/>
             </breastfeeding>
           </essential_newborn_breastfeeding>
           <essential_newborn_breastfeeding_positioning>
+            <attachment_bango_kitita/>
             <is_breastfeeding_positioning_ok/>
             <attachment_pic_1/>
             <attachment_pic_2/>
@@ -4392,7 +4567,8 @@ Kwa mtoto wako unaweza:</value>
             <still_breastfeeding/>
             <still_breastfeeding_note/>
             <not_still_breastfeeding_note/>
-            <complementary_hygiene_note/>
+            <complementary_hygiene_above_6_months/>
+            <complementary_hygiene_below_6_months/>
           </essential_newborn_care_nutrition>
           <immunizations>
             <why_vaccines_important_note/>
@@ -4403,6 +4579,7 @@ Kwa mtoto wako unaweza:</value>
               <msg_for_chv_bcg/>
               <received_bcg/>
               <bcg_date/>
+              <msg_to_chv_on_BCG_mark/>
               <msg_for_chv_bopv0/>
               <received_bopv0/>
               <bopv0_date/>
@@ -4459,9 +4636,6 @@ Kwa mtoto wako unaweza:</value>
             <vaccine_refer_note/>
             <refer_vaccines_flag/>
             <ask_record_vaccines_note/>
-            <msg_for_chv_next_vaccine_14/>
-            <next_vaccine_14/>
-            <next_vaccine_14_note/>
             <vaccine_fever_rash_note/>
             <vaccine_cry_note/>
           </immunizations>
@@ -4591,6 +4765,9 @@ Kwa mtoto wako unaweza:</value>
             <has_mosquito_net/>
             <free_mosquito_net/>
           </llints>
+          <next_task_reminder>
+            <chvnote_next_task/>
+          </next_task_reminder>
           <group_summary>
             <non_consent_note/>
             <any_referral/>
@@ -4701,8 +4878,9 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/first_visit_6_months/encourage_small_baby_note" readonly="true()" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_98" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_not_able_feed" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_had_convulsions" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing" required="true()" type="select1"/>
@@ -4719,8 +4897,8 @@ Kwa mtoto wako unaweza:</value>
       <bind calculate="if(selected( /infant_child/neonatal_danger_signs/neonatal_not_able_feed ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_had_convulsions ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_fever ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_cold ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_yellow_pale_palms ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_no_movement ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_cord_bleeding ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_diarrhea ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_eyes_pus ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_skin_boils ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_excessive_vomiting ,'yes') or selected( /infant_child/neonatal_danger_signs/neonatal_excessive_crying ,'yes'),1,0)" nodeset="/infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/has_neonatal_danger_note" readonly="true()" relevant=" /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_116" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_117" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_not_crying" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_blue_color" required="true()" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge" required="true()" type="select1"/>
@@ -4735,15 +4913,45 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note" readonly="true()" relevant=" /infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_flag =1" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/no_secondary_neonatal_danger_sign_note" readonly="true()" relevant="selected( /infant_child/neonatal_danger_signs_secondary/neonatal_not_crying ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_blue_color ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_eye_discharge ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_skin_rash ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_congenital ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_vomiting ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_bulging_fontanel ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_urine ,'no') and selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_stool ,'no')" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
-      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_131" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132" type="select1"/>
-      <bind nodeset="/infant_child/child_danger_signs/child_drink" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_132" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_drink_below_6_months" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 6)" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_drink_6_months_to_2_years" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 6) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 24)" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_drink_above_2_years" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 24)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_vomit" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_convulsions" required="true()" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_lethargic" required="true()" type="select1"/>
-      <bind calculate="if(selected( /infant_child/child_danger_signs/child_drink ,&quot;no&quot;) or selected( /infant_child/child_danger_signs/child_vomit ,&quot;yes&quot;) or selected( /infant_child/child_danger_signs/child_convulsions ,&quot;yes&quot;) or selected( /infant_child/child_danger_signs/child_lethargic ,&quot;yes&quot;),1,0)" nodeset="/infant_child/child_danger_signs/refer_child_danger_sign_flag" type="string"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_fever" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_difficulty_fast_breathing" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_diarrhea" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_coughing" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_cold" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/child_skin_boils" required="true()" type="select1"/>
+      <bind calculate="if(not(selected( /infant_child/child_danger_signs/child_drink_below_6_months ,&quot;yes&quot;))
+and not(selected( /infant_child/child_danger_signs/child_drink_6_months_to_2_years ,&quot;yes&quot;)) and 
+not(selected( /infant_child/child_danger_signs/child_drink_above_2_years ,&quot;yes&quot;)) or 
+selected( /infant_child/child_danger_signs/child_vomit ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_convulsions ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_lethargic ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_fever ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_difficulty_fast_breathing ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_diarrhea ,&quot;yes&quot;)or 
+selected( /infant_child/child_danger_signs/child_coughing ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_cold ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_skin_boils ,&quot;yes&quot;),1,0)" nodeset="/infant_child/child_danger_signs/refer_child_danger_sign_flag" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs/child_danger_sign_note" readonly="true()" relevant=" /infant_child/child_danger_signs/refer_child_danger_sign_flag =1" type="string"/>
-      <bind nodeset="/infant_child/child_danger_signs/no_child_danger_sign_note" readonly="true()" relevant="selected( /infant_child/child_danger_signs/child_drink ,&quot;yes&quot;) and selected( /infant_child/child_danger_signs/child_vomit ,&quot;no&quot;) and selected( /infant_child/child_danger_signs/child_convulsions ,&quot;no&quot;) and selected( /infant_child/child_danger_signs/child_lethargic ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/infant_child/child_danger_signs/no_child_danger_sign_note" readonly="true()" relevant="(selected( /infant_child/child_danger_signs/child_drink_below_6_months ,&quot;yes&quot;) or 
+selected( /infant_child/child_danger_signs/child_drink_6_months_to_2_years ,&quot;yes&quot;) or
+selected( /infant_child/child_danger_signs/child_drink_above_2_years ,&quot;yes&quot;)) and 
+selected( /infant_child/child_danger_signs/child_vomit ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_convulsions ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_fever ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_lethargic ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_difficulty_fast_breathing ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_diarrhea ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_coughing ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_cold ,&quot;no&quot;) and 
+selected( /infant_child/child_danger_signs/child_skin_boils ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/malnutrition_anemia" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/malnutrition_anemia/growth_graph_range" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 2) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/malnutrition_anemia/child_underweight_note" readonly="true()" relevant="selected( /infant_child/malnutrition_anemia/growth_graph_range ,&quot;neg_2_neg_3&quot;) or selected( /infant_child/malnutrition_anemia/growth_graph_range ,&quot;lt_neg_3&quot;)" type="string"/>
@@ -4752,6 +4960,7 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_yellow_note" readonly="true()" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;yellow&quot;)" type="string"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_red_note" readonly="true()" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;)" type="string"/>
       <bind calculate="if(selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;),1,0)" nodeset="/infant_child/malnutrition_anemia/refer_muac_flag" type="string"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_chv_note" readonly="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" type="string"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_referral_note" readonly="true()" relevant="selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;)" type="string"/>
       <bind calculate="if(selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;),1,0)" nodeset="/infant_child/malnutrition_anemia/refer_palm_pallor_flag" type="string"/>
@@ -4768,7 +4977,9 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusive_breastfeeding_bango_kitita" readonly="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;yes&quot;) or selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;no&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/small_baby_ever =0 and selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_bango_kitita" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok" required="true()" type="select1"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_1" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_pic_2" readonly="true()" type="string"/>
@@ -4819,16 +5030,18 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)" required="true()" type="select1"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_care_nutrition/still_breastfeeding ,&quot;yes&quot;)" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/not_still_breastfeeding_note" readonly="true()" relevant="selected( /infant_child/essential_newborn_care_nutrition/still_breastfeeding ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_note" readonly="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 2) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)" type="string"/>
+      <bind nodeset="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_above_6_months" readonly="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)" type="string"/>
+      <bind nodeset="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_below_6_months" readonly="true()" relevant=" /infant_child/age_days  &lt; ( /infant_child/month  * 6)" type="string"/>
       <bind nodeset="/infant_child/immunizations" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0"/>
       <bind nodeset="/infant_child/immunizations/why_vaccines_important_note" readonly="true()" relevant=" /infant_child/n_child_visits  = 0" type="string"/>
       <bind nodeset="/infant_child/immunizations/vaccines_reminder_note" readonly="true()" relevant=" /infant_child/n_child_visits  = 0" type="string"/>
       <bind nodeset="/infant_child/immunizations/has_health_card" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;) and  /infant_child/age_years  &lt; 2"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bcg" readonly="true()" relevant=" /infant_child/previous_bcg  = 0" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bcg" relevant=" /infant_child/previous_bcg  = 0" type="select1"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')" nodeset="/infant_child/immunizations/record_vaccines/bcg_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" required="true()" type="date"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark" readonly="true()" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;) and  /infant_child/immunizations/record_vaccines/bcg_date  != '' and  /infant_child/immunizations/record_vaccines/bcg_date  &lt;= date-time(decimal-date-time(today()))" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0" readonly="true()" relevant=" /infant_child/previous_bopv0  = 0" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" relevant=" /infant_child/previous_bopv0  = 0" required="true()" type="select1"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')" nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)" type="date"/>
@@ -4865,8 +5078,8 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_received_pcvi3" readonly="true()" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()" type="select1"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')" nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)" type="date"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_ipv" readonly="true()" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" type="string"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()" type="select1"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_ipv" readonly="true()" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')" type="string"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')" required="true()" type="select1"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')" nodeset="/infant_child/immunizations/record_vaccines/ipv_date" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)" type="date"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella1" readonly="true()" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)" required="true()" type="select1"/>
@@ -4881,14 +5094,11 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/immunizations/family_refused_note" readonly="true()" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;family_refused&quot;)" type="string"/>
       <bind nodeset="/infant_child/immunizations/vaccine_schedule_advice_note" readonly="true()" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;clinic_closed&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;not_available&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;asked_to_return&quot;)" type="string"/>
       <bind nodeset="/infant_child/immunizations/too_old_note" readonly="true()" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;baby_too_old&quot;)" type="string"/>
-      <bind nodeset="/infant_child/immunizations/vaccine_refer_note" readonly="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;no&quot;) or selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)" type="string"/>
-      <bind calculate="if(selected( /infant_child/immunizations/has_health_card ,&quot;no&quot;) or selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;),1,0)" nodeset="/infant_child/immunizations/refer_vaccines_flag" type="string"/>
-      <bind nodeset="/infant_child/immunizations/ask_record_vaccines_note" readonly="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/infant_child/immunizations/msg_for_chv_next_vaccine_14" readonly="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/infant_child/immunizations/next_vaccine_14" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/infant_child/immunizations/next_vaccine_14_note" readonly="true()" relevant="selected( /infant_child/immunizations/next_vaccine_14 ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/infant_child/immunizations/vaccine_fever_rash_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/immunizations/vaccine_cry_note" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/immunizations/vaccine_refer_note" readonly="true()" relevant="(selected( /infant_child/immunizations/has_health_card ,&quot;no&quot;) and  /infant_child/age_years  &lt; 2) or selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)" type="string"/>
+      <bind calculate="if((selected( /infant_child/immunizations/has_health_card ,&quot;no&quot;) and  /infant_child/age_years  &lt; 2) or selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;),1,0)" nodeset="/infant_child/immunizations/refer_vaccines_flag" type="string"/>
+      <bind nodeset="/infant_child/immunizations/ask_record_vaccines_note" readonly="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;) and  /infant_child/age_years  &lt; 2" type="string"/>
+      <bind nodeset="/infant_child/immunizations/vaccine_fever_rash_note" readonly="true()" relevant=" /infant_child/age_years  &lt; 2" type="string"/>
+      <bind nodeset="/infant_child/immunizations/vaccine_cry_note" readonly="true()" relevant=" /infant_child/age_years  &lt; 2" type="string"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and (( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 24))"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/spend_time_with" required="true()" type="select"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/welcome_caregivers" readonly="true()" relevant="selected( /infant_child/assess_dev_coach_play_communication/spend_time_with ,&quot;other&quot;)" type="string"/>
@@ -5005,6 +5215,8 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/llints/note_malaria" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/llints/has_mosquito_net" required="true()" type="select1"/>
       <bind nodeset="/infant_child/llints/free_mosquito_net" readonly="true()" relevant="selected( /infant_child/llints/has_mosquito_net ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/infant_child/next_task_reminder" relevant="../inputs/visit_id = &quot;infant_child_0_2_day_pp_visit&quot; or ../inputs/visit_id = &quot;infant_child_3_19_day_pp_visit&quot;"/>
+      <bind nodeset="/infant_child/next_task_reminder/chvnote_next_task" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/group_summary/non_consent_note" readonly="true()" relevant="selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)" type="string"/>
       <bind calculate="if( /infant_child/first_visit_6_months/refer_flag_small_baby =1 or
  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1 or
@@ -5190,17 +5402,20 @@ Kwa mtoto wako unaweza:</value>
       <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_98">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_98:label')"/>
       </input>
+      <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita:label')"/>
+      </input>
       <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_100/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_101/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5352,17 +5567,17 @@ Kwa mtoto wako unaweza:</value>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs_secondary">
-      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_116">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_116:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_117">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_117:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_117/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_118/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5484,28 +5699,50 @@ Kwa mtoto wako unaweza:</value>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_danger_signs">
-      <input ref="/infant_child/child_danger_signs/generated_table_list_label_131">
-        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_131:label')"/>
+      <input ref="/infant_child/child_danger_signs/generated_table_list_label_132">
+        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_132:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132">
+      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132/yes:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_132/no:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_133/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_drink">
-        <label ref="jr:itext('/infant_child/child_danger_signs/child_drink:label')"/>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_drink_below_6_months">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_below_6_months:label')"/>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink/yes:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_below_6_months/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink/no:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_below_6_months/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_drink_6_months_to_2_years">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_6_months_to_2_years:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_6_months_to_2_years/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_6_months_to_2_years/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_drink_above_2_years">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_above_2_years:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_above_2_years/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_drink_above_2_years/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5539,6 +5776,72 @@ Kwa mtoto wako unaweza:</value>
         </item>
         <item>
           <label ref="jr:itext('/infant_child/child_danger_signs/child_lethargic/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_fever">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_fever:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_fever/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_fever/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_difficulty_fast_breathing">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_difficulty_fast_breathing:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_difficulty_fast_breathing/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_difficulty_fast_breathing/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_diarrhea">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_diarrhea:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_diarrhea/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_diarrhea/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_coughing">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_coughing:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_coughing/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_coughing/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_cold">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_cold:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_cold/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_cold/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 appearance="list-nolabel" ref="/infant_child/child_danger_signs/child_skin_boils">
+        <label ref="jr:itext('/infant_child/child_danger_signs/child_skin_boils:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_skin_boils/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/child_danger_signs/child_skin_boils/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5596,6 +5899,9 @@ Kwa mtoto wako unaweza:</value>
       </input>
       <input ref="/infant_child/malnutrition_anemia/muac_red_note">
         <label ref="jr:itext('/infant_child/malnutrition_anemia/muac_red_note:label')"/>
+      </input>
+      <input ref="/infant_child/malnutrition_anemia/palm_pallor_chv_note">
+        <label ref="jr:itext('/infant_child/malnutrition_anemia/palm_pallor_chv_note:label')"/>
       </input>
       <select1 ref="/infant_child/malnutrition_anemia/palm_pallor">
         <label ref="jr:itext('/infant_child/malnutrition_anemia/palm_pallor:label')"/>
@@ -5677,10 +5983,16 @@ Kwa mtoto wako unaweza:</value>
         <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note">
           <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note:label')"/>
         </input>
+        <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusive_breastfeeding_bango_kitita">
+          <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusive_breastfeeding_bango_kitita:label')"/>
+        </input>
       </group>
     </group>
     <group appearance="field-list" ref="/infant_child/essential_newborn_breastfeeding_positioning">
       <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding_positioning:label')"/>
+      <input ref="/infant_child/essential_newborn_breastfeeding_positioning/attachment_bango_kitita">
+        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding_positioning/attachment_bango_kitita:label')"/>
+      </input>
       <select1 ref="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok:label')"/>
         <item>
@@ -5927,8 +6239,11 @@ Kwa mtoto wako unaweza:</value>
       <input ref="/infant_child/essential_newborn_care_nutrition/not_still_breastfeeding_note">
         <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/not_still_breastfeeding_note:label')"/>
       </input>
-      <input ref="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_note">
-        <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/complementary_hygiene_note:label')"/>
+      <input ref="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_above_6_months">
+        <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/complementary_hygiene_above_6_months:label')"/>
+      </input>
+      <input ref="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_below_6_months">
+        <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/complementary_hygiene_below_6_months:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/immunizations">
@@ -5970,6 +6285,9 @@ Kwa mtoto wako unaweza:</value>
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/bcg_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:label')"/>
+        </input>
+        <input ref="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark">
+          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark:label')"/>
         </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0:label')"/>
@@ -6281,23 +6599,6 @@ Kwa mtoto wako unaweza:</value>
       </input>
       <input ref="/infant_child/immunizations/ask_record_vaccines_note">
         <label ref="jr:itext('/infant_child/immunizations/ask_record_vaccines_note:label')"/>
-      </input>
-      <input ref="/infant_child/immunizations/msg_for_chv_next_vaccine_14">
-        <label ref="jr:itext('/infant_child/immunizations/msg_for_chv_next_vaccine_14:label')"/>
-      </input>
-      <select1 ref="/infant_child/immunizations/next_vaccine_14">
-        <label ref="jr:itext('/infant_child/immunizations/next_vaccine_14:label')"/>
-        <item>
-          <label ref="jr:itext('/infant_child/immunizations/next_vaccine_14/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/infant_child/immunizations/next_vaccine_14/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/infant_child/immunizations/next_vaccine_14_note">
-        <label ref="jr:itext('/infant_child/immunizations/next_vaccine_14_note:label')"/>
       </input>
       <input ref="/infant_child/immunizations/vaccine_fever_rash_note">
         <label ref="jr:itext('/infant_child/immunizations/vaccine_fever_rash_note:label')"/>
@@ -7036,6 +7337,12 @@ Kwa mtoto wako unaweza:</value>
       </select1>
       <input ref="/infant_child/llints/free_mosquito_net">
         <label ref="jr:itext('/infant_child/llints/free_mosquito_net:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/infant_child/next_task_reminder">
+      <label ref="jr:itext('/infant_child/next_task_reminder:label')"/>
+      <input ref="/infant_child/next_task_reminder/chvnote_next_task">
+        <label ref="jr:itext('/infant_child/next_task_reminder/chvnote_next_task:label')"/>
       </input>
     </group>
     <group appearance="field-list summary" ref="/infant_child/group_summary">

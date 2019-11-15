@@ -2,17 +2,17 @@
   "title": [
     {
       "locale": "en",
-      "content": "Pregnancy Screening Form"
+      "content": "Pregnancy Visit"
     },
     {
       "locale": "sw",
-      "content": ""
+      "content": "Tembeleo la mama mjamzito"
     }
   ],
   "icon": "icon-pregnant",
   "context": {
     "person": true,
     "place": false,
-    "expression": "contact.type === 'person' && contact.sex === 'female'"
+    "expression": "contact.type === 'person' && contact.sex === 'female' && summary.currently_pregnant === false && !contact.date_of_death && !contact.muted"
   }
 }

@@ -1,13 +1,12 @@
 module.exports = [
 
-  // referral follow-up
+  // Infant-child referral follow-up
   {
-    icon: 'follow-up', // maybe not the best icon, but the best in the set
-    title: 'task.referral_follow_up',
+    icon: 'follow-up',
+    title: 'task.infant_child_referral_follow_up',
     appliesTo: 'reports',
-    appliesIf: function(c, r) {
-      // if infant_child sets has_referral, we can eliminate the other checks
-      return extras.hasReferral(r) ||
+    appliesIf: function (c, r) {
+      return extras.hasReferral(r, "infant_child") ||
         extras.getSmallBabyFlag(r) === '1' ||
         extras.getNeonatalDangerSignFlag(r) === '1' ||
         extras.getSecondaryNeonatalDangerSignFlag(r) === '1' ||
@@ -17,11 +16,12 @@ module.exports = [
         extras.getVaccinesFlag(r) === '1' ||
         extras.getSlowToLearnSpecificsFlag(r) === '1';
     },
-    appliesToType: [ 'infant_child', 'referral_follow_up' ],
+    appliesToType: ['infant_child', 'referral_follow_up'],
     actions: [{
       form: 'referral_follow_up',
-      modifyContent: function(content, contact, report) {
+      modifyContent: function (content, contact, report) {
         content.source_form = report.form;
+        content.original_source_form = "infant_child";
         content.source_id = report._id;
         content.last_visit_date = report.reported_date;
         content.refer_flag_small_baby = extras.getSmallBabyFlag(report);
@@ -33,17 +33,19 @@ module.exports = [
         content.refer_vaccines_flag = extras.getVaccinesFlag(report);
         content.refer_slow_to_learn_specifics_flag = extras.getSlowToLearnSpecificsFlag(report);
         content.due_date = Utils.addDate(new Date(report.reported_date), 3).getTime();
-        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
-                                                                                              year: 'numeric',
-                                                                                              month: 'long',
-                                                                                              day: 'numeric'});
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
       }
     }],
     events: [
       {
-        id:'referral_follow_up',
-        dueDate: function(event, contact, report) {
-          var days = 3; // default referral follow-up three days after issuing referral
+        id: 'infant_child_referral_follow_up',
+        dueDate: function (event, contact, report) {
+          var days = 3;
           if (
             report.fields &&
             report.fields.referral_days
@@ -52,20 +54,137 @@ module.exports = [
           }
           return Utils.addDate(new Date(report.reported_date), days);
         },
-        start:3, // this is just for testing, in production should change this to maybe 1
-        end:7,
+        start: 3,
+        end: 7,
       }
     ],
     priority: {
       level: 'high',
       label: 'task.referral.high_priority'
     },
-    resolvedIf: function(c, r, event, dueDate) {
-      // Resolved if
-      // the form is a referral form with no open referral
-      // there is a 'referral_follow_up' form submitted that has the _id of the report set as source_id
-      return (r.form === 'referral_follow_up' && !extras.hasReferral(r)) ||
-        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id);
+    resolvedIf: function (c, r, event, dueDate) {
+      //Resolve this form if there is a referral form in couch where the woman
+      // does not need to be visited again OR there is a form in couch whose referral_source_id = infant child form. 
+      return ((r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
+        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
+        extras.isContactDeceased(c)) ||
+        extras.isContactMuted(c);
+    },
+  },
+
+  // Pregnancy referral follow-up
+  {
+    icon: 'follow-up',
+    title: 'task.pregnancy_referral_follow_up',
+    appliesTo: 'reports',
+    appliesIf: function (c, r) {
+      return extras.hasReferral(r, "pregnancy") || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' || 
+        extras.getANCVisitAfter6MonthsFlag(r) === '1';
+    },
+    appliesToType: ['referral_follow_up', 'pregnancy'],
+    actions: [{
+      form: 'referral_follow_up',
+      modifyContent: function (content, contact, report) {
+        content.original_source_form = "pregnancy";
+        content.source_form = report.form;
+        content.source_id = report._id;
+        content.last_visit_date = report.reported_date;
+        content.due_date = Utils.addDate(new Date(report.reported_date), 3).getTime();
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
+        content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
+        content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
+        content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report); 
+      }
+    }],
+    events: [
+      {
+        id: 'pregnancy_referral_follow_up',
+        dueDate: function (event, contact, report) {
+          var days = 3;
+          if (
+            report.fields &&
+            report.fields.referral_days
+          ) {
+            days = Number(report.fields.referral_days);
+          }
+          return Utils.addDate(new Date(report.reported_date), days);
+        },
+        start: 3,
+        end: 7,
+      }
+    ],
+    priority: {
+      level: 'high',
+      label: 'task.referral.high_priority'
+    },
+    resolvedIf: function (c, r, event, dueDate) {
+      return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
+        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
+    },
+  },
+
+  // Postpartum referral follow-up
+  {
+    icon: 'follow-up',
+    title: 'task.postpartum_referral_follow_up',
+    appliesTo: 'reports',
+    appliesIf: function (c, r) {
+      return extras.hasReferral(r, "postpartum") || extras.getPostpartumEmergencyDangerSigns(r) === '1' ||
+        extras.getPostpartumOtherDangerSigns(r) === '1';
+    },
+    appliesToType: ['referral_follow_up', 'postpartum'],
+    actions: [{
+      form: 'referral_follow_up',
+      modifyContent: function (content, contact, report) {
+        content.source_form = report.form;
+        content.source_id = report._id;
+        content.last_visit_date = report.reported_date;
+        content.due_date = Utils.addDate(new Date(report.reported_date), 3).getTime();
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        content.refer_flag_postpartum_danger_signs = extras.getPostpartumEmergencyDangerSigns(report);
+        content.refer_flag_postpartum_other_signs = extras.getPostpartumOtherDangerSigns(report);
+      }
+    }],
+    events: [
+      {
+        id: 'postpartum_referral_follow_up',
+        dueDate: function (event, contact, report) {
+          var days = 3;
+          if (
+            report.fields &&
+            report.fields.referral_days
+          ) {
+            days = Number(report.fields.referral_days);
+          }
+          return Utils.addDate(new Date(report.reported_date), days);
+        },
+        start: 3,
+        end: 7,
+      }
+    ],
+    priority: {
+      level: 'high',
+      label: 'task.referral.high_priority'
+    },
+    resolvedIf: function (c, r, event, dueDate) {
+      return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
+        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
     },
   },
 
@@ -75,11 +194,11 @@ module.exports = [
     icon: 'child',
     title: 'task.infant_child.first_visit_under_20_days',
     appliesTo: 'contacts',
-    appliesIf: function(c) {
-      return   c.contact.parent &&
-               c.contact.parent.parent &&
-               c.contact.parent.parent.parent &&
-               extras.isChildUnder20Days(c);
+    appliesIf: function (c) {
+      return c.contact.parent &&
+        c.contact.parent.parent &&
+        c.contact.parent.parent.parent &&
+        extras.isChildUnder20Days(c);
     },
     appliesToType: ['person'],
     actions: [{
@@ -99,16 +218,18 @@ module.exports = [
         content.rota2 = extras.getRota2(c);
         content.bopv3 = extras.getBopv3(c);
         content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
-        content.pcvi3 = extras.getPciv3(c);
+        content.pcvi3 = extras.getPcvi3(c);
         content.ipv = extras.getIpv(c);
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.getContactReportedDate(c);
-        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
-                                                                                              year: 'numeric',
-                                                                                              month: 'long',
-                                                                                              day: 'numeric'});
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
       }
     }],
     events: [
@@ -125,7 +246,9 @@ module.exports = [
     },
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there are any infant-child forms submitted - this is a first time visit only
-      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+      return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
     }
   },
 
@@ -135,12 +258,12 @@ module.exports = [
     icon: 'child',
     title: 'task.infant_child.second_visit_under_20_days',
     appliesTo: 'contacts',
-    appliesIf: function(c) {
-      return   c.contact.parent &&
-               c.contact.parent.parent &&
-               c.contact.parent.parent.parent &&
-               extras.isChildUnder20Days(c) &&
-               extras.countConsentingInfantChildVisits(c) > 0;
+    appliesIf: function (c) {
+      return c.contact.parent &&
+        c.contact.parent.parent &&
+        c.contact.parent.parent.parent &&
+        extras.isChildUnder20Days(c) &&
+        extras.countConsentingInfantChildVisits(c) > 0;
     },
     appliesToType: ['person'],
     actions: [{
@@ -160,16 +283,18 @@ module.exports = [
         content.rota2 = extras.getRota2(c);
         content.bopv3 = extras.getBopv3(c);
         content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
-        content.pcvi3 = extras.getPciv3(c);
+        content.pcvi3 = extras.getPcvi3(c);
         content.ipv = extras.getIpv(c);
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
-        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
-                                                                                              year: 'numeric',
-                                                                                              month: 'long',
-                                                                                              day: 'numeric'});
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
       }
     }],
     events: [
@@ -188,9 +313,11 @@ module.exports = [
     },
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child', 
-                                           Utils.addDate(dueDate, -event.start).getTime(),
-                                           Utils.addDate(dueDate, event.end).getTime());
+      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end).getTime()) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
     }
   },
 
@@ -200,11 +327,11 @@ module.exports = [
     icon: 'child',
     title: 'task.infant_child.first_visit_between_20_105_days',
     appliesTo: 'contacts',
-    appliesIf: function(c) {
-      return   c.contact.parent &&
-               c.contact.parent.parent &&
-               c.contact.parent.parent.parent &&
-               extras.isChildInWindow3Or4(c);
+    appliesIf: function (c) {
+      return c.contact.parent &&
+        c.contact.parent.parent &&
+        c.contact.parent.parent.parent &&
+        extras.isChildInWindow3Or4(c);
     },
     appliesToType: ['person'],
     actions: [{
@@ -224,16 +351,18 @@ module.exports = [
         content.rota2 = extras.getRota2(c);
         content.bopv3 = extras.getBopv3(c);
         content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
-        content.pcvi3 = extras.getPciv3(c);
+        content.pcvi3 = extras.getPcvi3(c);
         content.ipv = extras.getIpv(c);
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.week).getTime();
-        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
-                                                                                              year: 'numeric',
-                                                                                              month: 'long',
-                                                                                              day: 'numeric'}); 
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
       }
     }],
     events: [
@@ -246,7 +375,9 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there are any infant-child forms submitted - this is a first time task only
-      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+      return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
     }
   },
 
@@ -256,12 +387,12 @@ module.exports = [
     icon: 'child',
     title: 'task.infant_child.first_visit_over_105_days',
     appliesTo: 'contacts',
-    appliesIf: function(c) {
-      return   c.contact.parent &&
-               c.contact.parent.parent &&
-               c.contact.parent.parent.parent &&
-               extras.isChildInWindow5Plus(c) &&
-               extras.isChildUnder5(c);
+    appliesIf: function (c) {
+      return c.contact.parent &&
+        c.contact.parent.parent &&
+        c.contact.parent.parent.parent &&
+        extras.isChildInWindow5Plus(c) &&
+        extras.isChildUnder5(c);
     },
     appliesToType: ['person'],
     actions: [{
@@ -281,16 +412,18 @@ module.exports = [
         content.rota2 = extras.getRota2(c);
         content.bopv3 = extras.getBopv3(c);
         content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
-        content.pcvi3 = extras.getPciv3(c);
+        content.pcvi3 = extras.getPcvi3(c);
         content.ipv = extras.getIpv(c);
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.month).getTime();
-        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
-                                                                                              year: 'numeric',
-                                                                                              month: 'long',
-                                                                                              day: 'numeric'}); 
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
       }
     }],
     events: [
@@ -304,7 +437,9 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there are any infant-child forms submitted - this is a first time task only
-      return extras.countReportsSubmitted(c, 'infant_child') > 0;
+      return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
     }
   },
 
@@ -314,12 +449,12 @@ module.exports = [
     icon: 'child',
     title: 'task.infant_child.second_plus_visit_over_20_days',
     appliesTo: 'contacts',
-    appliesIf: function(c) {
-      return   c.contact.parent &&
-               c.contact.parent.parent &&
-               c.contact.parent.parent.parent &&
-               !extras.isChildUnder20Days(c) &&
-               extras.countConsentingInfantChildVisits(c) > 0;
+    appliesIf: function (c) {
+      return c.contact.parent &&
+        c.contact.parent.parent &&
+        c.contact.parent.parent.parent &&
+        !extras.isChildUnder20Days(c) &&
+        extras.countConsentingInfantChildVisits(c) > 0;
     },
     appliesToType: ['person'],
     actions: [{
@@ -339,22 +474,24 @@ module.exports = [
         content.rota2 = extras.getRota2(c);
         content.bopv3 = extras.getBopv3(c);
         content.dtp_hepb_hib3 = extras.getDtp_hepb_hib3(c);
-        content.pcvi3 = extras.getPciv3(c);
+        content.pcvi3 = extras.getPcvi3(c);
         content.ipv = extras.getIpv(c);
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
-        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw',{weekday: 'long',
-                                                                                              year: 'numeric',
-                                                                                              month: 'long',
-                                                                                              day: 'numeric'});
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
       }
     }],
     events: [
       {
         id: 'infant_child_day_20_week_11_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.week * 4));
         },
         start: (extras.day * 8),
@@ -362,7 +499,7 @@ module.exports = [
       },
       {
         id: 'infant_child_week_11_week_15_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.week * 12));
         },
         start: (extras.week * 1),
@@ -370,15 +507,15 @@ module.exports = [
       },
       {
         id: 'infant_child_week_15_month_6_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.week * 16));
         },
         start: (extras.week * 1),
-        end: (extras.day * 68) - 1 
+        end: (extras.day * 68) - 1
       },
       {
         id: 'infant_child_month_6_month_9_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.week * 26));
         },
         start: (extras.day * 2),
@@ -386,7 +523,7 @@ module.exports = [
       },
       {
         id: 'infant_child_month_9_month_12_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.week * 42));
         },
         start: (extras.day * 24),
@@ -394,7 +531,7 @@ module.exports = [
       },
       {
         id: 'infant_child_month_12_month_15_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.month * 13));
         },
         start: (extras.month * 1),
@@ -402,7 +539,7 @@ module.exports = [
       },
       {
         id: 'infant_child_month_15_month_18_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.month * 16));
         },
         start: (extras.month * 1),
@@ -410,7 +547,7 @@ module.exports = [
       },
       {
         id: 'infant_child_month_18_month_24_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.month * 20));
         },
         start: (extras.month * 2),
@@ -418,7 +555,7 @@ module.exports = [
       },
       {
         id: 'infant_child_year_2_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.month * 25));
         },
         start: (extras.month * 1),
@@ -426,7 +563,7 @@ module.exports = [
       },
       {
         id: 'infant_child_year_3_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.month * 39));
         },
         start: (extras.month * 3),
@@ -434,7 +571,7 @@ module.exports = [
       },
       {
         id: 'infant_child_year_4_visit',
-        dueDate: function(event, c){
+        dueDate: function (event, c) {
           return extras.daysAfterBirth(c, (extras.month * 51));
         },
         start: (extras.month * 3),
@@ -443,10 +580,164 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child', 
-                                           Utils.addDate(dueDate, -event.start).getTime(),
-                                           Utils.addDate(dueDate, event.end).getTime());
+      return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end).getTime()) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
+    }
+  },
+
+
+  //Trigger a task  for 5-7 months or 7-8 months 
+  {
+    icon: 'icon-pregnant',
+    title: 'task.pregnancy',
+    appliesTo: 'contacts',
+    appliesIf: function (c, r) {
+      return extras.isCurrentlyPregnant(c) &&
+        extras.isOver5MonthsPregnant(c);
+    },
+    appliesToType: ['person'],
+    actions: [{
+      form: 'pregnancy',
+      modifyContent: function (content, c) {
+        content.visit_id = extras.mapPregnancyVisitType(c);
+        content.client_EDD = extras.getRecentEDDForThisPregnancy(c);
+        content.due_date = extras.getPregnancyDueDate(c).getTime();
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        content.client_EDD_human_readable = new Date(content.client_EDD).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+      }
+    }],
+    events: [
+      {
+        id: 'pregnancy_month_5_month_7_visit',
+        dueDate: function (event, c) {
+          var EDD = new Date(extras.getRecentEDDForThisPregnancy(c));
+          var dueDate = new Date(EDD.setDate(EDD.getDate() - (13 * extras.week)));
+          return dueDate;
+        },
+        start: (extras.week * 4.5),
+        end: (extras.week * 4.5) - 1
+      },
+      {
+        id: 'pregnancy_over_7_months_visit',
+        dueDate: function (event, c) {
+          var EDD = new Date(extras.getRecentEDDForThisPregnancy(c));
+          var dueDate = new Date(EDD.setDate(EDD.getDate() - (4 * extras.week)));
+          return dueDate;
+        },
+        start: (extras.week * 4.5),
+        //Set end date to 2 years from now so that the CHV can come back at anytime at finish the last visit
+        end: (extras.month * 24)
+      }
+    ],
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there is a form submitted within the time window
+      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'pregnancy',
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end).getTime()) || 
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
+      return isResolved;
+    }
+  },
+
+  // 1st postpartum visit 
+  {
+    icon: 'mother-child',
+    title: 'task.postpartum',
+    appliesTo: 'reports',
+    appliesIf: function (c, r) {
+      return extras.didClientDeliver(c);
+    },
+    appliesToType: ['pregnancy_outcomes'],
+    actions: [{
+      form: 'postpartum',
+      modifyContent: function (content, c) {
+        content.visit_id = extras.mapPostPartumVisitType(c);
+        content.due_date = now;
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        content.c_section = extras.hadCSection(c);
+        content.is_atleast_one_baby_alive = extras.isAtleastOneBabyAlive(c);
+        content.show_quality_care = extras.showQualityOfCare(c);
+      }
+    }],
+    events: [
+      {
+        id: 'postpartum_initial_visit',
+        days: 0,
+        start: 0,
+        end: (extras.month * 60),  //setting end date high so that CHV gets ample of time to complete
+      }
+    ],
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there are any postpartum forms submitted for the current pregnancy
+      return !extras.noPostpartumVisitsCurrentPregnancy(c) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
+    }
+  },
+
+  // 2nd postpartum visit 
+  {
+    icon: 'mother-child',
+    title: 'task.postpartum',
+    appliesTo: 'reports',
+    appliesIf: function (c, r) {
+      return extras.didClientDeliver(c) && !(extras.noPostpartumVisitsCurrentPregnancy(c));
+    },
+    appliesToType: ['pregnancy_outcomes'],
+    actions: [{
+      form: 'postpartum',
+      modifyContent: function (content, c) {
+        content.visit_id = extras.mapPostPartumVisitType(c);
+        content.due_date = Utils.addDate(extras.getDeliveryDate(c), 5);
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        content.c_section = extras.hadCSection(c);
+        content.is_atleast_one_baby_alive = extras.isAtleastOneBabyAlive(c);
+        content.show_quality_care = extras.showQualityOfCare(c);
+      }
+    }],
+    events: [
+      {
+        id: 'postpartum_visit_3_or_more_days',
+        dueDate: function (event, c) {
+          var dueDate = Utils.addDate(extras.getDeliveryDate(c), 5);
+          return dueDate;
+        },
+        start: (extras.day * 2),
+        end: (extras.month * 60),  //setting end date high so that CHV gets ample of time to complete
+      }
+    ],
+    resolvedIf: function (c, r, event, dueDate) {
+      // Resolved if there is a form submitted within the time window
+      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
+        Utils.addDate(dueDate, -event.start).getTime(),
+        Utils.addDate(dueDate, event.end).getTime()) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
+      return isResolved;
     }
   }
-
 ];

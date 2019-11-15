@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Group Counseling</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/group_counseling/chv_group_counseling/date_of_group_counseling:jr:constraintMsg">
+            <value>The date must be today or earlier.</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/date_of_group_counseling:label">
+            <value>Date of counseling</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/district:jr:constraintMsg">
+            <value>Enter district name</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/district:label">
+            <value>District</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/session_title:jr:constraintMsg">
+            <value>Enter counseling topic</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/session_title:label">
+            <value>Session title</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/shehia:jr:constraintMsg">
+            <value>Enter shehia name</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/shehia:label">
+            <value>Shehia</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_above_20:jr:constraintMsg">
+            <value>Number must be between 0 and 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_above_20:label">
+            <value>Number of participants above 20 years</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_below_20:jr:constraintMsg">
+            <value>Number must be between 0 and 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_below_20:label">
+            <value>Number of participants below or equal to 20 years</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:jr:constraintMsg">
+            <value>Number must be between 0 and 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:label">
+            <value>Number of caregivers</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:jr:constraintMsg">
+            <value>Number must be between 0 and 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:label">
+            <value>Number of influential people</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:jr:constraintMsg">
+            <value>Number must be between 0 and 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:label">
+            <value>Number of pregnant women</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:jr:constraintMsg">
+            <value>Number must be between 0 and 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:label">
+            <value>Number of females</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:jr:constraintMsg">
+            <value>Number must be between 0 and 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:label">
+            <value>Number of males</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/village:jr:constraintMsg">
+            <value>Enter village name</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/village:label">
+            <value>Village</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/group_counseling/chv_group_counseling/date_of_group_counseling:jr:constraintMsg">
+            <value>Tarehe ya ushauri lazima iwe leo au siku kabla ya leo</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/date_of_group_counseling:label">
+            <value>Tarehe ya ushauri</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/district:jr:constraintMsg">
+            <value>Ingiza jina la wilaya</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/district:label">
+            <value>Wilaya</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/session_title:jr:constraintMsg">
+            <value>Ingiza mada ya kikao</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/session_title:label">
+            <value>Mada ya kikao</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/shehia:jr:constraintMsg">
+            <value>Ingiza jina la shehia</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/shehia:label">
+            <value>Shehia</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_above_20:jr:constraintMsg">
+            <value>Namba lazima iwe baina ya 0 na 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_above_20:label">
+            <value>Umri wa zaidi ya miaka 20</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_below_20:jr:constraintMsg">
+            <value>Namba lazima iwe baina ya 0 na 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age/age_below_20:label">
+            <value>Umri wa chini ya miaka 20</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_age:label">
+            <value>-</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:jr:constraintMsg">
+            <value>Namba lazima iwe baina ya 0 na 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:label">
+            <value>Idadi ya walezi</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:jr:constraintMsg">
+            <value>Namba lazima iwe baina ya 0 na 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:label">
+            <value>Idadi ya watu wenye ushawishi</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:jr:constraintMsg">
+            <value>Namba lazima iwe baina ya 0 na 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:label">
+            <value>Idadi ya wanawake wajawazito</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_participant:label">
+            <value>-</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:jr:constraintMsg">
+            <value>Namba lazima iwe baina ya 0 na 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:label">
+            <value>Idadi ya wanawake</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:jr:constraintMsg">
+            <value>Namba lazima iwe baina ya 0 na 500</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:label">
+            <value>Idadi ya wanaume</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/subgroup_sex:label">
+            <value>-</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/village:jr:constraintMsg">
+            <value>Ingiza jina la kijiji</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling/village:label">
+            <value>Kijiji</value>
+          </text>
+          <text id="/group_counseling/chv_group_counseling:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <group_counseling delimiter="#" id="group_counseling" prefix="J1!group_counseling!">
+          <chv_group_counseling>
+            <district/>
+            <shehia/>
+            <village/>
+            <date_of_group_counseling/>
+            <session_title/>
+            <subgroup_sex>
+              <sex_number_male/>
+              <sex_number_female/>
+            </subgroup_sex>
+            <subgroup_age>
+              <age_below_20/>
+              <age_above_20/>
+            </subgroup_age>
+            <subgroup_participant>
+              <number_pregnant_women/>
+              <number_caregivers/>
+              <number_influential_people/>
+            </subgroup_participant>
+          </chv_group_counseling>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </group_counseling>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/district:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/district" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/shehia:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/shehia" required="true()" type="string"/>
+      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/village:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/village" required="true()" type="string"/>
+      <bind constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/date_of_group_counseling:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/date_of_group_counseling" required="true()" type="date"/>
+      <bind jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/session_title:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/session_title" required="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male" type="int"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female" type="int"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_below_20:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_age/age_below_20" type="int"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_above_20:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_age/age_above_20" type="int"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women" type="int"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers" type="int"/>
+      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/group_counseling/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/group_counseling/chv_group_counseling">
+      <input ref="/group_counseling/chv_group_counseling/district">
+        <label ref="jr:itext('/group_counseling/chv_group_counseling/district:label')"/>
+      </input>
+      <input ref="/group_counseling/chv_group_counseling/shehia">
+        <label ref="jr:itext('/group_counseling/chv_group_counseling/shehia:label')"/>
+      </input>
+      <input ref="/group_counseling/chv_group_counseling/village">
+        <label ref="jr:itext('/group_counseling/chv_group_counseling/village:label')"/>
+      </input>
+      <input ref="/group_counseling/chv_group_counseling/date_of_group_counseling">
+        <label ref="jr:itext('/group_counseling/chv_group_counseling/date_of_group_counseling:label')"/>
+      </input>
+      <input ref="/group_counseling/chv_group_counseling/session_title">
+        <label ref="jr:itext('/group_counseling/chv_group_counseling/session_title:label')"/>
+      </input>
+      <group ref="/group_counseling/chv_group_counseling/subgroup_sex">
+        <input ref="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male">
+          <label ref="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:label')"/>
+        </input>
+        <input ref="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female">
+          <label ref="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:label')"/>
+        </input>
+      </group>
+      <group ref="/group_counseling/chv_group_counseling/subgroup_age">
+        <input ref="/group_counseling/chv_group_counseling/subgroup_age/age_below_20">
+          <label ref="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_below_20:label')"/>
+        </input>
+        <input ref="/group_counseling/chv_group_counseling/subgroup_age/age_above_20">
+          <label ref="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_above_20:label')"/>
+        </input>
+      </group>
+      <group ref="/group_counseling/chv_group_counseling/subgroup_participant">
+        <input ref="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women">
+          <label ref="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:label')"/>
+        </input>
+        <input ref="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers">
+          <label ref="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:label')"/>
+        </input>
+        <input ref="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people">
+          <label ref="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:label')"/>
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>

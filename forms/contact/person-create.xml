@@ -64,8 +64,11 @@
           <text id="/data/person/middle_name:label">
             <value>What is their middle name?</value>
           </text>
-          <text id="/data/person/return_children_note:label">
+          <text id="/data/person/return_child_note_20_or_above_days:label">
             <value>From this registration, I've see that you have a child under 5 who can benefit from this national program. Therefore, I'd like to return later to start checking up on all issues related to their health care, nutrition, and child development. Do you have any questions for me now about this?</value>
+          </text>
+          <text id="/data/person/return_infant_note_under_20_days:label">
+            <value>From this registration, I've see that you have a very young baby who can benefit from this national program. Therefore, I'd like to start checking up on all issues related to their health care, nutrition, and child development right after registering your household. Do you have any questions for me now about this?</value>
           </text>
           <text id="/data/person/return_women_note:label">
             <value>I see that there are some women of reproductive age in your family. I'd like to ask your permission to return later to speak with them personally about issues related to health during pregnancy and childbirth.</value>
@@ -81,6 +84,15 @@
           </text>
           <text id="/data/person/sex_note:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/data/person/temp_hh_member/permanent:label">
+            <value>Permanent household member - not planning to move elsewhere</value>
+          </text>
+          <text id="/data/person/temp_hh_member/temporary:label">
+            <value>Temporary household member - planning to move elsewhere soon</value>
+          </text>
+          <text id="/data/person/temp_hh_member:label">
+            <value>Does <output value=" /data/person/first_name_c "/> live in this household permanently, or are they here temporarily but later will leave?</value>
           </text>
           <text id="/data/person:label">
             <value>Household Member Information</value>
@@ -103,7 +115,7 @@
             <value>-</value>
           </text>
           <text id="/data/not_in_household_note:label">
-            <value>&lt;span style="color:red;font-weight: bold"&gt;Unajaribu mkumsajili mtu asiye na kaya. Tafadhali ondoka kwenye fomu hii na uchague kaya sahihi.&lt;/span&gt;</value>
+            <value>&lt;span style="color:red;font-weight: bold"&gt;Unajaribu kumsajili mtu asiye na kaya. Tafadhali ondoka kwenye fomu hii na uchague kaya sahihi.&lt;/span&gt;</value>
           </text>
           <text id="/data/person/age_estimate_contact:jr:constraintMsg">
             <value>Umri lazima uwe lati ya miaka 5 hadi miaka 100. Kwa watoto walio chini ya umri wa miaka 5, tarehe yake yao ya kuzaliwa nilazima ichukuliwe.</value>
@@ -159,11 +171,14 @@
           <text id="/data/person/parent:label">
             <value>-</value>
           </text>
-          <text id="/data/person/return_children_note:label">
+          <text id="/data/person/return_child_note_20_or_above_days:label">
             <value>Baada ya usajili huu, nimeona kuwa una mtoto mwenye umri chini ya miaka 5 ambaye atafaidika na mpango huu wa taifa, kwa hivyo ningependa kurudi baadae kwa ajili ya kuangalia afya yake, lishe na Makuzi ya mtoto. Je una swali lolote kufikia hapa?</value>
           </text>
+          <text id="/data/person/return_infant_note_under_20_days:label">
+            <value>Baada ya usajili huu, nimeona kuwa una mtoto ambaye atafaidika na mpango huu wa taifa, na kwakuwa mtoto bado mchanga ningependa kuangalia afya yake, lishe na makuzi ya mtoto sasa hivi baada ya usajili wa kaya. Je una swali lolote kufikia hapa?</value>
+          </text>
           <text id="/data/person/return_women_note:label">
-            <value>Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
+            <value>Umri wa <output value=" /data/person/first_name_c "/> unaonesha kwamba anaweza kupata ujauzito. Ningeomba ridhaa yako kurudia ili kuja kuzungumza naye mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
           </text>
           <text id="/data/person/sex/female:label">
             <value>Mwanamke</value>
@@ -177,6 +192,15 @@
           <text id="/data/person/sex_note:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
+          <text id="/data/person/temp_hh_member/permanent:label">
+            <value>Mkaazi wa kudumu - Hatohamia sehemu nyengine</value>
+          </text>
+          <text id="/data/person/temp_hh_member/temporary:label">
+            <value>Mkaazi wa muda - Atahamia sehemu nyengine</value>
+          </text>
+          <text id="/data/person/temp_hh_member:label">
+            <value>Je <output value=" /data/person/first_name_c "/> ni mkazi wa kudumu katika nyumba hii au ni mkazi wa muda tu?</value>
+          </text>
           <text id="/data/person/type:label">
             <value>-</value>
           </text>
@@ -186,7 +210,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-06-29_06-40">
+        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2019-10-31_08-41">
           <inputs>
             <meta>
               <location>
@@ -221,12 +245,15 @@
             <age_estimate_contact/>
             <yob/>
             <dob/>
+            <temp_hh_member/>
             <date_of_birth/>
             <date_of_birth_c/>
             <is_exact_dob_in_range/>
             <reproductive_age/>
             <is_under_5_binary/>
-            <return_children_note/>
+            <age_days/>
+            <return_child_note_20_or_above_days/>
+            <return_infant_note_under_20_days/>
             <return_women_note/>
             <debug_note/>
             <meta tag="hidden">
@@ -272,12 +299,15 @@
       <bind constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" nodeset="/data/person/age_estimate_contact" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" required="true()" type="int"/>
       <bind calculate="if(../age_estimate_contact != '', format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact, 1900)" nodeset="/data/person/yob" type="string"/>
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" nodeset="/data/person/dob" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
+      <bind nodeset="/data/person/temp_hh_member" relevant=" /data/not_in_household_flag  = 0" required="true()" type="select1"/>
       <bind calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')" nodeset="/data/person/date_of_birth" type="string"/>
       <bind calculate="../date_of_birth" nodeset="/data/person/date_of_birth_c" type="string"/>
       <bind calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)" nodeset="/data/person/is_exact_dob_in_range" type="string"/>
       <bind calculate="if( /data/person/sex_c =&quot;female&quot; and ((((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &gt;= 15 and ((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &lt;= 49)),int(1),int(0))" nodeset="/data/person/reproductive_age" type="string"/>
       <bind calculate="if(((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 30) &lt; 60,1,0)" nodeset="/data/person/is_under_5_binary" type="string"/>
-      <bind nodeset="/data/person/return_children_note" readonly="true()" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot; and  /data/person/is_under_5_binary =1 and  /data/person/is_exact_dob_in_range  = 1" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /data/person/date_of_birth_c ))" nodeset="/data/person/age_days" type="string"/>
+      <bind nodeset="/data/person/return_child_note_20_or_above_days" readonly="true()" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot; and  /data/person/is_under_5_binary =1 and  /data/person/is_exact_dob_in_range  = 1 and  /data/person/age_days  &gt;= 20" type="string"/>
+      <bind nodeset="/data/person/return_infant_note_under_20_days" readonly="true()" relevant=" /data/person/age_days  &lt; 20" type="string"/>
       <bind nodeset="/data/person/return_women_note" readonly="true()" relevant=" /data/person/reproductive_age  = 1" type="string"/>
       <bind nodeset="/data/person/debug_note" readonly="true()" type="string"/>
       <bind calculate="../../../name" nodeset="/data/person/meta/created_by" type="string"/>
@@ -351,10 +381,24 @@
       <input ref="/data/person/dob">
         <label ref="jr:itext('/data/person/dob:label')"/>
       </input>
-      <input ref="/data/person/return_children_note">
-        <label ref="jr:itext('/data/person/return_children_note:label')"/>
+      <select1 ref="/data/person/temp_hh_member">
+        <label ref="jr:itext('/data/person/temp_hh_member:label')"/>
+        <item>
+          <label ref="jr:itext('/data/person/temp_hh_member/permanent:label')"/>
+          <value>permanent</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/person/temp_hh_member/temporary:label')"/>
+          <value>temporary</value>
+        </item>
+      </select1>
+      <input ref="/data/person/return_child_note_20_or_above_days">
+        <label ref="jr:itext('/data/person/return_child_note_20_or_above_days:label')"/>
       </input>
-      <input appearance="hidden" ref="/data/person/return_women_note">
+      <input ref="/data/person/return_infant_note_under_20_days">
+        <label ref="jr:itext('/data/person/return_infant_note_under_20_days:label')"/>
+      </input>
+      <input ref="/data/person/return_women_note">
         <label ref="jr:itext('/data/person/return_women_note:label')"/>
       </input>
       <input appearance="hidden" ref="/data/person/debug_note">

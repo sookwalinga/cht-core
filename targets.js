@@ -1,54 +1,33 @@
 module.exports = [
-   // HOUSEHOLD REGISTERED ALL TIME 
-   {
-    id: 'households-registered-all-time',                              
-    type: 'count',                                       
-    icon: 'medic-clinic',                  
-    goal: -1,                                             
-    translation_key: 'targets.households_registered_all_time.title',         
-    date: 'now',                                            
-    appliesTo: 'contacts',                                  
-    appliesToType: 'clinic',  
-    appliesIf: function(c) { return c.contact && c.contact.parent && c.contact.parent.parent;}
-  },
 
-   // HOUSEHOLD REGISTERED THIS MONTH 
-   {
-    id: 'households-registered-this-month',                              
-    type: 'count',                                       
-    icon: 'medic-clinic',                  
-    goal: -1,                                             
-    translation_key: 'targets.households_registered_this_month.title',          
-    date: 'reported',                                            
-    appliesTo: 'contacts',                                  
-    appliesToType: 'clinic',  
-    appliesIf: function(c) { return c.contact && c.contact.parent && c.contact.parent.parent;}
-  },
-
-   // CHILDREN UNDER FIVE REGISTERED ALL TIME
+  // General: Total under 5 registrations this month + pregnant women registration this month
   {
-    id: 'children-under-5-all-time',                             
-    type: 'count',                                        
-    icon: 'child',                   
-    goal: -1,                                            
-    translation_key: 'targets.children_u5_all_time.title',         
-    date: 'now',                                         
-    appliesTo: 'contacts',                                   
-    appliesToType: 'person', 
-    appliesIf: extras.isChildUnder5
+    id: 'u5-and-pregnant-registrations-this-month',
+    translation_key: 'targets.u5-and-pregnant-women-registration.title',
+    subtitle_translation_key: 'targets.this_month.subtitle',
+    type: 'count',
+    icon: 'icon-people-person-general',
+    goal: 4,
+    appliesTo: 'contacts',
+    appliesToType: ['person'],
+    appliesIf: function (c) {    
+     return extras.consentingVisitsThisMonth(c,'infant_child') || extras.consentingVisitsThisMonth(c,'pregnancy');
+    }
   },
 
-    // CHILDREN UNDER FIVE REGISTERED THIS MONTH
-    {
-      id: 'children-under-5-this-month',                             
-      type: 'count',                                        
-      icon: 'child',                   
-      goal: -1,                                            
-      translation_key: 'targets.children_u5_this_month.title',         
-      date: 'reported',                                         
-      appliesTo: 'contacts',                                   
-      appliesToType: 'person', 
-      appliesIf: extras.isChildUnder5
-    },
- 
+   // General: Total under 5 visits this month + Pregnancy Visits this month
+   {
+    id: 'u5-and-anc-visits-this-month',
+    translation_key: 'targets.u5-and-pregnant-women-visits.title',
+    subtitle_translation_key: 'targets.this_month.subtitle',
+    type: 'count',
+    icon: 'icon-people-person-general',
+    goal: 16,
+    appliesTo: 'reports',
+    appliesToType: ['infant_child', 'pregnancy'],
+    idType: 'report',  //counts multiple reports per contact
+    appliesIf: function (c) {    
+     return extras.isFormSubmittedThisMonth(c,'infant_child') || extras.isFormSubmittedThisMonth(c,'pregnancy'); 
+    }
+  }
 ];

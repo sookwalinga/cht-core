@@ -2,7 +2,7 @@
   "title": [
     {
       "locale": "en",
-      "content": "Delivery Outcomes"
+      "content": "Postpartum Screening"
     },
     {
       "locale": "sw",
@@ -11,8 +11,8 @@
   ],
   "icon": "mother-child",
   "context": {
-    "person": true,
+    "person": false,
     "place": false,
-    "expression": "contact.type === 'person' && contact.sex === 'female'"
+    "expression": ""
   }
 }

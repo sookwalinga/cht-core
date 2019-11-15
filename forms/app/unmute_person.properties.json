@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Return the person in household"
+    },
+    {
+      "locale": "sw",
+      "content": "Mrejeshe mteja katika kaya hii"
+    }
+  ],
+  "icon": "returning",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "contact && contact.type === 'person' && contact.parent && contact.parent.parent && contact.parent.parent.parent && !contact.date_of_death && contact.muted"
+  }
+}
