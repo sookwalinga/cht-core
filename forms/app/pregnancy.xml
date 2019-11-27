@@ -78,7 +78,7 @@
             <value>&lt;span style="color:#f58a1f"&gt;EXPLAIN: &lt;/span&gt;It's very important that you attend all four visits because life-threatening complications are often only seen at the third or fourth visit.</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg">
-            <value>Please enter a value between 1 and 8</value>
+            <value>Please enter a value between 0 and 8. If you have already done an ANC visit, then enter a value greater than the one entered previously.</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:label">
             <value>How many ANC visits have you attended?</value>
@@ -1855,13 +1855,13 @@ Have you experienced:</value>
             <value>Ilikua ni mapema sana kwa ujauzito wangu</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero:label">
-            <value>Ni kwanini haujawahi kuhudhuria hata Mara mmoja klinik ya mama wajawazijto?</value>
+            <value>Ni kwanini haujawahi kuhudhuria hata mara moja klinik ya mama wajawazijto?</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;ELEZA:&lt;/span&gt; Ni muhimu sana kuwa umehudhuria mara zote nne kwasababu hali ya hatari inayoweza kutishia maisha ya mama mjamzito mara nyingi huonekana katika tembeleo la tatu au la nne.</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg">
-            <value>-</value>
+            <value>Tafadhali ingiza idadi kati ya 0 na 8. Ikiwa ulienda katika kituo cha afya, tafadhali ingiza idadi isiyopungua idadi ya tembeleo la mwisho.</value>
           </text>
           <text id="/pregnancy/anc_screening_and_counseling/num_anc_visits:label">
             <value>Je ni mara ngapi umehudhuria klinik ya mama wajawazito?</value>
@@ -2703,7 +2703,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <value>-</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group:label">
-            <value>Maswala ya ujauzito</value>
+            <value>Maswala ya Ujauzito</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
             <value>Hapana</value>
@@ -3673,7 +3673,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <patient_id/>
           <created_by/>
           <created_by_person_uuid/>
-          <fields/>
+          <created_by_place_uuid/>
           <date_of_birth_c/>
           <age_days/>
           <age_months/>
@@ -4941,7 +4941,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </item>
         </root>
       </instance>
-      <bind nodeset="/pregnancy/inputs" relevant="false()"/>
+      <bind nodeset="/pregnancy/inputs" relevant="0"/>
       <bind nodeset="/pregnancy/inputs/due_date" type="string"/>
       <bind nodeset="/pregnancy/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/pregnancy/inputs/client_EDD" type="string"/>
@@ -4962,7 +4962,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
       <bind calculate="../inputs/contact/_id" nodeset="/pregnancy/patient_id" type="string"/>
       <bind calculate="../inputs/user/name" nodeset="/pregnancy/created_by" type="string"/>
       <bind calculate="../inputs/user/contact_id" nodeset="/pregnancy/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/pregnancy/fields" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/pregnancy/created_by_place_uuid" type="string"/>
       <bind calculate="../inputs/contact/date_of_birth" nodeset="/pregnancy/date_of_birth_c" type="string"/>
       <bind calculate="int(decimal-date-time(now())-decimal-date-time( /pregnancy/date_of_birth_c ))" nodeset="/pregnancy/age_days" type="string"/>
       <bind calculate="int(( /pregnancy/age_days  - ( /pregnancy/age_years  * 12 * 30)) div 30,0)" nodeset="/pregnancy/age_months" type="string"/>
@@ -5135,8 +5135,8 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
-      <bind constraint=". &gt;= 1 and . &lt;= 8" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg')" nodeset="/pregnancy/anc_screening_and_counseling/num_anc_visits" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes')" required="true()" type="int"/>
-      <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'no')" required="true()" type="select"/>
+      <bind constraint="(. &gt;=  /pregnancy/n_previous_anc_visits  and .&lt;= 8)" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg')" nodeset="/pregnancy/anc_screening_and_counseling/num_anc_visits" required="true()" type="int"/>
+      <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" relevant=" /pregnancy/anc_screening_and_counseling/num_anc_visits  != '' and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0" required="true()" type="select"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note" readonly="true()" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'no')" type="string"/>
       <bind nodeset="/pregnancy/birth_plan" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
@@ -5220,7 +5220,7 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <bind nodeset="/pregnancy/group_summary/needs_referral_danger_signs" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral =1" type="string"/>
       <bind nodeset="/pregnancy/group_summary/needs_referral_neonatal_note" readonly="true()" relevant=" /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1" type="string"/>
-      <bind nodeset="/pregnancy/group_summary/needs_anc_referral_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/group_summary/needs_anc_referral_note" readonly="true()" relevant=" /pregnancy/refer_flag_anc_visit_6m_or_more =1" type="string"/>
       <bind calculate="if( /pregnancy/danger_signs/emergency_danger_sign_referral =1 or
  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1 or 
@@ -5229,7 +5229,7 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <bind calculate="../danger_signs/emergency_danger_sign_referral" nodeset="/pregnancy/refer_flag_emergency_danger_sign" type="string"/>
       <bind calculate="../pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" nodeset="/pregnancy/refer_flag_pregnancy_issues" type="string"/>
       <bind calculate="../pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications" nodeset="/pregnancy/refer_flag_pregnancy_complications" type="string"/>
-      <bind calculate="if( /pregnancy/n_previous_anc_visits  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3, 1,0)" nodeset="/pregnancy/refer_flag_anc_visit_6m_or_more" type="string"/>
+      <bind calculate="if( /pregnancy/n_previous_anc_visits  = 0 and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3, 1,0)" nodeset="/pregnancy/refer_flag_anc_visit_6m_or_more" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -6556,7 +6556,7 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <input appearance="li" ref="/pregnancy/group_summary/needs_referral_neonatal_note">
         <label ref="jr:itext('/pregnancy/group_summary/needs_referral_neonatal_note:label')"/>
       </input>
-      <input ref="/pregnancy/group_summary/needs_anc_referral_note">
+      <input appearance="li" ref="/pregnancy/group_summary/needs_anc_referral_note">
         <label ref="jr:itext('/pregnancy/group_summary/needs_anc_referral_note:label')"/>
       </input>
     </group>
