@@ -120,6 +120,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /mute_
             </contact>
           </inputs>
           <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
           <client_name/>
           <household_head/>
           <house_number/>
@@ -147,6 +150,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /mute_
       <bind nodeset="/mute_person/inputs/contact/sex" type="string"/>
       <bind nodeset="/mute_person/inputs/contact/date_of_birth" type="string"/>
       <bind calculate="../inputs/contact/_id" nodeset="/mute_person/patient_id" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/mute_person/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/mute_person/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/mute_person/created_by_place_uuid" type="string"/>
       <bind calculate="../inputs/contact/name" nodeset="/mute_person/client_name" type="string"/>
       <bind calculate="instance('contact-summary')/context/household_head" nodeset="/mute_person/household_head" type="string"/>
       <bind calculate="instance('contact-summary')/context/house_number" nodeset="/mute_person/house_number" type="string"/>
