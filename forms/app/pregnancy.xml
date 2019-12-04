@@ -2703,7 +2703,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <value>-</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group:label">
-            <value>Maswala ya Ujauzito</value>
+            <value>Maswala ya ujauzito</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
             <value>Hapana</value>
@@ -2895,13 +2895,10 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <value>Katika tembeleo lako la hivi karibuni kwenye Kliniki ya mama wajawazito ni huduma ipi ulipewa?</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility:label">
-            <value>Ni Kituo kipi cha afya ulijifungua?</value>
+            <value>Ulienda kituo gani cha afya ?</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility_other:label">
             <value>Tafadhali orodhesha</value>
-          </text>
-          <text id="/pregnancy/quality_of_survery_care/subgroup_facility_delivery:label">
-            <value>-</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/wait_period/ok:label">
             <value>Muda kiasi</value>
@@ -4941,7 +4938,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </item>
         </root>
       </instance>
-      <bind nodeset="/pregnancy/inputs" relevant="0"/>
+      <bind nodeset="/pregnancy/inputs" relevant="false()"/>
       <bind nodeset="/pregnancy/inputs/due_date" type="string"/>
       <bind nodeset="/pregnancy/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/pregnancy/inputs/client_EDD" type="string"/>
