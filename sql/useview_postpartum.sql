@@ -32,7 +32,7 @@ CREATE MATERIALIZED VIEW useview_postpartum AS
     doc #>> '{fields,house_number}' AS house_number,
     doc #>> '{fields,kitongoji}' AS kitongoji,
     doc #>> '{fields,phone}' AS phone,
-    TO_DATE(NULLIF(doc #>> '{fields,due_date}', ''), 'YYYY-MM-DD') AS due_date,
+    TO_TIMESTAMP((NULLIF(doc #>> '{fields,due_date}', '')::BIGINT / 1000)::DOUBLE PRECISION) AS due_date,
     doc #>> '{fields,due_date_pretty_print}' AS due_date_pretty_print,
     NULLIF(doc #>> '{fields,show_research_questions}', '')::BOOLEAN AS show_research_questions,
     NULLIF(doc #>> '{fields,show_quality_care_c}', '')::BOOLEAN AS show_quality_care_c,
