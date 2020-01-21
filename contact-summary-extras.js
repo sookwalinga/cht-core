@@ -242,10 +242,9 @@ module.exports = {
     if (report && report.fields &&
       report.fields.rch_card &&
       report.fields.rch_card.is_rch_card_available &&
-      report.fields.rch_card.is_delivery_date_written &&
       ((report.fields.rch_card.is_rch_card_available === 'no') ||
         (report.fields.rch_card.is_rch_card_available === 'yes' &&
-          report.fields.rch_card.is_delivery_date_written === 'no'))) {
+          report.fields.rch_card.is_delivery_date_written && report.fields.rch_card.is_delivery_date_written === 'no'))) {
       return true;
     }
     return false;
