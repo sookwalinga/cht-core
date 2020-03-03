@@ -1,0 +1,101 @@
+------------------------------------------------------------
+-- Materialized view to show table of postpartum forms.
+------------------------------------------------------------
+DROP MATERIALIZED VIEW IF EXISTS useview_postpartum;
+
+CREATE MATERIALIZED VIEW useview_postpartum AS
+(
+  SELECT
+    doc ->> '_id' AS _id,
+    doc ->> '_rev' AS _rev,
+    doc ->> 'form' AS form,
+    doc ->> 'type' AS type,
+    doc ->> 'content_type' AS content_type,
+    TO_TIMESTAMP((NULLIF(doc ->> 'reported_date', '')::BIGINT / 1000)::DOUBLE PRECISION) AS reported_date,
+    doc #>> '{contact,_id}' AS chv_uuid,
+    doc #>> '{contact,parent,_id}' AS catchment_area_uuid,
+    doc #>> '{contact,parent,parent,_id}' AS supervisory_area_uuid,  
+    doc ->> 'from' AS chv_phone,  
+    doc #>> '{fields,client_name}' AS client_name,
+    doc #>> '{fields,patient_id}' AS patient_id,
+    doc #>> '{fields,created_by}' AS chv_name,
+    NULLIF(doc #>> '{fields,had_c_section}', '')::BOOLEAN AS had_c_section,
+    TO_DATE(NULLIF(doc #>> '{fields,date_of_birth_c}', ''), 'YYYY-MM-DD') AS date_of_birth_c,
+    NULLIF(NULLIF(doc #>> '{fields,age_days}', 'NaN'), '')::INTEGER AS age_days,
+    NULLIF(NULLIF(doc #>> '{fields,age_months}', 'NaN'), '')::INTEGER AS age_months,
+    NULLIF(NULLIF(doc #>> '{fields,age_years}', 'NaN'), '')::INTEGER AS age_years,
+    NULLIF(NULLIF(doc #>> '{fields,age_in_years}', 'NaN'), '')::INTEGER AS age_in_years,
+    NULLIF(NULLIF(doc #>> '{fields,age_days_display}', 'NaN'), '')::INTEGER AS age_days_display,
+    NULLIF(NULLIF(doc #>> '{fields,week}', 'NaN'), '')::INTEGER AS week,
+    doc #>> '{fields,month}' AS month,
+    doc #>> '{fields,household_head}' AS household_head,
+    doc #>> '{fields,house_number}' AS house_number,
+    doc #>> '{fields,kitongoji}' AS kitongoji,
+    doc #>> '{fields,phone}' AS phone,
+    TO_TIMESTAMP((NULLIF(doc #>> '{fields,due_date}', '')::BIGINT / 1000)::DOUBLE PRECISION) AS due_date,
+    doc #>> '{fields,due_date_pretty_print}' AS due_date_pretty_print,
+    NULLIF(doc #>> '{fields,show_research_questions}', '')::BOOLEAN AS show_research_questions,
+    NULLIF(doc #>> '{fields,show_quality_care_c}', '')::BOOLEAN AS show_quality_care_c,
+    doc #>> '{fields,visit_id}' AS visit_id,
+    NULLIF(doc #>> '{fields,is_atleast_one_baby_alive_c}', '')::BOOLEAN AS is_atleast_one_baby_alive_c,
+    NULLIF(doc #>> '{fields,postpartum_danger_signs,postpartum_emergency_danger_signs,postpartum_emergency_danger_signs_table,postpartum_severe_vaginal_bleeding}', '')::BOOLEAN AS postpartum_severe_vaginal_bleeding,
+    NULLIF(doc #>> '{fields,postpartum_danger_signs,postpartum_emergency_danger_signs,postpartum_emergency_danger_signs_table,postpartum_convulsions}', '')::BOOLEAN AS postpartum_convulsions,
+    NULLIF(doc #>> '{fields,postpartum_danger_signs,postpartum_emergency_danger_signs,postpartum_emergency_danger_signs_table,postpartum_unconscious}', '')::BOOLEAN AS postpartum_unconscious,
+    NULLIF(doc #>> '{fields,postpartum_danger_signs,postpartum_emergency_danger_signs,postpartum_bleeding_right_now}', '')::BOOLEAN AS postpartum_bleeding_right_now,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_pale_pallor}', '')::BOOLEAN AS postpartum_pale_pallor,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_severe_frontal_headache}', '')::BOOLEAN AS postpartum_severe_frontal_headache,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_blurred_vision}', '')::BOOLEAN AS postpartum_blurred_vision,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_urine}', '')::BOOLEAN AS postpartum_urine,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_dizziness}', '')::BOOLEAN AS postpartum_dizziness,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_exhaustion}', '')::BOOLEAN AS postpartum_exhaustion,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_severe_lower_abdominal_pain}', '')::BOOLEAN AS postpartum_severe_lower_abdominal_pain,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_vaginal_discharge}', '')::BOOLEAN AS postpartum_vaginal_discharge,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_fever_chills}', '')::BOOLEAN AS postpartum_fever_chills,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_breathing_difficulty}', '')::BOOLEAN AS postpartum_breathing_difficulty,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_severe_pain_foot}', '')::BOOLEAN AS postpartum_severe_pain_foot,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_behavior}', '')::BOOLEAN AS postpartum_behavior,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,postpartum_other_danger_signs_table,postpartum_breast}', '')::BOOLEAN AS postpartum_breast,
+    doc #>> '{fields,postpartum_other_danger_signs,c_section_condition}' AS c_section_condition,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,client_been_facility_3_days}', '')::BOOLEAN AS client_been_facility_3_days,
+    NULLIF(doc #>> '{fields,postpartum_other_danger_signs,chv_thinks_needs_return_facility}', '')::BOOLEAN AS chv_thinks_needs_return_facility,
+    NULLIF(doc #>> '{fields,check_facility_pnc,has_attended_facility_pnc}', '')::BOOLEAN AS has_attended_facility_pnc,
+    doc #>> '{fields,check_facility_pnc,pnc_visit_count_zero}' AS pnc_visit_count_zero,
+    NULLIF(doc #>> '{fields,check_facility_pnc,quality_of_care_consent}', '')::BOOLEAN AS quality_of_care_consent,
+    doc #>> '{fields,quality_of_care,facility_island}' AS facility_island,
+    doc #>> '{fields,quality_of_care,facility_district}' AS facility_district,
+    doc #>> '{fields,quality_of_care,subgroup_facility,anc_visit_facility}' AS anc_visit_facility,
+    doc #>> '{fields,quality_of_care,subgroup_facility,anc_visit_facility_other}' AS anc_visit_facility_other,
+    doc #>> '{fields,quality_of_care,is_service_received}' AS is_service_received,
+    doc #>> '{fields,quality_of_care,no_service_reason}' AS no_service_reason,
+    doc #>> '{fields,quality_of_care,second_facility}' AS second_facility,
+    doc #>> '{fields,quality_of_care,pnc_services_received}' AS pnc_services_received,
+    doc #>> '{fields,quality_of_care,baby_services_recevied}' AS baby_services_recevied,
+    NULLIF(doc #>> '{fields,personal_information_consent,research_questions_consent}', '')::BOOLEAN AS research_questions_consent,
+    doc #>> '{fields,research_questions,travel_time}' AS travel_time,
+    doc #>> '{fields,research_questions,transport,travel_means}' AS travel_means,
+    doc #>> '{fields,research_questions,transport,other_means}' AS other_means,
+    doc #>> '{fields,research_questions,subgroup_decision_maker,decision_maker}' AS decision_maker,
+    doc #>> '{fields,research_questions,subgroup_decision_maker,some_other_decision_maker}' AS some_other_decision_maker,
+    doc #>> '{fields,research_questions,subgroup_marital_status,marital_status}' AS marital_status,
+    doc #>> '{fields,research_questions,subgroup_partner_info,does_partner_live_together}' AS does_partner_live_together,
+    NULLIF(NULLIF(doc #>> '{fields,research_questions,partner_info,subgroup_partner_age}', 'NaN'), '')::INTEGER AS subgroup_partner_age,
+    doc #>> '{fields,research_questions,partner_info,partner_highest_school_level}' AS partner_highest_school_level,
+    doc #>> '{fields,research_questions,subgroup_multiple_wives,more_than_one_wife}' AS more_than_one_wife,
+    NULLIF(NULLIF(doc #>> '{fields,research_questions,subgroup_multiple_wives,num_wives}', 'NaN'), '')::INTEGER AS num_wives,
+    NULLIF(doc #>> '{fields,refer_postpartum_emergency_danger_sign_flag}', '')::BOOLEAN AS refer_postpartum_emergency_danger_sign_flag,
+    NULLIF(doc #>> '{fields,refer_postpartum_other_danger_sign_flag}', '')::BOOLEAN AS refer_postpartum_other_danger_sign_flag,
+    NULLIF(doc #>> '{fields,has_referral}', '')::BOOLEAN AS has_referral,
+    NULLIF(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
+    NULLIF(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,
+    NULLIF(doc #>> '{geolocation,altitude}', '')::DECIMAL AS altitude,
+    NULLIF(doc #>> '{geolocation,accuracy}', '')::DECIMAL AS accuracy 
+  FROM 
+    couchdb
+  WHERE
+    doc ->> 'form' = 'postpartum'
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS postpartum_reported_date_created_by_uuid ON useview_postpartum USING btree (reported_date, chv_uuid, patient_id);
+-- Permissions
+REASSIGN OWNED BY current_user TO full_access;
+GRANT SELECT ON useview_postpartum TO full_access, dtree, periscope;

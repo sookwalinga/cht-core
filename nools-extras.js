@@ -939,22 +939,6 @@ module.exports = {
       firstDate.getMonth() + 1 === secondDate.getMonth() + 1;
   },
 
-  isFormSubmittedThisMonth: function (c, form_type) {
-    var flag = false;
-    var isReportedThisMonth = this.isOnSameMonth;
-    if (c && c.reports) {
-      var counter = [];
-      counter = c.reports.filter(function (r) {
-        return r.form === form_type &&
-          r.reported_date && isReportedThisMonth(new Date(r.reported_date), new Date());
-      });
-      if (counter.length > 0) {
-        flag = true;
-      }
-    }
-    return flag;
-  },
-
   isContactDeceased: function (c) {
     var isDeceased = false;
     if (c && c.contact && c.contact.date_of_death) {

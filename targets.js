@@ -15,7 +15,7 @@ module.exports = [
     }
   },
 
-   // General: Total under 5 visits this month + Pregnancy Visits this month
+   // General: Total under 5 visits this month + Pregnancy Visits this month.  No credit for visits that result in denial of consent
    {
     id: 'u5-and-anc-visits-this-month',
     translation_key: 'targets.u5-and-pregnant-women-visits.title',
@@ -25,9 +25,19 @@ module.exports = [
     goal: 16,
     appliesTo: 'reports',
     appliesToType: ['infant_child', 'pregnancy'],
-    idType: 'report',  //counts multiple reports per contact
-    appliesIf: function (c) {    
-     return extras.isFormSubmittedThisMonth(c,'infant_child') || extras.isFormSubmittedThisMonth(c,'pregnancy'); 
-    }
+    appliesIf: function (c, r) {
+      if (r.form && r.form === 'infant_child') {
+        if (r.fields && ((r.fields.consent && r.fields.consent.child_consent_today && r.fields.consent.child_consent_today === 'yes') || !r.fields.consent)) {
+          return true;
+        } 
+      }
+      else if (r.form && r.form === 'pregnancy') {
+        if (r.fields && ((r.fields.pregnancy_consent && r.fields.pregnancy_consent.consent && r.fields.pregnancy_consent.consent === 'yes') || !r.fields.pregnancy_consent)) {
+          return true;
+        } 
+      }
+      return false;
+    },
+    date: 'reported'
   }
 ];

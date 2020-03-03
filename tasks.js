@@ -79,7 +79,7 @@ module.exports = [
     appliesTo: 'reports',
     appliesIf: function (c, r) {
       return extras.hasReferral(r, "pregnancy") || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' || 
+        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
         extras.getANCVisitAfter6MonthsFlag(r) === '1';
     },
     appliesToType: ['referral_follow_up', 'pregnancy'],
@@ -100,7 +100,7 @@ module.exports = [
         content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
         content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
         content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
-        content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report); 
+        content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
       }
     }],
     events: [
@@ -646,7 +646,7 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'pregnancy',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime()) || 
+        Utils.addDate(dueDate, event.end).getTime()) ||
         extras.isContactDeceased(c) ||
         extras.isContactMuted(c);
       return isResolved;
@@ -666,7 +666,7 @@ module.exports = [
       form: 'postpartum',
       modifyContent: function (content, c) {
         content.visit_id = extras.mapPostPartumVisitType(c);
-        content.due_date = now;
+        content.due_date = new Date().getTime();
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -707,7 +707,7 @@ module.exports = [
       form: 'postpartum',
       modifyContent: function (content, c) {
         content.visit_id = extras.mapPostPartumVisitType(c);
-        content.due_date = Utils.addDate(extras.getDeliveryDate(c), 5);
+        content.due_date = Utils.addDate(extras.getDeliveryDate(c), 5).getTime();
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',

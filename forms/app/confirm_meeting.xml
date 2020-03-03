@@ -5,6 +5,15 @@
     <model>
       <itext>
         <translation lang="en">
+          <text id="/confirm_meeting/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/confirm_meeting/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/confirm_meeting/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
           <text id="/confirm_meeting/user/confirm_meeting/iam_attending:label">
             <value>I am attending a monthly meeting with the CHVs and my supervisor</value>
           </text>
@@ -19,6 +28,21 @@
           </text>
         </translation>
         <translation lang="sw">
+          <text id="/confirm_meeting/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/confirm_meeting/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/confirm_meeting/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/confirm_meeting/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/confirm_meeting/inputs:label">
+            <value>-</value>
+          </text>
           <text id="/confirm_meeting/user/confirm_meeting/iam_attending:label">
             <value>Nahudhuria kikao cha mwezi na chv wenzangu pamoja na msimamizi wangu</value>
           </text>
@@ -38,6 +62,24 @@
       </itext>
       <instance>
         <confirm_meeting delimiter="#" id="confirm_meeting" prefix="J1!confirm_meeting!">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
           <user>
             <confirm_meeting/>
           </user>
@@ -47,11 +89,31 @@
         </confirm_meeting>
       </instance>
       <instance id="contact-summary"/>
+      <bind nodeset="/confirm_meeting/inputs" relevant="false()"/>
+      <bind nodeset="/confirm_meeting/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/confirm_meeting/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/confirm_meeting/inputs/user/name" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/confirm_meeting/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/confirm_meeting/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/confirm_meeting/created_by_place_uuid" type="string"/>
       <bind nodeset="/confirm_meeting/user/confirm_meeting" required="true()" type="select1"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/confirm_meeting/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">
+    <group ref="/confirm_meeting/inputs">
+      <group ref="/confirm_meeting/inputs/user">
+        <input ref="/confirm_meeting/inputs/user/contact_id">
+          <label ref="jr:itext('/confirm_meeting/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/confirm_meeting/inputs/user/facility_id">
+          <label ref="jr:itext('/confirm_meeting/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/confirm_meeting/inputs/user/name">
+          <label ref="jr:itext('/confirm_meeting/inputs/user/name:label')"/>
+        </input>
+      </group>
+    </group>
     <group ref="/confirm_meeting/user">
       <select1 appearance="field-list" ref="/confirm_meeting/user/confirm_meeting">
         <label ref="jr:itext('/confirm_meeting/user/confirm_meeting:label')"/>
