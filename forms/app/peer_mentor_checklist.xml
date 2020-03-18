@@ -5,12 +5,6 @@
     <model>
       <itext>
         <translation lang="en">
-          <text id="/peer_mentor_checklist/chv_information/date_of_mentorship:jr:constraintMsg">
-            <value>The date must be today or earlier.</value>
-          </text>
-          <text id="/peer_mentor_checklist/chv_information/date_of_mentorship:label">
-            <value>Date of visit</value>
-          </text>
           <text id="/peer_mentor_checklist/chv_information/name:jr:constraintMsg">
             <value>Enter CHV name</value>
           </text>
@@ -250,12 +244,6 @@
           </text>
         </translation>
         <translation lang="sw">
-          <text id="/peer_mentor_checklist/chv_information/date_of_mentorship:jr:constraintMsg">
-            <value>Tarehe ya tembeleo lazima iwe leo au siku kabla ya leo</value>
-          </text>
-          <text id="/peer_mentor_checklist/chv_information/date_of_mentorship:label">
-            <value>Tarehe ya tembeleo</value>
-          </text>
           <text id="/peer_mentor_checklist/chv_information/name:jr:constraintMsg">
             <value>Ingiza jina la CHV</value>
           </text>
@@ -572,7 +560,7 @@
         </peer_mentor_checklist>
       </instance>
       <instance id="contact-summary"/>
-      <bind nodeset="/peer_mentor_checklist/inputs" relevant="false()"/>
+      <bind nodeset="/peer_mentor_checklist/inputs" relevant="0"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/contact_id" type="string"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/facility_id" type="string"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/name" type="string"/>
@@ -581,7 +569,7 @@
       <bind calculate="../inputs/user/facility_id" nodeset="/peer_mentor_checklist/created_by_place_uuid" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/name:jr:constraintMsg')" nodeset="/peer_mentor_checklist/chv_information/name" required="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg')" nodeset="/peer_mentor_checklist/chv_information/shehia" required="true()" type="string"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/date_of_mentorship:jr:constraintMsg')" nodeset="/peer_mentor_checklist/chv_information/date_of_mentorship" required="true()" type="date"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/peer_mentor_checklist/chv_information/date_of_mentorship" type="date"/>
       <bind nodeset="/peer_mentor_checklist/section_1/phone_usage" required="true()" type="select1"/>
       <bind nodeset="/peer_mentor_checklist/section_1/phone_usage_reason" relevant="selected( /peer_mentor_checklist/section_1/phone_usage ,&quot;no&quot;)" required="true()" type="string"/>
       <bind nodeset="/peer_mentor_checklist/section_1/balance_check" required="true()" type="select1"/>
@@ -634,9 +622,6 @@
       </input>
       <input ref="/peer_mentor_checklist/chv_information/shehia">
         <label ref="jr:itext('/peer_mentor_checklist/chv_information/shehia:label')"/>
-      </input>
-      <input ref="/peer_mentor_checklist/chv_information/date_of_mentorship">
-        <label ref="jr:itext('/peer_mentor_checklist/chv_information/date_of_mentorship:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/peer_mentor_checklist/section_1">
