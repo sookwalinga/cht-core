@@ -1,0 +1,36 @@
+module.exports = { 
+    peerMentorChecklist:{ 
+        entered_wrong_phone_format:[
+            ['+255775456789']
+        ],
+        fill_form_with_yes_response:[
+            ['0775456789'],['yes','yes','yes','yes','yes','yes'], 
+            ['yes','yes','yes'],['yes','yes','yes','yes'],
+            ['mentor_comments','chmt_omments','dtree_comments']
+        ], 
+        fill_form_with_average_response:[
+            ['0775456789'],['average','average','average','average','average','average'], 
+            ['average','average','average'],['average','average','average','average'],
+            ['mentor_comments','chmt_omments','dtree_comments']
+        ],
+        fill_form_with_no_response:[
+            ['0775456789'],
+            ['no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason',], 
+            ['no','reason',
+             'no','reason',
+             'no','reason',],
+            ['no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason'],
+            ['mentor_comments','chmt_omments','dtree_comments']
+        ],
+
+        fill_empty_form:[]
+    }
+};
