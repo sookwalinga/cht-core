@@ -17,6 +17,20 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmut
           <text id="/unmute_person/client_information:label">
             <value>Client Information</value>
           </text>
+          <text id="/unmute_person/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.&lt;/span&gt;</value>
+          </text>
+          <text id="/unmute_person/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
+          </text>
           <text id="/unmute_person/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
           </text>
@@ -54,6 +68,20 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmut
           </text>
           <text id="/unmute_person/client_information:label">
             <value>Maelezo ya Mteja</value>
+          </text>
+          <text id="/unmute_person/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.&lt;/span&gt;</value>
+          </text>
+          <text id="/unmute_person/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
           </text>
           <text id="/unmute_person/inputs/contact/_id:label">
             <value>-</value>
@@ -134,6 +162,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmut
           <house_number/>
           <kitongoji/>
           <phone/>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
           <client_information>
             <household_note/>
             <phone_note/>
@@ -164,6 +195,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmut
       <bind calculate="instance('contact-summary')/context/house_number" nodeset="/unmute_person/house_number" type="string"/>
       <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/unmute_person/kitongoji" type="string"/>
       <bind calculate="instance('contact-summary')/context/phone" nodeset="/unmute_person/phone" type="string"/>
+      <bind nodeset="/unmute_person/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/unmute_person/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/unmute_person/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/unmute_person/return_reason/return_reason" required="true()" type="select1"/>
@@ -189,6 +221,12 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /unmut
         <input ref="/unmute_person/inputs/contact/sex"/>
         <input ref="/unmute_person/inputs/contact/date_of_birth"/>
       </group>
+    </group>
+    <group ref="/unmute_person/covid19_intro">
+      <label ref="jr:itext('/unmute_person/covid19_intro:label')"/>
+      <input ref="/unmute_person/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/unmute_person/covid19_intro/covid19_intro_note:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/unmute_person/client_information">
       <label ref="jr:itext('/unmute_person/client_information:label')"/>

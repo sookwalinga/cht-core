@@ -8,6 +8,20 @@
           <text id="/data/clinic/name:label">
             <value>Please enter the household name:</value>
           </text>
+          <text id="/data/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.&lt;/span&gt;</value>
+          </text>
+          <text id="/data/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
+          </text>
           <text id="/data/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
           </text>
@@ -25,6 +39,20 @@
           <text id="/data/clinic:label">
             <value>-</value>
           </text>
+          <text id="/data/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.&lt;/span&gt;</value>
+          </text>
+          <text id="/data/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
+          </text>
           <text id="/data/inputs/user/contact_id:label">
             <value>Mawasiliano ya mtumizi</value>
           </text>
@@ -37,7 +65,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:edit" prefix="J1!contact:clinic:edit!" version="2019-06-28_13-04">
+        <data delimiter="#" id="contact:clinic:edit" prefix="J1!contact:clinic:edit!" version="2020-04-15_18-37">
           <inputs>
             <meta>
               <location>
@@ -65,6 +93,9 @@
               <last_edited_by_place_uuid/>
             </meta>
           </clinic>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -74,6 +105,7 @@
       <bind nodeset="/data/inputs/user/name" type="string"/>
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/data/clinic/name" required="true()" type="string"/>
       <bind calculate="int(decimal-date-time(now())* 24 *60*60*1000)" nodeset="/data/clinic/edited_date" type="string"/>
       <bind nodeset="/data/clinic/meta/created_by" readonly="true()" type="string"/>
@@ -98,6 +130,12 @@
           <label ref="jr:itext('/data/inputs/user/facility_id:label')"/>
         </input>
       </group>
+    </group>
+    <group ref="/data/covid19_intro">
+      <label ref="jr:itext('/data/covid19_intro:label')"/>
+      <input ref="/data/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/data/covid19_intro/covid19_intro_note:label')"/>
+      </input>
     </group>
     <group ref="/data/clinic">
       <input ref="/data/clinic/name">
