@@ -11,6 +11,7 @@ module.exports = [
         extras.getNeonatalDangerSignFlag(r) === '1' ||
         extras.getSecondaryNeonatalDangerSignFlag(r) === '1' ||
         extras.getChildDangerSignFlag(r) === '1' ||
+        extras.getChildOtherDangerSignFlag(r) === '1' ||
         extras.getMUACFlag(r) === '1' ||
         extras.getPalmPallorFlag(r) === '1' ||
         extras.getVaccinesFlag(r) === '1' ||
@@ -28,6 +29,7 @@ module.exports = [
         content.refer_neonatal_danger_sign_flag = extras.getNeonatalDangerSignFlag(report);
         content.refer_secondary_neonatal_danger_sign_flag = extras.getSecondaryNeonatalDangerSignFlag(report);
         content.refer_child_danger_sign_flag = extras.getChildDangerSignFlag(report);
+        content.refer_child_other_danger_sign_flag = extras.getChildOtherDangerSignFlag(report);
         content.refer_muac_flag = extras.getMUACFlag(report);
         content.refer_refer_palm_pallor_flag = extras.getPalmPallorFlag(report);
         content.refer_vaccines_flag = extras.getVaccinesFlag(report);

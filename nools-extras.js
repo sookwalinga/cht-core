@@ -370,6 +370,18 @@ module.exports = {
     return '0';
   },
 
+  getChildOtherDangerSignFlag: function (report) {
+    if (
+      report &&
+      report.fields &&
+      report.fields.child_other_danger_signs &&
+      report.fields.child_other_danger_signs.refer_child_other_danger_sign_flag
+    ) {
+      return report.fields.child_other_danger_signs.refer_child_other_danger_sign_flag;
+    }
+    return '0';
+  },
+
   getMUACFlag: function (report) {
     if ( // delete this if after refactoring the infant-child form
       report &&
