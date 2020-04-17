@@ -1095,9 +1095,6 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_outcomes/intro_data_capture/child/last_name:label">
             <value>Ni lipi jina la babu yake?</value>
           </text>
-          <text id="/pregnancy_outcomes/intro_data_capture/child/meta:label">
-            <value>-</value>
-          </text>
           <text id="/pregnancy_outcomes/intro_data_capture/child/middle_name:label">
             <value>Ni lipi jina la baba yake?</value>
           </text>
@@ -1800,11 +1797,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
                 </parent>
               </parent>
               <type>person</type>
-              <meta tag="hidden">
-                <created_by/>
-                <created_by_person_uuid/>
-                <created_by_place_uuid/>
-              </meta>
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
             </child>
           </intro_data_capture>
           <quality_of_care_survey>
@@ -2532,7 +2527,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)" required="true()" type="date"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)" type="string"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)" required="true()" type="date"/>
-      <bind calculate="if((decimal-date-time( /pregnancy_outcomes/client_EDD ) - decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /pregnancy_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/pregnancy_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string"/>
+      <bind calculate="if( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome =&quot;did_deliver&quot;,&quot;N/A&quot;,if((decimal-date-time( /pregnancy_outcomes/client_EDD ) - decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /pregnancy_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;))" nodeset="/pregnancy_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_location" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_island" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()" type="select1"/>
@@ -2590,12 +2585,12 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind calculate=" /pregnancy_outcomes/confirm_delivery/date_of_delivery " nodeset="/pregnancy_outcomes/intro_data_capture/child/date_of_birth" type="string"/>
       <bind calculate="." nodeset="/pregnancy_outcomes/intro_data_capture/child/created_by_doc" type="string"/>
       <bind calculate=" /pregnancy_outcomes/household_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/_id" type="string"/>
-      <bind calculate=" /pregnancy_outcomes/intro_data_capture/child/meta/created_by_place_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/parent/_id" type="string"/>
+      <bind calculate=" /pregnancy_outcomes/intro_data_capture/child/created_by_place_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/parent/_id" type="string"/>
       <bind calculate=" /pregnancy_outcomes/supervisory_area_uuid " nodeset="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent/_id" type="string"/>
       <bind calculate="&quot;person&quot;" nodeset="/pregnancy_outcomes/intro_data_capture/child/type" type="string"/>
-      <bind calculate="../../../name" nodeset="/pregnancy_outcomes/intro_data_capture/child/meta/created_by" type="string"/>
-      <bind calculate="../../../contact_id" nodeset="/pregnancy_outcomes/intro_data_capture/child/meta/created_by_person_uuid" type="string"/>
-      <bind calculate="../../../facility_id" nodeset="/pregnancy_outcomes/intro_data_capture/child/meta/created_by_place_uuid" type="string"/>
+      <bind calculate="../../../name" nodeset="/pregnancy_outcomes/intro_data_capture/child/created_by" type="string"/>
+      <bind calculate="../../../contact_id" nodeset="/pregnancy_outcomes/intro_data_capture/child/created_by_person_uuid" type="string"/>
+      <bind calculate="../../../facility_id" nodeset="/pregnancy_outcomes/intro_data_capture/child/created_by_place_uuid" type="string"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/delivery_location_assessment/delivery_location  = &quot;facility&quot;"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent" required="true()" type="select1"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()" type="select1"/>
@@ -2967,7 +2962,6 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
               <group ref="/pregnancy_outcomes/intro_data_capture/child/parent/parent/parent"/>
             </group>
           </group>
-          <group ref="/pregnancy_outcomes/intro_data_capture/child/meta"/>
         </repeat>
       </group>
     </group>
