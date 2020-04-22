@@ -172,6 +172,9 @@
           <text id="/peer_mentor_checklist/section_1/solar_charging/no:label">
             <value>No</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/solar_charging/no_solar_charger:label">
+            <value>Does not have/need solar charger</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging/yes:label">
             <value>Yes</value>
           </text>
@@ -470,8 +473,11 @@
           <text id="/peer_mentor_checklist/section_1/solar_charging/no:label">
             <value>Hapana</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/solar_charging/no_solar_charger:label">
+            <value>Hahitaji chaji ya sola</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging/yes:label">
-            <value>Ndio</value>
+            <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging:label">
             <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kuchaji simu na chaji za sola (ikiwa mtu anatumia chaji ya sola) ?</value>
@@ -860,6 +866,10 @@
         <item>
           <label ref="jr:itext('/peer_mentor_checklist/section_1/solar_charging/no:label')"/>
           <value>no</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/section_1/solar_charging/no_solar_charger:label')"/>
+          <value>no_solar_charger</value>
         </item>
       </select1>
       <input ref="/peer_mentor_checklist/section_1/solar_charging_reason">

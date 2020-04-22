@@ -5172,10 +5172,7 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
       <bind nodeset="/pregnancy/pmtct/take_art_no" readonly="true()" relevant="selected( /pregnancy/pmtct/take_art ,'no')" type="string"/>
       <bind nodeset="/pregnancy/pmtct/mother_mentor_note" readonly="true()" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')" type="string"/>
       <bind nodeset="/pregnancy/pmtct/discuss_further_note" readonly="true()" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'no')" type="string"/>
-      <bind nodeset="/pregnancy/fam_engagement" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
-not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
-
-(selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
+      <bind nodeset="/pregnancy/fam_engagement" relevant="false()"/>
       <bind constraint="(selected(.,&quot;no_one_available&quot;) and count-selected(.)=1) or (not(selected(.,&quot;no_one_available&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/pregnancy/fam_engagement/family_engagement:jr:constraintMsg')" nodeset="/pregnancy/fam_engagement/family_engagement" required="true()" type="select"/>
       <bind nodeset="/pregnancy/fam_engagement/invite_family_member_note" readonly="true()" relevant="selected( /pregnancy/fam_engagement/family_engagement ,'no_one_available')" type="string"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 

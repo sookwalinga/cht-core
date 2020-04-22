@@ -306,10 +306,7 @@
             <value>From this registration, I've see that you have a very young baby who can benefit from this national program. Therefore, I'd like to start checking up on all issues related to their health care, nutrition, and child development right after registering your household. Do you have any questions for me now about this?</value>
           </text>
           <text id="/data/repeat/child/return_women_note:label">
-            <value>I see that there are some women of reproductive age in your family. I'd like to ask your permission to return later to speak with them personally about issues related to health during pregnancy and childbirth.</value>
-          </text>
-          <text id="/data/repeat/child/return_women_note_to_chv:label">
-            <value>Please adapt the explanation below depending on who is of reproductive age.</value>
+            <value>I see that <output value=" /data/repeat/child/first_name_c "/> is of reproductive age in your family. I'd like to ask your permission to return later to speak with her personally about issues related to health during pregnancy and childbirth.</value>
           </text>
           <text id="/data/repeat/child/sex/female:label">
             <value>Female</value>
@@ -676,10 +673,7 @@
             <value>Baada ya usajili huu, nimeona kuwa una mtoto ambaye atafaidika na mpango huu wa taifa, na kwakuwa mtoto bado mchanga ningependa kuangalia afya yake, lishe na makuzi ya mtoto sasa hivi baada ya usajili wa kaya. Je una swali lolote kufikia hapa?</value>
           </text>
           <text id="/data/repeat/child/return_women_note:label">
-            <value>Nimeona kuna baadhi ya wanawake walio katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nao mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
-          </text>
-          <text id="/data/repeat/child/return_women_note_to_chv:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali zingatia kwamba ikiwa mkuu wa kaya ni mwanamke ambaye anaweza kushika ujauzito, tafadhali mjumuishe katika maelezo yafuatayo.&lt;/span&gt;</value>
+            <value>Nimeona kuwa <output value=" /data/repeat/child/first_name_c "/> yuko katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nae mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
           </text>
           <text id="/data/repeat/child/sex/female:label">
             <value>Mwanamke</value>
@@ -717,7 +711,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2020-04-15_02-45">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2020-04-22_02-17">
           <inputs>
             <meta>
               <location>
@@ -831,7 +825,6 @@
               <age_days/>
               <return_child_note_20_or_above_days/>
               <return_infant_note_under_20_days/>
-              <return_women_note_to_chv/>
               <return_women_note/>
               <debug_note/>
               <meta tag="hidden">
@@ -907,7 +900,7 @@
       <bind calculate="format-date(if(../dob_contact != '', ../dob_contact,concat(../yob_contact, '-01-01')), '%Y-%m-%d')" nodeset="/data/init/dob_contact_calc" type="string"/>
       <bind calculate="(decimal-date-time(today()) - decimal-date-time( /data/init/dob_contact_calc )) div 365" nodeset="/data/init/age_contact_years" type="string"/>
       <bind calculate="if(selected( /data/init/sex_contact ,&quot;female&quot;) and  /data/init/age_contact_years  &gt;= 15 and  /data/init/age_contact_years  &lt;= 49,1,0)" nodeset="/data/init/reproductive_age_c" type="string"/>
-      <bind nodeset="/data/init/contact_reproductive_age_note" readonly="true()" relevant=" /data/init/reproductive_age_c =1 and  /data/hh_member_count/num_hh_members  = 1" type="string"/>
+      <bind nodeset="/data/init/contact_reproductive_age_note" readonly="true()" relevant=" /data/init/reproductive_age_c =1" type="string"/>
       <bind nodeset="/data/other_members_registration_note" readonly="true()" relevant=" /data/hh_member_count/num_hh_members &gt;1" type="string"/>
       <bind nodeset="/data/repeat" relevant=" /data/hh_member_count/num_hh_members &gt;1"/>
       <bind calculate=" /data/hh_member_count/num_hh_members -1" nodeset="/data/repeat/child_count" readonly="true()" type="string"/>
@@ -938,8 +931,7 @@
       <bind calculate="int(decimal-date-time(now())-decimal-date-time( /data/repeat/child/date_of_birth_c ))" nodeset="/data/repeat/child/age_days" type="string"/>
       <bind nodeset="/data/repeat/child/return_child_note_20_or_above_days" readonly="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and  /data/repeat/child/is_under_5_binary =1 and  /data/repeat/child/is_exact_dob_in_range  = 1 and  /data/repeat/child/age_days  &gt;= 20" type="string"/>
       <bind nodeset="/data/repeat/child/return_infant_note_under_20_days" readonly="true()" relevant=" /data/repeat/child/age_days  &lt; 20" type="string"/>
-      <bind nodeset="/data/repeat/child/return_women_note_to_chv" readonly="true()" relevant=" /data/repeat/child/reproductive_age  = 1 or  /data/init/reproductive_age_c  = 1" type="string"/>
-      <bind nodeset="/data/repeat/child/return_women_note" readonly="true()" relevant=" /data/repeat/child/reproductive_age  = 1 or  /data/init/reproductive_age_c  = 1" type="string"/>
+      <bind nodeset="/data/repeat/child/return_women_note" readonly="true()" relevant=" /data/repeat/child/reproductive_age  = 1" type="string"/>
       <bind nodeset="/data/repeat/child/debug_note" readonly="true()" type="string"/>
       <bind calculate="../../../../name" nodeset="/data/repeat/child/meta/created_by" type="string"/>
       <bind calculate="../../../../contact_id" nodeset="/data/repeat/child/meta/created_by_person_uuid" type="string"/>
@@ -1134,9 +1126,6 @@
           </input>
           <input ref="/data/repeat/child/return_infant_note_under_20_days">
             <label ref="jr:itext('/data/repeat/child/return_infant_note_under_20_days:label')"/>
-          </input>
-          <input ref="/data/repeat/child/return_women_note_to_chv">
-            <label ref="jr:itext('/data/repeat/child/return_women_note_to_chv:label')"/>
           </input>
           <input ref="/data/repeat/child/return_women_note">
             <label ref="jr:itext('/data/repeat/child/return_women_note:label')"/>
