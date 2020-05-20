@@ -62,8 +62,10 @@
 • Avoid group gatherings.
 • Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
 • Cover your mouth with a towel or elbow when you sneeze or cough. 
-• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.
-• Please do the covid education visit right after the household registration. &lt;/span&gt;</value>
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.</value>
+          </text>
+          <text id="/data/covid19_intro/covid19_visit_reminder:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Please do the covid education visit right after the household registration. &lt;/span&gt;</value>
           </text>
           <text id="/data/covid19_intro:label">
             <value>Precautionary measures when visiting a client</value>
@@ -417,7 +419,10 @@
 • Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
 • Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
 • Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.
-• Tafadhali kumbuka kufungua fomu ya kuwaelimisha wanakaya juu ya maambukizi ya korona na jinsi ya kuchukua tahadhari. Tembeleo kuhusu korona utalifanya mara tu baada ya kumaliza kusajili kaya.&lt;/span&gt;</value>
+&lt;/span&gt;</value>
+          </text>
+          <text id="/data/covid19_intro/covid19_visit_reminder:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali kumbuka kufungua fomu ya kuwaelimisha wanakaya juu ya maambukizi ya korona na jinsi ya kuchukua tahadhari. Tembeleo kuhusu korona utalifanya mara tu baada ya kumaliza kusajili kaya.&lt;/span&gt;</value>
           </text>
           <text id="/data/covid19_intro:label">
             <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
@@ -713,7 +718,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2020-05-13_01-36">
+        <data delimiter="#" id="contact:clinic:create" prefix="J1!contact:clinic:create!" version="2020-05-19_03-25">
           <inputs>
             <meta>
               <location>
@@ -772,6 +777,7 @@
           </contact>
           <covid19_intro>
             <covid19_intro_note/>
+            <covid19_visit_reminder/>
           </covid19_intro>
           <intro_note/>
           <hh_member_count>
@@ -884,6 +890,7 @@
       <bind calculate="../../../end" nodeset="/data/contact/meta/end" type="string"/>
       <bind calculate="../../../deviceid" nodeset="/data/contact/meta/deviceid" type="string"/>
       <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/covid19_intro/covid19_visit_reminder" readonly="true()" type="string"/>
       <bind nodeset="/data/intro_note" readonly="true()" type="string"/>
       <bind constraint=". &gt; 0 and . &lt;= 30" jr:constraintMsg="jr:itext('/data/hh_member_count/num_hh_members:jr:constraintMsg')" nodeset="/data/hh_member_count/num_hh_members" required="true()" type="int"/>
       <bind nodeset="/data/hh_member_count/hh_repeat_note" readonly="true()" type="string"/>
@@ -984,10 +991,13 @@
         </input>
       </group>
     </group>
-    <group ref="/data/covid19_intro">
+    <group appearance="field-list" ref="/data/covid19_intro">
       <label ref="jr:itext('/data/covid19_intro:label')"/>
       <input ref="/data/covid19_intro/covid19_intro_note">
         <label ref="jr:itext('/data/covid19_intro/covid19_intro_note:label')"/>
+      </input>
+      <input ref="/data/covid19_intro/covid19_visit_reminder">
+        <label ref="jr:itext('/data/covid19_intro/covid19_visit_reminder:label')"/>
       </input>
     </group>
     <input ref="/data/intro_note">
