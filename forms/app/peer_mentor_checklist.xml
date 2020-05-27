@@ -127,6 +127,9 @@
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no:label">
             <value>No</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no_bango_kitita:label">
+            <value>Does not have bango kitita / Communication activity guide</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/yes:label">
             <value>Yes</value>
           </text>
@@ -428,6 +431,9 @@
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no:label">
             <value>Hapana</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no_bango_kitita:label">
+            <value>Hana bango kitita / Muongozo wa mawasiliano na michezo</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/yes:label">
             <value>Ndio</value>
           </text>
@@ -630,7 +636,6 @@
             <chv_last_name/>
             <phone/>
             <shehia/>
-            <date_of_mentorship/>
           </chv_information>
           <section_1>
             <phone_usage/>
@@ -676,7 +681,7 @@
         </peer_mentor_checklist>
       </instance>
       <instance id="contact-summary"/>
-      <bind nodeset="/peer_mentor_checklist/inputs" relevant="false()"/>
+      <bind nodeset="/peer_mentor_checklist/inputs" relevant="0"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/contact_id" type="string"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/facility_id" type="string"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/name" type="string"/>
@@ -689,7 +694,6 @@
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg')" nodeset="/peer_mentor_checklist/chv_information/chv_last_name" required="true()" type="string"/>
       <bind constraint="regex(.,'^0[0-9]{9}$')" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/phone:jr:constraintMsg')" nodeset="/peer_mentor_checklist/chv_information/phone" required="true()" type="string"/>
       <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg')" nodeset="/peer_mentor_checklist/chv_information/shehia" required="true()" type="string"/>
-      <bind calculate="decimal-date-time(today())" nodeset="/peer_mentor_checklist/chv_information/date_of_mentorship" type="string"/>
       <bind nodeset="/peer_mentor_checklist/section_1/phone_usage" required="true()" type="select1"/>
       <bind nodeset="/peer_mentor_checklist/section_1/phone_usage_reason" relevant="selected( /peer_mentor_checklist/section_1/phone_usage ,&quot;no&quot;)" required="true()" type="string"/>
       <bind nodeset="/peer_mentor_checklist/section_1/balance_check" required="true()" type="select1"/>
@@ -848,6 +852,10 @@
         <item>
           <label ref="jr:itext('/peer_mentor_checklist/section_1/bango_kitita_usage/no:label')"/>
           <value>no</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/section_1/bango_kitita_usage/no_bango_kitita:label')"/>
+          <value>no_bango_kitita</value>
         </item>
       </select1>
       <input ref="/peer_mentor_checklist/section_1/bango_kitita_usage_reason">
