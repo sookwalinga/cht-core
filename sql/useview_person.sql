@@ -20,6 +20,7 @@ CREATE MATERIALIZED VIEW useview_person AS
     , (CASE WHEN doc ->> 'is_head_of_household' = 'yes' THEN 'yes' ELSE 'no' END)::BOOLEAN AS is_head_of_household
     , doc ->> 'temp_hh_member' AS temp_hh_member
     , doc ->> 'muted' AS muted
+    , TO_TIMESTAMP((NULLIF(doc ->> 'date_of_death', '')::BIGINT / 1000)::DOUBLE PRECISION) AS date_of_death
     , CASE  
         WHEN doc #>> '{meta,created_by}' IS NOT NULL THEN doc #>> '{meta,created_by}'
         WHEN doc #>> '{meta,created_by}' IS NULL THEN doc ->> 'created_by'
