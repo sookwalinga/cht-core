@@ -16,7 +16,7 @@ module.exports = {
   getVisitCount: function () {
     var count = [];
     count = reports.filter(function (r) {
-      return r.form === "infant_child";
+      return r.form === 'infant_child';
     });
     return count.length;
   },
