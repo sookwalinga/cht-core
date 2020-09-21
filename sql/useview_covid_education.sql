@@ -17,6 +17,7 @@ CREATE MATERIALIZED VIEW useview_covid_education AS
     doc #>> '{contact,parent,parent,_id}' AS supervisory_area_uuid,
     doc ->> 'from' AS chv_phone,
     doc #>> '{fields,created_by}' AS chv_name,
+    doc #>> '{fields,inputs,contact,_id}' AS household_id,
     CASE 
       WHEN doc #>> '{fields,introductory_qns,corona_awareness}' = 'none'  
       OR   doc #>> '{fields,introductory_qns,corona_awareness}' = 'no'

@@ -8,7 +8,7 @@ module.exports = {
     if (c.contact && c.contact.parent && c.contact.parent.parent &&
       c.contact.parent.parent.parent && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
       var ageInMonths = Math.round(ageInMs / (1000 * 60 * 60 * 24 * 30));
       return ageInMonths < 60;
     }
@@ -19,7 +19,7 @@ module.exports = {
     if (c.contact && c.contact.parent && c.contact.parent.parent &&
       c.contact.parent.parent.parent && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
       var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
       return ageInDays < 20;
     }
@@ -30,7 +30,7 @@ module.exports = {
     if (c.contact && c.contact.parent && c.contact.parent.parent &&
       c.contact.parent.parent.parent && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
       var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
       return ageInDays >= 20 && ageInDays < (this.week * 15);
     }
@@ -41,7 +41,7 @@ module.exports = {
     if (c.contact && c.contact.parent && c.contact.parent.parent &&
       c.contact.parent.parent.parent && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
       var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
       return ageInDays >= (this.week * 15);
     }
@@ -94,7 +94,7 @@ module.exports = {
   mapInfantChildVisitType: function (c) {
     if (c.contact && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
       var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
 
       if (ageInDays < (this.day * 3)) {
@@ -153,7 +153,7 @@ module.exports = {
   mapInfantChildVisitScheduleDueDates: function (c) {
     if (c.contact && c.contact.date_of_birth) {
       var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(now - birthDate.getTime());
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
       var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
 
       if (ageInDays < (this.day * 20)) {
@@ -214,13 +214,13 @@ module.exports = {
 
   hasReferral: function (report, referral_type) {
     if (report && report.fields) {
-      if (referral_type === "infant_child") {
+      if (referral_type === 'infant_child') {
         return report.fields.has_infant_child_referral === 'true';
       }
-      else if (referral_type === "pregnancy") {
+      else if (referral_type === 'pregnancy') {
         return report.fields.has_pregnancy_referral === 'true';
       }
-      else if (referral_type === "postpartum") {
+      else if (referral_type === 'postpartum') {
         return report.fields.has_postpartum_referral === 'true';
       }
     }
@@ -283,7 +283,7 @@ module.exports = {
     if (report &&
       report.fields &&
       report.fields.refer_postpartum_emergency_danger_sign_flag &&
-      report.fields.refer_postpartum_emergency_danger_sign_flag === "1"
+      report.fields.refer_postpartum_emergency_danger_sign_flag === '1'
     ) {
       return '1';
     }
@@ -294,7 +294,7 @@ module.exports = {
     if (report &&
       report.fields &&
       report.fields.refer_postpartum_other_danger_sign_flag &&
-      report.fields.refer_postpartum_other_danger_sign_flag === "1"
+      report.fields.refer_postpartum_other_danger_sign_flag === '1'
     ) {
       return '1';
     }
@@ -500,7 +500,7 @@ module.exports = {
     return result;
   },
 
-  getDtp_hepb_hib1: function () {
+  getDtp_hepb_hib1: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -514,7 +514,7 @@ module.exports = {
     return result;
   },
 
-  getPcvi1: function () {
+  getPcvi1: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -528,7 +528,7 @@ module.exports = {
     return result;
   },
 
-  getRota1: function () {
+  getRota1: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -542,7 +542,7 @@ module.exports = {
     return result;
   },
 
-  getBopv2: function () {
+  getBopv2: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -556,7 +556,7 @@ module.exports = {
     return result;
   },
 
-  getDtp_hepb_hib2: function () {
+  getDtp_hepb_hib2: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -570,7 +570,7 @@ module.exports = {
     return result;
   },
 
-  getPcvi2: function () {
+  getPcvi2: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -584,7 +584,7 @@ module.exports = {
     return result;
   },
 
-  getRota2: function () {
+  getRota2: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -598,7 +598,7 @@ module.exports = {
     return result;
   },
 
-  getBopv3: function () {
+  getBopv3: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -612,7 +612,7 @@ module.exports = {
     return result;
   },
 
-  getDtp_hepb_hib3: function () {
+  getDtp_hepb_hib3: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -626,7 +626,7 @@ module.exports = {
     return result;
   },
 
-  getPcvi3: function () {
+  getPcvi3: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -640,7 +640,7 @@ module.exports = {
     return result;
   },
 
-  getIpv: function () {
+  getIpv: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -654,7 +654,7 @@ module.exports = {
     return result;
   },
 
-  getSurua_rubella1: function () {
+  getSurua_rubella1: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -668,7 +668,7 @@ module.exports = {
     return result;
   },
 
-  getSurua_rubella2: function () {
+  getSurua_rubella2: function (c) {
     var result = 0;
     var reportsFound = [];
     if (c && c.reports) {
@@ -817,7 +817,7 @@ module.exports = {
     return deliveryOutcomes.length + earlyTerminations.length;
   },
 
-  isCurrentlyPregnant: function () {
+  isCurrentlyPregnant: function (c) {
     if (this.getPositiveConsentingPregnancyRegistrations(c) > this.getPregnancyOutcomes(c)) {
       return true;
     }
@@ -844,7 +844,7 @@ module.exports = {
     var delivery_date = null;
     if (c && c.reports) {
       var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
-      if (report && report.fields && report.fields.confirm_delivery && r.fields.confirm_delivery.date_of_delivery) {
+      if (report && report.fields && report.fields.confirm_delivery && report.fields.confirm_delivery.date_of_delivery) {
         delivery_date = new Date(report.fields.confirm_delivery.date_of_delivery);
       }
     }
@@ -855,7 +855,7 @@ module.exports = {
     var deliveryDate = this.getDeliveryDate(c);
     var flag = false;
     if (deliveryDate !== null) {
-      var daysPassedInMs = new Date(now - deliveryDate.getTime());
+      var daysPassedInMs = new Date(Date.now() - deliveryDate.getTime());
       var daysPassed = Math.round(daysPassedInMs / (1000 * 60 * 60 * 24));
       if (daysPassed >= 3) {
         flag = true;

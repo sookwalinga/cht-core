@@ -1,3 +1,4 @@
+var extras = require('./contact-summary-extras.js');
 module.exports = {
   context: {
     household_head: extras.getContactHouseholdHead(),
