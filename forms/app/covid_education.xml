@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Covid Education</h:title>
     <model>
@@ -50,7 +50,7 @@
           <text id="/covid_education/corona_symptoms/coughing:label">
             <value form="image">jr://images/coughing.png</value>
           </text>
-          <text id="/covid_education/corona_symptoms/has_corona/none:label">
+          <text id="/covid_education/corona_symptoms/has_corona/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/corona_symptoms/has_corona/yes:label">
@@ -109,7 +109,7 @@
           <text id="/covid_education/covid19_intro:label">
             <value>Precautionary measures when visiting a client</value>
           </text>
-          <text id="/covid_education/hand_washing/has_infrastructure/none:label">
+          <text id="/covid_education/hand_washing/has_infrastructure/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/hand_washing/has_infrastructure/yes:label">
@@ -175,7 +175,7 @@
           <text id="/covid_education/introductory_qns/asked_qns:label">
             <value>Select all the questions which were asked by the client</value>
           </text>
-          <text id="/covid_education/introductory_qns/corona_awareness/none:label">
+          <text id="/covid_education/introductory_qns/corona_awareness/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/introductory_qns/corona_awareness/yes:label">
@@ -199,7 +199,7 @@
           <text id="/covid_education/introductory_qns/other_question:label">
             <value>Please list the asked questions</value>
           </text>
-          <text id="/covid_education/introductory_qns/qns_from_family/none:label">
+          <text id="/covid_education/introductory_qns/qns_from_family/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/introductory_qns/qns_from_family/yes:label">
@@ -211,7 +211,7 @@
           <text id="/covid_education/introductory_qns:label">
             <value>Introduction to COVID</value>
           </text>
-          <text id="/covid_education/mask_questions/has_mask/none:label">
+          <text id="/covid_education/mask_questions/has_mask/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/mask_questions/has_mask/yes:label">
@@ -220,7 +220,7 @@
           <text id="/covid_education/mask_questions/has_mask:label">
             <value>Do you have a face mask (even a home made face mask) to cover mouth and face when exiting your home?</value>
           </text>
-          <text id="/covid_education/mask_questions/is_wearing/none:label">
+          <text id="/covid_education/mask_questions/is_wearing/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/mask_questions/is_wearing/yes:label">
@@ -237,28 +237,28 @@ Wearing this mask will not protect you from getting sick if someone around you i
             <value>&lt;span style="color:#f58a1f"&gt;Please direct how to prepare your mask at home by following the steps:&lt;/.span&gt;</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic1:label">
-            <value form="image">jr://images/self_made_mask_pic1.png</value>
             <value>Fold bandana in half</value>
+            <value form="image">jr://images/self_made_mask_pic1.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic2:label">
-            <value form="image">jr://images/self_made_mask_pic2.png</value>
             <value>Fold top down, fold bottom up</value>
+            <value form="image">jr://images/self_made_mask_pic2.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic3:label">
-            <value form="image">jr://images/self_made_mask_pic3.png</value>
             <value>Place the rubber bands or hair tiers about 6 inches apart</value>
+            <value form="image">jr://images/self_made_mask_pic3.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic4:label">
-            <value form="image">jr://images/self_made_mask_pic4.png</value>
             <value>Fold side to the middle and tuck</value>
+            <value form="image">jr://images/self_made_mask_pic4.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic5:label">
-            <value form="image">jr://images/self_made_mask_pic5.png</value>
             <value>Mask as seen after preparing</value>
+            <value form="image">jr://images/self_made_mask_pic5.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic6:label">
-            <value form="image">jr://images/self_made_mask_pic6.png</value>
             <value>Mask as seen after wearing</value>
+            <value form="image">jr://images/self_made_mask_pic6.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pics:label">
             <value>This is how you can make your cloth mask at home</value>
@@ -266,7 +266,7 @@ Wearing this mask will not protect you from getting sick if someone around you i
           <text id="/covid_education/mask_questions:label">
             <value>Questions about the mask</value>
           </text>
-          <text id="/covid_education/risks_and_directions/age_above_50/none:label">
+          <text id="/covid_education/risks_and_directions/age_above_50/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/risks_and_directions/age_above_50/yes:label">
@@ -311,7 +311,7 @@ Wearing this mask will not protect you from getting sick if someone around you i
           <text id="/covid_education/risks_and_directions:label">
             <value>Questions about risks and directions to household members</value>
           </text>
-          <text id="/covid_education/test_understading/asymptomatic/none:label">
+          <text id="/covid_education/test_understading/asymptomatic/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/test_understading/asymptomatic/yes:label">
@@ -324,7 +324,7 @@ Wearing this mask will not protect you from getting sick if someone around you i
             <value>The answer to both questions is Yes. People who show no signs of illness can spread the disease. It is possible for a person to get infected by touching an infected area and then touching their face. This is why it is important to always wear a mask outside of the home, and wash hands frequently with soap.
 Thank you for your attention</value>
           </text>
-          <text id="/covid_education/test_understading/infected_area/none:label">
+          <text id="/covid_education/test_understading/infected_area/no:label">
             <value>No</value>
           </text>
           <text id="/covid_education/test_understading/infected_area/yes:label">
@@ -383,7 +383,7 @@ Thank you for your attention</value>
           <text id="/covid_education/corona_symptoms/coughing:label">
             <value form="image">jr://images/coughing.png</value>
           </text>
-          <text id="/covid_education/corona_symptoms/has_corona/none:label">
+          <text id="/covid_education/corona_symptoms/has_corona/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/corona_symptoms/has_corona/yes:label">
@@ -441,7 +441,7 @@ Thank you for your attention</value>
           <text id="/covid_education/covid19_intro:label">
             <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
           </text>
-          <text id="/covid_education/hand_washing/has_infrastructure/none:label">
+          <text id="/covid_education/hand_washing/has_infrastructure/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/hand_washing/has_infrastructure/yes:label">
@@ -467,6 +467,12 @@ Thank you for your attention</value>
           </text>
           <text id="/covid_education/hand_washing:label">
             <value>Maswali kuhusu uoshaji wa mikono</value>
+          </text>
+          <text id="/covid_education/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/covid_education/inputs/contact:label">
+            <value>-</value>
           </text>
           <text id="/covid_education/inputs/user/contact_id:label">
             <value>-</value>
@@ -513,7 +519,7 @@ Thank you for your attention</value>
           <text id="/covid_education/introductory_qns/asked_qns:label">
             <value>Chagua masuali yote yalioulizwa na mteja.</value>
           </text>
-          <text id="/covid_education/introductory_qns/corona_awareness/none:label">
+          <text id="/covid_education/introductory_qns/corona_awareness/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/introductory_qns/corona_awareness/yes:label">
@@ -537,7 +543,7 @@ Thank you for your attention</value>
           <text id="/covid_education/introductory_qns/other_question:label">
             <value>Tafadhali taja masuali yalioulizwa.</value>
           </text>
-          <text id="/covid_education/introductory_qns/qns_from_family/none:label">
+          <text id="/covid_education/introductory_qns/qns_from_family/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/introductory_qns/qns_from_family/yes:label">
@@ -549,7 +555,7 @@ Thank you for your attention</value>
           <text id="/covid_education/introductory_qns:label">
             <value>Muhtasari</value>
           </text>
-          <text id="/covid_education/mask_questions/has_mask/none:label">
+          <text id="/covid_education/mask_questions/has_mask/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/mask_questions/has_mask/yes:label">
@@ -558,7 +564,7 @@ Thank you for your attention</value>
           <text id="/covid_education/mask_questions/has_mask:label">
             <value>Je unayo Barakoa ( Hata ile ya kutengeneza nyumbani) kwa ajili ya kufunika mdomo na uso kila mara unapotoka nyumbani kwako?</value>
           </text>
-          <text id="/covid_education/mask_questions/is_wearing/none:label">
+          <text id="/covid_education/mask_questions/is_wearing/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/mask_questions/is_wearing/yes:label">
@@ -576,28 +582,28 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
             <value>&lt;span style="color:#f58a1f"&gt;Tafadhali muelekeze Jinsi anaweza kutengeneza barako yako nyumbani kwa kufuata hatua zifuatazo: &lt;/span&gt;</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic1:label">
-            <value form="image">jr://images/self_made_mask_pic1.png</value>
             <value>Kunja leso/kitambaa kiwe nusu</value>
+            <value form="image">jr://images/self_made_mask_pic1.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic2:label">
-            <value form="image">jr://images/self_made_mask_pic2.png</value>
             <value>Kunja sehemu ya juu kwa chini, na sehemu ya chini kwa juu</value>
+            <value form="image">jr://images/self_made_mask_pic2.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic3:label">
-            <value form="image">jr://images/self_made_mask_pic3.png</value>
             <value>Weka mpira au vibanio vya nywelekila upande kwa kuacha nafasi ya inchi 6 katikati</value>
+            <value form="image">jr://images/self_made_mask_pic3.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic4:label">
-            <value form="image">jr://images/self_made_mask_pic4.png</value>
             <value>Kunja sehemu za mwisho/pembeni kuelekea katikati halafu shona/uibane</value>
+            <value form="image">jr://images/self_made_mask_pic4.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic5:label">
-            <value form="image">jr://images/self_made_mask_pic5.png</value>
             <value>Muonekano wa barakoa baada ya kuiandaa</value>
+            <value form="image">jr://images/self_made_mask_pic5.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pic6:label">
-            <value form="image">jr://images/self_made_mask_pic6.png</value>
             <value>Muonekano wa barakoa baada ya kuvaa</value>
+            <value form="image">jr://images/self_made_mask_pic6.png</value>
           </text>
           <text id="/covid_education/mask_questions/self_made_mask_pics:label">
             <value>Jinsi ya kutengeneza barakoa yako nyumbani.</value>
@@ -605,7 +611,7 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <text id="/covid_education/mask_questions:label">
             <value>Masuali kuhusu barakoa</value>
           </text>
-          <text id="/covid_education/risks_and_directions/age_above_50/none:label">
+          <text id="/covid_education/risks_and_directions/age_above_50/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/risks_and_directions/age_above_50/yes:label">
@@ -650,7 +656,7 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <text id="/covid_education/risks_and_directions:label">
             <value>Maswali kuhusu makundi hatarishi na maelekezo kwa wanakaya</value>
           </text>
-          <text id="/covid_education/test_understading/asymptomatic/none:label">
+          <text id="/covid_education/test_understading/asymptomatic/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/test_understading/asymptomatic/yes:label">
@@ -662,7 +668,7 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <text id="/covid_education/test_understading/educate_client:label">
             <value>Majibu ya maswali yote mawili ni Ndio.Watu wasioonesha dalili wanaweza kueneza maambukizi. Inawezekana kwa mtu kuathirika kwa kushika sehemu yenye virusi na baadae kushika uso wake. Kwahiyo ni muhimu kuvaa barakoa muda wote unapotoka nyumbani , kuosha mikono mara kwa mara kwa maji na sabuni.Ahsanteni kwa kunisikilia na kwa ushirikiano wenu.</value>
           </text>
-          <text id="/covid_education/test_understading/infected_area/none:label">
+          <text id="/covid_education/test_understading/infected_area/no:label">
             <value>Hapana</value>
           </text>
           <text id="/covid_education/test_understading/infected_area/yes:label">
@@ -677,7 +683,7 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
         </translation>
       </itext>
       <instance>
-        <covid_education delimiter="#" id="covid_education" prefix="J1!covid_education!" version="2019-05-11 00:00:00">
+        <covid_education id="covid_education" prefix="J1!covid_education!" delimiter="#" version="2019-05-11 00:00:00">
           <inputs>
             <meta>
               <location>
@@ -692,6 +698,9 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
               <facility_id/>
               <name/>
             </user>
+            <contact>
+              <_id/>
+            </contact>
           </inputs>
           <created_by/>
           <created_by_person_uuid/>
@@ -770,28 +779,29 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
         </covid_education>
       </instance>
       <instance id="contact-summary"/>
-      <bind nodeset="/covid_education/inputs" relevant="0"/>
+      <bind nodeset="/covid_education/inputs" relevant="false()"/>
       <bind nodeset="/covid_education/inputs/user/contact_id" type="string"/>
       <bind nodeset="/covid_education/inputs/user/facility_id" type="string"/>
       <bind nodeset="/covid_education/inputs/user/name" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/covid_education/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/covid_education/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/covid_education/created_by_place_uuid" type="string"/>
+      <bind nodeset="/covid_education/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/covid_education/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/covid_education/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/covid_education/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
       <bind nodeset="/covid_education/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/introductory_qns/introduction" readonly="true()" type="string"/>
-      <bind nodeset="/covid_education/introductory_qns/corona_awareness" required="true()" type="select1"/>
-      <bind nodeset="/covid_education/introductory_qns/listen_to_mother" readonly="true()" relevant="selected( /covid_education/introductory_qns/corona_awareness ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/covid_education/introductory_qns/qns_from_family" required="true()" type="select1"/>
-      <bind nodeset="/covid_education/introductory_qns/answer_questions" readonly="true()" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/covid_education/introductory_qns/msg_for_chv_questions" readonly="true()" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/covid_education/introductory_qns/asked_qns" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)" required="true()" type="select"/>
-      <bind nodeset="/covid_education/introductory_qns/msg_for_chv_other_qn" readonly="true()" relevant="selected( /covid_education/introductory_qns/asked_qns ,&quot;none&quot;)" type="string"/>
-      <bind nodeset="/covid_education/introductory_qns/other_question" relevant="selected( /covid_education/introductory_qns/asked_qns ,&quot;none&quot;)" required="true()" type="string"/>
+      <bind nodeset="/covid_education/introductory_qns/corona_awareness" type="select1" required="true()"/>
+      <bind nodeset="/covid_education/introductory_qns/listen_to_mother" readonly="true()" type="string" relevant="selected( /covid_education/introductory_qns/corona_awareness ,&quot;yes&quot;)"/>
+      <bind nodeset="/covid_education/introductory_qns/qns_from_family" type="select1" required="true()"/>
+      <bind nodeset="/covid_education/introductory_qns/answer_questions" readonly="true()" type="string" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)"/>
+      <bind nodeset="/covid_education/introductory_qns/msg_for_chv_questions" readonly="true()" type="string" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)"/>
+      <bind nodeset="/covid_education/introductory_qns/asked_qns" type="select" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/covid_education/introductory_qns/msg_for_chv_other_qn" readonly="true()" type="string" relevant="selected( /covid_education/introductory_qns/asked_qns ,&quot;none&quot;)"/>
+      <bind nodeset="/covid_education/introductory_qns/other_question" type="string" relevant="selected( /covid_education/introductory_qns/asked_qns ,&quot;none&quot;)" required="true()"/>
       <bind nodeset="/covid_education/intro_to_corona/what_is_corona" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/corona_transmission/how_is_it_transmitted" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/corona_symptoms/what_are_corona_symptoms" readonly="true()" type="string"/>
-      <bind nodeset="/covid_education/corona_symptoms/has_corona" required="true()" type="select1"/>
-      <bind nodeset="/covid_education/corona_symptoms/report_client" readonly="true()" relevant="selected( /covid_education/corona_symptoms/has_corona ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/covid_education/corona_symptoms/has_corona" type="select1" required="true()"/>
+      <bind nodeset="/covid_education/corona_symptoms/report_client" readonly="true()" type="string" relevant="selected( /covid_education/corona_symptoms/has_corona ,&quot;yes&quot;)"/>
       <bind nodeset="/covid_education/corona_symptoms/sneezing" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/corona_symptoms/coughing" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/corona_symptoms/headache" readonly="true()" type="string"/>
@@ -803,9 +813,9 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/corona_prevention/no_face_touch" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/corona_prevention/no_travel" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/additional_guidelines/list_of_guidelines" readonly="true()" type="string"/>
-      <bind nodeset="/covid_education/mask_questions/has_mask" required="true()" type="select1"/>
-      <bind nodeset="/covid_education/mask_questions/is_wearing" relevant="selected( /covid_education/mask_questions/has_mask ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/covid_education/mask_questions/not_wearing_msg" readonly="true()" relevant="selected( /covid_education/mask_questions/is_wearing ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/covid_education/mask_questions/has_mask" type="select1" required="true()"/>
+      <bind nodeset="/covid_education/mask_questions/is_wearing" type="select1" relevant="selected( /covid_education/mask_questions/has_mask ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/covid_education/mask_questions/not_wearing_msg" readonly="true()" type="string" relevant="selected( /covid_education/mask_questions/is_wearing ,&quot;no&quot;)"/>
       <bind nodeset="/covid_education/mask_questions/self_made_mask_pics" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/mask_questions/self_made_mask_pic1" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/mask_questions/self_made_mask_pic2" readonly="true()" type="string"/>
@@ -814,16 +824,16 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/mask_questions/self_made_mask_pic5" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/mask_questions/self_made_mask_pic6" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/mask_questions/mask_importance" readonly="true()" type="string"/>
-      <bind nodeset="/covid_education/hand_washing/has_infrastructure" required="true()" type="select1"/>
-      <bind nodeset="/covid_education/hand_washing/is_practicing" required="true()" type="select1"/>
+      <bind nodeset="/covid_education/hand_washing/has_infrastructure" type="select1" required="true()"/>
+      <bind nodeset="/covid_education/hand_washing/is_practicing" type="select1" required="true()"/>
       <bind nodeset="/covid_education/hand_washing/practice_reminder" readonly="true()" type="string"/>
-      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/covid_education/risks_and_directions/serious_diseases:jr:constraintMsg')" nodeset="/covid_education/risks_and_directions/serious_diseases" required="true()" type="select"/>
-      <bind nodeset="/covid_education/risks_and_directions/age_above_50" required="true()" type="select1"/>
+      <bind nodeset="/covid_education/risks_and_directions/serious_diseases" type="select" required="true()" jr:constraintMsg="jr:itext('/covid_education/risks_and_directions/serious_diseases:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/covid_education/risks_and_directions/age_above_50" type="select1" required="true()"/>
       <bind nodeset="/covid_education/risks_and_directions/prevention_for_elderly" readonly="true()" type="string"/>
-      <bind nodeset="/covid_education/test_understading/asymptomatic" required="true()" type="select1"/>
-      <bind nodeset="/covid_education/test_understading/infected_area" required="true()" type="select1"/>
+      <bind nodeset="/covid_education/test_understading/asymptomatic" type="select1" required="true()"/>
+      <bind nodeset="/covid_education/test_understading/infected_area" type="select1" required="true()"/>
       <bind nodeset="/covid_education/test_understading/educate_client" readonly="true()" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/covid_education/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/covid_education/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
@@ -838,6 +848,9 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
         <input ref="/covid_education/inputs/user/name">
           <label ref="jr:itext('/covid_education/inputs/user/name:label')"/>
         </input>
+      </group>
+      <group ref="/covid_education/inputs/contact">
+        <input appearance="db-object" ref="/covid_education/inputs/contact/_id"/>
       </group>
     </group>
     <group appearance="field-list" ref="/covid_education/covid19_intro">
@@ -858,8 +871,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/introductory_qns/corona_awareness/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/introductory_qns/corona_awareness/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <input ref="/covid_education/introductory_qns/listen_to_mother">
@@ -872,8 +885,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/introductory_qns/qns_from_family/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/introductory_qns/qns_from_family/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <input ref="/covid_education/introductory_qns/answer_questions">
@@ -940,8 +953,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/corona_symptoms/has_corona/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/corona_symptoms/has_corona/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <input ref="/covid_education/corona_symptoms/report_client">
@@ -996,8 +1009,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/mask_questions/has_mask/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/mask_questions/has_mask/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <select1 ref="/covid_education/mask_questions/is_wearing">
@@ -1007,8 +1020,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/mask_questions/is_wearing/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/mask_questions/is_wearing/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <input ref="/covid_education/mask_questions/not_wearing_msg">
@@ -1048,8 +1061,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/hand_washing/has_infrastructure/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/hand_washing/has_infrastructure/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <select1 ref="/covid_education/hand_washing/is_practicing">
@@ -1115,8 +1128,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/risks_and_directions/age_above_50/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/risks_and_directions/age_above_50/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <input ref="/covid_education/risks_and_directions/prevention_for_elderly">
@@ -1132,8 +1145,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/test_understading/asymptomatic/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/test_understading/asymptomatic/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <select1 ref="/covid_education/test_understading/infected_area">
@@ -1143,8 +1156,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/covid_education/test_understading/infected_area/none:label')"/>
-          <value>none</value>
+          <label ref="jr:itext('/covid_education/test_understading/infected_area/no:label')"/>
+          <value>no</value>
         </item>
       </select1>
       <input ref="/covid_education/test_understading/educate_client">

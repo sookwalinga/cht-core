@@ -1,3 +1,4 @@
+var extras = require('./nools-extras.js');
 module.exports = [
 
   // General: Total under 5 registrations this month + pregnant women registration this month

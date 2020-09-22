@@ -21,7 +21,6 @@ CREATE MATERIALIZED VIEW useview_peer_mentor_checklist AS
     doc #>> '{fields,chv_information,chv_middle_name}' AS chv_middle_name,
     doc #>> '{fields,chv_information,chv_last_name}' AS chv_last_name,
     doc #>> '{fields,chv_information,phone}' AS phone,
-    TO_DATE(NULLIF(doc #>> '{fields,chv_information,date_of_mentorship}', ''), 'YYYY-MM-DD') AS date_of_mentorship,
     doc #>> '{fields,section_1,phone_usage}' AS phone_usage,
     doc #>> '{fields,section_1,phone_usage_reason}' AS phone_usage_reason,
     doc #>> '{fields,section_1,balance_check}' AS balance_check,
