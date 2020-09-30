@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Confirm Meeting</h:title>
     <model>
@@ -89,7 +89,7 @@
         </translation>
       </itext>
       <instance>
-        <confirm_meeting delimiter="#" id="confirm_meeting" prefix="J1!confirm_meeting!">
+        <confirm_meeting id="confirm_meeting" prefix="J1!confirm_meeting!" delimiter="#">
           <inputs>
             <meta>
               <location>
@@ -124,12 +124,12 @@
       <bind nodeset="/confirm_meeting/inputs/user/contact_id" type="string"/>
       <bind nodeset="/confirm_meeting/inputs/user/facility_id" type="string"/>
       <bind nodeset="/confirm_meeting/inputs/user/name" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/confirm_meeting/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/confirm_meeting/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/confirm_meeting/created_by_place_uuid" type="string"/>
+      <bind nodeset="/confirm_meeting/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/confirm_meeting/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/confirm_meeting/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
       <bind nodeset="/confirm_meeting/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/confirm_meeting/user/confirm_meeting" required="true()" type="select1"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/confirm_meeting/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/confirm_meeting/user/confirm_meeting" type="select1" required="true()"/>
+      <bind nodeset="/confirm_meeting/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
