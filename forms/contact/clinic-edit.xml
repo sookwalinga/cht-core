@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Rekebisha taarifa za kaya</h:title>
     <model>
@@ -65,7 +65,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:clinic:edit" prefix="J1!contact:clinic:edit!" version="2020-04-15_18-37">
+        <data id="contact:clinic:edit" prefix="J1!contact:clinic:edit!" delimiter="#" version="2020-04-15_18-37">
           <inputs>
             <meta>
               <location>
@@ -106,15 +106,15 @@
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/clinic/name" required="true()" type="string"/>
-      <bind calculate="int(decimal-date-time(now())* 24 *60*60*1000)" nodeset="/data/clinic/edited_date" type="string"/>
-      <bind nodeset="/data/clinic/meta/created_by" readonly="true()" type="string"/>
-      <bind nodeset="/data/clinic/meta/created_by_person_uuid" readonly="true()" type="string"/>
-      <bind nodeset="/data/clinic/meta/created_by_place_uuid" readonly="true()" type="string"/>
-      <bind calculate="../../../inputs/user/name" nodeset="/data/clinic/meta/last_edited_by" type="string"/>
-      <bind calculate="../../../inputs/user/contact_id" nodeset="/data/clinic/meta/last_edited_by_person_uuid" type="string"/>
-      <bind calculate="../../../inputs/user/facility_id" nodeset="/data/clinic/meta/last_edited_by_place_uuid" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/clinic/name" type="string" required="true()"/>
+      <bind nodeset="/data/clinic/edited_date" type="string" calculate="int(decimal-date-time(now())* 24 *60*60*1000)"/>
+      <bind nodeset="/data/clinic/meta/created_by" type="string" readonly="true()"/>
+      <bind nodeset="/data/clinic/meta/created_by_person_uuid" type="string" readonly="true()"/>
+      <bind nodeset="/data/clinic/meta/created_by_place_uuid" type="string" readonly="true()"/>
+      <bind nodeset="/data/clinic/meta/last_edited_by" type="string" calculate="../../../inputs/user/name"/>
+      <bind nodeset="/data/clinic/meta/last_edited_by_person_uuid" type="string" calculate="../../../inputs/user/contact_id"/>
+      <bind nodeset="/data/clinic/meta/last_edited_by_place_uuid" type="string" calculate="../../../inputs/user/facility_id"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">

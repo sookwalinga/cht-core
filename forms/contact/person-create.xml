@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Ongeza Mtu</h:title>
     <model>
@@ -238,7 +238,7 @@
         </translation>
       </itext>
       <instance>
-        <data delimiter="#" id="contact:person:create" prefix="J1!contact:person:create!" version="2020-04-15_02-49">
+        <data id="contact:person:create" prefix="J1!contact:person:create!" delimiter="#" version="2020-04-15_02-49">
           <inputs>
             <meta>
               <location>
@@ -307,45 +307,45 @@
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/inputs/user/name" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/data/contact_id" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/data/facility_id" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/data/name" type="string"/>
+      <bind nodeset="/data/contact_id" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/facility_id" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/data/name" type="string" calculate="../inputs/user/name"/>
       <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/not_in_household_note" readonly="true()" relevant="starts-with( /data/person/parent , ../facility_id)" type="string"/>
-      <bind calculate="if(starts-with( /data/person/parent , ../facility_id),1,0)" nodeset="/data/not_in_household_flag" type="string"/>
-      <bind nodeset="/data/person/hh_member_note" readonly="true()" relevant=" /data/not_in_household_flag  = 0" type="string"/>
+      <bind nodeset="/data/not_in_household_note" readonly="true()" type="string" relevant="starts-with( /data/person/parent , ../facility_id)"/>
+      <bind nodeset="/data/not_in_household_flag" type="string" calculate="if(starts-with( /data/person/parent , ../facility_id),1,0)"/>
+      <bind nodeset="/data/person/hh_member_note" readonly="true()" type="string" relevant=" /data/not_in_household_flag  = 0"/>
       <bind nodeset="/data/person/type" type="string"/>
-      <bind calculate="." nodeset="/data/person/parent" type="string"/>
-      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/first_name:jr:constraintMsg')" nodeset="/data/person/first_name" relevant=" /data/not_in_household_flag  = 0" required="true()" type="string"/>
-      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/middle_name:jr:constraintMsg')" nodeset="/data/person/middle_name" relevant=" /data/not_in_household_flag  = 0" required="true()" type="string"/>
-      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/person/last_name:jr:constraintMsg')" nodeset="/data/person/last_name" relevant=" /data/not_in_household_flag  = 0" required="true()" type="string"/>
-      <bind calculate="../first_name" nodeset="/data/person/first_name_c" type="string"/>
-      <bind calculate="../middle_name" nodeset="/data/person/middle_name_c" type="string"/>
-      <bind calculate="../last_name" nodeset="/data/person/last_name_c" type="string"/>
-      <bind calculate="concat( /data/person/first_name_c ,&quot; &quot;,  /data/person/middle_name_c ,&quot; &quot;,  /data/person/last_name_c )" nodeset="/data/person/name" type="string"/>
-      <bind nodeset="/data/person/sex_note" readonly="true()" relevant=" /data/not_in_household_flag  = 0" type="string"/>
-      <bind nodeset="/data/person/sex" relevant=" /data/not_in_household_flag  = 0" required="true()" type="select1"/>
-      <bind calculate="../sex" nodeset="/data/person/sex_c" type="string"/>
-      <bind nodeset="/data/person/exact_dob_known" relevant=" /data/not_in_household_flag  = 0" required="true()" type="select1"/>
-      <bind calculate="../exact_dob_known" nodeset="/data/person/exact_dob_known_c" type="string"/>
-      <bind constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" nodeset="/data/person/age_estimate_contact" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" required="true()" type="int"/>
-      <bind calculate="if(../age_estimate_contact != '', format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact, 1900)" nodeset="/data/person/yob" type="string"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" nodeset="/data/person/dob" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" required="true()" type="date"/>
-      <bind nodeset="/data/person/temp_hh_member" relevant=" /data/not_in_household_flag  = 0" required="true()" type="select1"/>
-      <bind calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')" nodeset="/data/person/date_of_birth" type="string"/>
-      <bind calculate="../date_of_birth" nodeset="/data/person/date_of_birth_c" type="string"/>
-      <bind calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)" nodeset="/data/person/is_exact_dob_in_range" type="string"/>
-      <bind calculate="if( /data/person/sex_c =&quot;female&quot; and ((((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &gt;= 15 and ((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &lt;= 49)),int(1),int(0))" nodeset="/data/person/reproductive_age" type="string"/>
-      <bind calculate="if(((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 30) &lt; 60,1,0)" nodeset="/data/person/is_under_5_binary" type="string"/>
-      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /data/person/date_of_birth_c ))" nodeset="/data/person/age_days" type="string"/>
-      <bind nodeset="/data/person/return_child_note_20_or_above_days" readonly="true()" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot; and  /data/person/is_under_5_binary =1 and  /data/person/is_exact_dob_in_range  = 1 and  /data/person/age_days  &gt;= 20" type="string"/>
-      <bind nodeset="/data/person/return_infant_note_under_20_days" readonly="true()" relevant=" /data/person/age_days  &lt; 20" type="string"/>
-      <bind nodeset="/data/person/return_women_note" readonly="true()" relevant=" /data/person/reproductive_age  = 1" type="string"/>
+      <bind nodeset="/data/person/parent" type="string" calculate="."/>
+      <bind nodeset="/data/person/first_name" type="string" jr:constraintMsg="jr:itext('/data/person/first_name:jr:constraintMsg')" relevant=" /data/not_in_household_flag  = 0" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/data/person/middle_name" type="string" jr:constraintMsg="jr:itext('/data/person/middle_name:jr:constraintMsg')" relevant=" /data/not_in_household_flag  = 0" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/data/person/last_name" type="string" jr:constraintMsg="jr:itext('/data/person/last_name:jr:constraintMsg')" relevant=" /data/not_in_household_flag  = 0" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/data/person/first_name_c" type="string" calculate="../first_name"/>
+      <bind nodeset="/data/person/middle_name_c" type="string" calculate="../middle_name"/>
+      <bind nodeset="/data/person/last_name_c" type="string" calculate="../last_name"/>
+      <bind nodeset="/data/person/name" type="string" calculate="concat( /data/person/first_name_c ,&quot; &quot;,  /data/person/middle_name_c ,&quot; &quot;,  /data/person/last_name_c )"/>
+      <bind nodeset="/data/person/sex_note" readonly="true()" type="string" relevant=" /data/not_in_household_flag  = 0"/>
+      <bind nodeset="/data/person/sex" type="select1" relevant=" /data/not_in_household_flag  = 0" required="true()"/>
+      <bind nodeset="/data/person/sex_c" type="string" calculate="../sex"/>
+      <bind nodeset="/data/person/exact_dob_known" type="select1" relevant=" /data/not_in_household_flag  = 0" required="true()"/>
+      <bind nodeset="/data/person/exact_dob_known_c" type="string" calculate="../exact_dob_known"/>
+      <bind nodeset="/data/person/age_estimate_contact" type="int" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" constraint=". &gt;= 5 and . &lt;= 100" required="true()"/>
+      <bind nodeset="/data/person/yob" type="string" calculate="if(../age_estimate_contact != '', format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact, 1900)"/>
+      <bind nodeset="/data/person/dob" type="date" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" required="true()"/>
+      <bind nodeset="/data/person/temp_hh_member" type="select1" relevant=" /data/not_in_household_flag  = 0" required="true()"/>
+      <bind nodeset="/data/person/date_of_birth" type="string" calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')"/>
+      <bind nodeset="/data/person/date_of_birth_c" type="string" calculate="../date_of_birth"/>
+      <bind nodeset="/data/person/is_exact_dob_in_range" type="string" calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)"/>
+      <bind nodeset="/data/person/reproductive_age" type="string" calculate="if( /data/person/sex_c =&quot;female&quot; and ((((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &gt;= 15 and ((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 365) &lt;= 49)),int(1),int(0))"/>
+      <bind nodeset="/data/person/is_under_5_binary" type="string" calculate="if(((decimal-date-time(today()) - decimal-date-time( /data/person/date_of_birth_c )) div 30) &lt; 60,1,0)"/>
+      <bind nodeset="/data/person/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /data/person/date_of_birth_c ))"/>
+      <bind nodeset="/data/person/return_child_note_20_or_above_days" readonly="true()" type="string" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot; and  /data/person/is_under_5_binary =1 and  /data/person/is_exact_dob_in_range  = 1 and  /data/person/age_days  &gt;= 20"/>
+      <bind nodeset="/data/person/return_infant_note_under_20_days" readonly="true()" type="string" relevant=" /data/person/age_days  &lt; 20"/>
+      <bind nodeset="/data/person/return_women_note" readonly="true()" type="string" relevant=" /data/person/reproductive_age  = 1"/>
       <bind nodeset="/data/person/debug_note" readonly="true()" type="string"/>
-      <bind calculate="../../../name" nodeset="/data/person/meta/created_by" type="string"/>
-      <bind calculate="../../../contact_id" nodeset="/data/person/meta/created_by_person_uuid" type="string"/>
-      <bind calculate="../../../facility_id" nodeset="/data/person/meta/created_by_place_uuid" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/meta/created_by" type="string" calculate="../../../name"/>
+      <bind nodeset="/data/person/meta/created_by_person_uuid" type="string" calculate="../../../contact_id"/>
+      <bind nodeset="/data/person/meta/created_by_place_uuid" type="string" calculate="../../../facility_id"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
