@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Postpartum Screening</h:title>
     <model>
@@ -2411,7 +2411,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         </translation>
       </itext>
       <instance>
-        <postpartum delimiter="#" id="postpartum" prefix="J1!postpartum!">
+        <postpartum id="postpartum" prefix="J1!postpartum!" delimiter="#">
           <inputs>
             <meta>
               <location>
@@ -3401,30 +3401,30 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/postpartum/inputs/contact/_id" type="db:person"/>
       <bind nodeset="/postpartum/inputs/contact/name" type="string"/>
       <bind nodeset="/postpartum/inputs/contact/date_of_birth" type="string"/>
-      <bind calculate="../inputs/contact/name" nodeset="/postpartum/client_name" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/postpartum/patient_id" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/postpartum/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/postpartum/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/postpartum/created_by_place_uuid" type="string"/>
-      <bind calculate="../inputs/c_section" nodeset="/postpartum/had_c_section" type="string"/>
-      <bind calculate="../inputs/contact/date_of_birth" nodeset="/postpartum/date_of_birth_c" type="string"/>
-      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /postpartum/date_of_birth_c ))" nodeset="/postpartum/age_days" type="string"/>
-      <bind calculate="int(( /postpartum/age_days  - ( /postpartum/age_years  * 12 * 30)) div 30,0)" nodeset="/postpartum/age_months" type="string"/>
-      <bind calculate="int( /postpartum/age_days  div (30 *12),0)" nodeset="/postpartum/age_years" type="string"/>
-      <bind calculate="round((decimal-date-time(today()) - decimal-date-time( /postpartum/date_of_birth_c )) div 365,0)" nodeset="/postpartum/age_in_years" type="string"/>
-      <bind calculate=" /postpartum/age_days  - ( /postpartum/age_months  * 30) - ( /postpartum/age_years  *12*30)" nodeset="/postpartum/age_days_display" type="string"/>
-      <bind calculate="7" nodeset="/postpartum/week" type="string"/>
-      <bind calculate="30" nodeset="/postpartum/month" type="string"/>
-      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/postpartum/household_head" type="string"/>
-      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/postpartum/house_number" type="string"/>
-      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/postpartum/kitongoji" type="string"/>
-      <bind calculate="instance('contact-summary')/context/phone" nodeset="/postpartum/phone" type="string"/>
-      <bind calculate="../inputs/due_date" nodeset="/postpartum/due_date" type="string"/>
-      <bind calculate="../inputs/due_date_human_readable" nodeset="/postpartum/due_date_pretty_print" type="string"/>
-      <bind calculate="instance('contact-summary')/context/show_research_questions" nodeset="/postpartum/show_research_questions" type="string"/>
-      <bind calculate="../inputs/show_quality_care" nodeset="/postpartum/show_quality_care_c" type="string"/>
-      <bind calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)" nodeset="/postpartum/visit_id" type="string"/>
-      <bind calculate="../inputs/is_atleast_one_baby_alive" nodeset="/postpartum/is_atleast_one_baby_alive_c" type="string"/>
+      <bind nodeset="/postpartum/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/postpartum/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/postpartum/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/postpartum/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/postpartum/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/postpartum/had_c_section" type="string" calculate="../inputs/c_section"/>
+      <bind nodeset="/postpartum/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/postpartum/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /postpartum/date_of_birth_c ))"/>
+      <bind nodeset="/postpartum/age_months" type="string" calculate="int(( /postpartum/age_days  - ( /postpartum/age_years  * 12 * 30)) div 30,0)"/>
+      <bind nodeset="/postpartum/age_years" type="string" calculate="int( /postpartum/age_days  div (30 *12),0)"/>
+      <bind nodeset="/postpartum/age_in_years" type="string" calculate="round((decimal-date-time(today()) - decimal-date-time( /postpartum/date_of_birth_c )) div 365,0)"/>
+      <bind nodeset="/postpartum/age_days_display" type="string" calculate=" /postpartum/age_days  - ( /postpartum/age_months  * 30) - ( /postpartum/age_years  *12*30)"/>
+      <bind nodeset="/postpartum/week" type="string" calculate="7"/>
+      <bind nodeset="/postpartum/month" type="string" calculate="30"/>
+      <bind nodeset="/postpartum/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/postpartum/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/postpartum/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/postpartum/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/postpartum/due_date" type="string" calculate="../inputs/due_date"/>
+      <bind nodeset="/postpartum/due_date_pretty_print" type="string" calculate="../inputs/due_date_human_readable"/>
+      <bind nodeset="/postpartum/show_research_questions" type="string" calculate="instance('contact-summary')/context/show_research_questions"/>
+      <bind nodeset="/postpartum/show_quality_care_c" type="string" calculate="../inputs/show_quality_care"/>
+      <bind nodeset="/postpartum/visit_id" type="string" calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)"/>
+      <bind nodeset="/postpartum/is_atleast_one_baby_alive_c" type="string" calculate="../inputs/is_atleast_one_baby_alive"/>
       <bind nodeset="/postpartum/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/client_information/household_note" readonly="true()" type="string"/>
@@ -3436,31 +3436,31 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/covid19_postpartum_danger_sign_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/generated_table_list_label_61" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/reserved_name_for_field_list_labels_62" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;no&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;no&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_not_right_now_note" readonly="true()" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_referral_note" readonly="true()" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag  = 1" type="string"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now" type="select1" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;no&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_not_right_now_note" readonly="true()" type="string" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;no&quot;)"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_referral_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag  = 1"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/generated_table_list_label_73" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/reserved_name_for_field_list_labels_74" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_urine" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_dizziness" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_exhaustion" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_lower_abdominal_pain" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_vaginal_discharge" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_fever_chills" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/c_section_condition" relevant=" /postpartum/had_c_section =&quot;yes&quot;" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or 
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_urine" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_dizziness" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_exhaustion" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_lower_abdominal_pain" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_vaginal_discharge" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_fever_chills" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/c_section_condition" type="select1" relevant=" /postpartum/had_c_section =&quot;yes&quot;" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" type="select1" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or 
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision ,&quot;yes&quot;) or
@@ -3473,12 +3473,12 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior ,&quot;yes&quot;) or
-selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/already_went_to_facility_note" readonly="true()" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_referral_note" readonly="true()" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 1" type="string"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_no_referral_note" readonly="true()" relevant="selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_not_found_note" readonly="true()" relevant="( /postpartum/had_c_section  = &quot;yes&quot; and
+selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/already_went_to_facility_note" readonly="true()" type="string" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility" type="select1" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_referral_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_no_referral_note" readonly="true()" type="string" relevant="selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;no&quot;)"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_not_found_note" readonly="true()" type="string" relevant="( /postpartum/had_c_section  = &quot;yes&quot; and
 selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;clean&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache ,&quot;no&quot;) and
@@ -3507,20 +3507,20 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior ,&quot;no&quot;) and
-selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;no&quot;))" type="string"/>
+selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;no&quot;))"/>
       <bind nodeset="/postpartum/pnc_care_visit" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 0"/>
       <bind nodeset="/postpartum/pnc_care_visit/pn_care_visit_message" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/nutrition" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0"/>
       <bind nodeset="/postpartum/nutrition/ask_about_nutrition" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/nutrition/chv_note_nutritio_bangokitita" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/check_facility_pnc" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and  /postpartum/show_quality_care_c =&quot;true&quot;"/>
-      <bind nodeset="/postpartum/check_facility_pnc/has_attended_facility_pnc" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/check_facility_pnc/pnc_visit_count_zero" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,'no')" required="true()" type="select"/>
-      <bind nodeset="/postpartum/check_facility_pnc/quality_of_care_consent" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)" type="select1"/>
+      <bind nodeset="/postpartum/check_facility_pnc/has_attended_facility_pnc" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/check_facility_pnc/pnc_visit_count_zero" type="select" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,'no')" required="true()"/>
+      <bind nodeset="/postpartum/check_facility_pnc/quality_of_care_consent" type="select1" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)"/>
       <bind nodeset="/postpartum/quality_of_care" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and selected( /postpartum/check_facility_pnc/quality_of_care_consent ,&quot;yes&quot;) and selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/facility_island" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/quality_of_care/facility_district" relevant="selected( /postpartum/quality_of_care/facility_island ,&quot;unguja&quot;) or selected( /postpartum/quality_of_care/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or 
+      <bind nodeset="/postpartum/quality_of_care/facility_island" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/quality_of_care/facility_district" type="select1" relevant="selected( /postpartum/quality_of_care/facility_island ,&quot;unguja&quot;) or selected( /postpartum/quality_of_care/facility_island ,&quot;pemba&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" type="select1" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;north_b&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;central&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;south&quot;) or 
@@ -3530,36 +3530,36 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;urban&quot;) or
 selected( /postpartum/quality_of_care/facility_district ,&quot;chakechake&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;micheweni&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;mkoani&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility_other" relevant="selected( /postpartum/quality_of_care/subgroup_facility/anc_visit_facility ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/postpartum/quality_of_care/is_service_received" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/quality_of_care/no_service_reason" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;) or selected( /postpartum/quality_of_care/is_service_received ,&quot;no&quot;)" required="true()" type="select"/>
-      <bind nodeset="/postpartum/quality_of_care/second_facility" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;)" required="true()" type="select"/>
-      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/pnc_services_received:jr:constraintMsg')" nodeset="/postpartum/quality_of_care/pnc_services_received" required="true()" type="select"/>
-      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/baby_services_recevied:jr:constraintMsg')" nodeset="/postpartum/quality_of_care/baby_services_recevied" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" required="true()" type="select"/>
+selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility_other" type="string" relevant="selected( /postpartum/quality_of_care/subgroup_facility/anc_visit_facility ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/quality_of_care/is_service_received" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/quality_of_care/no_service_reason" type="select" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;) or selected( /postpartum/quality_of_care/is_service_received ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/quality_of_care/second_facility" type="select" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/quality_of_care/pnc_services_received" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/pnc_services_received:jr:constraintMsg')"/>
+      <bind nodeset="/postpartum/quality_of_care/baby_services_recevied" type="select" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/baby_services_recevied:jr:constraintMsg')"/>
       <bind nodeset="/postpartum/personal_information_consent" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and  /postpartum/show_research_questions  = &quot;true&quot;"/>
-      <bind nodeset="/postpartum/personal_information_consent/research_questions_consent" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/personal_information_consent/research_questions_consent" type="select1" required="true()"/>
       <bind nodeset="/postpartum/research_questions" relevant="selected( /postpartum/personal_information_consent/research_questions_consent ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/research_questions/travel_time" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/transport/travel_means" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/transport/other_means" relevant="selected( /postpartum/research_questions/transport/travel_means ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/decision_maker" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/some_other_decision_maker" relevant="selected( /postpartum/research_questions/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_marital_status/marital_status" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/postpartum/research_questions/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/postpartum/research_questions/partner_info/subgroup_partner_age" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" type="int"/>
-      <bind nodeset="/postpartum/research_questions/partner_info/partner_highest_school_level" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
-      <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/postpartum/research_questions/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/postpartum/research_questions/subgroup_multiple_wives/num_wives" relevant="selected( /postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
+      <bind nodeset="/postpartum/research_questions/travel_time" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/transport/travel_means" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/transport/other_means" type="string" relevant="selected( /postpartum/research_questions/transport/travel_means ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/decision_maker" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/some_other_decision_maker" type="string" relevant="selected( /postpartum/research_questions/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_marital_status/marital_status" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together" type="select1" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/partner_info/subgroup_partner_age" type="int" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/postpartum/research_questions/partner_info/subgroup_partner_age:jr:constraintMsg')"/>
+      <bind nodeset="/postpartum/research_questions/partner_info/partner_highest_school_level" type="select1" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife" type="select1" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/num_wives" type="int" relevant="selected( /postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/postpartum/research_questions/subgroup_multiple_wives/num_wives:jr:constraintMsg')"/>
       <bind nodeset="/postpartum/next_task_reminder/chvnote_next_task" readonly="true()" type="string"/>
-      <bind nodeset="/postpartum/group_summary/healthy_note" readonly="true()" relevant=" /postpartum/has_referral =0" type="string"/>
-      <bind nodeset="/postpartum/group_summary/needs_referral_note" readonly="true()" relevant=" /postpartum/has_referral =1" type="string"/>
-      <bind nodeset="/postpartum/group_summary/needs_referral_emergency_danger_sign_note" readonly="true()" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =1" type="string"/>
-      <bind nodeset="/postpartum/group_summary/needs_referral_other_danger_sign_note" readonly="true()" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag =1" type="string"/>
-      <bind calculate="if((selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;yes&quot;)) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;yes&quot;) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;yes&quot;),1,0)" nodeset="/postpartum/refer_postpartum_emergency_danger_sign_flag" type="string"/>
-      <bind calculate="if(selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;yes&quot;) or selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;no&quot;),1,0)" nodeset="/postpartum/refer_postpartum_other_danger_sign_flag" type="string"/>
-      <bind calculate="if( /postpartum/refer_postpartum_emergency_danger_sign_flag =1 or  /postpartum/refer_postpartum_other_danger_sign_flag =1,1,0)" nodeset="/postpartum/has_referral" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/postpartum/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/postpartum/group_summary/healthy_note" readonly="true()" type="string" relevant=" /postpartum/has_referral =0"/>
+      <bind nodeset="/postpartum/group_summary/needs_referral_note" readonly="true()" type="string" relevant=" /postpartum/has_referral =1"/>
+      <bind nodeset="/postpartum/group_summary/needs_referral_emergency_danger_sign_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =1"/>
+      <bind nodeset="/postpartum/group_summary/needs_referral_other_danger_sign_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag =1"/>
+      <bind nodeset="/postpartum/refer_postpartum_emergency_danger_sign_flag" type="string" calculate="if((selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;yes&quot;)) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;yes&quot;) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;yes&quot;),1,0)"/>
+      <bind nodeset="/postpartum/refer_postpartum_other_danger_sign_flag" type="string" calculate="if(selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;yes&quot;) or selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;no&quot;),1,0)"/>
+      <bind nodeset="/postpartum/has_referral" type="string" calculate="if( /postpartum/refer_postpartum_emergency_danger_sign_flag =1 or  /postpartum/refer_postpartum_other_danger_sign_flag =1,1,0)"/>
+      <bind nodeset="/postpartum/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">

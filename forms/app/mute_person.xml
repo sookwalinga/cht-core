@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Remove person</h:title>
     <model>
@@ -127,7 +127,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /mute_
         </translation>
       </itext>
       <instance>
-        <mute_person delimiter="#" id="mute_person" prefix="J1!mute_person!">
+        <mute_person id="mute_person" prefix="J1!mute_person!" delimiter="#">
           <inputs>
             <meta>
               <location>
@@ -182,20 +182,20 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /mute_
       <bind nodeset="/mute_person/inputs/contact/name" type="string"/>
       <bind nodeset="/mute_person/inputs/contact/sex" type="string"/>
       <bind nodeset="/mute_person/inputs/contact/date_of_birth" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/mute_person/patient_id" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/mute_person/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/mute_person/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/mute_person/created_by_place_uuid" type="string"/>
-      <bind calculate="../inputs/contact/name" nodeset="/mute_person/client_name" type="string"/>
-      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/mute_person/household_head" type="string"/>
-      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/mute_person/house_number" type="string"/>
-      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/mute_person/kitongoji" type="string"/>
-      <bind calculate="instance('contact-summary')/context/phone" nodeset="/mute_person/phone" type="string"/>
+      <bind nodeset="/mute_person/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/mute_person/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/mute_person/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/mute_person/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/mute_person/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/mute_person/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/mute_person/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/mute_person/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/mute_person/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
       <bind nodeset="/mute_person/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/mute_person/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/mute_person/client_information/phone_note" readonly="true()" type="string"/>
-      <bind nodeset="/mute_person/moving_reason/moving_reason" required="true()" type="select1"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/mute_person/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/mute_person/moving_reason/moving_reason" type="select1" required="true()"/>
+      <bind nodeset="/mute_person/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">

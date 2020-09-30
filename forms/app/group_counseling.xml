@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Group Counseling</h:title>
     <model>
@@ -218,7 +218,7 @@
         </translation>
       </itext>
       <instance>
-        <group_counseling delimiter="#" id="group_counseling" prefix="J1!group_counseling!">
+        <group_counseling id="group_counseling" prefix="J1!group_counseling!" delimiter="#">
           <inputs>
             <meta>
               <location>
@@ -270,23 +270,23 @@
       <bind nodeset="/group_counseling/inputs/user/contact_id" type="string"/>
       <bind nodeset="/group_counseling/inputs/user/facility_id" type="string"/>
       <bind nodeset="/group_counseling/inputs/user/name" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/group_counseling/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/group_counseling/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/group_counseling/created_by_place_uuid" type="string"/>
+      <bind nodeset="/group_counseling/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/group_counseling/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/group_counseling/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
       <bind nodeset="/group_counseling/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/district:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/district" required="true()" type="string"/>
-      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/shehia:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/shehia" required="true()" type="string"/>
-      <bind constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/village:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/village" required="true()" type="string"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/date_of_group_counseling:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/date_of_group_counseling" required="true()" type="date"/>
-      <bind jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/session_title:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/session_title" required="true()" type="string"/>
-      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male" type="int"/>
-      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female" type="int"/>
-      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_below_20:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_age/age_below_20" type="int"/>
-      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_above_20:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_age/age_above_20" type="int"/>
-      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women" type="int"/>
-      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers" type="int"/>
-      <bind constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:jr:constraintMsg')" nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people" type="int"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/group_counseling/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/district" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/district:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/shehia" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/shehia:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/village" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/village:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/date_of_group_counseling" type="date" constraint=". &lt;= date-time(decimal-date-time(today()))" required="true()" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/date_of_group_counseling:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/session_title" type="string" required="true()" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/session_title:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male" type="int" constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_male:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female" type="int" constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_sex/sex_number_female:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/subgroup_age/age_below_20" type="int" constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_below_20:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/subgroup_age/age_above_20" type="int" constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_age/age_above_20:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women" type="int" constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_pregnant_women:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers" type="int" constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_caregivers:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people" type="int" constraint=". &gt;= 0 and .&lt;= 500" jr:constraintMsg="jr:itext('/group_counseling/chv_group_counseling/subgroup_participant/number_influential_people:jr:constraintMsg')"/>
+      <bind nodeset="/group_counseling/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
