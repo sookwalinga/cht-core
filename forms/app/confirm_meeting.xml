@@ -1,10 +1,24 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Confirm Meeting</h:title>
     <model>
       <itext>
         <translation lang="en">
+          <text id="/confirm_meeting/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.&lt;/span&gt;</value>
+          </text>
+          <text id="/confirm_meeting/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
+          </text>
           <text id="/confirm_meeting/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
           </text>
@@ -28,6 +42,20 @@
           </text>
         </translation>
         <translation lang="sw">
+          <text id="/confirm_meeting/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.&lt;/span&gt;</value>
+          </text>
+          <text id="/confirm_meeting/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
+          </text>
           <text id="/confirm_meeting/inputs/user/contact_id:label">
             <value>-</value>
           </text>
@@ -61,7 +89,7 @@
         </translation>
       </itext>
       <instance>
-        <confirm_meeting delimiter="#" id="confirm_meeting" prefix="J1!confirm_meeting!">
+        <confirm_meeting id="confirm_meeting" prefix="J1!confirm_meeting!" delimiter="#">
           <inputs>
             <meta>
               <location>
@@ -80,6 +108,9 @@
           <created_by/>
           <created_by_person_uuid/>
           <created_by_place_uuid/>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
           <user>
             <confirm_meeting/>
           </user>
@@ -93,11 +124,12 @@
       <bind nodeset="/confirm_meeting/inputs/user/contact_id" type="string"/>
       <bind nodeset="/confirm_meeting/inputs/user/facility_id" type="string"/>
       <bind nodeset="/confirm_meeting/inputs/user/name" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/confirm_meeting/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/confirm_meeting/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/confirm_meeting/created_by_place_uuid" type="string"/>
-      <bind nodeset="/confirm_meeting/user/confirm_meeting" required="true()" type="select1"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/confirm_meeting/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/confirm_meeting/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/confirm_meeting/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/confirm_meeting/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/confirm_meeting/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/confirm_meeting/user/confirm_meeting" type="select1" required="true()"/>
+      <bind nodeset="/confirm_meeting/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
@@ -113,6 +145,12 @@
           <label ref="jr:itext('/confirm_meeting/inputs/user/name:label')"/>
         </input>
       </group>
+    </group>
+    <group ref="/confirm_meeting/covid19_intro">
+      <label ref="jr:itext('/confirm_meeting/covid19_intro:label')"/>
+      <input ref="/confirm_meeting/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/confirm_meeting/covid19_intro/covid19_intro_note:label')"/>
+      </input>
     </group>
     <group ref="/confirm_meeting/user">
       <select1 appearance="field-list" ref="/confirm_meeting/user/confirm_meeting">

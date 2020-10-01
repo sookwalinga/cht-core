@@ -1,16 +1,19 @@
+var extras = require('./nools-extras.js');
 module.exports = [
 
   // Infant-child referral follow-up
   {
+    name: 'infant_child_referral_followup',
     icon: 'follow-up',
     title: 'task.infant_child_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      return extras.hasReferral(r, "infant_child") ||
+      return extras.hasReferral(r, 'infant_child') ||
         extras.getSmallBabyFlag(r) === '1' ||
         extras.getNeonatalDangerSignFlag(r) === '1' ||
         extras.getSecondaryNeonatalDangerSignFlag(r) === '1' ||
         extras.getChildDangerSignFlag(r) === '1' ||
+        extras.getChildOtherDangerSignFlag(r) === '1' ||
         extras.getMUACFlag(r) === '1' ||
         extras.getPalmPallorFlag(r) === '1' ||
         extras.getVaccinesFlag(r) === '1' ||
@@ -21,13 +24,14 @@ module.exports = [
       form: 'referral_follow_up',
       modifyContent: function (content, contact, report) {
         content.source_form = report.form;
-        content.original_source_form = "infant_child";
+        content.original_source_form = 'infant_child';
         content.source_id = report._id;
         content.last_visit_date = report.reported_date;
         content.refer_flag_small_baby = extras.getSmallBabyFlag(report);
         content.refer_neonatal_danger_sign_flag = extras.getNeonatalDangerSignFlag(report);
         content.refer_secondary_neonatal_danger_sign_flag = extras.getSecondaryNeonatalDangerSignFlag(report);
         content.refer_child_danger_sign_flag = extras.getChildDangerSignFlag(report);
+        content.refer_child_other_danger_sign_flag = extras.getChildOtherDangerSignFlag(report);
         content.refer_muac_flag = extras.getMUACFlag(report);
         content.refer_refer_palm_pallor_flag = extras.getPalmPallorFlag(report);
         content.refer_vaccines_flag = extras.getVaccinesFlag(report);
@@ -62,7 +66,7 @@ module.exports = [
       level: 'high',
       label: 'task.referral.high_priority'
     },
-    resolvedIf: function (c, r, event, dueDate) {
+    resolvedIf: function (c, r) {
       //Resolve this form if there is a referral form in couch where the woman
       // does not need to be visited again OR there is a form in couch whose referral_source_id = infant child form. 
       return ((r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
@@ -74,11 +78,12 @@ module.exports = [
 
   // Pregnancy referral follow-up
   {
+    name: 'pregnancy_referral_followup',
     icon: 'follow-up',
     title: 'task.pregnancy_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      return extras.hasReferral(r, "pregnancy") || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+      return extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
         extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
         extras.getANCVisitAfter6MonthsFlag(r) === '1';
     },
@@ -86,7 +91,7 @@ module.exports = [
     actions: [{
       form: 'referral_follow_up',
       modifyContent: function (content, contact, report) {
-        content.original_source_form = "pregnancy";
+        content.original_source_form = 'pregnancy';
         content.source_form = report.form;
         content.source_id = report._id;
         content.last_visit_date = report.reported_date;
@@ -124,7 +129,7 @@ module.exports = [
       level: 'high',
       label: 'task.referral.high_priority'
     },
-    resolvedIf: function (c, r, event, dueDate) {
+    resolvedIf: function (c, r) {
       return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
         extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
         extras.isContactDeceased(c) ||
@@ -134,11 +139,12 @@ module.exports = [
 
   // Postpartum referral follow-up
   {
+    name: 'postpartum_referral_followup',
     icon: 'follow-up',
     title: 'task.postpartum_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      return extras.hasReferral(r, "postpartum") || extras.getPostpartumEmergencyDangerSigns(r) === '1' ||
+      return extras.hasReferral(r, 'postpartum') || extras.getPostpartumEmergencyDangerSigns(r) === '1' ||
         extras.getPostpartumOtherDangerSigns(r) === '1';
     },
     appliesToType: ['referral_follow_up', 'postpartum'],
@@ -180,7 +186,7 @@ module.exports = [
       level: 'high',
       label: 'task.referral.high_priority'
     },
-    resolvedIf: function (c, r, event, dueDate) {
+    resolvedIf: function (c, r) {
       return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
         extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
         extras.isContactDeceased(c) ||
@@ -191,6 +197,7 @@ module.exports = [
   // First-time infant child visit for children registered at 19 days of age or younger.
   // Task triggers with the high priority flag set and a due date of the same day the child was registered
   {
+    name: 'under20days_first_infant_child_visit',
     icon: 'child',
     title: 'task.infant_child.first_visit_under_20_days',
     appliesTo: 'contacts',
@@ -244,7 +251,7 @@ module.exports = [
       level: 'high',
       label: 'task.infant_child.high_priority'
     },
-    resolvedIf: function (c, r, event, dueDate) {
+    resolvedIf: function (c) {
       // Resolved if there are any infant-child forms submitted - this is a first time visit only
       return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
         extras.isContactDeceased(c) ||
@@ -255,6 +262,7 @@ module.exports = [
   // Second infant child visit for children who got a first infant-child visit and are still under 20 days old.
   // Task triggers with the high priority flag set and a due date based on the child's dob and visit schedule
   {
+    name: 'under20days_second_infant_child_visit',
     icon: 'child',
     title: 'task.infant_child.second_visit_under_20_days',
     appliesTo: 'contacts',
@@ -324,6 +332,7 @@ module.exports = [
   // First-time infant child visit for children registered at between 20 and 105 (15 weeks) days of age.
   // Task triggers with normal priority and a due date of one week after the date of child registration
   {
+    name: 'btn20and105days_infant_child_visit',
     icon: 'child',
     title: 'task.infant_child.first_visit_between_20_105_days',
     appliesTo: 'contacts',
@@ -373,7 +382,7 @@ module.exports = [
         end: (extras.month * 60)
       },
     ],
-    resolvedIf: function (c, r, event, dueDate) {
+    resolvedIf: function (c) {
       // Resolved if there are any infant-child forms submitted - this is a first time task only
       return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
         extras.isContactDeceased(c) ||
@@ -384,6 +393,7 @@ module.exports = [
   // First-time infant child visit for children registered at over 105 (15 weeks) days of age.
   // Task triggers with normal priority and a due date of one month after the date of child registration
   {
+    name: 'over105days_infant_child_visit',
     icon: 'child',
     title: 'task.infant_child.first_visit_over_105_days',
     appliesTo: 'contacts',
@@ -435,7 +445,7 @@ module.exports = [
         end: (extras.month * 60)
       },
     ],
-    resolvedIf: function (c, r, event, dueDate) {
+    resolvedIf: function (c) {
       // Resolved if there are any infant-child forms submitted - this is a first time task only
       return extras.countReportsSubmitted(c, 'infant_child') > 0 ||
         extras.isContactDeceased(c) ||
@@ -446,6 +456,7 @@ module.exports = [
   // Second infant child visit for children who got a first infant-child visit but are older than 20 days.
   // Task triggers with the high priority flag set and a due date based on the child's dob and visit schedule
   {
+    name: 'over20days_secondplus_infant_child_visit',
     icon: 'child',
     title: 'task.infant_child.second_plus_visit_over_20_days',
     appliesTo: 'contacts',
@@ -591,10 +602,11 @@ module.exports = [
 
   //Trigger a task  for 5-7 months or 7-8 months 
   {
+    name:'pregnancy_visit_5to7_or_7to8_months',
     icon: 'icon-pregnant',
     title: 'task.pregnancy',
     appliesTo: 'contacts',
-    appliesIf: function (c, r) {
+    appliesIf: function (c) {
       return extras.isCurrentlyPregnant(c) &&
         extras.isOver5MonthsPregnant(c);
     },
@@ -655,10 +667,11 @@ module.exports = [
 
   // 1st postpartum visit 
   {
+    name:'first_postpartum_visit',
     icon: 'mother-child',
     title: 'task.postpartum',
     appliesTo: 'reports',
-    appliesIf: function (c, r) {
+    appliesIf: function (c) {
       return extras.didClientDeliver(c);
     },
     appliesToType: ['pregnancy_outcomes'],
@@ -686,7 +699,7 @@ module.exports = [
         end: (extras.month * 60),  //setting end date high so that CHV gets ample of time to complete
       }
     ],
-    resolvedIf: function (c, r, event, dueDate) {
+    resolvedIf: function (c) {
       // Resolved if there are any postpartum forms submitted for the current pregnancy
       return !extras.noPostpartumVisitsCurrentPregnancy(c) ||
         extras.isContactDeceased(c) ||
@@ -696,10 +709,11 @@ module.exports = [
 
   // 2nd postpartum visit 
   {
+    name:'second_postpartum_visit',
     icon: 'mother-child',
     title: 'task.postpartum',
     appliesTo: 'reports',
-    appliesIf: function (c, r) {
+    appliesIf: function (c) {
       return extras.didClientDeliver(c) && !(extras.noPostpartumVisitsCurrentPregnancy(c));
     },
     appliesToType: ['pregnancy_outcomes'],

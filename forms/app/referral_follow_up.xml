@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Referral Follow-up</h:title>
     <model>
@@ -23,6 +23,21 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           </text>
           <text id="/referral_follow_up/client_information:label">
             <value>Client Information</value>
+          </text>
+          <text id="/referral_follow_up/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.
+• Please remember to do the covid education visit before or after submitting this form. &lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
           </text>
           <text id="/referral_follow_up/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
@@ -108,6 +123,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;To address an urgent child danger sign.&lt;/span&gt;</value>
           </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_child_other_danger_sign_flag:label">
+            <value>&lt;span style="display:block;padding-left:1em"&gt;To address child danger sign.&lt;/span&gt;</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;To get ANC services since your pregnancy is 6 months or more.&lt;/span&gt;</value>
           </text>
@@ -177,6 +195,21 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/client_information:label">
             <value>Maelezo ya Mteja</value>
           </text>
+          <text id="/referral_follow_up/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.
+• Tafadhali kumbuka kufungua fomu ya kuwaelimsiha wanakaya juu ya maambukizi ya korona na jinsi ya kuchukua tahadhari. Tembeleo kuhusu korona unaweza kulifanya kabla ya kuanza tembeleo lako au mara baada ya kumaliza tembeleo lako hili.&lt;/span&gt;</value>
+          </text>
+          <text id="/referral_follow_up/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
+          </text>
           <text id="/referral_follow_up/inputs/contact/_id:label">
             <value>-</value>
           </text>
@@ -205,6 +238,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/refer_child_danger_sign_flag:label">
+            <value>-</value>
+          </text>
+          <text id="/referral_follow_up/inputs/refer_child_other_danger_sign_flag:label">
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/refer_flag_anc_visit_6m_or_more:label">
@@ -351,6 +387,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kushughulikia dalili za hatari za dharura za mtoto.&lt;/span&gt;</value>
           </text>
+          <text id="/referral_follow_up/referral_follow_up/reason_refer_child_other_danger_sign_flag:label">
+            <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kushughulikia dalili za hatari za mtoto.&lt;/span&gt;</value>
+          </text>
           <text id="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more:label">
             <value>&lt;span style="display:block;padding-left:1em"&gt;Ili kupatiwa huduma za mama mjamzito kwa vile mimba yako ni miezi sita au zaidi.&lt;/span&gt;</value>
           </text>
@@ -402,7 +441,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
         </translation>
       </itext>
       <instance>
-        <referral_follow_up delimiter="#" id="referral_follow_up" prefix="J1!referral_follow_up!" version="2019-04-29 00:00:00">
+        <referral_follow_up id="referral_follow_up" prefix="J1!referral_follow_up!" delimiter="#" version="2019-04-29 00:00:00">
           <inputs>
             <meta>
               <location>
@@ -420,6 +459,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <refer_neonatal_danger_sign_flag/>
             <refer_secondary_neonatal_danger_sign_flag/>
             <refer_child_danger_sign_flag/>
+            <refer_child_other_danger_sign_flag/>
             <refer_muac_flag/>
             <refer_palm_pallor_flag/>
             <refer_vaccines_flag/>
@@ -454,6 +494,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <refer_neonatal_danger_sign_flag/>
           <refer_secondary_neonatal_danger_sign_flag/>
           <refer_child_danger_sign_flag/>
+          <refer_child_other_danger_sign_flag/>
           <refer_muac_flag/>
           <refer_palm_pallor_flag/>
           <refer_vaccines_flag/>
@@ -477,6 +518,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <house_number/>
           <kitongoji/>
           <phone/>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
           <client_information>
             <intro_note/>
             <household_note/>
@@ -489,6 +533,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
             <reason_refer_neonatal_danger_sign_flag/>
             <reason_refer_secondary_neonatal_danger_sign_flag/>
             <reason_refer_child_danger_sign_flag/>
+            <reason_refer_child_other_danger_sign_flag/>
             <reason_refer_muac_flag/>
             <reason_refer_palm_pallor_flag/>
             <reason_refer_vaccines_flag/>
@@ -536,6 +581,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/inputs/refer_neonatal_danger_sign_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_secondary_neonatal_danger_sign_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_child_danger_sign_flag" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/refer_child_other_danger_sign_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_muac_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_palm_pallor_flag" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/refer_vaccines_flag" type="string"/>
@@ -555,77 +601,80 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/inputs/contact/name" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/contact/sex" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/contact/date_of_birth" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/referral_follow_up/patient_id" type="string"/>
-      <bind calculate="../inputs/source_form" nodeset="/referral_follow_up/referral_source_form" type="string"/>
-      <bind calculate="../inputs/original_source_form" nodeset="/referral_follow_up/referral_original_source_form" type="string"/>
-      <bind calculate="../inputs/source_id" nodeset="/referral_follow_up/referral_source_id" type="string"/>
-      <bind calculate="../inputs/last_visit_date" nodeset="/referral_follow_up/last_visit" type="string"/>
-      <bind calculate="format-date-time(../inputs/last_visit_date div (1000*60*60*24), &quot;%d/%m/%Y&quot;)" nodeset="/referral_follow_up/last_visit_formatted" type="string"/>
-      <bind calculate="../inputs/refer_flag_small_baby" nodeset="/referral_follow_up/refer_flag_small_baby" type="string"/>
-      <bind calculate="../inputs/refer_neonatal_danger_sign_flag" nodeset="/referral_follow_up/refer_neonatal_danger_sign_flag" type="string"/>
-      <bind calculate="../inputs/refer_secondary_neonatal_danger_sign_flag" nodeset="/referral_follow_up/refer_secondary_neonatal_danger_sign_flag" type="string"/>
-      <bind calculate="../inputs/refer_child_danger_sign_flag" nodeset="/referral_follow_up/refer_child_danger_sign_flag" type="string"/>
-      <bind calculate="../inputs/refer_muac_flag" nodeset="/referral_follow_up/refer_muac_flag" type="string"/>
-      <bind calculate="../inputs/refer_refer_palm_pallor_flag" nodeset="/referral_follow_up/refer_palm_pallor_flag" type="string"/>
-      <bind calculate="../inputs/refer_vaccines_flag" nodeset="/referral_follow_up/refer_vaccines_flag" type="string"/>
-      <bind calculate="../inputs/refer_slow_to_learn_specifics_flag" nodeset="/referral_follow_up/refer_slow_to_learn_specifics_flag" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/referral_follow_up/client" type="string"/>
-      <bind calculate="../inputs/contact/name" nodeset="/referral_follow_up/client_name" type="string"/>
-      <bind calculate="../inputs/contact/date_of_birth" nodeset="/referral_follow_up/client_date_of_birth" type="string"/>
-      <bind calculate="../inputs/due_date" nodeset="/referral_follow_up/due_date" type="string"/>
-      <bind calculate="../inputs/due_date_human_readable" nodeset="/referral_follow_up/due_date_pretty_print" type="string"/>
-      <bind calculate="../inputs/refer_flag_emergency_danger_sign" nodeset="/referral_follow_up/refer_flag_emergency_danger_sign" type="string"/>
-      <bind calculate="../inputs/refer_flag_pregnancy_issues" nodeset="/referral_follow_up/refer_flag_pregnancy_issues" type="string"/>
-      <bind calculate="../inputs/refer_flag_pregnancy_complications" nodeset="/referral_follow_up/refer_flag_pregnancy_complications" type="string"/>
-      <bind calculate="../inputs/refer_flag_postpartum_danger_signs" nodeset="/referral_follow_up/refer_flag_postpartum_danger_signs" type="string"/>
-      <bind calculate="../inputs/refer_flag_postpartum_other_signs" nodeset="/referral_follow_up/refer_flag_postpartum_other_signs" type="string"/>
-      <bind calculate="../inputs/refer_flag_anc_visit_6m_or_more" nodeset="/referral_follow_up/refer_flag_anc_visit_6m_or_more" type="string"/>
-      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /referral_follow_up/client_date_of_birth ))" nodeset="/referral_follow_up/age_days" type="string"/>
-      <bind calculate="int(( /referral_follow_up/age_days  - ( /referral_follow_up/age_years  * 12 * 30)) div 30,0)" nodeset="/referral_follow_up/age_months" type="string"/>
-      <bind calculate="int( /referral_follow_up/age_days  div (30 *12),0)" nodeset="/referral_follow_up/age_years" type="string"/>
-      <bind calculate=" /referral_follow_up/age_days  - ( /referral_follow_up/age_months  * 30) - ( /referral_follow_up/age_years  *12*30)" nodeset="/referral_follow_up/age_days_display" type="string"/>
-      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/referral_follow_up/household_head" type="string"/>
-      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/referral_follow_up/house_number" type="string"/>
-      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/referral_follow_up/kitongoji" type="string"/>
-      <bind calculate="instance('contact-summary')/context/phone" nodeset="/referral_follow_up/phone" type="string"/>
+      <bind nodeset="/referral_follow_up/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/referral_follow_up/referral_source_form" type="string" calculate="../inputs/source_form"/>
+      <bind nodeset="/referral_follow_up/referral_original_source_form" type="string" calculate="../inputs/original_source_form"/>
+      <bind nodeset="/referral_follow_up/referral_source_id" type="string" calculate="../inputs/source_id"/>
+      <bind nodeset="/referral_follow_up/last_visit" type="string" calculate="../inputs/last_visit_date"/>
+      <bind nodeset="/referral_follow_up/last_visit_formatted" type="string" calculate="format-date-time(../inputs/last_visit_date div (1000*60*60*24), &quot;%d/%m/%Y&quot;)"/>
+      <bind nodeset="/referral_follow_up/refer_flag_small_baby" type="string" calculate="../inputs/refer_flag_small_baby"/>
+      <bind nodeset="/referral_follow_up/refer_neonatal_danger_sign_flag" type="string" calculate="../inputs/refer_neonatal_danger_sign_flag"/>
+      <bind nodeset="/referral_follow_up/refer_secondary_neonatal_danger_sign_flag" type="string" calculate="../inputs/refer_secondary_neonatal_danger_sign_flag"/>
+      <bind nodeset="/referral_follow_up/refer_child_danger_sign_flag" type="string" calculate="../inputs/refer_child_danger_sign_flag"/>
+      <bind nodeset="/referral_follow_up/refer_child_other_danger_sign_flag" type="string" calculate="../inputs/refer_child_other_danger_sign_flag"/>
+      <bind nodeset="/referral_follow_up/refer_muac_flag" type="string" calculate="../inputs/refer_muac_flag"/>
+      <bind nodeset="/referral_follow_up/refer_palm_pallor_flag" type="string" calculate="../inputs/refer_refer_palm_pallor_flag"/>
+      <bind nodeset="/referral_follow_up/refer_vaccines_flag" type="string" calculate="../inputs/refer_vaccines_flag"/>
+      <bind nodeset="/referral_follow_up/refer_slow_to_learn_specifics_flag" type="string" calculate="../inputs/refer_slow_to_learn_specifics_flag"/>
+      <bind nodeset="/referral_follow_up/client" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/referral_follow_up/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/referral_follow_up/client_date_of_birth" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/referral_follow_up/due_date" type="string" calculate="../inputs/due_date"/>
+      <bind nodeset="/referral_follow_up/due_date_pretty_print" type="string" calculate="../inputs/due_date_human_readable"/>
+      <bind nodeset="/referral_follow_up/refer_flag_emergency_danger_sign" type="string" calculate="../inputs/refer_flag_emergency_danger_sign"/>
+      <bind nodeset="/referral_follow_up/refer_flag_pregnancy_issues" type="string" calculate="../inputs/refer_flag_pregnancy_issues"/>
+      <bind nodeset="/referral_follow_up/refer_flag_pregnancy_complications" type="string" calculate="../inputs/refer_flag_pregnancy_complications"/>
+      <bind nodeset="/referral_follow_up/refer_flag_postpartum_danger_signs" type="string" calculate="../inputs/refer_flag_postpartum_danger_signs"/>
+      <bind nodeset="/referral_follow_up/refer_flag_postpartum_other_signs" type="string" calculate="../inputs/refer_flag_postpartum_other_signs"/>
+      <bind nodeset="/referral_follow_up/refer_flag_anc_visit_6m_or_more" type="string" calculate="../inputs/refer_flag_anc_visit_6m_or_more"/>
+      <bind nodeset="/referral_follow_up/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /referral_follow_up/client_date_of_birth ))"/>
+      <bind nodeset="/referral_follow_up/age_months" type="string" calculate="int(( /referral_follow_up/age_days  - ( /referral_follow_up/age_years  * 12 * 30)) div 30,0)"/>
+      <bind nodeset="/referral_follow_up/age_years" type="string" calculate="int( /referral_follow_up/age_days  div (30 *12),0)"/>
+      <bind nodeset="/referral_follow_up/age_days_display" type="string" calculate=" /referral_follow_up/age_days  - ( /referral_follow_up/age_months  * 30) - ( /referral_follow_up/age_years  *12*30)"/>
+      <bind nodeset="/referral_follow_up/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/referral_follow_up/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/referral_follow_up/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/referral_follow_up/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/referral_follow_up/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/due_date_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/intro" readonly="true()" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby" readonly="true()" relevant="./../inputs/refer_flag_small_baby = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_neonatal_danger_sign_flag = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_secondary_neonatal_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_secondary_neonatal_danger_sign_flag = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_child_danger_sign_flag = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_muac_flag" readonly="true()" relevant="../../inputs/refer_muac_flag = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag" readonly="true()" relevant="../../inputs/refer_refer_palm_pallor_flag = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_vaccines_flag" readonly="true()" relevant="../../inputs/refer_vaccines_flag = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag" readonly="true()" relevant="../../inputs/refer_slow_to_learn_specifics_flag = 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_pregnancy_emergency_danger_sign_flag" readonly="true()" relevant="../../inputs/refer_flag_emergency_danger_sign= 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_pregnancy_other_danger_signs" readonly="true()" relevant="../../inputs/refer_flag_pregnancy_complications= 1 or ../../inputs/refer_flag_pregnancy_issues= 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_postpartum_danger_sings" readonly="true()" relevant="../../inputs/refer_flag_postpartum_danger_signs= 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_postpartum_other_danger_signs" readonly="true()" relevant="../../inputs/refer_flag_postpartum_other_signs= 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more" readonly="true()" relevant="../../inputs/refer_flag_anc_visit_6m_or_more= 1" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/went_to_facility" required="true()" type="select1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_small_baby" readonly="true()" type="string" relevant="./../inputs/refer_flag_small_baby = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_neonatal_danger_sign_flag" readonly="true()" type="string" relevant="../../inputs/refer_neonatal_danger_sign_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_secondary_neonatal_danger_sign_flag" readonly="true()" type="string" relevant="../../inputs/refer_secondary_neonatal_danger_sign_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag" readonly="true()" type="string" relevant="../../inputs/refer_child_danger_sign_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_child_other_danger_sign_flag" readonly="true()" type="string" relevant="../../inputs/refer_child_other_danger_sign_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_muac_flag" readonly="true()" type="string" relevant="../../inputs/refer_muac_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_palm_pallor_flag" readonly="true()" type="string" relevant="../../inputs/refer_refer_palm_pallor_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_vaccines_flag" readonly="true()" type="string" relevant="../../inputs/refer_vaccines_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_slow_to_learn_specifics_flag" readonly="true()" type="string" relevant="../../inputs/refer_slow_to_learn_specifics_flag = 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_pregnancy_emergency_danger_sign_flag" readonly="true()" type="string" relevant="../../inputs/refer_flag_emergency_danger_sign= 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_pregnancy_other_danger_signs" readonly="true()" type="string" relevant="../../inputs/refer_flag_pregnancy_complications= 1 or ../../inputs/refer_flag_pregnancy_issues= 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_postpartum_danger_sings" readonly="true()" type="string" relevant="../../inputs/refer_flag_postpartum_danger_signs= 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_postpartum_other_danger_signs" readonly="true()" type="string" relevant="../../inputs/refer_flag_postpartum_other_signs= 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/reason_refer_flag_anc_visit_6m_or_more" readonly="true()" type="string" relevant="../../inputs/refer_flag_anc_visit_6m_or_more= 1"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/went_to_facility" type="select1" required="true()"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/congratulate" readonly="true()" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/got_services" required="true()" type="select1"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)" required="true()" type="select"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/discuss_reasons_no_services" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/got_services" type="select1" required="true()"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" type="select" required="true()" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/discuss_reasons_no_services" readonly="true()" type="string" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;no&quot;)"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go" required="true()" type="select"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go" type="select" required="true()"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/discuss_reasons" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up" relevant="(selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;) and selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)) or selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;no&quot;)"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/complete_referral" required="true()" type="select1"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/note_next_follow_up" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;yes&quot;)" type="string"/>
-      <bind calculate="../../../client_name" nodeset="/referral_follow_up/referral_follow_up/next_follow_up/client_name_loc" type="string"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/report_no_follow_up" readonly="true()" relevant="selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;no&quot;)" type="string"/>
-      <bind calculate="if(selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;yes&quot;),1,0)" nodeset="/referral_follow_up/should_visit_again" type="string"/>
-      <bind calculate="../inputs/refer_flag_emergency_danger_sign = 1 or ../inputs/refer_flag_pregnancy_issues = 1 or ../inputs/refer_flag_pregnancy_complications = 1 or ../inputs/refer_flag_anc_visit_6m_or_more = 1" nodeset="/referral_follow_up/has_pregnancy_referral" type="string"/>
-      <bind calculate="./../inputs/refer_flag_small_baby= 1 or ../../inputs/refer_neonatal_danger_sign_flag = 1 or ../../inputs/refer_secondary_neonatal_danger_sign_flag = 1 or ../../inputs/refer_child_danger_sign_flag = 1 or ../../inputs/refer_muac_flag= 1 or ../../inputs/refer_refer_palm_pallor_flag = 1 or ../../inputs/refer_vaccines_flag = 1 or ../../inputs/refer_slow_to_learn_specifics_flag = 1" nodeset="/referral_follow_up/has_infant_child_referral" type="string"/>
-      <bind calculate="../inputs/refer_flag_postpartum_danger_signs = 1 or ../inputs/refer_flag_postpartum_other_signs = 1" nodeset="/referral_follow_up/has_postpartum_referral" type="string"/>
-      <bind calculate="3" nodeset="/referral_follow_up/referral_days" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/referral_follow_up/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/complete_referral" type="select1" required="true()"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/note_next_follow_up" readonly="true()" type="string" relevant="selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;yes&quot;)"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/client_name_loc" type="string" calculate="../../../client_name"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/next_follow_up/report_no_follow_up" readonly="true()" type="string" relevant="selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;no&quot;)"/>
+      <bind nodeset="/referral_follow_up/should_visit_again" type="string" calculate="if(selected( /referral_follow_up/referral_follow_up/next_follow_up/complete_referral ,&quot;yes&quot;),1,0)"/>
+      <bind nodeset="/referral_follow_up/has_pregnancy_referral" type="string" calculate="../inputs/refer_flag_emergency_danger_sign = 1 or ../inputs/refer_flag_pregnancy_issues = 1 or ../inputs/refer_flag_pregnancy_complications = 1 or ../inputs/refer_flag_anc_visit_6m_or_more = 1"/>
+      <bind nodeset="/referral_follow_up/has_infant_child_referral" type="string" calculate="../inputs/refer_flag_small_baby= 1 or ../inputs/refer_neonatal_danger_sign_flag = 1 or ../inputs/refer_secondary_neonatal_danger_sign_flag = 1 or ../inputs/refer_child_danger_sign_flag = 1 or ../inputs/refer_child_other_danger_sign_flag = 1 or ../inputs/refer_muac_flag= 1 or ../inputs/refer_refer_palm_pallor_flag = 1 or ../inputs/refer_vaccines_flag = 1 or ../inputs/refer_slow_to_learn_specifics_flag = 1"/>
+      <bind nodeset="/referral_follow_up/has_postpartum_referral" type="string" calculate="../inputs/refer_flag_postpartum_danger_signs = 1 or ../inputs/refer_flag_postpartum_other_signs = 1"/>
+      <bind nodeset="/referral_follow_up/referral_days" type="string" calculate="3"/>
+      <bind nodeset="/referral_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
@@ -638,6 +687,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <input ref="/referral_follow_up/inputs/refer_neonatal_danger_sign_flag"/>
       <input ref="/referral_follow_up/inputs/refer_secondary_neonatal_danger_sign_flag"/>
       <input ref="/referral_follow_up/inputs/refer_child_danger_sign_flag"/>
+      <input ref="/referral_follow_up/inputs/refer_child_other_danger_sign_flag"/>
       <input ref="/referral_follow_up/inputs/refer_muac_flag"/>
       <input ref="/referral_follow_up/inputs/refer_palm_pallor_flag"/>
       <input ref="/referral_follow_up/inputs/refer_vaccines_flag"/>
@@ -667,6 +717,12 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
         <input ref="/referral_follow_up/inputs/contact/sex"/>
         <input ref="/referral_follow_up/inputs/contact/date_of_birth"/>
       </group>
+    </group>
+    <group ref="/referral_follow_up/covid19_intro">
+      <label ref="jr:itext('/referral_follow_up/covid19_intro:label')"/>
+      <input ref="/referral_follow_up/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/referral_follow_up/covid19_intro/covid19_intro_note:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/referral_follow_up/client_information">
       <label ref="jr:itext('/referral_follow_up/client_information:label')"/>
@@ -699,6 +755,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       </input>
       <input ref="/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_child_danger_sign_flag:label')"/>
+      </input>
+      <input ref="/referral_follow_up/referral_follow_up/reason_refer_child_other_danger_sign_flag">
+        <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_child_other_danger_sign_flag:label')"/>
       </input>
       <input ref="/referral_follow_up/referral_follow_up/reason_refer_muac_flag">
         <label ref="jr:itext('/referral_follow_up/referral_follow_up/reason_refer_muac_flag:label')"/>

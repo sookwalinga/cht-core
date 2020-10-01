@@ -1,20 +1,23 @@
 module.exports = { 
     peerMentorChecklist:{ 
         entered_wrong_phone_format:[
-            ['+255775456789']
+            ['firstname','middlename','lastname','+255775456789','shehia']
+        ],
+        less_than_two_characters:[
+            ['f','m','l','0775456789','s']
         ],
         fill_form_with_yes_response:[
-            ['0775456789'],['yes','yes','yes','yes','yes','yes'], 
+            ['firstname','middlename','lastname','0775456789','shehia'],['yes','yes','yes','yes','yes','yes'], 
             ['yes','yes','yes'],['yes','yes','yes','yes'],
-            ['mentor_comments','chmt_omments','dtree_comments']
+            ['none']
         ], 
         fill_form_with_average_response:[
-            ['0775456789'],['average','average','average','average','average','average'], 
+            ['firstname','middlename','lastname','0775456789','shehia'],['average','average','average','average','average','average'], 
             ['average','average','average'],['average','average','average','average'],
-            ['mentor_comments','chmt_omments','dtree_comments']
+            ['none']
         ],
         fill_form_with_no_response:[
-            ['0775456789'],
+            ['firstname','middlename','lastname','0775456789','shehia'],
             ['no','reason',
              'no','reason',
              'no','reason',
@@ -28,9 +31,28 @@ module.exports = {
              'no','reason',
              'no','reason',
              'no','reason'],
-            ['mentor_comments','chmt_omments','dtree_comments']
+            [['tech_team','chmt','supervisor'],
+             ['tech_comments'],
+             ['chmt_comments'],
+             ['supervisor_comments']] 
         ],
-
+        select_all_multiselect_options:[
+            ['firstname','middlename','lastname','0775456789','shehia'],
+            ['no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason',], 
+            ['no','reason',
+             'no','reason',
+             'no','reason',],
+            ['no','reason',
+             'no','reason',
+             'no','reason',
+             'no','reason'],
+            [['tech_team','chmt','supervisor','none']] 
+        ],
         fill_empty_form:[]
     }
 };

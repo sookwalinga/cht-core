@@ -1,27 +1,86 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Peer Mentor Checklist</h:title>
     <model>
       <itext>
         <translation lang="en">
+          <text id="/peer_mentor_checklist/chv_information/chv_first_name:jr:constraintMsg">
+            <value>Enter a first name</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_first_name:label">
+            <value>What is the CHV's first name?</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg">
+            <value>Enter a last name</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_last_name:label">
+            <value>What is their last name?</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_middle_name:jr:constraintMsg">
+            <value>Enter a middle name</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_middle_name:label">
+            <value>What is their middle name?</value>
+          </text>
           <text id="/peer_mentor_checklist/chv_information/phone:jr:constraintMsg">
             <value>Use the following format 0XXXXXXXXX</value>
           </text>
           <text id="/peer_mentor_checklist/chv_information/phone:label">
             <value>CHV phone</value>
           </text>
-          <text id="/peer_mentor_checklist/comments/chmt_comments:label">
-            <value>Comments for CHMT/HPU</value>
+          <text id="/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg">
+            <value>Enter the shehia</value>
           </text>
-          <text id="/peer_mentor_checklist/comments/dtree_comments:label">
-            <value>Comments for Dtree</value>
+          <text id="/peer_mentor_checklist/chv_information/shehia:label">
+            <value>CHV shehia</value>
           </text>
-          <text id="/peer_mentor_checklist/comments/mentor_comments:label">
-            <value>Mentor's Comments</value>
+          <text id="/peer_mentor_checklist/chv_information:label">
+            <value>CHV Details</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chmt_support:label">
+            <value>Briefly explain the problem that needs help from CHMT</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/chmt:label">
+            <value>CHMT</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/none:label">
+            <value>No support needed</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/supervisor:label">
+            <value>Supervisor</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/tech_team:label">
+            <value>Technology Team</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options:jr:constraintMsg">
+            <value>Cannot select "No support needed" and another option.</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options:label">
+            <value>From what you have observed from this CHV, does a CHV need more support from:</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/supervisor_support:label">
+            <value>Briefly explain the problem that needs help from the supervisor</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/tech_team_support:label">
+            <value>Briefly explain the problem that needs help from Technology Team</value>
           </text>
           <text id="/peer_mentor_checklist/comments:label">
             <value>Comments</value>
+          </text>
+          <text id="/peer_mentor_checklist/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.&lt;/span&gt;</value>
+          </text>
+          <text id="/peer_mentor_checklist/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
           </text>
           <text id="/peer_mentor_checklist/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
@@ -42,10 +101,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/app_navigation:label">
-            <value>Able to navigate in the application, submit forms, and sync data</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> able to navigate in the application, submit forms, and sync data ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/app_navigation_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/balance_check/average:label">
             <value>Average</value>
@@ -57,13 +116,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/balance_check:label">
-            <value>Able to check their balances: data, minutes, Mobile Money</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> able to check their balances (data, minutes, mobile money) ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/balance_check_reason:label">
-            <value>Please specify</value>
-          </text>
-          <text id="/peer_mentor_checklist/section_1/bango_kitita_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/average:label">
             <value>Average</value>
@@ -71,11 +127,17 @@
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no:label">
             <value>No</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no_bango_kitita:label">
+            <value>Does not have bango kitita / Communication activity guide</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/yes:label">
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage:label">
-            <value>Uses job aids effectively (Bango Kitita, Play &amp; Communication Activity Guide)</value>
+            <value>Does <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> use job aids effectively (Bango Kitita, Play &amp; Communication Activity Guide) ?</value>
+          </text>
+          <text id="/peer_mentor_checklist/section_1/bango_kitita_usage_reason:label">
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/data_toggle/average:label">
             <value>Average</value>
@@ -87,10 +149,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/data_toggle:label">
-            <value>Regularly turns data on and off as needed for syncing</value>
+            <value>Does <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> regularly turn data on and off as needed for syncing ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/data_toggle_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/phone_usage/average:label">
             <value>Average</value>
@@ -102,10 +164,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/phone_usage:label">
-            <value>Comfortable using the smartphone</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> comfortable using the smartphone ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/phone_usage_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging/average:label">
             <value>Average</value>
@@ -113,14 +175,17 @@
           <text id="/peer_mentor_checklist/section_1/solar_charging/no:label">
             <value>No</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/solar_charging/no_solar_charger:label">
+            <value>Does not have/need solar charger</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging/yes:label">
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging:label">
-            <value>Able to charge solar charger (if applicable) and phone.</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> able to charge phone and solar charger (if applicable) ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1:label">
             <value>Device</value>
@@ -135,10 +200,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/boundary_identification:label">
-            <value>Able to identify boundaries of his/her catchment area</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> able to identify boundaries of his/her catchment area ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/boundary_identification_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/communication/average:label">
             <value>Average</value>
@@ -150,10 +215,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/communication:label">
-            <value>Networks with and communicates with others in the community (shehas, wajumbe, others)</value>
+            <value>Does <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> network with and communicate with others in the community (shehas, wajumbe, others) ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/communication_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/meet_enrollment_target/average:label">
             <value>Average</value>
@@ -165,10 +230,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/meet_enrollment_target:label">
-            <value>On track to meet household enrollment targets</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> on track to meet household enrollment targets ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/meet_enrollment_target_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_2:label">
             <value>Community Entry and Integration</value>
@@ -183,10 +248,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/answer_concerns:label">
-            <value>Able to answer concerns and questions from clients. Knows when to defer to health facility or supervisor.</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> able to answer questions from the client and able to know when to defer to a health facility or to their respective supervisor ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/answer_concerns_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/ask_consent/average:label">
             <value>Average</value>
@@ -198,10 +263,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/ask_consent:label">
-            <value>Asks consent from family before registering or enrolling</value>
+            <value>Does <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> ask for consent from family before registering or enrolling ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/ask_consent_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/chv_introduction/average:label">
             <value>Average</value>
@@ -213,10 +278,10 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/chv_introduction:label">
-            <value>Can introduce themselves, the program, their role</value>
+            <value>Is <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> able to introduce themselves, the program, and their role ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/chv_introduction_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/fluent_conversation/average:label">
             <value>Average</value>
@@ -228,36 +293,92 @@
             <value>Yes</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/fluent_conversation:label">
-            <value>Holds a fluent conversation with the client. Engaging interaction. Listens attentively</value>
+            <value>Does <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> hold a fluent conversation with the client, engage interactively, and listen attentively?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/fluent_conversation_reason:label">
-            <value>Please specify</value>
+            <value>Please specify reasons for selecting "No"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3:label">
             <value>Client communication</value>
           </text>
         </translation>
         <translation lang="sw">
+          <text id="/peer_mentor_checklist/chv_information/chv_first_name:jr:constraintMsg">
+            <value>Jaza jina la mwanzo</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_first_name:label">
+            <value>Ni lipi jina la kwanza la CHV?</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg">
+            <value>Jaza jina la babu</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_last_name:label">
+            <value>Ni lipi jina la babu yake?</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_middle_name:jr:constraintMsg">
+            <value>Jaza jina la baba</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/chv_middle_name:label">
+            <value>Ni lipi jina la baba yake?</value>
+          </text>
           <text id="/peer_mentor_checklist/chv_information/phone:jr:constraintMsg">
             <value>Tumia mfumo huu 0XXXXXXXXX.</value>
           </text>
           <text id="/peer_mentor_checklist/chv_information/phone:label">
             <value>Nambari ya simu ya CHV</value>
           </text>
+          <text id="/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg">
+            <value>Jaza shehia</value>
+          </text>
+          <text id="/peer_mentor_checklist/chv_information/shehia:label">
+            <value>Shehia ya CHV</value>
+          </text>
           <text id="/peer_mentor_checklist/chv_information:label">
-            <value>-</value>
+            <value>Taarifa za CHV</value>
           </text>
-          <text id="/peer_mentor_checklist/comments/chmt_comments:label">
-            <value>Maoni kwajili ya CHMT/HPU</value>
+          <text id="/peer_mentor_checklist/comments/chmt_support:label">
+            <value>Eleza kwa ufupi tatizo la CHV linalohitaji msaada kutoka kwa CHMT</value>
           </text>
-          <text id="/peer_mentor_checklist/comments/dtree_comments:label">
-            <value>Maoni kwajili ya Dtree</value>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/chmt:label">
+            <value>CHMT</value>
           </text>
-          <text id="/peer_mentor_checklist/comments/mentor_comments:label">
-            <value>Maoni ya Mshauri Msaidizi</value>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/none:label">
+            <value>Hahitaji msaada wowote</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/supervisor:label">
+            <value>Supervisor</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options/tech_team:label">
+            <value>Timu ya Teknolojia</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options:jr:constraintMsg">
+            <value>Huwez kuchaguwa "Hahitaji msaada" na chaguo jengine</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/chv_support_options:label">
+            <value>Kutokana na ulichogundua kwa CHV, unadhani CHV anahitaji msaada kutoka kwa:</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/supervisor_support:label">
+            <value>Eleza kwa ufupi tatizo la CHV linalohitaji msaada kutoka kwa supervisor</value>
+          </text>
+          <text id="/peer_mentor_checklist/comments/tech_team_support:label">
+            <value>Eleza kwa ufupi tatizo la CHV linalohitaji msaada kutoka kwa timu ya teknolojia</value>
           </text>
           <text id="/peer_mentor_checklist/comments:label">
             <value>Maoni</value>
+          </text>
+          <text id="/peer_mentor_checklist/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.&lt;/span&gt;</value>
+          </text>
+          <text id="/peer_mentor_checklist/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
           </text>
           <text id="/peer_mentor_checklist/inputs/user/contact_id:label">
             <value>-</value>
@@ -284,10 +405,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/app_navigation:label">
-            <value>Anaweza kutumia mfumo wa simu, kutuma fomu na taarifa.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kutumia mfumo wa simu, kutuma fomu na taarifa ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/app_navigation_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/balance_check/average:label">
             <value>Afadhali</value>
@@ -299,13 +420,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/balance_check:label">
-            <value>Anaweza kuangalia salio: interneti, dakika, huduma za simu za fedha.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kuangalia salio (interneti, dakika, huduma za simu za fedha) ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/balance_check_reason:label">
-            <value>Tafadhali taja</value>
-          </text>
-          <text id="/peer_mentor_checklist/section_1/bango_kitita_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/average:label">
             <value>Afadhali</value>
@@ -313,11 +431,17 @@
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no:label">
             <value>Hapana</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/no_bango_kitita:label">
+            <value>Hana bango kitita / Muongozo wa mawasiliano na michezo</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage/yes:label">
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/bango_kitita_usage:label">
-            <value>Anatumia vitendea kazi vizuri (Bango Kitita, muongozo wa mawasiliano na michezo)</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anatumia vitendea kazi vizuri (Bango Kitita, muongozo wa mawasiliano na michezo) ?</value>
+          </text>
+          <text id="/peer_mentor_checklist/section_1/bango_kitita_usage_reason:label">
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/data_toggle/average:label">
             <value>Afadhali</value>
@@ -329,10 +453,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/data_toggle:label">
-            <value>Anawasha data na kuzima kama inavyohitajika wakati wa kutuma taarifa.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anawasha data na kuzima kama inavyohitajika wakati wa kutuma taarifa ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/data_toggle_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/phone_usage/average:label">
             <value>Afadhali</value>
@@ -344,10 +468,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/phone_usage:label">
-            <value>Anaweza kutumia simu Janja vizuri</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kutumia simu janja vizuri ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/phone_usage_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging/average:label">
             <value>Afadhali</value>
@@ -355,14 +479,17 @@
           <text id="/peer_mentor_checklist/section_1/solar_charging/no:label">
             <value>Hapana</value>
           </text>
+          <text id="/peer_mentor_checklist/section_1/solar_charging/no_solar_charger:label">
+            <value>Hahitaji chaji ya sola</value>
+          </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging/yes:label">
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging:label">
-            <value>Anaweza kuchaji Chaji za sola (ikiwa mtu anatumia chaji ya sola) na Simu.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kuchaji simu na chaji za sola (ikiwa mtu anatumia chaji ya sola) ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_1/solar_charging_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_1:label">
             <value>Zana/Vifaa</value>
@@ -377,10 +504,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/boundary_identification:label">
-            <value>Anaweza kuyatambua maeneo ya mipaka yake ya kazi</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kuyatambua maeneo ya mipaka yake ya kazi ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/boundary_identification_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/communication/average:label">
             <value>Afadhali</value>
@@ -392,10 +519,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/communication:label">
-            <value>Anashirikiana na kuwasiliana na wengine kwenye jamii kama vile Masheha,wajumbe na wengine.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anashirikiana na kuwasiliana na wengine kwenye jamii kama vile masheha,wajumbe na wengine ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/communication_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/meet_enrollment_target/average:label">
             <value>Afadhali</value>
@@ -407,10 +534,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/meet_enrollment_target:label">
-            <value>Anajitihada kufikia idadi ya kaya anazotakiwa kusajili.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anajitahidi kufikia idadi ya kaya anazotakiwa kusajili ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_2/meet_enrollment_target_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_2:label">
             <value>Kuingia na maingiliano na jamii</value>
@@ -425,10 +552,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/answer_concerns:label">
-            <value>Anaweza kujibu shaka na maswali ya wateja pia anaweza kuwapa rufaa kwenda kituo cha afya na kwa msimamizi.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kujibu shaka na maswali ya wateja na ana uwezo wa kuwapa rufaa kwenda kituo cha afya au kwa msimamizi ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/answer_concerns_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/ask_consent/average:label">
             <value>Afadhali</value>
@@ -440,10 +567,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/ask_consent:label">
-            <value>Anaomba ridhaa kutoka kwa familia kabla ya kuisajili</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaomba ridhaa kutoka kwa familia kabla ya kuisajili ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/ask_consent_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/chv_introduction/average:label">
             <value>Afadhali</value>
@@ -455,10 +582,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/chv_introduction:label">
-            <value>Anaweza kujitambulisha, kuutambulisha mradi na majukumu yake.</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anaweza kujitambulisha, kuutambulisha mradi na majukumu yake ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/chv_introduction_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/fluent_conversation/average:label">
             <value>Afadhali</value>
@@ -470,10 +597,10 @@
             <value>Ndio</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/fluent_conversation:label">
-            <value>Anazungumza kwa ufasaha na mteja anafuatilia vizuri na kumsikiliza mteja kama inavyopaswa</value>
+            <value>Je, <output value=" /peer_mentor_checklist/chv_information/chv_first_name "/> anazungumza kwa ufasaha na mteja, anafuatilia vizuri na kumsikiliza mteja kama inavyopaswa ?</value>
           </text>
           <text id="/peer_mentor_checklist/section_3/fluent_conversation_reason:label">
-            <value>Tafadhali taja</value>
+            <value>Tafadhali taja sababu za kuchagua "Hapana"</value>
           </text>
           <text id="/peer_mentor_checklist/section_3:label">
             <value>Jinsi anavyowasiliana na wateja</value>
@@ -481,7 +608,7 @@
         </translation>
       </itext>
       <instance>
-        <peer_mentor_checklist delimiter="#" id="peer_mentor_checklist" prefix="J1!peer_mentor_checklist!">
+        <peer_mentor_checklist id="peer_mentor_checklist" prefix="J1!peer_mentor_checklist!" delimiter="#">
           <inputs>
             <meta>
               <location>
@@ -500,9 +627,15 @@
           <created_by/>
           <created_by_person_uuid/>
           <created_by_place_uuid/>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
           <chv_information>
+            <chv_first_name/>
+            <chv_middle_name/>
+            <chv_last_name/>
             <phone/>
-            <date_of_mentorship/>
+            <shehia/>
           </chv_information>
           <section_1>
             <phone_usage/>
@@ -514,7 +647,7 @@
             <data_toggle/>
             <data_toggle_reason/>
             <bango_kitita_usage/>
-            <bango_kitita_reason/>
+            <bango_kitita_usage_reason/>
             <solar_charging/>
             <solar_charging_reason/>
           </section_1>
@@ -537,9 +670,10 @@
             <answer_concerns_reason/>
           </section_3>
           <comments>
-            <mentor_comments/>
-            <chmt_comments/>
-            <dtree_comments/>
+            <chv_support_options/>
+            <tech_team_support/>
+            <chmt_support/>
+            <supervisor_support/>
           </comments>
           <meta tag="hidden">
             <instanceID/>
@@ -551,41 +685,46 @@
       <bind nodeset="/peer_mentor_checklist/inputs/user/contact_id" type="string"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/facility_id" type="string"/>
       <bind nodeset="/peer_mentor_checklist/inputs/user/name" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/peer_mentor_checklist/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/peer_mentor_checklist/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/peer_mentor_checklist/created_by_place_uuid" type="string"/>
-      <bind constraint="regex(.,'^0[0-9]{9}$')" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/phone:jr:constraintMsg')" nodeset="/peer_mentor_checklist/chv_information/phone" required="true()" type="string"/>
-      <bind calculate="decimal-date-time(today())" nodeset="/peer_mentor_checklist/chv_information/date_of_mentorship" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/phone_usage" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/phone_usage_reason" relevant="selected( /peer_mentor_checklist/section_1/phone_usage ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/balance_check" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/balance_check_reason" relevant="selected( /peer_mentor_checklist/section_1/balance_check ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/app_navigation" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/app_navigation_reason" relevant="selected( /peer_mentor_checklist/section_1/app_navigation ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/data_toggle" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/data_toggle_reason" relevant="selected( /peer_mentor_checklist/section_1/data_toggle ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/bango_kitita_usage" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/bango_kitita_reason" relevant="selected( /peer_mentor_checklist/section_1/bango_kitita_usage ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/solar_charging" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/solar_charging_reason" relevant="selected( /peer_mentor_checklist/section_1/solar_charging ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/boundary_identification" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/boundary_identification_reason" relevant="selected( /peer_mentor_checklist/section_2/boundary_identification ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/communication" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/communication_reason" relevant="selected( /peer_mentor_checklist/section_2/communication ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/meet_enrollment_target" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/meet_enrollment_target_reason" relevant="selected( /peer_mentor_checklist/section_2/meet_enrollment_target ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/chv_introduction" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/chv_introduction_reason" relevant="selected( /peer_mentor_checklist/section_3/chv_introduction ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/ask_consent" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/ask_consent_reason" relevant="selected( /peer_mentor_checklist/section_3/ask_consent ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation_reason" relevant="selected( /peer_mentor_checklist/section_3/fluent_conversation ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns" required="true()" type="select1"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns_reason" relevant="selected( /peer_mentor_checklist/section_3/answer_concerns ,&quot;no&quot;)" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/comments/mentor_comments" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/comments/chmt_comments" required="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/comments/dtree_comments" required="true()" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/peer_mentor_checklist/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/peer_mentor_checklist/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/peer_mentor_checklist/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/peer_mentor_checklist/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/peer_mentor_checklist/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_first_name" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_first_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_middle_name" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_middle_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_last_name" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/phone" type="tel" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/phone:jr:constraintMsg')" constraint="true()" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/shehia" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/phone_usage" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/phone_usage_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/phone_usage ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/balance_check" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/balance_check_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/balance_check ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/app_navigation" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/app_navigation_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/app_navigation ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/data_toggle" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/data_toggle_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/data_toggle ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/bango_kitita_usage" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/bango_kitita_usage_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/bango_kitita_usage ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/solar_charging" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/solar_charging_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/solar_charging ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/boundary_identification" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/boundary_identification_reason" type="string" relevant="selected( /peer_mentor_checklist/section_2/boundary_identification ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/communication" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/communication_reason" type="string" relevant="selected( /peer_mentor_checklist/section_2/communication ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/meet_enrollment_target" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/meet_enrollment_target_reason" type="string" relevant="selected( /peer_mentor_checklist/section_2/meet_enrollment_target ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/chv_introduction" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/chv_introduction_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/chv_introduction ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/ask_consent" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/ask_consent_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/ask_consent ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/fluent_conversation ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns" type="select1" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/answer_concerns ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/comments/chv_support_options" type="select" jr:constraintMsg="jr:itext('/peer_mentor_checklist/comments/chv_support_options:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/comments/tech_team_support" type="string" relevant="selected(../chv_support_options ,&quot;tech_team&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/comments/chmt_support" type="string" relevant="selected(../chv_support_options ,&quot;chmt&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/comments/supervisor_support" type="string" relevant="selected(../chv_support_options ,&quot;supervisor&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
@@ -602,9 +741,28 @@
         </input>
       </group>
     </group>
+    <group ref="/peer_mentor_checklist/covid19_intro">
+      <label ref="jr:itext('/peer_mentor_checklist/covid19_intro:label')"/>
+      <input ref="/peer_mentor_checklist/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/peer_mentor_checklist/covid19_intro/covid19_intro_note:label')"/>
+      </input>
+    </group>
     <group appearance="field-list" ref="/peer_mentor_checklist/chv_information">
+      <label ref="jr:itext('/peer_mentor_checklist/chv_information:label')"/>
+      <input ref="/peer_mentor_checklist/chv_information/chv_first_name">
+        <label ref="jr:itext('/peer_mentor_checklist/chv_information/chv_first_name:label')"/>
+      </input>
+      <input ref="/peer_mentor_checklist/chv_information/chv_middle_name">
+        <label ref="jr:itext('/peer_mentor_checklist/chv_information/chv_middle_name:label')"/>
+      </input>
+      <input ref="/peer_mentor_checklist/chv_information/chv_last_name">
+        <label ref="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:label')"/>
+      </input>
       <input appearance="numbers" ref="/peer_mentor_checklist/chv_information/phone">
         <label ref="jr:itext('/peer_mentor_checklist/chv_information/phone:label')"/>
+      </input>
+      <input ref="/peer_mentor_checklist/chv_information/shehia">
+        <label ref="jr:itext('/peer_mentor_checklist/chv_information/shehia:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/peer_mentor_checklist/section_1">
@@ -695,9 +853,13 @@
           <label ref="jr:itext('/peer_mentor_checklist/section_1/bango_kitita_usage/no:label')"/>
           <value>no</value>
         </item>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/section_1/bango_kitita_usage/no_bango_kitita:label')"/>
+          <value>no_bango_kitita</value>
+        </item>
       </select1>
-      <input ref="/peer_mentor_checklist/section_1/bango_kitita_reason">
-        <label ref="jr:itext('/peer_mentor_checklist/section_1/bango_kitita_reason:label')"/>
+      <input ref="/peer_mentor_checklist/section_1/bango_kitita_usage_reason">
+        <label ref="jr:itext('/peer_mentor_checklist/section_1/bango_kitita_usage_reason:label')"/>
       </input>
       <select1 ref="/peer_mentor_checklist/section_1/solar_charging">
         <label ref="jr:itext('/peer_mentor_checklist/section_1/solar_charging:label')"/>
@@ -712,6 +874,10 @@
         <item>
           <label ref="jr:itext('/peer_mentor_checklist/section_1/solar_charging/no:label')"/>
           <value>no</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/section_1/solar_charging/no_solar_charger:label')"/>
+          <value>no_solar_charger</value>
         </item>
       </select1>
       <input ref="/peer_mentor_checklist/section_1/solar_charging_reason">
@@ -852,14 +1018,33 @@
     </group>
     <group appearance="field-list" ref="/peer_mentor_checklist/comments">
       <label ref="jr:itext('/peer_mentor_checklist/comments:label')"/>
-      <input ref="/peer_mentor_checklist/comments/mentor_comments">
-        <label ref="jr:itext('/peer_mentor_checklist/comments/mentor_comments:label')"/>
+      <select ref="/peer_mentor_checklist/comments/chv_support_options">
+        <label ref="jr:itext('/peer_mentor_checklist/comments/chv_support_options:label')"/>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/comments/chv_support_options/tech_team:label')"/>
+          <value>tech_team</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/comments/chv_support_options/chmt:label')"/>
+          <value>chmt</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/comments/chv_support_options/supervisor:label')"/>
+          <value>supervisor</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/peer_mentor_checklist/comments/chv_support_options/none:label')"/>
+          <value>none</value>
+        </item>
+      </select>
+      <input ref="/peer_mentor_checklist/comments/tech_team_support">
+        <label ref="jr:itext('/peer_mentor_checklist/comments/tech_team_support:label')"/>
       </input>
-      <input ref="/peer_mentor_checklist/comments/chmt_comments">
-        <label ref="jr:itext('/peer_mentor_checklist/comments/chmt_comments:label')"/>
+      <input ref="/peer_mentor_checklist/comments/chmt_support">
+        <label ref="jr:itext('/peer_mentor_checklist/comments/chmt_support:label')"/>
       </input>
-      <input ref="/peer_mentor_checklist/comments/dtree_comments">
-        <label ref="jr:itext('/peer_mentor_checklist/comments/dtree_comments:label')"/>
+      <input ref="/peer_mentor_checklist/comments/supervisor_support">
+        <label ref="jr:itext('/peer_mentor_checklist/comments/supervisor_support:label')"/>
       </input>
     </group>
   </h:body>

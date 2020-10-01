@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Pregnancy Screening</h:title>
     <model>
@@ -155,6 +155,21 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/client_information:label">
             <value>Client Information</value>
           </text>
+          <text id="/pregnancy/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.
+• Please remember to do the covid education visit before or after submitting this form. &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
+          </text>
           <text id="/pregnancy/danger_signs/danger_sign_intro:label">
             <value>Now I will ask you some questions about pregnancy danger signs. Have you experienced any of these symptoms?</value>
           </text>
@@ -197,10 +212,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Vaginal Bleeding</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -230,10 +245,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Unconsciousness</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
@@ -782,6 +797,9 @@ Most women use herbs like Mpambawake, Shajaratul Maryam, Mzalia nyuma,Tangawizi 
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving:label">
             <value>Do you feel the baby moving on a daily basis, at least every six hours?</value>
           </text>
+          <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Now you are at the stage of comparing your palm with the client's palm. Before doing this, please keep a 2 meters distance from your client as a precautionary measure to avoid the spread of Corona virus. Please ask your client to show you their palm while still keeping the distance. &lt;/span&gt;</value>
+          </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note:label">
             <value>I am referring you to a health facility because I have identified that you have danger sign(s)</value>
           </text>
@@ -882,6 +900,20 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information:label">
             <value>Pregnancy History</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_rights/list_of_rights:label">
+            <value>There are seven rights of a woman/pregnant woman during delivery period as follows:
+
+• The right not to be harmed psychologically or physically.
+• The right to be informed, or the decision of having her partner should be respected at the time of delivery, without affecting the treatment or services she is entitled to.
+• The right to be served honestly and confidentially.
+• The right to be served with dignity and respect.
+• The right to freedom and equality without discrimination.
+• The right to access the best possible services.
+• The right to freedom, independence, self-determination and non-coercion.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_rights:label">
+            <value>Rigths of a pregnant woman during delivery</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg">
             <value>Please enter an amount between Tsh. 100 and Tsh. 300,000</value>
@@ -1062,6 +1094,9 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>Quality of Care Survey</value>
+          </text>
+          <text id="/pregnancy/rch_card/covid19_heath_card_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Before asking for the RCH card, please make sure you wash your hands with soap and please ask your client to wash their hands before handing over the card to you.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/rch_card/edd_note:label">
             <value>Your EDD is <output value=" /pregnancy/EDD "/></value>
@@ -1941,6 +1976,21 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/client_information:label">
             <value>Taarifa za mteja</value>
           </text>
+          <text id="/pregnancy/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.
+• Tafadhali kumbuka kufungua fomu ya kuwaelimsiha wanakaya juu ya maambukizi ya korona na jinsi ya kuchukua tahadhari. Tembeleo kuhusu korona unaweza kulifanya kabla ya kuanza tembeleo lako au mara baada ya kumaliza tembeleo lako hili.&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
+          </text>
           <text id="/pregnancy/danger_signs/danger_sign_intro:label">
             <value>Sahivi naomba kukuliza maswali yanayohusiana na dalili za hatari kwa ujauzito. Je una dalizi za hatari kati ya hizi zifuatazo?</value>
           </text>
@@ -1983,13 +2033,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Unatokwa na damu ukeni?</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_115:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_119:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -2019,13 +2069,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Kupoteza fahamu</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_123:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_127:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
@@ -2630,6 +2680,9 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving:label">
             <value>Je unahisi mtoto anacheza angalau kila baada ya masaa sita kila siku?</value>
           </text>
+          <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Sasa upo kwenye hatua ya kulinganisha kiganja chako na cha mteja wako. Kabla ya kufanya hivyo, tafadhali hakikisha umekaa umbali wa mita mbili na mteja wako ili kujilinda na uwezekano wa kusambaza maambukizi ya Korona. Tafadhali mwambie mteja akuoneshe kiganja chake. &lt;/span&gt;</value>
+          </text>
           <text id="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note:label">
             <value>Nakupa rufaa uende kituo cha afya kwasababu nimekugundua una dalili za hatari.</value>
           </text>
@@ -2734,6 +2787,20 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </text>
           <text id="/pregnancy/pregnant_woman_information:label">
             <value>Historia ya Ujauzito</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_rights/list_of_rights:label">
+            <value>Kuna haki saba za mwanamke/mjamzito wakati wa kujifungua, nazo ni:
+
+• Haki ya kutodhuriwa/kunyanyaswa kisaikolojia au kimwili.
+• Haki ya kupewa taarifa, kukubali/kukataa na maamuzi yake ya kuwa na mwenza/msaidizi wake yaheshimiwe wakati wa kujifungua, bila kuathiri matibabu au huduma anazostahili kupata.
+• Haki ya kuhudumiwa kwa uaminifu na usiri.
+• Haki ya kuhudumiwa kwa staha na heshima.
+• Haki ya uhuru na usawa bila ya kubaguliwa.
+• Haki ya kupata huduma yenye viwango bora iwezekanavyo.
+• Haki ya uhuru,kujitawala, maamuzi binafsi na kutoshurutishwa.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_rights:label">
+            <value>Haki za mjamzito wakati wa kujifungua</value>
           </text>
           <text id="/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg">
             <value>Tafadhali ingiza kiwango kati ya shilinigi 100 na shilingi laki tatu</value>
@@ -2914,6 +2981,9 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </text>
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>Utafiti wa huduma bora</value>
+          </text>
+          <text id="/pregnancy/rch_card/covid19_heath_card_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Kabla ya kuomba kadi la kliniki la mama mjamzito, hakikisha unanawa mikono yako vizuri kwa maji na sabuni na pia muombe mteja aoshe mikono yake kabla ya kukukabidhi wewe kadi hiyo.&lt;/span&gt;</value>
           </text>
           <text id="/pregnancy/rch_card/edd_note:label">
             <value>Makisio ya tarehe yako ya kujifungua ni <output value=" /pregnancy/EDD "/></value>
@@ -3635,7 +3705,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
         </translation>
       </itext>
       <instance>
-        <pregnancy delimiter="#" id="pregnancy" prefix="J1!pregnancy!" version="20/06/2019">
+        <pregnancy id="pregnancy" prefix="J1!pregnancy!" delimiter="#" version="20/06/2019">
           <inputs>
             <meta>
               <location>
@@ -3692,6 +3762,9 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <currently_pregnant/>
           <hide_lmp_or_months_pregnant/>
           <visit_id/>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
           <client_information>
             <intro_note/>
             <household_note/>
@@ -3745,6 +3818,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <encourage_mother_if_delivered_at_facility/>
           </facility_delivery_importance>
           <rch_card>
+            <covid19_heath_card_note/>
             <is_rch_card_available/>
             <is_delivery_date_written/>
             <estimated_delivery_date_input/>
@@ -3758,8 +3832,8 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <danger_signs>
             <danger_sign_intro/>
             <danger_sign_table_1>
-              <generated_table_list_label_115/>
-              <reserved_name_for_field_list_labels_116/>
+              <generated_table_list_label_119/>
+              <reserved_name_for_field_list_labels_120/>
               <danger_sign_vaginal_bleeding/>
               <danger_sign_abdominal_pain/>
               <danger_sign_severe_headache/>
@@ -3768,8 +3842,8 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <danger_sign_note_to_chv/>
             <observe_danger_signs/>
             <danger_sign_table_2>
-              <generated_table_list_label_123/>
-              <reserved_name_for_field_list_labels_124/>
+              <generated_table_list_label_127/>
+              <reserved_name_for_field_list_labels_128/>
               <danger_sign_unconsciouss/>
               <danger_sign_difficult_breathing/>
               <danger_sign_convulsions/>
@@ -3786,6 +3860,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             </subgroup_pregnancy_issues>
             <pregnancy_and_pallor>
               <baby_moving/>
+              <covid19_plam_pallor_note/>
               <pallor/>
               <refer_pregnancy_complications/>
               <has_pregnancy_complication_note/>
@@ -3862,6 +3937,9 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
               <free_mosquito_net/>
             </mosquito_net_qn>
           </llints>
+          <pregnant_woman_rights>
+            <list_of_rights/>
+          </pregnant_woman_rights>
           <quality_of_survery_care>
             <consent_for_questions/>
             <facility_island/>
@@ -4939,7 +5017,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </item>
         </root>
       </instance>
-      <bind nodeset="/pregnancy/inputs" relevant="false()"/>
+      <bind nodeset="/pregnancy/inputs" relevant="0"/>
       <bind nodeset="/pregnancy/inputs/due_date" type="string"/>
       <bind nodeset="/pregnancy/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/pregnancy/inputs/client_EDD" type="string"/>
@@ -4951,91 +5029,93 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
       <bind nodeset="/pregnancy/inputs/contact/_id" type="db:person"/>
       <bind nodeset="/pregnancy/inputs/contact/name" type="string"/>
       <bind nodeset="/pregnancy/inputs/contact/date_of_birth" type="string"/>
-      <bind calculate="../inputs/contact/name" nodeset="/pregnancy/client_name" type="string"/>
-      <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_pregnancy_visits,'')" nodeset="/pregnancy/n_pregnancy_visits" type="string"/>
-      <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_previous_anc_visits,'')" nodeset="/pregnancy/n_previous_anc_visits" type="string"/>
-      <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/previous_hiv_status,'false')" nodeset="/pregnancy/previous_hiv_status" type="string"/>
-      <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/previous_rchcard_status,&quot;false&quot;)" nodeset="/pregnancy/previous_rchcard_status" type="string"/>
-      <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/show_research_questions,&quot;false&quot;)" nodeset="/pregnancy/show_research_questions" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/pregnancy/patient_id" type="string"/>
-      <bind calculate="../inputs/user/name" nodeset="/pregnancy/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/pregnancy/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/pregnancy/created_by_place_uuid" type="string"/>
-      <bind calculate="../inputs/contact/date_of_birth" nodeset="/pregnancy/date_of_birth_c" type="string"/>
-      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /pregnancy/date_of_birth_c ))" nodeset="/pregnancy/age_days" type="string"/>
-      <bind calculate="int(( /pregnancy/age_days  - ( /pregnancy/age_years  * 12 * 30)) div 30,0)" nodeset="/pregnancy/age_months" type="string"/>
-      <bind calculate="int( /pregnancy/age_days  div (30 *12),0)" nodeset="/pregnancy/age_years" type="string"/>
-      <bind calculate="round((decimal-date-time(today()) - decimal-date-time( /pregnancy/date_of_birth_c )) div 365,0)" nodeset="/pregnancy/age_in_years" type="string"/>
-      <bind calculate=" /pregnancy/age_days  - ( /pregnancy/age_months  * 30) - ( /pregnancy/age_years  *12*30)" nodeset="/pregnancy/age_days_display" type="string"/>
-      <bind calculate="7" nodeset="/pregnancy/week" type="string"/>
-      <bind calculate="30" nodeset="/pregnancy/month" type="string"/>
-      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/pregnancy/household_head" type="string"/>
-      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/pregnancy/house_number" type="string"/>
-      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/pregnancy/kitongoji" type="string"/>
-      <bind calculate="instance('contact-summary')/context/phone" nodeset="/pregnancy/phone" type="string"/>
-      <bind calculate="../inputs/due_date" nodeset="/pregnancy/due_date" type="string"/>
-      <bind calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Unknown&quot;)" nodeset="/pregnancy/due_date_pretty_print_english" type="string"/>
-      <bind calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Haijulikani&quot;)" nodeset="/pregnancy/due_date_pretty_print_swahili" type="string"/>
-      <bind calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Unknown&quot;)" nodeset="/pregnancy/client_EDD_pretty_print_english" type="string"/>
-      <bind calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Haijulikani&quot;)" nodeset="/pregnancy/client_EDD_pretty_print_swahili" type="string"/>
-      <bind calculate="../inputs/client_EDD" nodeset="/pregnancy/client_EDD_c" type="string"/>
-      <bind calculate="instance('contact-summary')/context/currently_pregnant" nodeset="/pregnancy/currently_pregnant" type="string"/>
-      <bind calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)" nodeset="/pregnancy/hide_lmp_or_months_pregnant" type="string"/>
-      <bind calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)" nodeset="/pregnancy/visit_id" type="string"/>
+      <bind nodeset="/pregnancy/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/pregnancy/n_pregnancy_visits" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_pregnancy_visits,'')"/>
+      <bind nodeset="/pregnancy/n_previous_anc_visits" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_previous_anc_visits,'')"/>
+      <bind nodeset="/pregnancy/previous_hiv_status" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/previous_hiv_status,'false')"/>
+      <bind nodeset="/pregnancy/previous_rchcard_status" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/previous_rchcard_status,&quot;false&quot;)"/>
+      <bind nodeset="/pregnancy/show_research_questions" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/show_research_questions,&quot;false&quot;)"/>
+      <bind nodeset="/pregnancy/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/pregnancy/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/pregnancy/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/pregnancy/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/pregnancy/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/pregnancy/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /pregnancy/date_of_birth_c ))"/>
+      <bind nodeset="/pregnancy/age_months" type="string" calculate="int(( /pregnancy/age_days  - ( /pregnancy/age_years  * 12 * 30)) div 30,0)"/>
+      <bind nodeset="/pregnancy/age_years" type="string" calculate="int( /pregnancy/age_days  div (30 *12),0)"/>
+      <bind nodeset="/pregnancy/age_in_years" type="string" calculate="round((decimal-date-time(today()) - decimal-date-time( /pregnancy/date_of_birth_c )) div 365,0)"/>
+      <bind nodeset="/pregnancy/age_days_display" type="string" calculate=" /pregnancy/age_days  - ( /pregnancy/age_months  * 30) - ( /pregnancy/age_years  *12*30)"/>
+      <bind nodeset="/pregnancy/week" type="string" calculate="7"/>
+      <bind nodeset="/pregnancy/month" type="string" calculate="30"/>
+      <bind nodeset="/pregnancy/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/pregnancy/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/pregnancy/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/pregnancy/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/pregnancy/due_date" type="string" calculate="../inputs/due_date"/>
+      <bind nodeset="/pregnancy/due_date_pretty_print_english" type="string" calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Unknown&quot;)"/>
+      <bind nodeset="/pregnancy/due_date_pretty_print_swahili" type="string" calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Haijulikani&quot;)"/>
+      <bind nodeset="/pregnancy/client_EDD_pretty_print_english" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Unknown&quot;)"/>
+      <bind nodeset="/pregnancy/client_EDD_pretty_print_swahili" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Haijulikani&quot;)"/>
+      <bind nodeset="/pregnancy/client_EDD_c" type="string" calculate="../inputs/client_EDD"/>
+      <bind nodeset="/pregnancy/currently_pregnant" type="string" calculate="instance('contact-summary')/context/currently_pregnant"/>
+      <bind nodeset="/pregnancy/hide_lmp_or_months_pregnant" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)"/>
+      <bind nodeset="/pregnancy/visit_id" type="string" calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)"/>
+      <bind nodeset="/pregnancy/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/client_information/due_date_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/client_information/edd_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/age_below_15" relevant=" /pregnancy/n_pregnancy_visits  = 0"/>
-      <bind nodeset="/pregnancy/age_below_15/below_15_confirmation" relevant=" /pregnancy/age_in_years  &lt; 15" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/age_below_15/below_15_confirmation" type="select1" relevant=" /pregnancy/age_in_years  &lt; 15" required="true()"/>
       <bind nodeset="/pregnancy/age_above_49" relevant=" /pregnancy/n_pregnancy_visits  = 0"/>
-      <bind nodeset="/pregnancy/age_above_49/above_49_confirmation" relevant=" /pregnancy/age_in_years  &gt; 49" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/age_above_49/above_49_confirmation" type="select1" relevant=" /pregnancy/age_in_years  &gt; 49" required="true()"/>
       <bind nodeset="/pregnancy/pregnancy_consent" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0"/>
-      <bind nodeset="/pregnancy/pregnancy_consent/consent" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/pregnancy_consent/no_consent_note" readonly="true()" relevant="selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)" type="string"/>
-      <bind nodeset="/pregnancy/pregnancy_consent/consent_yes" readonly="true()" relevant="selected( /pregnancy/pregnancy_consent/consent ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_consent/consent" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/pregnancy_consent/no_consent_note" readonly="true()" type="string" relevant="selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)"/>
+      <bind nodeset="/pregnancy/pregnancy_consent/consent_yes" readonly="true()" type="string" relevant="selected( /pregnancy/pregnancy_consent/consent ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/anc_visit_promotion" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0"/>
       <bind nodeset="/pregnancy/anc_visit_promotion/anc_visit_promotion_msg" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/education_and_prev_enrollment" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and selected( /pregnancy/pregnancy_consent/consent ,&quot;yes&quot;)"/>
-      <bind nodeset="/pregnancy/education_and_prev_enrollment/highest_school_level" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/education_and_prev_enrollment/previous_uzazi_salama_enrollment" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/education_and_prev_enrollment/home_electricity" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/education_and_prev_enrollment/water_source" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/education_and_prev_enrollment/highest_school_level" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/education_and_prev_enrollment/previous_uzazi_salama_enrollment" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/education_and_prev_enrollment/home_electricity" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/education_and_prev_enrollment/water_source" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/education_and_prev_enrollment/floor_note_to_chv" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/education_and_prev_enrollment/floor_material" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/education_and_prev_enrollment/floor_material" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/education_and_prev_enrollment/roof_note_to_chv" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/education_and_prev_enrollment/roof_material" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/education_and_prev_enrollment/roof_material" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/visit_introduction" relevant=" /pregnancy/n_pregnancy_visits  &gt;= 1"/>
       <bind nodeset="/pregnancy/visit_introduction/introduction" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/visit_introduction/has_given_birth" relevant=" /pregnancy/n_pregnancy_visits  &gt;= 1" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/visit_introduction/delivery_form_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;yes&quot;)" type="string"/>
-      <bind nodeset="/pregnancy/visit_introduction/viable_pregnancy" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/visit_introduction/sympathy_note" readonly="true()" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" type="string"/>
-      <bind constraint=". &lt;= today()" jr:constraintMsg="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg')" nodeset="/pregnancy/visit_introduction/date_of_pregnancy_loss" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" required="true()" type="date"/>
-      <bind calculate="if((decimal-date-time( /pregnancy/client_EDD_c ) - decimal-date-time( /pregnancy/visit_introduction/date_of_pregnancy_loss )) &gt; ( /pregnancy/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)" nodeset="/pregnancy/visit_introduction/miscarriage_or_stillbirth" type="string"/>
+      <bind nodeset="/pregnancy/visit_introduction/has_given_birth" type="select1" relevant=" /pregnancy/n_pregnancy_visits  &gt;= 1" required="true()"/>
+      <bind nodeset="/pregnancy/visit_introduction/delivery_form_note" readonly="true()" type="string" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/visit_introduction/viable_pregnancy" type="select1" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/visit_introduction/sympathy_note" readonly="true()" type="string" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)"/>
+      <bind nodeset="/pregnancy/visit_introduction/date_of_pregnancy_loss" type="date" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" jr:constraintMsg="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg')" required="true()" constraint=". &lt;= today()"/>
+      <bind nodeset="/pregnancy/visit_introduction/miscarriage_or_stillbirth" type="string" calculate="if((decimal-date-time( /pregnancy/client_EDD_c ) - decimal-date-time( /pregnancy/visit_introduction/date_of_pregnancy_loss )) &gt; ( /pregnancy/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)"/>
       <bind nodeset="/pregnancy/pregnant_woman_information" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0)"/>
-      <bind nodeset="/pregnancy/pregnant_woman_information/first_time_pregnant" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 1 and . &lt;= 20" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg')" nodeset="/pregnancy/pregnant_woman_information/previous_pregnancies" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="int"/>
-      <bind constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/pregnant_woman_information/previous_pregnancies )" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_miscarriages:jr:constraintMsg')" nodeset="/pregnancy/pregnant_woman_information/previous_miscarriages" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="int"/>
-      <bind calculate="( /pregnancy/pregnant_woman_information/previous_pregnancies -  /pregnancy/pregnant_woman_information/previous_miscarriages )*4" nodeset="/pregnancy/pregnant_woman_information/max_alive_babies" type="string"/>
-      <bind constraint="int(.) &gt;= 0 and int(.) &lt;= (int( /pregnancy/pregnant_woman_information/previous_pregnancies )- int( /pregnancy/pregnant_woman_information/previous_miscarriages ))*4" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/living_children:jr:constraintMsg')" nodeset="/pregnancy/pregnant_woman_information/living_children" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="int"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/first_time_pregnant" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/previous_pregnancies" type="int" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg')" required="true()" constraint=". &gt;= 1 and . &lt;= 20"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/previous_miscarriages" type="int" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_miscarriages:jr:constraintMsg')" required="true()" constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/pregnant_woman_information/previous_pregnancies )"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/max_alive_babies" type="string" calculate="( /pregnancy/pregnant_woman_information/previous_pregnancies -  /pregnancy/pregnant_woman_information/previous_miscarriages )*4"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/living_children" type="int" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/living_children:jr:constraintMsg')" required="true()" constraint="int(.) &gt;= 0 and int(.) &lt;= (int( /pregnancy/pregnant_woman_information/previous_pregnancies )- int( /pregnancy/pregnant_woman_information/previous_miscarriages ))*4"/>
       <bind nodeset="/pregnancy/facility_delivery_importance" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) and selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/delivery_location" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/important_of_facility_delivery" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'home') or selected( /pregnancy/facility_delivery_importance/delivery_location ,'on_the_way')" type="string"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility" readonly="true()" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'local_health_facility')" type="string"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/delivery_location" type="select1" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/important_of_facility_delivery" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'home') or selected( /pregnancy/facility_delivery_importance/delivery_location ,'on_the_way')"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'local_health_facility')"/>
       <bind nodeset="/pregnancy/rch_card" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) or ( /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/visit_introduction/has_given_birth =&quot;no&quot; and  /pregnancy/visit_introduction/viable_pregnancy =&quot;yes&quot; and  /pregnancy/previous_rchcard_status  = &quot;false&quot;)"/>
-      <bind nodeset="/pregnancy/rch_card/is_rch_card_available" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/rch_card/is_delivery_date_written" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes')" required="true()" type="select1"/>
-      <bind constraint=". &gt;= date-time(decimal-date-time(today())) and . &lt;= date-time((decimal-date-time(today()) + ( /pregnancy/month  * 9)))" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_delivery_date_input:jr:constraintMsg')" nodeset="/pregnancy/rch_card/estimated_delivery_date_input" relevant="selected( /pregnancy/rch_card/is_delivery_date_written ,'yes')" required="true()" type="date"/>
-      <bind nodeset="/pregnancy/rch_card/remember_lmp" relevant="(selected( /pregnancy/rch_card/is_rch_card_available ,'no') or selected( /pregnancy/rch_card/is_delivery_date_written ,'no')) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="select1"/>
-      <bind constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy/week  * 44)))" jr:constraintMsg="jr:itext('/pregnancy/rch_card/last_lmp_date:jr:constraintMsg')" nodeset="/pregnancy/rch_card/last_lmp_date" relevant="selected( /pregnancy/rch_card/remember_lmp ,'yes') and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="date"/>
-      <bind constraint=". &gt; 0 and . &lt;= 9" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_months_pregnant:jr:constraintMsg')" nodeset="/pregnancy/rch_card/estimated_months_pregnant" relevant="((selected( /pregnancy/rch_card/is_rch_card_available ,'no') or (selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and selected( /pregnancy/rch_card/is_delivery_date_written ,'no'))) and selected( /pregnancy/rch_card/remember_lmp ,'no') ) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" type="int"/>
-      <bind nodeset="/pregnancy/rch_card/edd_note" readonly="true()" relevant=" /pregnancy/EDD  != &quot;&quot;" type="string"/>
-      <bind calculate="if( /pregnancy/previous_rchcard_status =&quot;true&quot;, 
+      <bind nodeset="/pregnancy/rch_card/covid19_heath_card_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/rch_card/is_rch_card_available" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/is_delivery_date_written" type="select1" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes')" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/estimated_delivery_date_input" type="date" relevant="selected( /pregnancy/rch_card/is_delivery_date_written ,'yes')" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_delivery_date_input:jr:constraintMsg')" required="true()" constraint=". &gt;= date-time(decimal-date-time(today())) and . &lt;= date-time((decimal-date-time(today()) + ( /pregnancy/month  * 9)))"/>
+      <bind nodeset="/pregnancy/rch_card/remember_lmp" type="select1" relevant="(selected( /pregnancy/rch_card/is_rch_card_available ,'no') or selected( /pregnancy/rch_card/is_delivery_date_written ,'no')) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/last_lmp_date" type="date" relevant="selected( /pregnancy/rch_card/remember_lmp ,'yes') and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" jr:constraintMsg="jr:itext('/pregnancy/rch_card/last_lmp_date:jr:constraintMsg')" required="true()" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy/week  * 44)))"/>
+      <bind nodeset="/pregnancy/rch_card/estimated_months_pregnant" type="int" relevant="((selected( /pregnancy/rch_card/is_rch_card_available ,'no') or (selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and selected( /pregnancy/rch_card/is_delivery_date_written ,'no'))) and selected( /pregnancy/rch_card/remember_lmp ,'no') ) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_months_pregnant:jr:constraintMsg')" required="true()" constraint=". &gt; 0 and . &lt;= 9"/>
+      <bind nodeset="/pregnancy/rch_card/edd_note" readonly="true()" type="string" relevant=" /pregnancy/EDD  != &quot;&quot;"/>
+      <bind nodeset="/pregnancy/EDD" type="string" calculate="if( /pregnancy/previous_rchcard_status =&quot;true&quot;, 
   /pregnancy/client_EDD_c , 
  if( /pregnancy/hide_lmp_or_months_pregnant =&quot;true&quot;,
  if(selected( /pregnancy/rch_card/is_delivery_date_written ,&quot;yes&quot;), 
@@ -5046,39 +5126,39 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
  if(selected( /pregnancy/rch_card/remember_lmp ,'yes'),
  format-date(decimal-date-time( /pregnancy/rch_card/last_lmp_date ) + 40* /pregnancy/week , &quot;%Y-%m-%d&quot;),
  if( /pregnancy/rch_card/estimated_months_pregnant  != &quot;&quot;,
- format-date(decimal-date-time(today())+ ((40 -  /pregnancy/rch_card/estimated_months_pregnant *4.5 )* /pregnancy/week ), &quot;%Y-%m-%d&quot;),&quot;&quot;)))))" nodeset="/pregnancy/EDD" type="string"/>
-      <bind calculate="40 - round((decimal-date-time( /pregnancy/EDD ) - decimal-date-time(today())) div  /pregnancy/week )" nodeset="/pregnancy/gestation_in_weeks" type="string"/>
+ format-date(decimal-date-time(today())+ ((40 -  /pregnancy/rch_card/estimated_months_pregnant *4.5 )* /pregnancy/week ), &quot;%Y-%m-%d&quot;),&quot;&quot;)))))"/>
+      <bind nodeset="/pregnancy/gestation_in_weeks" type="string" calculate="40 - round((decimal-date-time( /pregnancy/EDD ) - decimal-date-time(today())) div  /pregnancy/week )"/>
       <bind nodeset="/pregnancy/danger_signs" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) or ( /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/visit_introduction/has_given_birth =&quot;no&quot; and  /pregnancy/visit_introduction/viable_pregnancy =&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_intro" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_115" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116" type="select1"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_fever" required="true()" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_119" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_fever" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_note_to_chv" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/danger_signs/observe_danger_signs" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_123" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124" type="select1"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions" required="true()" type="select1"/>
-      <bind calculate="if(selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_fever ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,&quot;yes&quot;),1,0)" nodeset="/pregnancy/danger_signs/emergency_danger_sign_referral" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/emergency_danger_sign_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 1" required="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/no_danger_sign_note_to_chv" readonly="true()" relevant="selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions ,'no') and 
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_127" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/danger_signs/emergency_danger_sign_referral" type="string" calculate="if(selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_fever ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,&quot;yes&quot;) or selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,&quot;yes&quot;),1,0)"/>
+      <bind nodeset="/pregnancy/danger_signs/emergency_danger_sign_note" readonly="true()" type="string" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 1" required="true()"/>
+      <bind nodeset="/pregnancy/danger_signs/no_danger_sign_note_to_chv" readonly="true()" type="string" relevant="selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions ,'no') and 
  selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,'no') and 
  selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,'no') and 
  selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_fever ,'no') and 
  selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,'no') and 
  selected( /pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,'no') and 
- selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,'no')" type="string"/>
+ selected( /pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,'no')"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
-      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg')" nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" required="true()" type="select"/>
-      <bind calculate="if(selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;difficulty_breathing&quot;) or 
+      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues" type="select" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" jr:constraintMsg="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg')" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" type="string" calculate="if(selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;difficulty_breathing&quot;) or 
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fatigue&quot;) or 
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fever&quot;) or 
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;tinnitus&quot;) or 
@@ -5090,15 +5170,16 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;early_labor&quot;) or 
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;liquid_leaking&quot;) or 
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;malaria_signs&quot;) or 
- selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;foul_smelling&quot;)1,0)" nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" type="string"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1" type="string"/>
+ selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;foul_smelling&quot;)1,0)"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note" readonly="true()" type="string" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving" relevant=" /pregnancy/gestation_in_weeks  &gt; 24" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" required="true()" type="select1"/>
-      <bind calculate="if(selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;no&quot;) or selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;yes&quot;),1,0)" nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications" type="string"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1" type="string"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0 and  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =0 and
- selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving" type="select1" relevant=" /pregnancy/gestation_in_weeks  &gt; 24" required="true()"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note" readonly="true()" type="string" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor" type="select1" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" required="true()"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications" type="string" calculate="if(selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;no&quot;) or selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;yes&quot;),1,0)"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note" readonly="true()" type="string" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note" readonly="true()" type="string" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0 and  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =0 and
+ selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;yes&quot;) and selected( /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;no&quot;)"/>
       <bind nodeset="/pregnancy/additional_danger_signs" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0) or 
 
@@ -5114,29 +5195,26 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/previous_hiv_status =&quot;false&quot;) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/previous_hiv_status =&quot;false&quot;)"/>
-      <bind nodeset="/pregnancy/pmtct/hiv_test" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/pmtct/hiv_not_tested_note" readonly="true()" relevant="selected( /pregnancy/pmtct/hiv_test ,'no')" type="string"/>
-      <bind nodeset="/pregnancy/pmtct/disclose_hiv_status" relevant="selected( /pregnancy/pmtct/hiv_test ,'yes')" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/pmtct/hiv_status" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'yes')" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/pmtct/hiv_negative_note" readonly="true()" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_negative')" type="string"/>
-      <bind nodeset="/pregnancy/pmtct/take_art" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/pmtct/take_art_yes" readonly="true()" relevant="selected( /pregnancy/pmtct/take_art ,'yes')" type="string"/>
-      <bind nodeset="/pregnancy/pmtct/take_art_no" readonly="true()" relevant="selected( /pregnancy/pmtct/take_art ,'no')" type="string"/>
-      <bind nodeset="/pregnancy/pmtct/mother_mentor_note" readonly="true()" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')" type="string"/>
-      <bind nodeset="/pregnancy/pmtct/discuss_further_note" readonly="true()" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'no')" type="string"/>
-      <bind nodeset="/pregnancy/fam_engagement" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
-not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
-
-(selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
-      <bind constraint="(selected(.,&quot;no_one_available&quot;) and count-selected(.)=1) or (not(selected(.,&quot;no_one_available&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/pregnancy/fam_engagement/family_engagement:jr:constraintMsg')" nodeset="/pregnancy/fam_engagement/family_engagement" required="true()" type="select"/>
-      <bind nodeset="/pregnancy/fam_engagement/invite_family_member_note" readonly="true()" relevant="selected( /pregnancy/fam_engagement/family_engagement ,'no_one_available')" type="string"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_test" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_not_tested_note" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/hiv_test ,'no')"/>
+      <bind nodeset="/pregnancy/pmtct/disclose_hiv_status" type="select1" relevant="selected( /pregnancy/pmtct/hiv_test ,'yes')" required="true()"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_status" type="select1" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'yes')" required="true()"/>
+      <bind nodeset="/pregnancy/pmtct/hiv_negative_note" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_negative')"/>
+      <bind nodeset="/pregnancy/pmtct/take_art" type="select1" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')" required="true()"/>
+      <bind nodeset="/pregnancy/pmtct/take_art_yes" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/take_art ,'yes')"/>
+      <bind nodeset="/pregnancy/pmtct/take_art_no" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/take_art ,'no')"/>
+      <bind nodeset="/pregnancy/pmtct/mother_mentor_note" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')"/>
+      <bind nodeset="/pregnancy/pmtct/discuss_further_note" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'no')"/>
+      <bind nodeset="/pregnancy/fam_engagement" relevant="0"/>
+      <bind nodeset="/pregnancy/fam_engagement/family_engagement" type="select" jr:constraintMsg="jr:itext('/pregnancy/fam_engagement/family_engagement:jr:constraintMsg')" required="true()" constraint="(selected(.,&quot;no_one_available&quot;) and count-selected(.)=1) or (not(selected(.,&quot;no_one_available&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/pregnancy/fam_engagement/invite_family_member_note" readonly="true()" type="string" relevant="selected( /pregnancy/fam_engagement/family_engagement ,'no_one_available')"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
-      <bind constraint="(. &gt;=  /pregnancy/n_previous_anc_visits  and .&lt;= 8)" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg')" nodeset="/pregnancy/anc_screening_and_counseling/num_anc_visits" required="true()" type="int"/>
-      <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" relevant=" /pregnancy/anc_screening_and_counseling/num_anc_visits  != '' and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0" required="true()" type="select"/>
-      <bind nodeset="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note" readonly="true()" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'no')" type="string"/>
+      <bind nodeset="/pregnancy/anc_screening_and_counseling/num_anc_visits" type="int" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg')" required="true()" constraint="(. &gt;=  /pregnancy/n_previous_anc_visits  and .&lt;= 8)"/>
+      <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" type="select" relevant=" /pregnancy/anc_screening_and_counseling/num_anc_visits  != '' and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0" required="true()"/>
+      <bind nodeset="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'no')"/>
       <bind nodeset="/pregnancy/birth_plan" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
@@ -5146,7 +5224,7 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
       <bind nodeset="/pregnancy/birth_plan/transfusion_and_backup/backup_person" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/transport/prepare_transport" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/birth_plan/transport/taxi_phones_chv_note" readonly="true()" type="string"/>
-      <bind calculate="int((decimal-date-time( /pregnancy/EDD ) - (decimal-date-time(now()))) div  /pregnancy/month )" nodeset="/pregnancy/pregnancy_months_left" type="string"/>
+      <bind nodeset="/pregnancy/pregnancy_months_left" type="string" calculate="int((decimal-date-time( /pregnancy/EDD ) - (decimal-date-time(now()))) div  /pregnancy/month )"/>
       <bind nodeset="/pregnancy/early_breastfeeding" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3) or 
 
@@ -5173,13 +5251,15 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
       <bind nodeset="/pregnancy/llints/malaria_discussion" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/llints/mosquito_net_qn/has_mosquito_net" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/llints/mosquito_net_qn/free_mosquito_net" readonly="true()" relevant="selected( /pregnancy/llints/mosquito_net_qn/has_mosquito_net ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/pregnancy/llints/mosquito_net_qn/has_mosquito_net" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/llints/mosquito_net_qn/free_mosquito_net" readonly="true()" type="string" relevant="selected( /pregnancy/llints/mosquito_net_qn/has_mosquito_net ,&quot;no&quot;)"/>
+      <bind nodeset="/pregnancy/pregnant_woman_rights" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and selected( /pregnancy/pregnancy_consent/consent ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/pregnant_woman_rights/list_of_rights" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/quality_of_survery_care" relevant="(selected( /pregnancy/pregnancy_consent/consent ,&quot;yes&quot;) or (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;))) and  /pregnancy/n_previous_anc_visits =0 and  /pregnancy/anc_screening_and_counseling/num_anc_visits  &gt;= 1 and  /pregnancy/danger_signs/emergency_danger_sign_referral =0"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/consent_for_questions" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/facility_island" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/facility_district" relevant="selected( /pregnancy/quality_of_survery_care/facility_island ,&quot;unguja&quot;) or selected( /pregnancy/quality_of_survery_care/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility" relevant="selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;north_a&quot;) or 
+      <bind nodeset="/pregnancy/quality_of_survery_care/consent_for_questions" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/facility_island" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/facility_district" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/facility_island ,&quot;unguja&quot;) or selected( /pregnancy/quality_of_survery_care/facility_island ,&quot;pemba&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;north_a&quot;) or 
 selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;north_b&quot;) or 
 selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;central&quot;) or 
 selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;south&quot;) or 
@@ -5189,47 +5269,47 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;urban&quot
 selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;chakechake&quot;) or 
 selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;micheweni&quot;) or 
 selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;mkoani&quot;) or 
-selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility_other" relevant="selected( /pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/is_service_received" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/no_service_reason" relevant="selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;) or selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;no&quot;)" required="true()" type="select"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/second_facility" relevant="selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;)" required="true()" type="select"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/services_received" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;) and (selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;) or selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes&quot;))" required="true()" type="select"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/service_pay" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 100 and . &lt;= 300000" jr:constraintMsg="jr:itext('/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg')" nodeset="/pregnancy/quality_of_survery_care/amount_paid" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()" type="int"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/paid_for" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()" type="select"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/wait_period" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()" type="select1"/>
+selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility_other" type="string" relevant="selected( /pregnancy/quality_of_survery_care/subgroup_facility_delivery/anc_visit_facility ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/is_service_received" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/no_service_reason" type="select" relevant="selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;) or selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/second_facility" type="select" relevant="selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/services_received" type="select" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;) and (selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;) or selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes&quot;))" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/service_pay" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/amount_paid" type="int" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg')" required="true()" constraint=". &gt;= 100 and . &lt;= 300000"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/paid_for" type="select" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/wait_period" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/personal_information" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/danger_signs/emergency_danger_sign_referral =0 and  /pregnancy/show_research_questions  = &quot;true&quot;"/>
-      <bind nodeset="/pregnancy/personal_information/can_proceed_with_survey" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/travel_time" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/transport/travel_means" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/transport/other_means" relevant="selected( /pregnancy/personal_information/transport/travel_means ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/decision_maker" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker" relevant="selected( /pregnancy/personal_information/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()" type="string"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_marital_status/marital_status" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
-      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/pregnancy/personal_information/partner_info/subgroup_partner_age" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" type="int"/>
-      <bind nodeset="/pregnancy/personal_information/partner_info/partner_highest_school_level" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
-      <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/pregnancy/personal_information/subgroup_multiple_wives/num_wives" relevant="selected( /pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
+      <bind nodeset="/pregnancy/personal_information/can_proceed_with_survey" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/travel_time" type="select1" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/transport/travel_means" type="select1" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/transport/other_means" type="string" relevant="selected( /pregnancy/personal_information/transport/travel_means ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/decision_maker" type="select1" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker" type="string" relevant="selected( /pregnancy/personal_information/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_marital_status/marital_status" type="select1" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together" type="select1" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/partner_info/subgroup_partner_age" type="int" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" jr:constraintMsg="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg')" constraint=". &gt;= 18 and .&lt;= 90"/>
+      <bind nodeset="/pregnancy/personal_information/partner_info/partner_highest_school_level" type="select1" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife" type="select1" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/num_wives" type="int" relevant="selected( /pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg')" constraint=".&gt;= 1 and .&lt;= 10"/>
       <bind nodeset="/pregnancy/group_summary" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;))"/>
-      <bind nodeset="/pregnancy/group_summary/healthy_note" readonly="true()" relevant="( /pregnancy/has_referral =0 and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0) or ( /pregnancy/has_referral =0 and  /pregnancy/n_pregnancy_visits  =0 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0)" type="string"/>
-      <bind nodeset="/pregnancy/group_summary/needs_referral_note" readonly="true()" relevant=" /pregnancy/has_referral =1" type="string"/>
-      <bind nodeset="/pregnancy/group_summary/needs_referral_danger_signs" readonly="true()" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral =1" type="string"/>
-      <bind nodeset="/pregnancy/group_summary/needs_referral_neonatal_note" readonly="true()" relevant=" /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
- /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1" type="string"/>
-      <bind nodeset="/pregnancy/group_summary/needs_anc_referral_note" readonly="true()" relevant=" /pregnancy/refer_flag_anc_visit_6m_or_more =1" type="string"/>
-      <bind calculate="if( /pregnancy/danger_signs/emergency_danger_sign_referral =1 or
+      <bind nodeset="/pregnancy/group_summary/healthy_note" readonly="true()" type="string" relevant="( /pregnancy/has_referral =0 and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0) or ( /pregnancy/has_referral =0 and  /pregnancy/n_pregnancy_visits  =0 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0)"/>
+      <bind nodeset="/pregnancy/group_summary/needs_referral_note" readonly="true()" type="string" relevant=" /pregnancy/has_referral =1"/>
+      <bind nodeset="/pregnancy/group_summary/needs_referral_danger_signs" readonly="true()" type="string" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral =1"/>
+      <bind nodeset="/pregnancy/group_summary/needs_referral_neonatal_note" readonly="true()" type="string" relevant=" /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
+ /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1"/>
+      <bind nodeset="/pregnancy/group_summary/needs_anc_referral_note" readonly="true()" type="string" relevant=" /pregnancy/refer_flag_anc_visit_6m_or_more =1"/>
+      <bind nodeset="/pregnancy/has_referral" type="string" calculate="if( /pregnancy/danger_signs/emergency_danger_sign_referral =1 or
  /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1 or 
  /pregnancy/refer_flag_anc_visit_6m_or_more  = 1,
-1, 0)" nodeset="/pregnancy/has_referral" type="string"/>
-      <bind calculate="../danger_signs/emergency_danger_sign_referral" nodeset="/pregnancy/refer_flag_emergency_danger_sign" type="string"/>
-      <bind calculate="../pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" nodeset="/pregnancy/refer_flag_pregnancy_issues" type="string"/>
-      <bind calculate="../pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications" nodeset="/pregnancy/refer_flag_pregnancy_complications" type="string"/>
-      <bind calculate="if( /pregnancy/n_previous_anc_visits  = 0 and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3, 1,0)" nodeset="/pregnancy/refer_flag_anc_visit_6m_or_more" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/pregnancy/meta/instanceID" readonly="true()" type="string"/>
+1, 0)"/>
+      <bind nodeset="/pregnancy/refer_flag_emergency_danger_sign" type="string" calculate="../danger_signs/emergency_danger_sign_referral"/>
+      <bind nodeset="/pregnancy/refer_flag_pregnancy_issues" type="string" calculate="../pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues"/>
+      <bind nodeset="/pregnancy/refer_flag_pregnancy_complications" type="string" calculate="../pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications"/>
+      <bind nodeset="/pregnancy/refer_flag_anc_visit_6m_or_more" type="string" calculate="if( /pregnancy/n_previous_anc_visits  = 0 and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0 and  /pregnancy/pregnancy_months_left  &lt;= 3, 1,0)"/>
+      <bind nodeset="/pregnancy/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
@@ -5255,6 +5335,12 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <input ref="/pregnancy/inputs/contact/name"/>
         <input ref="/pregnancy/inputs/contact/date_of_birth"/>
       </group>
+    </group>
+    <group ref="/pregnancy/covid19_intro">
+      <label ref="jr:itext('/pregnancy/covid19_intro:label')"/>
+      <input ref="/pregnancy/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/pregnancy/covid19_intro/covid19_intro_note:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/client_information">
       <label ref="jr:itext('/pregnancy/client_information:label')"/>
@@ -5571,6 +5657,9 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
     </group>
     <group appearance="field-list" ref="/pregnancy/rch_card">
       <label ref="jr:itext('/pregnancy/rch_card:label')"/>
+      <input ref="/pregnancy/rch_card/covid19_heath_card_note">
+        <label ref="jr:itext('/pregnancy/rch_card/covid19_heath_card_note:label')"/>
+      </input>
       <select1 ref="/pregnancy/rch_card/is_rch_card_available">
         <label ref="jr:itext('/pregnancy/rch_card/is_rch_card_available:label')"/>
         <item>
@@ -5623,15 +5712,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_intro:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_1">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_115"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_119"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_116/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_120/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -5687,15 +5776,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/observe_danger_signs:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_2">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_123"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_127"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_124/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_128/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -5818,6 +5907,9 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
             <value>no</value>
           </item>
         </select1>
+        <input ref="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note">
+          <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note:label')"/>
+        </input>
         <select1 ref="/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor">
           <label ref="jr:itext('/pregnancy/pregnancy_issues_group/pregnancy_and_pallor/pallor:label')"/>
           <item>
@@ -6102,6 +6194,12 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
           <label ref="jr:itext('/pregnancy/llints/mosquito_net_qn/free_mosquito_net:label')"/>
         </input>
       </group>
+    </group>
+    <group appearance="field-list" ref="/pregnancy/pregnant_woman_rights">
+      <label ref="jr:itext('/pregnancy/pregnant_woman_rights:label')"/>
+      <input ref="/pregnancy/pregnant_woman_rights/list_of_rights">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_rights/list_of_rights:label')"/>
+      </input>
     </group>
     <group ref="/pregnancy/quality_of_survery_care">
       <label ref="jr:itext('/pregnancy/quality_of_survery_care:label')"/>
