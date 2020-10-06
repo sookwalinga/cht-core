@@ -351,7 +351,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         </translation>
       </itext>
       <instance>
-        <death_report id="death_report" prefix="J1!death_report!" delimiter="#" version="2020-05-13_11-59">
+        <death_report id="death_report" prefix="J1!death_report!" delimiter="#" version="2020-10-06_12-18">
           <inputs>
             <meta>
               <location>
@@ -389,6 +389,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <house_number/>
           <kitongoji/>
           <phone/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -448,12 +450,14 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/death_report/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
       <bind nodeset="/death_report/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
       <bind nodeset="/death_report/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/death_report/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/death_report/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/death_report/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/death_report_intro/intro" readonly="true()" type="string"/>
-      <bind nodeset="/death_report/death_report_intro/reason_death" type="select1" required="true()" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12"/>
+      <bind nodeset="/death_report/death_report_intro/reason_death" type="select1" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;"/>
       <bind nodeset="/death_report/suspected_maternal_death/date_of_death_maternal" type="date" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" required="true()" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg')"/>
       <bind nodeset="/death_report/suspected_maternal_death/where_death" type="select1" required="true()"/>

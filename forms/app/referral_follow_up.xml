@@ -518,6 +518,8 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <house_number/>
           <kitongoji/>
           <phone/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -635,6 +637,8 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
       <bind nodeset="/referral_follow_up/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
       <bind nodeset="/referral_follow_up/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/referral_follow_up/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/referral_follow_up/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/referral_follow_up/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/household_note" readonly="true()" type="string"/>
