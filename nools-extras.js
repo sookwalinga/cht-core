@@ -197,6 +197,70 @@ module.exports = {
     return null;
   },
 
+  getNextVisitDate: function (c) {
+    if (c.contact && c.contact.date_of_birth) {
+      var birthDate = new Date(c.contact.date_of_birth);
+      var ageInMs = new Date(Date.now() - birthDate.getTime());
+      var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
+
+      if (ageInDays < 3 && this.countConsentingInfantChildVisits(c) === 0)
+        return this.daysAfterBirth(c, (this.day * 5)).getTime();
+
+      else if (ageInDays >= 3 && ageInDays <= 19 && this.countConsentingInfantChildVisits(c) === 0)
+        return this.daysAfterBirth(c, (this.day * 28)).getTime();
+
+      else if (ageInDays >= 20 && ageInDays < 105 && this.countConsentingInfantChildVisits(c) === 0)
+        return this.daysAfterBirth(c, (this.week * 16));
+
+      else if (ageInDays > 105 && this.countConsentingInfantChildVisits(c) === 0)
+       return this.daysAfterBirth(c, (this.week * 26)); 
+
+      //Between 20 days and 11 weeks 
+      else if (ageInDays >= 20 && ageInDays < 77 && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.week * 12));
+
+      //Between 11 weeks and 15 weeks 
+      else if (ageInDays >= 77 && ageInDays < 105 && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.week * 16));
+
+      //Between 15 weeks and 6 months 
+      else if (ageInDays >= 105 && ageInDays < (this.month * 6) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.week * 26));
+
+      //Between 6 months and 9 months 
+      else if (ageInDays >= (this.month * 6) && ageInDays < (this.month * 9) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.week * 42));
+
+      //Between 9 months and 12 months 
+      else if (ageInDays >= (this.month * 9) && ageInDays < (this.month * 12) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.month * 13));
+
+      //Between 12 months and 15 months 
+      else if (ageInDays >= (this.month * 12) && ageInDays < (this.month * 15) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.month * 16));
+
+      //Between 15 months and 18 months 
+      else if (ageInDays >= (this.month * 15) && ageInDays < (this.month * 18) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.month * 20));
+
+      //Between 18 months and 24 months 
+      else if (ageInDays >= (this.month * 18) && ageInDays < (this.month * 24) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.month * 25));
+
+      //Greater than or equal to  2 years 
+      else if (ageInDays >= (this.month * 24) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.month * 39));
+
+      //Greater than or equal to  3 years 
+      else if (ageInDays >= (this.month * 24) && this.countConsentingInfantChildVisits(c) > 0)
+        return this.daysAfterBirth(c, (this.month * 51));
+
+    }
+    return;
+  },
+
+
+
   isSmallBaby: function (c) {
     var small;
     var reportsFound = [];
@@ -459,225 +523,171 @@ module.exports = {
   },
 
   getBcg: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bcg === 'yes';
+       c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bcg === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
     }
     return result;
   },
 
   getBopv0: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv0 === 'yes';
+       c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.bopv0_date;
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
     }
     return result;
   },
 
   getBopv1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv1 === 'yes';
+      c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv1 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
     }
     return result;
   },
 
   getDtp_hepb_hib1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib1 === 'yes';
+      c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib1 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
     }
     return result;
   },
 
   getPcvi1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi1 === 'yes';
+       c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi1 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
     }
     return result;
   },
 
   getRota1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota1 === 'yes';
+      c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota1 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
     }
     return result;
   },
 
   getBopv2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv2 === 'yes';
+      c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv2 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getDtp_hepb_hib2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib2 === 'yes';
+      c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib2 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getPcvi2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi2 === 'yes';
+     c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi2 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getRota2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota2 === 'yes';
+      c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota2 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getBopv3: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv3 === 'yes';
+       c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv3 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getDtp_hepb_hib3: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib3 === 'yes';
+       c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib3 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getPcvi3: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi3 === 'yes';
+     c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi3 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getIpv: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_ipv === 'yes';
+     c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_ipv === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getSurua_rubella1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella1 === 'yes';
+       c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella1 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
 
   getSurua_rubella2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    var result = '';
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella2 === 'yes';
+      c.reports.filter(function (r) {
+        result =  r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella2 === 'yes';
       });
-      if (reportsFound.length > 0) {
-        result = 1;
-      }
+      
     }
     return result;
   },
@@ -804,7 +814,7 @@ module.exports = {
           r.fields.confirm_delivery &&
           r.fields.confirm_delivery.pregnancy_outcome &&
           ((r.fields.confirm_delivery.pregnancy_outcome === 'did_deliver') ||
-          (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
+            (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
       });
       earlyTerminations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
