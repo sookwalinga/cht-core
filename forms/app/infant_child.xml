@@ -1015,9 +1015,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/hand_washing:label">
             <value>Hand Washing</value>
           </text>
-          <text id="/infant_child/immunizations/ask_for_health_card:label">
-            <value>Now I would like to review your child's health card to make sure they have received all their vaccines so far. Please hand me your child's health card.</value>
-          </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Ask mother to make sure facility staff records vaccinations on Child Health Card.&lt;/span&gt;</value>
           </text>
@@ -1039,9 +1036,6 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/b0pv2_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
-          </text>
           <text id="/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg">
             <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
@@ -1055,85 +1049,46 @@ Newborns can get an infection more easily than an adult or an older childInfecti
             <value>Enter the date that the child received the bOPV 0 (Polio, at birth) vaccine</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg">
-            <value>.</value>
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:label">
             <value>Enter the date that the child received the bOPV 1 (Polio, week 6) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv1_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv1_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv2_date:label">
             <value>Enter the date that the child received the bOPV 2 (Polio, week 10) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv1:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV1 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv3_date:label">
             <value>Enter the date that the child received the bOPV 3 (Polio, week 14) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv0_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv1_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV1 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv2_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt; This vaccine cannot be administered before bOPV2 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:label">
             <value>Enter the date that the child received the DTP-HepB-Hib 1 (Penta, Week 6) vaccine</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:label">
             <value>Enter the date that the child received the DTP-HepB-Hib 2 (Penta, Week 10) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_dtp_hebp_hib1:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before DTP-HepB-Hib 1 (Penta, Week 6) vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:label">
             <value>Enter the date that the child received the DTP-HepB-Hib 3 (Penta, Week 14) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_bopv0_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib1_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before DTP-HepB-Hib 1 (Penta, Week 6) vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib2_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt; This vaccine cannot be administered before DTP-HepB-Hib 2 (Penta, Week 10) vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/ipv_date:label">
             <value>Enter the date that the child received the IPV vaccine</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/ipv_date_lt_bopv0_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/ipv_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/msg_for_chv_bcg:label">
             <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
@@ -1189,41 +1144,23 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark:label">
             <value>&lt;span style="color:#f58a1f"&gt;Normally, when an infant receives BCG vaccination, a vaccine mark should be visible on the right arm after 3 months. If the vaccine mark is not visible, then advice the mother to take her child to the health facility to receive another BCG vaccination.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcv1_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcv1_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:label">
             <value>Enter the date that the child received the PCV 1 (Penumococcal , Pneumonia, Week 6) vaccine</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:label">
             <value>Enter the date that the child received the PCV 2 (Penumococcal , Pneumonia, Week 10) .</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;PCVi2 vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_dtp_pcvi1:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt; This vaccine cannot be administered before PCV1 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:label">
             <value>Enter the date that the child received the PCV 3 (Penumococcal , Pneumonia, Week 14) .</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_bopv0_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi1_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before PCV 1 (Penumococcal , Pneumonia, Week 6) vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi2_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt; This vaccine cannot be administered before PCV 2 (Penumococcal , Pneumonia, Week 10) vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bcg/no:label">
             <value>No</value>
@@ -1369,47 +1306,29 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella2:label">
             <value>Did the child receive the Surua - Rubella 2 (18 months) vaccine?</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/rota1_date:label">
             <value>Enter the date that the child received the Rota 1 (Week 6) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota1_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota1_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota2_date:label">
             <value>Enter the date that the child received the Rota 2 (Week 10) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota2_date_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota2_date_lt_rota1_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt; This vaccine cannot be administered before Rota1 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota2_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
-          </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg">
-            <value>-</value>
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:label">
             <value>Enter the date that the child received the Surua - Rubella 1 (9 months) vaccine</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date_lt_bopv0_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg">
+            <value>Vaccine date should be between the child's birthdate and today.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:label">
             <value>Enter the date that the child received the Surua - Rubella 2 (18 months) vaccine</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date_lt_bopv0_date:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;This vaccine cannot be administered before bOPV0 vaccine. &lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Vaccine date should be between child's birthdate and today&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/infant_child/immunizations/too_old_note:label">
             <value>Okay, please continue taking care of your child.</value>
@@ -3324,9 +3243,6 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/hand_washing:label">
             <value>Uoshaji wa mikono</value>
           </text>
-          <text id="/infant_child/immunizations/ask_for_health_card:label">
-            <value>Sasa nitapendelea kupitia kadi la kliniki la mtoto kuhakikisha amepata/wamepata chanjo zote stahiki mpaka sasa. Naomba unioneshe kadi ya mtoto wako.</value>
-          </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Muombe mama ahakikishe kuwa wahudumu wa kituo cha afya wanaandika rikodi kuhusu chanjo kwenye kadi la afya la mtoto.&lt;/span&gt;</value>
           </text>
@@ -3348,9 +3264,6 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/b0pv2_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
-          </text>
           <text id="/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg">
             <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
@@ -3364,85 +3277,46 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>Ingiza tarehe mtoto aliyopata chanjo ya bOPV 0 (Polio, Kupooza, anapozaliwa).</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg">
-            <value>-</value>
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv1_date:label">
             <value>Ingiza tarehe mtoto aliyopata chanjo ya bOPV 1 (Polio, Kupooza, wiki 6).</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv1_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Chanjo hii haiwezi kupewa kabla ya BOPV0.&lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv1_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv2_date:label">
             <value>Ingiza tarehe mtoto aliyopata chanjo ya bOPV 2 (Polio, kupooza, wiki 10).</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv0:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv1:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV1 &lt;/span&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/bopv3_date:label">
             <value>Ingiza tarehe ya ambayo mtoto amepata chanjo ya bOPV 3 (Polio, kupooza, wiki 14).</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv0_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv1_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV1 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv2_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV2 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/bopv3_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:label">
             <value>Ingiza tarehe mtoto aliyopata chanjo ya DTP-HepB-Hib 1 (Penta) (Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 6).</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya DTP-HepB-Hib2 (Penta) (Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 10).</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_bopv0:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_dtp_hebp_hib1:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya DTP-HepB-Hib 1 (Penta, Wiki 6) &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya DTP-HepB-Hib 3 (Penta, Donda koo, kifaduro, pepopunda, Hipatitis B, Wiki 14).</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_bopv0_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib1_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya DTP-HepB-Hib 1 (Penta, Wiki 6) &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib2_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya DTP-HepB-Hib 2 (Penta, Week 10) &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_lt_bopv0:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/dtp_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/ipv_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya IPV.</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/ipv_date_lt_bopv0_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/ipv_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/msg_for_chv_bcg:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
@@ -3463,7 +3337,7 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
@@ -3498,41 +3372,23 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark:label">
             <value>&lt;span style="color:#f58a1f"&gt;Kawaida mtoto akishachomwa sindano ya chanjo ya BCG inabidi baada ya miezi mitatu kovu ionekanwe kwenye bega la kulia la mtoto. Kama hutoona kovu imetokea, mshauri mama ampeleke mtoto kituo cha Afya na kuwaambia watoa huduma waliopo kituo cha Afya ili apatiwe chanjo tena. &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcv1_lt_bopv0:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya boPV0.&lt;/span&gt;&lt;/div&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcv1_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi1_date:label">
             <value>Ingiza tarehe mtoto aliyopata chanjo ya PCV 1 (Penumococcal , Nimonia, Wiki 6).</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi2_date:label">
             <value>Ingiza tarehe mtoto ambayo amepata chanjo ya PCV 2 (Penumococcal , Nimonia, Wiki 10).</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_bopv0:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo ya PCVi2 haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_dtp_pcvi1:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya PCV1 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi2_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/pcvi3_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya PCV 3 (Penumococcal , Nimonia, Week 14).</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_bopv0_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi1_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya PCV 1 (Penumococcal , Pneumonia, Week 6) &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi2_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya PCV 2 (Penumococcal , Pneumonia, Week 10) &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/pcvi3_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/received_bcg/no:label">
             <value>Hapana</value>
@@ -3678,26 +3534,17 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/immunizations/record_vaccines/received_surua_rubella2:label">
             <value>Je mtoto amepata chanjo ya Surua-Rubella 2 (miezi 18) ?</value>
           </text>
+          <text id="/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
+          </text>
           <text id="/infant_child/immunizations/record_vaccines/rota1_date:label">
             <value>Ingiza tarehe mtoto aliyopata chanjo ya Rota 1 (Kuharisha, Wiki 6) .</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota1_lt_bopv0:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota1_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/rota2_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Rota 2 (kuharisha, Wiki 10).</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota2_date_lt_bopv0:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota2_date_lt_rota1_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya Rota1 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/rota2_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg">
             <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
@@ -3705,20 +3552,11 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Surua-Rubella1 (Miezi 9).</value>
           </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date_lt_bopv0_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella1_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
+          <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg">
+            <value>Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date:label">
             <value>Ingiza tarehe ambayo mtoto amepata chanjo ya Surua-Rubella 2 (Miezi 18).</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date_lt_bopv0_date:label">
-            <value>&lt;span style="color:#a94442;font-style: italic"&gt;Chanjo hii haiwezi kupewa kabla ya chanjo ya bOPV0 &lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/immunizations/record_vaccines/surua_rubella2_date_not_in_future:label">
-            <value>&lt;div style="background-color:#f2dede;position:absolute;left:0px;top:-2em;width:100%;padding:0 0 1em 1em;"&gt;&lt;span style="color:#a94442;font-weight: bold;font-size:14px"&gt;Tarehe ya chanjo iwe baina ya tarehe ya kuzaliwa mtoto na tarehe ya leo.&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/infant_child/immunizations/record_vaccines:label">
             <value>-</value>
@@ -4993,7 +4831,6 @@ Kwa mtoto wako unaweza:</value>
             <vaccines_reminder_note/>
             <covid19_heath_card_note/>
             <has_health_card/>
-            <ask_for_health_card/>
             <record_vaccines>
               <msg_for_chv_record_vaccine/>
               <msg_for_chv_bcg/>
@@ -5006,83 +4843,45 @@ Kwa mtoto wako unaweza:</value>
               <msg_for_chv_bopv1/>
               <received_bopv1/>
               <bopv1_date/>
-              <bopv1_not_in_future/>
-              <bopv1_lt_bopv0/>
               <msg_for_chv_hepb_hib1/>
               <received_dtp_hepb_hib1/>
               <dtp_hebp_hib1_date/>
-              <dtp_not_in_future/>
-              <dtp_lt_bopv0/>
               <msg_for_chv_pcvi1/>
               <received_pcvi1/>
               <pcvi1_date/>
-              <pcv1_not_in_future/>
-              <pcv1_lt_bopv0/>
               <msg_for_chv_rota1/>
               <received_rota1/>
               <rota1_date/>
-              <rota1_not_in_future/>
-              <rota1_lt_bopv0/>
               <msg_for_chv_bobv2/>
               <received_bopv2/>
               <bopv2_date/>
-              <b0pv2_not_in_future/>
-              <bopv2_lt_bopv1/>
-              <bopv2_lt_bopv0/>
               <msg_for_chv_hepb_hib2/>
               <received_dtp_hepb_hib2/>
               <dtp_hebp_hib2_date/>
-              <dtp_hebp_hib2_not_in_future/>
-              <dtp_hebp_hib2_lt_dtp_hebp_hib1/>
-              <dtp_hebp_hib2_lt_bopv0/>
               <msg_for_chv_pcvi2/>
               <received_pcvi2/>
               <pcvi2_date/>
-              <pcvi2_date_not_in_future/>
-              <pcvi2_date_lt_dtp_pcvi1/>
-              <pcvi2_date_lt_bopv0/>
               <msg_for_chv_rota2/>
               <received_rota2/>
               <rota2_date/>
-              <rota2_date_not_in_future/>
-              <rota2_date_lt_rota1_date/>
-              <rota2_date_lt_bopv0/>
               <msg_for_chv_bopv3/>
               <received_bopv3/>
               <bopv3_date/>
-              <bopv3_date_not_in_future/>
-              <bopv3_date_lt_bopv2_date/>
-              <bopv3_date_lt_bopv1_date/>
-              <bopv3_date_lt_bopv0_date/>
               <msg_for_chv_dtp_hepb_hib3/>
               <received_dtp_hepb_hib3/>
               <dtp_hebp_hib3_date/>
-              <dtp_hebp_hib3_date_not_in_future/>
-              <dtp_hebp_hib3_date_lt_dtp_hebp_hib2_date/>
-              <dtp_hebp_hib3_date_lt_dtp_hebp_hib1_date/>
-              <dtp_hebp_hib3_date_lt_bopv0_date/>
               <msg_for_chv_received_pcvi3/>
               <received_pcvi3/>
               <pcvi3_date/>
-              <pcvi3_date_not_in_future/>
-              <pcvi3_date_lt_pcvi2_date/>
-              <pcvi3_date_lt_pcvi1_date/>
-              <pcvi3_date_lt_bopv0_date/>
               <msg_for_chv_ipv/>
               <received_ipv/>
               <ipv_date/>
-              <ipv_date_not_in_future/>
-              <ipv_date_lt_bopv0_date/>
               <msg_for_chv_surua_rubella1/>
               <received_surua_rubella1/>
               <surua_rubella1_date/>
-              <surua_rubella1_date_not_in_future/>
-              <surua_rubella1_date_lt_bopv0_date/>
               <msg_for_chv_surua_rubella2/>
               <received_surua_rubella2/>
               <surua_rubella2_date/>
-              <surua_rubella2_date_not_in_future/>
-              <surua_rubella2_date_lt_bopv0_date/>
             </record_vaccines>
             <msg_for_chv_vaccine_up_to_date/>
             <vaccines_up_to_date/>
@@ -5325,13 +5124,13 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/first_visit_6_months" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
       <bind nodeset="/infant_child/first_visit_6_months/delivery_location" type="select1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/child_card_available" type="select1" required="true()"/>
-      <bind nodeset="/infant_child/first_visit_6_months/birthweight_on_child_card" type="select1" required="true()" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/first_visit_6_months/birthweight_on_child_card" type="select1" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/child_birthweight" type="decimal" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)" constraint=". &gt;= 0.5 and . &lt;= 7" required="true()" jr:constraintMsg="jr:itext('/infant_child/first_visit_6_months/child_birthweight:jr:constraintMsg')"/>
-      <bind nodeset="/infant_child/first_visit_6_months/child_size_birth" type="select1" required="true()" relevant="(selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;no&quot;) or selected( /infant_child/first_visit_6_months/child_card_available ,&quot;no&quot;))"/>
+      <bind nodeset="/infant_child/first_visit_6_months/child_size_birth" type="select1" relevant="(selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;no&quot;) or selected( /infant_child/first_visit_6_months/child_card_available ,&quot;no&quot;))" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/normal_baby_note" readonly="true()" type="string" relevant=" /infant_child/first_visit_6_months/child_birthweight  &gt;= 2 or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;regular&quot;) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;large&quot;)"/>
       <bind nodeset="/infant_child/first_visit_6_months/small_baby_today" type="string" calculate="if((selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;) and  /infant_child/first_visit_6_months/child_birthweight  &gt;= 0.5 and  /infant_child/first_visit_6_months/child_birthweight  &lt; 2) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;small&quot;),1,0)"/>
       <bind nodeset="/infant_child/first_visit_6_months/small_baby_note" readonly="true()" type="string" relevant=" /infant_child/first_visit_6_months/small_baby_today =1"/>
-      <bind nodeset="/infant_child/first_visit_6_months/has_received_small_baby_services" type="select1" required="true()" relevant=" /infant_child/first_visit_6_months/small_baby_today =1"/>
+      <bind nodeset="/infant_child/first_visit_6_months/has_received_small_baby_services" type="select1" relevant=" /infant_child/first_visit_6_months/small_baby_today =1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/refer_small_baby_note" readonly="true()" type="string" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/first_visit_6_months/refer_flag_small_baby" type="string" calculate="if(selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;),1,0)"/>
       <bind nodeset="/infant_child/first_visit_6_months/encourage_small_baby_note" readonly="true()" type="string" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)"/>
@@ -5426,9 +5225,9 @@ selected( /infant_child/child_danger_signs/child_difficulty_fast_breathing ,&quo
       <bind nodeset="/infant_child/child_other_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/child_other_danger_signs/generated_table_list_label_151" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152" type="select1"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_below_6_months" type="select1" required="true()" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_6_months_to_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 6) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_above_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 24)"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_below_6_months" type="select1" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_6_months_to_2_years" type="select1" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 6) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 24)" required="true()"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_above_2_years" type="select1" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_coughing" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_cold" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_skin_boils" type="select1" required="true()"/>
@@ -5450,22 +5249,22 @@ selected( /infant_child/child_other_danger_signs/child_cold ,&quot;no&quot;) and
 selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/malnutrition_anemia/covid19_growth_booklet_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 2) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/growth_graph_range" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 2) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/growth_graph_range" type="select1" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 2) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6)" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/child_underweight_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/growth_graph_range ,&quot;neg_2_neg_3&quot;) or selected( /infant_child/malnutrition_anemia/growth_graph_range ,&quot;lt_neg_3&quot;)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/muac_color" type="select1" required="true()" relevant="false()"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/muac_color" type="select1" relevant="false()" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_green_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;green&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_yellow_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;yellow&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_red_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/refer_muac_flag" type="string" calculate="if(selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;),1,0)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/covid19_palm_pallor_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_chv_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor" type="select1" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_referral_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/refer_palm_pallor_flag" type="string" calculate="if(selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;),1,0)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/diff_foods_should_give_child" type="select" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/diff_foods_should_give_child" type="select" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/score" type="string" calculate="count-selected( /infant_child/malnutrition_anemia/diff_foods_should_give_child )"/>
       <bind nodeset="/infant_child/malnutrition_anemia/calculated_score" type="string" calculate="if( /infant_child/malnutrition_anemia/score &gt;2,1,0)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/mny_solid_food_feed_child" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/mny_solid_food_feed_child" type="select1" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)" required="true()"/>
       <bind nodeset="/infant_child/small_baby_ever" type="string" calculate="if( /infant_child/first_visit_6_months/small_baby_today =1 or  /infant_child/previous_small_baby =1,1,0)"/>
       <bind nodeset="/infant_child/hand_washing" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/hand_washing/note_hand_washing" readonly="true()" type="string"/>
@@ -5475,12 +5274,12 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_warm_note" readonly="true()" type="string" relevant=" /infant_child/small_baby_ever =0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding" relevant=" /infant_child/n_child_visits =0 and  /infant_child/small_baby_ever =0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/ever_breastfed" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/time_to_breastfeed" type="select1" required="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/ever_breastfed ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/time_to_breastfeed" type="select1" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/ever_breastfed ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding" type="select1" required="true()"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/how_breastfeeding_going_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/breastfeeding_positions_length_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/observe_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding" type="select1" required="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding" type="select1" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/not_exclusively_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding/exclusive_breastfeeding_bango_kitita" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;yes&quot;) or selected( /infant_child/essential_newborn_breastfeeding/breastfeeding/exclusively_breastfeeding ,&quot;no&quot;)"/>
@@ -5504,15 +5303,15 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/small_baby_breastfeeding" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/small_baby_ever  = 1 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_definition_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_ever_breastfed" type="select1" required="true()" relevant=" /infant_child/n_child_visits  = 0"/>
-      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_time_breastfeed" type="select1" required="true()" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_ever_breastfed ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding" type="select1" required="true()" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_ever_breastfed ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_times_breastfed_daily" type="select1" required="true()" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_ever_breastfed" type="select1" relevant=" /infant_child/n_child_visits  = 0" required="true()"/>
+      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_time_breastfeed" type="select1" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_ever_breastfed ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding" type="select1" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_ever_breastfed ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_times_breastfed_daily" type="select1" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_more_note" readonly="true()" type="string" relevant="not(selected( /infant_child/small_baby_breastfeeding/small_baby_times_breastfed_daily ,&quot;five_more_times_day&quot;))"/>
-      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_exclusively" type="select1" required="true()" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_exclusively" type="select1" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_exclusive_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_breastfeed_exclusively ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_not_exclusive_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_breastfeed_exclusively ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_well" type="select1" required="true()" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_breastfeed_well" type="select1" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_currently_breastfeeding ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_not_breastfeed_well_note" readonly="true()" type="string" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_breastfeed_well ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_other_than_breast_milk" type="select1" required="true()"/>
       <bind nodeset="/infant_child/small_baby_breastfeeding/small_baby_other_than_breast_milk_yes" readonly="true()" type="string" relevant="selected( /infant_child/small_baby_breastfeeding/small_baby_other_than_breast_milk ,&quot;yes&quot;)"/>
@@ -5534,7 +5333,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/essential_newborn_care_nutrition" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/variety_foods_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/food_hygiene_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)"/>
+      <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding" type="select1" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_care_nutrition/still_breastfeeding ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/not_still_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_care_nutrition/still_breastfeeding ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_above_6_months" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)"/>
@@ -5543,101 +5342,62 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/immunizations/why_vaccines_important_note" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/immunizations/vaccines_reminder_note" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/immunizations/covid19_heath_card_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/immunizations/has_health_card" type="select1" required="true()" relevant=" /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 6) or  /infant_child/n_child_visits  &gt;= 1"/>
-      <bind nodeset="/infant_child/immunizations/ask_for_health_card" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0 and selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines" relevant="(selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) or selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)) and  /infant_child/age_years  &lt; 2"/>
+      <bind nodeset="/infant_child/immunizations/has_health_card" type="select1" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;) and  /infant_child/age_years  &lt; 2"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bcg" readonly="true()" type="string" relevant=" /infant_child/previous_bcg  = 0"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bcg" type="select1" relevant=" /infant_child/previous_bcg  = 0"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" required="true()" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;) and  /infant_child/immunizations/record_vaccines/bcg_date  != '' and  /infant_child/immunizations/record_vaccines/bcg_date  &lt;= date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0" readonly="true()" type="string" relevant=" /infant_child/previous_bopv0  = ''"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" type="select1" required="true()" relevant=" /infant_child/previous_bopv0  = ''"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0" readonly="true()" type="string" relevant=" /infant_child/previous_bopv0  = 0"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" type="select1" relevant=" /infant_child/previous_bopv0  = 0" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv1" readonly="true()" type="string" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" type="select1" required="true()" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv1_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/bopv1_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/bopv1_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/bopv1_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/bopv1_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib1  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib1  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi1" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi1  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" type="select1" required="true()" relevant=" /infant_child/previous_pcvi1  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcv1_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/pcvi1_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/pcvi1_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcv1_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/pcvi1_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/pcvi1_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/pcvi1_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota1" readonly="true()" type="string" relevant=" /infant_child/previous_rota1  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" type="select1" required="true()" relevant=" /infant_child/previous_rota1  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/rota1_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/rota1_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/rota1_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/rota1_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/rota1_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bobv2" readonly="true()" type="string" relevant=" /infant_child/previous_bopv2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" type="select1" required="true()" relevant=" /infant_child/previous_bopv2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv1_date  and . &gt;=  /infant_child/previous_bopv1  and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/b0pv2_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv2_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/bopv2_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv1" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv1_date  != '' and  /infant_child/immunizations/record_vaccines/bopv2_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv1_date  &gt;  /infant_child/immunizations/record_vaccines/bopv2_date  or  /infant_child/previous_bopv1  &gt;  /infant_child/immunizations/record_vaccines/bopv2_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/bopv2_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/bopv2_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/bopv2_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0  and . &gt;=  /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  and . &gt;=  /infant_child/previous_dtp_hepb_hib1 " relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_dtp_hebp_hib1" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  != '' and  /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  != '' and ( /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  or  /infant_child/previous_dtp_hepb_hib1  &gt;  /infant_child/inputs/dtp_hepb_hib2 )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi2" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" type="select1" required="true()" relevant=" /infant_child/previous_pcvi2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0  and . &gt;=  /infant_child/immunizations/record_vaccines/pcvi1_date  and . &gt;=  /infant_child/previous_pcvi1 " relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/pcvi2_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/pcvi2_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_dtp_pcvi1" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/pcvi1_date  != '' and  /infant_child/immunizations/record_vaccines/pcvi2_date  != '' and ( /infant_child/immunizations/record_vaccines/pcvi1_date  &gt;  /infant_child/immunizations/record_vaccines/pcvi2_date  or  /infant_child/previous_pcvi1  &gt;  /infant_child/immunizations/record_vaccines/pcvi2_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/pcvi2_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/pcvi2_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/pcvi2_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota2" readonly="true()" type="string" relevant=" /infant_child/previous_rota2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" type="select1" required="true()" relevant=" /infant_child/previous_rota2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0  and . &gt;=  /infant_child/immunizations/record_vaccines/rota1_date  and . &gt;=  /infant_child/previous_rota1 " relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/rota2_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/rota2_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date_lt_rota1_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/rota1_date  != '' and  /infant_child/immunizations/record_vaccines/rota2_date  != '' and ( /infant_child/immunizations/record_vaccines/rota1_date  &gt;  /infant_child/immunizations/record_vaccines/rota2_date  or  /infant_child/previous_rota1  &gt;  /infant_child/immunizations/record_vaccines/rota2_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date_lt_bopv0" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/rota2_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/rota2_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/rota2_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3" readonly="true()" type="string" relevant=" /infant_child/previous_bopv2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" type="select1" required="true()" relevant=" /infant_child/previous_bopv2  = '' and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0  and . &gt;=  /infant_child/immunizations/record_vaccines/bopv2_date  and . &gt;=  /infant_child/previous_bopv2  and . &gt;=  /infant_child/immunizations/record_vaccines/bopv1_date  and . &gt;=  /infant_child/previous_bopv1 " relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv3_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/bopv3_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv2_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv2_date  != '' and  /infant_child/immunizations/record_vaccines/bopv3_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv2_date  &gt;  /infant_child/immunizations/record_vaccines/bopv3_date  or  /infant_child/previous_bopv2  &gt;  /infant_child/immunizations/record_vaccines/bopv3_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv1_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv1_date  != '' and  /infant_child/immunizations/record_vaccines/bopv3_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv1_date  &gt;  /infant_child/immunizations/record_vaccines/bopv3_date  or  /infant_child/previous_bopv1  &gt;  /infant_child/immunizations/record_vaccines/bopv3_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv0_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/bopv3_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/bopv3_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/bopv3_date )"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" type="select1" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" type="select1" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi1" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" type="select1" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota1" readonly="true()" type="string" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" type="select1" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bobv2" readonly="true()" type="string" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" type="select1" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" type="select1" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi2" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" type="select1" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota2" readonly="true()" type="string" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" type="select1" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3" readonly="true()" type="string" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" type="select1" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_dtp_hepb_hib3" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0  and . &gt;=  /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  and . &gt;=  /infant_child/previous_dtp_hepb_hib2  and . &gt;=  /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  and . &gt;=  /infant_child/previous_dtp_hepb_hib2 " relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib2_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  != '' and  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  != '' and ( /infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  or  /infant_child/previous_dtp_hepb_hib2  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib1_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  != '' and  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  != '' and ( /infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  or  /infant_child/previous_dtp_hepb_hib1  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_bopv0_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date )"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" type="select1" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_received_pcvi3" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" type="select1" required="true()" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0  and . &gt;=  /infant_child/immunizations/record_vaccines/pcvi2_date  and . &gt;=  /infant_child/previous_pcvi2  and . &gt;=  /infant_child/immunizations/record_vaccines/pcvi1_date  and . &gt;=  /infant_child/previous_pcvi1 " relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/pcvi3_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/pcvi3_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi2_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/pcvi2_date  != '' and  /infant_child/immunizations/record_vaccines/pcvi3_date  != '' and ( /infant_child/immunizations/record_vaccines/pcvi2_date  &gt;  /infant_child/immunizations/record_vaccines/pcvi3_date  or  /infant_child/previous_pcvi2  &gt;  /infant_child/immunizations/record_vaccines/pcvi3_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi1_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/pcvi1_date  != '' and  /infant_child/immunizations/record_vaccines/pcvi3_date  != '' and ( /infant_child/immunizations/record_vaccines/pcvi1_date  &gt;  /infant_child/immunizations/record_vaccines/pcvi3_date  or  /infant_child/previous_pcvi1  &gt;  /infant_child/immunizations/record_vaccines/pcvi3_date )"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_bopv0_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/pcvi3_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/pcvi3_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/pcvi3_date )"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" type="select1" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_ipv" readonly="true()" type="string" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" type="select1" required="true()" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/ipv_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/ipv_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date_lt_bopv0_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/ipv_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/ipv_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/ipv_date )"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" type="select1" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella1" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/surua_rubella1_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/surua_rubella1_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date_lt_bopv0_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/surua_rubella1_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/surua_rubella1_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/surua_rubella1_date )"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" type="select1" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today())) and . &gt;=  /infant_child/immunizations/record_vaccines/bopv0_date  and . &gt;=  /infant_child/previous_bopv0 " relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date_not_in_future" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/surua_rubella2_date  &lt; date-time(decimal-date-time( /infant_child/child_date_of_birth )) or  /infant_child/immunizations/record_vaccines/surua_rubella2_date  &gt; date-time(decimal-date-time(today()))"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date_lt_bopv0_date" readonly="true()" type="string" relevant=" /infant_child/immunizations/record_vaccines/bopv0_date  != '' and  /infant_child/immunizations/record_vaccines/surua_rubella2_date  != '' and ( /infant_child/immunizations/record_vaccines/bopv0_date  &gt;  /infant_child/immunizations/record_vaccines/surua_rubella2_date  or  /infant_child/previous_bopv0  &gt;  /infant_child/immunizations/record_vaccines/surua_rubella2_date )"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" type="select1" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/vaccines_up_to_date" type="select1" required="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/vaccines_up_to_date" type="select1" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/immunizations/up_to_date_congrats_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/why_not_vaccines_up_to_date" type="select" required="true()" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/why_not_vaccines_up_to_date" type="select" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)" required="true()"/>
       <bind nodeset="/infant_child/immunizations/family_refused_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;family_refused&quot;)"/>
       <bind nodeset="/infant_child/immunizations/vaccine_schedule_advice_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;clinic_closed&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;not_available&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;asked_to_return&quot;)"/>
       <bind nodeset="/infant_child/immunizations/too_old_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;baby_too_old&quot;)"/>
@@ -5689,9 +5449,9 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/assess_behavior/has_observed_comforting" type="select1" required="true()"/>
       <bind nodeset="/infant_child/assess_behavior/praise_comfort" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/concern_comfort" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/assess_behavior/has_observed_correcting" type="select1" required="true()" relevant="not(selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))"/>
+      <bind nodeset="/infant_child/assess_behavior/has_observed_correcting" type="select1" relevant="not(selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))" required="true()"/>
       <bind nodeset="/infant_child/assess_behavior/discuss_correcting" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_correcting ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/assess_behavior/how_correct" type="select1" required="true()" relevant="selected( /infant_child/assess_behavior/has_observed_correcting ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/assess_behavior/how_correct" type="select1" relevant="selected( /infant_child/assess_behavior/has_observed_correcting ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/assess_behavior/praise_correct" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_correct ,&quot;distracts&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/concern_correct" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_correct ,&quot;scolds&quot;)"/>
       <bind nodeset="/infant_child/problem_solving" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
@@ -5699,47 +5459,47 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/problem_solving/has_stress_concern_play_comm" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/has_stress_concern_play_comm" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_stress_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/has_stress_concern_play_comm ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/has_time_concern_play_comm" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/has_time_concern_play_comm" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_time_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/has_time_concern_play_comm ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/engage_with_child" type="select" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()" jr:constraintMsg="jr:itext('/infant_child/problem_solving/engage_with_child:jr:constraintMsg')"/>
-      <bind nodeset="/infant_child/problem_solving/who_engages" type="select" required="true()" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
+      <bind nodeset="/infant_child/problem_solving/who_engages" type="select" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;told_storied&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;sang&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;took_outside&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;played&quot;) or 
-selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)"/>
+selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/who_engages_other" type="string" relevant="selected( /infant_child/problem_solving/who_engages ,&quot;other&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/who_engages_how_many_hours" type="int" constraint=". &gt;= 0 and . &lt;= 36" required="true()" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
+      <bind nodeset="/infant_child/problem_solving/who_engages_how_many_hours" type="int" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;told_storied&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;sang&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;took_outside&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;played&quot;) or 
-selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_toys" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)" constraint=". &gt;= 0 and . &lt;= 36" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/concern_toys" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_toys_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_toys ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/plays_with_toys_homemade" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/plays_with_toys_manufactured" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/plays_with_toys_household_objects" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/number_books" type="int" constraint=". &gt;= 0 and . &lt;= 100" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_leave_child" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/plays_with_toys_homemade" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/plays_with_toys_manufactured" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/plays_with_toys_household_objects" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/number_books" type="int" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" constraint=". &gt;= 0 and . &lt;= 100" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/concern_leave_child" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern_no" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/days_left_alone_more_than_1h" type="int" constraint=". &gt;= 0 and . &lt;= 7" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h" type="int" constraint=". &gt;= 0 and . &lt;= 7" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/problem_solving/days_left_alone_more_than_1h" type="int" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" constraint=". &gt;= 0 and . &lt;= 7" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h" type="int" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" constraint=". &gt;= 0 and . &lt;= 7" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/covid19_play_communication_note" readonly="true()" type="string" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
@@ -5756,20 +5516,20 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_harsh_treatment" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/concern_harsh_treatment" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_harsh_treatment_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_harsh_treatment ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/refer_child_protection" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_harsh_treatment ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/message_for_chv_child_protection" readonly="true()" type="string" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_stressful_family_environment" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/concern_stressful_family_environment" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_stressul_family_environment_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_stressful_family_environment ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/development_concerns" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and (( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 24))"/>
       <bind nodeset="/infant_child/development_concerns/concern_slow_to_learn" type="select1" required="true()"/>
@@ -5792,13 +5552,13 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <bind nodeset="/infant_child/male_involvement/message_for_chv_male_present" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/male_involvement/was_male_present" type="select1" required="true()"/>
       <bind nodeset="/infant_child/male_involvement/msg_for_chv_male_present_entire_visit" readonly="true()" type="string" relevant="selected( /infant_child/male_involvement/was_male_present ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/male_involvement/male_present_entire_visit" type="select1" required="true()" relevant="selected( /infant_child/male_involvement/was_male_present ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/male_involvement/male_present_entire_visit" type="select1" relevant="selected( /infant_child/male_involvement/was_male_present ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/male_involvement/msg_for_chv_partner_interaction" readonly="true()" type="string" relevant="selected( /infant_child/male_involvement/male_present_entire_visit ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/male_involvement/partner_interaction" type="select1" required="true()" relevant="selected( /infant_child/male_involvement/male_present_entire_visit ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/male_involvement/partner_interaction" type="select1" relevant="selected( /infant_child/male_involvement/male_present_entire_visit ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/child_stool_disposal" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and (( /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)))"/>
       <bind nodeset="/infant_child/child_stool_disposal/discuss_stool" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_stool_disposal/has_latrine" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt;= ( /infant_child/week  * 11)"/>
-      <bind nodeset="/infant_child/child_stool_disposal/latrine_type" type="select1" required="true()" relevant="selected( /infant_child/child_stool_disposal/has_latrine ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/child_stool_disposal/has_latrine" type="select1" relevant=" /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt;= ( /infant_child/week  * 11)" required="true()"/>
+      <bind nodeset="/infant_child/child_stool_disposal/latrine_type" type="select1" relevant="selected( /infant_child/child_stool_disposal/has_latrine ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/child_stool_disposal/note_latrine" readonly="true()" type="string" relevant="selected( /infant_child/child_stool_disposal/has_latrine ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/child_stool_disposal/note_stool_disposal" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/llints" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
@@ -6988,9 +6748,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
           <value>no</value>
         </item>
       </select1>
-      <input ref="/infant_child/immunizations/ask_for_health_card">
-        <label ref="jr:itext('/infant_child/immunizations/ask_for_health_card:label')"/>
-      </input>
       <group ref="/infant_child/immunizations/record_vaccines">
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine:label')"/>
@@ -7049,12 +6806,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <input ref="/infant_child/immunizations/record_vaccines/bopv1_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:label')"/>
         </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv1_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv1_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_lt_bopv0:label')"/>
-        </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1:label')"/>
         </input>
@@ -7071,12 +6822,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_lt_bopv0:label')"/>
         </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi1">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi1:label')"/>
@@ -7095,12 +6840,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <input ref="/infant_child/immunizations/record_vaccines/pcvi1_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:label')"/>
         </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcv1_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcv1_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcv1_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcv1_lt_bopv0:label')"/>
-        </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_rota1">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_rota1:label')"/>
         </input>
@@ -7117,12 +6856,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/rota1_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/rota1_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/rota1_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/rota1_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/rota1_lt_bopv0:label')"/>
         </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_bobv2">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_bobv2:label')"/>
@@ -7141,15 +6874,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <input ref="/infant_child/immunizations/record_vaccines/bopv2_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:label')"/>
         </input>
-        <input ref="/infant_child/immunizations/record_vaccines/b0pv2_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/b0pv2_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv1">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_lt_bopv1:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv2_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_lt_bopv0:label')"/>
-        </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2:label')"/>
         </input>
@@ -7166,15 +6890,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_dtp_hebp_hib1">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_dtp_hebp_hib1:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_lt_bopv0:label')"/>
         </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi2">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi2:label')"/>
@@ -7193,15 +6908,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <input ref="/infant_child/immunizations/record_vaccines/pcvi2_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:label')"/>
         </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcvi2_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_dtp_pcvi1">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date_lt_dtp_pcvi1:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcvi2_date_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date_lt_bopv0:label')"/>
-        </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_rota2">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_rota2:label')"/>
         </input>
@@ -7218,15 +6924,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/rota2_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/rota2_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/rota2_date_lt_rota1_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date_lt_rota1_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/rota2_date_lt_bopv0">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date_lt_bopv0:label')"/>
         </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3:label')"/>
@@ -7245,18 +6942,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <input ref="/infant_child/immunizations/record_vaccines/bopv3_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:label')"/>
         </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv3_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv2_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv2_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv1_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv1_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv0_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date_lt_bopv0_date:label')"/>
-        </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_dtp_hepb_hib3">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_dtp_hepb_hib3:label')"/>
         </input>
@@ -7273,18 +6958,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib2_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib2_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib1_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_dtp_hebp_hib1_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_bopv0_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date_lt_bopv0_date:label')"/>
         </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_received_pcvi3">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_received_pcvi3:label')"/>
@@ -7303,18 +6976,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <input ref="/infant_child/immunizations/record_vaccines/pcvi3_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:label')"/>
         </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcvi3_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi2_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi2_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi1_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date_lt_pcvi1_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/pcvi3_date_lt_bopv0_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date_lt_bopv0_date:label')"/>
-        </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_ipv">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_ipv:label')"/>
         </input>
@@ -7331,12 +6992,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/ipv_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/ipv_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/ipv_date_lt_bopv0_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date_lt_bopv0_date:label')"/>
         </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella1">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella1:label')"/>
@@ -7355,12 +7010,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <input ref="/infant_child/immunizations/record_vaccines/surua_rubella1_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:label')"/>
         </input>
-        <input ref="/infant_child/immunizations/record_vaccines/surua_rubella1_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/surua_rubella1_date_lt_bopv0_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date_lt_bopv0_date:label')"/>
-        </input>
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2:label')"/>
         </input>
@@ -7377,12 +7026,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </select1>
         <input ref="/infant_child/immunizations/record_vaccines/surua_rubella2_date">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/surua_rubella2_date_not_in_future">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date_not_in_future:label')"/>
-        </input>
-        <input ref="/infant_child/immunizations/record_vaccines/surua_rubella2_date_lt_bopv0_date">
-          <label ref="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date_lt_bopv0_date:label')"/>
         </input>
       </group>
       <input ref="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date">
