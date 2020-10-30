@@ -39,6 +39,15 @@
           <text id="/infant_child/assess_behavior/has_observed_correcting:label">
             <value>Have you observed the caregiver correcting the child?</value>
           </text>
+          <text id="/infant_child/assess_behavior/how_comfort/does_not_comfort:label">
+            <value>Is not able to comfort child, and child does not look to caregiver for comfort.</value>
+          </text>
+          <text id="/infant_child/assess_behavior/how_comfort/looks_talks:label">
+            <value>Looks into child's eyes and talks softly to child, gently touches child or holds child closely.</value>
+          </text>
+          <text id="/infant_child/assess_behavior/how_comfort:label">
+            <value>How did the caregiver comfort the child and show love</value>
+          </text>
           <text id="/infant_child/assess_behavior/how_correct/distracts:label">
             <value>Distracts child from unwanted actions with appropriate toy or activity.</value>
           </text>
@@ -139,22 +148,20 @@
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/concern_play:label">
             <value>Playing is important for children. A child who has no opportunities to play will not develop healthily. Children learn by seeing what others do, copying and practicing new things. Play is a great way to help children learn and practice new skills! For example, when they shake a rattle they learn what sound it makes, they learn to move the rattle.</value>
           </text>
-          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/does_not_talk:label">
-            <value>Does not talk to child or talks harshly to child</value>
-          </text>
-          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/draws_smile:label">
-            <value>Draws smile out of child</value>
-          </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/looks_talks:label">
-            <value>Looks into child's eyes and talks softly to child, asks questions</value>
+            <value>Looks into baby's eyes and talks softly to baby</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/not_responsive:label">
-            <value>Tries to force smile or is not responsive to child</value>
+            <value>Tries to force the smile/ does not talk/does nothing to make the baby smile</value>
+          </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/responds_sounds:label">
+            <value>Responds to baby's sounds and gestures to get baby to smile</value>
+          </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate:jr:constraintMsg">
+            <value>You cannot choose option 3 if you have selected other options</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate:label">
-            <value>Can you show me how you talk to your child? Can you show me some of the things you to do when you want to make them smile?
-
-Indicate how caregiver talks to child:</value>
+            <value>Observe a mother/caregiver the way she talks to a baby and makes the baby smiles or tell the caregiver to show you how she/he communicates with the baby then select all what happened:</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_play/no:label">
             <value>No</value>
@@ -233,22 +240,20 @@ A baby and young child begin to understand many words before they can speak, but
 
 &lt;span style="display:block;padding-left:1em"&gt;At this age, children have the tendency of putting everything they get into their mouths. Caregivers should not discourage them from doing this as the mouth is the most sensitive organ at this age which the children use to sense taste, softness, hardness. It is a way of learning. Just make sure that you provide clean and safe items to the child, and that they are medium or large size so the child will not choke.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/does_not_talk:label">
-            <value>Does not talk to baby</value>
-          </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/looks_talks:label">
             <value>Looks into baby's eyes and talks softly to baby</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/not_responsive:label">
-            <value>Tries to force smile or is not responsive to baby</value>
+            <value>Tries to force the smile/ does not talk/does nothing to make the baby smile</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/responds_sounds:label">
             <value>Responds to baby's sounds and gestures to get baby to smile</value>
           </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate:jr:constraintMsg">
+            <value>You cannot choose option 3 if you have selected other options</value>
+          </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate:label">
-            <value>Can you show me how you talk to your baby and how you try to get your baby to smile?
-
-Indicate how caregiver interacts with baby</value>
+            <value>Observe a mother/caregiver the way she talks to a baby and makes the baby smiles or tell the caregiver to show you how she/he communicates with the baby then select all what happened:</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play/does_not_play:label">
             <value>Does not play with child</value>
@@ -258,6 +263,9 @@ Indicate how caregiver interacts with baby</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play/moves_arms_legs:label">
             <value>Moves the baby's arms and legs or gently strokes the child</value>
+          </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:jr:constraintMsg">
+            <value>You cannot choose option 3 if you have selected other options</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:label">
             <value>Can you show me how you play with your baby? Please demonstrate for me. What do you think your child is learning while they play?
@@ -358,13 +366,13 @@ Children communicate with us from a young age, even before learning to speak the
           <text id="/infant_child/child_danger_signs/covid19_child_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Now you are at the stage of screening danger signs for this child. Please avoid touching the child in order to avoid the possibility of corona virus transmission. In case you need to physically examine the child, please ask the client to do so on your behalf.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_137:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_139:label">
             <value>Child Danger Signs</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/child_cold/no:label">
@@ -433,16 +441,16 @@ Children communicate with us from a young age, even before learning to speak the
           <text id="/infant_child/child_other_danger_signs/child_skin_boils:label">
             <value>Does the child have skin boils ?</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_149:label">
+          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_151:label">
             <value>Child Other Danger Sign</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/no_child_other_danger_sign_note:label">
             <value>No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150/no:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150/yes:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -1015,6 +1023,9 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           <text id="/infant_child/hand_washing:label">
             <value>Hand Washing</value>
           </text>
+          <text id="/infant_child/immunizations/ask_for_health_card:label">
+            <value>Now I would like to review your child's health card to make sure they have received all their vaccines so far. Please hand me your child's health card.</value>
+          </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Ask mother to make sure facility staff records vaccinations on Child Health Card.&lt;/span&gt;</value>
           </text>
@@ -1497,6 +1508,9 @@ Do you have a mosquito net?</value>
           <text id="/infant_child/malnutrition_anemia/growth_graph_range/btw_2_neg_2:label">
             <value>Between 2 and -2</value>
           </text>
+          <text id="/infant_child/malnutrition_anemia/growth_graph_range/card_unavailable:label">
+            <value>Card not available</value>
+          </text>
           <text id="/infant_child/malnutrition_anemia/growth_graph_range/lt_neg_3:label">
             <value>Below -3</value>
           </text>
@@ -1561,7 +1575,7 @@ SAY: Your child is in need of special care and attention to keep from getting ma
           <text id="/infant_child/neonatal_danger_signs/covid19_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Now you are at the stage of screening danger signs for this child. Please avoid touching the child in order to avoid the possibility of corona virus transmission. In case you need to physically examine the child, please ask the client to do so on your behalf.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_101:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_103:label">
             <value>Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -1672,13 +1686,13 @@ SAY: Your child is in need of special care and attention to keep from getting ma
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils:label">
             <value>Does the baby have skin boils?</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_119:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121:label">
             <value>Other Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -1804,10 +1818,10 @@ SAY: Your child is in need of special care and attention to keep from getting ma
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;A danger sign has been identified. Advise the mother to go to any nearby health facility within the next 24 hours so a doctor can look at the baby and help.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
@@ -2256,6 +2270,15 @@ For your newborn baby, you can:</value>
           <text id="/infant_child/assess_behavior/has_observed_correcting:label">
             <value>Je umemuona mlezi akimrekebisha mtoto wake?</value>
           </text>
+          <text id="/infant_child/assess_behavior/how_comfort/does_not_comfort:label">
+            <value>Hawezi kufariji mtoto na mtoto hamuangalii mlezi kwa ajili ya kutafuta faraja.</value>
+          </text>
+          <text id="/infant_child/assess_behavior/how_comfort/looks_talks:label">
+            <value>Muangalie mtoto machoni ongea na mtoto kwa upole, kwa upole mguse au mshike mtoto kwa ukaribu.</value>
+          </text>
+          <text id="/infant_child/assess_behavior/how_comfort:label">
+            <value>Je mlezi anamfariji vipi mtoto?</value>
+          </text>
           <text id="/infant_child/assess_behavior/how_correct/distracts:label">
             <value>Muapushe mtoto na vitendo visivyostahiki kwa kutumia vifaa vya kuchezea</value>
           </text>
@@ -2356,22 +2379,20 @@ Miaka 2 au Zaidi:
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/concern_play:label">
             <value>Kucheza kuna umuhimu mkubwa kwa mtoto. Mtoto asiyepata fursa ya kucheza hatakuwa na maendeleo mazuri ya afya. Watoto wanajifunza kupitia kuona wanachofanya watu wengine, huiga na kufanya mambo mapya. Michezo ni njia bora ya kuwasaidia watoto kujifunza na kufanya mambo mapya.</value>
           </text>
-          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/does_not_talk:label">
-            <value>Haongei na mtoto au anaongea kwa ukali na mtoto</value>
-          </text>
-          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/draws_smile:label">
-            <value>Tabasamu kwa mtoto</value>
-          </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/looks_talks:label">
-            <value>Muangalie mtoto machoni n uongee nae kwa upole sana, uliza maswali</value>
+            <value>Anamuangalia mtoto machoni na anaongea nae kwa upole sana</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/not_responsive:label">
-            <value>Anajaribu kulazimisha tabasamu au hamfanyii kazi mtoto.</value>
+            <value>Anajaribu kulazimisha tabasamu au haongei/hafanyi chochote kufanya mtoto atabasamu.</value>
+          </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/responds_sounds:label">
+            <value>Anaigiza sauti na vitendo vya mtoto ili kupata tabasamu la mtoto</value>
+          </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate:jr:constraintMsg">
+            <value>Hauwezi kuchagua chaguo la tatu iwapo umeshachagua machaguo mengineyo</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate:label">
-            <value>Je unaweza kunionesha vipi unazungumza na mtoto wako? Je unaweza kuonesha unawafanyia nini ukitaka watabasamu?
-
-Orodhesha mlezi anaongeaje na mtoto:</value>
+            <value>Mchunguze mama jinsi anavyoongea na mwanawe na kumfanya atabasamu au muombe akuonyeshe jinsi anavyowasiliana na mtoto. kisha chagua yote yaliotokea</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_play/no:label">
             <value>Hapana</value>
@@ -2453,22 +2474,20 @@ Watoto huanza kutambua maneno mengi kabala hawajaanza kuongea, lakini kama hatut
 
 &lt;span style="display:block;padding-left:1em"&gt;Katika umri huu watoto wana tabia ya kuingiza mdomoni kila wanachokipata. Walezi wasiwakataze kufanya hivyo kwasababu mdomo ndio kiungo kikubwa cha hisia kwao kipindi hiki, ambacho wanakitumia kuonja ladha, ulaini na ugumu wa kitu. Ni njia ya kujifunza. Cha msingi ni kuhakikisha unampatia mtoto kitu kilicho salama na safi na kiwe kikubwa ili kuhakikisha hawakimezi. &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/does_not_talk:label">
-            <value>Haongei na mtoto</value>
-          </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/looks_talks:label">
-            <value>Muangalie mtoto machoni na uongee nae kwa upole sana</value>
+            <value>Anamuangalia mtoto machoni na anaongea nae kwa upole sana</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/not_responsive:label">
-            <value>Anajaribu kulazimisha tabasamu au hamjibu mtoto.</value>
+            <value>Anajaribu kulazimisha tabasamu au haongei/hafanyi chochote kufanya mtoto atabasamu.</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/responds_sounds:label">
-            <value>Fanyia kazi sauti na vitendo vya mtoto ili kupata tabasamu la mtoto</value>
+            <value>Anaigiza sauti na vitendo vya mtoto ili kupata tabasamu la mtoto</value>
+          </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate:jr:constraintMsg">
+            <value>Hauwezi kuchagua chaguo la tatu iwapo umeshachagua machaguo mengineyo</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate:label">
-            <value>Je unaweza kunionesha jinsi unavyoongea na mwanao au kumfanya atabasamu? 
-
-Onesha jinsi mlezi anavyoingiliana na mtoto.</value>
+            <value>Mchunguze mama jinsi anavyoongea na mwanawe na kumfanya atabasamu au muombe akuonyeshe jinsi anavyowasiliana na mtoto. kisha chagua yote yaliotokea</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play/does_not_play:label">
             <value>Hachezi na mtoto</value>
@@ -2478,6 +2497,9 @@ Onesha jinsi mlezi anavyoingiliana na mtoto.</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play/moves_arms_legs:label">
             <value>Chezesha miguu na mikono ya mtoto au mpige pige mtoto kwa upole sana</value>
+          </text>
+          <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:jr:constraintMsg">
+            <value>Hauwezi kuchagua chaguo la tatu iwapo umeshachagua machaguo mengineyo</value>
           </text>
           <text id="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:label">
             <value>Je unaweza ukanionesha jinsi unavyocheza na mtoto wako? Naomba nioneshe tafadhali. Unafikri watoto wako wanajifunza kitu gani wakati mkicheza?
@@ -2581,13 +2603,13 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_danger_signs/covid19_child_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sasa hivi upo kwenye hatua ya kuchunguza dalili za hatari kwa mtoto huyu. Tafadhali epuka kumshika mtoto ili kukulinda kutokana na uwezako wa kuambukizwa virusi vya korona. Ikiwa kuna ulazima wa kumgusa ili kujua hali ya mtoto tafadhali muombe mteja afanye hivyo kwa niaba yako. &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_137:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_139:label">
             <value>Dalili za hatari za mtoto</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/child_cold/no:label">
@@ -2656,16 +2678,16 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_other_danger_signs/child_skin_boils:label">
             <value>Je mtoto ana majipu katika ngozi?</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_149:label">
+          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_151:label">
             <value>Dalili nyengine za hatari za mtoto</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/no_child_other_danger_sign_note:label">
             <value>Hakuna dalili ya hatari yoyote iliyoonekana kwa mtoto wako, lakini ikitokea mtoto ameonesha dalili yoyote ya hatari tulizojadili, hakikisha unamuwahisha kituo cha afya kilichopo karibu nawe haraka.</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150/no:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150/yes:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -3240,6 +3262,9 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/hand_washing:label">
             <value>Uoshaji wa mikono</value>
           </text>
+          <text id="/infant_child/immunizations/ask_for_health_card:label">
+            <value>Sasa nitapendelea kupitia kadi la kliniki la mtoto kuhakikisha amepata/wamepata chanjo zote stahiki mpaka sasa. Naomba unioneshe kadi ya mtoto wako.</value>
+          </text>
           <text id="/infant_child/immunizations/ask_record_vaccines_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Muombe mama ahakikishe kuwa wahudumu wa kituo cha afya wanaandika rikodi kuhusu chanjo kwenye kadi la afya la mtoto.&lt;/span&gt;</value>
           </text>
@@ -3809,6 +3834,9 @@ Je unacho chandarua?</value>
           <text id="/infant_child/malnutrition_anemia/growth_graph_range/btw_2_neg_2:label">
             <value>kati ya 2 na chini ya 2</value>
           </text>
+          <text id="/infant_child/malnutrition_anemia/growth_graph_range/card_unavailable:label">
+            <value>Kadi haipo</value>
+          </text>
           <text id="/infant_child/malnutrition_anemia/growth_graph_range/lt_neg_3:label">
             <value>Chini ya 3</value>
           </text>
@@ -3874,7 +3902,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs/covid19_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sasa hivi upo kwenye hatua ya kuchunguza dalili za hatari kwa mtoto huyu. Tafadhali epuka kumshika mtoto ili kukulinda kutokana na uwezako wa kuambukizwa virusi vya korona. Ikiwa kuna ulazima wa kumgusa ili kujua hali ya mtoto tafadhali muombe mteja afanye hivyo kwa niaba yako. &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_101:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_103:label">
             <value>Kuchunguza Dalili za hatari kwa mtoto mchanga</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -3985,13 +4013,13 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils:label">
             <value>Je mtoto ana majipu katika ngozi?</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_119:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121:label">
             <value>Kuchunguza dalili nyengine za hatari kwa mtoto</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -4117,10 +4145,10 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Dalili ya hatari imegundulika. Mshauri mama aende kituo cha Afya kilicho karibu nae ndani ya masaa 24 yajayo ili Daktari aweze kumuangalia mtoto na kutoa msaada.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
@@ -4618,6 +4646,8 @@ Kwa mtoto wako unaweza:</value>
           <house_number/>
           <kitongoji/>
           <phone/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -4647,11 +4677,11 @@ Kwa mtoto wako unaweza:</value>
             <encourage_small_baby_note/>
           </first_visit_6_months>
           <neonatal_danger_signs>
-            <generated_table_list_label_101/>
+            <generated_table_list_label_103/>
             <neonatal_danger_sign_bango_kitita/>
             <covid19_neonatal_danger_sign_note/>
             <neonatal_danger_signs_note/>
-            <reserved_name_for_field_list_labels_105/>
+            <reserved_name_for_field_list_labels_107/>
             <neonatal_not_able_feed/>
             <neonatal_had_convulsions/>
             <neonatal_difficulty_fast_breathing/>
@@ -4667,8 +4697,8 @@ Kwa mtoto wako unaweza:</value>
             <has_neonatal_danger_note/>
           </neonatal_danger_signs>
           <neonatal_danger_signs_secondary>
-            <generated_table_list_label_119/>
-            <reserved_name_for_field_list_labels_120/>
+            <generated_table_list_label_121/>
+            <reserved_name_for_field_list_labels_122/>
             <neonatal_cold/>
             <neonatal_yellow_pale_palms/>
             <neonatal_no_movement/>
@@ -4687,10 +4717,10 @@ Kwa mtoto wako unaweza:</value>
             <no_secondary_neonatal_danger_sign_note/>
           </neonatal_danger_signs_secondary>
           <child_danger_signs>
-            <generated_table_list_label_137/>
+            <generated_table_list_label_139/>
             <covid19_child_danger_sign_note/>
             <child_danger_signs_note/>
-            <reserved_name_for_field_list_labels_140/>
+            <reserved_name_for_field_list_labels_142/>
             <child_vomit/>
             <child_convulsions/>
             <child_lethargic/>
@@ -4701,8 +4731,8 @@ Kwa mtoto wako unaweza:</value>
             <child_danger_sign_note/>
           </child_danger_signs>
           <child_other_danger_signs>
-            <generated_table_list_label_149/>
-            <reserved_name_for_field_list_labels_150/>
+            <generated_table_list_label_151/>
+            <reserved_name_for_field_list_labels_152/>
             <child_drink_below_6_months/>
             <child_drink_6_months_to_2_years/>
             <child_drink_above_2_years/>
@@ -4823,6 +4853,7 @@ Kwa mtoto wako unaweza:</value>
             <vaccines_reminder_note/>
             <covid19_heath_card_note/>
             <has_health_card/>
+            <ask_for_health_card/>
             <record_vaccines>
               <msg_for_chv_record_vaccine/>
               <msg_for_chv_bcg/>
@@ -4932,6 +4963,7 @@ Kwa mtoto wako unaweza:</value>
             <praise_interact/>
             <concern_interact/>
             <has_observed_comforting/>
+            <how_comfort/>
             <praise_comfort/>
             <concern_comfort/>
             <has_observed_correcting/>
@@ -5102,6 +5134,8 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
       <bind nodeset="/infant_child/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
       <bind nodeset="/infant_child/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/infant_child/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/infant_child/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/infant_child/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/client_information/household_note" readonly="true()" type="string"/>
@@ -5115,7 +5149,7 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/first_visit_6_months/delivery_location" type="select1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/child_card_available" type="select1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/birthweight_on_child_card" type="select1" required="true()" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/first_visit_6_months/child_birthweight" type="decimal" required="true()" constraint=". &gt;= 0.5 and . &lt;= 7" jr:constraintMsg="jr:itext('/infant_child/first_visit_6_months/child_birthweight:jr:constraintMsg')" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/first_visit_6_months/child_birthweight" type="decimal" required="true()" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/first_visit_6_months/child_birthweight:jr:constraintMsg')" constraint=". &gt;= 0.5 and . &lt;= 7"/>
       <bind nodeset="/infant_child/first_visit_6_months/child_size_birth" type="select1" required="true()" relevant="(selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;no&quot;) or selected( /infant_child/first_visit_6_months/child_card_available ,&quot;no&quot;))"/>
       <bind nodeset="/infant_child/first_visit_6_months/normal_baby_note" readonly="true()" type="string" relevant=" /infant_child/first_visit_6_months/child_birthweight  &gt;= 2 or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;regular&quot;) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;large&quot;)"/>
       <bind nodeset="/infant_child/first_visit_6_months/small_baby_today" type="string" calculate="if((selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;) and  /infant_child/first_visit_6_months/child_birthweight  &gt;= 0.5 and  /infant_child/first_visit_6_months/child_birthweight  &lt; 2) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;small&quot;),1,0)"/>
@@ -5125,11 +5159,11 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/first_visit_6_months/refer_flag_small_baby" type="string" calculate="if(selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;),1,0)"/>
       <bind nodeset="/infant_child/first_visit_6_months/encourage_small_baby_note" readonly="true()" type="string" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/neonatal_danger_signs" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_101" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_103" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/covid19_neonatal_danger_sign_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_not_able_feed" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_had_convulsions" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing" type="select1" required="true()"/>
@@ -5153,8 +5187,8 @@ selected( /infant_child/neonatal_danger_signs/neonatal_severe_diarrhea ,'yes') o
 selected( /infant_child/neonatal_danger_signs/neonatal_excessive_crying ,'yes'),1,0)"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/has_neonatal_danger_note" readonly="true()" type="string" relevant=" /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_119" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_cold" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_yellow_pale_palms" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_no_movement" type="select1" required="true()"/>
@@ -5195,10 +5229,10 @@ selected( /infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_diste
 selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_urine ,'no') and 
 selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_stool ,'no')"/>
       <bind nodeset="/infant_child/child_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
-      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_137" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_139" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs/covid19_child_danger_sign_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs/child_danger_signs_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_vomit" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_danger_signs/child_convulsions" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_danger_signs/child_lethargic" type="select1" required="true()"/>
@@ -5213,8 +5247,8 @@ selected( /infant_child/child_danger_signs/child_severe_diarrhea ,&quot;yes&quot
 selected( /infant_child/child_danger_signs/child_difficulty_fast_breathing ,&quot;yes&quot;),1,0)"/>
       <bind nodeset="/infant_child/child_danger_signs/child_danger_sign_note" readonly="true()" type="string" relevant=" /infant_child/child_danger_signs/refer_child_danger_sign_flag =1"/>
       <bind nodeset="/infant_child/child_other_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/generated_table_list_label_149" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150" type="select1"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/generated_table_list_label_151" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152" type="select1"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_drink_below_6_months" type="select1" required="true()" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_drink_6_months_to_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 6) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 24)"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_drink_above_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 24)"/>
@@ -5332,58 +5366,59 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/immunizations/why_vaccines_important_note" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/immunizations/vaccines_reminder_note" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/immunizations/covid19_heath_card_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/immunizations/has_health_card" type="select1" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/has_health_card" type="select1" required="true()" relevant=" /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 6) or  /infant_child/n_child_visits  &gt;= 1"/>
+      <bind nodeset="/infant_child/immunizations/ask_for_health_card" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0 and selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;) and  /infant_child/age_years  &lt; 2"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bcg" readonly="true()" type="string" relevant=" /infant_child/previous_bcg  = 0"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bcg" type="select1" relevant=" /infant_child/previous_bcg  = 0"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" type="date" required="true()" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" type="date" required="true()" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;) and  /infant_child/immunizations/record_vaccines/bcg_date  != '' and  /infant_child/immunizations/record_vaccines/bcg_date  &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0" readonly="true()" type="string" relevant=" /infant_child/previous_bopv0  = 0"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" type="select1" required="true()" relevant=" /infant_child/previous_bopv0  = 0"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv1" readonly="true()" type="string" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" type="select1" required="true()" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi1" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" type="select1" required="true()" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota1" readonly="true()" type="string" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" type="select1" required="true()" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bobv2" readonly="true()" type="string" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" type="select1" required="true()" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi2" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" type="select1" required="true()" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota2" readonly="true()" type="string" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" type="select1" required="true()" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3" readonly="true()" type="string" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" type="select1" required="true()" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg')"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3" readonly="true()" type="string" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" type="select1" required="true()" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_dtp_hepb_hib3" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_received_pcvi3" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" type="select1" required="true()" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_ipv" readonly="true()" type="string" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" type="select1" required="true()" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella1" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/vaccines_up_to_date" type="select1" required="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/up_to_date_congrats_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;yes&quot;)"/>
@@ -5406,11 +5441,11 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/normal_behavior_at_age" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/development_stage" type="select1" required="true()"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;)"/>
-      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play" type="select" required="true()"/>
+      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play" type="select" required="true()" constraint="(selected(.,&quot;does_not_play&quot;) and count-selected(.)=1) or (not(selected(.,&quot;does_not_play&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/praise_play" readonly="true()" type="string" relevant="selected(../how_play,&quot;moves_arms_legs&quot;) or selected(../how_play,&quot;gets_attention&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/concern_play" readonly="true()" type="string" relevant="selected(../how_play,&quot;does_not_play&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/demonstrate_play" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate" type="select" required="true()"/>
+      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate" type="select" constraint="(selected(.,&quot;not_responsive&quot;) and count-selected(.)=1) or (not(selected(.,&quot;not_responsive&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/praise_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;looks_talks&quot;) or selected(../how_communicate,&quot;responds_sounds&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/concern_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;does_not_talk&quot;) or selected(../how_communicate,&quot;not_responsive&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/coach_communicate" readonly="true()" type="string"/>
@@ -5423,7 +5458,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_play_hide" readonly="true()" type="string" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_9mo_to_12mo&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_play_stack" readonly="true()" type="string" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_12mo_to_2yr&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_play_count" readonly="true()" type="string" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_2yr_plus&quot;)"/>
-      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate" type="select" required="true()"/>
+      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate" type="select" constraint="(selected(.,&quot;not_responsive&quot;) and count-selected(.)=1) or (not(selected(.,&quot;not_responsive&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/praise_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;looks_talks&quot;) or selected(../how_communicate,&quot;draws_smile&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/concern_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;does_not_talk&quot;) or selected(../how_communicate,&quot;not_responsive&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_communicate" readonly="true()" type="string"/>
@@ -5437,6 +5472,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/assess_behavior/praise_interact" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_interact ,&quot;moves&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/concern_interact" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_interact ,&quot;does_not_move&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/has_observed_comforting" type="select1" required="true()"/>
+      <bind nodeset="/infant_child/assess_behavior/how_comfort" type="select1" required="true()" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/praise_comfort" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/concern_comfort" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/has_observed_correcting" type="select1" required="true()" relevant="not(selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))"/>
@@ -5459,7 +5495,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
       <bind nodeset="/infant_child/problem_solving/tip_time_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/has_time_concern_play_comm ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/engage_with_child" type="select" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/problem_solving/engage_with_child:jr:constraintMsg')" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/problem_solving/engage_with_child" type="select" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" jr:constraintMsg="jr:itext('/infant_child/problem_solving/engage_with_child:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
       <bind nodeset="/infant_child/problem_solving/who_engages" type="select" required="true()" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;told_storied&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;sang&quot;) or 
@@ -5748,8 +5784,8 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs">
-      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_101">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_101:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_103">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_103:label')"/>
       </input>
       <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita:label')"/>
@@ -5760,14 +5796,14 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_105/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5897,17 +5933,17 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs_secondary">
-      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_119">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_119:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_120/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -6062,8 +6098,8 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_danger_signs">
-      <input ref="/infant_child/child_danger_signs/generated_table_list_label_137">
-        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_137:label')"/>
+      <input ref="/infant_child/child_danger_signs/generated_table_list_label_139">
+        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_139:label')"/>
       </input>
       <input ref="/infant_child/child_danger_signs/covid19_child_danger_sign_note">
         <label ref="jr:itext('/infant_child/child_danger_signs/covid19_child_danger_sign_note:label')"/>
@@ -6071,14 +6107,14 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/child_danger_signs/child_danger_signs_note">
         <label ref="jr:itext('/infant_child/child_danger_signs/child_danger_signs_note:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140">
+      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140/yes:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_140/no:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -6153,17 +6189,17 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_other_danger_signs">
-      <input ref="/infant_child/child_other_danger_signs/generated_table_list_label_149">
-        <label ref="jr:itext('/infant_child/child_other_danger_signs/generated_table_list_label_149:label')"/>
+      <input ref="/infant_child/child_other_danger_signs/generated_table_list_label_151">
+        <label ref="jr:itext('/infant_child/child_other_danger_signs/generated_table_list_label_151:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150">
+      <select1 appearance="label" ref="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150/yes:label')"/>
+          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_150/no:label')"/>
+          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -6273,6 +6309,10 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <item>
           <label ref="jr:itext('/infant_child/malnutrition_anemia/growth_graph_range/lt_neg_3:label')"/>
           <value>lt_neg_3</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/malnutrition_anemia/growth_graph_range/card_unavailable:label')"/>
+          <value>card_unavailable</value>
         </item>
       </select1>
       <input ref="/infant_child/malnutrition_anemia/child_underweight_note">
@@ -6734,6 +6774,9 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
           <value>no</value>
         </item>
       </select1>
+      <input ref="/infant_child/immunizations/ask_for_health_card">
+        <label ref="jr:itext('/infant_child/immunizations/ask_for_health_card:label')"/>
+      </input>
       <group ref="/infant_child/immunizations/record_vaccines">
         <input ref="/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine">
           <label ref="jr:itext('/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine:label')"/>
@@ -7163,10 +7206,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
             <value>responds_sounds</value>
           </item>
           <item>
-            <label ref="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/does_not_talk:label')"/>
-            <value>does_not_talk</value>
-          </item>
-          <item>
             <label ref="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate/not_responsive:label')"/>
             <value>not_responsive</value>
           </item>
@@ -7221,12 +7260,8 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
             <value>looks_talks</value>
           </item>
           <item>
-            <label ref="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/draws_smile:label')"/>
-            <value>draws_smile</value>
-          </item>
-          <item>
-            <label ref="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/does_not_talk:label')"/>
-            <value>does_not_talk</value>
+            <label ref="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/responds_sounds:label')"/>
+            <value>responds_sounds</value>
           </item>
           <item>
             <label ref="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate/not_responsive:label')"/>
@@ -7287,6 +7322,17 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         <item>
           <label ref="jr:itext('/infant_child/assess_behavior/has_observed_comforting/no:label')"/>
           <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/infant_child/assess_behavior/how_comfort">
+        <label ref="jr:itext('/infant_child/assess_behavior/how_comfort:label')"/>
+        <item>
+          <label ref="jr:itext('/infant_child/assess_behavior/how_comfort/looks_talks:label')"/>
+          <value>looks_talks</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/infant_child/assess_behavior/how_comfort/does_not_comfort:label')"/>
+          <value>does_not_comfort</value>
         </item>
       </select1>
       <input ref="/infant_child/assess_behavior/praise_comfort">

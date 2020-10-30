@@ -518,6 +518,8 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <house_number/>
           <kitongoji/>
           <phone/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -635,6 +637,8 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
       <bind nodeset="/referral_follow_up/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
       <bind nodeset="/referral_follow_up/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/referral_follow_up/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/referral_follow_up/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/referral_follow_up/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/client_information/household_note" readonly="true()" type="string"/>
@@ -659,7 +663,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/congratulate" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/got_services" type="select1" required="true()"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" type="select" required="true()" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" type="select" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)" required="true()"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/discuss_reasons_no_services" readonly="true()" type="string" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go" type="select" required="true()"/>

@@ -705,6 +705,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <created_by/>
           <created_by_person_uuid/>
           <created_by_place_uuid/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -787,6 +789,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/created_by" type="string" calculate="../inputs/user/name"/>
       <bind nodeset="/covid_education/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
       <bind nodeset="/covid_education/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/covid_education/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/covid_education/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/covid_education/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/introductory_qns/introduction" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/introductory_qns/corona_awareness" type="select1" required="true()"/>
@@ -794,9 +798,9 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/introductory_qns/qns_from_family" type="select1" required="true()"/>
       <bind nodeset="/covid_education/introductory_qns/answer_questions" readonly="true()" type="string" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)"/>
       <bind nodeset="/covid_education/introductory_qns/msg_for_chv_questions" readonly="true()" type="string" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)"/>
-      <bind nodeset="/covid_education/introductory_qns/asked_qns" type="select" required="true()" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)"/>
+      <bind nodeset="/covid_education/introductory_qns/asked_qns" type="select" relevant="selected( /covid_education/introductory_qns/qns_from_family ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/covid_education/introductory_qns/msg_for_chv_other_qn" readonly="true()" type="string" relevant="selected( /covid_education/introductory_qns/asked_qns ,&quot;none&quot;)"/>
-      <bind nodeset="/covid_education/introductory_qns/other_question" type="string" required="true()" relevant="selected( /covid_education/introductory_qns/asked_qns ,&quot;none&quot;)"/>
+      <bind nodeset="/covid_education/introductory_qns/other_question" type="string" relevant="selected( /covid_education/introductory_qns/asked_qns ,&quot;none&quot;)" required="true()"/>
       <bind nodeset="/covid_education/intro_to_corona/what_is_corona" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/corona_transmission/how_is_it_transmitted" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/corona_symptoms/what_are_corona_symptoms" readonly="true()" type="string"/>
@@ -814,7 +818,7 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/corona_prevention/no_travel" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/additional_guidelines/list_of_guidelines" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/mask_questions/has_mask" type="select1" required="true()"/>
-      <bind nodeset="/covid_education/mask_questions/is_wearing" type="select1" required="true()" relevant="selected( /covid_education/mask_questions/has_mask ,&quot;yes&quot;)"/>
+      <bind nodeset="/covid_education/mask_questions/is_wearing" type="select1" relevant="selected( /covid_education/mask_questions/has_mask ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/covid_education/mask_questions/not_wearing_msg" readonly="true()" type="string" relevant="selected( /covid_education/mask_questions/is_wearing ,&quot;no&quot;)"/>
       <bind nodeset="/covid_education/mask_questions/self_made_mask_pics" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/mask_questions/self_made_mask_pic1" readonly="true()" type="string"/>
@@ -827,7 +831,7 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/hand_washing/has_infrastructure" type="select1" required="true()"/>
       <bind nodeset="/covid_education/hand_washing/is_practicing" type="select1" required="true()"/>
       <bind nodeset="/covid_education/hand_washing/practice_reminder" readonly="true()" type="string"/>
-      <bind nodeset="/covid_education/risks_and_directions/serious_diseases" type="select" required="true()" jr:constraintMsg="jr:itext('/covid_education/risks_and_directions/serious_diseases:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/covid_education/risks_and_directions/serious_diseases" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()" jr:constraintMsg="jr:itext('/covid_education/risks_and_directions/serious_diseases:jr:constraintMsg')"/>
       <bind nodeset="/covid_education/risks_and_directions/age_above_50" type="select1" required="true()"/>
       <bind nodeset="/covid_education/risks_and_directions/prevention_for_elderly" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/test_understading/asymptomatic" type="select1" required="true()"/>
