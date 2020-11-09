@@ -1,3 +1,4 @@
+var RandomForestClassifier = require('./model-min.js');
 module.exports = {
 
   day: 1,
@@ -965,5 +966,227 @@ module.exports = {
       isMuted = true;
     }
     return isMuted;
+  },
+
+  getPregnantWomanAge:function(c) { 
+    var reportsFound = [];
+    var ageInYears = '';
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.age_years;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        ageInYears = report.fields.age_years;
+      }
+    }
+    return ageInYears;
+  },
+
+  getHIVStatus:function(c) { 
+    console.log('Inside HIV function'); 
+    var hiv_status = false; 
+    var reportsFound = [];
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+        r.reported_date >= recentConsentReportDate &&
+        r.fields &&
+        r.fields.pmtct &&
+        r.fields.pmtct.hiv_status;
+      });
+      if (reportsFound.length > 0) { 
+        reportsFound.forEach(function (r) {
+          if(r.fields.pmtct.hiv_status === 'hiv_positive'){ 
+            hiv_status = true; 
+          }
+        });
+      }
+    }
+    return hiv_status;
+  },
+
+  getPrevMiscarrige:function(c) { 
+    var reportsFound = [];
+    var prevMiscarriage = false;
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.pregnant_woman_information && 
+          r.fields.pregnant_woman_information.previous_miscarriages;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        prevMiscarriage = report.fields.pregnant_woman_information.previous_miscarriages;
+      }
+    }
+    return prevMiscarriage;
+  },
+
+  getPrevDeliveryLocation:function(c) { 
+    var reportsFound = [];
+    var prevDeliveryLocation = '';
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.facility_delivery_importance && 
+          r.fields.facility_delivery_importance.delivery_location;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        prevDeliveryLocation = report.fields.facility_delivery_importance.delivery_location;
+      }
+    }
+    return prevDeliveryLocation;
+  },
+  
+  //This function will be used to get the information about: 
+
+  /* 
+      1. Water source (Pass water_source as your 2nd argument)
+      2. Education Level (Pass highest_school_level as 2nd arg) 
+      3. Electricity (Pass home_electricity as 2nd arg)
+      4. Floor type (Pass floor_material as 2ns arg) 
+      5. Roof type (Pass roof_material as 2ns arg)
+  */
+  getClientEducationAndHouseInformation:function(c,child) { 
+    var reportsFound = [];
+    var returnValue = '';
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) { 
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.education_and_prev_enrollment  && 
+          r.fields.education_and_prev_enrollment.child;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        returnValue = report.fields.education_and_prev_enrollment.child;
+      }
+    }
+    return returnValue;
+  },
+
+  isHighRiskPregnancy: function (c) {
+    console.log('water source ' + this.getWaterSource(c)); 
+    var inputData = [
+      //getPregnantWomanAge(), //driver arranged in advance (No match), // getHIVStatus(), //partner permission (No match), //Outcome variable 
+      100, 0,  1,  0.9,  0, 
+       // TO DO:  Reported date of pregnancy enrollment , //Abortions - prevMiscarriage() (Match pending Nlab response), // Breech ( No match), // Cardiac disease (No match) , // Diabetes (no match ) 
+      0.9,0.2, 0.8, 0.8,  0.6, 
+      0.6, //High bp ( No match) 
+      0.3,//Macrosomia (no match) 
+      0.9,// TO DO: Number of prev deliveries (Num prev pregnancies - prev_miscarriages)
+      0.5, //previous_eclampsia (no match) 
+      0.5, //previous_perineal_tear (no match) 
+      0.4,//previous_placenta_previa (no match)
+      1,//previous_pph (no match) 
+      0.6,//previous_prolonged_labor (no match) 
+      0.7, //previous_retained_placenta (no match) 
+      0.2, //previous_vacuum (no match) 
+      0.3,//prior_c_section (no match) 
+      1, //sickle_cell (no match) 
+      0.9, //Prev. StillBirth (We calculate stillbirth in current pregnancy)
+      0.8, //home_ct (No match) 
+      1, // Twins (No match) 
+      0.1,//avg_trans_sent (no match)
+      0.9,//avg_contacts (No match) 
+      0.4, //avg_sent_overall_trans (No match) 
+      0,  //avg_trans_received (No match) 
+      0.1,//population_2002 (No match) 
+      0.6, //population_2012 (No match) 
+      0.6, //district chake
+      0.4, // kaskaziniA (Not sure how to get it in CHT) 
+      0.8,// kaskazini B 
+      0,  // kati
+      0.8, //kusini
+      0.4,//magharibi
+      0.3,//micheweni
+      0.3,//mkoani
+      0.3, //wete 
+      0.6, // getPrevDeliveryLocation()
+      0.3, //Location = On the way 
+      0.5, // Location = Health facility  ( Map to variable name with highest number of rows)
+      0.8,//Location = Home               (Map to variable name with highest number of row) 
+      1, //Location = Health facility 
+      0.8, //Location = Home 
+      1, //Water source = Other 
+      0.4,//Water source  surface 
+      0.8, //Water source home_tap_pump
+      0.6,//Water source community_tap_pump
+      0.6,//Water source well 
+      0,//Water source home well 
+      0,// education level === primary 
+      0.2,//secondary 
+      1,// completed_high_school or more_than_high_school
+      1,// incomplete_primary
+      0.5,//incomplete_secondary
+      0.3,//highest_school_level = "school_level_dont_know_decline" or highest_school_level = "no_formal_education"
+      0.5,//Electricity = 'no' 
+      0.3, //Electricity = 'yes'
+      0.8, // floor = "decline_to_answer" or "other"
+      0.2, // floor = concrete 
+      0.5, // floor = dirt 
+      0.9, // floor = plastic_mat 
+      0.9, // floor = tiles 
+      0.8, // roof = "decline_to_answer" or "other" 
+      0.5, // roof = iron_sheets
+      0.7, // roof = scrap_iron 
+      0.3, // roof = makuti 
+      0.9,  //roof = tiles_shingles 
+      // Bambi, Bandamaji, Binguni, Bopwe, Bwejuu, Bwereu, Chaani Kubwa, Chaani Masingini, Chambani, Changaweni
+      0.9,0.1,0.2,0.9,0.9,0.2,0.7,0.1,0.5,0.9,
+      //Chanjaani, Chimba, Chokocho, Chonga, Chumbageni, Chutama, Chwaka, Chwale, Dimani, Dodo
+      0.5,0.2,0.7,0.8,1,0.9,0.5,0.9,1,0.1,
+      //Donge mchangani, Donge Karange, Donge mbiji, Donge mtambile, Donge bweni, Fujoni, Fukuchani, Fuoni Kibondeni, Fuoni Kijito Upele, Gamba
+      0.9,0.8,0.2,0.1,0,0.5,1,0.7,0.4,0.1,0,
+      // Ghana, Jambiani Kikadini, Jendele, Jombwe, Jongowe, Jumbi, Junguni, Kambini, Kangagani
+      0.2,0.7,0.4,0.7,0.8,0.7,0.6,0.6,0.9,0.2,
+      // Kendwa, Kengeja, Kianga, Kibeni, Kibokoni, Kibuteni, Kichungwani, Kidimini, Kidoti, kihinani
+      0.2,0.2,0.7,0.4,0.4,1,0.1,0.1,0.9,0.9,
+      // Kijini, Kikungwi, Kilimani, Kilindi, Kinduni, Kinowe, Kinuni, Kinyasini, Kipangani, Kisauni
+      0.8,0.9,0.7,0.9,0.7,1,0.1,0.9,0.8,0.9,
+      // Kisiwa Panza, Kitope, Kiungoni, Kiuyu Kigongoni, Kiuyu Mbuyuni, Kiuyu Minungwini, Kivunge, Kiwani, Kizimbani, kizimkazi Dimbani
+      0.4,0.5,0.2,0.2,0.4,0.6,0.3,0.7,0.4,0.2,
+     // Kizimkazi Mkunguni, Koani, Kojani, Kombeni, Konde, Kuukuu, Kwale, madungu, Mafufuni
+      1,0,0.6,0.2,0.5,0.5,0.3,0.1,0.6,0.9,
+      // Mahonda, Makoba, Makoongwe, matale, matemwe, Maungani, Maziwa n'gombe, Maziwani, Mbaleni, Mbuguani
+      0.6,0.6,0.5,0.5,0.1,0.3,1,0.5,0.7,0.1,
+      //Mbuyuni, Mbuzini, Mchangani, Melinne, Mgagadu, mgambo, Mgelema, Mgeni Haji, Michenzani, Micheweni
+      0.6,0.3,0.3,0.5,0.1,0.5,0.8,0.9,0.8,0.5,
+      // Michungwani, Minazini, Misufini, Miwani, Mizingani, Mjimbini, Mjini Ole. Mjini Wingwi, Mkokotoni, Mkoroshoni
+      0.9,0.2,0.7,0.2,0.4,0.2,0.5,0.5,1,0.5,
+      //Mkwajuni, Moga, Mpapa, Msuka Mgharibi, Msuka Mashariki, Mtambile, Mtambwe Kakazini, Mtambwe Kusini, Mtangani, Mtemani
+      0.2,0.9,0.8,0.7,0.7,0.7,0.1,0.5,0.7,1,
+      //Mtende, Mto wa pwani, Mtufani, Muambe, Muwanda, Muyuni A, Mvumoni, Mwanyanya, mwera, Mzuri
+      1,0.2,0.7,0.3,0.8,0.4,0.7,0,0.9,0,
+      // ndagoni, Ndijani muembe punda, n'gaambwa, Ngombeni, Nganani, Ngwachani, nungwi, paje, pangawe, pete
+      0.6,0.5,0.5,0.3,0,0.9,0.3,0.7,0.8,0.2,
+      // piki, pita na zako, pujini, pwani mchangani, shengejuu, shumba mjini, shumba viamboni, sizini, stahabu, tasani
+      1,0.8,0.8,0.4,0.4,0.2,0.5,0.5,0.5,0.2,
+      //Tazari, Tibirizi, Tomondo, Tumbatu Gomani, Tumbe magharibi, Ukunjwi, Ukutini, Umbuji, Unguja Ukuu Kwaepwani, Upenja
+      0.1,0.9,0.1,0,0.2,1,0.1,0.3,0.9,0.5,
+      //Uroa, Uwandani, uweleni, uzi, Uzini, Vitongoji, Wambaa, Wara, Wesha, Wangwi Mapofu
+      0.3,0.5,0.2,0.4,0.3,0.5,0.5,0.7,0.7,0.8,
+      //Wingi Njuguni, Zingwe Zingwe, Ziwani
+      .6,0.6,0.5, 
+      //Shehia low count, status =mixed ward, status = rural ward, status = urban ward
+      .1, .2,.3,.4];
+    var model= new RandomForestClassifier(); 
+    var result=model.predict(inputData);
+    return result;
   }
 };
