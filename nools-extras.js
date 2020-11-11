@@ -1,4 +1,5 @@
 var RandomForestClassifier = require('./model-min.js');
+var data = require('./catchments.json');
 module.exports = {
 
   day: 1,
@@ -763,6 +764,7 @@ module.exports = {
       var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
       reportedDate = report.reported_date;
     }
+    console.log('Most recent pregnancy consent date ' + reportedDate);
     return reportedDate;
   },
 
@@ -805,7 +807,7 @@ module.exports = {
           r.fields.confirm_delivery &&
           r.fields.confirm_delivery.pregnancy_outcome &&
           ((r.fields.confirm_delivery.pregnancy_outcome === 'did_deliver') ||
-          (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
+            (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
       });
       earlyTerminations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -968,7 +970,7 @@ module.exports = {
     return isMuted;
   },
 
-  getPregnantWomanAge:function(c) { 
+  getPregnantWomanAge: function (c) {
     var reportsFound = [];
     var ageInYears = '';
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
@@ -984,34 +986,36 @@ module.exports = {
         ageInYears = report.fields.age_years;
       }
     }
+    console.log('Pregnant woman age ' + ageInYears);
     return ageInYears;
   },
 
-  getHIVStatus:function(c) { 
-    console.log('Inside HIV function'); 
-    var hiv_status = false; 
+  getHIVStatus: function (c) {
+    console.log('Inside HIV function');
+    var hiv_status = false;
     var reportsFound = [];
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
-        r.reported_date >= recentConsentReportDate &&
-        r.fields &&
-        r.fields.pmtct &&
-        r.fields.pmtct.hiv_status;
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.pmtct &&
+          r.fields.pmtct.hiv_status;
       });
-      if (reportsFound.length > 0) { 
+      if (reportsFound.length > 0) {
         reportsFound.forEach(function (r) {
-          if(r.fields.pmtct.hiv_status === 'hiv_positive'){ 
-            hiv_status = true; 
+          if (r.fields.pmtct.hiv_status === 'hiv_positive') {
+            hiv_status = true;
           }
         });
       }
     }
+    console.log('HIV status ' + hiv_status);
     return hiv_status;
   },
 
-  getPrevMiscarrige:function(c) { 
+  getPrevMiscarrige: function (c) {
     var reportsFound = [];
     var prevMiscarriage = false;
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
@@ -1020,7 +1024,7 @@ module.exports = {
         return r.form === 'pregnancy' &&
           r.reported_date >= recentConsentReportDate &&
           r.fields &&
-          r.fields.pregnant_woman_information && 
+          r.fields.pregnant_woman_information &&
           r.fields.pregnant_woman_information.previous_miscarriages;
       });
       if (reportsFound.length > 0) {
@@ -1028,10 +1032,38 @@ module.exports = {
         prevMiscarriage = report.fields.pregnant_woman_information.previous_miscarriages;
       }
     }
+    console.log('Previous Miscarriage ' + prevMiscarriage);
     return prevMiscarriage;
   },
 
-  getPrevDeliveryLocation:function(c) { 
+  getPrevPregnancies: function (c) {
+    var reportsFound = [];
+    var prevPregnancies = false;
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.pregnant_woman_information &&
+          r.fields.pregnant_woman_information.previous_pregnancies;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        prevPregnancies = report.fields.pregnant_woman_information.previous_pregnancies;
+      }
+    }
+    console.log('Previous pregnancies ' + prevPregnancies);
+    return prevPregnancies;
+  },
+
+  getPreviousDeliveries: function (c) {
+    var prevDeliveries = this.getPrevPregnancies(c) - this.getPrevMiscarrige(c);
+    console.log('Previous deliveries ' + prevDeliveries);
+    return prevDeliveries;
+  },
+
+  getPrevDeliveryLocation: function (c) {
     var reportsFound = [];
     var prevDeliveryLocation = '';
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
@@ -1040,7 +1072,7 @@ module.exports = {
         return r.form === 'pregnancy' &&
           r.reported_date >= recentConsentReportDate &&
           r.fields &&
-          r.fields.facility_delivery_importance && 
+          r.fields.facility_delivery_importance &&
           r.fields.facility_delivery_importance.delivery_location;
       });
       if (reportsFound.length > 0) {
@@ -1048,9 +1080,10 @@ module.exports = {
         prevDeliveryLocation = report.fields.facility_delivery_importance.delivery_location;
       }
     }
+    console.log('Prev delivery location ' + prevDeliveryLocation);
     return prevDeliveryLocation;
   },
-  
+
   //This function will be used to get the information about: 
 
   /* 
@@ -1060,133 +1093,324 @@ module.exports = {
       4. Floor type (Pass floor_material as 2ns arg) 
       5. Roof type (Pass roof_material as 2ns arg)
   */
-  getClientEducationAndHouseInformation:function(c,child) { 
-    var reportsFound = [];
+  getClientEducationAndHouseInformation: function (c, child) {
+    //var reportsFound = [];
     var returnValue = '';
+    var innerNode;
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
-      reportsFound = c.reports.filter(function (r) { 
+      c.reports.filter(function (r) {
+        if (child === 'home_electricity') {
+          innerNode = r.fields.education_and_prev_enrollment.home_electricity;
+          console.log('Inside home electricity');
+        }
+        else if (child === 'roof_material')
+          innerNode = r.fields.education_and_prev_enrollment.roof_material;
+        else if (child === 'floor_material')
+          innerNode = r.fields.education_and_prev_enrollment.floor_material;
+        else if (child === 'highest_school_level')
+          innerNode = r.fields.education_and_prev_enrollment.highest_school_level;
+        else if (child === 'water_source')
+          innerNode = r.fields.education_and_prev_enrollment.water_source;
+
         return r.form === 'pregnancy' &&
           r.reported_date >= recentConsentReportDate &&
           r.fields &&
-          r.fields.education_and_prev_enrollment  && 
-          r.fields.education_and_prev_enrollment.child;
+          r.fields.education_and_prev_enrollment &&
+          innerNode;
       });
-      if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-        returnValue = report.fields.education_and_prev_enrollment.child;
-      }
+      // if (reportsFound.length > 0) {
+      // // var r = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      //   returnValue = report.fields.education_and_prev_enrollment.innerNode;
+      // }
     }
+    returnValue = innerNode;
+    console.log('Type: ' + child + ' Return Value: ' + returnValue);
     return returnValue;
   },
 
+  getDistrict: function (c) {
+    if (c && c.contact && c.contact.parent && c.contact.parent.parent) {
+
+      return data[c.contact.parent.parent._id].district;
+    }
+    return null;
+  },
+
+  getShehia: function (c) {
+    // console.log(c); 
+    if (c && c.contact && c.contact.parent && c.contact.parent.parent) {
+      console.log(data[c.contact.parent.parent].shehia);
+      return data[c.contact.parent.parent].shehia;
+    }
+    return null;
+  },
+
   isHighRiskPregnancy: function (c) {
-    console.log('water source ' + this.getWaterSource(c)); 
+    var shehia = this.getShehia(c);
+    var district = this.getDistrict(c);
+    var prevDeliveryLocation = this.getPrevDeliveryLocation(c);
+    var waterSource = this.getClientEducationAndHouseInformation(c, 'water_source');
+    var highestSchoolLevel = this.getClientEducationAndHouseInformation(c, 'highest_school_level');
+    var homeElectricity = this.getClientEducationAndHouseInformation(c, 'home_electricity');
+    var floorMaterial = this.getClientEducationAndHouseInformation(c, 'floor_material');
+    var roofMaterial = this.getClientEducationAndHouseInformation(c, 'roof_material');
+    //console.log('water source ' + this.getWaterSource(c)); 
     var inputData = [
       //getPregnantWomanAge(), //driver arranged in advance (No match), // getHIVStatus(), //partner permission (No match), //Outcome variable 
-      100, 0,  1,  0.9,  0, 
-       // TO DO:  Reported date of pregnancy enrollment , //Abortions - prevMiscarriage() (Match pending Nlab response), // Breech ( No match), // Cardiac disease (No match) , // Diabetes (no match ) 
-      0.9,0.2, 0.8, 0.8,  0.6, 
-      0.6, //High bp ( No match) 
-      0.3,//Macrosomia (no match) 
-      0.9,// TO DO: Number of prev deliveries (Num prev pregnancies - prev_miscarriages)
-      0.5, //previous_eclampsia (no match) 
-      0.5, //previous_perineal_tear (no match) 
-      0.4,//previous_placenta_previa (no match)
-      1,//previous_pph (no match) 
-      0.6,//previous_prolonged_labor (no match) 
-      0.7, //previous_retained_placenta (no match) 
-      0.2, //previous_vacuum (no match) 
-      0.3,//prior_c_section (no match) 
-      1, //sickle_cell (no match) 
-      0.9, //Prev. StillBirth (We calculate stillbirth in current pregnancy)
-      0.8, //home_ct (No match) 
-      1, // Twins (No match) 
-      0.1,//avg_trans_sent (no match)
-      0.9,//avg_contacts (No match) 
-      0.4, //avg_sent_overall_trans (No match) 
+      this.getPregnantWomanAge(c), 
+      0, 
+      this.getHIVStatus(c), 
+      0, 
+      0,
+      // getMostRecentPregnancyConsentDate() , prevMiscarriage(),Breech ( No match),Cardiac disease (No match) , // Diabetes (no match ) 
+      this.getMostRecentPregnancyConsentDate(c), 
+      this.getPrevMiscarrige(c), 
+      0, 
+      0, 
+      0,
+      0, //High bp ( No match) 
+      0,//Macrosomia (no match) 
+      0,// getPrevDeliveries()
+      0, //previous_eclampsia (no match) 
+      0, //previous_perineal_tear (no match) 
+      0,//previous_placenta_previa (no match)
+      0,//previous_pph (no match) 
+      0,//previous_prolonged_labor (no match) 
+      0, //previous_retained_placenta (no match) 
+      0, //previous_vacuum (no match) 
+      0,//prior_c_section (no match) 
+      0, //sickle_cell (no match) 
+      0, //TO DO: Calculate stillbirth
+      0, //home_ct (No match) 
+      0, // Twins (No match) 
+      0,//avg_trans_sent (no match)
+      0,//avg_contacts (No match) 
+      0, //avg_sent_overall_trans (No match) 
       0,  //avg_trans_received (No match) 
-      0.1,//population_2002 (No match) 
-      0.6, //population_2012 (No match) 
-      0.6, //district chake
-      0.4, // kaskaziniA (Not sure how to get it in CHT) 
-      0.8,// kaskazini B 
-      0,  // kati
-      0.8, //kusini
-      0.4,//magharibi
-      0.3,//micheweni
-      0.3,//mkoani
-      0.3, //wete 
-      0.6, // getPrevDeliveryLocation()
-      0.3, //Location = On the way 
-      0.5, // Location = Health facility  ( Map to variable name with highest number of rows)
-      0.8,//Location = Home               (Map to variable name with highest number of row) 
-      1, //Location = Health facility 
-      0.8, //Location = Home 
-      1, //Water source = Other 
-      0.4,//Water source  surface 
-      0.8, //Water source home_tap_pump
-      0.6,//Water source community_tap_pump
-      0.6,//Water source well 
-      0,//Water source home well 
-      0,// education level === primary 
-      0.2,//secondary 
-      1,// completed_high_school or more_than_high_school
-      1,// incomplete_primary
-      0.5,//incomplete_secondary
-      0.3,//highest_school_level = "school_level_dont_know_decline" or highest_school_level = "no_formal_education"
-      0.5,//Electricity = 'no' 
-      0.3, //Electricity = 'yes'
-      0.8, // floor = "decline_to_answer" or "other"
-      0.2, // floor = concrete 
-      0.5, // floor = dirt 
-      0.9, // floor = plastic_mat 
-      0.9, // floor = tiles 
-      0.8, // roof = "decline_to_answer" or "other" 
-      0.5, // roof = iron_sheets
-      0.7, // roof = scrap_iron 
-      0.3, // roof = makuti 
-      0.9,  //roof = tiles_shingles 
-      // Bambi, Bandamaji, Binguni, Bopwe, Bwejuu, Bwereu, Chaani Kubwa, Chaani Masingini, Chambani, Changaweni
-      0.9,0.1,0.2,0.9,0.9,0.2,0.7,0.1,0.5,0.9,
-      //Chanjaani, Chimba, Chokocho, Chonga, Chumbageni, Chutama, Chwaka, Chwale, Dimani, Dodo
-      0.5,0.2,0.7,0.8,1,0.9,0.5,0.9,1,0.1,
-      //Donge mchangani, Donge Karange, Donge mbiji, Donge mtambile, Donge bweni, Fujoni, Fukuchani, Fuoni Kibondeni, Fuoni Kijito Upele, Gamba
-      0.9,0.8,0.2,0.1,0,0.5,1,0.7,0.4,0.1,0,
-      // Ghana, Jambiani Kikadini, Jendele, Jombwe, Jongowe, Jumbi, Junguni, Kambini, Kangagani
-      0.2,0.7,0.4,0.7,0.8,0.7,0.6,0.6,0.9,0.2,
-      // Kendwa, Kengeja, Kianga, Kibeni, Kibokoni, Kibuteni, Kichungwani, Kidimini, Kidoti, kihinani
-      0.2,0.2,0.7,0.4,0.4,1,0.1,0.1,0.9,0.9,
-      // Kijini, Kikungwi, Kilimani, Kilindi, Kinduni, Kinowe, Kinuni, Kinyasini, Kipangani, Kisauni
-      0.8,0.9,0.7,0.9,0.7,1,0.1,0.9,0.8,0.9,
-      // Kisiwa Panza, Kitope, Kiungoni, Kiuyu Kigongoni, Kiuyu Mbuyuni, Kiuyu Minungwini, Kivunge, Kiwani, Kizimbani, kizimkazi Dimbani
-      0.4,0.5,0.2,0.2,0.4,0.6,0.3,0.7,0.4,0.2,
-     // Kizimkazi Mkunguni, Koani, Kojani, Kombeni, Konde, Kuukuu, Kwale, madungu, Mafufuni
-      1,0,0.6,0.2,0.5,0.5,0.3,0.1,0.6,0.9,
-      // Mahonda, Makoba, Makoongwe, matale, matemwe, Maungani, Maziwa n'gombe, Maziwani, Mbaleni, Mbuguani
-      0.6,0.6,0.5,0.5,0.1,0.3,1,0.5,0.7,0.1,
-      //Mbuyuni, Mbuzini, Mchangani, Melinne, Mgagadu, mgambo, Mgelema, Mgeni Haji, Michenzani, Micheweni
-      0.6,0.3,0.3,0.5,0.1,0.5,0.8,0.9,0.8,0.5,
-      // Michungwani, Minazini, Misufini, Miwani, Mizingani, Mjimbini, Mjini Ole. Mjini Wingwi, Mkokotoni, Mkoroshoni
-      0.9,0.2,0.7,0.2,0.4,0.2,0.5,0.5,1,0.5,
-      //Mkwajuni, Moga, Mpapa, Msuka Mgharibi, Msuka Mashariki, Mtambile, Mtambwe Kakazini, Mtambwe Kusini, Mtangani, Mtemani
-      0.2,0.9,0.8,0.7,0.7,0.7,0.1,0.5,0.7,1,
-      //Mtende, Mto wa pwani, Mtufani, Muambe, Muwanda, Muyuni A, Mvumoni, Mwanyanya, mwera, Mzuri
-      1,0.2,0.7,0.3,0.8,0.4,0.7,0,0.9,0,
-      // ndagoni, Ndijani muembe punda, n'gaambwa, Ngombeni, Nganani, Ngwachani, nungwi, paje, pangawe, pete
-      0.6,0.5,0.5,0.3,0,0.9,0.3,0.7,0.8,0.2,
-      // piki, pita na zako, pujini, pwani mchangani, shengejuu, shumba mjini, shumba viamboni, sizini, stahabu, tasani
-      1,0.8,0.8,0.4,0.4,0.2,0.5,0.5,0.5,0.2,
-      //Tazari, Tibirizi, Tomondo, Tumbatu Gomani, Tumbe magharibi, Ukunjwi, Ukutini, Umbuji, Unguja Ukuu Kwaepwani, Upenja
-      0.1,0.9,0.1,0,0.2,1,0.1,0.3,0.9,0.5,
-      //Uroa, Uwandani, uweleni, uzi, Uzini, Vitongoji, Wambaa, Wara, Wesha, Wangwi Mapofu
-      0.3,0.5,0.2,0.4,0.3,0.5,0.5,0.7,0.7,0.8,
-      //Wingi Njuguni, Zingwe Zingwe, Ziwani
-      .6,0.6,0.5, 
-      //Shehia low count, status =mixed ward, status = rural ward, status = urban ward
-      .1, .2,.3,.4];
-    var model= new RandomForestClassifier(); 
-    var result=model.predict(inputData);
+      0,//population_2002 (No match) 
+      0, //population_2012 (No match) 
+      district === 'chake', //district chake
+      district === 'kaskazini a', // kaskaziniA (Not sure how to get it in CHT) 
+      district === 'kaskazini b',// kaskazini B 
+      district === 'kati',  // kati
+      district === 'kusini', //kusini
+      district === 'magharibi',//magharibi
+      district === 'micheweni',//micheweni
+      district === 'mkoani',//mkoani
+      district === 'wete', //wete 
+      0, // No match 
+      prevDeliveryLocation === 'on_the_way', //Location = On the way 
+      prevDeliveryLocation === 'local_health_facility', // Location = Health facility  ( Map to variable name with highest number of rows)
+      prevDeliveryLocation === 'home',//Location = Home               (Map to variable name with highest number of row) 
+      prevDeliveryLocation === 'local_health_facility', //Location = Health facility 
+      prevDeliveryLocation === 'home', //Location = Home 
+      waterSource === 'other' || waterSource === 'decline_to_answer', //Water source = Other 
+      waterSource === 'surface',//Water source  surface 
+      waterSource === 'home_tap_pump', //Water source home_tap_pump
+      waterSource === 'community_tap_pump',//Water source community_tap_pump
+      waterSource === 'well',//Water source well 
+      waterSource === 'home_well',//Water source home well 
+      highestSchoolLevel === 'primary',// education level === primary 
+      highestSchoolLevel === 'secondary',//secondary 
+      highestSchoolLevel === 'completed_high_school' ||
+      highestSchoolLevel === 'more_than_high_school',// completed_high_school or more_than_high_school
+      highestSchoolLevel === 'incomplete_primary',// incomplete_primary
+      highestSchoolLevel === 'incomplete_secondary',//incomplete_secondary
+      highestSchoolLevel === 'school_level_dont_know_decline' ||
+      highestSchoolLevel === 'no_formal_education',//highest_school_level = "school_level_dont_know_decline" or highest_school_level = "no_formal_education"
+      homeElectricity === 'no',//Electricity = 'no' 
+      homeElectricity === 'yes', //Electricity = 'yes'
+      floorMaterial === 'decline_to_answer' ||
+      floorMaterial === 'other', // floor = "decline_to_answer" or "other"
+      floorMaterial === 'concrete', // floor = concrete 
+      floorMaterial === 'dirt', // floor = dirt 
+      floorMaterial === 'plastic_mat', // floor = plastic_mat 
+      floorMaterial === 'tiles', // floor = tiles 
+      roofMaterial === 'decline_to_answer' ||
+      roofMaterial === 'other',// roof = "decline_to_answer" or "other" 
+      roofMaterial === 'iron_sheets', // roof = iron_sheets
+      roofMaterial === 'scrap_iron', // roof = scrap_iron 
+      roofMaterial === 'makuti', // roof = makuti 
+      roofMaterial === 'tiles_shingles',  //roof = tiles_shingles 
+      shehia === 'bambi'
+      , shehia === 'bandamaji'
+      , shehia === 'binguni'
+      , shehia === 'bopwe'
+      , shehia === 'bwejuu'
+      , shehia === 'bwereu'
+      , shehia === 'chaani kubwa'
+      , shehia === 'chaani masingini'
+      , shehia === 'chambani'
+      , shehia === 'changaweni'
+      , shehia === 'chanjaani'
+      , shehia === 'chimba'
+      , shehia === 'chokocho'
+      , shehia === 'chonga'
+      , shehia === 'chumbageni'
+      , shehia === 'chutama'
+      , shehia === 'chwaka'
+      , shehia === 'chwale'
+      , shehia === 'dimani'
+      , shehia === 'dodo'
+      , shehia === 'donge  mchangani'
+      , shehia === 'donge karange'
+      , shehia === 'donge mbiji'
+      , shehia === 'donge mtambile'
+      , shehia === 'dunga bweni'
+      , shehia === 'fujoni'
+      , shehia === 'fukuchani'
+      , shehia === 'fuoni kibondeni'
+      , shehia === 'fuoni kijito upele'
+      , shehia === 'gamba'
+      , shehia === 'ghana'
+      , shehia === 'jambiani kikadini'
+      , shehia === 'jendele'
+      , shehia === 'jombwe'
+      , shehia === 'jongowe'
+      , shehia === 'jumbi'
+      , shehia === 'junguni'
+      , shehia === 'kambini'
+      , shehia === 'kangagani'
+      , shehia === 'kendwa'
+      , shehia === 'kengeja'
+      , shehia === 'kianga'
+      , shehia === 'kibeni'
+      , shehia === 'kibokoni'
+      , shehia === 'kibuteni'
+      , shehia === 'kichungwani'
+      , shehia === 'kidimni'
+      , shehia === 'kidoti'
+      , shehia === 'kihinani'
+      , shehia === 'kijini'
+      , shehia === 'kikungwi'
+      , shehia === 'kilimani'
+      , shehia === 'kilindi'
+      , shehia === 'kinduni'
+      , shehia === 'kinowe'
+      , shehia === 'kinuni'
+      , shehia === 'kinyasini'
+      , shehia === 'kipangani'
+      , shehia === 'kisauni'
+      , shehia === 'kisiwa panza'
+      , shehia === 'kitope'
+      , shehia === 'kiungoni'
+      , shehia === 'kiuyu kigongoni'
+      , shehia === 'kiuyu mbuyuni'
+      , shehia === 'kiuyu minungwini'
+      , shehia === 'kivunge'
+      , shehia === 'kiwani'
+      , shehia === 'kizimbani'
+      , shehia === 'kizimkazi dimbani'
+      , shehia === 'kizimkazi mkunguni'
+      , shehia === 'koani'
+      , shehia === 'kojani'
+      , shehia === 'kombeni'
+      , shehia === 'konde'
+      , shehia === 'kuukuu'
+      , shehia === 'kwale'
+      , shehia === 'madungu'
+      , shehia === 'mafufuni'
+      , shehia === 'mahonda'
+      , shehia === 'makoba'
+      , shehia === 'makoongwe'
+      , shehia === 'matale'
+      , shehia === 'matemwe'
+      , shehia === 'maungani'
+      , shehia === 'maziwa ng\'ombe'
+      , shehia === 'maziwani'
+      , shehia === 'mbaleni'
+      , shehia === 'mbuguani'
+      , shehia === 'mbuyuni'
+      , shehia === 'mbuzini'
+      , shehia === 'mchangani'
+      , shehia === 'melinne'
+      , shehia === 'mgagadu'
+      , shehia === 'mgambo'
+      , shehia === 'mgelema'
+      , shehia === 'mgeni haji'
+      , shehia === 'michenzani'
+      , shehia === 'micheweni'
+      , shehia === 'michungwani'
+      , shehia === 'minazini'
+      , shehia === 'misufini'
+      , shehia === 'miwani'
+      , shehia === 'mizingani'
+      , shehia === 'mjimbini'
+      , shehia === 'mjini ole'
+      , shehia === 'mjini wingwi'
+      , shehia === 'mkokotoni'
+      , shehia === 'mkoroshoni'
+      , shehia === 'mkwajuni'
+      , shehia === 'moga'
+      , shehia === 'mpapa'
+      , shehia === 'msuka magharibi'
+      , shehia === 'msuka mashariki'
+      , shehia === 'mtambile'
+      , shehia === 'mtambwe kaskazini'
+      , shehia === 'mtambwe kusini'
+      , shehia === 'mtangani'
+      , shehia === 'mtemani'
+      , shehia === 'mtende'
+      , shehia === 'mto wa pwani'
+      , shehia === 'mtufaani'
+      , shehia === 'muambe'
+      , shehia === 'muwanda'
+      , shehia === 'muyuni a'
+      , shehia === 'mvumoni'
+      , shehia === 'mwanyanya'
+      , shehia === 'mwera'
+      , shehia === 'mzuri'
+      , shehia === 'ndagoni'
+      , shehia === 'ndijani muembe punda'
+      , shehia === 'ng\'ambwa'
+      , shehia === 'ng\'ombeni'
+      , shehia === 'nganani'
+      , shehia === 'ngwachani'
+      , shehia === 'nungwi'
+      , shehia === 'paje'
+      , shehia === 'pangawe'
+      , shehia === 'pete'
+      , shehia === 'piki'
+      , shehia === 'pitanazako'
+      , shehia === 'pujini'
+      , shehia === 'pwani mchangani'
+      , shehia === 'shengejuu'
+      , shehia === 'shumba mjini'
+      , shehia === 'shumba viamboni'
+      , shehia === 'sizini'
+      , shehia === 'stahabu'
+      , shehia === 'tasani'
+      , shehia === 'tazari'
+      , shehia === 'tibirinzi'
+      , shehia === 'tomondo'
+      , shehia === 'tumbatu gomani'
+      , shehia === 'tumbe magharibi'
+      , shehia === 'ukunjwi'
+      , shehia === 'ukutini'
+      , shehia === 'umbuji'
+      , shehia === 'unguja ukuu kaepwani'
+      , shehia === 'upenja'
+      , shehia === 'uroa'
+      , shehia === 'uwandani'
+      , shehia === 'uweleni'
+      , shehia === 'uzi'
+      , shehia === 'uzini'
+      , shehia === 'vitongoji'
+      , shehia === 'wambaa'
+      , shehia === 'wara'
+      , shehia === 'wesha'
+      , shehia === 'wingwi mapofu'
+      , shehia === 'wingwi njuguni'
+      , shehia === 'zingwe zingwe'
+      , shehia === 'ziwani',
+      //Shehia low count (??), status =mixed ward (??), status = rural ward (??), status = urban ward (??)
+      0,
+      0,
+      0,
+      0];
+    var model = new RandomForestClassifier();
+    var result = model.predict(inputData);
     return result;
   }
 };
