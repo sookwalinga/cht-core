@@ -617,6 +617,7 @@ module.exports = [
         content.visit_id = extras.mapPregnancyVisitType(c);
         content.client_EDD = extras.getRecentEDDForThisPregnancy(c);
         content.due_date = extras.getPregnancyDueDate(c).getTime();
+        content.is_high_risk_pregnancy = extras.isHighRiskPregnancy(c); 
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
