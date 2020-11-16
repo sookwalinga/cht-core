@@ -1,5 +1,5 @@
 var RandomForestClassifier = require('./model-min.js');
-var data = require('./catchments.json');
+var getShehiaData=require('./catchments.js');
 module.exports = {
 
   day: 1,
@@ -1129,26 +1129,22 @@ module.exports = {
     return returnValue;
   },
 
-  getDistrict: function (c) {
-    if (c && c.contact && c.contact.parent && c.contact.parent.parent) {
-
-      return data[c.contact.parent.parent._id].district;
-    }
-    return null;
-  },
-
-  getShehia: function (c) {
-    // console.log(c); 
-    if (c && c.contact && c.contact.parent && c.contact.parent.parent) {
-      console.log(data[c.contact.parent.parent].shehia);
-      return data[c.contact.parent.parent].shehia;
-    }
-    return null;
-  },
-
   isHighRiskPregnancy: function (c) {
-    var shehia = this.getShehia(c);
-    var district = this.getDistrict(c);
+    var data=getShehiaData(c.contact.parent.parent._id);
+    console.log(data); 
+    console.log('c.parent.parent is ' + c.contact.parent.parent._id); 
+  //  var shehia = this.getShehia(c);
+   // var district = this.getDistrict(c);
+   var shehia = data.shehia; 
+   var district = data.district; 
+   var  home_ct = data.home_ct; 
+   var avg_contacts = data.avg_contacts; 
+   var avg_trans_sent = data.avg_trans_sent; 
+   var avg_sent_overall_trans = data.avg_sent_overall_trans; 
+   var avg_trans_received = data.avg_trans_received; 
+   var population_2002 = data.population_2002; 
+   var population_2012 = data.population_2012; 
+   var status = data.status; 
     var prevDeliveryLocation = this.getPrevDeliveryLocation(c);
     var waterSource = this.getClientEducationAndHouseInformation(c, 'water_source');
     var highestSchoolLevel = this.getClientEducationAndHouseInformation(c, 'highest_school_level');
@@ -1157,21 +1153,21 @@ module.exports = {
     var roofMaterial = this.getClientEducationAndHouseInformation(c, 'roof_material');
     //console.log('water source ' + this.getWaterSource(c)); 
     var inputData = [
-      //getPregnantWomanAge(), //driver arranged in advance (No match), // getHIVStatus(), //partner permission (No match), //Outcome variable 
-      this.getPregnantWomanAge(c), 
-      0, 
-      this.getHIVStatus(c), 
-      0, 
-      0,
-      // getMostRecentPregnancyConsentDate() , prevMiscarriage(),Breech ( No match),Cardiac disease (No match) , // Diabetes (no match ) 
+     
+      this.getPregnantWomanAge(c),  //getPregnantWomanAge()
+      0,  //driver arranged in advance (No match)
+      this.getHIVStatus(c),   // getHIVStatus()
+      0, //partner permission (No match)
+      0, //Outcome variable 
+      // getMostRecentPregnancyConsentDate() , prevMiscarriage(), 
       this.getMostRecentPregnancyConsentDate(c), 
       this.getPrevMiscarrige(c), 
-      0, 
-      0, 
-      0,
+      0, //Breech ( No match)
+      0, //Cardiac disease (No match) 
+      0, // Diabetes (no match ) 
       0, //High bp ( No match) 
       0,//Macrosomia (no match) 
-      0,// getPrevDeliveries()
+      this.getPreviousDeliveries(),// getPrevDeliveries()
       0, //previous_eclampsia (no match) 
       0, //previous_perineal_tear (no match) 
       0,//previous_placenta_previa (no match)
@@ -1182,14 +1178,14 @@ module.exports = {
       0,//prior_c_section (no match) 
       0, //sickle_cell (no match) 
       0, //TO DO: Calculate stillbirth
-      0, //home_ct (No match) 
+      home_ct, //home_ct 
       0, // Twins (No match) 
-      0,//avg_trans_sent (no match)
-      0,//avg_contacts (No match) 
-      0, //avg_sent_overall_trans (No match) 
-      0,  //avg_trans_received (No match) 
-      0,//population_2002 (No match) 
-      0, //population_2012 (No match) 
+      avg_trans_sent,//avg_trans_sent 
+      avg_contacts,//avg_contacts 
+      avg_sent_overall_trans , //avg_sent_overall_trans 
+      avg_trans_received,  //avg_trans_received 
+      population_2002,//population_2002
+      population_2012 , //population_2012
       district === 'chake', //district chake
       district === 'kaskazini a', // kaskaziniA (Not sure how to get it in CHT) 
       district === 'kaskazini b',// kaskazini B 
@@ -1199,7 +1195,7 @@ module.exports = {
       district === 'micheweni',//micheweni
       district === 'mkoani',//mkoani
       district === 'wete', //wete 
-      0, // No match 
+      0, // delivery_location = null  (No match) 
       prevDeliveryLocation === 'on_the_way', //Location = On the way 
       prevDeliveryLocation === 'local_health_facility', // Location = Health facility  ( Map to variable name with highest number of rows)
       prevDeliveryLocation === 'home',//Location = Home               (Map to variable name with highest number of row) 
@@ -1404,11 +1400,12 @@ module.exports = {
       , shehia === 'wingwi njuguni'
       , shehia === 'zingwe zingwe'
       , shehia === 'ziwani',
-      //Shehia low count (??), status =mixed ward (??), status = rural ward (??), status = urban ward (??)
-      0,
-      0,
-      0,
-      0];
+      //Shehia low count (??), status =mixed ward, status = rural ward, status = urban ward
+      shehia!==null? 0: 1,
+      status === 'Rural Ward',
+      status === 'Urban',
+      status === 'Urban Ward'
+    ];
     var model = new RandomForestClassifier();
     var result = model.predict(inputData);
     return result;
