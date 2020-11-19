@@ -1130,7 +1130,16 @@ module.exports = {
   },
 
   isHighRiskPregnancy: function (c) {
+
+   //Check catchment area id 
+  // if(filename.contains(c.contact.meta.created_by_place_uuid))
+      //runt the ML code 
+
+   // else return false 
     var data=getShehiaData(c.contact.parent.parent._id);
+    //CHV id 
+    var chv_id = c.contact.meta.created_by_place_uuid; 
+    console.log('CHV place id is ' + chv_id); 
     console.log(data); 
     console.log('c.parent.parent is ' + c.contact.parent.parent._id); 
   //  var shehia = this.getShehia(c);
