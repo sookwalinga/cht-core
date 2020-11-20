@@ -1083,67 +1083,46 @@ module.exports = {
     console.log('Prev delivery location ' + prevDeliveryLocation);
     return prevDeliveryLocation;
   },
-
-  //This function will be used to get the information about: 
-
-  /* 
-      1. Water source (Pass water_source as your 2nd argument)
-      2. Education Level (Pass highest_school_level as 2nd arg) 
-      3. Electricity (Pass home_electricity as 2nd arg)
-      4. Floor type (Pass floor_material as 2ns arg) 
-      5. Roof type (Pass roof_material as 2ns arg)
-  */
-  getClientEducationAndHouseInformation: function (c, child) {
-    //var reportsFound = [];
-    var returnValue = '';
-    var innerNode;
+ 
+  getHouseInfo: function (c,property) {
+    var reportsFound = [];
+    var data = '';
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
-      c.reports.filter(function (r) {
-        if (child === 'home_electricity') {
-          innerNode = r.fields.education_and_prev_enrollment.home_electricity;
-          console.log('Inside home electricity');
-        }
-        else if (child === 'roof_material')
-          innerNode = r.fields.education_and_prev_enrollment.roof_material;
-        else if (child === 'floor_material')
-          innerNode = r.fields.education_and_prev_enrollment.floor_material;
-        else if (child === 'highest_school_level')
-          innerNode = r.fields.education_and_prev_enrollment.highest_school_level;
-        else if (child === 'water_source')
-          innerNode = r.fields.education_and_prev_enrollment.water_source;
-
+      reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
           r.reported_date >= recentConsentReportDate &&
           r.fields &&
           r.fields.education_and_prev_enrollment &&
-          innerNode;
+          r.fields.education_and_prev_enrollment;
       });
-      // if (reportsFound.length > 0) {
-      // // var r = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      //   returnValue = report.fields.education_and_prev_enrollment.innerNode;
-      // }
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        data = report.fields.education_and_prev_enrollment;
+        if(property === 'roof_material')
+          data = report.fields.education_and_prev_enrollment.roof_material; 
+        else if(property === 'floor_material')
+        data = report.fields.education_and_prev_enrollment.floor_material;
+        else if(property === 'highest_school_level')
+        data = report.fields.education_and_prev_enrollment.floor_material;
+        else if(property === 'water_source')
+        data = report.fields.education_and_prev_enrollment.floor_material;
+        else if(property === 'home_electricity')
+        data = report.fields.education_and_prev_enrollment.floor_material;
+      }
     }
-    returnValue = innerNode;
-    console.log('Type: ' + child + ' Return Value: ' + returnValue);
-    return returnValue;
+    return data;
   },
 
+  
   isHighRiskPregnancy: function (c) {
-
-   //Check catchment area id 
-  // if(filename.contains(c.contact.meta.created_by_place_uuid))
-      //runt the ML code 
-
-   // else return false 
-    var data=getShehiaData(c.contact.parent.parent._id);
-    //CHV id 
-    var chv_id = c.contact.meta.created_by_place_uuid; 
-    console.log('CHV place id is ' + chv_id); 
-    console.log(data); 
-    console.log('c.parent.parent is ' + c.contact.parent.parent._id); 
-  //  var shehia = this.getShehia(c);
-   // var district = this.getDistrict(c);
+    var data=getShehiaData(c.contact.meta.created_by_place_uuid);
+    console.log('Data is ' + JSON.stringify(data)); 
+   if(data.shehia === '')
+   { 
+    console.log('No catchment area found'); 
+    return; 
+   }
    var shehia = data.shehia; 
    var district = data.district; 
    var  home_ct = data.home_ct; 
@@ -1155,11 +1134,11 @@ module.exports = {
    var population_2012 = data.population_2012; 
    var status = data.status; 
     var prevDeliveryLocation = this.getPrevDeliveryLocation(c);
-    var waterSource = this.getClientEducationAndHouseInformation(c, 'water_source');
-    var highestSchoolLevel = this.getClientEducationAndHouseInformation(c, 'highest_school_level');
-    var homeElectricity = this.getClientEducationAndHouseInformation(c, 'home_electricity');
-    var floorMaterial = this.getClientEducationAndHouseInformation(c, 'floor_material');
-    var roofMaterial = this.getClientEducationAndHouseInformation(c, 'roof_material');
+    var waterSource = this.getHouseInfo(c, 'water_source');
+    var highestSchoolLevel = this.getHouseInfo(c, 'highest_school_level');
+    var homeElectricity = this.getHouseInfo(c, 'home_electricity');
+     var floorMaterial = this.getHouseInfo(c, 'floor_material');
+     var roofMaterial = this.getHouseInfo(c, 'roof_material');
     //console.log('water source ' + this.getWaterSource(c)); 
     var inputData = [
      
@@ -1210,8 +1189,8 @@ module.exports = {
       prevDeliveryLocation === 'home',//Location = Home               (Map to variable name with highest number of row) 
       prevDeliveryLocation === 'local_health_facility', //Location = Health facility 
       prevDeliveryLocation === 'home', //Location = Home 
-      waterSource === 'other' || waterSource === 'decline_to_answer', //Water source = Other 
-      waterSource === 'surface',//Water source  surface 
+     waterSource === 'other' || waterSource === 'decline_to_answer', //Water source = Other 
+     waterSource === 'surface',//Water source  surface 
       waterSource === 'home_tap_pump', //Water source home_tap_pump
       waterSource === 'community_tap_pump',//Water source community_tap_pump
       waterSource === 'well',//Water source well 
