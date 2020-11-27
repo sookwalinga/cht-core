@@ -14,6 +14,7 @@ CREATE MATERIALIZED VIEW useview_person AS
     , doc ->> 'name' AS name
     , doc ->> 'sex' AS sex
     , NULLIF(doc ->> 'exact_dob_known', '')::BOOLEAN AS exact_dob_known
+    , NULLIF(doc ->> 'created_by_doc', '') AS created_by_doc
     , TO_DATE(doc ->> 'date_of_birth', 'YYYY-MM-DD') AS date_of_birth
     , doc ->> 'phone' AS phone
     , doc ->> 'alternate_phone' AS alternate_phone
