@@ -194,6 +194,61 @@ module.exports = [
     },
   },
 
+  //Additional CHV Pregnancy Counselling visit 
+{
+  name: 'pregnancy_counselling_visit',
+  icon: 'follow-up',
+  title: 'task.pregnancy_counselling_visit',
+  appliesTo: 'reports',
+  appliesIf: function (c, r) {
+    return  extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+      extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
+      extras.getANCVisitAfter6MonthsFlag(r) === '1' || extras.isHighRiskPregnancy(c) === '1';
+  },
+  appliesToType: ['pregnancy'],
+  actions: [{
+    form: 'referral_follow_up', // this here will be replaced with pregnancy counselling form 
+    modifyContent: function (content, contact, report) {
+      content.original_source_form = 'pregnancy';
+      content.source_form = report.form;
+      content.source_id = report._id;
+      content.last_visit_date = report.reported_date;
+      content.due_date = Utils.addDate(new Date(report.reported_date), 14).getTime();
+      content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
+      content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
+      content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
+      content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
+    }
+  }],
+  events: [
+    {
+      id: 'pregnancy_counselling_visit',
+      dueDate: function (event, contact, report) {
+        var days = 14;
+        return Utils.addDate(new Date(report.reported_date), days);
+      },
+      start: 14,
+      end: 14,
+    }
+  ],
+  priority: {
+    level: 'high',
+    label: 'task.pregnancy_counselling.high_priority'
+  },
+  resolvedIf: function (c, r) {
+    return (r.form === 'pregnancy_couselling_visit' && !extras.shouldVisitAgain(r)) ||
+      extras.isFormSubmittedForSource(c.reports, 'pregnancy_couselling_visit', r._id) ||
+      extras.isContactDeceased(c) ||
+      extras.isContactMuted(c);
+  },
+},
+
   // First-time infant child visit for children registered at 19 days of age or younger.
   // Task triggers with the high priority flag set and a due date of the same day the child was registered
   {
