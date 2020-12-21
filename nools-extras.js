@@ -1,5 +1,5 @@
 var RandomForestClassifier = require('./model-min.js');
-var getShehiaData=require('./catchments.js');
+var getShehiaData=require('./catchments.js').getShehiaData;
 module.exports = {
 
   day: 1,

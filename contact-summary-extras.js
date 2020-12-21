@@ -1,3 +1,4 @@
+var isCatchmentInML=require('./catchments.js').isCatchmentInML;
 module.exports = {
 
   week: 7,
@@ -10,6 +11,15 @@ module.exports = {
       return ageInMonths < 60;
     }
     return false;
+  },
+
+  isEnrolledInML: function(){  
+    if(contact && contact.parent && contact.parent.parent && contact.parent.parent.parent)
+    { 
+      console.log('inside enrolled ml'); 
+      return isCatchmentInML(contact.parent.parent.parent._id); 
+    }
+   
   },
 
 
@@ -42,6 +52,7 @@ module.exports = {
   getContactHouseKitongoji: function () {
     if (contact && contact.parent && contact.parent.parent && contact.parent.parent.parent) {
       if (lineage[0] && lineage[0].kitongoji) {
+        console.log('inside kitongoji'); 
         return lineage[0].kitongoji;
       }
     }
