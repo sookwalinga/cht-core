@@ -1104,18 +1104,24 @@ module.exports = {
         else if(property === 'floor_material')
         data = report.fields.education_and_prev_enrollment.floor_material;
         else if(property === 'highest_school_level')
-        data = report.fields.education_and_prev_enrollment.floor_material;
+        data = report.fields.education_and_prev_enrollment.highestSchoolLevel;
         else if(property === 'water_source')
-        data = report.fields.education_and_prev_enrollment.floor_material;
+        data = report.fields.education_and_prev_enrollment.waterSource;
         else if(property === 'home_electricity')
-        data = report.fields.education_and_prev_enrollment.floor_material;
+        data = report.fields.education_and_prev_enrollment.homeElectricity;
       }
     }
     return data;
   },
-
   
-  isHighRiskPregnancy: function (c) {
+  multiSelectOptions:function(c){ 
+    console.log('nitu', c); 
+    var optionList = 'previous_pregnancies'; 
+    return optionList; 
+
+  },
+  
+  isHighRiskPregnancyML: function (c) {
     var data=getShehiaData(c.contact.meta.created_by_place_uuid);
     console.log('Data is ' + JSON.stringify(data)); 
    if(data.shehia === '')
@@ -1133,12 +1139,12 @@ module.exports = {
    var population_2002 = data.population_2002; 
    var population_2012 = data.population_2012; 
    var status = data.status; 
-    var prevDeliveryLocation = this.getPrevDeliveryLocation(c);
-    var waterSource = this.getHouseInfo(c, 'water_source');
-    var highestSchoolLevel = this.getHouseInfo(c, 'highest_school_level');
-    var homeElectricity = this.getHouseInfo(c, 'home_electricity');
-     var floorMaterial = this.getHouseInfo(c, 'floor_material');
-     var roofMaterial = this.getHouseInfo(c, 'roof_material');
+   var prevDeliveryLocation = this.getPrevDeliveryLocation(c);
+   var waterSource = this.getHouseInfo(c, 'water_source');
+   var highestSchoolLevel = this.getHouseInfo(c, 'highest_school_level');
+   var homeElectricity = this.getHouseInfo(c, 'home_electricity');
+   var floorMaterial = this.getHouseInfo(c, 'floor_material');
+   var roofMaterial = this.getHouseInfo(c, 'roof_material');
     //console.log('water source ' + this.getWaterSource(c)); 
     var inputData = [
      

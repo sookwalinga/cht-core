@@ -12,7 +12,10 @@ module.exports = {
     previous_hiv_status: extras.showPMTCT(),
     previous_rchcard_status: extras.showPregnancyEDDEstimation(),
     hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant(),
-    enabel: extras.isEnrolledInML()
+    enabel: extras.isEnrolledInML(), 
+    nitu: extras.getPregnancyRiskFactors(), 
+    mitigation_list: extras.getMitigationList(),
+    high_risk_manual: extras.isHighRiskPregnancy()
   },
 
   fields: [

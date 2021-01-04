@@ -1,4 +1,7 @@
 var isCatchmentInML=require('./catchments.js').isCatchmentInML;
+let mitigationSet = new Set(); 
+let manual_high_risk = false; 
+
 module.exports = {
 
   week: 7,
@@ -21,7 +24,6 @@ module.exports = {
     }
    
   },
-
 
   getVisitCount: function () {
     var count = [];
@@ -275,5 +277,150 @@ module.exports = {
       isMuted = true;
     }
     return isMuted;
+  },
+
+
+  getPregnancyRiskFactors: function(){ 
+      var report = this.getRecentPregnancyReport();
+      var riskFactors = []; 
+      if (report && report.fields && report.fields.pregnant_woman_information)
+      {
+        if(report.fields.pregnant_woman_information.previous_pregnancies > 5)
+          riskFactors.push('previous_pregnancies'); 
+        if(report.fields.pregnant_woman_information.previous_delivery_by_c_section === 'yes') 
+        { 
+          riskFactors.push('previous_delivery_by_c_section'); 
+          mitigationSet.add('facility_delivery'); 
+        }
+        
+        if(report.fields.pregnant_woman_information.previous_delivery_by_vacuum === 'yes'){ 
+          riskFactors.push('previous_delivery_by_vacuum'); 
+          mitigationSet.add('facility_delivery'); 
+        }
+          
+        if(report.fields.pregnant_woman_information.previous_stillbirth === 'yes'){ 
+          riskFactors.push('previous_stillbirth');
+          mitigationSet.add('facility_delivery'); 
+        }
+          
+       if(report.fields.pregnant_woman_information.local_herbs === 'yes'){ 
+        riskFactors.push('local_herbs');
+        mitigationSet.add('local_herb_risks');
+       }
+          
+       if(report.fields.pregnant_woman_information.ten_or_more_years === 'yes'){ 
+        riskFactors.push('ten_or_more_years');
+        mitigationSet.add('facility_delivery'); 
+       }
+         
+        if(report.fields.pregnant_woman_information.delivery_complications)
+        { 
+          var deliveryComplications = (report.fields.pregnant_woman_information.delivery_complications).toString(); 
+          var hasProlongedLabor = deliveryComplications.includes('prolonged_labor'); 
+          var hasPerinealTear =  deliveryComplications.includes('large_perineal_tear'); 
+          var hasRetainedPlacenta = deliveryComplications.includes('retained_placenta'); 
+          var hasAPH = deliveryComplications.includes('aph'); 
+          var hasPostpartumHemorrage = deliveryComplications.includes('postpartum_hemorrage'); 
+          var hasEnclampsia = deliveryComplications.includes('enclampsia'); 
+          var hasBigBaby = deliveryComplications.includes('big_baby'); 
+          if(hasProlongedLabor){ 
+            riskFactors.push('prolonged_labor');
+            mitigationSet.add('facility_delivery');
+          }
+            
+          if(hasPerinealTear){ 
+            riskFactors.push('large_perineal_tear');
+            mitigationSet.add('facility_delivery');
+          } 
+            
+          if(hasRetainedPlacenta){ 
+            riskFactors.push('retained_placenta');
+            mitigationSet.add('facility_delivery');
+          }
+          
+          if(hasAPH){
+            riskFactors.push('aph'); 
+            mitigationSet.add('facility_delivery');
+          }
+           
+          if(hasPostpartumHemorrage){ 
+            riskFactors.push('postpartum_hemorrage');
+            mitigationSet.add('facility_delivery');
+          }
+             
+          if(hasEnclampsia){
+            riskFactors.push('enclampsia'); 
+            mitigationSet.add('facility_delivery');
+          }
+            
+          if(hasBigBaby){ 
+            riskFactors.push('big_baby'); 
+            mitigationSet.add('facility_delivery');
+          }
+        }
+
+        if(report.fields.pregnant_woman_information.previous_miscarriages > 0){ 
+          riskFactors.push('previous_miscarriages');
+          mitigationSet.add('rest'); 
+          mitigationSet.add('balanced_diet'); 
+          mitigationSet.add('family_planning'); 
+          mitigationSet.add('no_heavy_work'); 
+        }
+         
+      } 
+      if(report && report.fields && report.fields.rch_card) 
+      { 
+        if(report.fields.rch_card.multiple_pregnancy === 'yes'){ 
+          riskFactors.push('multiple_pregnancy');
+          mitigationSet.add('rest'); 
+          mitigationSet.add('balanced_diet'); 
+          mitigationSet.add('no_heavy_work'); 
+        }
+          
+        if(report.fields.rch_card.malpresentation === 'yes'){ 
+          riskFactors.push('malpresentation');
+          mitigationSet.add('facility_delivery'); 
+        }
+          
+        if(report.fields.rch_card.breech_position === 'yes'){ 
+          riskFactors.push('breech_position'); 
+          mitigationSet.add('facility_delivery');
+        }
+         
+        if(report.fields.rch_card.big_baby === 'yes'){ 
+          riskFactors.push('big_baby'); 
+          mitigationSet.add('facility_delivery');
+        }
+          
+        if(report.fields.rch_card.higher_facility_delivery === 'yes'){ 
+          riskFactors.push('higher_facility_delivery');
+          mitigationSet.add('facility_delivery');
+        }
+         
+        if(report.fields.rch_card.maternal_nutrition && report.fields.rch_card.maternal_nutrition.nutrition_restrictions === 'yes')
+          riskFactors.push('nutrition_restrictions');
+          mitigationSet.add('balanced_diet');
+      }
+
+      if(report && report.fields && report.fields.facility_delivery_importance && 
+        report && report.fields && 
+        report.fields.facility_delivery_importance.allow_partner_to_deliver_facility === 'no'){ 
+          mitigationSet.add('facility_delivery');
+          riskFactors.push('allow_partner_to_deliver_facility');
+        }
+       riskFactors.join(' ');
+       if(riskFactors.length >= 1) 
+         manual_high_risk = true; 
+       return riskFactors; 
+  }, 
+
+  isHighRiskPregnancy: function(){   
+   return manual_high_risk; 
+  },
+
+  getMitigationList: function(){ 
+    return [...mitigationSet]; 
   }
+
+
 };

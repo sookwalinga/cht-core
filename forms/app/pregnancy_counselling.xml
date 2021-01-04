@@ -1,0 +1,1444 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Pregnancy Counselling</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/pregnancy_counselling/client_information/due_date_note:label">
+            <value>Due date: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/due_date_pretty_print_english "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information/household_note:label">
+            <value>Name: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/client_name "/>&lt;/span&gt;
+Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/age_years "/> years&lt;/span&gt;
+Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/household_head "/>&lt;/span&gt; 
+House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information/intro_note:label">
+            <value>Visit type: &lt;span style="font-weight:bold"&gt;Pregnancy Counselling&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information/phone_note:label">
+            <value>Phone: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information:label">
+            <value>Client Information</value>
+          </text>
+          <text id="/pregnancy_counselling/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.
+• Please remember to do the covid education visit before or after submitting this form. &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_intro:label">
+            <value>Now I will ask you some questions about pregnancy danger signs. Have you experienced any of these symptoms?</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain:label">
+            <value>Severe abdoninal pain</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever:label">
+            <value>Fever and being too weak to get out of bed</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache:label">
+            <value>Severe Headache</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
+            <value>Vaginal Bleeding</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions:label">
+            <value>Convulsions/fits</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing:label">
+            <value>Fast or difficult breathing</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
+            <value>Unconsciousness</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/emergency_danger_sign_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;This woman is experiencing or has experienced an emergency danger sign. Urge the woman and her family to get the woman medical help as the lives of the mother and her baby are potentially in danger.&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv:label">
+            <value>No emergency referral condition was identified.</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/observe_danger_signs:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;OBSERVE: &lt;/span&gt;&lt;span style="color:#f58a1f"&gt; if the client has the following pregnancy danger signs.&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs:label">
+            <value>Pregnancy Danger Signs</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/pregnancy_counselling/intro_message/intro_note:label">
+            <value>During the enrolment we talked about pregnancy risk factors. I want to make sure that you are aware of these factors and know what to do to lower your risk if you identify any. Therefore, I will visit you every two weeks, in addition to the regular pregnancy visits, to make sure you continue in good health and have a safe pregnancy all the way through delivery.</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategies:label">
+            <value>Considering these risk factors: [<output value=" /pregnancy_counselling/nitu "/>] what can you do to continue in good health and have a safe pregnancy all the way through delivery?</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note:label">
+            <value>I would now like to go through the things you can do to continue in good health and have a safe pregnancy all the way through delivery</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies:label">
+            <value>What can you do to continue in good health and have a safe pregnancy all the way through delivery?</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategy_note:label">
+            <value>I would now like to go through the things you can do to continue in good health and have a safe pregnancy all the way through delivery.</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv:label">
+            <value>Have the mother explain first and if she cannot then explain it to her.</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_questions/question_to_client:label">
+            <value>Do you understand the importance of [] ?</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility:label">
+            <value>Partner permission not given</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/anemia:label">
+            <value>Anemia [received tablets, or didn't receive because out of stock/too expensive/don't know]</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/aph:label">
+            <value>APH</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/big_baby:label">
+            <value>Big baby in previous or current (more than 4 kg)</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/breech_position:label">
+            <value>Breech position</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/cardiac_disease:label">
+            <value>Cardiac disease</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/diabetes:label">
+            <value>Diabetes</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/enclampsia:label">
+            <value>Eclampsia</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/high_blood_pressure:label">
+            <value>High blood pressure</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/higher_level_facility:label">
+            <value>Advise to deliver at higher-level facility</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/large_perineal_tear:label">
+            <value>Large perineal tear (close to anus)</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/local_herbs:label">
+            <value>Use of local herbs</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/malpresentation:label">
+            <value>Malpresentation</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/multiple_pregnancy:label">
+            <value>Multiple pregnancy</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/nutrition:label">
+            <value>Follows nutrition restrictions</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/postpartum_hemorrage:label">
+            <value>Postpartum hemorrhage</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section:label">
+            <value>Caesarean section</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum:label">
+            <value>Delivery by vacuum</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_miscarriages:label">
+            <value>Miscarriage/abortion</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_pregnancies:label">
+            <value>More than 5 previous pregnancies</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_stillbirth:label">
+            <value>Stillbirth</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/prolonged_labor:label">
+            <value>Prolonged labor (12 hours or more)</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/retained_placenta:label">
+            <value>Retained placenta</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/sicke_cell:label">
+            <value>Sickle cell</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/ten_or_more_years:label">
+            <value>Last pregnancy 10 or more years ago</value>
+          </text>
+          <text id="/pregnancy_counselling/target_messaging_group/risk_factors:label">
+            <value>Which pregnancy risk factors do you remember?</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary/next_visit:label">
+            <value>I will visit you again in two weeks.</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary:label">
+            <value>Visit Summary</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-0">
+            <value>Facility Delivery</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-1">
+            <value>ANC Visits</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-2">
+            <value>rest</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-3">
+            <value>Balanced Diet/Good Nutrition Practices</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-4">
+            <value>No heavy work</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-5">
+            <value>Family Planning</value>
+          </text>
+          <text id="static_instance-risk_factors-0">
+            <value>More than 5 previous pregnancies</value>
+          </text>
+          <text id="static_instance-risk_factors-1">
+            <value>Caesarean section</value>
+          </text>
+          <text id="static_instance-risk_factors-10">
+            <value>Big baby in previous or current (more than 4 kg)</value>
+          </text>
+          <text id="static_instance-risk_factors-11">
+            <value>Miscarriage/abortion</value>
+          </text>
+          <text id="static_instance-risk_factors-12">
+            <value>Multiple pregnancy</value>
+          </text>
+          <text id="static_instance-risk_factors-13">
+            <value>Malpresentation</value>
+          </text>
+          <text id="static_instance-risk_factors-14">
+            <value>Breech position</value>
+          </text>
+          <text id="static_instance-risk_factors-15">
+            <value>High blood pressure</value>
+          </text>
+          <text id="static_instance-risk_factors-16">
+            <value>Diabetes</value>
+          </text>
+          <text id="static_instance-risk_factors-17">
+            <value>Sickle cell</value>
+          </text>
+          <text id="static_instance-risk_factors-18">
+            <value>Cardiac disease</value>
+          </text>
+          <text id="static_instance-risk_factors-19">
+            <value>Anemia [received tablets, or didn't receive because out of stock/too expensive/don't know]</value>
+          </text>
+          <text id="static_instance-risk_factors-2">
+            <value>Delivery by vacuum</value>
+          </text>
+          <text id="static_instance-risk_factors-20">
+            <value>Advise to deliver at higher-level facility</value>
+          </text>
+          <text id="static_instance-risk_factors-21">
+            <value>Partner permission not given</value>
+          </text>
+          <text id="static_instance-risk_factors-22">
+            <value>Last pregnancy 10 or more years ago</value>
+          </text>
+          <text id="static_instance-risk_factors-23">
+            <value>Use of local herbs</value>
+          </text>
+          <text id="static_instance-risk_factors-24">
+            <value>Follows nutrition restrictions</value>
+          </text>
+          <text id="static_instance-risk_factors-3">
+            <value>Stillbirth</value>
+          </text>
+          <text id="static_instance-risk_factors-4">
+            <value>Prolonged labor (12 hours or more)</value>
+          </text>
+          <text id="static_instance-risk_factors-5">
+            <value>Large perineal tear (close to anus)</value>
+          </text>
+          <text id="static_instance-risk_factors-6">
+            <value>Retained placenta</value>
+          </text>
+          <text id="static_instance-risk_factors-7">
+            <value>APH</value>
+          </text>
+          <text id="static_instance-risk_factors-8">
+            <value>Postpartum hemorrhage</value>
+          </text>
+          <text id="static_instance-risk_factors-9">
+            <value>Eclampsia</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/pregnancy_counselling/client_information/due_date_note:label">
+            <value>Tarehe ya mwisho ya tembeleo: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/due_date_pretty_print_swahili "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information/household_note:label">
+            <value>Jina: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_counselling/client_name "/>&lt;/span&gt;
+Umri: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;miaka <output value=" /pregnancy_counselling/age_years "/>&lt;/span&gt;
+Mtu wa karibu kwa mawasiliano: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_counselling/household_head "/>&lt;/span&gt; 
+Namba ya nyumba: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_counselling/house_number "/>&lt;/span&gt;
+Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output value=" /pregnancy_counselling/kitongoji "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information/intro_note:label">
+            <value>Aina ya tembeleo: &lt;span style="font-weight:bold"&gt;Ujauzito&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information/phone_note:label">
+            <value>Mawasiliano: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregnancy_counselling/phone "/>&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/client_information:label">
+            <value>Taarifa za mteja</value>
+          </text>
+          <text id="/pregnancy_counselling/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.
+• Tafadhali kumbuka kufungua fomu ya kuwaelimsiha wanakaya juu ya maambukizi ya korona na jinsi ya kuchukua tahadhari. Tembeleo kuhusu korona unaweza kulifanya kabla ya kuanza tembeleo lako au mara baada ya kumaliza tembeleo lako hili.&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_intro:label">
+            <value>Sahivi naomba kukuliza maswali yanayohusiana na dalili za hatari kwa ujauzito. Je una dalizi za hatari kati ya hizi zifuatazo?</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain:label">
+            <value>Una maumivu makali ya tumbo?</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever:label">
+            <value>Una homa au umedhoofika ?</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache:label">
+            <value>Una maumivu makali ya kichwa ?</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
+            <value>Unatokwa na damu ukeni?</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_68:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions:label">
+            <value>Kifafa cha mimba</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing:label">
+            <value>Kupumua kwa haraka au ugumu katika kupumua</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
+            <value>Kupoteza fahamu</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_76:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/emergency_danger_sign_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mwanamke huyu anadalili za hatari au aliwahi kupata dalili za hatari za ghafla. Mtake Mama na familia yake kupata msaada wa kimatibabu kwasababu maisha ya mama na mtoto wake yapo katika hatari.&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv:label">
+            <value>Kwa sasa, hauna dalili yoyote ya hatari iliyogundulika. Lakini ukipata dalili yote kati ya hizi tulizozijadili, tafadhali nenda kituo cha afya haraka iwezakanavyo.</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs/observe_danger_signs:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;ANGALIA: &lt;/span&gt; &lt;span style="color:#f58a1f"&gt;kama mteja ana dalili za hatari kwa wajawazito hizi zifuatazo.&lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/danger_signs:label">
+            <value>Dalili Hatari Kwa Mama Wajawazito</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/client_EDD:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/client_EDD_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/is_high_risk_pregnancy_ML:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/risk_options:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs/visit_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/intro_message/intro_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategies:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategy_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_questions/question_to_client:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/anemia:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/aph:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/big_baby:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/breech_position:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/cardiac_disease:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/diabetes:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/enclampsia:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/high_blood_pressure:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/higher_level_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/large_perineal_tear:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/local_herbs:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/malpresentation:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/multiple_pregnancy:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/nutrition:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/postpartum_hemorrage:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_miscarriages:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_pregnancies:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/previous_stillbirth:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/prolonged_labor:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/retained_placenta:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/sicke_cell:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/short_explanation/ten_or_more_years:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/target_messaging_group/risk_factors:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary/next_visit:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary:label">
+            <value>-</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-3">
+            <value>-</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-4">
+            <value>-</value>
+          </text>
+          <text id="static_instance-mitigation_strategies-5">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-0">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-1">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-10">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-11">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-12">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-13">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-14">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-15">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-16">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-17">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-18">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-19">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-2">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-20">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-21">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-22">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-23">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-24">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-3">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-4">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-5">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-6">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-7">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-8">
+            <value>-</value>
+          </text>
+          <text id="static_instance-risk_factors-9">
+            <value>-</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Ndio</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>Hapana</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <pregnancy_counselling id="pregnancy_counselling" prefix="J1!pregnancy_counselling!" delimiter="#" version="21/12/2020">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <due_date/>
+            <due_date_human_readable/>
+            <is_high_risk_pregnancy_ML/>
+            <client_EDD/>
+            <visit_id/>
+            <client_EDD_human_readable/>
+            <risk_options/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <date_of_birth_c/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <age_in_years/>
+          <age_days_display/>
+          <week/>
+          <month/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <due_date/>
+          <due_date_pretty_print_english/>
+          <due_date_pretty_print_swahili/>
+          <client_EDD_pretty_print_english/>
+          <client_EDD_pretty_print_swahili/>
+          <client_EDD_c/>
+          <is_high_risk_pregnancy_ML_c/>
+          <high_risk_manual/>
+          <nitu/>
+          <mitigation_list/>
+          <enabel/>
+          <risk_options_c/>
+          <currently_pregnant/>
+          <hide_lmp_or_months_pregnant/>
+          <client_name/>
+          <visit_id/>
+          <start/>
+          <end/>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
+          <client_information>
+            <intro_note/>
+            <household_note/>
+            <phone_note/>
+            <due_date_note/>
+          </client_information>
+          <intro_message>
+            <intro_note/>
+          </intro_message>
+          <danger_signs>
+            <danger_sign_intro/>
+            <danger_sign_table_1>
+              <generated_table_list_label_68/>
+              <reserved_name_for_field_list_labels_69/>
+              <danger_sign_vaginal_bleeding/>
+              <danger_sign_abdominal_pain/>
+              <danger_sign_severe_headache/>
+              <danger_sign_fever/>
+            </danger_sign_table_1>
+            <danger_sign_note_to_chv/>
+            <observe_danger_signs/>
+            <danger_sign_table_2>
+              <generated_table_list_label_76/>
+              <reserved_name_for_field_list_labels_77/>
+              <danger_sign_unconsciouss/>
+              <danger_sign_difficult_breathing/>
+              <danger_sign_convulsions/>
+            </danger_sign_table_2>
+            <emergency_danger_sign_referral/>
+            <emergency_danger_sign_note/>
+            <no_danger_sign_note_to_chv/>
+          </danger_signs>
+          <target_messaging_group>
+            <risk_factors/>
+          </target_messaging_group>
+          <short_explanation>
+            <previous_pregnancies/>
+            <previous_delivery_by_c_section/>
+            <previous_delivery_by_vacuum/>
+            <previous_stillbirth/>
+            <prolonged_labor/>
+            <large_perineal_tear/>
+            <retained_placenta/>
+            <aph/>
+            <postpartum_hemorrage/>
+            <enclampsia/>
+            <big_baby/>
+            <previous_miscarriages/>
+            <multiple_pregnancy/>
+            <malpresentation/>
+            <breech_position/>
+            <high_blood_pressure/>
+            <diabetes/>
+            <sicke_cell/>
+            <cardiac_disease/>
+            <anemia/>
+            <higher_level_facility/>
+            <allow_partner_to_deliver_facility/>
+            <ten_or_more_years/>
+            <local_herbs/>
+            <nutrition/>
+          </short_explanation>
+          <mitigation_strategy>
+            <mitigation_strategies/>
+            <mitigation_strategy_note/>
+          </mitigation_strategy>
+          <mitigation_strategy_ml>
+            <mitigation_strategies/>
+            <mitigation_strategy_note/>
+          </mitigation_strategy_ml>
+          <mitigation_strategy_questions>
+            <note_to_chv/>
+            <question_to_client/>
+          </mitigation_strategy_questions>
+          <visit_summary>
+            <next_visit/>
+          </visit_summary>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </pregnancy_counselling>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="risk_factors">
+        <root>
+          <item>
+            <itextId>static_instance-risk_factors-0</itextId>
+            <name>previous_pregnancies</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-1</itextId>
+            <name>previous_delivery_by_c_section</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-2</itextId>
+            <name>previous_delivery_by_vacuum</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-3</itextId>
+            <name>previous_stillbirth</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-4</itextId>
+            <name>prolonged_labor</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-5</itextId>
+            <name>large_perineal_tear</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-6</itextId>
+            <name>retained_placenta</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-7</itextId>
+            <name>aph</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-8</itextId>
+            <name>postpartum_hemorrage</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-9</itextId>
+            <name>enclampsia</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-10</itextId>
+            <name>big_baby</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-11</itextId>
+            <name>previous_miscarriages</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-12</itextId>
+            <name>multiple_pregnancy</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-13</itextId>
+            <name>malpresentation</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-14</itextId>
+            <name>breech_position</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-15</itextId>
+            <name>high_blood_pressure</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-16</itextId>
+            <name>diabetes</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-17</itextId>
+            <name>sicke_cell</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-18</itextId>
+            <name>cardiac_disease</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-19</itextId>
+            <name>anemia</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-20</itextId>
+            <name>higher_facility_delivery</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-21</itextId>
+            <name>allow_partner_to_deliver_facility</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-22</itextId>
+            <name>ten_or_more_years</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-23</itextId>
+            <name>local_herbs</name>
+          </item>
+          <item>
+            <itextId>static_instance-risk_factors-24</itextId>
+            <name>nutrition_restrictions</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="mitigation_strategies">
+        <root>
+          <item>
+            <itextId>static_instance-mitigation_strategies-0</itextId>
+            <name>facility_delivery</name>
+          </item>
+          <item>
+            <itextId>static_instance-mitigation_strategies-1</itextId>
+            <name>anc_visits</name>
+          </item>
+          <item>
+            <itextId>static_instance-mitigation_strategies-2</itextId>
+            <name>rest</name>
+          </item>
+          <item>
+            <itextId>static_instance-mitigation_strategies-3</itextId>
+            <name>balanced_diet</name>
+          </item>
+          <item>
+            <itextId>static_instance-mitigation_strategies-4</itextId>
+            <name>no_heavy_work</name>
+          </item>
+          <item>
+            <itextId>static_instance-mitigation_strategies-5</itextId>
+            <name>family_planning</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/pregnancy_counselling/inputs" relevant="false()"/>
+      <bind nodeset="/pregnancy_counselling/inputs/due_date" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/is_high_risk_pregnancy_ML" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/client_EDD" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/visit_id" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/client_EDD_human_readable" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/risk_options" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/user/name" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/pregnancy_counselling/inputs/contact/name" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/pregnancy_counselling/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/pregnancy_counselling/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/pregnancy_counselling/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/pregnancy_counselling/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/pregnancy_counselling/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /pregnancy_counselling/date_of_birth_c ))"/>
+      <bind nodeset="/pregnancy_counselling/age_months" type="string" calculate="int(( /pregnancy_counselling/age_days  - ( /pregnancy_counselling/age_years  * 12 * 30)) div 30,0)"/>
+      <bind nodeset="/pregnancy_counselling/age_years" type="string" calculate="int( /pregnancy_counselling/age_days  div (30 *12),0)"/>
+      <bind nodeset="/pregnancy_counselling/age_in_years" type="string" calculate="round((decimal-date-time(today()) - decimal-date-time( /pregnancy_counselling/date_of_birth_c )) div 365,0)"/>
+      <bind nodeset="/pregnancy_counselling/age_days_display" type="string" calculate=" /pregnancy_counselling/age_days  - ( /pregnancy_counselling/age_months  * 30) - ( /pregnancy_counselling/age_years  *12*30)"/>
+      <bind nodeset="/pregnancy_counselling/week" type="string" calculate="7"/>
+      <bind nodeset="/pregnancy_counselling/month" type="string" calculate="30"/>
+      <bind nodeset="/pregnancy_counselling/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/pregnancy_counselling/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/pregnancy_counselling/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/pregnancy_counselling/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/pregnancy_counselling/due_date" type="string" calculate="../inputs/due_date"/>
+      <bind nodeset="/pregnancy_counselling/due_date_pretty_print_english" type="string" calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Unknown&quot;)"/>
+      <bind nodeset="/pregnancy_counselling/due_date_pretty_print_swahili" type="string" calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Haijulikani&quot;)"/>
+      <bind nodeset="/pregnancy_counselling/client_EDD_pretty_print_english" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Unknown&quot;)"/>
+      <bind nodeset="/pregnancy_counselling/client_EDD_pretty_print_swahili" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Haijulikani&quot;)"/>
+      <bind nodeset="/pregnancy_counselling/client_EDD_c" type="string" calculate="../inputs/client_EDD"/>
+      <bind nodeset="/pregnancy_counselling/is_high_risk_pregnancy_ML_c" type="string" calculate="../inputs/is_high_risk_pregnancy_ML"/>
+      <bind nodeset="/pregnancy_counselling/high_risk_manual" type="string" calculate="instance('contact-summary')/context/high_risk_manual"/>
+      <bind nodeset="/pregnancy_counselling/nitu" type="string" calculate="instance('contact-summary')/context/nitu"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_list" type="string" calculate="instance('contact-summary')/context/mitigation_list"/>
+      <bind nodeset="/pregnancy_counselling/enabel" type="string" calculate="instance('contact-summary')/context/enabel"/>
+      <bind nodeset="/pregnancy_counselling/risk_options_c" type="string" calculate="nitu"/>
+      <bind nodeset="/pregnancy_counselling/currently_pregnant" type="string" calculate="instance('contact-summary')/context/currently_pregnant"/>
+      <bind nodeset="/pregnancy_counselling/hide_lmp_or_months_pregnant" type="string" calculate="if( /pregnancy_counselling/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)"/>
+      <bind nodeset="/pregnancy_counselling/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/pregnancy_counselling/visit_id" type="string" calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)"/>
+      <bind nodeset="/pregnancy_counselling/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/pregnancy_counselling/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/pregnancy_counselling/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/client_information/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/client_information/household_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/client_information/phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/client_information/due_date_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/intro_message/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_intro" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_68" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69" type="select1"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/observe_danger_signs" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_76" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77" type="select1"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions" type="select1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_referral" type="string" calculate="if(selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,&quot;yes&quot;),1,0)"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_note" readonly="true()" type="string" required="true()" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 1"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv" readonly="true()" type="string" relevant="selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions ,'no') and 
+selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,'no') and 
+selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,'no') and 
+selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever ,'no') and 
+selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,'no') and 
+selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,'no') and 
+selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,'no')"/>
+      <bind nodeset="/pregnancy_counselling/target_messaging_group/risk_factors" type="select" required="true()" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_pregnancies" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_pregnancies')) and contains( /pregnancy_counselling/nitu , 'previous_pregnancies')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_c_section')) and contains( /pregnancy_counselling/nitu , 'previous_delivery_by_c_section')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_vacuum')) and contains( /pregnancy_counselling/nitu , 'previous_delivery_by_vacuum')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_stillbirth" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_stillbirth')) and contains( /pregnancy_counselling/nitu , 'previous_stillbirth')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/prolonged_labor" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'prolonged_labor')) and contains( /pregnancy_counselling/nitu , 'prolonged_labor')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/large_perineal_tear" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'large_perineal_tear')) and contains( /pregnancy_counselling/nitu , 'large_perineal_tear')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/retained_placenta" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'retained_placenta')) and contains( /pregnancy_counselling/nitu , 'retained_placenta')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/aph" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'aph')) and contains( /pregnancy_counselling/nitu , 'aph')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/postpartum_hemorrage" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'postpartum_hemorrage')) and contains( /pregnancy_counselling/nitu , 'postpartum_hemorrage')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/enclampsia" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'enclampsia')) and contains( /pregnancy_counselling/nitu , 'enclampsia')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/big_baby" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'big_baby')) and contains( /pregnancy_counselling/nitu , 'big_baby')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_miscarriages" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_miscarriages')) and contains( /pregnancy_counselling/nitu , 'previous_miscarriages')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/multiple_pregnancy" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'multiple_pregnancy')) and contains( /pregnancy_counselling/nitu , 'multiple_pregnancy')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/malpresentation" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'malpresentation')) and contains( /pregnancy_counselling/nitu , 'malpresentation')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/breech_position" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'breech_position')) and contains( /pregnancy_counselling/nitu , 'breech_position')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/high_blood_pressure" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'high_blood_pressure')) and contains( /pregnancy_counselling/nitu , 'high_blood_pressure')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/diabetes" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'diabetes')) and contains( /pregnancy_counselling/nitu , 'diabetes')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/sicke_cell" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'sicke_cell')) and contains( /pregnancy_counselling/nitu , 'sicke_cell')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/cardiac_disease" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'cardiac_disease')) and contains( /pregnancy_counselling/nitu , 'cardiac_disease')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/anemia" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'anemia')) and contains( /pregnancy_counselling/nitu , 'anemia')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/higher_level_facility" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'higher_level_facility')) and contains( /pregnancy_counselling/nitu , 'higher_level_facility')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'allow_partner_to_deliver_facility')) and contains( /pregnancy_counselling/nitu , 'allow_partner_to_deliver_facility')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/ten_or_more_years" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'ten_or_more_years')) and contains( /pregnancy_counselling/nitu , 'ten_or_more_years')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/local_herbs" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'local_herbs')) and contains( /pregnancy_counselling/nitu , 'local_herbs')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/nutrition" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'nutrition')) and contains( /pregnancy_counselling/nitu , 'nutrition')"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy/mitigation_strategies" type="select" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;false&quot; and  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies" type="select" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategy_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot; and  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/question_to_client" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/visit_summary/next_visit" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/pregnancy_counselling/inputs">
+      <input ref="/pregnancy_counselling/inputs/due_date"/>
+      <input ref="/pregnancy_counselling/inputs/due_date_human_readable"/>
+      <input ref="/pregnancy_counselling/inputs/is_high_risk_pregnancy_ML"/>
+      <input ref="/pregnancy_counselling/inputs/client_EDD"/>
+      <input ref="/pregnancy_counselling/inputs/visit_id"/>
+      <input ref="/pregnancy_counselling/inputs/client_EDD_human_readable"/>
+      <input ref="/pregnancy_counselling/inputs/risk_options"/>
+      <group ref="/pregnancy_counselling/inputs/user">
+        <input ref="/pregnancy_counselling/inputs/user/contact_id">
+          <label ref="jr:itext('/pregnancy_counselling/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/pregnancy_counselling/inputs/user/facility_id">
+          <label ref="jr:itext('/pregnancy_counselling/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/pregnancy_counselling/inputs/user/name">
+          <label ref="jr:itext('/pregnancy_counselling/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/pregnancy_counselling/inputs/contact">
+        <input appearance="db-object" ref="/pregnancy_counselling/inputs/contact/_id"/>
+        <input ref="/pregnancy_counselling/inputs/contact/name"/>
+        <input ref="/pregnancy_counselling/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group ref="/pregnancy_counselling/covid19_intro">
+      <label ref="jr:itext('/pregnancy_counselling/covid19_intro:label')"/>
+      <input ref="/pregnancy_counselling/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/pregnancy_counselling/covid19_intro/covid19_intro_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/pregnancy_counselling/client_information">
+      <label ref="jr:itext('/pregnancy_counselling/client_information:label')"/>
+      <input ref="/pregnancy_counselling/client_information/intro_note">
+        <label ref="jr:itext('/pregnancy_counselling/client_information/intro_note:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/client_information/household_note">
+        <label ref="jr:itext('/pregnancy_counselling/client_information/household_note:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/client_information/phone_note">
+        <label ref="jr:itext('/pregnancy_counselling/client_information/phone_note:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/client_information/due_date_note">
+        <label ref="jr:itext('/pregnancy_counselling/client_information/due_date_note:label')"/>
+      </input>
+    </group>
+    <group ref="/pregnancy_counselling/intro_message">
+      <input ref="/pregnancy_counselling/intro_message/intro_note">
+        <label ref="jr:itext('/pregnancy_counselling/intro_message/intro_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/pregnancy_counselling/danger_signs">
+      <label ref="jr:itext('/pregnancy_counselling/danger_signs:label')"/>
+      <input ref="/pregnancy_counselling/danger_signs/danger_sign_intro">
+        <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_intro:label')"/>
+      </input>
+      <group appearance="field-list" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1">
+        <input ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_68"/>
+        <select1 appearance="label" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69">
+          <label></label>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_69/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding">
+          <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain">
+          <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache">
+          <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever">
+          <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+      </group>
+      <input ref="/pregnancy_counselling/danger_signs/danger_sign_note_to_chv">
+        <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_note_to_chv:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/danger_signs/observe_danger_signs">
+        <label ref="jr:itext('/pregnancy_counselling/danger_signs/observe_danger_signs:label')"/>
+      </input>
+      <group appearance="field-list" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2">
+        <input ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_76"/>
+        <select1 appearance="label" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77">
+          <label></label>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_77/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss">
+          <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing">
+          <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <select1 appearance="list-nolabel" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions">
+          <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+      </group>
+      <input ref="/pregnancy_counselling/danger_signs/emergency_danger_sign_note">
+        <label ref="jr:itext('/pregnancy_counselling/danger_signs/emergency_danger_sign_note:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv">
+        <label ref="jr:itext('/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv:label')"/>
+      </input>
+    </group>
+    <group appearance="fiel-list" ref="/pregnancy_counselling/target_messaging_group">
+      <select ref="/pregnancy_counselling/target_messaging_group/risk_factors">
+        <label ref="jr:itext('/pregnancy_counselling/target_messaging_group/risk_factors:label')"/>
+        <itemset nodeset="instance('risk_factors')/root/item[contains( /pregnancy_counselling/nitu , name) or name = 'none']">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select>
+    </group>
+    <group appearance="field-list" ref="/pregnancy_counselling/short_explanation">
+      <input ref="/pregnancy_counselling/short_explanation/previous_pregnancies">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/previous_pregnancies:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/previous_delivery_by_c_section:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/previous_stillbirth">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/previous_stillbirth:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/prolonged_labor">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/prolonged_labor:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/large_perineal_tear">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/large_perineal_tear:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/retained_placenta">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/retained_placenta:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/aph">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/aph:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/postpartum_hemorrage">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/postpartum_hemorrage:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/enclampsia">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/enclampsia:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/big_baby">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/big_baby:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/previous_miscarriages">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/previous_miscarriages:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/multiple_pregnancy">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/multiple_pregnancy:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/malpresentation">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/malpresentation:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/breech_position">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/breech_position:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/high_blood_pressure">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/high_blood_pressure:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/diabetes">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/diabetes:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/sicke_cell">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/sicke_cell:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/cardiac_disease">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/cardiac_disease:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/anemia">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/anemia:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/higher_level_facility">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/higher_level_facility:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/ten_or_more_years">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/ten_or_more_years:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/local_herbs">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/local_herbs:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/short_explanation/nutrition">
+        <label ref="jr:itext('/pregnancy_counselling/short_explanation/nutrition:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/pregnancy_counselling/mitigation_strategy">
+      <select ref="/pregnancy_counselling/mitigation_strategy/mitigation_strategies">
+        <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy/mitigation_strategies:label')"/>
+        <itemset nodeset="instance('mitigation_strategies')/root/item[contains( /pregnancy_counselling/mitigation_list , name) or name = 'none']">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select>
+      <input ref="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note">
+        <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/pregnancy_counselling/mitigation_strategy_ml">
+      <select ref="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies">
+        <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies:label')"/>
+        <itemset nodeset="instance('mitigation_strategies')/root/item[contains( /pregnancy_counselling/mitigation_list , name) or name = 'none']">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select>
+      <input ref="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategy_note">
+        <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategy_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/pregnancy_counselling/mitigation_strategy_questions">
+      <input ref="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv">
+        <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy_questions/note_to_chv:label')"/>
+      </input>
+      <input ref="/pregnancy_counselling/mitigation_strategy_questions/question_to_client">
+        <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy_questions/question_to_client:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/pregnancy_counselling/visit_summary">
+      <label ref="jr:itext('/pregnancy_counselling/visit_summary:label')"/>
+      <input ref="/pregnancy_counselling/visit_summary/next_visit">
+        <label ref="jr:itext('/pregnancy_counselling/visit_summary/next_visit:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

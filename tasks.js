@@ -194,7 +194,7 @@ module.exports = [
     },
   },
 
-  //Additional CHV Pregnancy Counselling visit 
+  //Enabel bi-weekly visit 
 {
   name: 'pregnancy_counselling_visit',
   icon: 'follow-up',
@@ -203,11 +203,11 @@ module.exports = [
   appliesIf: function (c, r) {
     return  extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
       extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-      extras.getANCVisitAfter6MonthsFlag(r) === '1' || extras.isHighRiskPregnancy(c) === '1';
+      extras.getANCVisitAfter6MonthsFlag(r) === '1' || extras.isHighRiskPregnancyML(c) === '1';
   },
-  appliesToType: ['pregnancy'],
+  appliesToType: ['pregnancy','pregnancy_counselling'],
   actions: [{
-    form: 'referral_follow_up', // this here will be replaced with pregnancy counselling form 
+    form: 'pregnancy_counselling', // this here will be replaced with pregnancy counselling form 
     modifyContent: function (content, contact, report) {
       content.original_source_form = 'pregnancy';
       content.source_form = report.form;
@@ -224,6 +224,7 @@ module.exports = [
       content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
       content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
       content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
+      content.high_risk_ML = extras.isHighRiskPregnancyML(contact); 
     }
   }],
   events: [
@@ -286,6 +287,7 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.getContactReportedDate(c);
+        content.risk_options = extras.multiSelectOptions(c); 
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -672,7 +674,7 @@ module.exports = [
         content.visit_id = extras.mapPregnancyVisitType(c);
         content.client_EDD = extras.getRecentEDDForThisPregnancy(c);
         content.due_date = extras.getPregnancyDueDate(c).getTime();
-        content.is_high_risk_pregnancy = extras.isHighRiskPregnancy(c); 
+        content.is_high_risk_pregnancy = extras.isHighRiskPregnancyML(c); 
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
