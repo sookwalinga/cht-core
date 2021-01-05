@@ -314,7 +314,7 @@ var data= {
     }
   },
   'catchments': {
-    '00b86d4e-a36a-5b90-af54-4d2eeae780e1': 'Kinduni',
+    '98989a2b-50e8-4f8c-93c3-0413be29c57c': 'Kinduni',
     '02718f84-9e42-5576-bf1c-138899256ce2': 'Mgambo',
     '02ffd6eb-38b9-5f67-a887-05bac363a9b3': 'Donge Karange',
     '03079d2d-342d-5f25-9c56-4b7156e5ab6f': 'Kigunda',
@@ -658,5 +658,10 @@ var data= {
        return shehia?shehia:missing;
   }
 
-  module.exports=getShehiaData;
+  function isCatchmentInML(uuid) { 
+    console.log('Is UUID available? ' + data.catchments[uuid]);   
+    return data.catchments[uuid]?true:false;
+  }
+
+  module.exports={getShehiaData:getShehiaData,isCatchmentInML:isCatchmentInML};
  
