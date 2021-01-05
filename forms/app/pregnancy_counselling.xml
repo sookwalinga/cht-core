@@ -864,6 +864,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </mitigation_strategy_ml>
           <mitigation_strategy_questions>
             <note_to_chv/>
+            <imran_count/>
             <imran jr:template="">
               <esmail/>
             </imran>
@@ -1092,7 +1093,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_referral" type="string" calculate="if(selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,&quot;yes&quot;),1,0)"/>
-      <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 1" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_note" readonly="true()" type="string" required="true()" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 1"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv" readonly="true()" type="string" relevant="selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,'no') and 
@@ -1100,7 +1101,7 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fe
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,'no')"/>
-      <bind nodeset="/pregnancy_counselling/target_messaging_group/risk_factors" type="select" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/target_messaging_group/risk_factors" type="select" required="true()" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;"/>
       <bind nodeset="/pregnancy_counselling/short_explanation" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;"/>
       <bind nodeset="/pregnancy_counselling/short_explanation/previous_pregnancies" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_pregnancies')) and contains( /pregnancy_counselling/nitu , 'previous_pregnancies')"/>
       <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_c_section')) and contains( /pregnancy_counselling/nitu , 'previous_delivery_by_c_section')"/>
@@ -1132,8 +1133,9 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;false&quot; and  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies" type="select" required="true()"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategy_note" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot; and  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot; or  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/imran_count" type="string" readonly="true()" calculate="1"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/imran/esmail" type="string" calculate=" /pregnancy_counselling/mitigation_list "/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client_count" type="string" readonly="true()" calculate="count( /pregnancy_counselling/mitigation_list )"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client/current_name" type="string" calculate="indexed-repeat( /pregnancy_counselling/mitigation_strategy_questions/imran/esmail ,  /pregnancy_counselling/mitigation_strategy_questions/imran , position(..))"/>
@@ -1432,11 +1434,11 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       </input>
       <group ref="/pregnancy_counselling/mitigation_strategy_questions/imran">
         <label></label>
-        <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/imran"/>
+        <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/imran" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/imran_count "/>
       </group>
       <group ref="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client">
         <label></label>
-        <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client" appearance="field-list" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/questions_to_client_count "/>
+        <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/questions_to_client_count " appearance="field-list"/>
       </group>
     </group>
     <group appearance="field-list" ref="/pregnancy_counselling/visit_summary">

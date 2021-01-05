@@ -1402,6 +1402,7 @@ module.exports = {
     ];
     var model = new RandomForestClassifier();
     var result = model.predict(inputData);
+    console.log('ML prediction is ' + result); 
     return result;
   }
 };
