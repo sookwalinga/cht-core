@@ -1438,7 +1438,7 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       </group>
       <group ref="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client">
         <label></label>
-        <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/questions_to_client_count " appearance="field-list"/>
+        <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client" appearance="field-list" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/questions_to_client_count "/>
       </group>
     </group>
     <group appearance="field-list" ref="/pregnancy_counselling/visit_summary">
