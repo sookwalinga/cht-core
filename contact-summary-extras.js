@@ -19,8 +19,9 @@ module.exports = {
   isEnrolledInML: function(){  
     if(contact && contact.parent && contact.parent.parent && contact.parent.parent.parent)
     { 
-      console.log('inside enrolled ml'); 
+     // console.log('inside enrolled ml'); 
       return isCatchmentInML(contact.parent.parent.parent._id); 
+    // return true;
     }
    
   },
@@ -408,18 +409,19 @@ module.exports = {
           mitigationSet.add('facility_delivery');
           riskFactors.push('allow_partner_to_deliver_facility');
         }
-       riskFactors.join(' ');
+      // riskFactors.join(' ');
        if(riskFactors.length >= 1) 
          manual_high_risk = true; 
        return riskFactors; 
   }, 
 
   isHighRiskPregnancy: function(){   
+   console.log('Manual high risk is ' + manual_high_risk); 
    return manual_high_risk; 
   },
 
   getMitigationList: function(){ 
-    return [...mitigationSet]; 
+    return [...mitigationSet].join(' '); 
   }
 
 
