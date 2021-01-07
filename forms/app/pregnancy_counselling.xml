@@ -81,10 +81,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Vaginal Bleeding</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68/no:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68/yes:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -114,10 +114,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Unconsciousness</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76/no:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76/yes:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy_counselling/danger_signs/emergency_danger_sign_note:label">
@@ -145,10 +145,14 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>During the enrolment we talked about pregnancy risk factors. I want to make sure that you are aware of these factors and know what to do to lower your risk if you identify any. Therefore, I will visit you every two weeks, in addition to the regular pregnancy visits, to make sure you continue in good health and have a safe pregnancy all the way through delivery.</value>
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategies:label">
-            <value>Considering these risk factors: [<output value=" /pregnancy_counselling/nitu "/>] what can you do to continue in good health and have a safe pregnancy all the way through delivery?</value>
+            <value>What can you do to continue in good health and have a safe pregnancy all the way through delivery?</value>
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note:label">
             <value>I would now like to go through the things you can do to continue in good health and have a safe pregnancy all the way through delivery</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/risk_factor_list:label">
+            <value>&lt;strong&gt;Considering these risk factors:&lt;/strong&gt;
+[<output value=" /pregnancy_counselling/risk_factor_names "/>]</value>
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies:label">
             <value>What can you do to continue in good health and have a safe pregnancy all the way through delivery?</value>
@@ -158,6 +162,92 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv:label">
             <value>Have the mother explain first and if she cannot then explain it to her.</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client/qn_note:label">
+            <value>Do you understand the importance of <output value=" /pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client/current_name "/> ?</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving:label">
+            <value>Do you feel the baby moving on a daily basis, at least every six hours?</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Now you are at the stage of comparing your palm with the client's palm. Before doing this, please keep a 2 meters distance from your client as a precautionary measure to avoid the spread of Corona virus. Please ask your client to show you their palm while still keeping the distance. &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note:label">
+            <value>I am referring you to a health facility because I have identified that you have danger sign(s)</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note:label">
+            <value>Based on our conversation, I did not identify any health issues, but if you develop any of the signs we discussed today, you should go to a health facility immediately</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor:label">
+            <value>Does the client have pallor? Compare your palm with client's palm. If client's palms are paler than yours, this is pallor.</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/blurred_vision:label">
+            <value>Blurred vision</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/difficulty_breathing:label">
+            <value>Difficulty Breathing</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/dizziness:label">
+            <value>Dizziness</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/early_labor:label">
+            <value>Early labor pain before 9 months gestation</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fatigue:label">
+            <value>Fatigue, lethergy</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fever:label">
+            <value>Fever</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/foul_smelling:label">
+            <value>Foul smelling vaginal discharge</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/frontal_headache:label">
+            <value>Severe Frontal Headache</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/gastric_pain:label">
+            <value>Severe gastric pain</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/liquid_leaking:label">
+            <value>Liquid leaking from vagina</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/malaria_signs:label">
+            <value>Signs of malaria (feeling cold, fever, vomiting)</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/none:label">
+            <value>None</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/swelling:label">
+            <value>Swelling of face, arms, fingers, or legs</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/tinnitus:label">
+            <value>Tinnitus</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg">
+            <value>Cannot select "None" with other options</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label">
+            <value>Continue with the following questions. Indicate if the client has any of the following common pregnancy issues. 
+
+Have you experienced:</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label">
+            <value>I am referring you to a health facility because I have identified that you have danger sign(s)</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group:label">
+            <value>Pregnancy Issues</value>
           </text>
           <text id="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility:label">
             <value>Partner permission not given</value>
@@ -237,6 +327,15 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_counselling/target_messaging_group/risk_factors:label">
             <value>Which pregnancy risk factors do you remember?</value>
           </text>
+          <text id="/pregnancy_counselling/visit_summary/needs_referral_danger_signs:label">
+            <value>To address emergency pregnancy danger signs</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary/needs_referral_neonatal_note:label">
+            <value>To address other pregnancy danger signs</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary/needs_referral_note:label">
+            <value>You need to go to the health facility for the following reasons:</value>
+          </text>
           <text id="/pregnancy_counselling/visit_summary/next_visit:label">
             <value>I will visit you again in two weeks.</value>
           </text>
@@ -260,6 +359,48 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="static_instance-mitigation_strategies-5">
             <value>Family Planning</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-0">
+            <value>Difficulty Breathing</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-1">
+            <value>Fatigue, lethergy</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-10">
+            <value>Liquid leaking from vagina</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-11">
+            <value>Signs of malaria (feeling cold, fever, vomiting)</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-12">
+            <value>Foul smelling vaginal discharge</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-13">
+            <value>None</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-2">
+            <value>Fever</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-3">
+            <value>Tinnitus</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-4">
+            <value>Dizziness</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-5">
+            <value>Severe Frontal Headache</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-6">
+            <value>Blurred vision</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-7">
+            <value>Severe gastric pain</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-8">
+            <value>Swelling of face, arms, fingers, or legs</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-9">
+            <value>Early labor pain before 9 months gestation</value>
           </text>
           <text id="static_instance-risk_factors-0">
             <value>More than 5 previous pregnancies</value>
@@ -420,13 +561,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Unatokwa na damu ukeni?</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_67:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_70:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68/no:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68/yes:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71/yes:label">
             <value>Ndio</value>
           </text>
           <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -456,13 +597,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Kupoteza fahamu</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_75:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_78:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76/no:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76/yes:label">
+          <text id="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79/yes:label">
             <value>Ndio</value>
           </text>
           <text id="/pregnancy_counselling/danger_signs/emergency_danger_sign_note:label">
@@ -501,6 +642,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_counselling/inputs/due_date_human_readable:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy_counselling/inputs/gestation_in_weeks:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_counselling/inputs/is_high_risk_pregnancy_ML:label">
             <value>-</value>
           </text>
@@ -534,6 +678,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/risk_factor_list:label">
+            <value>-</value>
+          </text>
           <text id="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies:label">
             <value>-</value>
           </text>
@@ -542,6 +689,96 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv:label">
             <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client/qn_note:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving:label">
+            <value>Je unahisi mtoto anacheza angalau kila baada ya masaa sita kila siku?</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Sasa upo kwenye hatua ya kulinganisha kiganja chako na cha mteja wako. Kabla ya kufanya hivyo, tafadhali hakikisha umekaa umbali wa mita mbili na mteja wako ili kujilinda na uwezekano wa kusambaza maambukizi ya Korona. Tafadhali mwambie mteja akuoneshe kiganja chake. &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note:label">
+            <value>Nakupa rufaa uende kituo cha afya kwasababu nimekugundua una dalili za hatari.</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note:label">
+            <value>Huna dalili yoyote ya hatari lakini ikitokea ukapatwa na moja ya dalili tulizozijadili unapaswa kwenda kituo cha afya.</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor:label">
+            <value>Linganisha kiganja chako na cha mteja. Ikiwa kiganja cha mteja kimepauka sana kuliko chako hili ni tatizo. Iniashiria upungufu wa damu.</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/blurred_vision:label">
+            <value>Kutokuona vizuri</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/difficulty_breathing:label">
+            <value>Anapumua kwa shida</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/dizziness:label">
+            <value>Kizunguzungu</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/early_labor:label">
+            <value>Uchungu wa mapema kabla ya miezi tisa</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fatigue:label">
+            <value>Uchovu</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fever:label">
+            <value>Homa</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/foul_smelling:label">
+            <value>kutoa uchafu wenye harufu mbaya sehemu za siri</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/frontal_headache:label">
+            <value>Kichwa kuuma sana sehemu ya mbele</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/gastric_pain:label">
+            <value>Maumivu makali ya tumbo</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/liquid_leaking:label">
+            <value>Kutoka maji sehemu za siri</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/malaria_signs:label">
+            <value>Dalili za malaria(kuhisi baridi,homa na kutapika)</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/none:label">
+            <value>Hakuna mojawapo</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/swelling:label">
+            <value>Kuvimba uso,mikono, vidole au miguu</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/tinnitus:label">
+            <value>Maskio kulia nyenje/kuvuma</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg">
+            <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label">
+            <value>Endelea na maswali yafuatayo. Angalia kama mteja ana moja kati ya matatizo haya yafuatayo yanayohusu ujauzito:</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label">
+            <value>Nakupa rufaa uende kituo cha afya kwasababu nimekugundua una dalili za hatari.</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_counselling/pregnancy_issues_group:label">
+            <value>Maswala ya ujauzito</value>
           </text>
           <text id="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility:label">
             <value>-</value>
@@ -621,6 +858,15 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_counselling/target_messaging_group/risk_factors:label">
             <value>-</value>
           </text>
+          <text id="/pregnancy_counselling/visit_summary/needs_referral_danger_signs:label">
+            <value>Ili kushughulikia dalili za hatari za dharura za mama mjamzito.</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary/needs_referral_neonatal_note:label">
+            <value>Ili kushughulikia dalili nyengine za hatari.</value>
+          </text>
+          <text id="/pregnancy_counselling/visit_summary/needs_referral_note:label">
+            <value>Unatakiwa uende kituo cha afya kutokana na sababu zifuatazo:</value>
+          </text>
           <text id="/pregnancy_counselling/visit_summary/next_visit:label">
             <value>-</value>
           </text>
@@ -644,6 +890,48 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="static_instance-mitigation_strategies-5">
             <value>-</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-0">
+            <value>Anapumua kwa shida</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-1">
+            <value>Uchovu</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-10">
+            <value>Kutoka maji sehemu za siri</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-11">
+            <value>Dalili za malaria(kuhisi baridi,homa na kutapika)</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-12">
+            <value>kutoa uchafu wenye harufu mbaya sehemu za siri</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-13">
+            <value>Hakuna mojawapo</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-2">
+            <value>Homa</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-3">
+            <value>Maskio kulia nyenje/kuvuma</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-4">
+            <value>Kizunguzungu</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-5">
+            <value>Kichwa kuuma sana sehemu ya mbele</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-6">
+            <value>Kutokuona vizuri</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-7">
+            <value>Maumivu makali ya tumbo</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-8">
+            <value>Kuvimba uso,mikono, vidole au miguu</value>
+          </text>
+          <text id="static_instance-pregnancy_issues-9">
+            <value>Uchungu wa mapema kabla ya miezi tisa</value>
           </text>
           <text id="static_instance-risk_factors-0">
             <value>-</value>
@@ -746,6 +1034,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <visit_id/>
             <client_EDD_human_readable/>
             <risk_options/>
+            <gestation_in_weeks/>
             <user>
               <contact_id/>
               <facility_id/>
@@ -778,10 +1067,12 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <client_EDD_pretty_print_english/>
           <client_EDD_pretty_print_swahili/>
           <client_EDD_c/>
+          <gestation_in_weeks_c/>
           <is_high_risk_pregnancy_ML_c/>
           <high_risk_manual/>
           <nitu/>
           <mitigation_list/>
+          <risk_factor_names/>
           <enabel/>
           <currently_pregnant/>
           <hide_lmp_or_months_pregnant/>
@@ -804,8 +1095,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <danger_signs>
             <danger_sign_intro/>
             <danger_sign_table_1>
-              <generated_table_list_label_67/>
-              <reserved_name_for_field_list_labels_68/>
+              <generated_table_list_label_70/>
+              <reserved_name_for_field_list_labels_71/>
               <danger_sign_vaginal_bleeding/>
               <danger_sign_abdominal_pain/>
               <danger_sign_severe_headache/>
@@ -814,8 +1105,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <danger_sign_note_to_chv/>
             <observe_danger_signs/>
             <danger_sign_table_2>
-              <generated_table_list_label_75/>
-              <reserved_name_for_field_list_labels_76/>
+              <generated_table_list_label_78/>
+              <reserved_name_for_field_list_labels_79/>
               <danger_sign_unconsciouss/>
               <danger_sign_difficult_breathing/>
               <danger_sign_convulsions/>
@@ -824,6 +1115,21 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <emergency_danger_sign_note/>
             <no_danger_sign_note_to_chv/>
           </danger_signs>
+          <pregnancy_issues_group>
+            <subgroup_pregnancy_issues>
+              <pregnancy_issues/>
+              <refer_pregnancy_issues/>
+              <refer_pregnancy_issues_note/>
+            </subgroup_pregnancy_issues>
+            <pregnancy_and_pallor>
+              <baby_moving/>
+              <covid19_plam_pallor_note/>
+              <pallor/>
+              <refer_pregnancy_complications/>
+              <has_pregnancy_complication_note/>
+              <no_pregnancy_complication_note/>
+            </pregnancy_and_pallor>
+          </pregnancy_issues_group>
           <target_messaging_group>
             <risk_factors/>
           </target_messaging_group>
@@ -855,6 +1161,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <nutrition/>
           </short_explanation>
           <mitigation_strategy>
+            <risk_factor_list/>
             <mitigation_strategies/>
             <mitigation_strategy_note/>
           </mitigation_strategy>
@@ -868,14 +1175,24 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <imran jr:template="">
               <esmail/>
             </imran>
-            <questions_to_client_count/>
-            <questions_to_client jr:template="">
-              <current_name/>
-            </questions_to_client>
+            <repeat>
+              <questions_to_client_count/>
+              <questions_to_client jr:template="">
+                <current_name/>
+                <qn_note/>
+              </questions_to_client>
+            </repeat>
           </mitigation_strategy_questions>
           <visit_summary>
+            <needs_referral_note/>
+            <needs_referral_danger_signs/>
+            <needs_referral_neonatal_note/>
             <next_visit/>
           </visit_summary>
+          <has_referral/>
+          <refer_flag_emergency_danger_sign/>
+          <refer_flag_pregnancy_issues/>
+          <refer_flag_pregnancy_complications/>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -1026,6 +1343,66 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
         </root>
       </instance>
+      <instance id="pregnancy_issues">
+        <root>
+          <item>
+            <itextId>static_instance-pregnancy_issues-0</itextId>
+            <name>difficulty_breathing</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-1</itextId>
+            <name>fatigue</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-2</itextId>
+            <name>fever</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-3</itextId>
+            <name>tinnitus</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-4</itextId>
+            <name>dizziness</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-5</itextId>
+            <name>frontal_headache</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-6</itextId>
+            <name>blurred_vision</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-7</itextId>
+            <name>gastric_pain</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-8</itextId>
+            <name>swelling</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-9</itextId>
+            <name>early_labor</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-10</itextId>
+            <name>liquid_leaking</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-11</itextId>
+            <name>malaria_signs</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-12</itextId>
+            <name>foul_smelling</name>
+          </item>
+          <item>
+            <itextId>static_instance-pregnancy_issues-13</itextId>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
       <bind nodeset="/pregnancy_counselling/inputs" relevant="false()"/>
       <bind nodeset="/pregnancy_counselling/inputs/due_date" type="string"/>
       <bind nodeset="/pregnancy_counselling/inputs/due_date_human_readable" type="string"/>
@@ -1034,6 +1411,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_counselling/inputs/visit_id" type="string"/>
       <bind nodeset="/pregnancy_counselling/inputs/client_EDD_human_readable" type="string"/>
       <bind nodeset="/pregnancy_counselling/inputs/risk_options" type="string"/>
+      <bind nodeset="/pregnancy_counselling/inputs/gestation_in_weeks" type="string"/>
       <bind nodeset="/pregnancy_counselling/inputs/user/contact_id" type="string"/>
       <bind nodeset="/pregnancy_counselling/inputs/user/facility_id" type="string"/>
       <bind nodeset="/pregnancy_counselling/inputs/user/name" type="string"/>
@@ -1061,10 +1439,12 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_counselling/client_EDD_pretty_print_english" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Unknown&quot;)"/>
       <bind nodeset="/pregnancy_counselling/client_EDD_pretty_print_swahili" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Haijulikani&quot;)"/>
       <bind nodeset="/pregnancy_counselling/client_EDD_c" type="string" calculate="../inputs/client_EDD"/>
+      <bind nodeset="/pregnancy_counselling/gestation_in_weeks_c" type="string" calculate="../inputs/gestation_in_weeks"/>
       <bind nodeset="/pregnancy_counselling/is_high_risk_pregnancy_ML_c" type="string" calculate="../inputs/is_high_risk_pregnancy_ML"/>
       <bind nodeset="/pregnancy_counselling/high_risk_manual" type="string" calculate="instance('contact-summary')/context/high_risk_manual"/>
       <bind nodeset="/pregnancy_counselling/nitu" type="string" calculate="instance('contact-summary')/context/nitu"/>
       <bind nodeset="/pregnancy_counselling/mitigation_list" type="string" calculate="instance('contact-summary')/context/mitigation_list"/>
+      <bind nodeset="/pregnancy_counselling/risk_factor_names" type="string" calculate="instance('contact-summary')/context/risk_factor_names"/>
       <bind nodeset="/pregnancy_counselling/enabel" type="string" calculate="instance('contact-summary')/context/enabel"/>
       <bind nodeset="/pregnancy_counselling/currently_pregnant" type="string" calculate="instance('contact-summary')/context/currently_pregnant"/>
       <bind nodeset="/pregnancy_counselling/hide_lmp_or_months_pregnant" type="string" calculate="if( /pregnancy_counselling/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)"/>
@@ -1079,21 +1459,21 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_counselling/client_information/due_date_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_counselling/intro_message/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_intro" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_67" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68" type="select1"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_70" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71" type="select1"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_note_to_chv" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/observe_danger_signs" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_75" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76" type="select1"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_78" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79" type="select1"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_referral" type="string" calculate="if(selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fever ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,&quot;yes&quot;) or selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,&quot;yes&quot;),1,0)"/>
-      <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_note" readonly="true()" type="string" required="true()" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 1"/>
+      <bind nodeset="/pregnancy_counselling/danger_signs/emergency_danger_sign_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 1" required="true()"/>
       <bind nodeset="/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv" readonly="true()" type="string" relevant="selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_convulsions ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_unconsciouss ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_severe_headache ,'no') and 
@@ -1101,8 +1481,33 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_fe
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing ,'no') and 
 selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding ,'no')"/>
-      <bind nodeset="/pregnancy_counselling/target_messaging_group/risk_factors" type="select" required="true()" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0" jr:constraintMsg="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" type="string" calculate="if(selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;difficulty_breathing&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fatigue&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fever&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;tinnitus&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;dizziness&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;frontal_headache&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;blurred_vision&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;gastric_pain&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;swelling&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;early_labor&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;liquid_leaking&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;malaria_signs&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;foul_smelling&quot;)1,0)"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving" type="select1" relevant=" /pregnancy_counselling/gestation_in_weeks_c  &gt; 24" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor" type="select1" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications" type="string" calculate="if(selected( /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;no&quot;) or selected( /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;yes&quot;),1,0)"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1"/>
+      <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0 and  /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =0 and
+selected( /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;yes&quot;) and selected( /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;no&quot;)"/>
+      <bind nodeset="/pregnancy_counselling/target_messaging_group" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
+      <bind nodeset="/pregnancy_counselling/target_messaging_group/risk_factors" type="select" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot; and  /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
       <bind nodeset="/pregnancy_counselling/short_explanation/previous_pregnancies" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_pregnancies')) and contains( /pregnancy_counselling/nitu , 'previous_pregnancies')"/>
       <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_c_section')) and contains( /pregnancy_counselling/nitu , 'previous_delivery_by_c_section')"/>
       <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_vacuum')) and contains( /pregnancy_counselling/nitu , 'previous_delivery_by_vacuum')"/>
@@ -1128,18 +1533,32 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       <bind nodeset="/pregnancy_counselling/short_explanation/ten_or_more_years" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'ten_or_more_years')) and contains( /pregnancy_counselling/nitu , 'ten_or_more_years')"/>
       <bind nodeset="/pregnancy_counselling/short_explanation/local_herbs" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'local_herbs')) and contains( /pregnancy_counselling/nitu , 'local_herbs')"/>
       <bind nodeset="/pregnancy_counselling/short_explanation/nutrition" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'nutrition')) and contains( /pregnancy_counselling/nitu , 'nutrition')"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy/risk_factor_list" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy/mitigation_strategies" type="select" required="true()"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;false&quot; and  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;false&quot; and  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot; and  /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies" type="select" required="true()"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategy_note" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot; or  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions" relevant="( /pregnancy_counselling/high_risk_manual  = &quot;true&quot; or  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot;) and  /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/note_to_chv" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/imran_count" type="string" readonly="true()" calculate="1"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/imran/esmail" type="string" calculate=" /pregnancy_counselling/mitigation_list "/>
-      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client_count" type="string" readonly="true()" calculate="count( /pregnancy_counselling/mitigation_list )"/>
-      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client/current_name" type="string" calculate="indexed-repeat( /pregnancy_counselling/mitigation_strategy_questions/imran/esmail ,  /pregnancy_counselling/mitigation_strategy_questions/imran , position(..))"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client_count" type="string" readonly="true()" calculate="2"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client/current_name" type="string" calculate="selected-at( /pregnancy_counselling/mitigation_strategy_questions/imran/esmail ,0)"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client/qn_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/visit_summary/needs_referral_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/has_referral =1"/>
+      <bind nodeset="/pregnancy_counselling/visit_summary/needs_referral_danger_signs" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral =1"/>
+      <bind nodeset="/pregnancy_counselling/visit_summary/needs_referral_neonatal_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or 
+ /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1"/>
       <bind nodeset="/pregnancy_counselling/visit_summary/next_visit" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_counselling/has_referral" type="string" calculate="if( /pregnancy_counselling/danger_signs/emergency_danger_sign_referral =1 or
+ /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
+ /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1
+1, 0)"/>
+      <bind nodeset="/pregnancy_counselling/refer_flag_emergency_danger_sign" type="string" calculate="../danger_signs/emergency_danger_sign_referral"/>
+      <bind nodeset="/pregnancy_counselling/refer_flag_pregnancy_issues" type="string" calculate="../pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues"/>
+      <bind nodeset="/pregnancy_counselling/refer_flag_pregnancy_complications" type="string" calculate="../pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications"/>
       <bind nodeset="/pregnancy_counselling/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
@@ -1152,6 +1571,7 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       <input ref="/pregnancy_counselling/inputs/visit_id"/>
       <input ref="/pregnancy_counselling/inputs/client_EDD_human_readable"/>
       <input ref="/pregnancy_counselling/inputs/risk_options"/>
+      <input ref="/pregnancy_counselling/inputs/gestation_in_weeks"/>
       <group ref="/pregnancy_counselling/inputs/user">
         <input ref="/pregnancy_counselling/inputs/user/contact_id">
           <label ref="jr:itext('/pregnancy_counselling/inputs/user/contact_id:label')"/>
@@ -1201,15 +1621,15 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
         <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_intro:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1">
-        <input ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_67"/>
-        <select1 appearance="label" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68">
+        <input ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/generated_table_list_label_70"/>
+        <select1 appearance="label" ref="/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68/yes:label')"/>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_68/no:label')"/>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_71/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -1265,15 +1685,15 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
         <label ref="jr:itext('/pregnancy_counselling/danger_signs/observe_danger_signs:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2">
-        <input ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_75"/>
-        <select1 appearance="label" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76">
+        <input ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/generated_table_list_label_78"/>
+        <select1 appearance="label" ref="/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76/yes:label')"/>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_76/no:label')"/>
+            <label ref="jr:itext('/pregnancy_counselling/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_79/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -1317,6 +1737,106 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       <input ref="/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv">
         <label ref="jr:itext('/pregnancy_counselling/danger_signs/no_danger_sign_note_to_chv:label')"/>
       </input>
+    </group>
+    <group ref="/pregnancy_counselling/pregnancy_issues_group">
+      <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group:label')"/>
+      <group appearance="field-list" ref="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues">
+        <select appearance="field-list" ref="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues">
+          <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/difficulty_breathing:label')"/>
+            <value>difficulty_breathing</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fatigue:label')"/>
+            <value>fatigue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/fever:label')"/>
+            <value>fever</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/tinnitus:label')"/>
+            <value>tinnitus</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/dizziness:label')"/>
+            <value>dizziness</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/frontal_headache:label')"/>
+            <value>frontal_headache</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/blurred_vision:label')"/>
+            <value>blurred_vision</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/gastric_pain:label')"/>
+            <value>gastric_pain</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/swelling:label')"/>
+            <value>swelling</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/early_labor:label')"/>
+            <value>early_labor</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/liquid_leaking:label')"/>
+            <value>liquid_leaking</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/malaria_signs:label')"/>
+            <value>malaria_signs</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/foul_smelling:label')"/>
+            <value>foul_smelling</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues/none:label')"/>
+            <value>none</value>
+          </item>
+        </select>
+        <input ref="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note">
+          <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues_note:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor">
+        <select1 ref="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving">
+          <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note">
+          <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/covid19_plam_pallor_note:label')"/>
+        </input>
+        <select1 ref="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor">
+          <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor:label')"/>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note">
+          <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/has_pregnancy_complication_note:label')"/>
+        </input>
+        <input ref="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note">
+          <label ref="jr:itext('/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note:label')"/>
+        </input>
+      </group>
     </group>
     <group appearance="fiel-list" ref="/pregnancy_counselling/target_messaging_group">
       <select ref="/pregnancy_counselling/target_messaging_group/risk_factors">
@@ -1405,6 +1925,9 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       </input>
     </group>
     <group appearance="field-list" ref="/pregnancy_counselling/mitigation_strategy">
+      <input ref="/pregnancy_counselling/mitigation_strategy/risk_factor_list">
+        <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy/risk_factor_list:label')"/>
+      </input>
       <select ref="/pregnancy_counselling/mitigation_strategy/mitigation_strategies">
         <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy/mitigation_strategies:label')"/>
         <itemset nodeset="instance('mitigation_strategies')/root/item[contains( /pregnancy_counselling/mitigation_list , name) or name = 'none']">
@@ -1436,13 +1959,28 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
         <label></label>
         <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/imran" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/imran_count "/>
       </group>
-      <group ref="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client">
-        <label></label>
-        <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/questions_to_client" appearance="field-list" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/questions_to_client_count "/>
+      <group ref="/pregnancy_counselling/mitigation_strategy_questions/repeat">
+        <group ref="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client">
+          <label></label>
+          <repeat nodeset="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client" appearance="field-list" jr:count=" /pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client_count ">
+            <input ref="/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client/qn_note">
+              <label ref="jr:itext('/pregnancy_counselling/mitigation_strategy_questions/repeat/questions_to_client/qn_note:label')"/>
+            </input>
+          </repeat>
+        </group>
       </group>
     </group>
     <group appearance="field-list" ref="/pregnancy_counselling/visit_summary">
       <label ref="jr:itext('/pregnancy_counselling/visit_summary:label')"/>
+      <input ref="/pregnancy_counselling/visit_summary/needs_referral_note">
+        <label ref="jr:itext('/pregnancy_counselling/visit_summary/needs_referral_note:label')"/>
+      </input>
+      <input appearance="li" ref="/pregnancy_counselling/visit_summary/needs_referral_danger_signs">
+        <label ref="jr:itext('/pregnancy_counselling/visit_summary/needs_referral_danger_signs:label')"/>
+      </input>
+      <input appearance="li" ref="/pregnancy_counselling/visit_summary/needs_referral_neonatal_note">
+        <label ref="jr:itext('/pregnancy_counselling/visit_summary/needs_referral_neonatal_note:label')"/>
+      </input>
       <input ref="/pregnancy_counselling/visit_summary/next_visit">
         <label ref="jr:itext('/pregnancy_counselling/visit_summary/next_visit:label')"/>
       </input>

@@ -225,6 +225,10 @@ module.exports = {
       else if (referral_type === 'postpartum') {
         return report.fields.has_postpartum_referral === 'true';
       }
+      else if (referral_type === 'pregnancy_counselling') {
+        console.log('Inside pregnancy counselling'); 
+        return report.fields.has_pregnancy_counselling_referral === 'true';
+      }
     }
     return false;
   },
@@ -275,7 +279,7 @@ module.exports = {
       report &&
       report.fields &&
       report.fields.refer_flag_pregnancy_complications
-    ) {
+    ) { 
       return report.fields.refer_flag_pregnancy_complications;
     }
     return '0';

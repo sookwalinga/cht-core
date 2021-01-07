@@ -77,21 +77,86 @@ module.exports = [
   },
 
   // Pregnancy referral follow-up
-  {
-    name: 'pregnancy_referral_followup',
+  // {
+  //   name: 'pregnancy_referral_followup',
+  //   icon: 'follow-up',
+  //   title: 'task.pregnancy_referral_follow_up',
+  //   appliesTo: 'reports',
+  //   appliesIf: function (c, r) {
+  //     return extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+  //       extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
+  //       extras.getANCVisitAfter6MonthsFlag(r) === '1';
+  //   },
+  //   appliesToType: ['referral_follow_up', 'pregnancy'],
+  //   actions: [{
+  //     form: 'referral_follow_up',
+  //     modifyContent: function (content, contact, report) {
+  //       content.original_source_form = 'pregnancy';
+  //       content.source_form = report.form;
+  //       content.source_id = report._id;
+  //       content.last_visit_date = report.reported_date;
+  //       content.due_date = Utils.addDate(new Date(report.reported_date), 3).getTime();
+  //       content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+  //         weekday: 'long',
+  //         year: 'numeric',
+  //         month: 'long',
+  //         day: 'numeric'
+  //       });
+  //       content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
+  //       content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
+  //       content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
+  //       content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
+  //     }
+  //   }],
+  //   events: [
+  //     {
+  //       id: 'pregnancy_referral_follow_up',
+  //       dueDate: function (event, contact, report) {
+  //         var days = 3;
+  //         if (
+  //           report.fields &&
+  //           report.fields.referral_days
+  //         ) {
+  //           days = Number(report.fields.referral_days);
+  //         }
+  //         return Utils.addDate(new Date(report.reported_date), days);
+  //       },
+  //       start: 3,
+  //       end: 7,
+  //     }
+  //   ],
+  //   priority: {
+  //     level: 'high',
+  //     label: 'task.referral.high_priority'
+  //   },
+  //   resolvedIf: function (c, r) {
+  //     return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
+  //       extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
+  //       extras.isContactDeceased(c) ||
+  //       extras.isContactMuted(c);
+  //   },
+  // },
+
+   // Pregnancy counselling referral follow-up
+   {
+    name: 'pregnancy_counselling_referral_followup',
     icon: 'follow-up',
-    title: 'task.pregnancy_referral_follow_up',
+    title: 'task.pregnancy_counselling_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      return extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-        extras.getANCVisitAfter6MonthsFlag(r) === '1';
-    },
-    appliesToType: ['referral_follow_up', 'pregnancy'],
+      console.log('imran ' +  (extras.getPregnancyEmergencyDangerSigns(r) === '1')); 
+   //   console.log('PI' +  (extras.getPregnancyIssues(r) === '1')); 
+   //   console.log('PC' +  (extras.getPregnancyComplications(r) === '1'));
+
+       return true; 
+    //   return extras.hasReferral(r, 'pregnancy_counselling') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+    //     extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1';
+     },
+    appliesToType: ['referral_follow_up', 'pregnancy_counselling'],
     actions: [{
       form: 'referral_follow_up',
       modifyContent: function (content, contact, report) {
-        content.original_source_form = 'pregnancy';
+        content.original_source_form = 'pregnancy_counselling';
         content.source_form = report.form;
         content.source_id = report._id;
         content.last_visit_date = report.reported_date;
@@ -105,12 +170,11 @@ module.exports = [
         content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
         content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
         content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
-        content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
       }
     }],
     events: [
       {
-        id: 'pregnancy_referral_follow_up',
+        id: 'pregnancy_counselling_referral_follow_up',
         dueDate: function (event, contact, report) {
           var days = 3;
           if (
@@ -130,10 +194,16 @@ module.exports = [
       label: 'task.referral.high_priority'
     },
     resolvedIf: function (c, r) {
+      console.log(c,r); 
+      // console.log('visit again ' + (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)));
+      // console.log('form submitted for course ' +   extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id));  
+      // console.log('contact deceased ' + extras.isContactDeceased(c)); 
+      // console.log('contact muted ' +  extras.isContactMuted(c)); 
       return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
         extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
         extras.isContactDeceased(c) ||
         extras.isContactMuted(c);
+     // return false; 
     },
   },
 
@@ -207,7 +277,7 @@ module.exports = [
   },
   appliesToType: ['pregnancy','pregnancy_counselling'],
   actions: [{
-    form: 'pregnancy_counselling', // this here will be replaced with pregnancy counselling form 
+    form: 'pregnancy_counselling',  
     modifyContent: function (content, contact, report) {
       content.original_source_form = 'pregnancy';
       content.source_form = report.form;
