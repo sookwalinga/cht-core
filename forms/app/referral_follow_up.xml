@@ -567,6 +567,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <has_pregnancy_referral/>
           <has_infant_child_referral/>
           <has_postpartum_referral/>
+          <has_pregnancy_counselling_referral/>
           <referral_days/>
           <meta tag="hidden">
             <instanceID/>
@@ -677,6 +678,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/has_pregnancy_referral" type="string" calculate="../inputs/refer_flag_emergency_danger_sign = 1 or ../inputs/refer_flag_pregnancy_issues = 1 or ../inputs/refer_flag_pregnancy_complications = 1 or ../inputs/refer_flag_anc_visit_6m_or_more = 1"/>
       <bind nodeset="/referral_follow_up/has_infant_child_referral" type="string" calculate="../inputs/refer_flag_small_baby= 1 or ../inputs/refer_neonatal_danger_sign_flag = 1 or ../inputs/refer_secondary_neonatal_danger_sign_flag = 1 or ../inputs/refer_child_danger_sign_flag = 1 or ../inputs/refer_child_other_danger_sign_flag = 1 or ../inputs/refer_muac_flag= 1 or ../inputs/refer_refer_palm_pallor_flag = 1 or ../inputs/refer_vaccines_flag = 1 or ../inputs/refer_slow_to_learn_specifics_flag = 1"/>
       <bind nodeset="/referral_follow_up/has_postpartum_referral" type="string" calculate="../inputs/refer_flag_postpartum_danger_signs = 1 or ../inputs/refer_flag_postpartum_other_signs = 1"/>
+      <bind nodeset="/referral_follow_up/has_pregnancy_counselling_referral" type="string" calculate="../inputs/refer_flag_emergency_danger_sign = 1 or ../inputs/refer_flag_pregnancy_issues = 1 or ../inputs/refer_flag_pregnancy_complications = 1"/>
       <bind nodeset="/referral_follow_up/referral_days" type="string" calculate="3"/>
       <bind nodeset="/referral_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
