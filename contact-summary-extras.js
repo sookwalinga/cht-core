@@ -1,6 +1,8 @@
 var isCatchmentInML=require('./catchments.js').isCatchmentInML;
 let mitigationSet = new Set(); 
 let manual_high_risk = false; 
+let riskFactorNames = []; 
+let riskFactorSwahiliNames = []; 
 
 module.exports = {
 
@@ -287,30 +289,42 @@ module.exports = {
       if (report && report.fields && report.fields.pregnant_woman_information)
       {
         if(report.fields.pregnant_woman_information.previous_pregnancies > 5)
-          riskFactors.push('previous_pregnancies'); 
+          riskFactors.push('previous_pregnancies');
+          riskFactorNames.push('Previous Pregnancies'); 
+          riskFactorSwahiliNames.push('Kupata mimba zaidi ya mara 5'); 
         if(report.fields.pregnant_woman_information.previous_delivery_by_c_section === 'yes') 
         { 
           riskFactors.push('previous_delivery_by_c_section'); 
+          riskFactorNames.push('Previous Delivery by C-Section'); 
+          riskFactorSwahiliNames.push('Kujifungua kwa kupasuliwa'); 
           mitigationSet.add('facility_delivery'); 
         }
         
         if(report.fields.pregnant_woman_information.previous_delivery_by_vacuum === 'yes'){ 
           riskFactors.push('previous_delivery_by_vacuum'); 
+          riskFactorNames.push('Previous Delivery by Vacuum');
+          riskFactorSwahiliNames.push('Kujifungua kwa kusaidiwa kuvutwa na mashine'); 
           mitigationSet.add('facility_delivery'); 
         }
           
         if(report.fields.pregnant_woman_information.previous_stillbirth === 'yes'){ 
           riskFactors.push('previous_stillbirth');
+          riskFactorNames.push('Previous stillbirth');
+          riskFactorSwahiliNames.push('Kupoteza mtoto wakati wa kujifungua'); 
           mitigationSet.add('facility_delivery'); 
         }
           
        if(report.fields.pregnant_woman_information.local_herbs === 'yes'){ 
         riskFactors.push('local_herbs');
+        riskFactorNames.push('Use of local herbs');
+        riskFactorSwahiliNames.push('Kutumia dawa za mitishamba'); 
         mitigationSet.add('local_herb_risks');
        }
           
        if(report.fields.pregnant_woman_information.ten_or_more_years === 'yes'){ 
         riskFactors.push('ten_or_more_years');
+        riskFactorNames.push('Last pregnancy 10 or more years ago');
+        riskFactorSwahiliNames.push('Mimba iliyopita ilikuwa miaka kumi ilopita au zaidi'); 
         mitigationSet.add('facility_delivery'); 
        }
          
@@ -326,42 +340,58 @@ module.exports = {
           var hasBigBaby = deliveryComplications.includes('big_baby'); 
           if(hasProlongedLabor){ 
             riskFactors.push('prolonged_labor');
+            riskFactorNames.push('Prolonged labor (12 hours or more)');
+            riskFactorSwahiliNames.push('Uchungu wa muda mrefu( Zaidi ya masaa 12)'); 
             mitigationSet.add('facility_delivery');
           }
             
           if(hasPerinealTear){ 
             riskFactors.push('large_perineal_tear');
+            riskFactorNames.push('Large perineal tear (close to anus)');
+            riskFactorSwahiliNames.push('Previous PregnanciesKuchanika njia ya uzazi(karibia ya njia ya choo kikubwa)'); 
             mitigationSet.add('facility_delivery');
           } 
             
           if(hasRetainedPlacenta){ 
             riskFactors.push('retained_placenta');
+            riskFactorNames.push('Retained placenta');
+            riskFactorSwahiliNames.push('Kondo la nyuma kukataa kutoka'); 
             mitigationSet.add('facility_delivery');
           }
           
           if(hasAPH){
             riskFactors.push('aph'); 
+            riskFactorNames.push('APH');
+            riskFactorSwahiliNames.push('Kutokwa na damu nyingi kabla ya kujifungua'); 
             mitigationSet.add('facility_delivery');
           }
            
           if(hasPostpartumHemorrage){ 
             riskFactors.push('postpartum_hemorrage');
+            riskFactorNames.push('Postpartum hemorrhage');
+            riskFactorSwahiliNames.push('Kutokwa damu nyingi baada ya kujifungua'); 
             mitigationSet.add('facility_delivery');
           }
              
           if(hasEnclampsia){
             riskFactors.push('enclampsia'); 
+            riskFactorNames.push('Eclampsia');
+            riskFactorSwahiliNames.push('Kifafa cha mimba'); 
             mitigationSet.add('facility_delivery');
           }
             
           if(hasBigBaby){ 
-            riskFactors.push('big_baby'); 
+            riskFactors.push('big_baby');
+            riskFactorNames.push('Big baby in previous or current (more than 4 kg)'); 
+            riskFactorSwahiliNames.push('Kujifungua mtoto mkubwa ( zaidi ya kilo 4) (mimba hii au kabla)'); 
             mitigationSet.add('facility_delivery');
           }
         }
 
         if(report.fields.pregnant_woman_information.previous_miscarriages > 0){ 
           riskFactors.push('previous_miscarriages');
+          riskFactorNames.push('Miscarriage/abortion'); 
+          riskFactorSwahiliNames.push('Mimba kuharibika'); 
           mitigationSet.add('rest'); 
           mitigationSet.add('balanced_diet'); 
           mitigationSet.add('family_planning'); 
@@ -373,6 +403,8 @@ module.exports = {
       { 
         if(report.fields.rch_card.multiple_pregnancy === 'yes'){ 
           riskFactors.push('multiple_pregnancy');
+          riskFactorNames.push('Multiple pregnancy'); 
+          riskFactorSwahiliNames.push('Kutarajia kuwa na mapacha'); 
           mitigationSet.add('rest'); 
           mitigationSet.add('balanced_diet'); 
           mitigationSet.add('no_heavy_work'); 
@@ -380,36 +412,95 @@ module.exports = {
           
         if(report.fields.rch_card.malpresentation === 'yes'){ 
           riskFactors.push('malpresentation');
+          riskFactorNames.push('Malpresentation');
+          riskFactorSwahiliNames.push(''); 
           mitigationSet.add('facility_delivery'); 
         }
           
         if(report.fields.rch_card.breech_position === 'yes'){ 
           riskFactors.push('breech_position'); 
+          riskFactorNames.push('Breech position');
+          riskFactorSwahiliNames.push('Mtoto kutanguliza makalio'); 
           mitigationSet.add('facility_delivery');
         }
          
         if(report.fields.rch_card.big_baby === 'yes'){ 
           riskFactors.push('big_baby'); 
+          riskFactorNames.push('Big baby in previous or current (more than 4 kg)');
+          riskFactorSwahiliNames.push('Big baby in previous or current (more than 4 kg)'); 
           mitigationSet.add('facility_delivery');
         }
           
         if(report.fields.rch_card.higher_facility_delivery === 'yes'){ 
           riskFactors.push('higher_facility_delivery');
+          riskFactorNames.push('Has been advised to deliver at higher-level facility');
+          riskFactorSwahiliNames.push('Kushauriwa kujifungua katika kituo cha afya kikubwa'); 
           mitigationSet.add('facility_delivery');
         }
+
+        if(report.fields.rch_card.medical_condition) 
+        { 
+          var medicalCondition = (report.fields.rch_card.medical_condition).toString(); 
+          var hasDiabetes = medicalCondition.includes('diabetes'); 
+          var hasSickleCell = medicalCondition.includes('sickle_cell'); 
+          var hasHighBloodPressure = medicalCondition.includes('high_blood_pressure');
+          var hasCardiacDisease = medicalCondition.includes('cardiac_disease');
+
+          if(hasDiabetes) 
+          { 
+            riskFactors.push('diabetes');
+            riskFactorNames.push('Diabetes');
+            riskFactorSwahiliNames.push('Kisukari'); 
+            mitigationSet.add('anc_visits');
+          }
+          if(hasSickleCell) 
+          { 
+            riskFactors.push('sickle_cell');
+            riskFactorNames.push('Sickle Cell');
+            riskFactorSwahiliNames.push('Seli Mundu'); 
+            mitigationSet.add('anc_visits');
+          }
+          if(hasHighBloodPressure) 
+          { 
+            riskFactors.push('high_blood_pressure');
+            riskFactorNames.push('High Blood Pressure');
+            riskFactorSwahiliNames.push('Shinikizo la damu'); 
+            mitigationSet.add('anc_visits');
+          }
+          if(hasCardiacDisease) 
+          { 
+            riskFactors.push('cardiac_disease'); 
+            riskFactorNames.push('Cardiac Disease');
+            riskFactorSwahiliNames.push('maradhi ya moyo'); 
+            mitigationSet.add('anc_visits'); 
+          }
+        }
          
-        if(report.fields.rch_card.maternal_nutrition && report.fields.rch_card.maternal_nutrition.nutrition_restrictions === 'yes')
-          riskFactors.push('nutrition_restrictions');
-          mitigationSet.add('balanced_diet');
-      }
+      }     
+
+      if(report && report.fields && report.fields.maternal_nutrition) 
+      { 
+          if(report.fields.rch_card.maternal_nutrition.nutrition_restrictions === 'yes'){ 
+            riskFactors.push('nutrition_restrictions');
+            riskFactorNames.push('Follows nutrition restrictions');
+            riskFactorSwahiliNames.push('Kuepuka kula baadhi ya vyakula'); 
+            mitigationSet.add('balanced_diet');
+          }
+          if(report.fields.rch_card.maternal_nutrition.anemia_tablets === 'no'){ 
+            riskFactors.push('anemia');
+            riskFactorNames.push('Anemia');
+            riskFactorSwahiliNames.push('Upungufu wa damu'); 
+            mitigationSet.add('balanced_diet');
+          }
+      } 
 
       if(report && report.fields && report.fields.facility_delivery_importance && 
         report && report.fields && 
         report.fields.facility_delivery_importance.allow_partner_to_deliver_facility === 'no'){ 
           mitigationSet.add('facility_delivery');
           riskFactors.push('allow_partner_to_deliver_facility');
+          riskFactorSwahiliNames.push('Kujifungulia kituo cha afya'); 
         }
-      // riskFactors.join(' ');
        if(riskFactors.length >= 1) 
          manual_high_risk = true; 
        return riskFactors; 
@@ -422,7 +513,16 @@ module.exports = {
 
   getMitigationList: function(){ 
     return [...mitigationSet].join(' '); 
+  },
+
+  getRiskFactorNames: function(){ 
+    return riskFactorNames.join(', '); 
+  },
+
+  getRiskFactorNamesSwahili: function(){ 
+    return riskFactorSwahiliNames.join(', '); 
+  },
+  getMitigationListLength: function(){ 
+    return mitigationSet.size;
   }
-
-
 };
