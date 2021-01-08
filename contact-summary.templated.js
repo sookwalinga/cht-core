@@ -17,7 +17,6 @@ module.exports = {
     risk_factor_names: extras.getRiskFactorNames(), 
     risk_factor_names_swahili:extras.getRiskFactorNamesSwahili(),
     mitigation_list: extras.getMitigationList(),
-    mitigation_list_length: extras.getMitigationListLength(),
     high_risk_manual: extras.isHighRiskPregnancy()
   },
 

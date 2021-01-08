@@ -480,13 +480,13 @@ module.exports = {
 
       if(report && report.fields && report.fields.maternal_nutrition) 
       { 
-          if(report.fields.rch_card.maternal_nutrition.nutrition_restrictions === 'yes'){ 
+          if(report.fields.maternal_nutrition.nutrition_restrictions === 'yes'){ 
             riskFactors.push('nutrition_restrictions');
             riskFactorNames.push('Follows nutrition restrictions');
             riskFactorSwahiliNames.push('Kuepuka kula baadhi ya vyakula'); 
             mitigationSet.add('balanced_diet');
           }
-          if(report.fields.rch_card.maternal_nutrition.anemia_tablets === 'no'){ 
+          if(report.fields.maternal_nutrition.anemia_tablets === 'no'){ 
             riskFactors.push('anemia');
             riskFactorNames.push('Anemia');
             riskFactorSwahiliNames.push('Upungufu wa damu'); 
@@ -514,15 +514,17 @@ module.exports = {
   getMitigationList: function(){ 
     return [...mitigationSet].join(' '); 
   },
-
   getRiskFactorNames: function(){ 
     return riskFactorNames.join(', '); 
   },
 
   getRiskFactorNamesSwahili: function(){ 
     return riskFactorSwahiliNames.join(', '); 
-  },
-  getMitigationListLength: function(){ 
-    return mitigationSet.size;
   }
+
+
+
 };
+
+
+
