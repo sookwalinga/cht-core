@@ -487,10 +487,12 @@ module.exports = {
             mitigationSet.add('balanced_diet');
           }
           if(report.fields.maternal_nutrition.anemia_tablets === 'no'){ 
-            riskFactors.push('anemia');
-            riskFactorNames.push('Anemia');
-            riskFactorSwahiliNames.push('Upungufu wa damu'); 
-            mitigationSet.add('balanced_diet');
+              if(report.fields.maternal_nutrition.reason_no_tablets !== 'not_prescribed'){ 
+                riskFactors.push('anemia');
+                riskFactorNames.push('Anemia');
+                riskFactorSwahiliNames.push('Upungufu wa damu'); 
+                mitigationSet.add('balanced_diet');
+              }
           }
       } 
 

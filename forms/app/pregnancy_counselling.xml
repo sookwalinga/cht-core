@@ -168,6 +168,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy_counselling/mitigation_qn:label">
             <value>Mitigation Strategy</value>
           </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategies:jr:constraintMsg">
+            <value>Cannot select "None" with other options</value>
+          </text>
           <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategies:label">
             <value>What can you do to continue in good health and have a safe pregnancy all the way through delivery?</value>
           </text>
@@ -176,7 +179,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy/risk_factor_list:label">
             <value>&lt;strong&gt;Considering these risk factors:&lt;/strong&gt;
-[<output value=" /pregnancy_counselling/risk_factor_names "/>]</value>
+[<output value=" /pregnancy_counselling/risk_factor_labels "/>]</value>
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy:label">
             <value>Mitigation Strategy</value>
@@ -348,6 +351,9 @@ Have you experienced:</value>
           <text id="/pregnancy_counselling/short_explanation/ten_or_more_years:label">
             <value>Last pregnancy 10 or more years ago</value>
           </text>
+          <text id="/pregnancy_counselling/target_messaging_group/risk_factors:jr:constraintMsg">
+            <value>Cannot select "None" with other options</value>
+          </text>
           <text id="/pregnancy_counselling/target_messaging_group/risk_factors:label">
             <value>Which pregnancy risk factors do you remember?</value>
           </text>
@@ -482,6 +488,9 @@ Have you experienced:</value>
           </text>
           <text id="static_instance-risk_factors-24">
             <value>Follows nutrition restrictions</value>
+          </text>
+          <text id="static_instance-risk_factors-25">
+            <value>None</value>
           </text>
           <text id="static_instance-risk_factors-3">
             <value>Stillbirth</value>
@@ -723,6 +732,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_counselling/mitigation_qn:label">
             <value>Mkakati wa kuepuka sababu za hatari za ujauzito ?</value>
           </text>
+          <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategies:jr:constraintMsg">
+            <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
           <text id="/pregnancy_counselling/mitigation_strategy/mitigation_strategies:label">
             <value>Unaweza kufanya mambo gani ili uweze kuendelea na mimba yako vizuri hadi utakapojifungua?</value>
           </text>
@@ -731,7 +743,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy/risk_factor_list:label">
             <value>&lt;strong&gt;Ukizingatia sababu zifuatazo za hatari za ujauzito:&lt;/strong&gt;
-[<output value=" /pregnancy_counselling/risk_factor_names_swahili "/>]</value>
+[<output value=" /pregnancy_counselling/risk_factor_labels_swahili "/>]</value>
           </text>
           <text id="/pregnancy_counselling/mitigation_strategy:label">
             <value>Mkakati wa kuepuka sababu za hatari za ujauzito</value>
@@ -907,6 +919,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy_counselling/short_explanation/ten_or_more_years:label">
             <value>Mimba iliyopita ilikuwa miaka kumi ilopita au zaidi</value>
           </text>
+          <text id="/pregnancy_counselling/target_messaging_group/risk_factors:jr:constraintMsg">
+            <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
           <text id="/pregnancy_counselling/target_messaging_group/risk_factors:label">
             <value>Je unakumbuka sababu zipi za hatari za ujauzito?</value>
           </text>
@@ -1042,6 +1057,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="static_instance-risk_factors-24">
             <value>Kuepuka kula baadhi ya vyakula</value>
           </text>
+          <text id="static_instance-risk_factors-25">
+            <value>Hakuna mojawapo</value>
+          </text>
           <text id="static_instance-risk_factors-3">
             <value>Kupoteza mtoto wakati wa kujifungua</value>
           </text>
@@ -1125,10 +1143,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <gestation_in_weeks_c/>
           <is_high_risk_pregnancy_ML_c/>
           <high_risk_manual/>
-          <nitu/>
-          <mitigation_list/>
           <risk_factor_names/>
-          <risk_factor_names_swahili/>
+          <mitigation_list/>
+          <risk_factor_labels/>
+          <risk_factor_labels_swahili/>
           <enabel/>
           <currently_pregnant/>
           <hide_lmp_or_months_pregnant/>
@@ -1352,6 +1370,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <itextId>static_instance-risk_factors-24</itextId>
             <name>nutrition_restrictions</name>
           </item>
+          <item>
+            <itextId>static_instance-risk_factors-25</itextId>
+            <name>none</name>
+          </item>
         </root>
       </instance>
       <instance id="mitigation_strategies">
@@ -1382,7 +1404,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </item>
           <item>
             <itextId>static_instance-mitigation_strategies-6</itextId>
-            <name>local_herbs_risks</name>
+            <name>local_herb_risks</name>
           </item>
         </root>
       </instance>
@@ -1497,10 +1519,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_counselling/gestation_in_weeks_c" type="string" calculate="../inputs/gestation_in_weeks"/>
       <bind nodeset="/pregnancy_counselling/is_high_risk_pregnancy_ML_c" type="string" calculate="../inputs/is_high_risk_pregnancy_ML"/>
       <bind nodeset="/pregnancy_counselling/high_risk_manual" type="string" calculate="instance('contact-summary')/context/high_risk_manual"/>
-      <bind nodeset="/pregnancy_counselling/nitu" type="string" calculate="instance('contact-summary')/context/nitu"/>
-      <bind nodeset="/pregnancy_counselling/mitigation_list" type="string" calculate="instance('contact-summary')/context/mitigation_list"/>
       <bind nodeset="/pregnancy_counselling/risk_factor_names" type="string" calculate="instance('contact-summary')/context/risk_factor_names"/>
-      <bind nodeset="/pregnancy_counselling/risk_factor_names_swahili" type="string" calculate="instance('contact-summary')/context/risk_factor_names_swahili"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_list" type="string" calculate="instance('contact-summary')/context/mitigation_list"/>
+      <bind nodeset="/pregnancy_counselling/risk_factor_labels" type="string" calculate="instance('contact-summary')/context/risk_factor_labels"/>
+      <bind nodeset="/pregnancy_counselling/risk_factor_labels_swahili" type="string" calculate="instance('contact-summary')/context/risk_factor_labels_swahili"/>
       <bind nodeset="/pregnancy_counselling/enabel" type="string" calculate="instance('contact-summary')/context/enabel"/>
       <bind nodeset="/pregnancy_counselling/currently_pregnant" type="string" calculate="instance('contact-summary')/context/currently_pregnant"/>
       <bind nodeset="/pregnancy_counselling/hide_lmp_or_months_pregnant" type="string" calculate="if( /pregnancy_counselling/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)"/>
@@ -1542,7 +1564,7 @@ selected( /pregnancy_counselling/danger_signs/danger_sign_table_1/danger_sign_va
       <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" type="string" calculate="if(selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;difficulty_breathing&quot;) or 
 selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fatigue&quot;) or 
 selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fever&quot;) or 
-selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;tinnitus&quot;) or 
+selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;tinrisk_factor_namess&quot;) or 
 selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;dizziness&quot;) or 
 selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;frontal_headache&quot;) or 
 selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;blurred_vision&quot;) or 
@@ -1562,36 +1584,36 @@ selected( /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issue
       <bind nodeset="/pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/no_pregnancy_complication_note" readonly="true()" type="string" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0 and  /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =0 and  /pregnancy_counselling/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =0 and
 selected( /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/baby_moving ,&quot;yes&quot;) and selected( /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/pallor ,&quot;no&quot;)"/>
       <bind nodeset="/pregnancy_counselling/target_messaging_group" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
-      <bind nodeset="/pregnancy_counselling/target_messaging_group/risk_factors" type="select" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/target_messaging_group/risk_factors" type="select" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot;" required="true()" jr:constraintMsg="jr:itext('/pregnancy_counselling/target_messaging_group/risk_factors:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
       <bind nodeset="/pregnancy_counselling/short_explanation" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;true&quot; and  /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/previous_pregnancies" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_pregnancies')) and contains( /pregnancy_counselling/nitu , 'previous_pregnancies')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_c_section')) and contains( /pregnancy_counselling/nitu , 'previous_delivery_by_c_section')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_vacuum')) and contains( /pregnancy_counselling/nitu , 'previous_delivery_by_vacuum')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/previous_stillbirth" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_stillbirth')) and contains( /pregnancy_counselling/nitu , 'previous_stillbirth')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/prolonged_labor" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'prolonged_labor')) and contains( /pregnancy_counselling/nitu , 'prolonged_labor')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/large_perineal_tear" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'large_perineal_tear')) and contains( /pregnancy_counselling/nitu , 'large_perineal_tear')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/retained_placenta" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'retained_placenta')) and contains( /pregnancy_counselling/nitu , 'retained_placenta')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/aph" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'aph')) and contains( /pregnancy_counselling/nitu , 'aph')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/postpartum_hemorrage" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'postpartum_hemorrage')) and contains( /pregnancy_counselling/nitu , 'postpartum_hemorrage')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/enclampsia" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'enclampsia')) and contains( /pregnancy_counselling/nitu , 'enclampsia')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/big_baby" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'big_baby')) and contains( /pregnancy_counselling/nitu , 'big_baby')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/previous_miscarriages" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_miscarriages')) and contains( /pregnancy_counselling/nitu , 'previous_miscarriages')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/multiple_pregnancy" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'multiple_pregnancy')) and contains( /pregnancy_counselling/nitu , 'multiple_pregnancy')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/malpresentation" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'malpresentation')) and contains( /pregnancy_counselling/nitu , 'malpresentation')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/breech_position" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'breech_position')) and contains( /pregnancy_counselling/nitu , 'breech_position')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/high_blood_pressure" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'high_blood_pressure')) and contains( /pregnancy_counselling/nitu , 'high_blood_pressure')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/diabetes" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'diabetes')) and contains( /pregnancy_counselling/nitu , 'diabetes')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/sicke_cell" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'sicke_cell')) and contains( /pregnancy_counselling/nitu , 'sicke_cell')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/cardiac_disease" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'cardiac_disease')) and contains( /pregnancy_counselling/nitu , 'cardiac_disease')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/anemia" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'anemia')) and contains( /pregnancy_counselling/nitu , 'anemia')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/higher_level_facility" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'higher_level_facility')) and contains( /pregnancy_counselling/nitu , 'higher_level_facility')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'allow_partner_to_deliver_facility')) and contains( /pregnancy_counselling/nitu , 'allow_partner_to_deliver_facility')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/ten_or_more_years" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'ten_or_more_years')) and contains( /pregnancy_counselling/nitu , 'ten_or_more_years')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/local_herbs" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'local_herbs')) and contains( /pregnancy_counselling/nitu , 'local_herbs')"/>
-      <bind nodeset="/pregnancy_counselling/short_explanation/nutrition" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'nutrition')) and contains( /pregnancy_counselling/nitu , 'nutrition')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_pregnancies" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_pregnancies')) and contains( /pregnancy_counselling/risk_factor_names , 'previous_pregnancies')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_c_section" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_c_section')) and contains( /pregnancy_counselling/risk_factor_names , 'previous_delivery_by_c_section')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_delivery_by_vacuum" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_delivery_by_vacuum')) and contains( /pregnancy_counselling/risk_factor_names , 'previous_delivery_by_vacuum')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_stillbirth" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_stillbirth')) and contains( /pregnancy_counselling/risk_factor_names , 'previous_stillbirth')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/prolonged_labor" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'prolonged_labor')) and contains( /pregnancy_counselling/risk_factor_names , 'prolonged_labor')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/large_perineal_tear" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'large_perineal_tear')) and contains( /pregnancy_counselling/risk_factor_names , 'large_perineal_tear')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/retained_placenta" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'retained_placenta')) and contains( /pregnancy_counselling/risk_factor_names , 'retained_placenta')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/aph" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'aph')) and contains( /pregnancy_counselling/risk_factor_names , 'aph')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/postpartum_hemorrage" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'postpartum_hemorrage')) and contains( /pregnancy_counselling/risk_factor_names , 'postpartum_hemorrage')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/enclampsia" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'enclampsia')) and contains( /pregnancy_counselling/risk_factor_names , 'enclampsia')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/big_baby" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'big_baby')) and contains( /pregnancy_counselling/risk_factor_names , 'big_baby')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/previous_miscarriages" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'previous_miscarriages')) and contains( /pregnancy_counselling/risk_factor_names , 'previous_miscarriages')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/multiple_pregnancy" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'multiple_pregnancy')) and contains( /pregnancy_counselling/risk_factor_names , 'multiple_pregnancy')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/malpresentation" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'malpresentation')) and contains( /pregnancy_counselling/risk_factor_names , 'malpresentation')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/breech_position" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'breech_position')) and contains( /pregnancy_counselling/risk_factor_names , 'breech_position')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/high_blood_pressure" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'high_blood_pressure')) and contains( /pregnancy_counselling/risk_factor_names , 'high_blood_pressure')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/diabetes" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'diabetes')) and contains( /pregnancy_counselling/risk_factor_names , 'diabetes')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/sicke_cell" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'sicke_cell')) and contains( /pregnancy_counselling/risk_factor_names , 'sicke_cell')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/cardiac_disease" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'cardiac_disease')) and contains( /pregnancy_counselling/risk_factor_names , 'cardiac_disease')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/anemia" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'anemia')) and contains( /pregnancy_counselling/risk_factor_names , 'anemia')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/higher_level_facility" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'higher_level_facility')) and contains( /pregnancy_counselling/risk_factor_names , 'higher_level_facility')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/allow_partner_to_deliver_facility" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'allow_partner_to_deliver_facility')) and contains( /pregnancy_counselling/risk_factor_names , 'allow_partner_to_deliver_facility')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/ten_or_more_years" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'ten_or_more_years')) and contains( /pregnancy_counselling/risk_factor_names , 'ten_or_more_years')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/local_herbs" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'local_herbs')) and contains( /pregnancy_counselling/risk_factor_names , 'local_herbs')"/>
+      <bind nodeset="/pregnancy_counselling/short_explanation/nutrition" readonly="true()" type="string" relevant="not(selected( /pregnancy_counselling/target_messaging_group/risk_factors ,'nutrition')) and contains( /pregnancy_counselling/risk_factor_names , 'nutrition')"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy" relevant=" /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy/risk_factor_list" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy_counselling/mitigation_strategy/mitigation_strategies" type="select" required="true()"/>
+      <bind nodeset="/pregnancy_counselling/mitigation_strategy/mitigation_strategies" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()" jr:constraintMsg="jr:itext('/pregnancy_counselling/mitigation_strategy/mitigation_strategies:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy/mitigation_strategy_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml" relevant=" /pregnancy_counselling/high_risk_manual  = &quot;false&quot; and  /pregnancy_counselling/inputs/is_high_risk_pregnancy_ML  = &quot;true&quot; and  /pregnancy_counselling/danger_signs/emergency_danger_sign_referral  = 0"/>
       <bind nodeset="/pregnancy_counselling/mitigation_strategy_ml/mitigation_strategies" type="select" required="true()"/>
@@ -1898,7 +1920,7 @@ selected( /pregnancy_counselling/pregnancy_issues_group/pregnancy_and_pallor/bab
     <group appearance="fiel-list" ref="/pregnancy_counselling/target_messaging_group">
       <select ref="/pregnancy_counselling/target_messaging_group/risk_factors">
         <label ref="jr:itext('/pregnancy_counselling/target_messaging_group/risk_factors:label')"/>
-        <itemset nodeset="instance('risk_factors')/root/item[contains( /pregnancy_counselling/nitu , name) or name = 'none']">
+        <itemset nodeset="instance('risk_factors')/root/item[contains( /pregnancy_counselling/risk_factor_names , name) or name = 'none']">
           <value ref="name"/>
           <label ref="jr:itext(itextId)"/>
         </itemset>

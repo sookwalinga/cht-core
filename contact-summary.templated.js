@@ -13,9 +13,9 @@ module.exports = {
     previous_rchcard_status: extras.showPregnancyEDDEstimation(),
     hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant(),
     enabel: extras.isEnrolledInML(), 
-    nitu: extras.getPregnancyRiskFactors(),
-    risk_factor_names: extras.getRiskFactorNames(), 
-    risk_factor_names_swahili:extras.getRiskFactorNamesSwahili(),
+    risk_factor_names: extras.getPregnancyRiskFactors(),
+    risk_factor_labels: extras.getRiskFactorNames(), 
+    risk_factor_labels_swahili:extras.getRiskFactorNamesSwahili(),
     mitigation_list: extras.getMitigationList(),
     high_risk_manual: extras.isHighRiskPregnancy()
   },
