@@ -1,3 +1,5 @@
+var RandomForestClassifier = require('./model-min.js');
+var getShehiaData=require('./catchments.js').getShehiaData;
 module.exports = {
 
   day: 1,
@@ -223,6 +225,10 @@ module.exports = {
       else if (referral_type === 'postpartum') {
         return report.fields.has_postpartum_referral === 'true';
       }
+      else if (referral_type === 'pregnancy_counselling') {
+        console.log('Inside pregnancy counselling'); 
+        return report.fields.has_pregnancy_counselling_referral === 'true';
+      }
     }
     return false;
   },
@@ -273,7 +279,7 @@ module.exports = {
       report &&
       report.fields &&
       report.fields.refer_flag_pregnancy_complications
-    ) {
+    ) { 
       return report.fields.refer_flag_pregnancy_complications;
     }
     return '0';
@@ -762,6 +768,7 @@ module.exports = {
       var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
       reportedDate = report.reported_date;
     }
+    console.log('Most recent pregnancy consent date ' + reportedDate);
     return reportedDate;
   },
 
@@ -804,7 +811,7 @@ module.exports = {
           r.fields.confirm_delivery &&
           r.fields.confirm_delivery.pregnancy_outcome &&
           ((r.fields.confirm_delivery.pregnancy_outcome === 'did_deliver') ||
-          (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
+            (r.fields.confirm_delivery.pregnancy_outcome === 'miscarriage_or_stillbirth'));
       });
       earlyTerminations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -965,5 +972,441 @@ module.exports = {
       isMuted = true;
     }
     return isMuted;
+  },
+
+  getPregnantWomanAge: function (c) {
+    var reportsFound = [];
+    var ageInYears = '';
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.age_years;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        ageInYears = report.fields.age_years;
+      }
+    }
+    console.log('Pregnant woman age ' + ageInYears);
+    return ageInYears;
+  },
+
+  getHIVStatus: function (c) {
+    console.log('Inside HIV function');
+    var hiv_status = false;
+    var reportsFound = [];
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.pmtct &&
+          r.fields.pmtct.hiv_status;
+      });
+      if (reportsFound.length > 0) {
+        reportsFound.forEach(function (r) {
+          if (r.fields.pmtct.hiv_status === 'hiv_positive') {
+            hiv_status = true;
+          }
+        });
+      }
+    }
+    console.log('HIV status ' + hiv_status);
+    return hiv_status;
+  },
+
+  getPrevMiscarrige: function (c) {
+    var reportsFound = [];
+    var prevMiscarriage = false;
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.pregnant_woman_information &&
+          r.fields.pregnant_woman_information.previous_miscarriages;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        prevMiscarriage = report.fields.pregnant_woman_information.previous_miscarriages;
+      }
+    }
+    console.log('Previous Miscarriage ' + prevMiscarriage);
+    return prevMiscarriage;
+  },
+
+  getPrevPregnancies: function (c) {
+    var reportsFound = [];
+    var prevPregnancies = false;
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.pregnant_woman_information &&
+          r.fields.pregnant_woman_information.previous_pregnancies;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        prevPregnancies = report.fields.pregnant_woman_information.previous_pregnancies;
+      }
+    }
+    console.log('Previous pregnancies ' + prevPregnancies);
+    return prevPregnancies;
+  },
+
+  getPreviousDeliveries: function (c) {
+    var prevDeliveries = this.getPrevPregnancies(c) - this.getPrevMiscarrige(c);
+    console.log('Previous deliveries ' + prevDeliveries);
+    return prevDeliveries;
+  },
+
+  getPrevDeliveryLocation: function (c) {
+    var reportsFound = [];
+    var prevDeliveryLocation = '';
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.facility_delivery_importance &&
+          r.fields.facility_delivery_importance.delivery_location;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        prevDeliveryLocation = report.fields.facility_delivery_importance.delivery_location;
+      }
+    }
+    console.log('Prev delivery location ' + prevDeliveryLocation);
+    return prevDeliveryLocation;
+  },
+ 
+  getHouseInfo: function (c,property) {
+    var reportsFound = [];
+    var data = '';
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
+          r.reported_date >= recentConsentReportDate &&
+          r.fields &&
+          r.fields.education_and_prev_enrollment &&
+          r.fields.education_and_prev_enrollment;
+      });
+      if (reportsFound.length > 0) {
+        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        data = report.fields.education_and_prev_enrollment;
+        if(property === 'roof_material')
+          data = report.fields.education_and_prev_enrollment.roof_material; 
+        else if(property === 'floor_material')
+        data = report.fields.education_and_prev_enrollment.floor_material;
+        else if(property === 'highest_school_level')
+        data = report.fields.education_and_prev_enrollment.highestSchoolLevel;
+        else if(property === 'water_source')
+        data = report.fields.education_and_prev_enrollment.waterSource;
+        else if(property === 'home_electricity')
+        data = report.fields.education_and_prev_enrollment.homeElectricity;
+      }
+    }
+    return data;
+  },
+  
+  multiSelectOptions:function(c){ 
+    console.log('nitu', c); 
+    var optionList = 'previous_pregnancies'; 
+    return optionList; 
+
+  },
+  
+  isHighRiskPregnancyML: function (c) {
+    var data=getShehiaData(c.contact.meta.created_by_place_uuid);
+    console.log('Data is ' + JSON.stringify(data)); 
+   if(data.shehia === '')
+   { 
+    console.log('No catchment area found'); 
+    return; 
+   }
+   var shehia = data.shehia; 
+   var district = data.district; 
+   var  home_ct = data.home_ct; 
+   var avg_contacts = data.avg_contacts; 
+   var avg_trans_sent = data.avg_trans_sent; 
+   var avg_sent_overall_trans = data.avg_sent_overall_trans; 
+   var avg_trans_received = data.avg_trans_received; 
+   var population_2002 = data.population_2002; 
+   var population_2012 = data.population_2012; 
+   var status = data.status; 
+   var prevDeliveryLocation = this.getPrevDeliveryLocation(c);
+   var waterSource = this.getHouseInfo(c, 'water_source');
+   var highestSchoolLevel = this.getHouseInfo(c, 'highest_school_level');
+   var homeElectricity = this.getHouseInfo(c, 'home_electricity');
+   var floorMaterial = this.getHouseInfo(c, 'floor_material');
+   var roofMaterial = this.getHouseInfo(c, 'roof_material');
+    //console.log('water source ' + this.getWaterSource(c)); 
+    var inputData = [
+     
+      this.getPregnantWomanAge(c),  //getPregnantWomanAge()
+      0,  //driver arranged in advance (No match)
+      this.getHIVStatus(c),   // getHIVStatus()
+      0, //partner permission (No match)
+      0, //Outcome variable 
+      // getMostRecentPregnancyConsentDate() , prevMiscarriage(), 
+      this.getMostRecentPregnancyConsentDate(c), 
+      this.getPrevMiscarrige(c), 
+      0, //Breech ( No match)
+      0, //Cardiac disease (No match) 
+      0, // Diabetes (no match ) 
+      0, //High bp ( No match) 
+      0,//Macrosomia (no match) 
+      this.getPreviousDeliveries(),// getPrevDeliveries()
+      0, //previous_eclampsia (no match) 
+      0, //previous_perineal_tear (no match) 
+      0,//previous_placenta_previa (no match)
+      0,//previous_pph (no match) 
+      0,//previous_prolonged_labor (no match) 
+      0, //previous_retained_placenta (no match) 
+      0, //previous_vacuum (no match) 
+      0,//prior_c_section (no match) 
+      0, //sickle_cell (no match) 
+      0, //TO DO: Calculate stillbirth
+      home_ct, //home_ct 
+      0, // Twins (No match) 
+      avg_trans_sent,//avg_trans_sent 
+      avg_contacts,//avg_contacts 
+      avg_sent_overall_trans , //avg_sent_overall_trans 
+      avg_trans_received,  //avg_trans_received 
+      population_2002,//population_2002
+      population_2012 , //population_2012
+      district === 'chake', //district chake
+      district === 'kaskazini a', // kaskaziniA (Not sure how to get it in CHT) 
+      district === 'kaskazini b',// kaskazini B 
+      district === 'kati',  // kati
+      district === 'kusini', //kusini
+      district === 'magharibi',//magharibi
+      district === 'micheweni',//micheweni
+      district === 'mkoani',//mkoani
+      district === 'wete', //wete 
+      0, // delivery_location = null  (No match) 
+      prevDeliveryLocation === 'on_the_way', //Location = On the way 
+      prevDeliveryLocation === 'local_health_facility', // Location = Health facility  ( Map to variable name with highest number of rows)
+      prevDeliveryLocation === 'home',//Location = Home               (Map to variable name with highest number of row) 
+      prevDeliveryLocation === 'local_health_facility', //Location = Health facility 
+      prevDeliveryLocation === 'home', //Location = Home 
+     waterSource === 'other' || waterSource === 'decline_to_answer', //Water source = Other 
+     waterSource === 'surface',//Water source  surface 
+      waterSource === 'home_tap_pump', //Water source home_tap_pump
+      waterSource === 'community_tap_pump',//Water source community_tap_pump
+      waterSource === 'well',//Water source well 
+      waterSource === 'home_well',//Water source home well 
+      highestSchoolLevel === 'primary',// education level === primary 
+      highestSchoolLevel === 'secondary',//secondary 
+      highestSchoolLevel === 'completed_high_school' ||
+      highestSchoolLevel === 'more_than_high_school',// completed_high_school or more_than_high_school
+      highestSchoolLevel === 'incomplete_primary',// incomplete_primary
+      highestSchoolLevel === 'incomplete_secondary',//incomplete_secondary
+      highestSchoolLevel === 'school_level_dont_know_decline' ||
+      highestSchoolLevel === 'no_formal_education',//highest_school_level = "school_level_dont_know_decline" or highest_school_level = "no_formal_education"
+      homeElectricity === 'no',//Electricity = 'no' 
+      homeElectricity === 'yes', //Electricity = 'yes'
+      floorMaterial === 'decline_to_answer' ||
+      floorMaterial === 'other', // floor = "decline_to_answer" or "other"
+      floorMaterial === 'concrete', // floor = concrete 
+      floorMaterial === 'dirt', // floor = dirt 
+      floorMaterial === 'plastic_mat', // floor = plastic_mat 
+      floorMaterial === 'tiles', // floor = tiles 
+      roofMaterial === 'decline_to_answer' ||
+      roofMaterial === 'other',// roof = "decline_to_answer" or "other" 
+      roofMaterial === 'iron_sheets', // roof = iron_sheets
+      roofMaterial === 'scrap_iron', // roof = scrap_iron 
+      roofMaterial === 'makuti', // roof = makuti 
+      roofMaterial === 'tiles_shingles',  //roof = tiles_shingles 
+      shehia === 'bambi'
+      , shehia === 'bandamaji'
+      , shehia === 'binguni'
+      , shehia === 'bopwe'
+      , shehia === 'bwejuu'
+      , shehia === 'bwereu'
+      , shehia === 'chaani kubwa'
+      , shehia === 'chaani masingini'
+      , shehia === 'chambani'
+      , shehia === 'changaweni'
+      , shehia === 'chanjaani'
+      , shehia === 'chimba'
+      , shehia === 'chokocho'
+      , shehia === 'chonga'
+      , shehia === 'chumbageni'
+      , shehia === 'chutama'
+      , shehia === 'chwaka'
+      , shehia === 'chwale'
+      , shehia === 'dimani'
+      , shehia === 'dodo'
+      , shehia === 'donge  mchangani'
+      , shehia === 'donge karange'
+      , shehia === 'donge mbiji'
+      , shehia === 'donge mtambile'
+      , shehia === 'dunga bweni'
+      , shehia === 'fujoni'
+      , shehia === 'fukuchani'
+      , shehia === 'fuoni kibondeni'
+      , shehia === 'fuoni kijito upele'
+      , shehia === 'gamba'
+      , shehia === 'ghana'
+      , shehia === 'jambiani kikadini'
+      , shehia === 'jendele'
+      , shehia === 'jombwe'
+      , shehia === 'jongowe'
+      , shehia === 'jumbi'
+      , shehia === 'junguni'
+      , shehia === 'kambini'
+      , shehia === 'kangagani'
+      , shehia === 'kendwa'
+      , shehia === 'kengeja'
+      , shehia === 'kianga'
+      , shehia === 'kibeni'
+      , shehia === 'kibokoni'
+      , shehia === 'kibuteni'
+      , shehia === 'kichungwani'
+      , shehia === 'kidimni'
+      , shehia === 'kidoti'
+      , shehia === 'kihinani'
+      , shehia === 'kijini'
+      , shehia === 'kikungwi'
+      , shehia === 'kilimani'
+      , shehia === 'kilindi'
+      , shehia === 'kinduni'
+      , shehia === 'kinowe'
+      , shehia === 'kinuni'
+      , shehia === 'kinyasini'
+      , shehia === 'kipangani'
+      , shehia === 'kisauni'
+      , shehia === 'kisiwa panza'
+      , shehia === 'kitope'
+      , shehia === 'kiungoni'
+      , shehia === 'kiuyu kigongoni'
+      , shehia === 'kiuyu mbuyuni'
+      , shehia === 'kiuyu minungwini'
+      , shehia === 'kivunge'
+      , shehia === 'kiwani'
+      , shehia === 'kizimbani'
+      , shehia === 'kizimkazi dimbani'
+      , shehia === 'kizimkazi mkunguni'
+      , shehia === 'koani'
+      , shehia === 'kojani'
+      , shehia === 'kombeni'
+      , shehia === 'konde'
+      , shehia === 'kuukuu'
+      , shehia === 'kwale'
+      , shehia === 'madungu'
+      , shehia === 'mafufuni'
+      , shehia === 'mahonda'
+      , shehia === 'makoba'
+      , shehia === 'makoongwe'
+      , shehia === 'matale'
+      , shehia === 'matemwe'
+      , shehia === 'maungani'
+      , shehia === 'maziwa ng\'ombe'
+      , shehia === 'maziwani'
+      , shehia === 'mbaleni'
+      , shehia === 'mbuguani'
+      , shehia === 'mbuyuni'
+      , shehia === 'mbuzini'
+      , shehia === 'mchangani'
+      , shehia === 'melinne'
+      , shehia === 'mgagadu'
+      , shehia === 'mgambo'
+      , shehia === 'mgelema'
+      , shehia === 'mgeni haji'
+      , shehia === 'michenzani'
+      , shehia === 'micheweni'
+      , shehia === 'michungwani'
+      , shehia === 'minazini'
+      , shehia === 'misufini'
+      , shehia === 'miwani'
+      , shehia === 'mizingani'
+      , shehia === 'mjimbini'
+      , shehia === 'mjini ole'
+      , shehia === 'mjini wingwi'
+      , shehia === 'mkokotoni'
+      , shehia === 'mkoroshoni'
+      , shehia === 'mkwajuni'
+      , shehia === 'moga'
+      , shehia === 'mpapa'
+      , shehia === 'msuka magharibi'
+      , shehia === 'msuka mashariki'
+      , shehia === 'mtambile'
+      , shehia === 'mtambwe kaskazini'
+      , shehia === 'mtambwe kusini'
+      , shehia === 'mtangani'
+      , shehia === 'mtemani'
+      , shehia === 'mtende'
+      , shehia === 'mto wa pwani'
+      , shehia === 'mtufaani'
+      , shehia === 'muambe'
+      , shehia === 'muwanda'
+      , shehia === 'muyuni a'
+      , shehia === 'mvumoni'
+      , shehia === 'mwanyanya'
+      , shehia === 'mwera'
+      , shehia === 'mzuri'
+      , shehia === 'ndagoni'
+      , shehia === 'ndijani muembe punda'
+      , shehia === 'ng\'ambwa'
+      , shehia === 'ng\'ombeni'
+      , shehia === 'nganani'
+      , shehia === 'ngwachani'
+      , shehia === 'nungwi'
+      , shehia === 'paje'
+      , shehia === 'pangawe'
+      , shehia === 'pete'
+      , shehia === 'piki'
+      , shehia === 'pitanazako'
+      , shehia === 'pujini'
+      , shehia === 'pwani mchangani'
+      , shehia === 'shengejuu'
+      , shehia === 'shumba mjini'
+      , shehia === 'shumba viamboni'
+      , shehia === 'sizini'
+      , shehia === 'stahabu'
+      , shehia === 'tasani'
+      , shehia === 'tazari'
+      , shehia === 'tibirinzi'
+      , shehia === 'tomondo'
+      , shehia === 'tumbatu gomani'
+      , shehia === 'tumbe magharibi'
+      , shehia === 'ukunjwi'
+      , shehia === 'ukutini'
+      , shehia === 'umbuji'
+      , shehia === 'unguja ukuu kaepwani'
+      , shehia === 'upenja'
+      , shehia === 'uroa'
+      , shehia === 'uwandani'
+      , shehia === 'uweleni'
+      , shehia === 'uzi'
+      , shehia === 'uzini'
+      , shehia === 'vitongoji'
+      , shehia === 'wambaa'
+      , shehia === 'wara'
+      , shehia === 'wesha'
+      , shehia === 'wingwi mapofu'
+      , shehia === 'wingwi njuguni'
+      , shehia === 'zingwe zingwe'
+      , shehia === 'ziwani',
+      //Shehia low count (??), status =mixed ward, status = rural ward, status = urban ward
+      shehia!==null? 0: 1,
+      status === 'Rural Ward',
+      status === 'Urban',
+      status === 'Urban Ward'
+    ];
+    var model = new RandomForestClassifier();
+    var result = model.predict(inputData);
+    console.log('ML prediction is ' + result); 
+    return result;
   }
 };
