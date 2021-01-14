@@ -275,7 +275,7 @@ module.exports = [
       content.source_form = report.form;
       content.source_id = report._id;
       content.last_visit_date = report.reported_date;
-      content.due_date = Utils.addDate(new Date(report.reported_date), 14).getTime();
+      content.due_date = 1610632843070;//Utils.addDate(new Date(report.reported_date), 14).getTime();
       content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
         weekday: 'long',
         year: 'numeric',
@@ -292,7 +292,7 @@ module.exports = [
   events: [
     {
       id: 'pregnancy_counselling_visit',
-      dueDate: function (report) {
+      dueDate: function (event,c,report) {
         var days = 14;
         return Utils.addDate(new Date(report.reported_date), days);
       },
@@ -304,15 +304,16 @@ module.exports = [
     level: 'high',
     label: 'task.pregnancy_counselling.high_priority'
   },
-  resolvedIf: function (c,event, dueDate) {
-    console.log('Due date ' + dueDate); 
+  resolvedIf: function (c,r,event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      var isResolved = 
-         Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_counselling',
+     var isResolved = ! extras.shouldContinueCounselling(c)
+      &&(
+        Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_counselling',
         Utils.addDate(dueDate, -event.start).getTime(),
         Utils.addDate(dueDate, event.end).getTime()) ||
         extras.isContactDeceased(c) ||
-        extras.isContactMuted(c);
+        extras.isContactMuted(c)
+        );
       return isResolved;
   },
 },
