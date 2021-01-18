@@ -1118,7 +1118,9 @@ module.exports = {
     return data;
   },
 
-  shouldContinueCounselling: function (c) {
+  shouldStopCounselling: function (c) {
+    console.log(c); 
+     console.log('Inside counselling'); 
     var reportsFound = [];
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
@@ -1140,6 +1142,7 @@ module.exports = {
       });
 
         if (reportsFound.length > 0) {
+          console.log('Inside reports found in should counselling visit'); 
           var report = Utils.getMostRecentReport(reportsFound, 'pregnancy_counselling');
           var hasReferral = report.fields.has_referral;
 
@@ -1159,8 +1162,153 @@ module.exports = {
           === b.split(' ').sort().join('').toLowerCase();
       }
     },
+    
+  isHighRiskPregnancy: function(c){ 
+    var report = this.getRecentPregnancyReport(c); 
+    if (report && report.fields && report.fields.pregnant_woman_information)
+    {
+      if(report.fields.pregnant_woman_information.previous_pregnancies > 5)
+      {
+        return true; 
+      }
+       
+      if(report.fields.pregnant_woman_information.previous_delivery_by_c_section === 'yes') 
+      { 
+        return true; 
+      }
+      
+      if(report.fields.pregnant_woman_information.previous_delivery_by_vacuum === 'yes'){ 
+       return true; 
+      }
+        
+      if(report.fields.pregnant_woman_information.previous_stillbirth === 'yes'){ 
+        return true; 
+      }
+        
+     if(report.fields.pregnant_woman_information.local_herbs === 'yes'){ 
+        return true;
+     }
+        
+     if(report.fields.pregnant_woman_information.ten_or_more_years === 'yes'){ 
+       return true; 
+     }
+       
+      if(report.fields.pregnant_woman_information.delivery_complications)
+      { 
+        var deliveryComplications = (report.fields.pregnant_woman_information.delivery_complications).toString(); 
+        var hasProlongedLabor = deliveryComplications.includes('prolonged_labor'); 
+        var hasPerinealTear =  deliveryComplications.includes('large_perineal_tear'); 
+        var hasRetainedPlacenta = deliveryComplications.includes('retained_placenta'); 
+        var hasAPH = deliveryComplications.includes('aph'); 
+        var hasPostpartumHemorrage = deliveryComplications.includes('postpartum_hemorrage'); 
+        var hasEnclampsia = deliveryComplications.includes('enclampsia'); 
+        var hasBigBaby = deliveryComplications.includes('big_baby'); 
+        if(hasProlongedLabor){ 
+         return true; 
+        }
+          
+        if(hasPerinealTear){ 
+          return true; 
+        } 
+          
+        if(hasRetainedPlacenta){ 
+          return true; 
+        }
+        
+        if(hasAPH){
+          return true; 
+        }
+         
+        if(hasPostpartumHemorrage){ 
+           return true; 
+        }
+           
+        if(hasEnclampsia){
+           return true; 
+        }
+          
+        if(hasBigBaby){ 
+          return true; 
+        }
+      }
 
-    isHighRiskPregnancyML: function (c) {
+      if(report.fields.pregnant_woman_information.previous_miscarriages > 0){ 
+         return true; 
+      }
+       
+    } 
+    if(report && report.fields && report.fields.rch_card) 
+    { 
+      if(report.fields.rch_card.multiple_pregnancy === 'yes'){ 
+         return true; 
+      }
+        
+      if(report.fields.rch_card.malpresentation === 'yes'){ 
+        return true; 
+      }
+        
+      if(report.fields.rch_card.breech_position === 'yes'){ 
+        return true; 
+      }
+       
+      if(report.fields.rch_card.big_baby === 'yes'){ 
+        return true; 
+      }
+        
+      if(report.fields.rch_card.higher_facility_delivery === 'yes'){ 
+        return true; 
+      }
+
+      if(report.fields.rch_card.medical_condition) 
+      { 
+        var medicalCondition = (report.fields.rch_card.medical_condition).toString(); 
+        var hasDiabetes = medicalCondition.includes('diabetes'); 
+        var hasSickleCell = medicalCondition.includes('sickle_cell'); 
+        var hasHighBloodPressure = medicalCondition.includes('high_blood_pressure');
+        var hasCardiacDisease = medicalCondition.includes('cardiac_disease');
+
+        if(hasDiabetes) 
+        { 
+          return true; 
+        }
+        if(hasSickleCell) 
+        { 
+          return true; 
+        }
+        if(hasHighBloodPressure) 
+        { 
+          return true; 
+        }
+        if(hasCardiacDisease) 
+        { 
+          return true; 
+        }
+      }
+       
+    }     
+
+    if(report && report.fields && report.fields.maternal_nutrition) 
+    { 
+        if(report.fields.maternal_nutrition.nutrition_restrictions === 'yes'){ 
+          return true;
+        }
+        if(report.fields.maternal_nutrition.anemia_tablets === 'no'){ 
+            if(report.fields.maternal_nutrition.reason_no_tablets !== 'not_prescribed'){ 
+              return true;
+            }
+        }
+    } 
+
+    if(report && report.fields && report.fields.facility_delivery_importance && 
+      report && report.fields && 
+      report.fields.facility_delivery_importance.allow_partner_to_deliver_facility === 'no'){ 
+        return true; 
+      }
+    
+     return false; 
+},
+
+isHighRiskPregnancyML: function (c) {
       var data = getShehiaData(c.contact.meta.created_by_place_uuid);
       console.log('Data is ' + JSON.stringify(data));
       if (data.shehia === '') {

@@ -84,7 +84,7 @@ module.exports = [
     appliesTo: 'reports',
     appliesIf: function (c, r) {
       if(r.fields.referral_original_source_form === 'pregnancy' || r.form === 'pregnancy')
-        return extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+        return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
           extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
           extras.getANCVisitAfter6MonthsFlag(r) === '1';
     },
@@ -146,7 +146,7 @@ module.exports = [
     appliesTo: 'reports',
     appliesIf: function (c, r) {
      if(r.fields.referral_original_source_form === 'pregnancy_counselling' || r.form === 'pregnancy_counselling')
-      return extras.hasReferral(r, 'pregnancy_counselling') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+      return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy_counselling') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
         extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1';
      },
     appliesToType: ['referral_follow_up', 'pregnancy_counselling'],
@@ -261,11 +261,11 @@ module.exports = [
   icon: 'follow-up',
   title: 'task.pregnancy_counselling_visit',
   appliesTo: 'reports',
-  appliesIf: function (c, r) {
+  appliesIf: function (c) {
+    console.log('inside counselling task'); 
     return extras.isCurrentlyPregnant(c) &&
-          (extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-           extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-           extras.isHighRiskPregnancyML(c) === '1');
+          (extras.isHighRiskPregnancy(c) ||
+           extras.isHighRiskPregnancyML(c));
   },
   appliesToType: ['pregnancy','pregnancy_counselling'],
   actions: [{
@@ -275,7 +275,7 @@ module.exports = [
       content.source_form = report.form;
       content.source_id = report._id;
       content.last_visit_date = report.reported_date;
-      content.due_date = 1610632843070;//Utils.addDate(new Date(report.reported_date), 14).getTime();
+      content.due_date = Utils.addDate(new Date(report.reported_date), 14).getTime();
       content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
         weekday: 'long',
         year: 'numeric',
@@ -287,6 +287,7 @@ module.exports = [
       content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
       content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
       content.high_risk_ML = extras.isHighRiskPregnancyML(contact); 
+      content.gestation_in_weeks = extras.getCurrentGestationAge(contact); 
     }
   }],
   events: [
@@ -305,8 +306,7 @@ module.exports = [
     label: 'task.pregnancy_counselling.high_priority'
   },
   resolvedIf: function (c,r,event, dueDate) {
-      // Resolved if there is a form submitted within the time window
-     var isResolved = ! extras.shouldContinueCounselling(c)
+     var isResolved = extras.shouldStopCounselling(c)
       &&(
         Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_counselling',
         Utils.addDate(dueDate, -event.start).getTime(),
