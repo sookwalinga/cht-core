@@ -1146,7 +1146,7 @@ module.exports = {
           var report = Utils.getMostRecentReport(reportsFound, 'pregnancy_counselling');
           var hasReferral = report.fields.has_referral;
 
-          return hasReferral === 'false'
+          return hasReferral === '0'
             //Manual assessment is true
             &&  report.fields.high_risk_manual === 'true'  
             && spacedArrayEqual(report.fields.risk_factor_names, report.fields.target_messaging_group.risk_factors)

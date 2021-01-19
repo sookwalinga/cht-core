@@ -307,13 +307,12 @@ module.exports = [
   },
   resolvedIf: function (c,r,event, dueDate) {
      var isResolved = extras.shouldStopCounselling(c)
-      &&(
+      || 
         Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_counselling',
         Utils.addDate(dueDate, -event.start).getTime(),
         Utils.addDate(dueDate, event.end).getTime()) ||
         extras.isContactDeceased(c) ||
-        extras.isContactMuted(c)
-        );
+        extras.isContactMuted(c);
       return isResolved;
   },
 },
