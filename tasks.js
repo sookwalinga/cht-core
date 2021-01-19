@@ -255,7 +255,7 @@ module.exports = [
     },
   },
 
-  //pregnancy counselling visit
+  //Pregnancy counselling visit
 {
   name: 'pregnancy_counselling_visit',
   icon: 'follow-up',
@@ -263,9 +263,10 @@ module.exports = [
   appliesTo: 'reports',
   appliesIf: function (c) {
     console.log('inside counselling task'); 
-    return extras.isCurrentlyPregnant(c) &&
-          (extras.isHighRiskPregnancy(c) ||
-           extras.isHighRiskPregnancyML(c));
+    return extras.countPregnancyCounsellingVisits(c) < 3
+          && extras.isCurrentlyPregnant(c)
+          && (extras.isHighRiskPregnancy(c) 
+          || extras.isHighRiskPregnancyML(c));
   },
   appliesToType: ['pregnancy','pregnancy_counselling'],
   actions: [{

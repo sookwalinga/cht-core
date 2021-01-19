@@ -1118,6 +1118,17 @@ module.exports = {
     return data;
   },
 
+  countPregnancyCounsellingVisits: function(c){ 
+    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    var counsellingVisits = c.reports.filter(function (r) {
+      return r.form === 'pregnancy_counselling' 
+      && r.reported_date >= recentConsentReportDate;
+    });
+    console.log('Visit count ' + counsellingVisits.length.toString());
+    return counsellingVisits.length;
+  },
+ 
+
   shouldStopCounselling: function (c) {
     console.log(c); 
      console.log('Inside counselling'); 
