@@ -20,12 +20,9 @@ module.exports = {
 
   isEnrolledInML: function(){  
     if(contact && contact.parent && contact.parent.parent)
-    { 
-     // console.log('inside enrolled ml'); 
+    {  
       return isCatchmentInML(contact.parent.parent._id); 
-    // return true;
-    }
-   
+    } 
   },
 
   getVisitCount: function () {
