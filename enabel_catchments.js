@@ -1023,11 +1023,11 @@ var data={
     'f7fc7b1c-83e9-52ce-b36f-2b8e002fbba0': 'north_a_kidoti',
     'c7b24769-693d-56a3-b0e3-4a8580b9e9ee': 'north_a_gamba'
   }
-}
+};
 
   function getShehiaData(uuid){
      var key=data.productionCatchments[uuid]||data.darasaCatchments[uuid];
-     if(!key){ console.error("uuid "+uuid+" is not in selected catchment areas list for enabel project");return; }
+     if(!key){ console.error('uuid'+uuid+ 'is not in selected catchment areas list for enabel projec');return; }
      var shehia=data.shehiaValues[key];
        return shehia?shehia:key.match('north_a')?data.forMissingValue.north_a:data.forMissingValue.north_b;
   }
