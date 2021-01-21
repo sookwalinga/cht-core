@@ -8,6 +8,8 @@ var data={
       avg_trans_received: 42912.73417,
       population_2002: 3019,
       population_2012: 2739,
+      district: 'kaskazini b',
+      shehia: 'donge mtambile',
       status: 'Rural Ward'
     },
     north_a_kivunge: {
@@ -18,6 +20,8 @@ var data={
       avg_trans_received: 50629.89853,
       population_2002: 3343,
       population_2012: 4199,
+      district: 'kaskazini a',
+      shehia: 'kivunge',
       status: 'Rural Ward'
     },
     north_a_banda_maji: {
@@ -28,6 +32,8 @@ var data={
       avg_trans_received: 9198807.889,
       population_2002: 990,
       population_2012: 1616,
+      district: 'kaskazini a',
+      shehia: 'banda maji',
       status: 'Rural Ward'
     },
     north_a_pita_nazako: {
@@ -38,6 +44,8 @@ var data={
       avg_trans_received: 50629.8987,
       population_2002: 3034,
       population_2012: 4027,
+      district: 'kaskazini a',
+      shehia: 'pita nazako',
       status: 'Rural Ward'
     },
     north_a_chaani_kubwa: {
@@ -48,6 +56,8 @@ var data={
       avg_trans_received: 8974050.765,
       population_2002: 3391,
       population_2012: 3030,
+      district: 'kaskazini a',
+      shehia: 'chaani kubwa',
       status: 'Rural Ward'
     },
     north_a_kibeni: {
@@ -58,6 +68,8 @@ var data={
       avg_trans_received: 50629.89853,
       population_2002: 2299,
       population_2012: 2799,
+      district: 'kaskazini a',
+      shehia: 'kibeni',
       status: 'Rural Ward'
     },
     north_b_donge_mbiji: {
@@ -68,6 +80,8 @@ var data={
       avg_trans_received: 49842.71869,
       population_2002: 1336,
       population_2012: 2447,
+      district: 'kaskazini b',
+      shehia: 'donge mbiji',
       status: 'Rural Ward'
     },
     north_a_kinyasini: {
@@ -78,6 +92,8 @@ var data={
       avg_trans_received: 9198759.316,
       population_2002: 3669,
       population_2012: 3311,
+      district: 'kaskazini a',
+      shehia: 'kinyasini',
       status: 'Rural Ward'
     },
     north_a_moga: {
@@ -88,6 +104,8 @@ var data={
       avg_trans_received: 50629.89853,
       population_2002: 1608,
       population_2012: 2089,
+      district: 'kaskazini a',
+      shehia: 'moga',
       status: 'Rural Ward'
     },
     north_a_gamba: {
@@ -98,6 +116,8 @@ var data={
       avg_trans_received: 50629.89853,
       population_2002: 3375,
       population_2012: 3401,
+      district: 'kaskazini a',
+      shehia: 'gamba',
       status: 'Mixed Ward'
     },
     north_b_muwanda: {
@@ -108,6 +128,8 @@ var data={
       avg_trans_received: 42912.73414,
       population_2002: 482,
       population_2012: 950,
+      district: 'kaskazini b',
+      shehia: 'muwanda',
       status: 'Rural Ward'
     },
     north_a_mkokotoni: {
@@ -118,6 +140,8 @@ var data={
       avg_trans_received: 50629.89948,
       population_2002: 2378,
       population_2012: 2803,
+      district: 'kaskazini a',
+      shehia: 'mkokotoni',
       status: 'Mixed Ward'
     },
     north_a_mto_wa_pwani: {
@@ -128,6 +152,8 @@ var data={
       avg_trans_received: 48149.18487,
       population_2002: 581,
       population_2012: 1074,
+      district: 'kaskazini a',
+      shehia: 'mto wa pwani',
       status: 'Rural Ward'
     },
     north_a_t_jongowe: {
@@ -138,6 +164,8 @@ var data={
       avg_trans_received: 50629.89893,
       population_2002: 2663,
       population_2012: 3262,
+      district: 'kaskazini a',
+      shehia: 't/jongowe',
       status: 'Rural Ward'
     },
     north_b_fujoni: {
@@ -148,6 +176,8 @@ var data={
       avg_trans_received: 297000.2258,
       population_2002: 1896,
       population_2012: 3147,
+      district: 'kaskazini b',
+      shehia: 'fujoni',
       status: 'Rural Ward'
     },
     north_b_mahonda: {
@@ -158,6 +188,8 @@ var data={
       avg_trans_received: 115057.9498,
       population_2002: 5158,
       population_2012: 4322,
+      district: 'kaskazini b',
+      shehia: 'mahonda',
       status: 'Mixed Ward'
     },
     north_a_chaani_masingini: {
@@ -168,6 +200,8 @@ var data={
       avg_trans_received: 1615083.895,
       population_2002: 3244,
       population_2012: 4562,
+      district: 'kaskazini a',
+      shehia: 'chaani masingini',
       status: 'Rural Ward'
     },
     north_b_donge_mchangani: {
@@ -178,6 +212,8 @@ var data={
       avg_trans_received: 42912.73418,
       population_2002: 1924,
       population_2012: 2917,
+      district: 'kaskazini b',
+      shehia: 'donge mchangani',
       status: 'Rural Ward'
     },
     north_b_mgambo: {
@@ -188,6 +224,8 @@ var data={
       avg_trans_received: 8025720.268,
       population_2002: 1764,
       population_2012: 2799,
+      district: 'kaskazini b',
+      shehia: 'mgambo',
       status: 'Rural Ward'
     },
     north_a_fukuchani: {
@@ -198,6 +236,8 @@ var data={
       avg_trans_received: 50629.89866,
       population_2002: 2247,
       population_2012: 2208,
+      district: 'kaskazini a',
+      shehia: 'fukuchani',
       status: 'Rural Ward'
     },
     north_b_zingwe_zingwe: {
@@ -208,6 +248,8 @@ var data={
       avg_trans_received: 171296.1259,
       population_2002: 512,
       population_2012: 745,
+      district: 'kaskazini b',
+      shehia: 'zingwe zingwe',
       status: ''
     },
     north_b_donge_karange: {
@@ -218,6 +260,8 @@ var data={
       avg_trans_received: 3437460.482,
       population_2002: 1281,
       population_2012: 1826,
+      district: 'kaskazini b',
+      shehia: 'donge karange',
       status: 'Rural Ward'
     },
     north_b_kinduni: {
@@ -228,6 +272,8 @@ var data={
       avg_trans_received: 115057.9498,
       population_2002: 1477,
       population_2012: 2616,
+      district: 'kaskazini b',
+      shehia: 'kinduni',
       status: 'Rural Ward'
     },
     north_b_kitope: {
@@ -238,6 +284,8 @@ var data={
       avg_trans_received: 344216.6122,
       population_2002: 4432,
       population_2012: 5582,
+      district: 'kaskazini b',
+      shehia: 'kitope',
       status: 'Rural Ward'
     },
     north_b_b_misufini: {
@@ -248,6 +296,8 @@ var data={
       avg_trans_received: 110394.1861,
       population_2002: 7637,
       population_2012: 7986,
+      district: 'kaskazini b',
+      shehia: 'b/misufini',
       status: 'Rural Ward'
     },
     north_a_pwani_mchangani: {
@@ -258,6 +308,8 @@ var data={
       avg_trans_received: 3160259.589,
       population_2002: 2204,
       population_2012: 3441,
+      district: 'kaskazini a',
+      shehia: 'pwani mchangani',
       status: 'Rural Ward'
     },
     north_a_kijini: {
@@ -268,6 +320,8 @@ var data={
       avg_trans_received: 43230.42034,
       population_2002: 2641,
       population_2012: 3369,
+      district: 'kaskazini a',
+      shehia: 'kijini',
       status: 'Rural Ward'
     },
     north_b_upenja: {
@@ -278,6 +332,8 @@ var data={
       avg_trans_received: 5033844.601,
       population_2002: 1269,
       population_2012: 1978,
+      district: 'kaskazini b',
+      shehia: 'upenja',
       status: 'Rural Ward'
     },
     north_a_nungwi: {
@@ -288,6 +344,8 @@ var data={
       avg_trans_received: 211113.8503,
       population_2002: 7893,
       population_2012: 10392,
+      district: 'kaskazini a',
+      shehia: 'nungwi',
       status: ''
     },
     north_a_kidoti: {
@@ -298,16 +356,20 @@ var data={
       avg_trans_received: 192800.7886,
       population_2002: 2983,
       population_2012: 2973,
+      district: 'kaskazini a',
+      shehia: 'kidoti',
       status: 'Rural Ward'
     }
   },
-  forMissingValue: {
+  missingValueReplacement: {
     north_a: {
       home_ct: 22.21437341,
       avg_trans_sent: 85652.02988,
       avg_contacts: 16.93298969,
       avg_sent_overall_trans: 0.284041355,
       avg_trans_received: 50629.89853,
+      district: 'kaskazini a',
+      shehia: '----',
       population_2002: 2855.470588235294,
       population_2012: 3444.470588235294
     },
@@ -317,6 +379,8 @@ var data={
       avg_contacts: 15.32211743,
       avg_sent_overall_trans: 0.265313311,
       avg_trans_received: 49842.718689999994,
+      district: 'kaskazini b',
+      shehia: '----',
       population_2002: 2475.923076923077,
       population_2012: 3081.076923076923
     }

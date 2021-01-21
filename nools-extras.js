@@ -1348,7 +1348,6 @@ isHighRiskPregnancyML: function (c) {
         0,  //driver arranged in advance (No match)
         this.getHIVStatus(c),   // getHIVStatus()
         0, //partner permission (No match)
-        0, //Outcome variable 
         // getMostRecentPregnancyConsentDate() , prevMiscarriage(), 
         this.getMostRecentPregnancyConsentDate(c),
         this.getPrevMiscarrige(c),
