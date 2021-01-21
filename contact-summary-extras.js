@@ -1,4 +1,4 @@
-var isCatchmentInML=require('./catchments.js').isCatchmentInML;
+var isCatchmentInML=require('./enabel_catchments').isCatchmentInML;
 let mitigationSet = new Set(); 
 let manual_high_risk = false; 
 let riskFactorNames = []; 
@@ -19,10 +19,10 @@ module.exports = {
   },
 
   isEnrolledInML: function(){  
-    if(contact && contact.parent && contact.parent.parent && contact.parent.parent.parent)
+    if(contact && contact.parent && contact.parent.parent)
     { 
      // console.log('inside enrolled ml'); 
-      return isCatchmentInML(contact.parent.parent.parent._id); 
+      return isCatchmentInML(contact.parent.parent._id); 
     // return true;
     }
    

@@ -1,5 +1,5 @@
 var RandomForestClassifier = require('./model-min.js');
-var getShehiaData = require('./catchments.js').getShehiaData;
+var getShehiaData = require('./enabel_catchments.js').getShehiaData;
 module.exports = {
 
   day: 1,
@@ -1130,7 +1130,6 @@ module.exports = {
  
 
   shouldStopCounselling: function (c) {
-    console.log(c); 
      console.log('Inside counselling'); 
     var reportsFound = [];
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
