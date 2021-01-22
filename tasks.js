@@ -299,7 +299,7 @@ module.exports = [
         return Utils.addDate(new Date(report.reported_date), days);
       },
       start: 14,
-      end: 14,
+      end: 42,
     }
   ],
   priority: {
