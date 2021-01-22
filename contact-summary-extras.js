@@ -345,7 +345,7 @@ module.exports = {
           if(hasPerinealTear){ 
             riskFactors.push('large_perineal_tear');
             riskFactorNames.push('Large perineal tear (close to anus)');
-            riskFactorSwahiliNames.push('Previous PregnanciesKuchanika njia ya uzazi(karibia ya njia ya choo kikubwa)'); 
+            riskFactorSwahiliNames.push('Kuchanika njia ya uzazi(karibia ya njia ya choo kikubwa)'); 
             mitigationSet.add('facility_delivery');
           } 
             
@@ -424,7 +424,7 @@ module.exports = {
         if(report.fields.rch_card.big_baby === 'yes'){ 
           riskFactors.push('big_baby'); 
           riskFactorNames.push('Big baby in previous or current (more than 4 kg)');
-          riskFactorSwahiliNames.push('Big baby in previous or current (more than 4 kg)'); 
+          riskFactorSwahiliNames.push('Kujifungua mtoto mkubwa ( zaidi ya kilo 4) (mimba hii au kabla)'); 
           mitigationSet.add('facility_delivery');
         }
           
