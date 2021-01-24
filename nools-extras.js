@@ -995,7 +995,6 @@ module.exports = {
   },
 
   getHIVStatus: function (c) {
-    console.log('Inside HIV function');
     var hiv_status = false;
     var reportsFound = [];
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
@@ -1036,7 +1035,6 @@ module.exports = {
         prevMiscarriage = report.fields.pregnant_woman_information.previous_miscarriages;
       }
     }
-    console.log('Previous Miscarriage ' + prevMiscarriage);
     return prevMiscarriage;
   },
 
@@ -1069,7 +1067,6 @@ module.exports = {
 
   getPrevDeliveryLocation: function (c) {
     var reportsFound = [];
-    var prevDeliveryLocation = '';
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
@@ -1081,11 +1078,9 @@ module.exports = {
       });
       if (reportsFound.length > 0) {
         var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-        prevDeliveryLocation = report.fields.facility_delivery_importance.delivery_location;
+        return report.fields.facility_delivery_importance.delivery_location;
       }
     }
-    console.log('Prev delivery location ' + prevDeliveryLocation);
-    return prevDeliveryLocation;
   },
 
   getHouseInfo: function (c, property) {
@@ -1211,7 +1206,7 @@ module.exports = {
         var hasRetainedPlacenta = deliveryComplications.includes('retained_placenta'); 
         var hasAPH = deliveryComplications.includes('aph'); 
         var hasPostpartumHemorrage = deliveryComplications.includes('postpartum_hemorrage'); 
-        var hasEnclampsia = deliveryComplications.includes('enclampsia'); 
+        var hasEclampsia = deliveryComplications.includes('eclampsia'); 
         var hasBigBaby = deliveryComplications.includes('big_baby'); 
         if(hasProlongedLabor){ 
          return true; 
@@ -1233,7 +1228,7 @@ module.exports = {
            return true; 
         }
            
-        if(hasEnclampsia){
+        if(hasEclampsia){
            return true; 
         }
           
@@ -1318,11 +1313,125 @@ module.exports = {
      return false; 
 },
 
+getBreechCondition(c) { 
+  var reportsFound = [];
+  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  if (c && c.reports) {
+    reportsFound = c.reports.filter(function (r) {
+      return r.form === 'pregnancy' &&
+        r.reported_date >= recentConsentReportDate &&
+        r.fields &&
+        r.fields.rch_card &&
+        r.fields.rch_card.breech_position;
+    });
+    if (reportsFound.length > 0) {
+      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      return report.fields.rch_card.breech_position;
+    }
+  }
+},
+
+getMedicalCondition(c,condition) { 
+  let reportsFound = [];
+  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  if (c && c.reports) {
+    reportsFound = c.reports.filter(function (r) {
+      return r.form === 'pregnancy' &&
+        r.reported_date >= recentConsentReportDate &&
+        r.fields &&
+        r.fields.rch_card &&
+        r.fields.rch_card.medical_condition;
+    });
+    if (reportsFound.length > 0) {
+      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      console.log('Inside medical condition for ' + c.contact.first_name + ' condition ' + condition);
+      return report.fields.rch_card.medical_condition.toString().includes(condition);
+     
+    }
+  }
+},
+
+getDeliveryComplication(c,complication) { 
+  let reportsFound = [];
+  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  if (c && c.reports) {
+    reportsFound = c.reports.filter(function (r) {
+      return r.form === 'pregnancy' &&
+        r.reported_date >= recentConsentReportDate &&
+        r.fields &&
+        r.fields.pregnant_woman_information &&
+        r.fields.pregnant_woman_information.delivery_complications;
+    });
+    if (reportsFound.length > 0) {
+      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      console.log('Inside complication for ' + c.contact.first_name + ' complication ' + complication);
+      return report.fields.pregnant_woman_information.delivery_complications.toString().includes(complication);
+    }
+  }
+},
+
+getStillBirth(c) { 
+  let reportsFound = [];
+  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  if (c && c.reports) {
+    reportsFound = c.reports.filter(function (r) {
+      return r.form === 'pregnancy' &&
+        r.reported_date >= recentConsentReportDate &&
+        r.fields &&
+        r.fields.pregnant_woman_information &&
+        r.fields.pregnant_woman_information.previous_stillbirth;
+    });
+    if (reportsFound.length > 0) {
+      console.log('Inside stillbirth for ' + c.contact.first_name);
+      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      return report.fields.pregnant_woman_information.previous_stillbirth;
+    }
+  } 
+},
+
+getPartnerPermission(c) { 
+  let reportsFound = [];
+  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  if (c && c.reports) {
+    reportsFound = c.reports.filter(function (r) {
+      return r.form === 'pregnancy' &&
+        r.reported_date >= recentConsentReportDate &&
+        r.fields &&
+        r.fields.facility_delivery_importance &&
+        r.fields.facility_delivery_importance.allow_partner_to_deliver_facility;
+    });
+    if (reportsFound.length > 0) {
+      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      return report.fields.facility_delivery_importance.allow_partner_to_deliver_facility === 'yes';
+    }
+  } 
+},
+
+getDeliveryMethod(c,deliveryMethod) { 
+  var reportsFound = [];
+  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  if (c && c.reports) {
+    reportsFound = c.reports.filter(function (r) {
+      return r.form === 'pregnancy' &&
+        r.reported_date >= recentConsentReportDate &&
+        r.fields &&
+        r.fields.pregnant_woman_information &&
+         (r.fields.pregnant_woman_information.previous_delivery_by_vacuum
+        || r.fields.pregnant_woman_information.previous_delivery_by_c_section); 
+    });
+    if (reportsFound.length > 0) {
+      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      return deliveryMethod==='vacuum'
+          ?report.fields.pregnant_woman_information.previous_delivery_by_vacuum
+          :report.fields.pregnant_woman_information.previous_delivery_by_c_section; 
+    }
+  }
+},
+
 isHighRiskPregnancyML: function (c) {
+      console.log('Inside high risk pregnancy ML'); 
       var data = getShehiaData(c.contact.meta.created_by_place_uuid);
-      console.log('Data is ' + JSON.stringify(data));
       if (data.shehia === '') {
-        console.log('No catchment area found');
         return;
       }
       var shehia = data.shehia;
@@ -1341,32 +1450,29 @@ isHighRiskPregnancyML: function (c) {
       var homeElectricity = this.getHouseInfo(c, 'home_electricity');
       var floorMaterial = this.getHouseInfo(c, 'floor_material');
       var roofMaterial = this.getHouseInfo(c, 'roof_material');
-      //console.log('water source ' + this.getWaterSource(c)); 
       var inputData = [
-
-        this.getPregnantWomanAge(c),  //getPregnantWomanAge()
+        this.getPregnantWomanAge(c)?1:0,  //getPregnantWomanAge()
         0,  //driver arranged in advance (No match)
-        this.getHIVStatus(c),   // getHIVStatus()
-        0, //partner permission (No match)
-        // getMostRecentPregnancyConsentDate() , prevMiscarriage(), 
-        this.getMostRecentPregnancyConsentDate(c),
-        this.getPrevMiscarrige(c),
-        0, //Breech ( No match)
-        0, //Cardiac disease (No match) 
-        0, // Diabetes (no match ) 
-        0, //High bp ( No match) 
+        this.getHIVStatus(c)?1:0,   // getHIVStatus()
+        this.getPartnerPermission(c)?1:0, //partner permission (No match)
+        this.getMostRecentPregnancyConsentDate(c)?1:0, // getMostRecentPregnancyConsentDate() ,
+        this.getPrevMiscarrige(c)?1:0,     // prevMiscarriage(), 
+        this.getBreechCondition(c)?1:0, //Breech (No match)
+        this.getMedicalCondition(c,'cardiac_disease')?1:0, //Cardiac disease (No match) 
+        this.getMedicalCondition(c,'diabetes')?1:0, // Diabetes (no match ) 
+        this.getMedicalCondition(c,'high_blood_pressure')?1:0, //High bp ( No match) 
         0,//Macrosomia (no match) 
-        this.getPreviousDeliveries(),// getPrevDeliveries()
-        0, //previous_eclampsia (no match) 
-        0, //previous_perineal_tear (no match) 
+        this.getPreviousDeliveries(c)?1:0,// getPrevDeliveries()
+        this.getDeliveryComplication(c,'eclampsia')?1:0, //previous_eclampsia (no match) 
+        this.getDeliveryComplication(c,'large_perineal_tear')?1:0, //previous_perineal_tear (no match) 
         0,//previous_placenta_previa (no match)
-        0,//previous_pph (no match) 
-        0,//previous_prolonged_labor (no match) 
-        0, //previous_retained_placenta (no match) 
-        0, //previous_vacuum (no match) 
-        0,//prior_c_section (no match) 
-        0, //sickle_cell (no match) 
-        0, //TO DO: Calculate stillbirth
+        this.getDeliveryComplication(c,'postpartum_hemorrage')?1:0,//previous_pph (no match) 
+        this.getDeliveryComplication(c,'prolonged_labor')?1:0,//previous_prolonged_labor (no match) 
+        this.getDeliveryComplication(c,'retained_placenta')?1:0, //previous_retained_placenta (no match)
+        this.getDeliveryMethod(c,'vacuum')?1:0, //previous_vacuum (no match) 
+        this.getDeliveryMethod(c)?1:0,//prior_c_section (no match) 
+        this.getMedicalCondition(c,'sickle_cell')?1:0, //sickle_cell (no match) 
+        this.getStillBirth(c)?1:0, // previous stillbirth
         home_ct, //home_ct 
         0, // Twins (No match) 
         avg_trans_sent,//avg_trans_sent 
@@ -1597,7 +1703,6 @@ isHighRiskPregnancyML: function (c) {
       ];
       var model = new RandomForestClassifier();
       var result = model.predict(inputData);
-      console.log('ML prediction is ' + result);
       return result;
     }
   };

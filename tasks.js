@@ -258,7 +258,7 @@ module.exports = [
   //Pregnancy counselling visit
 {
   name: 'pregnancy_counselling_visit',
-  icon: 'follow-up',
+  icon: 'counselling',
   title: 'task.pregnancy_counselling_visit',
   appliesTo: 'reports',
   appliesIf: function (c) {
