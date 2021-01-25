@@ -693,41 +693,41 @@
       <bind nodeset="/peer_mentor_checklist/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
       <bind nodeset="/peer_mentor_checklist/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/peer_mentor_checklist/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/chv_first_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_first_name:jr:constraintMsg')"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/chv_middle_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_middle_name:jr:constraintMsg')"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/chv_last_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg')"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/phone" type="string" constraint="regex(.,'^0[0-9]{9}$')" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/phone:jr:constraintMsg')"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/shehia" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg')"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_first_name" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_first_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_middle_name" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_middle_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_last_name" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/phone" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/phone:jr:constraintMsg')" required="true()" constraint="regex(.,'^0[0-9]{9}$')"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/shehia" type="string" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
       <bind nodeset="/peer_mentor_checklist/section_1/phone_usage" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/phone_usage_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/phone_usage ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/phone_usage_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_1/phone_usage ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_1/balance_check" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/balance_check_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/balance_check ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/balance_check_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_1/balance_check ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_1/app_navigation" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/app_navigation_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/app_navigation ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/app_navigation_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_1/app_navigation ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_1/data_toggle" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/data_toggle_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/data_toggle ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/data_toggle_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_1/data_toggle ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_1/bango_kitita_usage" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/bango_kitita_usage_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/bango_kitita_usage ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/bango_kitita_usage_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_1/bango_kitita_usage ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_1/solar_charging" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_1/solar_charging_reason" type="string" relevant="selected( /peer_mentor_checklist/section_1/solar_charging ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_1/solar_charging_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_1/solar_charging ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_2/boundary_identification" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/boundary_identification_reason" type="string" relevant="selected( /peer_mentor_checklist/section_2/boundary_identification ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/boundary_identification_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_2/boundary_identification ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_2/communication" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/communication_reason" type="string" relevant="selected( /peer_mentor_checklist/section_2/communication ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/communication_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_2/communication ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_2/meet_enrollment_target" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_2/meet_enrollment_target_reason" type="string" relevant="selected( /peer_mentor_checklist/section_2/meet_enrollment_target ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_2/meet_enrollment_target_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_2/meet_enrollment_target ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_3/chv_introduction" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/chv_introduction_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/chv_introduction ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/chv_introduction_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_3/chv_introduction ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_3/ask_consent" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/ask_consent_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/ask_consent ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/ask_consent_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_3/ask_consent ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/fluent_conversation ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_3/fluent_conversation ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns" type="select1" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns_reason" type="string" relevant="selected( /peer_mentor_checklist/section_3/answer_concerns ,&quot;no&quot;)" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/comments/chv_support_options" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/comments/chv_support_options:jr:constraintMsg')"/>
-      <bind nodeset="/peer_mentor_checklist/comments/tech_team_support" type="string" relevant="selected(../chv_support_options ,&quot;tech_team&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/comments/chmt_support" type="string" relevant="selected(../chv_support_options ,&quot;chmt&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))" required="true()"/>
-      <bind nodeset="/peer_mentor_checklist/comments/supervisor_support" type="string" relevant="selected(../chv_support_options ,&quot;supervisor&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))" required="true()"/>
+      <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_3/answer_concerns ,&quot;no&quot;)"/>
+      <bind nodeset="/peer_mentor_checklist/comments/chv_support_options" type="select" jr:constraintMsg="jr:itext('/peer_mentor_checklist/comments/chv_support_options:jr:constraintMsg')" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/peer_mentor_checklist/comments/tech_team_support" type="string" required="true()" relevant="selected(../chv_support_options ,&quot;tech_team&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))"/>
+      <bind nodeset="/peer_mentor_checklist/comments/chmt_support" type="string" required="true()" relevant="selected(../chv_support_options ,&quot;chmt&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))"/>
+      <bind nodeset="/peer_mentor_checklist/comments/supervisor_support" type="string" required="true()" relevant="selected(../chv_support_options ,&quot;supervisor&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))"/>
       <bind nodeset="/peer_mentor_checklist/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
