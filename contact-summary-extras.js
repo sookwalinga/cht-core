@@ -330,8 +330,6 @@ module.exports = {
   getRiskFactorLabels: function(lang){ 
      return riskFactors.map(b=>b.label[lang==='sw'?1:0])
             .join(', ');
-  }
-
-
+ }
 };
 
