@@ -2,8 +2,6 @@ var isCatchmentInML=require('./enabel_catchments').isCatchmentInML;
 let risksMap=require('./pregnancy_risk_factors.json');
 let riskFactors = [];
 
-
-
 function get(obj,field){
    if(!obj){return;}
    let parts=field.split('.');
@@ -181,7 +179,6 @@ module.exports = {
     if (totalVisitsThisPregnancy === 1)
       return true;
     return false;
-
   },
 
   getRecentANCCountForThisPregnancy: function () {
@@ -285,38 +282,44 @@ module.exports = {
     return isMuted;
   },
 
-
   getPregnancyRiskFactors: function () {
     let report = this.getRecentPregnancyReport() || {};
+    let deliveryComplications=get(report, 'fields.pregnant_woman_information.delivery_complications') || '';
+    let medicalConditions=get(report, 'fields.rch_card.medical_conditions') || ''
+    (deliveryComplications+' '+medicalConditions)
+    .split(' ')
+    .forEach(field=>{
+      if (field && risksMap[field]) {
+        riskFactors.push(risksMap[field]);
+      }});
     let pregInfo = get(report, 'fields.pregnant_woman_information') || {};
     let rchCard = get(report, 'fields.rch_card') || {};
     let maternalNutrition = get(report, 'fields.maternal_nutrition') || {};
     let facilityDeliveryImportance = get(report, 'report.fields.facility_delivery_importance') || {};
-
-    let selectFields=(get(report,'fields.pregnant_woman_information.delivery_complications')||'')
-                     +' '+(get(report,'fields.rch_card.medical_conditions')||'');
-    for(let field of selectFields.split(' ')){if(field&&risksMap[field]) riskFactors.push(risksMap[field]);}
-
     for (let field of Object.keys(risksMap)) {
-        risksMap[field].risk_name=field;
-        if(pregInfo[field]&&(pregInfo[field] === 'yes'
-              || field === 'previous_pregnancies' && pregInfo[field] > 5
-              || field === 'previous_miscarriages' && pregInfo[field] > 0)) 
-             { riskFactors.push(risksMap[field]); }
-              
-            if(maternalNutrition[field]
-              &&field === 'nutrition_restrictions' && maternalNutrition[field] === 'yes')  
-            { riskFactors.push(risksMap[field]); }
-    
-            if(facilityDeliveryImportance[field] 
-                && field==='allow_partner_to_deliver_facility'
-                &&facilityDeliveryImportance[field] === 'no')
-            { riskFactors.push(risksMap[field]); }
-
-            if(rchCard[field] && (rchCard[field] === 'yes')) 
-            { riskFactors.push(risksMap[field]); }
+      risksMap[field].risk_name = field;
+      if (pregInfo[field] 
+        && (pregInfo[field] === 'yes'
+        || (field === 'previous_pregnancies' && pregInfo[field] > 5)
+        || (field === 'previous_miscarriages' && pregInfo[field] > 0))) {
+        riskFactors.push(risksMap[field]);
+      }
+      if(maternalNutrition[field]
+        && field === 'nutrition_restrictions' 
+        && maternalNutrition[field] === 'yes') {
+        riskFactors.push(risksMap[field]);
+      }
+      if (facilityDeliveryImportance[field]
+        && field === 'allow_partner_to_deliver_facility'
+        && facilityDeliveryImportance[field] === 'no') {
+        riskFactors.push(risksMap[field]);
+      }
+      if (rchCard[field] 
+        && (rchCard[field] === 'yes')) {
+        riskFactors.push(risksMap[field]);
+      }
     }
-    return riskFactors.map(d=>d.risk_name);
+    return riskFactors.map(d => d.risk_name);
   }, 
 
   isHighRiskPregnancy: function(){   
