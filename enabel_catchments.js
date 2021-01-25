@@ -804,7 +804,7 @@ var data={
 
   function getShehiaData(uuid){
      var key=data.productionCatchments[uuid]||data.darasaCatchments[uuid];
-     if(!key){ console.error('uuid'+uuid+ 'is not in selected catchment areas list for enabel projec');return; }
+     if(!key){ return; }
      var shehia=data.shehiaValues[key];
        return shehia?shehia:key.match('north_a')?data.forMissingValue.north_a:data.forMissingValue.north_b;
   }
@@ -812,7 +812,6 @@ var data={
   function isCatchmentInML(uuid) { 
     if(!uuid){return false;}
      var key=data.productionCatchments[uuid]||data.darasaCatchments[uuid];
-    console.log('Is UUID available? ' + key);   
     return key?true:false;
   }
 
