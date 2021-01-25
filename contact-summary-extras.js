@@ -298,24 +298,24 @@ module.exports = {
     let facilityDeliveryImportance = get(report, 'report.fields.facility_delivery_importance') || {};
     for (let field of Object.keys(risksMap)) {
       risksMap[field].risk_name = field;
-      if (pregInfo[field] 
-        && (pregInfo[field] === 'yes'
-        || (field === 'previous_pregnancies' && pregInfo[field] > 5)
-        || (field === 'previous_miscarriages' && pregInfo[field] > 0))) {
+      if (pregInfo[field] &&
+         (pregInfo[field] === 'yes' ||
+         (field === 'previous_pregnancies' && pregInfo[field] > 5) ||
+         (field === 'previous_miscarriages' && pregInfo[field] > 0))) {
         riskFactors.push(risksMap[field]);
       }
-      if(maternalNutrition[field]
-        && field === 'nutrition_restrictions' 
-        && maternalNutrition[field] === 'yes') {
+      if(maternalNutrition[field]&& 
+        field === 'nutrition_restrictions'&&
+        maternalNutrition[field] === 'yes') {
         riskFactors.push(risksMap[field]);
       }
-      if (facilityDeliveryImportance[field]
-        && field === 'allow_partner_to_deliver_facility'
-        && facilityDeliveryImportance[field] === 'no') {
+      if (facilityDeliveryImportance[field]&&
+         field === 'allow_partner_to_deliver_facility'&&
+         facilityDeliveryImportance[field] === 'no') {
         riskFactors.push(risksMap[field]);
       }
-      if (rchCard[field] 
-        && (rchCard[field] === 'yes')) {
+      if (rchCard[field]&&
+         (rchCard[field] === 'yes')) {
         riskFactors.push(risksMap[field]);
       }
     }
