@@ -1,3 +1,4 @@
+const enabel = require('./enabel_catchments.js');
 var extras = require('./nools-extras.js');
 module.exports = [
 
@@ -83,12 +84,10 @@ module.exports = [
     title: 'task.pregnancy_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-     console.log('danger sign in pregnancy ' +  (extras.getPregnancyEmergencyDangerSigns(r) === '1')); 
-     console.log('PI in pregnancy' +  (extras.getPregnancyIssues(r) === '1')); 
-     console.log('PC in pregnancy' +  (extras.getPregnancyComplications(r) === '1'));
-      return extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-        extras.getANCVisitAfter6MonthsFlag(r) === '1';
+      if(r.fields.referral_original_source_form === 'pregnancy' || r.form === 'pregnancy')
+        return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+          extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
+          extras.getANCVisitAfter6MonthsFlag(r) === '1';
     },
     appliesToType: ['referral_follow_up', 'pregnancy'],
     actions: [{
@@ -133,10 +132,6 @@ module.exports = [
       label: 'task.referral.high_priority'
     },
     resolvedIf: function (c, r) {
-      console.log('visit again in pregnancy ' + (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)));
-      console.log('form submitted for source in pregnancy ' +   extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id));  
-      console.log('contact deceased in pregnancy ' + extras.isContactDeceased(c)); 
-      console.log('contact muted in pregnancy' +  extras.isContactMuted(c)); 
       return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
         extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
         extras.isContactDeceased(c) ||
@@ -151,12 +146,8 @@ module.exports = [
     title: 'task.pregnancy_counselling_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-     console.log('danger sign in counselling referral ' +  (extras.getPregnancyEmergencyDangerSigns(r) === '1')); 
-     console.log('PI in counselling referral' +  (extras.getPregnancyIssues(r) === '1')); 
-     console.log('PC in counselling referral' +  (extras.getPregnancyComplications(r) === '1'));
-
-      // return true; 
-      return extras.hasReferral(r, 'pregnancy_counselling') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+     if(r.fields.referral_original_source_form === 'pregnancy_counselling' || r.form === 'pregnancy_counselling')
+      return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy_counselling') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
         extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1';
      },
     appliesToType: ['referral_follow_up', 'pregnancy_counselling'],
@@ -201,16 +192,10 @@ module.exports = [
       label: 'task.referral.high_priority'
     },
     resolvedIf: function (c, r) {
-      // console.log(c,r); 
-      console.log('visit again in counselling referral ' + (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)));
-      console.log('form submitted for source in counselling referral ' +   extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id));  
-      console.log('contact deceased in counselling referral' + extras.isContactDeceased(c)); 
-      console.log('contact muted in counselling referral ' +  extras.isContactMuted(c)); 
       return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
         extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
         extras.isContactDeceased(c) ||
         extras.isContactMuted(c);
-     // return false; 
     },
   },
 
@@ -271,16 +256,18 @@ module.exports = [
     },
   },
 
-  //pregnancy counselling visit
+  //Pregnancy counselling visit
 {
   name: 'pregnancy_counselling_visit',
-  icon: 'follow-up',
+  icon: 'counselling',
   title: 'task.pregnancy_counselling_visit',
   appliesTo: 'reports',
-  appliesIf: function (c, r) {
-    return  extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-      extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-      extras.isHighRiskPregnancyML(c) === '1';
+  appliesIf: function (c) {
+    if(!enabel.isCatchmentInML(c.contact.parent.parent._id)){return false;}
+    return extras.countPregnancyCounsellingVisits(c) < 3
+          && extras.isCurrentlyPregnant(c)
+          && (extras.isHighRiskPregnancy(c) 
+          || extras.isHighRiskPregnancyML(c));
   },
   appliesToType: ['pregnancy','pregnancy_counselling'],
   actions: [{
@@ -302,26 +289,28 @@ module.exports = [
       content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
       content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
       content.high_risk_ML = extras.isHighRiskPregnancyML(contact); 
+      content.gestation_in_weeks = extras.getCurrentGestationAge(contact); 
     }
   }],
   events: [
     {
       id: 'pregnancy_counselling_visit',
-      dueDate: function (event, contact, report) {
+      dueDate: function (event,c,report) {
         var days = 14;
         return Utils.addDate(new Date(report.reported_date), days);
       },
       start: 14,
-      end: 14,
+      end: 42,
     }
   ],
   priority: {
     level: 'high',
     label: 'task.pregnancy_counselling.high_priority'
   },
-  resolvedIf: function (c, r,event, dueDate) {
-      // Resolved if there is a form submitted within the time window
-      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_counselling',
+  resolvedIf: function (c,r,event, dueDate) {
+     var isResolved = extras.shouldStopCounselling(c)
+      || 
+        Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_counselling',
         Utils.addDate(dueDate, -event.start).getTime(),
         Utils.addDate(dueDate, event.end).getTime()) ||
         extras.isContactDeceased(c) ||
@@ -367,7 +356,6 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.getContactReportedDate(c);
-        content.risk_options = extras.multiSelectOptions(c); 
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
