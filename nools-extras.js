@@ -1,5 +1,5 @@
+var enabel = require('./enabel_catchments.js');
 var RandomForestClassifier = require('./model-min.js');
-var getShehiaData = require('./enabel_catchments.js').getShehiaData;
 module.exports = {
 
   day: 1,
@@ -1430,7 +1430,10 @@ getDeliveryMethod(c,deliveryMethod) {
 
 isHighRiskPregnancyML: function (c) {
       console.log('Inside high risk pregnancy ML'); 
-      var data = getShehiaData(c.contact.meta.created_by_place_uuid);
+      let catchmentId=c.contact.meta.created_by_place_uuid;
+      if(!enabel.isCatchmentInML(catchmentId)){return;}
+
+      var data = enabel.getShehiaData(catchmentId);
       if (data.shehia === '') {
         return;
       }
