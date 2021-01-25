@@ -21,7 +21,8 @@ CREATE MATERIALIZED VIEW useview_chv_sync AS
       FROM
         couchdb
       WHERE
-        f_cast_dtts(doc ->> 'latest_replication_date') >= (NOW() - INTERVAL '3 months')
+        doc ->> 'latest_replication_date' != 'unknown'
+        AND f_cast_dtts(doc ->> 'latest_replication_date') >= (NOW() - INTERVAL '3 months')
         AND doc->>'type' = 'info'
     ),
   clinic_cte AS 
