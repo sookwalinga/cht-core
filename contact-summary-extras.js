@@ -61,7 +61,6 @@ module.exports = {
   getContactHouseKitongoji: function () {
     if (contact && contact.parent && contact.parent.parent && contact.parent.parent.parent) {
       if (lineage[0] && lineage[0].kitongoji) {
-        console.log('inside kitongoji'); 
         return lineage[0].kitongoji;
       }
     }
@@ -324,7 +323,6 @@ module.exports = {
   }, 
 
   isHighRiskPregnancy: function(){   
-   console.log('Manual high risk is ' + riskFactors.length>0); 
    return riskFactors.length>0;
   },
 

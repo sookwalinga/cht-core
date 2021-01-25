@@ -781,9 +781,25 @@ var data={
     '1dbca160-1c30-5a02-9ede-cffb12aefd09': 'north_b_b_misufini',
     'caafa9ce-dcfe-54f4-b26d-f3555a4ef8e9': 'north_b_b_misufini'
   },
-  forMissingValue:{
-
-  }
+  forMissingValue: {
+    north_a: {
+      home_ct: 21.10553295,
+      avg_trans_sent: 72786.51095,
+      avg_contacts: 16.24964737,
+      avg_sent_overall_trans: 0.27572152899999997,
+      avg_trans_received: 50629.89853,
+      population_2002: 2855.470588235294,
+      population_2012: 3444.470588235294
+    },
+    north_b: {
+      home_ct: 54.9769558,
+      avg_trans_sent: 115755.9517,
+      avg_contacts: 15.32211743,
+      avg_sent_overall_trans: 0.265313311,
+      avg_trans_received: 49842.718689999994,
+      population_2002: 2475.923076923077,
+      population_2012: 3081.076923076923
+    }}
 };
 
   function getShehiaData(uuid){
@@ -794,6 +810,7 @@ var data={
   }
 
   function isCatchmentInML(uuid) { 
+    if(!uuid){return false;}
      var key=data.productionCatchments[uuid]||data.darasaCatchments[uuid];
     console.log('Is UUID available? ' + key);   
     return key?true:false;

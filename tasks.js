@@ -1,3 +1,4 @@
+const enabel = require('./enabel_catchments.js');
 var extras = require('./nools-extras.js');
 module.exports = [
 
@@ -262,7 +263,7 @@ module.exports = [
   title: 'task.pregnancy_counselling_visit',
   appliesTo: 'reports',
   appliesIf: function (c) {
-    console.log('inside counselling task'); 
+    if(!enabel.isCatchmentInML(c.contact.parent.parent._id)){return false;}
     return extras.countPregnancyCounsellingVisits(c) < 3
           && extras.isCurrentlyPregnant(c)
           && (extras.isHighRiskPregnancy(c) 

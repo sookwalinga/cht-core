@@ -226,7 +226,6 @@ module.exports = {
         return report.fields.has_postpartum_referral === 'true';
       }
       else if (referral_type === 'pregnancy_counselling') {
-        console.log('Inside pregnancy counselling');
         return report.fields.has_pregnancy_counselling_referral === 'true';
       }
     }
@@ -768,7 +767,6 @@ module.exports = {
       var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
       reportedDate = report.reported_date;
     }
-    console.log('Most recent pregnancy consent date ' + reportedDate);
     return reportedDate;
   },
 
@@ -990,7 +988,6 @@ module.exports = {
         ageInYears = report.fields.age_years;
       }
     }
-    console.log('Pregnant woman age ' + ageInYears);
     return ageInYears;
   },
 
@@ -1014,7 +1011,6 @@ module.exports = {
         });
       }
     }
-    console.log('HIV status ' + hiv_status);
     return hiv_status;
   },
 
@@ -1055,13 +1051,11 @@ module.exports = {
         prevPregnancies = report.fields.pregnant_woman_information.previous_pregnancies;
       }
     }
-    console.log('Previous pregnancies ' + prevPregnancies);
     return prevPregnancies;
   },
 
   getPreviousDeliveries: function (c) {
     var prevDeliveries = this.getPrevPregnancies(c) - this.getPrevMiscarrige(c);
-    console.log('Previous deliveries ' + prevDeliveries);
     return prevDeliveries;
   },
 
@@ -1119,13 +1113,11 @@ module.exports = {
       return r.form === 'pregnancy_counselling' 
       && r.reported_date >= recentConsentReportDate;
     });
-    console.log('Visit count ' + counsellingVisits.length.toString());
     return counsellingVisits.length;
   },
  
 
   shouldStopCounselling: function (c) {
-     console.log('Inside counselling'); 
     var reportsFound = [];
     var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
@@ -1147,7 +1139,6 @@ module.exports = {
       });
 
         if (reportsFound.length > 0) {
-          console.log('Inside reports found in should counselling visit'); 
           var report = Utils.getMostRecentReport(reportsFound, 'pregnancy_counselling');
           var hasReferral = report.fields.has_referral;
 
@@ -1344,7 +1335,6 @@ getMedicalCondition(c,condition) {
     });
     if (reportsFound.length > 0) {
       var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      console.log('Inside medical condition for ' + c.contact.first_name + ' condition ' + condition);
       return report.fields.rch_card.medical_condition.toString().includes(condition);
      
     }
@@ -1364,7 +1354,6 @@ getDeliveryComplication(c,complication) {
     });
     if (reportsFound.length > 0) {
       var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      console.log('Inside complication for ' + c.contact.first_name + ' complication ' + complication);
       return report.fields.pregnant_woman_information.delivery_complications.toString().includes(complication);
     }
   }
@@ -1382,7 +1371,6 @@ getStillBirth(c) {
         r.fields.pregnant_woman_information.previous_stillbirth;
     });
     if (reportsFound.length > 0) {
-      console.log('Inside stillbirth for ' + c.contact.first_name);
       var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
       return report.fields.pregnant_woman_information.previous_stillbirth;
     }
@@ -1429,7 +1417,6 @@ getDeliveryMethod(c,deliveryMethod) {
 },
 
 isHighRiskPregnancyML: function (c) {
-      console.log('Inside high risk pregnancy ML'); 
       let catchmentId=c.contact.meta.created_by_place_uuid;
       if(!enabel.isCatchmentInML(catchmentId)){return;}
 
