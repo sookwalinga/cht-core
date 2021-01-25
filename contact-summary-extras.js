@@ -285,7 +285,7 @@ module.exports = {
   getPregnancyRiskFactors: function () {
     let report = this.getRecentPregnancyReport() || {};
     let deliveryComplications=get(report, 'fields.pregnant_woman_information.delivery_complications') || '';
-    let medicalConditions=get(report, 'fields.rch_card.medical_conditions') || ''
+    let medicalConditions=get(report, 'fields.rch_card.medical_conditions') || '';
     (deliveryComplications+' '+medicalConditions)
     .split(' ')
     .forEach(field=>{
