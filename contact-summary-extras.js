@@ -290,20 +290,19 @@ module.exports = {
     let report = this.getRecentPregnancyReport() || {};
     let pregInfo = get(report, 'fields.pregnant_woman_information') || {};
     let rchCard = get(report, 'fields.rch_card') || {};
+    let maternalNutrition = get(report, 'fields.maternal_nutrition') || {};
     let facilityDeliveryImportance = get(report, 'report.fields.facility_delivery_importance') || {};
 
-
-    let maternalNutrition = get(report, 'fields.maternal_nutrition') || {};
-    let medicalCondition = (get(report, 'fields.rch_card.medical_condition') || '').toString();
-    let deliveryComplications = (get(report, 'fields.pregnant_woman_information.delivery_complications') || '').toString();
+    let selectFields=(get(report,'fields.pregnant_woman_information.delivery_complications')||'')
+                     +' '+(get(report,'fields.rch_card.medical_conditions')||'');
+    for(let field of selectFields.split(' ')){if(field&&risksMap[field]) riskFactors.push(risksMap[field]);}
 
     for (let field of Object.keys(risksMap)) {
         risksMap[field].risk_name=field;
-        if((pregInfo[field] && (pregInfo[field] === 'yes'
-              || deliveryComplications.includes(field)
+        if(pregInfo[field]&&(pregInfo[field] === 'yes'
               || field === 'previous_pregnancies' && pregInfo[field] > 5
               || field === 'previous_miscarriages' && pregInfo[field] > 0)) 
-            ) { riskFactors.push(risksMap[field]); }
+             { riskFactors.push(risksMap[field]); }
               
             if(maternalNutrition[field]
               &&field === 'nutrition_restrictions' && maternalNutrition[field] === 'yes')  
@@ -314,11 +313,9 @@ module.exports = {
                 &&facilityDeliveryImportance[field] === 'no')
             { riskFactors.push(risksMap[field]); }
 
-            if(rchCard[field] && (rchCard[field] === 'yes' || medicalCondition.includes(field))) 
+            if(rchCard[field] && (rchCard[field] === 'yes')) 
             { riskFactors.push(risksMap[field]); }
     }
-    // if (riskFactors.length >= 1)
-    // return riskFactors; 
     return riskFactors.map(d=>d.risk_name);
   }, 
 
