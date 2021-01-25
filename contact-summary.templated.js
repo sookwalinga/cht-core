@@ -14,8 +14,8 @@ module.exports = {
     hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant(),
     enabel: extras.isEnrolledInML(), 
     risk_factor_names: extras.getPregnancyRiskFactors(),
-    risk_factor_labels: extras.getRiskFactorNames(), 
-    risk_factor_labels_swahili:extras.getRiskFactorNamesSwahili(),
+    risk_factor_labels: extras.getRiskFactorLabels('eng'), 
+    risk_factor_labels_swahili:extras.getRiskFactorLabels('sw'),
     mitigation_list: extras.getMitigationList(),
     high_risk_manual: extras.isHighRiskPregnancy()
   },
