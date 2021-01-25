@@ -26,6 +26,7 @@ module.exports = [
     goal: 16,
     appliesTo: 'reports',
     appliesToType: ['infant_child', 'pregnancy'],
+    idType: 'report',
     appliesIf: function (c, r) {
       if (r.form && r.form === 'infant_child') {
         if (r.fields && ((r.fields.consent && r.fields.consent.child_consent_today && r.fields.consent.child_consent_today === 'yes') || !r.fields.consent)) {
