@@ -1323,8 +1323,8 @@ getBreechCondition(c) {
 },
 
 getMedicalCondition(c,condition) { 
-  let reportsFound = [];
-  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  var reportsFound = [];
+  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
   if (c && c.reports) {
     reportsFound = c.reports.filter(function (r) {
       return r.form === 'pregnancy' &&
@@ -1342,8 +1342,8 @@ getMedicalCondition(c,condition) {
 },
 
 getDeliveryComplication(c,complication) { 
-  let reportsFound = [];
-  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  var reportsFound = [];
+  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
   if (c && c.reports) {
     reportsFound = c.reports.filter(function (r) {
       return r.form === 'pregnancy' &&
@@ -1360,8 +1360,8 @@ getDeliveryComplication(c,complication) {
 },
 
 getStillBirth(c) { 
-  let reportsFound = [];
-  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  var reportsFound = [];
+  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
   if (c && c.reports) {
     reportsFound = c.reports.filter(function (r) {
       return r.form === 'pregnancy' &&
@@ -1378,8 +1378,8 @@ getStillBirth(c) {
 },
 
 getPartnerPermission(c) { 
-  let reportsFound = [];
-  let recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  var reportsFound = [];
+  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
   if (c && c.reports) {
     reportsFound = c.reports.filter(function (r) {
       return r.form === 'pregnancy' &&
@@ -1417,7 +1417,7 @@ getDeliveryMethod(c,deliveryMethod) {
 },
 
 isHighRiskPregnancyML: function (c) {
-      let catchmentId=c.contact.meta.created_by_place_uuid;
+      var catchmentId=c.contact.meta.created_by_place_uuid;
       if(!enabel.isCatchmentInML(catchmentId)){return;}
 
       var data = enabel.getShehiaData(catchmentId);
