@@ -579,9 +579,11 @@ var data={
     '9451b99e-b816-52ba-b96e-7969cc5f4773': 'north_b_donge_majenzi',
     '4f24c994-e73d-5cfa-a8f0-40b2f0ed4556': 'north_a_pita_nazako',
     '1dbca160-1c30-5a02-9ede-cffb12aefd09': 'north_b_b_misufini',
-    'caafa9ce-dcfe-54f4-b26d-f3555a4ef8e9': 'north_b_b_misufini'
+    'caafa9ce-dcfe-54f4-b26d-f3555a4ef8e9': 'north_b_b_misufini',
+    '77f58e62-28dd-5263-965e-b29946ef1bab': 'north_b_b_misufini'
   },
   darasaCatchments: {
+    '70add505-c02f-57da-8b46-28479a7a719c': 'north_b_b_misufini',
     '02c6e2d7-f556-5025-a6e1-36a07616bf30': 'north_b_b_misufini',
     '0d79cf0d-cd97-5ebc-bb11-5014aab8ec9d': 'north_b_b_misufini',
     '1dbca160-1c30-5a02-9ede-cffb12aefd09': 'north_b_b_misufini',
@@ -624,6 +626,7 @@ var data={
     '0ae1a58c-9c64-5e7b-8d21-9c3c24eb5a6e': 'north_b_donge_pwani',
     'b095ba3b-892d-5b81-9f92-02b6361e2b29': 'north_b_donge_pwani',
     'f2de2917-c8fd-551f-9dcd-64a9c7b4b5b4': 'north_b_donge_pwani',
+    '40728d12-7091-50c9-8e58-43da6720837d': 'north_b_fujoni',
     '40728d12-7091-50c9-8e58-43da6720837d': 'north_b_fujoni',
     '52fd03fb-fccd-5647-b9d1-31b3b6bd1cd6': 'north_b_fujoni',
     '616cbe06-8c0d-55df-af8d-ca9ff42f5a2b': 'north_b_fujoni',
