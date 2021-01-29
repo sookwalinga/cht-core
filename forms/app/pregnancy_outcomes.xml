@@ -2530,7 +2530,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_outcomes/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" type="date" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" type="date" required="true()" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" type="string" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss" type="date" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)" required="true()"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string" calculate="if( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome =&quot;did_deliver&quot;,&quot;N/A&quot;,if((decimal-date-time( /pregnancy_outcomes/client_EDD ) - decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /pregnancy_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;))"/>
@@ -2561,12 +2561,12 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/delivery_information/born_early" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/immediate_cry" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/admitted_after_birth" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_information/major_complications" type="select" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/delivery_information/major_complications:jr:constraintMsg')"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/major_complications" type="select" jr:constraintMsg="jr:itext('/pregnancy_outcomes/delivery_information/major_complications:jr:constraintMsg')" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
       <bind nodeset="/pregnancy_outcomes/number_deliveries" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_babies_delivered" type="int" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" constraint="2 &lt;= . and . &lt;= 4"/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_babies_delivered" type="int" required="true()" constraint="2 &lt;= . and . &lt;= 4" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy_outcomes/number_deliveries/live_birth" type="select1" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_live_births" type="int" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg')" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" constraint="0 &lt;= . and . &lt;=  /pregnancy_outcomes/number_deliveries/num_babies_delivered "/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_live_births" type="int" required="true()" constraint="0 &lt;= . and . &lt;=  /pregnancy_outcomes/number_deliveries/num_babies_delivered " relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy_outcomes/child_death_count" type="string" calculate="if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),
  0,
  if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;no&quot;),
@@ -2576,7 +2576,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/multiple_child_death_note" readonly="true()" type="string" relevant=" /pregnancy_outcomes/child_death_count  &gt; 1"/>
       <bind nodeset="/pregnancy_outcomes/child_death_data_count" type="string" readonly="true()" calculate=" /pregnancy_outcomes/child_death_count "/>
       <bind nodeset="/pregnancy_outcomes/child_death_data" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/child_death_count  &gt; 0"/>
-      <bind nodeset="/pregnancy_outcomes/child_death_data/child_date_of_death" type="date" required="true()" constraint="date-time(decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')"/>
+      <bind nodeset="/pregnancy_outcomes/child_death_data/child_date_of_death" type="date" jr:constraintMsg="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')" required="true()" constraint="date-time(decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/pregnancy_outcomes/child_repeat_count" type="string" calculate="if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),1,if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;no&quot;),0, /pregnancy_outcomes/number_deliveries/num_live_births ))"/>
       <bind nodeset="/pregnancy_outcomes/intro_data_capture" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0"/>
       <bind nodeset="/pregnancy_outcomes/intro_data_capture/child_data_note" readonly="true()" type="string" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)"/>
@@ -2915,7 +2915,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
     </input>
     <group ref="/pregnancy_outcomes/child_death_data">
       <label ref="jr:itext('/pregnancy_outcomes/child_death_data:label')"/>
-      <repeat nodeset="/pregnancy_outcomes/child_death_data" jr:count=" /pregnancy_outcomes/child_death_data_count " appearance="field-list">
+      <repeat nodeset="/pregnancy_outcomes/child_death_data" appearance="field-list" jr:count=" /pregnancy_outcomes/child_death_data_count ">
         <input ref="/pregnancy_outcomes/child_death_data/child_date_of_death">
           <label ref="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:label')"/>
         </input>
@@ -2931,7 +2931,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       </input>
       <group ref="/pregnancy_outcomes/intro_data_capture/child">
         <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child:label')"/>
-        <repeat nodeset="/pregnancy_outcomes/intro_data_capture/child" jr:count=" /pregnancy_outcomes/intro_data_capture/child_count " appearance="field-list">
+        <repeat nodeset="/pregnancy_outcomes/intro_data_capture/child" appearance="field-list" jr:count=" /pregnancy_outcomes/intro_data_capture/child_count ">
           <input ref="/pregnancy_outcomes/intro_data_capture/child/first_name">
             <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/first_name:label')"/>
           </input>
