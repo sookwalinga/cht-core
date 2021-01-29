@@ -2530,16 +2530,16 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/pregnancy_outcomes/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_outcome" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" type="date" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_delivery" type="date" required="true()" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy_outcomes/month  * 3)))" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/confirm_delivery/date_of_delivery:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/pregnancy_loss_note" readonly="true()" type="string" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)"/>
-      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss" type="date" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss" type="date" required="true()" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;miscarriage_or_stillbirth&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/confirm_delivery/miscarriage_or_stillbirth" type="string" calculate="if( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome =&quot;did_deliver&quot;,&quot;N/A&quot;,if((decimal-date-time( /pregnancy_outcomes/client_EDD ) - decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_pregnancy_loss )) &gt; ( /pregnancy_outcomes/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;))"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_location" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_island" type="select1" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other" type="string" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;other&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_district" type="select1" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;unguja&quot;) or selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;pemba&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_facility" type="select1" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;north_a&quot;) or 
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_island" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_island_other" type="string" required="true()" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;other&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/facility_district" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;unguja&quot;) or selected( /pregnancy_outcomes/delivery_location_assessment/facility_island ,&quot;pemba&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/delivery_facility" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;north_a&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;north_b&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;central&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;south&quot;) or 
@@ -2549,24 +2549,24 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;chakechake&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;micheweni&quot;) or 
 selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;mkoani&quot;) or 
-selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;wete&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other" type="string" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_facility ,&quot;other&quot;)" required="true()"/>
+selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&quot;wete&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_location_assessment/pnc_visit_facility_other" type="string" required="true()" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_facility ,&quot;other&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_information/facility_delivery_method" type="select1" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_information/home_delivery_helper" type="select1" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_information/got_facility_pnc" type="select1" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))" required="true()"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/facility_delivery_method" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/home_delivery_helper" type="select1" required="true()" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/got_facility_pnc" type="select1" required="true()" relevant="not(selected( /pregnancy_outcomes/delivery_location_assessment/delivery_location ,&quot;facility&quot;))"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/got_facility_pnc_note" readonly="true()" type="string" relevant="selected( /pregnancy_outcomes/delivery_information/got_facility_pnc ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/didnt_get_facility_pnc_note" readonly="true()" type="string" relevant="selected( /pregnancy_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/refer_flag_no_facility_pnc" type="string" calculate="if(selected( /pregnancy_outcomes/delivery_information/got_facility_pnc ,&quot;no&quot;),1,0)"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/born_early" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/immediate_cry" type="select1" required="true()"/>
       <bind nodeset="/pregnancy_outcomes/delivery_information/admitted_after_birth" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/delivery_information/major_complications" type="select" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/delivery_information/major_complications:jr:constraintMsg')"/>
+      <bind nodeset="/pregnancy_outcomes/delivery_information/major_complications" type="select" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/delivery_information/major_complications:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
       <bind nodeset="/pregnancy_outcomes/number_deliveries" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/number_deliveries/check_multiple_deliveries" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_babies_delivered" type="int" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" constraint="2 &lt;= . and . &lt;= 4"/>
-      <bind nodeset="/pregnancy_outcomes/number_deliveries/live_birth" type="select1" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_live_births" type="int" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg')" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" constraint="0 &lt;= . and . &lt;=  /pregnancy_outcomes/number_deliveries/num_babies_delivered "/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_babies_delivered" type="int" required="true()" constraint="2 &lt;= . and . &lt;= 4" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_babies_delivered:jr:constraintMsg')"/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries/live_birth" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/number_deliveries/num_live_births" type="int" required="true()" constraint="0 &lt;= . and . &lt;=  /pregnancy_outcomes/number_deliveries/num_babies_delivered " relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;more&quot;)" jr:constraintMsg="jr:itext('/pregnancy_outcomes/number_deliveries/num_live_births:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy_outcomes/child_death_count" type="string" calculate="if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),
  0,
  if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;no&quot;),
@@ -2576,7 +2576,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/multiple_child_death_note" readonly="true()" type="string" relevant=" /pregnancy_outcomes/child_death_count  &gt; 1"/>
       <bind nodeset="/pregnancy_outcomes/child_death_data_count" type="string" readonly="true()" calculate=" /pregnancy_outcomes/child_death_count "/>
       <bind nodeset="/pregnancy_outcomes/child_death_data" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/child_death_count  &gt; 0"/>
-      <bind nodeset="/pregnancy_outcomes/child_death_data/child_date_of_death" type="date" required="true()" constraint="date-time(decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')"/>
+      <bind nodeset="/pregnancy_outcomes/child_death_data/child_date_of_death" type="date" required="true()" jr:constraintMsg="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:jr:constraintMsg')" constraint="date-time(decimal-date-time( /pregnancy_outcomes/confirm_delivery/date_of_delivery )) &lt;= . and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/pregnancy_outcomes/child_repeat_count" type="string" calculate="if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;yes&quot;),1,if(selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;) and selected( /pregnancy_outcomes/number_deliveries/live_birth ,&quot;no&quot;),0, /pregnancy_outcomes/number_deliveries/num_live_births ))"/>
       <bind nodeset="/pregnancy_outcomes/intro_data_capture" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/child_repeat_count  &gt; 0"/>
       <bind nodeset="/pregnancy_outcomes/intro_data_capture/child_data_note" readonly="true()" type="string" relevant="selected( /pregnancy_outcomes/number_deliveries/check_multiple_deliveries ,&quot;one&quot;)"/>
@@ -2599,12 +2599,12 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       <bind nodeset="/pregnancy_outcomes/intro_data_capture/child/created_by_place_uuid" type="string" calculate="../../../facility_id"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey" relevant="selected( /pregnancy_outcomes/confirm_delivery/pregnancy_outcome ,&quot;did_deliver&quot;) and  /pregnancy_outcomes/delivery_location_assessment/delivery_location  = &quot;facility&quot;"/>
       <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility" type="select1" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly" type="select" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/how_handled_facility ,&quot;bad&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees" type="select1" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies" type="select1" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased" type="select" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility" type="select1" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/how_handled_facility" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/why_feel_handled_badly" type="select" required="true()" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/how_handled_facility ,&quot;bad&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/paid_delivery_fees" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/purchased_supplies" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/what_supplies_purchased" type="select" required="true()" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;) and selected( /pregnancy_outcomes/quality_of_care_survey/purchased_supplies ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy_outcomes/quality_of_care_survey/would_recommend_facility" type="select1" required="true()" relevant="selected( /pregnancy_outcomes/quality_of_care_survey/quality_of_care_consent ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy_outcomes/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
@@ -2915,7 +2915,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
     </input>
     <group ref="/pregnancy_outcomes/child_death_data">
       <label ref="jr:itext('/pregnancy_outcomes/child_death_data:label')"/>
-      <repeat nodeset="/pregnancy_outcomes/child_death_data" jr:count=" /pregnancy_outcomes/child_death_data_count " appearance="field-list">
+      <repeat nodeset="/pregnancy_outcomes/child_death_data" appearance="field-list" jr:count=" /pregnancy_outcomes/child_death_data_count ">
         <input ref="/pregnancy_outcomes/child_death_data/child_date_of_death">
           <label ref="jr:itext('/pregnancy_outcomes/child_death_data/child_date_of_death:label')"/>
         </input>
@@ -2931,7 +2931,7 @@ selected( /pregnancy_outcomes/delivery_location_assessment/facility_district ,&q
       </input>
       <group ref="/pregnancy_outcomes/intro_data_capture/child">
         <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child:label')"/>
-        <repeat nodeset="/pregnancy_outcomes/intro_data_capture/child" jr:count=" /pregnancy_outcomes/intro_data_capture/child_count " appearance="field-list">
+        <repeat nodeset="/pregnancy_outcomes/intro_data_capture/child" appearance="field-list" jr:count=" /pregnancy_outcomes/intro_data_capture/child_count ">
           <input ref="/pregnancy_outcomes/intro_data_capture/child/first_name">
             <label ref="jr:itext('/pregnancy_outcomes/intro_data_capture/child/first_name:label')"/>
           </input>
