@@ -351,7 +351,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         </translation>
       </itext>
       <instance>
-        <death_report id="death_report" prefix="J1!death_report!" delimiter="#" version="2020-05-13_11-59">
+        <death_report id="death_report" prefix="J1!death_report!" delimiter="#" version="2021-01-29 9-24">
           <inputs>
             <meta>
               <location>
@@ -389,6 +389,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <house_number/>
           <kitongoji/>
           <phone/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -448,6 +450,8 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/death_report/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
       <bind nodeset="/death_report/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
       <bind nodeset="/death_report/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/death_report/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/death_report/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/death_report/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/client_information/household_note" readonly="true()" type="string"/>
@@ -455,19 +459,19 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/death_report/death_report_intro/intro" readonly="true()" type="string"/>
       <bind nodeset="/death_report/death_report_intro/reason_death" type="select1" required="true()" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12"/>
       <bind nodeset="/death_report/suspected_maternal_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;"/>
-      <bind nodeset="/death_report/suspected_maternal_death/date_of_death_maternal" type="date" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" required="true()" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg')"/>
+      <bind nodeset="/death_report/suspected_maternal_death/date_of_death_maternal" type="date" required="true()" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg')" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))"/>
       <bind nodeset="/death_report/suspected_maternal_death/where_death" type="select1" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death/was_pregnant" type="select1" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death/during_childbirth" type="select1" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth" type="select1" required="true()"/>
       <bind nodeset="/death_report/next_of_kin" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_rel_w_deceased" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_street_shehia" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_district" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_phone" type="string" constraint="regex(.,'^0[0-9]{9}$')" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg')"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_name" type="string" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_rel_w_deceased" type="string" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_street_shehia" type="string" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_district" type="string" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_phone" type="tel" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg')" constraint="true()"/>
       <bind nodeset="/death_report/other" relevant="not( /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;)"/>
-      <bind nodeset="/death_report/other/date_of_death_other" type="date" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" required="true()" jr:constraintMsg="jr:itext('/death_report/other/date_of_death_other:jr:constraintMsg')"/>
+      <bind nodeset="/death_report/other/date_of_death_other" type="date" required="true()" jr:constraintMsg="jr:itext('/death_report/other/date_of_death_other:jr:constraintMsg')" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))"/>
       <bind nodeset="/death_report/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>

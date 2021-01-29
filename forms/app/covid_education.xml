@@ -705,6 +705,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
           <created_by/>
           <created_by_person_uuid/>
           <created_by_place_uuid/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -787,6 +789,8 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/created_by" type="string" calculate="../inputs/user/name"/>
       <bind nodeset="/covid_education/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
       <bind nodeset="/covid_education/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/covid_education/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/covid_education/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/covid_education/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/introductory_qns/introduction" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/introductory_qns/corona_awareness" type="select1" required="true()"/>
