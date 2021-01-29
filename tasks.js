@@ -288,7 +288,7 @@ module.exports = [
       content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
       content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
       content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
-      content.high_risk_ML = extras.isHighRiskPregnancyML(contact); 
+      content.is_high_risk_pregnancy_ML = extras.isHighRiskPregnancyML(contact)?true:false; 
       content.gestation_in_weeks = extras.getCurrentGestationAge(contact); 
     }
   }],
