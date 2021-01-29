@@ -195,7 +195,7 @@
       <bind nodeset="/data/person/last_name" type="string" required="true()"/>
       <bind nodeset="/data/person/is_head_of_household" type="string"/>
       <bind nodeset="/data/person/date_of_birth" type="date" jr:constraintMsg="jr:itext('/data/person/date_of_birth:jr:constraintMsg')" constraint=". &lt;= today()" required="true()"/>
-      <bind nodeset="/data/person/phone" type="tel" constraint="true()" relevant=" /data/person/is_head_of_household =&quot;yes&quot;" jr:constraintMsg="jr:itext('/data/person/phone:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/person/phone" type="tel" jr:constraintMsg="jr:itext('/data/person/phone:jr:constraintMsg')" relevant=" /data/person/is_head_of_household =&quot;yes&quot;" required="true()" constraint="true()"/>
       <bind nodeset="/data/person/phone_alternate" type="tel" jr:constraintMsg="jr:itext('/data/person/phone_alternate:jr:constraintMsg')" constraint="true()" relevant=" /data/person/is_head_of_household =&quot;yes&quot;"/>
       <bind nodeset="/data/person/sex" type="select1" required="true()"/>
       <bind nodeset="/data/person/first_name_c" type="string" calculate="../first_name"/>
