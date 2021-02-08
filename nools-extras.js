@@ -1,5 +1,11 @@
 var enabel = require('./enabel_catchments.js');
 var RandomForestClassifier = require('./model-min.js');
+function get(obj,field){
+  if(!obj){return;}
+  var parts=field.split('.');
+  for(var f of parts){ if(!obj[f]){return;} obj=obj[f];}
+  return obj;
+}
 module.exports = {
 
   day: 1,
@@ -1137,19 +1143,22 @@ module.exports = {
           && r.fields.mitigation_strategy_ml 
           && r.fields.mitigation_strategy_ml.mitigation_strategies));
       });
-
+      
         if (reportsFound.length > 0) {
           var report = Utils.getMostRecentReport(reportsFound, 'pregnancy_counselling');
           var hasReferral = report.fields.has_referral;
-
-          return hasReferral === '0'
+       
+        var riskFactors = get(report,'fields.target_messaging_group.risk_factors') || '';
+        var mitigationStrategies = get(report,'fields.mitigation_strategy.mitigation_strategies') || '';
+        var mitigationML =  get(report,'fields.mitigation_strategy_ml.mitigation_strategies') || '';
+        return hasReferral === '0'
             //Manual assessment is true
-            &&  report.fields.high_risk_manual === 'true'  
-            && spacedArrayEqual(report.fields.risk_factor_names, report.fields.target_messaging_group.risk_factors)
-            && spacedArrayEqual(report.fields.mitigation_list, report.fields.mitigation_strategy.mitigation_strategies)
+            &&  get(report,'fields.high_risk_manual') === 'true'  
+            && spacedArrayEqual(report.fields.risk_factor_names, riskFactors)
+            && spacedArrayEqual(report.fields.mitigation_list, mitigationStrategies)
             //ML is true ( 7 is the total number of mitigation strategies in the form )
             || (report.fields.is_high_risk_pregnancy_ML_c === 'true'
-            && 7 === report.fields.mitigation_strategy_ml.mitigation_strategies.trim().split(' ').length());
+            && 7 === mitigationML.trim().split(' ').length());
         }
       }
     return false;
@@ -1421,9 +1430,6 @@ isHighRiskPregnancyML: function (c) {
       if(!enabel.isCatchmentInML(catchmentId)){return;}
 
       var data = enabel.getShehiaData(catchmentId);
-      if (data.shehia === '') {
-        return;
-      }
       var shehia = data.shehia;
       var district = data.district;
       var home_ct = data.home_ct;
