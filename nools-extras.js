@@ -1421,9 +1421,6 @@ isHighRiskPregnancyML: function (c) {
       if(!enabel.isCatchmentInML(catchmentId)){return;}
 
       var data = enabel.getShehiaData(catchmentId);
-      if (data.shehia === '') {
-        return;
-      }
       var shehia = data.shehia;
       var district = data.district;
       var home_ct = data.home_ct;
