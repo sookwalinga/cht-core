@@ -1158,7 +1158,7 @@ module.exports = {
             && spacedArrayEqual(report.fields.mitigation_list, mitigationStrategies)
             //ML is true ( 7 is the total number of mitigation strategies in the form )
             || (report.fields.is_high_risk_pregnancy_ML_c === 'true'
-            && 7 === mitigationML.trim().split(' ').length());
+            && 7 === mitigationML.trim().split(' ').length);
         }
       }
     return false;

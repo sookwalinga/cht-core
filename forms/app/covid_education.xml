@@ -831,7 +831,7 @@ Kuwa makini na kushika barakoa yako kwa ndani au nje kwa mikono. Kosha mikono ya
       <bind nodeset="/covid_education/hand_washing/has_infrastructure" type="select1" required="true()"/>
       <bind nodeset="/covid_education/hand_washing/is_practicing" type="select1" required="true()"/>
       <bind nodeset="/covid_education/hand_washing/practice_reminder" readonly="true()" type="string"/>
-      <bind nodeset="/covid_education/risks_and_directions/serious_diseases" type="select" jr:constraintMsg="jr:itext('/covid_education/risks_and_directions/serious_diseases:jr:constraintMsg')" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/covid_education/risks_and_directions/serious_diseases" type="select" required="true()" jr:constraintMsg="jr:itext('/covid_education/risks_and_directions/serious_diseases:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
       <bind nodeset="/covid_education/risks_and_directions/age_above_50" type="select1" required="true()"/>
       <bind nodeset="/covid_education/risks_and_directions/prevention_for_elderly" readonly="true()" type="string"/>
       <bind nodeset="/covid_education/test_understading/asymptomatic" type="select1" required="true()"/>

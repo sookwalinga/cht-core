@@ -907,7 +907,7 @@
       <bind nodeset="/data/init/exact_dob_known_contact" type="select1" required="true()"/>
       <bind nodeset="/data/init/age_estimate_contact" type="int" constraint=". &gt;= 12 and . &lt;= 100" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;" required="true()" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/yob_contact" type="string" calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact"/>
-      <bind nodeset="/data/init/dob_contact" type="date" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" required="true()" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/dob_contact" type="date" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" required="true()" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))"/>
       <bind nodeset="/data/init/primary_phone_contact" type="tel" constraint="true()" required="true()" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/secondary_phone_contact" type="tel" constraint="true()" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/dob_contact_calc" type="string" calculate="format-date(if(../dob_contact != '', ../dob_contact,concat(../yob_contact, '-01-01')), '%Y-%m-%d')"/>
@@ -1079,7 +1079,7 @@
     <group ref="/data/repeat">
       <group ref="/data/repeat/child">
         <label ref="jr:itext('/data/repeat/child:label')"/>
-        <repeat nodeset="/data/repeat/child" appearance="field-list" jr:count=" /data/repeat/child_count ">
+        <repeat nodeset="/data/repeat/child" jr:count=" /data/repeat/child_count " appearance="field-list">
           <input ref="/data/repeat/child/hh_member_note">
             <label ref="jr:itext('/data/repeat/child/hh_member_note:label')"/>
           </input>

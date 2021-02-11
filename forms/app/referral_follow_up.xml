@@ -664,7 +664,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/congratulate" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/got_services" type="select1" required="true()"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" type="select" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" type="select" required="true()" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/discuss_reasons_no_services" readonly="true()" type="string" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go" type="select" required="true()"/>
