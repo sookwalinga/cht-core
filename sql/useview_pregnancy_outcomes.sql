@@ -36,6 +36,7 @@ CREATE MATERIALIZED VIEW useview_pregnancy_outcomes AS
     TO_DATE(NULLIF(doc #>> '{fields,confirm_delivery,date_of_delivery}', ''), 'YYYY-MM-DD') AS date_of_delivery,
     TO_DATE(NULLIF(doc #>> '{fields,confirm_delivery,date_of_pregnancy_loss}', ''), 'YYYY-MM-DD') AS date_of_pregnancy_loss,
     doc #>> '{fields,confirm_delivery,miscarriage_or_stillbirth}' AS miscarriage_or_stillbirth,
+    NULLIF(doc #>> '{fields,confirm_delivery,stillbirth_location}','') AS stillbirth_location,
     doc #>> '{fields,delivery_location_assessment,delivery_location}' AS delivery_location,
     doc #>> '{fields,delivery_location_assessment,facility_island}' AS facility_island,
     doc #>> '{fields,delivery_location_assessment,pnc_visit_island_other}' AS pnc_visit_island_other,
