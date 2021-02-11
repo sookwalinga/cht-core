@@ -896,11 +896,11 @@
       <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/data/covid19_intro/covid19_visit_reminder" readonly="true()" type="string"/>
       <bind nodeset="/data/intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/hh_member_count/num_hh_members" type="int" jr:constraintMsg="jr:itext('/data/hh_member_count/num_hh_members:jr:constraintMsg')" required="true()" constraint=". &gt; 0 and . &lt;= 30"/>
+      <bind nodeset="/data/hh_member_count/num_hh_members" type="int" constraint=". &gt; 0 and . &lt;= 30" required="true()" jr:constraintMsg="jr:itext('/data/hh_member_count/num_hh_members:jr:constraintMsg')"/>
       <bind nodeset="/data/hh_member_count/hh_repeat_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/init/first_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/first_name_contact:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
-      <bind nodeset="/data/init/middle_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/middle_name_contact:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
-      <bind nodeset="/data/init/last_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/last_name_contact:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/init/first_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/init/first_name_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/middle_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/init/middle_name_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/last_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/init/last_name_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/name_contact" type="string" calculate="concat( /data/init/first_name_contact ,&quot; &quot;, /data/init/middle_name_contact ,&quot; &quot;, /data/init/last_name_contact )"/>
       <bind nodeset="/data/init/sex_contact_note" readonly="true()" type="string"/>
       <bind nodeset="/data/init/sex_contact" type="select1" required="true()"/>
@@ -908,8 +908,8 @@
       <bind nodeset="/data/init/age_estimate_contact" type="int" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')" required="true()" constraint=". &gt;= 12 and . &lt;= 100"/>
       <bind nodeset="/data/init/yob_contact" type="string" calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact"/>
       <bind nodeset="/data/init/dob_contact" type="date" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" required="true()" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))"/>
-      <bind nodeset="/data/init/primary_phone_contact" type="tel" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')" required="true()" constraint="true()"/>
-      <bind nodeset="/data/init/secondary_phone_contact" type="tel" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')" constraint="true()"/>
+      <bind nodeset="/data/init/primary_phone_contact" type="tel" constraint="true()" required="true()" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/secondary_phone_contact" type="tel" constraint="true()" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/dob_contact_calc" type="string" calculate="format-date(if(../dob_contact != '', ../dob_contact,concat(../yob_contact, '-01-01')), '%Y-%m-%d')"/>
       <bind nodeset="/data/init/age_contact_years" type="string" calculate="(decimal-date-time(today()) - decimal-date-time( /data/init/dob_contact_calc )) div 365"/>
       <bind nodeset="/data/init/reproductive_age_c" type="string" calculate="if(selected( /data/init/sex_contact ,&quot;female&quot;) and  /data/init/age_contact_years  &gt;= 15 and  /data/init/age_contact_years  &lt;= 49,1,0)"/>
@@ -920,9 +920,9 @@
       <bind nodeset="/data/repeat/child/hh_member_note" readonly="true()" type="string"/>
       <bind nodeset="/data/repeat/child/type" type="string"/>
       <bind nodeset="/data/repeat/child/parent" type="string" calculate="."/>
-      <bind nodeset="/data/repeat/child/first_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/first_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
-      <bind nodeset="/data/repeat/child/middle_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/middle_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
-      <bind nodeset="/data/repeat/child/last_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/last_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/repeat/child/first_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/first_name:jr:constraintMsg')"/>
+      <bind nodeset="/data/repeat/child/middle_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/middle_name:jr:constraintMsg')"/>
+      <bind nodeset="/data/repeat/child/last_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/last_name:jr:constraintMsg')"/>
       <bind nodeset="/data/repeat/child/first_name_c" type="string" calculate="../first_name"/>
       <bind nodeset="/data/repeat/child/middle_name_c" type="string" calculate="../middle_name"/>
       <bind nodeset="/data/repeat/child/last_name_c" type="string" calculate="../last_name"/>
@@ -956,11 +956,11 @@
       <bind nodeset="/data/household_location/gps_note" readonly="true()" type="string"/>
       <bind nodeset="/data/household_location/gps" type="geopoint"/>
       <bind nodeset="/data/household_location/kitongoji_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/kitongoji" type="string" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1"/>
+      <bind nodeset="/data/household_location/kitongoji" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" required="true()" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')"/>
       <bind nodeset="/data/household_location/house_number_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/house_number" type="string" jr:constraintMsg="jr:itext('/data/household_location/house_number:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1"/>
+      <bind nodeset="/data/household_location/house_number" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" required="true()" jr:constraintMsg="jr:itext('/data/household_location/house_number:jr:constraintMsg')"/>
       <bind nodeset="/data/household_location/travel_time_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/travel_time" type="int" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')" required="true()" constraint=". &gt; 0 and . &lt;= 120"/>
+      <bind nodeset="/data/household_location/travel_time" type="int" constraint=". &gt; 0 and . &lt;= 120" required="true()" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')"/>
       <bind nodeset="/data/household_location/means_of_travel_house_note" readonly="true()" type="string"/>
       <bind nodeset="/data/household_location/means_of_travel_house" type="select1" required="true()"/>
       <bind nodeset="/data/household_location/means_of_travel_other" type="string" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3"/>
@@ -1079,7 +1079,7 @@
     <group ref="/data/repeat">
       <group ref="/data/repeat/child">
         <label ref="jr:itext('/data/repeat/child:label')"/>
-        <repeat nodeset="/data/repeat/child" appearance="field-list" jr:count=" /data/repeat/child_count ">
+        <repeat nodeset="/data/repeat/child" jr:count=" /data/repeat/child_count " appearance="field-list">
           <input ref="/data/repeat/child/hh_member_note">
             <label ref="jr:itext('/data/repeat/child/hh_member_note:label')"/>
           </input>
