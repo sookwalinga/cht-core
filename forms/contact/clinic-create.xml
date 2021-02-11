@@ -877,7 +877,7 @@
       <bind nodeset="/data/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
       <bind nodeset="/data/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/data/contact/parent" type="string" calculate="."/>
-      <bind nodeset="/data/contact/first_name" type="string" calculate=" /data/init/first_name_contact " required="true()"/>
+      <bind nodeset="/data/contact/first_name" type="string" required="true()" calculate=" /data/init/first_name_contact "/>
       <bind nodeset="/data/contact/middle_name" type="string" calculate=" /data/init/middle_name_contact "/>
       <bind nodeset="/data/contact/last_name" type="string" calculate=" /data/init/last_name_contact "/>
       <bind nodeset="/data/contact/name" type="string" calculate=" /data/init/name_contact "/>
@@ -905,7 +905,7 @@
       <bind nodeset="/data/init/sex_contact_note" readonly="true()" type="string"/>
       <bind nodeset="/data/init/sex_contact" type="select1" required="true()"/>
       <bind nodeset="/data/init/exact_dob_known_contact" type="select1" required="true()"/>
-      <bind nodeset="/data/init/age_estimate_contact" type="int" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')" required="true()" constraint=". &gt;= 12 and . &lt;= 100"/>
+      <bind nodeset="/data/init/age_estimate_contact" type="int" constraint=". &gt;= 12 and . &lt;= 100" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;" required="true()" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/yob_contact" type="string" calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact"/>
       <bind nodeset="/data/init/dob_contact" type="date" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" required="true()" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))"/>
       <bind nodeset="/data/init/primary_phone_contact" type="tel" constraint="true()" required="true()" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')"/>
@@ -932,9 +932,9 @@
       <bind nodeset="/data/repeat/child/sex_c" type="string" calculate="../sex"/>
       <bind nodeset="/data/repeat/child/exact_dob_known" type="select1" required="true()"/>
       <bind nodeset="/data/repeat/child/exact_dob_known_c" type="string" calculate="../exact_dob_known"/>
-      <bind nodeset="/data/repeat/child/age_estimate" type="int" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')" required="true()" constraint=". &gt;= 5 and . &lt;= 100"/>
+      <bind nodeset="/data/repeat/child/age_estimate" type="int" constraint=". &gt;= 5 and . &lt;= 100" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')"/>
       <bind nodeset="/data/repeat/child/yob" type="string" calculate="if(../age_estimate != &quot;&quot;, format-date-time(today(),&quot;%Y&quot;) - ../age_estimate, 1900)"/>
-      <bind nodeset="/data/repeat/child/dob" type="date" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')" required="true()" constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))"/>
+      <bind nodeset="/data/repeat/child/dob" type="date" constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')"/>
       <bind nodeset="/data/repeat/child/temp_hh_member" type="select1" required="true()"/>
       <bind nodeset="/data/repeat/child/date_of_birth" type="string" calculate="format-date(if(../dob != &quot;&quot;, ../dob,concat(../yob, &quot;-01-01&quot;)), '%Y-%m-%d')"/>
       <bind nodeset="/data/repeat/child/date_of_birth_c" type="string" calculate="../date_of_birth"/>
@@ -963,7 +963,7 @@
       <bind nodeset="/data/household_location/travel_time" type="int" constraint=". &gt; 0 and . &lt;= 120" required="true()" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')"/>
       <bind nodeset="/data/household_location/means_of_travel_house_note" readonly="true()" type="string"/>
       <bind nodeset="/data/household_location/means_of_travel_house" type="select1" required="true()"/>
-      <bind nodeset="/data/household_location/means_of_travel_other" type="string" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3"/>
+      <bind nodeset="/data/household_location/means_of_travel_other" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)" required="true()" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')"/>
       <bind nodeset="/data/end_registration_note" readonly="true()" type="string"/>
       <bind nodeset="/data/clinic/parent" type="string" calculate="."/>
       <bind nodeset="/data/clinic/name" type="string" calculate="concat(../../contact/first_name, &quot; &quot;, ../../contact/middle_name, &quot; &quot;, ../../contact/last_name, &quot; - &quot;, ../../household_location/house_number )"/>
