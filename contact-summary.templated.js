@@ -11,7 +11,13 @@ module.exports = {
     n_previous_anc_visits: extras.getRecentANCCountForThisPregnancy(),
     previous_hiv_status: extras.showPMTCT(),
     previous_rchcard_status: extras.showPregnancyEDDEstimation(),
-    hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant()
+    hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant(),
+    enabel: extras.isEnrolledInML(), 
+    risk_factor_names: extras.getPregnancyRiskFactors(),
+    risk_factor_labels: extras.getRiskFactorLabels('eng'), 
+    risk_factor_labels_swahili:extras.getRiskFactorLabels('sw'),
+    mitigation_list: extras.getMitigationList(),
+    high_risk_manual: extras.isHighRiskPregnancy()
   },
 
   fields: [

@@ -316,9 +316,9 @@
       <bind nodeset="/data/person/hh_member_note" readonly="true()" type="string" relevant=" /data/not_in_household_flag  = 0"/>
       <bind nodeset="/data/person/type" type="string"/>
       <bind nodeset="/data/person/parent" type="string" calculate="."/>
-      <bind nodeset="/data/person/first_name" type="string" jr:constraintMsg="jr:itext('/data/person/first_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" relevant=" /data/not_in_household_flag  = 0"/>
-      <bind nodeset="/data/person/middle_name" type="string" jr:constraintMsg="jr:itext('/data/person/middle_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" relevant=" /data/not_in_household_flag  = 0"/>
-      <bind nodeset="/data/person/last_name" type="string" jr:constraintMsg="jr:itext('/data/person/last_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" relevant=" /data/not_in_household_flag  = 0"/>
+      <bind nodeset="/data/person/first_name" type="string" required="true()" relevant=" /data/not_in_household_flag  = 0" jr:constraintMsg="jr:itext('/data/person/first_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/person/middle_name" type="string" required="true()" relevant=" /data/not_in_household_flag  = 0" jr:constraintMsg="jr:itext('/data/person/middle_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/person/last_name" type="string" required="true()" relevant=" /data/not_in_household_flag  = 0" jr:constraintMsg="jr:itext('/data/person/last_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
       <bind nodeset="/data/person/first_name_c" type="string" calculate="../first_name"/>
       <bind nodeset="/data/person/middle_name_c" type="string" calculate="../middle_name"/>
       <bind nodeset="/data/person/last_name_c" type="string" calculate="../last_name"/>
@@ -328,9 +328,9 @@
       <bind nodeset="/data/person/sex_c" type="string" calculate="../sex"/>
       <bind nodeset="/data/person/exact_dob_known" type="select1" required="true()" relevant=" /data/not_in_household_flag  = 0"/>
       <bind nodeset="/data/person/exact_dob_known_c" type="string" calculate="../exact_dob_known"/>
-      <bind nodeset="/data/person/age_estimate_contact" type="int" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" constraint=". &gt;= 5 and . &lt;= 100" required="true()" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;"/>
+      <bind nodeset="/data/person/age_estimate_contact" type="int" required="true()" relevant=" /data/person/exact_dob_known_c  = &quot;no&quot;" jr:constraintMsg="jr:itext('/data/person/age_estimate_contact:jr:constraintMsg')" constraint=". &gt;= 5 and . &lt;= 100"/>
       <bind nodeset="/data/person/yob" type="string" calculate="if(../age_estimate_contact != '', format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact, 1900)"/>
-      <bind nodeset="/data/person/dob" type="date" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" required="true()" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;"/>
+      <bind nodeset="/data/person/dob" type="date" required="true()" relevant=" /data/person/exact_dob_known_c =&quot;yes&quot;" jr:constraintMsg="jr:itext('/data/person/dob:jr:constraintMsg')" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))"/>
       <bind nodeset="/data/person/temp_hh_member" type="select1" required="true()" relevant=" /data/not_in_household_flag  = 0"/>
       <bind nodeset="/data/person/date_of_birth" type="string" calculate="format-date(if(../dob != '', ../dob,concat(../yob, '-01-01')), '%Y-%m-%d')"/>
       <bind nodeset="/data/person/date_of_birth_c" type="string" calculate="../date_of_birth"/>

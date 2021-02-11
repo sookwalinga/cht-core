@@ -87,7 +87,7 @@
             <value>ANC Screening and Counseling</value>
           </text>
           <text id="/pregnancy/anc_visit_promotion/anc_visit_promotion_msg:label">
-            <value>As soon as you are aware you are pregnant, it is important to go to the nearest health facility for antenatal care (ANC). You should go to ANC 4 times throughout your pregnancy as directed by the health worker.</value>
+            <value>As soon as you are aware you are pregnant, it is important to go to the nearest health facility for antenatal care (ANC). You should go to ANC 8 times throughout your pregnancy as directed by the health worker.</value>
           </text>
           <text id="/pregnancy/anc_visit_promotion:label">
             <value>ANC Visit Promotion</value>
@@ -212,10 +212,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Vaginal Bleeding</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -245,10 +245,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Unconsciousness</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157/no:label">
             <value>No</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157/yes:label">
             <value>Yes</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
@@ -362,7 +362,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>Yes</value>
           </text>
           <text id="/pregnancy/education_and_prev_enrollment/previous_uzazi_salama_enrollment:label">
-            <value>Were you previously/ever enrolled in a similar program?</value>
+            <value>Education and Previous Enrollment</value>
           </text>
           <text id="/pregnancy/education_and_prev_enrollment/roof_material/decline_to_answer:label">
             <value>Don't know / Decline to answer</value>
@@ -415,6 +415,19 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/education_and_prev_enrollment:label">
             <value>Education and Previous Enrollment</value>
           </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility:label">
+            <value>Ask partner: Will you allow <output value=" /pregnancy/client_name "/> to deliver at a health facility?
+This means you will support her to get transportation and will help her to save money to pay for the transport and other expenses.</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility_note:label">
+            <value>It is important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
+          </text>
           <text id="/pregnancy/facility_delivery_importance/delivery_location/home:label">
             <value>Home (mother's or other's)</value>
           </text>
@@ -432,6 +445,36 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           </text>
           <text id="/pregnancy/facility_delivery_importance/important_of_facility_delivery:label">
             <value>It is important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_availability/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_availability/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_availability:label">
+            <value>Is the client's partner present during this visit?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_available_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/don't_know:label">
+            <value>No, I don't know</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/no_partner:label">
+            <value>I don't have a partner</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/not_allowed:label">
+            <value>No, not allowed</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present:label">
+            <value>Has your partner allowed you to deliver at a health facility and will he support you to get transportation and help you to save money to pay?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present_note:label">
+            <value>Please talk to your partner so that he can facilitate your delivery to health facility.</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance:label">
             <value>Importance of Facility Delivery</value>
@@ -469,8 +512,50 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/fam_engagement:label">
             <value>Family Engagement</value>
           </text>
+          <text id="/pregnancy/group_summary/aph_risk:label">
+            <value>APH</value>
+          </text>
+          <text id="/pregnancy/group_summary/big_baby_risk:label">
+            <value>Big baby (more than 4 kg)</value>
+          </text>
+          <text id="/pregnancy/group_summary/breech_position_risk:label">
+            <value>Breech Position</value>
+          </text>
+          <text id="/pregnancy/group_summary/c_section_risk:label">
+            <value>Previous Delivery by C Section</value>
+          </text>
+          <text id="/pregnancy/group_summary/cardiac_disease:label">
+            <value>Cardiac disease</value>
+          </text>
+          <text id="/pregnancy/group_summary/diabetes:label">
+            <value>Diabetes</value>
+          </text>
+          <text id="/pregnancy/group_summary/enclampsia_risk:label">
+            <value>Eclampsia</value>
+          </text>
+          <text id="/pregnancy/group_summary/has_risk_assesment:label">
+            <value>&lt;strong&gt;You have the following pregnancy risks:&lt;/strong&gt;</value>
+          </text>
           <text id="/pregnancy/group_summary/healthy_note:label">
             <value>You are doing well and you don't need to go to the health facility urgently at this time. I'll return for another checkup when it's time for the next visit.</value>
+          </text>
+          <text id="/pregnancy/group_summary/high_blood_pressure:label">
+            <value>High Blood pressure</value>
+          </text>
+          <text id="/pregnancy/group_summary/higher_facility_delivery_risk:label">
+            <value>Recommended to deliver at a higher level facility</value>
+          </text>
+          <text id="/pregnancy/group_summary/large_perineal_tear_risk:label">
+            <value>Large perineal tear (close to anus)</value>
+          </text>
+          <text id="/pregnancy/group_summary/local_herb_risk:label">
+            <value>Use of local herbs</value>
+          </text>
+          <text id="/pregnancy/group_summary/malpresentation_risk:label">
+            <value>Malpresentation</value>
+          </text>
+          <text id="/pregnancy/group_summary/multiple_pregnancy_risk:label">
+            <value>Multiple Pregnancy</value>
           </text>
           <text id="/pregnancy/group_summary/needs_anc_referral_note:label">
             <value>To get ANC services since you are 6 months or more into pregnancy</value>
@@ -482,7 +567,37 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
             <value>To address other pregnancy danger signs</value>
           </text>
           <text id="/pregnancy/group_summary/needs_referral_note:label">
-            <value>You need to go to the health facility for the following reasons:</value>
+            <value>&lt;strong&gt;You need to go to the health facility for the following reasons:&lt;/strong&gt;</value>
+          </text>
+          <text id="/pregnancy/group_summary/nutrition_restrictions_risk:label">
+            <value>Nutrition Restrictions</value>
+          </text>
+          <text id="/pregnancy/group_summary/partner_permission_risk:label">
+            <value>Partner Permission not given</value>
+          </text>
+          <text id="/pregnancy/group_summary/postpartum_hemorrage_risk:label">
+            <value>Postpartum hemorrhage</value>
+          </text>
+          <text id="/pregnancy/group_summary/previous_delivery_risk:label">
+            <value>Previous Delivery 10 or more years ago</value>
+          </text>
+          <text id="/pregnancy/group_summary/previous_miscarriage_risk:label">
+            <value>Previous Miscarriage</value>
+          </text>
+          <text id="/pregnancy/group_summary/previous_stillbirth_risk:label">
+            <value>Previous Stillbirth</value>
+          </text>
+          <text id="/pregnancy/group_summary/prolonged_labor_risk:label">
+            <value>Prolonged labor (12 hours or more)</value>
+          </text>
+          <text id="/pregnancy/group_summary/retained_placenta_risk:label">
+            <value>Retained placenta</value>
+          </text>
+          <text id="/pregnancy/group_summary/sickle_cell:label">
+            <value>Sickle cell</value>
+          </text>
+          <text id="/pregnancy/group_summary/vacuum_delivery_risk:label">
+            <value>Previous Delivery by Vacuum</value>
           </text>
           <text id="/pregnancy/group_summary:label">
             <value>Visit Summary</value>
@@ -526,6 +641,18 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /pregn
           <text id="/pregnancy/maternal_nutrition/anemia_risk:label">
             <value>All pregnant women are at risk of anemia. It's very important to take iron and folic acid tablets to prevent anemia during pregnancy and for at least 3 months after your baby's birth. ALL pregnant women need to take iron and folic acid, even if they don't have headache.</value>
           </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets:label">
+            <value>Were you given tablets to prevent anemia at the health facility?</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets_note:label">
+            <value>Please look at page 2 of bango kitita for more information.</value>
+          </text>
           <text id="/pregnancy/maternal_nutrition/avoid_cahrcoal_and_soil:label">
             <value>I know that sometimes you might feel like eating things like charcoal or soil. Try your best to make sure you avoid eating them, you can harm yourself and the baby.</value>
           </text>
@@ -543,6 +670,33 @@ Please refer to page 2 of bango kitita.</value>
           </text>
           <text id="/pregnancy/maternal_nutrition/nutrition_advantage:label">
             <value>As you may know, nutrition is extremely important for pregnant women. Poor nutrition can have a negative effect on your health, and the health of your baby.</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/nutrition_restrictions/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/nutrition_restrictions/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/nutrition_restrictions:label">
+            <value>Do you follow any nutrition restrictions while pregnant (for example, not eating eggs)?</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/out_of_stock_note:label">
+            <value>Remind the health care provider when you visit the facility next time.</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/dont_know:label">
+            <value>Don't know</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/not_prescribed:label">
+            <value>Was not prescribed to me</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/out_of_stock:label">
+            <value>Out of stock</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/too_expensive:label">
+            <value>Too expensive</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets:label">
+            <value>Why did you not receive tablets to prevent anemia?</value>
           </text>
           <text id="/pregnancy/maternal_nutrition/traditional_medicine:label">
             <value>I would like to discuss about the use of traditional medicine during pregnancy and the effects they have to your health and that of your unborn child.
@@ -858,7 +1012,7 @@ Most women use herbs like Mpambawake, Shajaratul Maryam, Mzalia nyuma,Tangawizi 
             <value>Tinnitus</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg">
-            <value>Cannot select "None" with other options</value>
+            <value>-</value>
           </text>
           <text id="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:label">
             <value>Continue with the following questions. Indicate if the client has any of the following common pregnancy issues. 
@@ -871,6 +1025,42 @@ Have you experienced:</value>
           <text id="/pregnancy/pregnancy_issues_group:label">
             <value>Pregnancy Issues</value>
           </text>
+          <text id="/pregnancy/pregnant_woman_information/count_of_stillbirths:jr:constraintMsg">
+            <value>Number should be greater than 0</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/count_of_stillbirths:label">
+            <value>How many stillbirths have you had?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/aph:label">
+            <value>APH</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/big_baby:label">
+            <value>Big baby (more than 4 kg)</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/eclampsia:label">
+            <value>Eclampsia</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/large_perineal_tear:label">
+            <value>Large perineal tear (close to anus)</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/none:label">
+            <value>None</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/postpartum_hemorrage:label">
+            <value>Postpartum hemorrhage</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/prolonged_labor:label">
+            <value>Prolonged labor (12 hours or more)</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/retained_placenta:label">
+            <value>Retained placenta</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications:jr:constraintMsg">
+            <value>Cannot select "None" with other options</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications:label">
+            <value>Have you had any of the following during previous deliveries?</value>
+          </text>
           <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
             <value>No</value>
           </text>
@@ -881,10 +1071,41 @@ Have you experienced:</value>
             <value>Is this the first time you have been pregnant?</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/living_children:jr:constraintMsg">
-            <value>Number should be between 0 and <output value=" /pregnancy/pregnant_woman_information/max_alive_babies "/></value>
+            <value>Number should be between 0 and <output value=" /pregnancy/pregnant_woman_information/max_alive_babies "/> and</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/living_children:label">
             <value>How many of the children you delivered are still alive today?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs:label">
+            <value>Do you use local herbs to help your pregnancy?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs_note:label">
+            <value>I would like to discuss about the use of traditional medicine during pregnancy and the effects they have to your health and that of your unborn child.
+Most women use herbs like Mpambawake, Shajaratul Maryam, Mzalia nyuma,Tangawizi and Henna to induce labor, heal abdominal pain, reduce morning sickness and increase blood during pregnancy. However, if these herbs are used in excess and without doctor's consultation, they can lead to high/low blood pressure, miscarriage, birth of a mentally/physically ill baby and sometimes death to either mom, baby or both.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section:label">
+            <value>Have you previously delivered by caesarean section?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum:label">
+            <value>Have you previously delivered by vacuum?</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/previous_miscarriages:jr:constraintMsg">
             <value>Count of deliveries should be less than or equal to count of previous pregnancies</value>
@@ -897,6 +1118,30 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information/previous_pregnancies:label">
             <value>How many times have you been pregnant in the past?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_stillbirth/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_stillbirth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_stillbirth:label">
+            <value>A stillbirth is the loss of pregnancy over 6 months gestation. Have you ever had a stillbirth?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/rest_diet_note:label">
+            <value>I would advise you to rest, get a good balanced diet, do not do any heavy work, and try to practice family planning.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years:label">
+            <value>Was your last pregnancy 10 or more years ago?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years_note:label">
+            <value>It is important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information:label">
             <value>Pregnancy History</value>
@@ -1095,6 +1340,24 @@ Have you experienced:</value>
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>Quality of Care Survey</value>
           </text>
+          <text id="/pregnancy/rch_card/big_baby/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/rch_card/big_baby/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/rch_card/big_baby:label">
+            <value>ASK or look at RCH card: Have you been told your current pregnancy will be a big baby (more than 4 kg)?</value>
+          </text>
+          <text id="/pregnancy/rch_card/breech_position/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/rch_card/breech_position/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/rch_card/breech_position:label">
+            <value>ASK or look at RCH card: Have you been told your current pregnancy is in a breech position?</value>
+          </text>
           <text id="/pregnancy/rch_card/covid19_heath_card_note:label">
             <value>&lt;span style="color:#f58a1f"&gt; Before asking for the RCH card, please make sure you wash your hands with soap and please ask your client to wash their hands before handing over the card to you.&lt;/span&gt;</value>
           </text>
@@ -1112,6 +1375,27 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/rch_card/estimated_months_pregnant:label">
             <value>Enter estimated months pregnant</value>
+          </text>
+          <text id="/pregnancy/rch_card/facility_type/cottage_hospital:label">
+            <value>Cottage Hospital</value>
+          </text>
+          <text id="/pregnancy/rch_card/facility_type/referral_system:label">
+            <value>Referral System</value>
+          </text>
+          <text id="/pregnancy/rch_card/facility_type:label">
+            <value>At which type of facility were you advised to deliver?</value>
+          </text>
+          <text id="/pregnancy/rch_card/high_facility_medical_condition_note:label">
+            <value>Please try your best to regularly visit the clinic during your pregnany. It is also important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
+          </text>
+          <text id="/pregnancy/rch_card/higher_facility_delivery/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/rch_card/higher_facility_delivery/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/rch_card/higher_facility_delivery:label">
+            <value>Has a health worker advised you to deliver at a higher level facility than your local health facility such as a cottage hospital or referral hospital?</value>
           </text>
           <text id="/pregnancy/rch_card/is_delivery_date_written/no:label">
             <value>No</value>
@@ -1137,6 +1421,48 @@ Have you experienced:</value>
           <text id="/pregnancy/rch_card/last_lmp_date:label">
             <value>Enter Last Menstrual Period (LMP) date</value>
           </text>
+          <text id="/pregnancy/rch_card/malpresentation/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/rch_card/malpresentation/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/rch_card/malpresentation:label">
+            <value>ASK or look at RCH card: Have you been told your current pregnancy is in malpresentation?</value>
+          </text>
+          <text id="/pregnancy/rch_card/malpresentation_or_breech_big_baby_note:label">
+            <value>It is important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/cardiac_disease:label">
+            <value>Cardiac disease</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/diabetes:label">
+            <value>Diabetes</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/high_blood_pressure:label">
+            <value>High Blood pressure</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/none:label">
+            <value>None</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/sickle_cell:label">
+            <value>Sickle cell</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions:jr:constraintMsg">
+            <value>Cannot select "None" with other options</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions:label">
+            <value>Do you have any of the following medical conditions:</value>
+          </text>
+          <text id="/pregnancy/rch_card/multiple_pregnancy/no:label">
+            <value>No</value>
+          </text>
+          <text id="/pregnancy/rch_card/multiple_pregnancy/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/pregnancy/rch_card/multiple_pregnancy:label">
+            <value>ASK or look at RCH card (Box C): Have you been told you are having a multiple pregnancy?</value>
+          </text>
           <text id="/pregnancy/rch_card/remember_lmp/no:label">
             <value>No</value>
           </text>
@@ -1145,6 +1471,9 @@ Have you experienced:</value>
           </text>
           <text id="/pregnancy/rch_card/remember_lmp:label">
             <value>Do you remember your Last menstrual Period (LMP) date?</value>
+          </text>
+          <text id="/pregnancy/rch_card/rest_diet_note:label">
+            <value>I would advise you to rest, get a good balanced diet, do not do any heavy work, and try to practice family planning. It is also important for everyone to deliver in a health facility. You can never predict when there will be an emergency. If you do experience an emergency during delivery, you must be at a health facility to get the care you need to save you and your baby's life. If you have had any complications with pregnancy or delivery in the past, it is even more important that you go to a health facility this time for you and your baby's safety.</value>
           </text>
           <text id="/pregnancy/rch_card:label">
             <value>Pregnancy Estimation</value>
@@ -1416,6 +1745,30 @@ Have you experienced:</value>
           <text id="static_instance-decision_maker-4">
             <value>Don't know / Decline to answer</value>
           </text>
+          <text id="static_instance-delivery_complications-0">
+            <value>Prolonged labor (12 hours or more)</value>
+          </text>
+          <text id="static_instance-delivery_complications-1">
+            <value>Large perineal tear (close to anus)</value>
+          </text>
+          <text id="static_instance-delivery_complications-2">
+            <value>Retained placenta</value>
+          </text>
+          <text id="static_instance-delivery_complications-3">
+            <value>APH</value>
+          </text>
+          <text id="static_instance-delivery_complications-4">
+            <value>Postpartum hemorrhage</value>
+          </text>
+          <text id="static_instance-delivery_complications-5">
+            <value>Eclampsia</value>
+          </text>
+          <text id="static_instance-delivery_complications-6">
+            <value>Big baby (more than 4 kg)</value>
+          </text>
+          <text id="static_instance-delivery_complications-7">
+            <value>None</value>
+          </text>
           <text id="static_instance-delivery_location-0">
             <value>Home (mother's or other's)</value>
           </text>
@@ -1466,6 +1819,12 @@ Have you experienced:</value>
           </text>
           <text id="static_instance-facility_island-2">
             <value>Other</value>
+          </text>
+          <text id="static_instance-facility_type-0">
+            <value>Cottage Hospital</value>
+          </text>
+          <text id="static_instance-facility_type-1">
+            <value>Referral System</value>
           </text>
           <text id="static_instance-family_engagement-0">
             <value>Husband</value>
@@ -1560,6 +1919,21 @@ Have you experienced:</value>
           <text id="static_instance-marital_status-4">
             <value>Don't know/Decline to answer</value>
           </text>
+          <text id="static_instance-medical_condition-0">
+            <value>High Blood pressure</value>
+          </text>
+          <text id="static_instance-medical_condition-1">
+            <value>Diabetes</value>
+          </text>
+          <text id="static_instance-medical_condition-2">
+            <value>Sickle cell</value>
+          </text>
+          <text id="static_instance-medical_condition-3">
+            <value>Cardiac disease</value>
+          </text>
+          <text id="static_instance-medical_condition-4">
+            <value>None</value>
+          </text>
           <text id="static_instance-paid_for-0">
             <value>Visit/Service fee</value>
           </text>
@@ -1602,6 +1976,18 @@ Have you experienced:</value>
           <text id="static_instance-partner_highest_school_level-7">
             <value>Don't know / Decline to answer</value>
           </text>
+          <text id="static_instance-partner_not_present-0">
+            <value>Yes</value>
+          </text>
+          <text id="static_instance-partner_not_present-1">
+            <value>No, not allowed</value>
+          </text>
+          <text id="static_instance-partner_not_present-2">
+            <value>No, I don't know</value>
+          </text>
+          <text id="static_instance-partner_not_present-3">
+            <value>I don't have a partner</value>
+          </text>
           <text id="static_instance-pregnancy_issues-0">
             <value>Difficulty Breathing</value>
           </text>
@@ -1643,6 +2029,18 @@ Have you experienced:</value>
           </text>
           <text id="static_instance-pregnancy_issues-9">
             <value>Early labor pain before 9 months gestation</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-0">
+            <value>Too expensive</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-1">
+            <value>Don't know</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-2">
+            <value>Out of stock</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-3">
+            <value>Was not prescribed to me</value>
           </text>
           <text id="static_instance-roof_type-0">
             <value>Makuti</value>
@@ -1905,7 +2303,7 @@ Have you experienced:</value>
             <value>Huduma ya Vipimo na Ushauri ya awali ya mama wajawazito.</value>
           </text>
           <text id="/pregnancy/anc_visit_promotion/anc_visit_promotion_msg:label">
-            <value>Mara utakapojihisi kwamba ni mjamzito, ni muhimu kwenda kituo cha afya cha karibu kwa ajili ya huduma ya kliniki ya wajawazito (ANC). Unatakiwa kwenda kliniki ya wajawazito mara 4 katika muda wa ujauzito kama uliovyoelekezwa na mhudumu wa afya</value>
+            <value>Mara utakapojihisi kwamba ni mjamzito, ni muhimu kwenda kituo cha afya cha karibu kwa ajili ya huduma ya kliniki ya wajawazito (ANC). Unatakiwa kwenda kliniki ya wajawazito mara 8 katika muda wa ujauzito kama uliovyoelekezwa na mhudumu wa afya</value>
           </text>
           <text id="/pregnancy/anc_visit_promotion:label">
             <value>Uhamasishaji wa Matembeleo la ANC</value>
@@ -2033,13 +2431,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding:label">
             <value>Unatokwa na damu ukeni?</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_121:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_148:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions/no:label">
@@ -2069,13 +2467,13 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss:label">
             <value>Kupoteza fahamu</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_129:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_156:label">
             <value>-</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130/no:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130/yes:label">
+          <text id="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/pregnancy/danger_signs/emergency_danger_sign_note:label">
@@ -2242,6 +2640,19 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/education_and_prev_enrollment:label">
             <value>Kiwango cha elimu na usajili uliopita</value>
           </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility:label">
+            <value>Muulize mwenza: Je, utamruhusu <output value=" /pregnancy/client_name "/> kujifungulia katika kituo cha afya? 
+Hii inamaanisha kumsaidia kupata usafiri na pia katika kuhifadhi/kutunza pesa ya kulipia usafiri na gharama nyingine pia.</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility_note:label">
+            <value>Ni muhimu kwa kila mtu kujifungua kituo cha afya. Kwasababu huwezi kujua kama unaweza kupatwa na tatizo au dharura yoyote wakati wa kujifungua. Kama umepatwa na tatizo wakati wa kujifungua ni lazima ufike kituo cha afya ili kupata huduma muhimu kwa ajili yako na mtoto ili kuhakikisha usalama wako na mtoto. Kama uliwahi kupata matatizo yoyote kipindi cha nyuma katika ujauzito wako uliopita au wakati wa kujifungua. Pia ni muhimu zaidi kuenda kituo cha afya muda huu ili kuhakikisha usalama wako na mtoto.</value>
+          </text>
           <text id="/pregnancy/facility_delivery_importance/delivery_location/home:label">
             <value>Nyumbani (Kwa mama au nyengine)</value>
           </text>
@@ -2259,6 +2670,36 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/pregnancy/facility_delivery_importance/important_of_facility_delivery:label">
             <value>Ni muhimu kwa kila mtu kujifungua kituo cha afya. Kwasababu huwezi kujua kama unaweza kupatwa na tatizo au dharura yoyote wakati wa kujifungua. Kama umepatwa na tatizo wakati wa kujifungua ni lazima ufike kituo cha afya ili kupata huduma muhimu kwa ajili yako na mtoto ili kuhakikisha usalama wako na mtoto. Kama uliwahi kupata matatizo yoyote kipindi cha nyuma katika ujauzito wako uliopita au wakati wa kujifungua. Pia ni muhimu zaidi kuenda kituo cha afya muda huu ili kuhakikisha usalama wako na mtoto.</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_availability/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_availability/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_availability:label">
+            <value>Je, mwenza wa mteja wako amehudhuria katika tembeleo hili?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_available_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/don't_know:label">
+            <value>Hapana,sijiu</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/no_partner:label">
+            <value>Sina mwenza</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/not_allowed:label">
+            <value>Hapana, hajaniruhusu</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present:label">
+            <value>Je, mwenza wako kakuruhusu kujifungulia katika kituo cha afya na je atakusaidia kupata usafiri na pia kuhifadhi/kutunza pesa ya kulipia usafiri na gharama nyengine?</value>
+          </text>
+          <text id="/pregnancy/facility_delivery_importance/partner_not_present_note:label">
+            <value>Tafadhali zungumza na mwenza wako ili akusadie kuweza kujifungua katika kituo cha afya.</value>
           </text>
           <text id="/pregnancy/facility_delivery_importance:label">
             <value>Umuhimu wa Kujifungua Kituo cha afya</value>
@@ -2296,8 +2737,50 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/pregnancy/fam_engagement:label">
             <value>Kuwashirikisha wanafamilia</value>
           </text>
+          <text id="/pregnancy/group_summary/aph_risk:label">
+            <value>Kutokwa na damu nyingi kabla ya kujifungua</value>
+          </text>
+          <text id="/pregnancy/group_summary/big_baby_risk:label">
+            <value>Mtoto mkubwa( zaidi ya kilo 4)</value>
+          </text>
+          <text id="/pregnancy/group_summary/breech_position_risk:label">
+            <value>Mtoto kutanguliza makalio</value>
+          </text>
+          <text id="/pregnancy/group_summary/c_section_risk:label">
+            <value>Kujifungua kwa kupasuliwa</value>
+          </text>
+          <text id="/pregnancy/group_summary/cardiac_disease:label">
+            <value>Maradhi ya moyo</value>
+          </text>
+          <text id="/pregnancy/group_summary/diabetes:label">
+            <value>Kisukari</value>
+          </text>
+          <text id="/pregnancy/group_summary/enclampsia_risk:label">
+            <value>Kifafa cha mimba</value>
+          </text>
+          <text id="/pregnancy/group_summary/has_risk_assesment:label">
+            <value>&lt;strong&gt; Una hali hatarishi za wajawazito zifuatazo:&lt;/strong&gt;</value>
+          </text>
           <text id="/pregnancy/group_summary/healthy_note:label">
             <value>Unaaendelea vyema na huhitaji kwenda kituo cha Afya kwa sasa. Utarudi kumkagua tena wakati wa tembeleo jengine.</value>
+          </text>
+          <text id="/pregnancy/group_summary/high_blood_pressure:label">
+            <value>Shindikizo la damu</value>
+          </text>
+          <text id="/pregnancy/group_summary/higher_facility_delivery_risk:label">
+            <value>Kushauriwa kujifungua katika kituo cha afya kikubwa</value>
+          </text>
+          <text id="/pregnancy/group_summary/large_perineal_tear_risk:label">
+            <value>Kuchanika njia ya uzazi(karibia ya njia ya choo kikubwa)?</value>
+          </text>
+          <text id="/pregnancy/group_summary/local_herb_risk:label">
+            <value>Hatari za kutumia dawa za mitishamba</value>
+          </text>
+          <text id="/pregnancy/group_summary/malpresentation_risk:label">
+            <value>Milalo mibaya</value>
+          </text>
+          <text id="/pregnancy/group_summary/multiple_pregnancy_risk:label">
+            <value>Kutarajia kuwa na mapacha</value>
           </text>
           <text id="/pregnancy/group_summary/needs_anc_referral_note:label">
             <value>Ili kupatiwa huduma za mama mjamzito kwasababu una ujauzito wa miezi 6 au zaidi.</value>
@@ -2309,7 +2792,37 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Ili kushughulikia dalili nyengine za hatari.</value>
           </text>
           <text id="/pregnancy/group_summary/needs_referral_note:label">
-            <value>Unatakiwa uende kituo cha afya kutokana na sababu zifuatazo:</value>
+            <value>&lt;strong&gt;Unatakiwa uende kituo cha afya kutokana na sababu zifuatazo:&lt;/strong&gt;</value>
+          </text>
+          <text id="/pregnancy/group_summary/nutrition_restrictions_risk:label">
+            <value>Kuepuka kula baadhi ya vyakula</value>
+          </text>
+          <text id="/pregnancy/group_summary/partner_permission_risk:label">
+            <value>Mwenwa hajatoa ruhusa ya kujifungua kituo cha afya</value>
+          </text>
+          <text id="/pregnancy/group_summary/postpartum_hemorrage_risk:label">
+            <value>Kutokwa damu nyingi baada ya kujifungua</value>
+          </text>
+          <text id="/pregnancy/group_summary/previous_delivery_risk:label">
+            <value>Mimba iliyopita ilikuwa miaka kumi ilopita au zaidi</value>
+          </text>
+          <text id="/pregnancy/group_summary/previous_miscarriage_risk:label">
+            <value>Mimba kuharibika</value>
+          </text>
+          <text id="/pregnancy/group_summary/previous_stillbirth_risk:label">
+            <value>Kupoteza mtoto wakati wa kujifungua</value>
+          </text>
+          <text id="/pregnancy/group_summary/prolonged_labor_risk:label">
+            <value>Uchungu wa muda mrefu ( Zaidi ya masaa 12)</value>
+          </text>
+          <text id="/pregnancy/group_summary/retained_placenta_risk:label">
+            <value>Kondo la nyuma kukataa kutoka</value>
+          </text>
+          <text id="/pregnancy/group_summary/sickle_cell:label">
+            <value>Seli mundu</value>
+          </text>
+          <text id="/pregnancy/group_summary/vacuum_delivery_risk:label">
+            <value>Kujifungua kwa kusaidiwa kuvutwa na mashine</value>
           </text>
           <text id="/pregnancy/group_summary:label">
             <value>Muhtasari wa Tembeleo</value>
@@ -2388,6 +2901,18 @@ Ikiwa utalala kwenye chandarua kilicho na viatilifu utajikinga wewe na mtoto wak
           <text id="/pregnancy/maternal_nutrition/anemia_risk:label">
             <value>Mama wajawazito wote wapo katika hatari ya kupata tatizo la upungufu wa damu. Ni muhimu kutumia dawa za iron na folic zinazoengeza wingi wa damu ili kukinga tatizo la upungufu wa damu katika kipindi cha ujauzito na angalau miezi mitatu baada ya kujifungua. Kila mjamzito anapaswa kula dawa za iron na folic, hata kama hawana maumivu ya kichwa.</value>
           </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets:label">
+            <value>Je, ulipata vidonge vinavyozidisha waingi wa damu mwilini ulipokwenda katika kituo cha afya?</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/anemia_tablets_note:label">
+            <value>Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
+          </text>
           <text id="/pregnancy/maternal_nutrition/avoid_cahrcoal_and_soil:label">
             <value>Najua baadhi ya wakati unajisikia kula vitu kama vile mkaa au udongo. Jaribu kadiri unavyoweza kuepuka kula vitu hivyo, kwani unaweza kusababisha madhara kwako na kwa mtoto.</value>
           </text>
@@ -2405,6 +2930,33 @@ Tafadhali angalia ukurasa namba 2 katika bango kitita kwa maelezo zaidi.</value>
           </text>
           <text id="/pregnancy/maternal_nutrition/nutrition_advantage:label">
             <value>Kama unavyojua, Lishe ni muhimu sana kwa Mama wajawazito. Lishe duni inaweza kuathiriri vibaya afya yako na mtoto.</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/nutrition_restrictions/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/nutrition_restrictions/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/nutrition_restrictions:label">
+            <value>Je, kuna vyakula ambavyo unaviepuka kula wakati wa ujauzito (Kwa mfano, mayai) ?</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/out_of_stock_note:label">
+            <value>Mkumbushe mhudumu wa afya utakapoenda kituoni mara nyengine.</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/dont_know:label">
+            <value>Sijui</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/not_prescribed:label">
+            <value>Sijaadikiwa vidonge hivyo</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/out_of_stock:label">
+            <value>Vidonge vilikwisha</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets/too_expensive:label">
+            <value>Ghali sana</value>
+          </text>
+          <text id="/pregnancy/maternal_nutrition/reason_no_tablets:label">
+            <value>Kwanini hukupata vidonge vya kuzidisha wingi wa damu?</value>
           </text>
           <text id="/pregnancy/maternal_nutrition/traditional_medicine:label">
             <value>Ningependa tuzungumze kuhusu dawa za mitishamba wakati wa ujauzito na hatari zake kwa mama mjamzito na mtoto wake.
@@ -2758,6 +3310,42 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="/pregnancy/pregnancy_issues_group:label">
             <value>Maswala ya ujauzito</value>
           </text>
+          <text id="/pregnancy/pregnant_woman_information/count_of_stillbirths:jr:constraintMsg">
+            <value>Idadi iwe zaidi ya 0</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/count_of_stillbirths:label">
+            <value>Umepoteza watoto wangapi katika ujauzito zaidi ya miezi 6?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/aph:label">
+            <value>Kutokwa na damu nyingi kabla ya kujifungua</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/big_baby:label">
+            <value>Mtoto mkubwa( zaidi ya kilo 4)</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/eclampsia:label">
+            <value>Kifafa cha mimba</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/large_perineal_tear:label">
+            <value>Kuchanika njia ya uzazi(karibia ya njia ya choo kikubwa)?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/none:label">
+            <value>Hakuna mojawapo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/postpartum_hemorrage:label">
+            <value>Kutokwa damu nyingi baada ya kujifungua</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/prolonged_labor:label">
+            <value>Uchungu wa muda mrefu( Zaidi ya masaa 12)</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications/retained_placenta:label">
+            <value>Kondo la nyuma kukataa kutoka</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications:jr:constraintMsg">
+            <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/delivery_complications:label">
+            <value>Je umeshawahi kuwa na haya yafuatayo wakati ukijifungua katika mimba zilizopita?</value>
+          </text>
           <text id="/pregnancy/pregnant_woman_information/first_time_pregnant/no:label">
             <value>Hapana</value>
           </text>
@@ -2773,6 +3361,38 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="/pregnancy/pregnant_woman_information/living_children:label">
             <value>Watoto wangapi kati ya uliojifungua ambao bado wapo hai?</value>
           </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs:label">
+            <value>Je, unatumia dawa za mitishamba wakati wa ujauzito wako?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/local_herbs_note:label">
+            <value>Ningependa tuzungumze kuhusu dawa za mitishamba wakati wa ujauzito na hatari zake kwa mama mjamzito na mtoto wake.
+Wanawake wengi wanatumia mitishamba kama mpamba wake, shajaratul Maryam, mzalia nyuma na tangawizi kuongeza uchungu, kuponya tumbo, kupunguza homa za asubuhi au hata kuongeza damu. Lakini mitishamba inapotumiwa kwa wingi bila ya ushauri wa daktari husababisha uharibikaji wa ujauzito, kuzaa mtoto mlemavu na hata vifo. 
+Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipimo muafaka, si vyema mjamzito kutumia kwa usalama wake na wa mtoto wake, mama anpohisi kutumia lazima amueleze daktari wake au mhudumu wa kliniki.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section:label">
+            <value>Je ulishawahi kujifungua kwa kupasuliwa?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum:label">
+            <value>Je ulishawahi kujifungua kwa kusaidiwa kuvutwa na mashine?</value>
+          </text>
           <text id="/pregnancy/pregnant_woman_information/previous_miscarriages:jr:constraintMsg">
             <value>Idadi ya kujifungua iwe ni ndogo au sawa sawa na idadi ya ujauzito.</value>
           </text>
@@ -2784,6 +3404,30 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </text>
           <text id="/pregnancy/pregnant_woman_information/previous_pregnancies:label">
             <value>Ni mara ngapi umekuwa mjamzito kabla ya ujauzito huu?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_stillbirth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_stillbirth/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/previous_stillbirth:label">
+            <value>Je, ushawahi kupoteza watoto katika ujauzito zaidi ya miezi 6?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/rest_diet_note:label">
+            <value>Nakushauri upumzike kwa wingi, ule vyakula vyenye virutubisho, usifanye kazi ngumu na pia jitahidi kutumia uzazi wa mpango.</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years:label">
+            <value>Je, mimba yako ya mwisho ilikuwa miaka 10 iliyopita au zaidi?</value>
+          </text>
+          <text id="/pregnancy/pregnant_woman_information/ten_or_more_years_note:label">
+            <value>Ni muhimu kwa kila mtu kujifungua kituo cha afya. Kwasababu huwezi kujua kama unaweza kupatwa na tatizo au dharura yoyote wakati wa kujifungua. Kama umepatwa na tatizo wakati wa kujifungua ni lazima ufike kituo cha afya ili kupata huduma muhimu kwa ajili yako na mtoto ili kuhakikisha usalama wako na mtoto. Kama uliwahi kupata matatizo yoyote kipindi cha nyuma katika ujauzito wako uliopita au wakati wa kujifungua. Pia ni muhimu zaidi kuenda kituo cha afya muda huu ili kuhakikisha usalama wako na mtoto.</value>
           </text>
           <text id="/pregnancy/pregnant_woman_information:label">
             <value>Historia ya Ujauzito</value>
@@ -2982,6 +3626,24 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="/pregnancy/quality_of_survery_care:label">
             <value>Utafiti wa huduma bora</value>
           </text>
+          <text id="/pregnancy/rch_card/big_baby/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/rch_card/big_baby/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/rch_card/big_baby:label">
+            <value>Muulize mama au angalia kadi yake ya kilinik: Je umeambiwa kuwa katika uja uzito wako huu mtoto atakuwa mkubwa(zaidi ya kilo 4)?</value>
+          </text>
+          <text id="/pregnancy/rch_card/breech_position/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/rch_card/breech_position/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/rch_card/breech_position:label">
+            <value>Muulize mama au angalia kadi yake ya kilinik: Je umeambiwa kuwa katika uja uzito wako huu mtoto katanguliza makalio?</value>
+          </text>
           <text id="/pregnancy/rch_card/covid19_heath_card_note:label">
             <value>&lt;span style="color:#f58a1f"&gt; Kabla ya kuomba kadi la kliniki la mama mjamzito, hakikisha unanawa mikono yako vizuri kwa maji na sabuni na pia muombe mteja aoshe mikono yake kabla ya kukukabidhi wewe kadi hiyo.&lt;/span&gt;</value>
           </text>
@@ -2999,6 +3661,27 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </text>
           <text id="/pregnancy/rch_card/estimated_months_pregnant:label">
             <value>Ingiza miezi inayokadiriwa ujauzito</value>
+          </text>
+          <text id="/pregnancy/rch_card/facility_type/cottage_hospital:label">
+            <value>Koteji hospitali</value>
+          </text>
+          <text id="/pregnancy/rch_card/facility_type/referral_system:label">
+            <value>Hospitali ya rufaa</value>
+          </text>
+          <text id="/pregnancy/rch_card/facility_type:label">
+            <value>Je, ulishauriwa ujifungulie katika kituo gani?</value>
+          </text>
+          <text id="/pregnancy/rch_card/high_facility_medical_condition_note:label">
+            <value>Tafadhali jaribu kuhudhuria kliniki mara kwa mara wakati wa ujauzito wako. Pia, ni muhimu kwa kila mtu kujifungua kituo cha afya. Kwasababu huwezi kujua kama unaweza kupatwa na tatizo au dharura yoyote wakati wa kujifungua. Kama umepatwa na tatizo wakati wa kujifungua ni lazima ufike kituo cha afya ili kupata huduma muhimu kwa ajili yako na mtoto ili kuhakikisha usalama wako na mtoto. Kama uliwahi kupata matatizo yoyote kipindi cha nyuma katika ujauzito wako uliopita au wakati wa kujifungua. Pia ni muhimu zaidi kuenda kituo cha afya muda huu ili kuhakikisha usalama wako na mtoto.</value>
+          </text>
+          <text id="/pregnancy/rch_card/higher_facility_delivery/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/rch_card/higher_facility_delivery/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/rch_card/higher_facility_delivery:label">
+            <value>Je umeshauriwa na Mhudumu wa Afya kujifungulia kituo kikubwa zaidi ya hicho unachopatia huduma kama hospitali?</value>
           </text>
           <text id="/pregnancy/rch_card/is_delivery_date_written/no:label">
             <value>Hapana</value>
@@ -3024,6 +3707,48 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="/pregnancy/rch_card/last_lmp_date:label">
             <value>Ingiza tarehe yake ya mwisho alopata hedhi.</value>
           </text>
+          <text id="/pregnancy/rch_card/malpresentation/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/rch_card/malpresentation/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/rch_card/malpresentation:label">
+            <value>Muulize mama au angalia kadi ya klinik: Je umeambiwa kwa katika uja uzito wako mtoto atakuwa na mlalo mbaya?</value>
+          </text>
+          <text id="/pregnancy/rch_card/malpresentation_or_breech_big_baby_note:label">
+            <value>Ni muhimu kwa kila mtu kujifungua kituo cha afya. Kwasababu huwezi kujua kama unaweza kupatwa na tatizo au dharura yoyote wakati wa kujifungua. Kama umepatwa na tatizo wakati wa kujifungua ni lazima ufike kituo cha afya ili kupata huduma muhimu kwa ajili yako na mtoto ili kuhakikisha usalama wako na mtoto. Kama uliwahi kupata matatizo yoyote kipindi cha nyuma katika ujauzito wako uliopita au wakati wa kujifungua. Pia ni muhimu zaidi kuenda kituo cha afya muda huu ili kuhakikisha usalama wako na mtoto.</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/cardiac_disease:label">
+            <value>Maradhi ya moyo</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/diabetes:label">
+            <value>Kisukari</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/high_blood_pressure:label">
+            <value>Shindikizo la damu</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/none:label">
+            <value>Hakuna mojawapo</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions/sickle_cell:label">
+            <value>Seli mundu</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions:jr:constraintMsg">
+            <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
+          <text id="/pregnancy/rch_card/medical_conditions:label">
+            <value>Je unamatatizo yoyote ya kiafya yafuatayo?</value>
+          </text>
+          <text id="/pregnancy/rch_card/multiple_pregnancy/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/pregnancy/rch_card/multiple_pregnancy/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/pregnancy/rch_card/multiple_pregnancy:label">
+            <value>Uliza au angalia kwenye kadi ya RCH (Box C): Je unatarajia kuwa na mapacha?</value>
+          </text>
           <text id="/pregnancy/rch_card/remember_lmp/no:label">
             <value>Hapana</value>
           </text>
@@ -3032,6 +3757,9 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </text>
           <text id="/pregnancy/rch_card/remember_lmp:label">
             <value>Je unakumbuka mara ya mwisho kupata hedhi yako?</value>
+          </text>
+          <text id="/pregnancy/rch_card/rest_diet_note:label">
+            <value>Nakushauri upumzike kwa wingi, ule vyakula vyenye virutubisho, usifanye kazi ngumu na pia jitahidi kutumia uzazi wa mpango.</value>
           </text>
           <text id="/pregnancy/rch_card:label">
             <value>Makadirio ya Ujauzito</value>
@@ -3303,6 +4031,30 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="static_instance-decision_maker-4">
             <value>Sijui/siwezi kujibu</value>
           </text>
+          <text id="static_instance-delivery_complications-0">
+            <value>Uchungu wa muda mrefu( Zaidi ya masaa 12)</value>
+          </text>
+          <text id="static_instance-delivery_complications-1">
+            <value>Kuchanika njia ya uzazi(karibia ya njia ya choo kikubwa)?</value>
+          </text>
+          <text id="static_instance-delivery_complications-2">
+            <value>Kondo la nyuma kukataa kutoka</value>
+          </text>
+          <text id="static_instance-delivery_complications-3">
+            <value>Kutokwa na damu nyingi kabla ya kujifungua</value>
+          </text>
+          <text id="static_instance-delivery_complications-4">
+            <value>Kutokwa damu nyingi baada ya kujifungua</value>
+          </text>
+          <text id="static_instance-delivery_complications-5">
+            <value>Kifafa cha mimba</value>
+          </text>
+          <text id="static_instance-delivery_complications-6">
+            <value>Mtoto mkubwa( zaidi ya kilo 4)</value>
+          </text>
+          <text id="static_instance-delivery_complications-7">
+            <value>Hakuna mojawapo</value>
+          </text>
           <text id="static_instance-delivery_location-0">
             <value>Nyumbani (Kwa mama au nyengine)</value>
           </text>
@@ -3353,6 +4105,12 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </text>
           <text id="static_instance-facility_island-2">
             <value>Kwengine</value>
+          </text>
+          <text id="static_instance-facility_type-0">
+            <value>Koteji hospitali</value>
+          </text>
+          <text id="static_instance-facility_type-1">
+            <value>Hospitali ya rufaa</value>
           </text>
           <text id="static_instance-family_engagement-0">
             <value>Mume/Mwenza</value>
@@ -3447,6 +4205,21 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="static_instance-marital_status-4">
             <value>Sijui/siwezi kujibu</value>
           </text>
+          <text id="static_instance-medical_condition-0">
+            <value>Shindikizo la damu</value>
+          </text>
+          <text id="static_instance-medical_condition-1">
+            <value>Kisukari</value>
+          </text>
+          <text id="static_instance-medical_condition-2">
+            <value>Seli mundu</value>
+          </text>
+          <text id="static_instance-medical_condition-3">
+            <value>Maradhi ya moyo</value>
+          </text>
+          <text id="static_instance-medical_condition-4">
+            <value>Hakuna mojawapo</value>
+          </text>
           <text id="static_instance-paid_for-0">
             <value>Malipo ya tembeleo/Huduma</value>
           </text>
@@ -3489,6 +4262,18 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           <text id="static_instance-partner_highest_school_level-7">
             <value>Sijui/siwezi kujibu</value>
           </text>
+          <text id="static_instance-partner_not_present-0">
+            <value>Ndio</value>
+          </text>
+          <text id="static_instance-partner_not_present-1">
+            <value>Hapana, hajaniruhusu</value>
+          </text>
+          <text id="static_instance-partner_not_present-2">
+            <value>Hapana,sijiu</value>
+          </text>
+          <text id="static_instance-partner_not_present-3">
+            <value>Sina mwenza</value>
+          </text>
           <text id="static_instance-pregnancy_issues-0">
             <value>Anapumua kwa shida</value>
           </text>
@@ -3530,6 +4315,18 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </text>
           <text id="static_instance-pregnancy_issues-9">
             <value>Uchungu wa mapema kabla ya miezi tisa</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-0">
+            <value>Ghali sana</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-1">
+            <value>Sijui</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-2">
+            <value>Vidonge vilikwisha</value>
+          </text>
+          <text id="static_instance-reason_no_tablets-3">
+            <value>Sijaadikiwa vidonge hivyo</value>
           </text>
           <text id="static_instance-roof_type-0">
             <value>Makuti</value>
@@ -3732,6 +4529,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             </contact>
           </inputs>
           <client_name/>
+          <enabel/>
           <n_pregnancy_visits/>
           <n_previous_anc_visits/>
           <previous_hiv_status/>
@@ -3811,13 +4609,29 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <first_time_pregnant/>
             <previous_pregnancies/>
             <previous_miscarriages/>
+            <rest_diet_note/>
             <max_alive_babies/>
             <living_children/>
+            <previous_delivery_by_c_section/>
+            <previous_delivery_by_vacuum/>
+            <previous_stillbirth/>
+            <count_of_stillbirths/>
+            <delivery_complications/>
+            <ten_or_more_years/>
+            <ten_or_more_years_note/>
+            <local_herbs/>
+            <local_herbs_note/>
           </pregnant_woman_information>
           <facility_delivery_importance>
             <delivery_location/>
             <important_of_facility_delivery/>
             <encourage_mother_if_delivered_at_facility/>
+            <partner_available_note_to_chv/>
+            <partner_availability/>
+            <allow_partner_to_deliver_facility/>
+            <partner_not_present/>
+            <allow_partner_to_deliver_facility_note/>
+            <partner_not_present_note/>
           </facility_delivery_importance>
           <rch_card>
             <covid19_heath_card_note/>
@@ -3828,14 +4642,24 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <last_lmp_date/>
             <estimated_months_pregnant/>
             <edd_note/>
+            <multiple_pregnancy/>
+            <rest_diet_note/>
+            <big_baby/>
+            <malpresentation/>
+            <breech_position/>
+            <malpresentation_or_breech_big_baby_note/>
+            <medical_conditions/>
+            <higher_facility_delivery/>
+            <high_facility_medical_condition_note/>
+            <facility_type/>
           </rch_card>
           <EDD/>
           <gestation_in_weeks/>
           <danger_signs>
             <danger_sign_intro/>
             <danger_sign_table_1>
-              <generated_table_list_label_121/>
-              <reserved_name_for_field_list_labels_122/>
+              <generated_table_list_label_148/>
+              <reserved_name_for_field_list_labels_149/>
               <danger_sign_vaginal_bleeding/>
               <danger_sign_abdominal_pain/>
               <danger_sign_severe_headache/>
@@ -3844,8 +4668,8 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <danger_sign_note_to_chv/>
             <observe_danger_signs/>
             <danger_sign_table_2>
-              <generated_table_list_label_129/>
-              <reserved_name_for_field_list_labels_130/>
+              <generated_table_list_label_156/>
+              <reserved_name_for_field_list_labels_157/>
               <danger_sign_unconsciouss/>
               <danger_sign_difficult_breathing/>
               <danger_sign_convulsions/>
@@ -3925,10 +4749,15 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             <breast_problem/>
           </early_breastfeeding>
           <maternal_nutrition>
+            <nutrition_restrictions/>
             <nutrition_advantage/>
             <eat_more_vegetables/>
             <avoid_tea_coffee/>
             <avoid_cahrcoal_and_soil/>
+            <anemia_tablets/>
+            <anemia_tablets_note/>
+            <reason_no_tablets/>
+            <out_of_stock_note/>
             <anemia_risk/>
             <traditional_medicine/>
           </maternal_nutrition>
@@ -3987,6 +4816,30 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
             </subgroup_multiple_wives>
           </personal_information>
           <group_summary>
+            <has_risk_assesment/>
+            <c_section_risk/>
+            <vacuum_delivery_risk/>
+            <previous_stillbirth_risk/>
+            <prolonged_labor_risk/>
+            <large_perineal_tear_risk/>
+            <retained_placenta_risk/>
+            <aph_risk/>
+            <postpartum_hemorrage_risk/>
+            <enclampsia_risk/>
+            <big_baby_risk/>
+            <previous_miscarriage_risk/>
+            <multiple_pregnancy_risk/>
+            <malpresentation_risk/>
+            <breech_position_risk/>
+            <high_blood_pressure/>
+            <diabetes/>
+            <sickle_cell/>
+            <cardiac_disease/>
+            <higher_facility_delivery_risk/>
+            <partner_permission_risk/>
+            <previous_delivery_risk/>
+            <nutrition_restrictions_risk/>
+            <local_herb_risk/>
             <healthy_note/>
             <needs_referral_note/>
             <needs_referral_danger_signs/>
@@ -4192,58 +5045,58 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
         <root>
           <item>
             <itextId>static_instance-facility_district-0</itextId>
-            <choice_filter>unguja</choice_filter>
             <name>north_a</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-1</itextId>
-            <choice_filter>unguja</choice_filter>
             <name>north_b</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-2</itextId>
-            <choice_filter>unguja</choice_filter>
             <name>central</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-3</itextId>
-            <choice_filter>unguja</choice_filter>
             <name>south</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-4</itextId>
-            <choice_filter>unguja</choice_filter>
             <name>west_a</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-5</itextId>
-            <choice_filter>unguja</choice_filter>
             <name>west_b</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-6</itextId>
-            <choice_filter>unguja</choice_filter>
             <name>urban</name>
+            <choice_filter>unguja</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-7</itextId>
-            <choice_filter>pemba</choice_filter>
             <name>chakechake</name>
+            <choice_filter>pemba</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-8</itextId>
-            <choice_filter>pemba</choice_filter>
             <name>micheweni</name>
+            <choice_filter>pemba</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-9</itextId>
-            <choice_filter>pemba</choice_filter>
             <name>mkoani</name>
+            <choice_filter>pemba</choice_filter>
           </item>
           <item>
             <itextId>static_instance-facility_district-10</itextId>
-            <choice_filter>pemba</choice_filter>
             <name>wete</name>
+            <choice_filter>pemba</choice_filter>
           </item>
         </root>
       </instance>
@@ -4251,323 +5104,323 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
         <root>
           <item>
             <itextId>static_instance-anc_visit_facility-0</itextId>
-            <choice_filter>chakechake</choice_filter>
             <name>chakechakedistricthospital</name>
+            <choice_filter>chakechake</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-1</itextId>
-            <choice_filter>chakechake</choice_filter>
             <name>pujiniphcu+</name>
+            <choice_filter>chakechake</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-2</itextId>
-            <choice_filter>chakechake</choice_filter>
             <name>tundauwaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-3</itextId>
-            <choice_filter>chakechake</choice_filter>
             <name>vitongojiphcc</name>
+            <choice_filter>chakechake</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-4</itextId>
-            <choice_filter>chakechake</choice_filter>
             <name>weshaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-5</itextId>
-            <choice_filter>micheweni</choice_filter>
             <name>kondephcu+</name>
+            <choice_filter>micheweni</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-6</itextId>
-            <choice_filter>micheweni</choice_filter>
             <name>makangalephcu+</name>
+            <choice_filter>micheweni</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-7</itextId>
-            <choice_filter>micheweni</choice_filter>
             <name>maziwangombephcu+</name>
+            <choice_filter>micheweni</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-8</itextId>
-            <choice_filter>micheweni</choice_filter>
             <name>micheweniphcc</name>
+            <choice_filter>micheweni</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-9</itextId>
-            <choice_filter>micheweni</choice_filter>
             <name>wingwiphcu+</name>
+            <choice_filter>micheweni</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-10</itextId>
-            <choice_filter>micheweni</choice_filter>
             <name>kiuyumbuyuniphcu+</name>
+            <choice_filter>micheweni</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-11</itextId>
-            <choice_filter>mkoani</choice_filter>
             <name>bogoaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-12</itextId>
-            <choice_filter>mkoani</choice_filter>
             <name>kengejaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-13</itextId>
-            <choice_filter>mkoani</choice_filter>
             <name>abdallahmzeedistricthospital</name>
+            <choice_filter>mkoani</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-14</itextId>
-            <choice_filter>mkoani</choice_filter>
             <name>michenzaniphcu+</name>
+            <choice_filter>mkoani</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-15</itextId>
-            <choice_filter>wete</choice_filter>
             <name>fundophcu+</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-16</itextId>
-            <choice_filter>wete</choice_filter>
             <name>kojaniphcu+</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-17</itextId>
-            <choice_filter>wete</choice_filter>
             <name>makongeniphcu+</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-18</itextId>
-            <choice_filter>wete</choice_filter>
             <name>wetedistricthospital</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-19</itextId>
-            <choice_filter>wete</choice_filter>
             <name>mzambarauniphcu+</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-20</itextId>
-            <choice_filter>wete</choice_filter>
             <name>junguniphcu+</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-21</itextId>
-            <choice_filter>wete</choice_filter>
             <name>ukunjwiphcu+</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-22</itextId>
-            <choice_filter>wete</choice_filter>
             <name>uondwephcu+</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-23</itextId>
-            <choice_filter>central</choice_filter>
             <name>chwakaphcu+</name>
+            <choice_filter>central</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-24</itextId>
-            <choice_filter>central</choice_filter>
             <name>mweraphcu+</name>
+            <choice_filter>central</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-25</itextId>
-            <choice_filter>central</choice_filter>
             <name>ungujaukuuphcu+</name>
+            <choice_filter>central</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-26</itextId>
-            <choice_filter>central</choice_filter>
             <name>uziniphcu+</name>
+            <choice_filter>central</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-27</itextId>
-            <choice_filter>central</choice_filter>
             <name>uroaphcu+</name>
+            <choice_filter>central</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-28</itextId>
-            <choice_filter>north_a</choice_filter>
             <name>kivungedistricthospital</name>
+            <choice_filter>north_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-29</itextId>
-            <choice_filter>north_a</choice_filter>
             <name>matemwephcu+</name>
+            <choice_filter>north_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-30</itextId>
-            <choice_filter>north_a</choice_filter>
             <name>nungwiphcu+</name>
+            <choice_filter>north_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-31</itextId>
-            <choice_filter>north_a</choice_filter>
             <name>pwanimchanganiphcu+</name>
+            <choice_filter>north_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-32</itextId>
-            <choice_filter>north_a</choice_filter>
             <name>tumbatugomaniphcu+</name>
+            <choice_filter>north_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-33</itextId>
-            <choice_filter>north_a</choice_filter>
             <name>kendwaphcu+</name>
+            <choice_filter>north_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-34</itextId>
-            <choice_filter>north_b</choice_filter>
             <name>bumbwinimisufiniphcu+</name>
+            <choice_filter>north_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-35</itextId>
-            <choice_filter>north_b</choice_filter>
             <name>dongevijibweniphcu+</name>
+            <choice_filter>north_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-36</itextId>
-            <choice_filter>north_b</choice_filter>
             <name>kiongwephcu</name>
+            <choice_filter>north_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-37</itextId>
-            <choice_filter>north_b</choice_filter>
             <name>kitopephcu</name>
+            <choice_filter>north_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-38</itextId>
-            <choice_filter>north_b</choice_filter>
             <name>mahondaphcu+</name>
+            <choice_filter>north_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-39</itextId>
-            <choice_filter>south</choice_filter>
             <name>jambianiphcu+</name>
+            <choice_filter>south</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-40</itextId>
-            <choice_filter>south</choice_filter>
             <name>makunduchidistricthospital</name>
+            <choice_filter>south</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-41</itextId>
-            <choice_filter>south</choice_filter>
             <name>muyuniphcu+</name>
+            <choice_filter>south</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-42</itextId>
-            <choice_filter>south</choice_filter>
             <name>bwejuuphcu+</name>
+            <choice_filter>south</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-43</itextId>
-            <choice_filter>urban</choice_filter>
             <name>chumbuniphcu+</name>
+            <choice_filter>urban</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-44</itextId>
-            <choice_filter>urban</choice_filter>
             <name>mnazimmojahospital</name>
+            <choice_filter>urban</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-45</itextId>
-            <choice_filter>urban</choice_filter>
             <name>mwembeladumchclinic</name>
+            <choice_filter>urban</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-46</itextId>
-            <choice_filter>urban</choice_filter>
             <name>sebleniphcu+</name>
+            <choice_filter>urban</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-47</itextId>
-            <choice_filter>west_b</choice_filter>
             <name>chukwaniphcu+</name>
+            <choice_filter>west_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-48</itextId>
-            <choice_filter>west_b</choice_filter>
             <name>fuoniphcu+</name>
+            <choice_filter>west_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-49</itextId>
-            <choice_filter>west_b</choice_filter>
             <name>kombeniphcu+</name>
+            <choice_filter>west_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-50</itextId>
-            <choice_filter>west_a</choice_filter>
             <name>mtofaaniphcu+(kinuni)</name>
+            <choice_filter>west_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-51</itextId>
-            <choice_filter>west_a</choice_filter>
             <name>bumbwisudiphcu+</name>
+            <choice_filter>west_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-52</itextId>
-            <choice_filter>west_a</choice_filter>
             <name>selemphcu+</name>
+            <choice_filter>west_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-53</itextId>
-            <choice_filter>chakechake</choice_filter>
             <name>other</name>
+            <choice_filter>chakechake</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-54</itextId>
-            <choice_filter>micheweni</choice_filter>
             <name>other</name>
+            <choice_filter>micheweni</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-55</itextId>
-            <choice_filter>mkoani</choice_filter>
             <name>other</name>
+            <choice_filter>mkoani</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-56</itextId>
-            <choice_filter>wete</choice_filter>
             <name>other</name>
+            <choice_filter>wete</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-57</itextId>
-            <choice_filter>central</choice_filter>
             <name>other</name>
+            <choice_filter>central</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-58</itextId>
-            <choice_filter>north_a</choice_filter>
             <name>other</name>
+            <choice_filter>north_a</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-59</itextId>
-            <choice_filter>north_b</choice_filter>
             <name>other</name>
+            <choice_filter>north_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-60</itextId>
-            <choice_filter>south</choice_filter>
             <name>other</name>
+            <choice_filter>south</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-61</itextId>
-            <choice_filter>urban</choice_filter>
             <name>other</name>
+            <choice_filter>urban</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-62</itextId>
-            <choice_filter>west_b</choice_filter>
             <name>other</name>
+            <choice_filter>west_b</choice_filter>
           </item>
           <item>
             <itextId>static_instance-anc_visit_facility-63</itextId>
-            <choice_filter>west_a</choice_filter>
             <name>other</name>
+            <choice_filter>west_a</choice_filter>
           </item>
         </root>
       </instance>
@@ -5019,7 +5872,119 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
           </item>
         </root>
       </instance>
-      <bind nodeset="/pregnancy/inputs" relevant="false()"/>
+      <instance id="delivery_complications">
+        <root>
+          <item>
+            <itextId>static_instance-delivery_complications-0</itextId>
+            <name>prolonged_labor</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_complications-1</itextId>
+            <name>large_perineal_tear</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_complications-2</itextId>
+            <name>retained_placenta</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_complications-3</itextId>
+            <name>aph</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_complications-4</itextId>
+            <name>postpartum_hemorrage</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_complications-5</itextId>
+            <name>eclampsia</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_complications-6</itextId>
+            <name>big_baby</name>
+          </item>
+          <item>
+            <itextId>static_instance-delivery_complications-7</itextId>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="medical_condition">
+        <root>
+          <item>
+            <itextId>static_instance-medical_condition-0</itextId>
+            <name>high_blood_pressure</name>
+          </item>
+          <item>
+            <itextId>static_instance-medical_condition-1</itextId>
+            <name>diabetes</name>
+          </item>
+          <item>
+            <itextId>static_instance-medical_condition-2</itextId>
+            <name>sickle_cell</name>
+          </item>
+          <item>
+            <itextId>static_instance-medical_condition-3</itextId>
+            <name>cardiac_disease</name>
+          </item>
+          <item>
+            <itextId>static_instance-medical_condition-4</itextId>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="reason_no_tablets">
+        <root>
+          <item>
+            <itextId>static_instance-reason_no_tablets-0</itextId>
+            <name>too_expensive</name>
+          </item>
+          <item>
+            <itextId>static_instance-reason_no_tablets-1</itextId>
+            <name>dont_know</name>
+          </item>
+          <item>
+            <itextId>static_instance-reason_no_tablets-2</itextId>
+            <name>out_of_stock</name>
+          </item>
+          <item>
+            <itextId>static_instance-reason_no_tablets-3</itextId>
+            <name>not_prescribed</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_type">
+        <root>
+          <item>
+            <itextId>static_instance-facility_type-0</itextId>
+            <name>cottage_hospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_type-1</itextId>
+            <name>referral_system</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="partner_not_present">
+        <root>
+          <item>
+            <itextId>static_instance-partner_not_present-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_not_present-1</itextId>
+            <name>not_allowed</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_not_present-2</itextId>
+            <name>don't_know</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_not_present-3</itextId>
+            <name>no_partner</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/pregnancy/inputs" relevant="0"/>
       <bind nodeset="/pregnancy/inputs/due_date" type="string"/>
       <bind nodeset="/pregnancy/inputs/due_date_human_readable" type="string"/>
       <bind nodeset="/pregnancy/inputs/client_EDD" type="string"/>
@@ -5032,6 +5997,7 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
       <bind nodeset="/pregnancy/inputs/contact/name" type="string"/>
       <bind nodeset="/pregnancy/inputs/contact/date_of_birth" type="string"/>
       <bind nodeset="/pregnancy/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/pregnancy/enabel" type="string" calculate="instance('contact-summary')/context/enabel"/>
       <bind nodeset="/pregnancy/n_pregnancy_visits" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_pregnancy_visits,'')"/>
       <bind nodeset="/pregnancy/n_previous_anc_visits" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_previous_anc_visits,'')"/>
       <bind nodeset="/pregnancy/previous_hiv_status" type="string" calculate="if( /pregnancy/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/previous_hiv_status,'false')"/>
@@ -5095,30 +6061,66 @@ Dawa za miti shamba ni hatari kwani hazijathibitishwa kitaalamu wala hazina kipi
       <bind nodeset="/pregnancy/visit_introduction/delivery_form_note" readonly="true()" type="string" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/visit_introduction/viable_pregnancy" type="select1" relevant="selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/visit_introduction/sympathy_note" readonly="true()" type="string" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)"/>
-      <bind nodeset="/pregnancy/visit_introduction/date_of_pregnancy_loss" type="date" jr:constraintMsg="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg')" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" required="true()" constraint=". &lt;= today()"/>
+      <bind nodeset="/pregnancy/visit_introduction/date_of_pregnancy_loss" type="date" jr:constraintMsg="jr:itext('/pregnancy/visit_introduction/date_of_pregnancy_loss:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;no&quot;)" constraint=". &lt;= today()"/>
       <bind nodeset="/pregnancy/visit_introduction/miscarriage_or_stillbirth" type="string" calculate="if((decimal-date-time( /pregnancy/client_EDD_c ) - decimal-date-time( /pregnancy/visit_introduction/date_of_pregnancy_loss )) &gt; ( /pregnancy/week  * 12), &quot;miscarriage&quot;, &quot;stillbirth&quot;)"/>
       <bind nodeset="/pregnancy/pregnant_woman_information" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0)"/>
       <bind nodeset="/pregnancy/pregnant_woman_information/first_time_pregnant" type="select1" required="true()"/>
-      <bind nodeset="/pregnancy/pregnant_woman_information/previous_pregnancies" type="int" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg')" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" constraint=". &gt;= 1 and . &lt;= 20"/>
-      <bind nodeset="/pregnancy/pregnant_woman_information/previous_miscarriages" type="int" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_miscarriages:jr:constraintMsg')" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/pregnant_woman_information/previous_pregnancies )"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/previous_pregnancies" type="int" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_pregnancies:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" constraint=". &gt;= 1 and . &lt;= 20"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/previous_miscarriages" type="int" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/previous_miscarriages:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/pregnant_woman_information/previous_pregnancies )"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/rest_diet_note" readonly="true()" type="string" relevant=" /pregnancy/pregnant_woman_information/previous_miscarriages  &gt; 0" required="true()"/>
       <bind nodeset="/pregnancy/pregnant_woman_information/max_alive_babies" type="string" calculate="( /pregnancy/pregnant_woman_information/previous_pregnancies -  /pregnancy/pregnant_woman_information/previous_miscarriages )*4"/>
-      <bind nodeset="/pregnancy/pregnant_woman_information/living_children" type="int" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/living_children:jr:constraintMsg')" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()" constraint="int(.) &gt;= 0 and int(.) &lt;= (int( /pregnancy/pregnant_woman_information/previous_pregnancies )- int( /pregnancy/pregnant_woman_information/previous_miscarriages ))*4"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/living_children" type="int" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/living_children:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" constraint="int(.) &gt;= 0 and int(.) &lt;= int( /pregnancy/pregnant_woman_information/max_alive_babies )"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot; and selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no') and  /pregnancy/pregnant_woman_information/previous_pregnancies  &gt;  /pregnancy/pregnant_woman_information/previous_miscarriages " required="true()"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot; and selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no') and  /pregnancy/pregnant_woman_information/previous_pregnancies  &gt;  /pregnancy/pregnant_woman_information/previous_miscarriages " required="true()"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/previous_stillbirth" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot; and selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no') and  /pregnancy/pregnant_woman_information/previous_pregnancies  &gt;  /pregnancy/pregnant_woman_information/previous_miscarriages " required="true()"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/count_of_stillbirths" type="int" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/count_of_stillbirths:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/pregnant_woman_information/previous_stillbirth ,'yes') and  /pregnancy/enabel  = &quot;true&quot;" constraint="int(.) &gt; 0"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/delivery_complications" type="select" jr:constraintMsg="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications:jr:constraintMsg')" required="true()" relevant=" /pregnancy/enabel  = &quot;true&quot; and selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no') and  /pregnancy/pregnant_woman_information/previous_pregnancies  &gt;  /pregnancy/pregnant_woman_information/previous_miscarriages " constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/ten_or_more_years" type="select1" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no') and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/ten_or_more_years_note" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/previous_delivery_by_c_section ,'yes') or 
+selected( /pregnancy/pregnant_woman_information/previous_delivery_by_vacuum ,'yes') or 
+selected( /pregnancy/pregnant_woman_information/previous_stillbirth ,'yes') or 
+selected( /pregnancy/pregnant_woman_information/ten_or_more_years ,'yes') or 
+selected( /pregnancy/pregnant_woman_information/delivery_complications ,'prolonged_labor') or 
+selected( /pregnancy/pregnant_woman_information/delivery_complications ,'large_perineal_tear') or 
+selected( /pregnancy/pregnant_woman_information/delivery_complications ,'retained_placenta') or 
+selected( /pregnancy/pregnant_woman_information/delivery_complications ,'aph') or 
+selected( /pregnancy/pregnant_woman_information/delivery_complications ,'postpartum_hemorrage') or 
+selected( /pregnancy/pregnant_woman_information/delivery_complications ,'eclampsia') or 
+selected( /pregnancy/pregnant_woman_information/delivery_complications ,'big_baby')"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/local_herbs" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/pregnant_woman_information/local_herbs_note" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/local_herbs ,'yes')"/>
       <bind nodeset="/pregnancy/facility_delivery_importance" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) and selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/delivery_location" type="select1" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no')" required="true()"/>
-      <bind nodeset="/pregnancy/facility_delivery_importance/important_of_facility_delivery" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'home') or selected( /pregnancy/facility_delivery_importance/delivery_location ,'on_the_way')"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/delivery_location" type="select1" relevant="selected( /pregnancy/pregnant_woman_information/first_time_pregnant ,'no') and  /pregnancy/pregnant_woman_information/previous_pregnancies  &gt;  /pregnancy/pregnant_woman_information/previous_miscarriages " required="true()"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/important_of_facility_delivery" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'home') or selected( /pregnancy/facility_delivery_importance/delivery_location ,'on_the_way')" required="true()"/>
       <bind nodeset="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/delivery_location ,'local_health_facility')"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/partner_available_note_to_chv" readonly="true()" type="string" relevant=" /pregnancy/enabel  = &quot;true&quot;"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/partner_availability" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility" type="select1" relevant="selected( /pregnancy/facility_delivery_importance/partner_availability ,&quot;yes&quot;) and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/partner_not_present" type="select1" relevant="selected( /pregnancy/facility_delivery_importance/partner_availability ,&quot;no&quot;) and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility_note" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility ,&quot;no&quot;) or selected( /pregnancy/facility_delivery_importance/partner_not_present ,'not_allowed')"/>
+      <bind nodeset="/pregnancy/facility_delivery_importance/partner_not_present_note" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/partner_not_present ,&quot;don't_know&quot;)"/>
       <bind nodeset="/pregnancy/rch_card" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) or ( /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/visit_introduction/has_given_birth =&quot;no&quot; and  /pregnancy/visit_introduction/viable_pregnancy =&quot;yes&quot; and  /pregnancy/previous_rchcard_status  = &quot;false&quot;)"/>
       <bind nodeset="/pregnancy/rch_card/covid19_heath_card_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/rch_card/is_rch_card_available" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/rch_card/is_delivery_date_written" type="select1" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes')" required="true()"/>
-      <bind nodeset="/pregnancy/rch_card/estimated_delivery_date_input" type="date" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_delivery_date_input:jr:constraintMsg')" relevant="selected( /pregnancy/rch_card/is_delivery_date_written ,'yes')" required="true()" constraint=". &gt;= date-time(decimal-date-time(today())) and . &lt;= date-time((decimal-date-time(today()) + ( /pregnancy/month  * 9)))"/>
+      <bind nodeset="/pregnancy/rch_card/estimated_delivery_date_input" type="date" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_delivery_date_input:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/rch_card/is_delivery_date_written ,'yes')" constraint=". &gt;= date-time(decimal-date-time(today())) and . &lt;= date-time((decimal-date-time(today()) + ( /pregnancy/month  * 9)))"/>
       <bind nodeset="/pregnancy/rch_card/remember_lmp" type="select1" relevant="(selected( /pregnancy/rch_card/is_rch_card_available ,'no') or selected( /pregnancy/rch_card/is_delivery_date_written ,'no')) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()"/>
-      <bind nodeset="/pregnancy/rch_card/last_lmp_date" type="date" jr:constraintMsg="jr:itext('/pregnancy/rch_card/last_lmp_date:jr:constraintMsg')" relevant="selected( /pregnancy/rch_card/remember_lmp ,'yes') and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy/week  * 44)))"/>
-      <bind nodeset="/pregnancy/rch_card/estimated_months_pregnant" type="int" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_months_pregnant:jr:constraintMsg')" relevant="((selected( /pregnancy/rch_card/is_rch_card_available ,'no') or (selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and selected( /pregnancy/rch_card/is_delivery_date_written ,'no'))) and selected( /pregnancy/rch_card/remember_lmp ,'no') ) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" required="true()" constraint=". &gt; 0 and . &lt;= 9"/>
+      <bind nodeset="/pregnancy/rch_card/last_lmp_date" type="date" jr:constraintMsg="jr:itext('/pregnancy/rch_card/last_lmp_date:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/rch_card/remember_lmp ,'yes') and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time((decimal-date-time(today()) - ( /pregnancy/week  * 44)))"/>
+      <bind nodeset="/pregnancy/rch_card/estimated_months_pregnant" type="int" jr:constraintMsg="jr:itext('/pregnancy/rch_card/estimated_months_pregnant:jr:constraintMsg')" required="true()" relevant="((selected( /pregnancy/rch_card/is_rch_card_available ,'no') or (selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and selected( /pregnancy/rch_card/is_delivery_date_written ,'no'))) and selected( /pregnancy/rch_card/remember_lmp ,'no') ) and  /pregnancy/hide_lmp_or_months_pregnant =&quot;false&quot;" constraint=". &gt; 0 and . &lt;= 9"/>
       <bind nodeset="/pregnancy/rch_card/edd_note" readonly="true()" type="string" relevant=" /pregnancy/EDD  != &quot;&quot;"/>
+      <bind nodeset="/pregnancy/rch_card/multiple_pregnancy" type="select1" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/rest_diet_note" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/multiple_pregnancy ,'yes')" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/big_baby" type="select1" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/malpresentation" type="select1" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/breech_position" type="select1" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'yes') and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/malpresentation_or_breech_big_baby_note" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/malpresentation ,'yes') or selected( /pregnancy/rch_card/breech_position ,'yes') or selected( /pregnancy/rch_card/big_baby ,'yes')" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/medical_conditions" type="select" jr:constraintMsg="jr:itext('/pregnancy/rch_card/medical_conditions:jr:constraintMsg')" required="true()" relevant=" /pregnancy/enabel  = true" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/pregnancy/rch_card/higher_facility_delivery" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/rch_card/high_facility_medical_condition_note" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/higher_facility_delivery ,'yes') or selected( /pregnancy/rch_card/medical_conditions ,&quot;diabetes&quot;) or selected( /pregnancy/rch_card/medical_conditions ,&quot;sickle_cell&quot;) or selected( /pregnancy/rch_card/medical_conditions ,&quot;cardiac_disease&quot;)"/>
+      <bind nodeset="/pregnancy/rch_card/facility_type" type="select1" relevant="selected( /pregnancy/rch_card/higher_facility_delivery ,'yes') and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
       <bind nodeset="/pregnancy/EDD" type="string" calculate="if( /pregnancy/previous_rchcard_status =&quot;true&quot;, 
   /pregnancy/client_EDD_c , 
  if( /pregnancy/hide_lmp_or_months_pregnant =&quot;true&quot;,
@@ -5135,16 +6137,16 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
       <bind nodeset="/pregnancy/danger_signs" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0) or ( /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/visit_introduction/has_given_birth =&quot;no&quot; and  /pregnancy/visit_introduction/viable_pregnancy =&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_intro" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_121" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_148" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_vaginal_bleeding" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_abdominal_pain" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_severe_headache" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_1/danger_sign_fever" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_note_to_chv" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/danger_signs/observe_danger_signs" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_129" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130" type="select1"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_156" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157" type="select1"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_unconsciouss" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_difficult_breathing" type="select1" required="true()"/>
       <bind nodeset="/pregnancy/danger_signs/danger_sign_table_2/danger_sign_convulsions" type="select1" required="true()"/>
@@ -5161,7 +6163,7 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
-      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues" type="select" jr:constraintMsg="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg')" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues" type="select" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral  = 0" jr:constraintMsg="jr:itext('/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()"/>
       <bind nodeset="/pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues" type="string" calculate="if(selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;difficulty_breathing&quot;) or 
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fatigue&quot;) or 
  selected( /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/pregnancy_issues ,&quot;fever&quot;) or 
@@ -5209,14 +6211,14 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
       <bind nodeset="/pregnancy/pmtct/take_art_no" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/take_art ,'no')"/>
       <bind nodeset="/pregnancy/pmtct/mother_mentor_note" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/hiv_status ,'hiv_positive')"/>
       <bind nodeset="/pregnancy/pmtct/discuss_further_note" readonly="true()" type="string" relevant="selected( /pregnancy/pmtct/disclose_hiv_status ,'no')"/>
-      <bind nodeset="/pregnancy/fam_engagement" relevant="false()"/>
-      <bind nodeset="/pregnancy/fam_engagement/family_engagement" type="select" jr:constraintMsg="jr:itext('/pregnancy/fam_engagement/family_engagement:jr:constraintMsg')" required="true()" constraint="(selected(.,&quot;no_one_available&quot;) and count-selected(.)=1) or (not(selected(.,&quot;no_one_available&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/pregnancy/fam_engagement" relevant="0"/>
+      <bind nodeset="/pregnancy/fam_engagement/family_engagement" type="select" jr:constraintMsg="jr:itext('/pregnancy/fam_engagement/family_engagement:jr:constraintMsg')" constraint="(selected(.,&quot;no_one_available&quot;) and count-selected(.)=1) or (not(selected(.,&quot;no_one_available&quot;)) and count-selected(.)&gt;=1)" required="true()"/>
       <bind nodeset="/pregnancy/fam_engagement/invite_family_member_note" readonly="true()" type="string" relevant="selected( /pregnancy/fam_engagement/family_engagement ,'no_one_available')"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
-      <bind nodeset="/pregnancy/anc_screening_and_counseling/num_anc_visits" type="int" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg')" required="true()" constraint="(. &gt;=  /pregnancy/n_previous_anc_visits  and .&lt;= 8)"/>
+      <bind nodeset="/pregnancy/anc_screening_and_counseling/num_anc_visits" type="int" constraint="(. &gt;=  /pregnancy/n_previous_anc_visits  and .&lt;= 8)" jr:constraintMsg="jr:itext('/pregnancy/anc_screening_and_counseling/num_anc_visits:jr:constraintMsg')" required="true()"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling/anc_visit_count_zero" type="select" relevant=" /pregnancy/anc_screening_and_counseling/num_anc_visits  != '' and  /pregnancy/anc_screening_and_counseling/num_anc_visits  = 0" required="true()"/>
       <bind nodeset="/pregnancy/anc_screening_and_counseling/attend_anc_visit_note" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/is_rch_card_available ,'no')"/>
       <bind nodeset="/pregnancy/birth_plan" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
@@ -5244,12 +6246,17 @@ not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregn
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
 (selected( /pregnancy/visit_introduction/has_given_birth ,&quot;no&quot;) and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0)"/>
+      <bind nodeset="/pregnancy/maternal_nutrition/nutrition_restrictions" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
       <bind nodeset="/pregnancy/maternal_nutrition/nutrition_advantage" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/eat_more_vegetables" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/avoid_tea_coffee" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/avoid_cahrcoal_and_soil" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/maternal_nutrition/anemia_tablets" type="select1" relevant=" /pregnancy/enabel  = &quot;true&quot; and  /pregnancy/anc_screening_and_counseling/num_anc_visits  &gt; 0" required="true()"/>
+      <bind nodeset="/pregnancy/maternal_nutrition/anemia_tablets_note" readonly="true()" type="string" relevant="selected( /pregnancy/maternal_nutrition/anemia_tablets ,'no')"/>
+      <bind nodeset="/pregnancy/maternal_nutrition/reason_no_tablets" type="select1" relevant="selected( /pregnancy/maternal_nutrition/anemia_tablets ,'no') and  /pregnancy/enabel  = &quot;true&quot;" required="true()"/>
+      <bind nodeset="/pregnancy/maternal_nutrition/out_of_stock_note" readonly="true()" type="string"/>
       <bind nodeset="/pregnancy/maternal_nutrition/anemia_risk" readonly="true()" type="string"/>
-      <bind nodeset="/pregnancy/maternal_nutrition/traditional_medicine" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy/maternal_nutrition/traditional_medicine" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/local_herbs ,'no')"/>
       <bind nodeset="/pregnancy/llints" relevant="(not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and 
 not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;)) and  /pregnancy/n_pregnancy_visits  = 0 and  /pregnancy/danger_signs/emergency_danger_sign_referral  = 0) or 
 
@@ -5280,7 +6287,7 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <bind nodeset="/pregnancy/quality_of_survery_care/second_facility" type="select" relevant="selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/quality_of_survery_care/services_received" type="select" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;) and (selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes_but&quot;) or selected( /pregnancy/quality_of_survery_care/is_service_received ,&quot;yes&quot;))" required="true()"/>
       <bind nodeset="/pregnancy/quality_of_survery_care/service_pay" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy/quality_of_survery_care/amount_paid" type="int" jr:constraintMsg="jr:itext('/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg')" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()" constraint=". &gt;= 100 and . &lt;= 300000"/>
+      <bind nodeset="/pregnancy/quality_of_survery_care/amount_paid" type="int" jr:constraintMsg="jr:itext('/pregnancy/quality_of_survery_care/amount_paid:jr:constraintMsg')" required="true()" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" constraint=". &gt;= 100 and . &lt;= 300000"/>
       <bind nodeset="/pregnancy/quality_of_survery_care/paid_for" type="select" relevant="selected( /pregnancy/quality_of_survery_care/service_pay ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/quality_of_survery_care/wait_period" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/quality_of_survery_care/recommendation_for_anc_visit" type="select1" relevant="selected( /pregnancy/quality_of_survery_care/consent_for_questions ,&quot;yes&quot;)" required="true()"/>
@@ -5293,15 +6300,62 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <bind nodeset="/pregnancy/personal_information/subgroup_decision_maker/some_other_decision_maker" type="string" relevant="selected( /pregnancy/personal_information/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/personal_information/subgroup_marital_status/marital_status" type="select1" relevant="selected( /pregnancy/personal_information/can_proceed_with_survey ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/personal_information/subgroup_partner_info/does_partner_live_together" type="select1" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy/personal_information/partner_info/subgroup_partner_age" type="int" jr:constraintMsg="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg')" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" constraint=". &gt;= 18 and .&lt;= 90"/>
+      <bind nodeset="/pregnancy/personal_information/partner_info/subgroup_partner_age" type="int" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/pregnancy/personal_information/partner_info/subgroup_partner_age:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy/personal_information/partner_info/partner_highest_school_level" type="select1" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
       <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife" type="select1" relevant="selected( /pregnancy/personal_information/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()"/>
-      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/num_wives" type="int" jr:constraintMsg="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg')" relevant="selected( /pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" constraint=".&gt;= 1 and .&lt;= 10"/>
+      <bind nodeset="/pregnancy/personal_information/subgroup_multiple_wives/num_wives" type="int" relevant="selected( /pregnancy/personal_information/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/pregnancy/personal_information/subgroup_multiple_wives/num_wives:jr:constraintMsg')"/>
       <bind nodeset="/pregnancy/group_summary" relevant="not(selected( /pregnancy/age_below_15/below_15_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/age_above_49/above_49_confirmation ,&quot;no&quot;)) and not(selected( /pregnancy/pregnancy_consent/consent ,&quot;no&quot;))"/>
+      <bind nodeset="/pregnancy/group_summary/has_risk_assesment" readonly="true()" type="string" relevant=" /pregnancy/enabel  = &quot;true&quot; and (
+ selected( /pregnancy/pregnant_woman_information/previous_delivery_by_c_section ,&quot;yes&quot;) or selected( /pregnancy/pregnant_woman_information/previous_delivery_by_vacuum ,&quot;yes&quot;)
+ or selected( /pregnancy/pregnant_woman_information/previous_stillbirth ,&quot;yes&quot;)
+ or selected( /pregnancy/pregnant_woman_information/delivery_complications ,'prolonged_labor')
+ or selected( /pregnancy/pregnant_woman_information/delivery_complications ,'large_perineal_tear')
+ or selected( /pregnancy/pregnant_woman_information/delivery_complications ,'retained_placenta')
+ or selected( /pregnancy/pregnant_woman_information/delivery_complications ,'aph')
+ or selected( /pregnancy/pregnant_woman_information/delivery_complications ,'postpartum_hemorrage')
+ or selected( /pregnancy/pregnant_woman_information/delivery_complications ,'eclampsia')
+ or selected( /pregnancy/pregnant_woman_information/delivery_complications ,'big_baby') or selected( /pregnancy/rch_card/big_baby ,&quot;yes&quot;)
+ or  /pregnancy/pregnant_woman_information/previous_miscarriages  &gt; 0 and  /pregnancy/enabel =&quot;true&quot;
+ or selected( /pregnancy/rch_card/multiple_pregnancy ,&quot;yes&quot;)
+ or selected( /pregnancy/rch_card/malpresentation ,&quot;yes&quot;)
+ or selected( /pregnancy/rch_card/breech_position ,&quot;yes&quot;)
+ or selected( /pregnancy/rch_card/medical_conditions ,&quot;high_blood_pressure&quot;)
+ or selected( /pregnancy/rch_card/medical_conditions ,&quot;diabetes&quot;)
+ or selected( /pregnancy/rch_card/medical_conditions ,&quot;sickle_cell&quot;)
+ or selected( /pregnancy/rch_card/medical_conditions ,&quot;cardiac_disease&quot;)
+ or selected( /pregnancy/rch_card/higher_facility_delivery ,&quot;yes&quot;)
+ or selected( /pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility ,&quot;no&quot;) or selected( /pregnancy/facility_delivery_importance/partner_not_present ,&quot;yes&quot;) 
+ or selected( /pregnancy/pregnant_woman_information/ten_or_more_years ,&quot;yes&quot;)
+ or selected( /pregnancy/maternal_nutrition/nutrition_restrictions ,&quot;yes&quot;)
+ or selected( /pregnancy/pregnant_woman_information/local_herbs ,&quot;yes&quot;)
+)"/>
+      <bind nodeset="/pregnancy/group_summary/c_section_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/previous_delivery_by_c_section ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/vacuum_delivery_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/previous_delivery_by_vacuum ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/previous_stillbirth_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/previous_stillbirth ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/prolonged_labor_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/delivery_complications ,'prolonged_labor')"/>
+      <bind nodeset="/pregnancy/group_summary/large_perineal_tear_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/delivery_complications ,'large_perineal_tear')"/>
+      <bind nodeset="/pregnancy/group_summary/retained_placenta_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/delivery_complications ,'retained_placenta')"/>
+      <bind nodeset="/pregnancy/group_summary/aph_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/delivery_complications ,'aph')"/>
+      <bind nodeset="/pregnancy/group_summary/postpartum_hemorrage_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/delivery_complications ,'postpartum_hemorrage')"/>
+      <bind nodeset="/pregnancy/group_summary/enclampsia_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/delivery_complications ,'eclampsia')"/>
+      <bind nodeset="/pregnancy/group_summary/big_baby_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/delivery_complications ,'big_baby') or selected( /pregnancy/rch_card/big_baby ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/previous_miscarriage_risk" readonly="true()" type="string" relevant=" /pregnancy/pregnant_woman_information/previous_miscarriages  &gt; 0 and  /pregnancy/enabel =&quot;true&quot;"/>
+      <bind nodeset="/pregnancy/group_summary/multiple_pregnancy_risk" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/multiple_pregnancy ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/malpresentation_risk" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/malpresentation ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/breech_position_risk" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/breech_position ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/high_blood_pressure" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/medical_conditions ,&quot;high_blood_pressure&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/diabetes" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/medical_conditions ,&quot;diabetes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/sickle_cell" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/medical_conditions ,&quot;sickle_cell&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/cardiac_disease" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/medical_conditions ,&quot;cardiac_disease&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/higher_facility_delivery_risk" readonly="true()" type="string" relevant="selected( /pregnancy/rch_card/higher_facility_delivery ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/partner_permission_risk" readonly="true()" type="string" relevant="selected( /pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility ,&quot;no&quot;) or selected( /pregnancy/facility_delivery_importance/partner_not_present ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/previous_delivery_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/ten_or_more_years ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/nutrition_restrictions_risk" readonly="true()" type="string" relevant="selected( /pregnancy/maternal_nutrition/nutrition_restrictions ,&quot;yes&quot;)"/>
+      <bind nodeset="/pregnancy/group_summary/local_herb_risk" readonly="true()" type="string" relevant="selected( /pregnancy/pregnant_woman_information/local_herbs ,&quot;yes&quot;)"/>
       <bind nodeset="/pregnancy/group_summary/healthy_note" readonly="true()" type="string" relevant="( /pregnancy/has_referral =0 and selected( /pregnancy/visit_introduction/viable_pregnancy ,&quot;yes&quot;) and  /pregnancy/n_pregnancy_visits  &gt;=1 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0) or ( /pregnancy/has_referral =0 and  /pregnancy/n_pregnancy_visits  =0 and  /pregnancy/refer_flag_anc_visit_6m_or_more  = 0)"/>
       <bind nodeset="/pregnancy/group_summary/needs_referral_note" readonly="true()" type="string" relevant=" /pregnancy/has_referral =1"/>
       <bind nodeset="/pregnancy/group_summary/needs_referral_danger_signs" readonly="true()" type="string" relevant=" /pregnancy/danger_signs/emergency_danger_sign_referral =1"/>
-      <bind nodeset="/pregnancy/group_summary/needs_referral_neonatal_note" readonly="true()" type="string" relevant=" /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or
+      <bind nodeset="/pregnancy/group_summary/needs_referral_neonatal_note" readonly="true()" type="string" relevant=" /pregnancy/pregnancy_issues_group/subgroup_pregnancy_issues/refer_pregnancy_issues =1 or 
  /pregnancy/pregnancy_issues_group/pregnancy_and_pallor/refer_pregnancy_complications =1"/>
       <bind nodeset="/pregnancy/group_summary/needs_anc_referral_note" readonly="true()" type="string" relevant=" /pregnancy/refer_flag_anc_visit_6m_or_more =1"/>
       <bind nodeset="/pregnancy/has_referral" type="string" calculate="if( /pregnancy/danger_signs/emergency_danger_sign_referral =1 or
@@ -5631,8 +6685,110 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <input ref="/pregnancy/pregnant_woman_information/previous_miscarriages">
         <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_miscarriages:label')"/>
       </input>
+      <input ref="/pregnancy/pregnant_woman_information/rest_diet_note">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/rest_diet_note:label')"/>
+      </input>
       <input ref="/pregnancy/pregnant_woman_information/living_children">
         <label ref="jr:itext('/pregnancy/pregnant_woman_information/living_children:label')"/>
+      </input>
+      <select1 ref="/pregnancy/pregnant_woman_information/previous_delivery_by_c_section">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_delivery_by_c_section:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_delivery_by_c_section/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_delivery_by_c_section/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_delivery_by_vacuum/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/pregnant_woman_information/previous_stillbirth">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_stillbirth:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_stillbirth/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/previous_stillbirth/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pregnant_woman_information/count_of_stillbirths">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/count_of_stillbirths:label')"/>
+      </input>
+      <select ref="/pregnancy/pregnant_woman_information/delivery_complications">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/prolonged_labor:label')"/>
+          <value>prolonged_labor</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/large_perineal_tear:label')"/>
+          <value>large_perineal_tear</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/retained_placenta:label')"/>
+          <value>retained_placenta</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/aph:label')"/>
+          <value>aph</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/postpartum_hemorrage:label')"/>
+          <value>postpartum_hemorrage</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/eclampsia:label')"/>
+          <value>eclampsia</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/big_baby:label')"/>
+          <value>big_baby</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/delivery_complications/none:label')"/>
+          <value>none</value>
+        </item>
+      </select>
+      <select1 ref="/pregnancy/pregnant_woman_information/ten_or_more_years">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/ten_or_more_years:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/ten_or_more_years/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/ten_or_more_years/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pregnant_woman_information/ten_or_more_years_note">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/ten_or_more_years_note:label')"/>
+      </input>
+      <select1 ref="/pregnancy/pregnant_woman_information/local_herbs">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/local_herbs:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/local_herbs/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/pregnant_woman_information/local_herbs/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/pregnant_woman_information/local_herbs_note">
+        <label ref="jr:itext('/pregnancy/pregnant_woman_information/local_herbs_note:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/facility_delivery_importance">
@@ -5657,6 +6813,56 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       </input>
       <input ref="/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility">
         <label ref="jr:itext('/pregnancy/facility_delivery_importance/encourage_mother_if_delivered_at_facility:label')"/>
+      </input>
+      <input ref="/pregnancy/facility_delivery_importance/partner_available_note_to_chv">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_available_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/pregnancy/facility_delivery_importance/partner_availability">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_availability:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_availability/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_availability/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/facility_delivery_importance/partner_not_present">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_not_present:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_not_present/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_not_present/not_allowed:label')"/>
+          <value>not_allowed</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_not_present/don't_know:label')"/>
+          <value>don't_know</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_not_present/no_partner:label')"/>
+          <value>no_partner</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility_note">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/allow_partner_to_deliver_facility_note:label')"/>
+      </input>
+      <input ref="/pregnancy/facility_delivery_importance/partner_not_present_note">
+        <label ref="jr:itext('/pregnancy/facility_delivery_importance/partner_not_present_note:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/pregnancy/rch_card">
@@ -5709,6 +6915,104 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       <input ref="/pregnancy/rch_card/edd_note">
         <label ref="jr:itext('/pregnancy/rch_card/edd_note:label')"/>
       </input>
+      <select1 ref="/pregnancy/rch_card/multiple_pregnancy">
+        <label ref="jr:itext('/pregnancy/rch_card/multiple_pregnancy:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/multiple_pregnancy/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/multiple_pregnancy/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/rch_card/rest_diet_note">
+        <label ref="jr:itext('/pregnancy/rch_card/rest_diet_note:label')"/>
+      </input>
+      <select1 ref="/pregnancy/rch_card/big_baby">
+        <label ref="jr:itext('/pregnancy/rch_card/big_baby:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/big_baby/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/big_baby/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/rch_card/malpresentation">
+        <label ref="jr:itext('/pregnancy/rch_card/malpresentation:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/malpresentation/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/malpresentation/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/pregnancy/rch_card/breech_position">
+        <label ref="jr:itext('/pregnancy/rch_card/breech_position:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/breech_position/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/breech_position/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/rch_card/malpresentation_or_breech_big_baby_note">
+        <label ref="jr:itext('/pregnancy/rch_card/malpresentation_or_breech_big_baby_note:label')"/>
+      </input>
+      <select ref="/pregnancy/rch_card/medical_conditions">
+        <label ref="jr:itext('/pregnancy/rch_card/medical_conditions:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/medical_conditions/high_blood_pressure:label')"/>
+          <value>high_blood_pressure</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/medical_conditions/diabetes:label')"/>
+          <value>diabetes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/medical_conditions/sickle_cell:label')"/>
+          <value>sickle_cell</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/medical_conditions/cardiac_disease:label')"/>
+          <value>cardiac_disease</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/medical_conditions/none:label')"/>
+          <value>none</value>
+        </item>
+      </select>
+      <select1 ref="/pregnancy/rch_card/higher_facility_delivery">
+        <label ref="jr:itext('/pregnancy/rch_card/higher_facility_delivery:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/higher_facility_delivery/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/higher_facility_delivery/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/rch_card/high_facility_medical_condition_note">
+        <label ref="jr:itext('/pregnancy/rch_card/high_facility_medical_condition_note:label')"/>
+      </input>
+      <select1 ref="/pregnancy/rch_card/facility_type">
+        <label ref="jr:itext('/pregnancy/rch_card/facility_type:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/facility_type/cottage_hospital:label')"/>
+          <value>cottage_hospital</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/rch_card/facility_type/referral_system:label')"/>
+          <value>referral_system</value>
+        </item>
+      </select1>
     </group>
     <group appearance="field-list" ref="/pregnancy/danger_signs">
       <label ref="jr:itext('/pregnancy/danger_signs:label')"/>
@@ -5716,15 +7020,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_intro:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_1">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_121"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_1/generated_table_list_label_148"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_122/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_1/reserved_name_for_field_list_labels_149/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -5780,15 +7084,15 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
         <label ref="jr:itext('/pregnancy/danger_signs/observe_danger_signs:label')"/>
       </input>
       <group appearance="field-list" ref="/pregnancy/danger_signs/danger_sign_table_2">
-        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_129"/>
-        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130">
+        <input ref="/pregnancy/danger_signs/danger_sign_table_2/generated_table_list_label_156"/>
+        <select1 appearance="label" ref="/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157">
           <label></label>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130/yes:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157/yes:label')"/>
             <value>yes</value>
           </item>
           <item>
-            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_130/no:label')"/>
+            <label ref="jr:itext('/pregnancy/danger_signs/danger_sign_table_2/reserved_name_for_field_list_labels_157/no:label')"/>
             <value>no</value>
           </item>
         </select1>
@@ -6158,6 +7462,17 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
     </group>
     <group ref="/pregnancy/maternal_nutrition">
       <label ref="jr:itext('/pregnancy/maternal_nutrition:label')"/>
+      <select1 ref="/pregnancy/maternal_nutrition/nutrition_restrictions">
+        <label ref="jr:itext('/pregnancy/maternal_nutrition/nutrition_restrictions:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/nutrition_restrictions/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/nutrition_restrictions/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
       <input ref="/pregnancy/maternal_nutrition/nutrition_advantage">
         <label ref="jr:itext('/pregnancy/maternal_nutrition/nutrition_advantage:label')"/>
       </input>
@@ -6169,6 +7484,42 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
       </input>
       <input ref="/pregnancy/maternal_nutrition/avoid_cahrcoal_and_soil">
         <label ref="jr:itext('/pregnancy/maternal_nutrition/avoid_cahrcoal_and_soil:label')"/>
+      </input>
+      <select1 ref="/pregnancy/maternal_nutrition/anemia_tablets">
+        <label ref="jr:itext('/pregnancy/maternal_nutrition/anemia_tablets:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/anemia_tablets/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/anemia_tablets/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/maternal_nutrition/anemia_tablets_note">
+        <label ref="jr:itext('/pregnancy/maternal_nutrition/anemia_tablets_note:label')"/>
+      </input>
+      <select1 ref="/pregnancy/maternal_nutrition/reason_no_tablets">
+        <label ref="jr:itext('/pregnancy/maternal_nutrition/reason_no_tablets:label')"/>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/reason_no_tablets/too_expensive:label')"/>
+          <value>too_expensive</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/reason_no_tablets/dont_know:label')"/>
+          <value>dont_know</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/reason_no_tablets/out_of_stock:label')"/>
+          <value>out_of_stock</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/pregnancy/maternal_nutrition/reason_no_tablets/not_prescribed:label')"/>
+          <value>not_prescribed</value>
+        </item>
+      </select1>
+      <input ref="/pregnancy/maternal_nutrition/out_of_stock_note">
+        <label ref="jr:itext('/pregnancy/maternal_nutrition/out_of_stock_note:label')"/>
       </input>
       <input ref="/pregnancy/maternal_nutrition/anemia_risk">
         <label ref="jr:itext('/pregnancy/maternal_nutrition/anemia_risk:label')"/>
@@ -6645,6 +7996,78 @@ selected( /pregnancy/quality_of_survery_care/facility_district ,&quot;wete&quot;
     </group>
     <group appearance="field-list" ref="/pregnancy/group_summary">
       <label ref="jr:itext('/pregnancy/group_summary:label')"/>
+      <input ref="/pregnancy/group_summary/has_risk_assesment">
+        <label ref="jr:itext('/pregnancy/group_summary/has_risk_assesment:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/c_section_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/c_section_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/vacuum_delivery_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/vacuum_delivery_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/previous_stillbirth_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/previous_stillbirth_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/prolonged_labor_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/prolonged_labor_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/large_perineal_tear_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/large_perineal_tear_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/retained_placenta_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/retained_placenta_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/aph_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/aph_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/postpartum_hemorrage_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/postpartum_hemorrage_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/enclampsia_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/enclampsia_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/big_baby_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/big_baby_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/previous_miscarriage_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/previous_miscarriage_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/multiple_pregnancy_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/multiple_pregnancy_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/malpresentation_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/malpresentation_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/breech_position_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/breech_position_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/high_blood_pressure">
+        <label ref="jr:itext('/pregnancy/group_summary/high_blood_pressure:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/diabetes">
+        <label ref="jr:itext('/pregnancy/group_summary/diabetes:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/sickle_cell">
+        <label ref="jr:itext('/pregnancy/group_summary/sickle_cell:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/cardiac_disease">
+        <label ref="jr:itext('/pregnancy/group_summary/cardiac_disease:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/higher_facility_delivery_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/higher_facility_delivery_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/partner_permission_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/partner_permission_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/previous_delivery_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/previous_delivery_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/nutrition_restrictions_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/nutrition_restrictions_risk:label')"/>
+      </input>
+      <input ref="/pregnancy/group_summary/local_herb_risk">
+        <label ref="jr:itext('/pregnancy/group_summary/local_herb_risk:label')"/>
+      </input>
       <input ref="/pregnancy/group_summary/healthy_note">
         <label ref="jr:itext('/pregnancy/group_summary/healthy_note:label')"/>
       </input>
