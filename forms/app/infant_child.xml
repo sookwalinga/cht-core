@@ -1063,9 +1063,6 @@ For your newborn baby, you can:</value>
           <text id="/infant_child/group_summary/needs_referral_small_baby_note:label">
             <value>To receive specialized care for small babies.</value>
           </text>
-          <text id="/infant_child/group_summary/needs_referral_vaccines_note:label">
-            <value>To make sure he/she has received the proper vaccines.</value>
-          </text>
           <text id="/infant_child/group_summary/non_consent_note:label">
             <value>You've declined to consent for <output value=" /infant_child/child_name "/> to receive community health services. He/She won't receive any more visits from me.</value>
           </text>
@@ -1119,6 +1116,9 @@ Newborns can get an infection more easily than an adult or an older childInfecti
           </text>
           <text id="/infant_child/immunizations/has_health_card:label">
             <value>Now I would like to review your child's health card to make sure they have received all their vaccines so far. Do you have your child's health card?</value>
+          </text>
+          <text id="/infant_child/immunizations/missing_vaccine_note:label">
+            <value>Please take your child to health facility to get the appropriate vaccinations.</value>
           </text>
           <text id="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
@@ -1670,7 +1670,7 @@ SAY: Your child is in need of special care and attention to keep from getting ma
             <value>&lt;span style="color:#f58a1f"&gt;Educate the mother on how to identify neonatal danger signs and the importance of seeking medical assistance at the health facility as soon as possible. Please refer to bango kitita, page number 18. &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label">
-            <value>I'm now going to screen your baby for neonatal danger signs. Has your baby exhibited any of these symptoms within the past 24 hours?</value>
+            <value>I'm now going to screen your baby for neonatal danger signs. If your child has dange signs, I shall refer you to a nearest health facility so that they can receive the appropriate medical attention. Has your baby exhibited any of these symptoms within the past 24 hours?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/no:label">
             <value>No</value>
@@ -3261,9 +3261,6 @@ Kwa mtoto wako unaweza :</value>
           <text id="/infant_child/group_summary/needs_referral_small_baby_note:label">
             <value>Apate huduma maalum kwa ajili ya watoto wadogo.</value>
           </text>
-          <text id="/infant_child/group_summary/needs_referral_vaccines_note:label">
-            <value>Ili kuhakikisha amepokea chanjo stahiki.</value>
-          </text>
           <text id="/infant_child/group_summary/non_consent_note:label">
             <value>Umekataa kupata huduma ya Afya ya jamii. Sitofanya tembeleo lolote linalohusu Afya ya jamii kwake <output value=" /infant_child/child_name "/>.</value>
           </text>
@@ -3317,6 +3314,9 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           </text>
           <text id="/infant_child/immunizations/has_health_card:label">
             <value>Sasa nitapendelea kupitia kadi la kliniki la mtoto kuhakikisha amepata/wamepata chanjo zote stahiki mpaka sasa. Je, Una kadi la kliniki la mtoto wako?</value>
+          </text>
+          <text id="/infant_child/immunizations/missing_vaccine_note:label">
+            <value>Tafadhali mpeleke mwanao kituo cha afya ili apatiwe chanjo kamili.</value>
           </text>
           <text id="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
@@ -3956,7 +3956,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
             <value>&lt;span style="color:#f58a1f"&gt;Muelimishe mama jinsi ya kutambua dalili za hatari kwa mtoto mchanga na umuhimu wa kutafuta msaada wa matibabu katika kituo cha afya haraka. Tumia bango kitita kadi namba 18. &lt;/span&gt;</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label">
-            <value>Nihitaji kumchunguza mtoto wako dalili za hatari. Je, mwanao ameonesha dalili zote kati ya hizi katika masaa 24 yaliyo pita?</value>
+            <value>Nahitaji kumchunguza mtoto wako dalili za hatari. Iwapo mtoto ataonesha ana dalili za hatari, atapatiwa rufaa (kwenda kituo cha afya) na kuunganishwa na mtoa huduma kwenye kituo kilicho karibu naye. Je, mwanao ameonesha dalili zote kati ya hizi katika masaa 24 yaliyo pita?</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing/no:label">
             <value>Hapana</value>
@@ -4820,7 +4820,7 @@ Kwa mtoto wako unaweza:</value>
             <family_refused_note/>
             <vaccine_schedule_advice_note/>
             <vaccine_refer_note/>
-            <refer_vaccines_flag/>
+            <missing_vaccine_note/>
             <ask_record_vaccines_note/>
             <vaccine_fever_rash_note/>
             <vaccine_cry_note/>
@@ -4964,7 +4964,6 @@ Kwa mtoto wako unaweza:</value>
             <needs_referral_child_other_note/>
             <needs_referral_muac_note/>
             <needs_referral_anemia_note/>
-            <needs_referral_vaccines_note/>
             <needs_referral_development_note/>
             <referral_follow_up_note/>
           </group_summary>
@@ -5324,7 +5323,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/immunizations/family_refused_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;family_refused&quot;)"/>
       <bind nodeset="/infant_child/immunizations/vaccine_schedule_advice_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;clinic_closed&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;not_available&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;asked_to_return&quot;)"/>
       <bind nodeset="/infant_child/immunizations/vaccine_refer_note" readonly="true()" type="string" relevant="(selected( /infant_child/immunizations/has_health_card ,&quot;no&quot;) and  /infant_child/age_years  &lt; 2) or selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/refer_vaccines_flag" type="string" calculate="if((selected( /infant_child/immunizations/has_health_card ,&quot;no&quot;) and  /infant_child/age_years  &lt; 2) or selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;),1,0)"/>
+      <bind nodeset="/infant_child/immunizations/missing_vaccine_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;no&quot;) and  /infant_child/age_years  &lt; 2 or selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/immunizations/ask_record_vaccines_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;) and  /infant_child/age_years  &lt; 2"/>
       <bind nodeset="/infant_child/immunizations/vaccine_fever_rash_note" readonly="true()" type="string" relevant=" /infant_child/age_years  &lt; 2"/>
       <bind nodeset="/infant_child/immunizations/vaccine_cry_note" readonly="true()" type="string" relevant=" /infant_child/age_years  &lt; 2"/>
@@ -5499,7 +5498,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
  /infant_child/child_other_danger_signs/refer_child_other_danger_sign_flag =1 or 
  /infant_child/malnutrition_anemia/refer_muac_flag =1 or
  /infant_child/malnutrition_anemia/refer_palm_pallor_flag =1 or
- /infant_child/immunizations/refer_vaccines_flag =1 or
  /infant_child/development_concerns/refer_slow_to_learn_specifics_flag =1, 1, 0)"/>
       <bind nodeset="/infant_child/group_summary/healthy_note" readonly="true()" type="string" relevant=" /infant_child/group_summary/any_referral =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
       <bind nodeset="/infant_child/group_summary/needs_referral_note" readonly="true()" type="string" relevant=" /infant_child/group_summary/any_referral =1"/>
@@ -5510,7 +5508,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <bind nodeset="/infant_child/group_summary/needs_referral_child_other_note" readonly="true()" type="string" relevant=" /infant_child/child_other_danger_signs/refer_child_other_danger_sign_flag =1"/>
       <bind nodeset="/infant_child/group_summary/needs_referral_muac_note" readonly="true()" type="string" relevant=" /infant_child/malnutrition_anemia/refer_muac_flag =1"/>
       <bind nodeset="/infant_child/group_summary/needs_referral_anemia_note" readonly="true()" type="string" relevant=" /infant_child/malnutrition_anemia/refer_palm_pallor_flag =1"/>
-      <bind nodeset="/infant_child/group_summary/needs_referral_vaccines_note" readonly="true()" type="string" relevant=" /infant_child/immunizations/refer_vaccines_flag =1"/>
       <bind nodeset="/infant_child/group_summary/needs_referral_development_note" readonly="true()" type="string" relevant=" /infant_child/development_concerns/refer_slow_to_learn_specifics_flag =1"/>
       <bind nodeset="/infant_child/group_summary/referral_follow_up_note" readonly="true()" type="string" relevant=" /infant_child/group_summary/any_referral =1"/>
       <bind nodeset="/infant_child/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
@@ -6969,6 +6966,9 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/immunizations/vaccine_refer_note">
         <label ref="jr:itext('/infant_child/immunizations/vaccine_refer_note:label')"/>
       </input>
+      <input ref="/infant_child/immunizations/missing_vaccine_note">
+        <label ref="jr:itext('/infant_child/immunizations/missing_vaccine_note:label')"/>
+      </input>
       <input ref="/infant_child/immunizations/ask_record_vaccines_note">
         <label ref="jr:itext('/infant_child/immunizations/ask_record_vaccines_note:label')"/>
       </input>
@@ -7745,9 +7745,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
       <input appearance="li" ref="/infant_child/group_summary/needs_referral_anemia_note">
         <label ref="jr:itext('/infant_child/group_summary/needs_referral_anemia_note:label')"/>
-      </input>
-      <input appearance="li" ref="/infant_child/group_summary/needs_referral_vaccines_note">
-        <label ref="jr:itext('/infant_child/group_summary/needs_referral_vaccines_note:label')"/>
       </input>
       <input appearance="li" ref="/infant_child/group_summary/needs_referral_development_note">
         <label ref="jr:itext('/infant_child/group_summary/needs_referral_development_note:label')"/>
