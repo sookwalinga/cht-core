@@ -685,7 +685,7 @@ If a baby is sleeping for longer than 2 hours, wake the baby up by smooth touch 
             <value>Yes</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/baby_breastfeed_well:label">
-            <value>Does your baby breastfeed well?</value>
+            <value>Based on your observation and the mother's explanation, does the mother breastfeed well?</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily/five_more_times_day:label">
             <value>More than five times</value>
@@ -708,7 +708,10 @@ If a baby is sleeping for longer than 2 hours, wake the baby up by smooth touch 
 &lt;span style="color:#f58a1f"&gt;Praise the family if the baby is kept well wrapped and close to the mother, and is bathed with warm water and dried and wrapped immediately. If not, try to solve any problems. Refer to page 10 of Bango Kitita for more information.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding_positions_length_note:label">
-            <value>What positions are you using? How frequently do you breastfeed? How long will the baby feed at one time?
+            <value>How is it going? 
+What positions are you using? 
+How frequently do you breastfeed? 
+How long will the baby feed at one time?
 
 &lt;span style="color:#f58a1f;font-weight:bold"&gt;LISTEN:&lt;/span&gt; &lt;span style="color:#f58a1f"&gt;Allow mother to explain her experience breastfeeding.&lt;/span&gt;</value>
           </text>
@@ -741,6 +744,9 @@ ASK: have you ever breastfed?</value>
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding:label">
             <value>Is the child breastfeeding exclusively?</value>
           </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_advise:label">
+            <value>Discuss with the mother why she is not exclusively breastfeeding. Advise her and problem solve with her.</value>
+          </text>
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice/animal_milk:label">
             <value>Milk from other animals</value>
           </text>
@@ -765,11 +771,14 @@ ASK: have you ever breastfed?</value>
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice/soft_food:label">
             <value>Soft food</value>
           </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice:jr:constraintMsg">
+            <value>Cannot select "None of the above" and another option.</value>
+          </text>
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice:label">
             <value>Did the child drink or eat any of the following yesterday during the day or the night?</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note:label">
-            <value>How is it going? Do you have any concerns you wish to discuss?
+            <value>Do you have any concerns you wish to discuss?
 
 &lt;span style="color:#f58a1f"&gt;Discuss concerns with mother.&lt;/span&gt;</value>
           </text>
@@ -779,11 +788,8 @@ ASK: have you ever breastfed?</value>
 Let's practice the proper attachment of the baby during breastfeeding. Could you please show me how you attach the baby? 
 &lt;span style="color:#f58a1f"&gt;Ask her to touch the baby's lips with her nipple, wait until the baby's mouth is opening wide, and move the baby quickly onto her breast, aiming his lower lip below the nipple.Ask the mother to show you how to position the baby during breast feeding.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well_small_baby_lt6m:label">
-            <value>Discuss with the mother. Advise her and problem solve with her.</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/not_frequent_or_exclusive_breastfed:label">
-            <value>Discuss with the mother why she is not exclusively or frequently breastfeeding. Advise her and problem solve with her.</value>
+          <text id="/infant_child/essential_newborn_breastfeeding/not_frequent_breastfed_advise:label">
+            <value>Discuss with the mother why she is not frequently breastfeeding. Advise her and problem solve with her.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/observe_breastfeeding_note:label">
             <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;If possible, ask the mother to breastfeed and observe. If not possible, ask questions below rather than observing.WASH your hands. OBSERVE the mother breastfeeding. Try to UNDERSTAND the situation.Do you notice any problems with breastfeeding? Provide guidance based on what you observe. Try to solve any problems you identify or the mother describes.&lt;/span&gt;</value>
@@ -898,15 +904,6 @@ Small babies may have more health issues than other babies. It is important to l
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/nutrition_audio:label">
             <value form="audio">jr://audio/nutrition.mp3</value>
-          </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding/no:label">
-            <value>No</value>
-          </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding/yes:label">
-            <value>Yes</value>
-          </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding:label">
-            <value>Are you still breastfeeding your baby?</value>
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note:label">
             <value>Continue breastfeeding your baby on demand both day and night. This will maintain health and strength as breast milk continues to be the most important part of your baby's diet.</value>
@@ -2881,7 +2878,7 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/baby_breastfeed_well:label">
-            <value>Je mtoto wako ananyonya vizuri?</value>
+            <value>Kwa mujibu wa tathmini yako na maelezo uliyoyapata kutoka kwa mama, Je mama anamyonyesha mtoto vizuri?</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily/five_more_times_day:label">
             <value>zaidi ya mara tano kwa siku</value>
@@ -2904,7 +2901,10 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
 &lt;span style="color:#f58a1f"&gt;Mpongeze mlezi ikiwa mtoto huwa anafunikwa vizuri na kuwa karibu na mama yake, na ikiwa anakoshwa kwa maji ya vuguvugu na kukaushwa haraka. Ikiwa sio, jaribu kutatua tatizo. Angalia ukurasa wa 10 wa Bango Kitita kwa melezo zaidi.&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/breastfeeding_positions_length_note:label">
-            <value>Je unamuekaje mtoto ukitaka kumnyonyesha? Unanyonyesha kila baada ya kipindi gani? mtoto anachukua muda gani kunyonya kwa mara moja? 
+            <value>Je unaendeleaje na kunyonyesha? 
+Je unamuekaje mtoto ukitaka kumnyonyesha? 
+Unanyonyesha kila baada ya kipindi gani? 
+Mtoto anachukua muda gani kunyonya kwa mara moja? 
 
 &lt;span style="color:#f58a1f;font-weight: bold"&gt;SIKILIZA:&lt;/span&gt; &lt;span style="color:#f58a1f"&gt;Mruhusu mama kueleza uzoefu wake wa kunyonyesha.&lt;/span&gt;</value>
           </text>
@@ -2935,6 +2935,9 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding:label">
             <value>Je mtoto ananyonyeshwa maziwa ya mama peke yake?</value>
           </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_advise:label">
+            <value>Zungumza na mama na jaribu kujua kwanini hampi mwanawe mazi ya mama pekee. Muelimishe kwamba ni muhimu kutokumlisha mwanawe kitu chengine chochote isipukuwa maziwa ya mama.</value>
+          </text>
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice/animal_milk:label">
             <value>Maziwa ya wanyama</value>
           </text>
@@ -2959,11 +2962,14 @@ Asante kwa kueza kuzungumza na mimi leo kuhusu mambo haya, nimegundua tatizo amb
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice/soft_food:label">
             <value>vyakula laini</value>
           </text>
+          <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice:jr:constraintMsg">
+            <value>Huwezi kuchaguwa "Hakuna moja wapo" na chaguo jengine</value>
+          </text>
           <text id="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice:label">
             <value>Je mtoto amekua au kunywa kitu chochote kati ya hivi vifuatavyo jana?</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note:label">
-            <value>Je unaendeleaje na kunyonyesha? Je una tatizo lolote unahitaji tujadili?
+            <value>Je una tatizo lolote unahitaji tujadili?
 
 &lt;span style="color:#f58a1f"&gt;Jadili tatizo na mama.&lt;/span&gt;</value>
           </text>
@@ -2974,11 +2980,8 @@ Wacha tujifunze jinsi ya kumueka mtoto vizuri mtoto wakati wa kumnyonyesha. Je u
 
 &lt;span style="color:#f58a1f"&gt;Msaidie mama kuboresha jinsi ya kumueka mtoto: muombe amgusishe mtoto ncha ya ziwa kwenye midomo yake, subiria hadi mtoto afungue mdomo wake vizuri, na muingizie mtoto ziwa karibu na mdomo wa chini.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well_small_baby_lt6m:label">
-            <value>Zungumza na mama kuhusu tatizo na msaidie kulitatua.</value>
-          </text>
-          <text id="/infant_child/essential_newborn_breastfeeding/not_frequent_or_exclusive_breastfed:label">
-            <value>-</value>
+          <text id="/infant_child/essential_newborn_breastfeeding/not_frequent_breastfed_advise:label">
+            <value>Zungumza na mama na jaribu kujua kwanini jamnyonyeshi mwanawe zaidi ya mara 5 kwa siku. Jaribu kumuelimisha na kumsaidia kutatua tatizo hili.</value>
           </text>
           <text id="/infant_child/essential_newborn_breastfeeding/observe_breastfeeding_note:label">
             <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;CHUNGUZA: &lt;/span&gt; &lt;span style="color:#f58a1f"&gt;kama kuna uwezekano muombe mama amnyonyeshe mtoto wake na chunguza, ikiwa hakuna uwezekano muulize mama maswali kuliko kumchunguza.&lt;/span&gt;
@@ -3097,15 +3100,6 @@ Watoto njiti kikawaida huwa na matatizo mengi ya kiafya ukilinganisha na waotto 
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/nutrition_audio:label">
             <value form="audio">jr://audio/nutrition.mp3</value>
-          </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding/no:label">
-            <value>Hapana</value>
-          </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding/yes:label">
-            <value>Ndiyo</value>
-          </text>
-          <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding:label">
-            <value>Je bado unamnyonyesha mtoto wako?</value>
           </text>
           <text id="/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note:label">
             <value>Endeleae kumnyonyesha mtoto wako kwa mujibu wa mahitaji yake muda wote, usiku na mchana. Hili litafanya afya ya mtoto kutengemaa na kumfanya awe na nguvu, kwani maziwa ya mama ni chakula muhimu sana kwa mtoto.</value>
@@ -4693,19 +4687,19 @@ Kwa mtoto wako unaweza:</value>
             <ever_breastfed/>
             <time_to_breastfeed/>
             <currently_breastfeeding/>
-            <how_breastfeeding_going_note/>
             <breastfeeding_positions_length_note/>
+            <how_breastfeeding_going_note/>
             <observe_breastfeeding_note/>
             <baby_breastfeed_well/>
             <not_breastfeeding_well/>
-            <not_breastfeeding_well_small_baby_lt6m/>
             <random_value/>
             <exclusive_breastfeeding/>
             <exclusive_breastfeeding_multiple_choice/>
             <praise_mother/>
+            <exclusive_breastfeeding_advise/>
             <baby_times_breastfed_daily/>
+            <not_frequent_breastfed_advise/>
             <baby_breastfeed_more_note/>
-            <not_frequent_or_exclusive_breastfed/>
           </essential_newborn_breastfeeding>
           <essential_newborn_breastfeeding_positioning>
             <attachment_bango_kitita/>
@@ -4748,7 +4742,6 @@ Kwa mtoto wako unaweza:</value>
           <essential_newborn_care_nutrition>
             <variety_foods_note/>
             <food_hygiene_note/>
-            <still_breastfeeding/>
             <still_breastfeeding_note/>
             <not_still_breastfeeding_note/>
             <complementary_hygiene_above_6_months/>
@@ -5054,13 +5047,13 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/first_visit_6_months" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
       <bind nodeset="/infant_child/first_visit_6_months/delivery_location" type="select1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/child_card_available" type="select1" required="true()"/>
-      <bind nodeset="/infant_child/first_visit_6_months/birthweight_on_child_card" type="select1" required="true()" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/first_visit_6_months/child_birthweight" type="decimal" jr:constraintMsg="jr:itext('/infant_child/first_visit_6_months/child_birthweight:jr:constraintMsg')" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)" required="true()" constraint=". &gt;= 0.5 and . &lt;= 7"/>
-      <bind nodeset="/infant_child/first_visit_6_months/child_size_birth" type="select1" required="true()" relevant="(selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;no&quot;) or selected( /infant_child/first_visit_6_months/child_card_available ,&quot;no&quot;))"/>
+      <bind nodeset="/infant_child/first_visit_6_months/birthweight_on_child_card" type="select1" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/infant_child/first_visit_6_months/child_birthweight" type="decimal" jr:constraintMsg="jr:itext('/infant_child/first_visit_6_months/child_birthweight:jr:constraintMsg')" required="true()" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)" constraint=". &gt;= 0.5 and . &lt;= 7"/>
+      <bind nodeset="/infant_child/first_visit_6_months/child_size_birth" type="select1" relevant="(selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;no&quot;) or selected( /infant_child/first_visit_6_months/child_card_available ,&quot;no&quot;))" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/normal_baby_note" readonly="true()" type="string" relevant=" /infant_child/first_visit_6_months/child_birthweight  &gt;= 2 or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;regular&quot;) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;large&quot;)"/>
       <bind nodeset="/infant_child/first_visit_6_months/small_baby_today" type="string" calculate="if((selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;) and  /infant_child/first_visit_6_months/child_birthweight  &gt;= 0.5 and  /infant_child/first_visit_6_months/child_birthweight  &lt; 2) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;small&quot;),1,0)"/>
       <bind nodeset="/infant_child/first_visit_6_months/small_baby_note" readonly="true()" type="string" relevant=" /infant_child/first_visit_6_months/small_baby_today =1"/>
-      <bind nodeset="/infant_child/first_visit_6_months/has_received_small_baby_services" type="select1" required="true()" relevant=" /infant_child/first_visit_6_months/small_baby_today =1"/>
+      <bind nodeset="/infant_child/first_visit_6_months/has_received_small_baby_services" type="select1" relevant=" /infant_child/first_visit_6_months/small_baby_today =1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/refer_small_baby_note" readonly="true()" type="string" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/first_visit_6_months/refer_flag_small_baby" type="string" calculate="if(selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;),1,0)"/>
       <bind nodeset="/infant_child/first_visit_6_months/encourage_small_baby_note" readonly="true()" type="string" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)"/>
@@ -5155,9 +5148,9 @@ selected( /infant_child/child_danger_signs/child_difficulty_fast_breathing ,&quo
       <bind nodeset="/infant_child/child_other_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/child_other_danger_signs/generated_table_list_label_151" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152" type="select1"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_below_6_months" type="select1" required="true()" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_6_months_to_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 6) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_above_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 24)"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_below_6_months" type="select1" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_6_months_to_2_years" type="select1" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 6) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 24)" required="true()"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/child_drink_above_2_years" type="select1" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_coughing" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_cold" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_skin_boils" type="select1" required="true()"/>
@@ -5179,22 +5172,22 @@ selected( /infant_child/child_other_danger_signs/child_cold ,&quot;no&quot;) and
 selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/malnutrition_anemia/covid19_growth_booklet_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 2) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/growth_graph_range" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 2) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/growth_graph_range" type="select1" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 2) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 6)" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/child_underweight_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/growth_graph_range ,&quot;neg_2_neg_3&quot;) or selected( /infant_child/malnutrition_anemia/growth_graph_range ,&quot;lt_neg_3&quot;)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/muac_color" type="select1" required="true()" relevant="false()"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/muac_color" type="select1" relevant="false()" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_green_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;green&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_yellow_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;yellow&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/muac_red_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/refer_muac_flag" type="string" calculate="if(selected( /infant_child/malnutrition_anemia/muac_color ,&quot;red&quot;),1,0)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/covid19_palm_pallor_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_chv_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor" type="select1" relevant=" /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/palm_pallor_referral_note" readonly="true()" type="string" relevant="selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/refer_palm_pallor_flag" type="string" calculate="if(selected( /infant_child/malnutrition_anemia/palm_pallor ,&quot;present&quot;),1,0)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/diff_foods_should_give_child" type="select" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/diff_foods_should_give_child" type="select" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)" required="true()"/>
       <bind nodeset="/infant_child/malnutrition_anemia/score" type="string" calculate="count-selected( /infant_child/malnutrition_anemia/diff_foods_should_give_child )"/>
       <bind nodeset="/infant_child/malnutrition_anemia/calculated_score" type="string" calculate="if( /infant_child/malnutrition_anemia/score &gt;2,1,0)"/>
-      <bind nodeset="/infant_child/malnutrition_anemia/mny_solid_food_feed_child" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/malnutrition_anemia/mny_solid_food_feed_child" type="select1" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)" required="true()"/>
       <bind nodeset="/infant_child/small_baby_ever" type="string" calculate="if( /infant_child/first_visit_6_months/small_baby_today =1 or  /infant_child/previous_small_baby =1,1,0)"/>
       <bind nodeset="/infant_child/hand_washing" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/hand_washing/note_hand_washing" readonly="true()" type="string"/>
@@ -5203,22 +5196,22 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/essential_newborn_breastfeeding" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/small_baby_intro" readonly="true()" type="string" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 3) and  /infant_child/small_baby_ever =1 and  /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_warm_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/ever_breastfed" type="select1" required="true()" relevant=" /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/time_to_breastfeed" type="select1" required="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/ever_breastfed ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/currently_breastfeeding" type="select1" required="true()" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/ever_breastfed" type="select1" relevant=" /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/time_to_breastfeed" type="select1" relevant="selected( /infant_child/essential_newborn_breastfeeding/ever_breastfed ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/currently_breastfeeding" type="select1" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/breastfeeding_positions_length_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/observe_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_breastfeed_well" type="select1" required="true()" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 24) and selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_breastfeed_well" type="select1" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 24) and selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/baby_breastfeed_well ,&quot;no&quot;) and ( /infant_child/small_baby_ever =0 or  /infant_child/small_baby_ever =1 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6))"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well_small_baby_lt6m" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/baby_breastfeed_well ,&quot;no&quot;) and  /infant_child/small_baby_ever =1 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/random_value" type="string" calculate="if( /infant_child/essential_newborn_breastfeeding/random_value ='', round(random()*10,0),  /infant_child/essential_newborn_breastfeeding/random_value )"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding" type="select1" required="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and  /infant_child/essential_newborn_breastfeeding/random_value  &lt;=5"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice" type="select" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and  /infant_child/essential_newborn_breastfeeding/random_value  &gt; 5"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/praise_mother" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) or selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice ,&quot;none&quot;)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily" type="select1" required="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_breastfeed_more_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily ,&quot;five_more_times_day&quot;)"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/not_frequent_or_exclusive_breastfed" readonly="true()" type="string" relevant="not(selected( /infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily ,&quot;five_more_times_day&quot;)) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and (not(selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding ,&quot;yes&quot;)) or not(selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice ,&quot;none&quot;)))"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding" type="select1" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and  /infant_child/essential_newborn_breastfeeding/random_value  &lt;=5" required="true()"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice" type="select" jr:constraintMsg="jr:itext('/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice:jr:constraintMsg')" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and  /infant_child/essential_newborn_breastfeeding/random_value  &gt; 5" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/praise_mother" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice ,&quot;none&quot;) or selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_advise" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and not(selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding ,&quot;yes&quot;)) and not(selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice ,&quot;none&quot;))"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily" type="select1" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/not_frequent_breastfed_advise" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and not(selected( /infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily ,&quot;five_more_times_day&quot;)) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_breastfeed_more_note" readonly="true()" type="string" relevant="not(selected( /infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily ,&quot;five_more_times_day&quot;)) and  /infant_child/small_baby_ever =1"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/small_baby_ever =0 and selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/attachment_bango_kitita" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding_positioning/is_breastfeeding_positioning_ok" type="select1" required="true()"/>
@@ -5253,9 +5246,8 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/essential_newborn_care_nutrition" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/variety_foods_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/food_hygiene_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_care_nutrition/still_breastfeeding ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/essential_newborn_care_nutrition/not_still_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_care_nutrition/still_breastfeeding ,&quot;no&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/essential_newborn_care_nutrition/not_still_breastfeeding_note" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_above_6_months" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/complementary_hygiene_below_6_months" readonly="true()" type="string" relevant=" /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
       <bind nodeset="/infant_child/essential_newborn_care_nutrition/nutrition_audio" readonly="true()" type="string" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)"/>
@@ -5263,63 +5255,63 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/immunizations/why_vaccines_important_note" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/immunizations/vaccines_reminder_note" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/immunizations/covid19_heath_card_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/immunizations/has_health_card" type="select1" required="true()" relevant=" /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 6) or  /infant_child/n_child_visits  &gt;= 1"/>
+      <bind nodeset="/infant_child/immunizations/has_health_card" type="select1" relevant=" /infant_child/n_child_visits  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 6) or  /infant_child/n_child_visits  &gt;= 1" required="true()"/>
       <bind nodeset="/infant_child/immunizations/ask_for_health_card" readonly="true()" type="string" relevant=" /infant_child/n_child_visits  = 0 and selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;) and  /infant_child/age_years  &lt; 2 or selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bcg" readonly="true()" type="string" relevant=" /infant_child/previous_bcg  = 0"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bcg" type="select1" relevant=" /infant_child/previous_bcg  = 0"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" required="true()" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')" required="true()" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;) and  /infant_child/immunizations/record_vaccines/bcg_date  != '' and  /infant_child/immunizations/record_vaccines/bcg_date  &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0" readonly="true()" type="string" relevant=" /infant_child/previous_bopv0  = 0"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" type="select1" required="true()" relevant=" /infant_child/previous_bopv0  = 0"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" type="select1" relevant=" /infant_child/previous_bopv0  = 0" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv1" readonly="true()" type="string" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" type="select1" required="true()" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" type="select1" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" type="select1" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi1" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" type="select1" required="true()" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" type="select1" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota1" readonly="true()" type="string" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" type="select1" required="true()" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" type="select1" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bobv2" readonly="true()" type="string" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" type="select1" required="true()" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" type="select1" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" type="select1" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi2" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" type="select1" required="true()" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" type="select1" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota2" readonly="true()" type="string" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" type="select1" required="true()" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" type="select1" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3" readonly="true()" type="string" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" type="select1" required="true()" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" type="select1" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_dtp_hepb_hib3" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" type="select1" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_received_pcvi3" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" type="select1" required="true()" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" type="select1" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_ipv" readonly="true()" type="string" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" type="select1" required="true()" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" type="select1" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella1" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" type="select1" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" type="select1" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)" required="true()"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/vaccines_up_to_date" type="select1" required="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/vaccines_up_to_date" type="select1" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/immunizations/up_to_date_congrats_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/immunizations/why_not_vaccines_up_to_date" type="select" required="true()" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/why_not_vaccines_up_to_date" type="select" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;no&quot;)" required="true()"/>
       <bind nodeset="/infant_child/immunizations/too_old_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;baby_too_old&quot;)"/>
       <bind nodeset="/infant_child/immunizations/family_refused_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;family_refused&quot;)"/>
       <bind nodeset="/infant_child/immunizations/vaccine_schedule_advice_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;clinic_closed&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;not_available&quot;) or selected( /infant_child/immunizations/why_not_vaccines_up_to_date ,&quot;asked_to_return&quot;)"/>
@@ -5369,12 +5361,12 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/assess_behavior/praise_interact" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_interact ,&quot;moves&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/concern_interact" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_interact ,&quot;does_not_move&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/has_observed_comforting" type="select1" required="true()"/>
-      <bind nodeset="/infant_child/assess_behavior/how_comfort" type="select1" required="true()" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/assess_behavior/how_comfort" type="select1" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/assess_behavior/praise_comfort" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/concern_comfort" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_comforting ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/assess_behavior/has_observed_correcting" type="select1" required="true()" relevant="not(selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))"/>
+      <bind nodeset="/infant_child/assess_behavior/has_observed_correcting" type="select1" relevant="not(selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;))" required="true()"/>
       <bind nodeset="/infant_child/assess_behavior/discuss_correcting" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/has_observed_correcting ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/assess_behavior/how_correct" type="select1" required="true()" relevant="selected( /infant_child/assess_behavior/has_observed_correcting ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/assess_behavior/how_correct" type="select1" relevant="selected( /infant_child/assess_behavior/has_observed_correcting ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/assess_behavior/praise_correct" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_correct ,&quot;distracts&quot;)"/>
       <bind nodeset="/infant_child/assess_behavior/concern_correct" readonly="true()" type="string" relevant="selected( /infant_child/assess_behavior/how_correct ,&quot;scolds&quot;)"/>
       <bind nodeset="/infant_child/problem_solving" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
@@ -5382,47 +5374,47 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/problem_solving/has_stress_concern_play_comm" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/has_stress_concern_play_comm" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_stress_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/has_stress_concern_play_comm ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/has_time_concern_play_comm" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/has_time_concern_play_comm" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_time_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/has_time_concern_play_comm ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/engage_with_child" type="select" jr:constraintMsg="jr:itext('/infant_child/problem_solving/engage_with_child:jr:constraintMsg')" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
-      <bind nodeset="/infant_child/problem_solving/who_engages" type="select" required="true()" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
+      <bind nodeset="/infant_child/problem_solving/engage_with_child" type="select" jr:constraintMsg="jr:itext('/infant_child/problem_solving/engage_with_child:jr:constraintMsg')" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/infant_child/problem_solving/who_engages" type="select" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;told_storied&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;sang&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;took_outside&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;played&quot;) or 
-selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)"/>
+selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/who_engages_other" type="string" relevant="selected( /infant_child/problem_solving/who_engages ,&quot;other&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/who_engages_how_many_hours" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 36" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
+      <bind nodeset="/infant_child/problem_solving/who_engages_how_many_hours" type="int" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;told_storied&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;sang&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;took_outside&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;played&quot;) or 
-selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_toys" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)" required="true()" constraint=". &gt;= 0 and . &lt;= 36"/>
+      <bind nodeset="/infant_child/problem_solving/concern_toys" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_toys_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_toys ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/plays_with_toys_homemade" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/plays_with_toys_manufactured" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/plays_with_toys_household_objects" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/number_books" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 100" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_leave_child" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/plays_with_toys_homemade" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/plays_with_toys_manufactured" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/plays_with_toys_household_objects" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()"/>
+      <bind nodeset="/infant_child/problem_solving/number_books" type="int" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" constraint=". &gt;= 0 and . &lt;= 100"/>
+      <bind nodeset="/infant_child/problem_solving/concern_leave_child" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern_no" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/days_left_alone_more_than_1h" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 7" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 7" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/problem_solving/days_left_alone_more_than_1h" type="int" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" constraint=". &gt;= 0 and . &lt;= 7"/>
+      <bind nodeset="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h" type="int" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()" constraint=". &gt;= 0 and . &lt;= 7"/>
       <bind nodeset="/infant_child/problem_solving/covid19_play_communication_note" readonly="true()" type="string" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
@@ -5439,20 +5431,20 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_harsh_treatment" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/concern_harsh_treatment" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_harsh_treatment_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_harsh_treatment ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/refer_child_protection" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_harsh_treatment ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/message_for_chv_child_protection" readonly="true()" type="string" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
-      <bind nodeset="/infant_child/problem_solving/concern_stressful_family_environment" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
+      <bind nodeset="/infant_child/problem_solving/concern_stressful_family_environment" type="select1" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
- /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
+ /infant_child/age_days  &gt;= ( /infant_child/month  * 24)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/tip_stressul_family_environment_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_stressful_family_environment ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/development_concerns" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and (( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 24))"/>
       <bind nodeset="/infant_child/development_concerns/concern_slow_to_learn" type="select1" required="true()"/>
@@ -5475,13 +5467,13 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <bind nodeset="/infant_child/male_involvement/message_for_chv_male_present" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/male_involvement/was_male_present" type="select1" required="true()"/>
       <bind nodeset="/infant_child/male_involvement/msg_for_chv_male_present_entire_visit" readonly="true()" type="string" relevant="selected( /infant_child/male_involvement/was_male_present ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/male_involvement/male_present_entire_visit" type="select1" required="true()" relevant="selected( /infant_child/male_involvement/was_male_present ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/male_involvement/male_present_entire_visit" type="select1" relevant="selected( /infant_child/male_involvement/was_male_present ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/male_involvement/msg_for_chv_partner_interaction" readonly="true()" type="string" relevant="selected( /infant_child/male_involvement/male_present_entire_visit ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/male_involvement/partner_interaction" type="select1" required="true()" relevant="selected( /infant_child/male_involvement/male_present_entire_visit ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/male_involvement/partner_interaction" type="select1" relevant="selected( /infant_child/male_involvement/male_present_entire_visit ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/child_stool_disposal" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and (( /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)))"/>
       <bind nodeset="/infant_child/child_stool_disposal/discuss_stool" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_stool_disposal/has_latrine" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt;= ( /infant_child/week  * 11)"/>
-      <bind nodeset="/infant_child/child_stool_disposal/latrine_type" type="select1" required="true()" relevant="selected( /infant_child/child_stool_disposal/has_latrine ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/child_stool_disposal/has_latrine" type="select1" relevant=" /infant_child/age_days  &gt;= 20 and  /infant_child/age_days  &lt;= ( /infant_child/week  * 11)" required="true()"/>
+      <bind nodeset="/infant_child/child_stool_disposal/latrine_type" type="select1" relevant="selected( /infant_child/child_stool_disposal/has_latrine ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/child_stool_disposal/note_latrine" readonly="true()" type="string" relevant="selected( /infant_child/child_stool_disposal/has_latrine ,&quot;no&quot;)"/>
       <bind nodeset="/infant_child/child_stool_disposal/note_stool_disposal" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/llints" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
@@ -6365,11 +6357,11 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
           <value>no</value>
         </item>
       </select1>
-      <input ref="/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note">
-        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note:label')"/>
-      </input>
       <input ref="/infant_child/essential_newborn_breastfeeding/breastfeeding_positions_length_note">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/breastfeeding_positions_length_note:label')"/>
+      </input>
+      <input ref="/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note">
+        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/how_breastfeeding_going_note:label')"/>
       </input>
       <input ref="/infant_child/essential_newborn_breastfeeding/observe_breastfeeding_note">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/observe_breastfeeding_note:label')"/>
@@ -6387,9 +6379,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </select1>
       <input ref="/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well:label')"/>
-      </input>
-      <input ref="/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well_small_baby_lt6m">
-        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well_small_baby_lt6m:label')"/>
       </input>
       <select1 ref="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding:label')"/>
@@ -6440,6 +6429,9 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/essential_newborn_breastfeeding/praise_mother">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/praise_mother:label')"/>
       </input>
+      <input ref="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_advise">
+        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_advise:label')"/>
+      </input>
       <select1 ref="/infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily:label')"/>
         <item>
@@ -6459,11 +6451,11 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
           <value>five_more_times_day</value>
         </item>
       </select1>
+      <input ref="/infant_child/essential_newborn_breastfeeding/not_frequent_breastfed_advise">
+        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/not_frequent_breastfed_advise:label')"/>
+      </input>
       <input ref="/infant_child/essential_newborn_breastfeeding/baby_breastfeed_more_note">
         <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/baby_breastfeed_more_note:label')"/>
-      </input>
-      <input ref="/infant_child/essential_newborn_breastfeeding/not_frequent_or_exclusive_breastfed">
-        <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding/not_frequent_or_exclusive_breastfed:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/essential_newborn_breastfeeding_positioning">
@@ -6583,17 +6575,6 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/essential_newborn_care_nutrition/food_hygiene_note">
         <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/food_hygiene_note:label')"/>
       </input>
-      <select1 ref="/infant_child/essential_newborn_care_nutrition/still_breastfeeding">
-        <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/still_breastfeeding:label')"/>
-        <item>
-          <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/still_breastfeeding/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/still_breastfeeding/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
       <input ref="/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note">
         <label ref="jr:itext('/infant_child/essential_newborn_care_nutrition/still_breastfeeding_note:label')"/>
       </input>
