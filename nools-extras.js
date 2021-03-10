@@ -1426,7 +1426,7 @@ getDeliveryMethod(c,deliveryMethod) {
 },
 
 isHighRiskPregnancyML: function (c) {
-      var catchmentId=c.contact.meta.created_by_place_uuid;
+      var catchmentId=c.contact.parent.parent._id;
       if(!enabel.isCatchmentInML(catchmentId)){return;}
 
       var data = enabel.getShehiaData(catchmentId);
