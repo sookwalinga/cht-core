@@ -147,7 +147,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /postp
             <value>Encouraging mother to attend the clinic for PNC services</value>
           </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_danger_signs_note:label">
-            <value>First, I'm going to check for any postpartum danger signs.</value>
+            <value>First, I'm going to check for any postpartum danger signs. If you have any of the following danger signs, I shall refer you to a nearest health facility so that you can receive the appropriate medical attention.</value>
           </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/covid19_postpartum_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt; Now you are at the stage of screening danger signs for this client. Please examine the client while keeping a distance of 2 meters from your client as a precautionary measure to avoid the spread of Corona virus &lt;/span&gt;</value>
@@ -1359,7 +1359,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <value>Kumhimiza mama kuhudhuria kituo cha afya baada ya kujifungua</value>
           </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_danger_signs_note:label">
-            <value>Kwanza kabisa nitakuchunguza kam unadalili za hatari baada ya kujifungua</value>
+            <value>Kwanza kabisa nitakuchunguza kam unadalili za hatari baada ya kujifungua. Iwapo utaonesha una dalili za hatari, utapatiwa rufaa (kwenda kituo cha afya) na kuunganishwa na mtoa huduma kwenye kituo kilicho karibu yako.</value>
           </text>
           <text id="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/covid19_postpartum_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt; Sasa hivi upo kwenye hatua ya kuchunguza dalili za hatari. Tafadhali hakikisha umekaa umbali wa mita mbili na mteja wako ili kujilinda na uwezekano wa kusambaza maambukizi ya Korona.&lt;/span&gt;</value>
@@ -3539,8 +3539,8 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)"/>
       <bind nodeset="/postpartum/quality_of_care/is_service_received" type="select1" required="true()"/>
       <bind nodeset="/postpartum/quality_of_care/no_service_reason" type="select" required="true()" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;) or selected( /postpartum/quality_of_care/is_service_received ,&quot;no&quot;)"/>
       <bind nodeset="/postpartum/quality_of_care/second_facility" type="select" required="true()" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/pnc_services_received" type="select" required="true()" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/pnc_services_received:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
-      <bind nodeset="/postpartum/quality_of_care/baby_services_recevied" type="select" required="true()" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/baby_services_recevied:jr:constraintMsg')" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/postpartum/quality_of_care/pnc_services_received" type="select" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/pnc_services_received:jr:constraintMsg')" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/postpartum/quality_of_care/baby_services_recevied" type="select" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/baby_services_recevied:jr:constraintMsg')" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
       <bind nodeset="/postpartum/personal_information_consent" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and  /postpartum/show_research_questions  = &quot;true&quot;"/>
       <bind nodeset="/postpartum/personal_information_consent/research_questions_consent" type="select1" required="true()"/>
       <bind nodeset="/postpartum/research_questions" relevant="selected( /postpartum/personal_information_consent/research_questions_consent ,&quot;yes&quot;)"/>
