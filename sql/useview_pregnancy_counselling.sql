@@ -85,7 +85,7 @@ CREATE MATERIALIZED VIEW useview_pregnancy_counselling AS
   WHERE
     doc ->> 'form' = 'pregnancy_counselling'
 );
-CREATE UNIQUE INDEX IF NOT EXISTS pregnancy_reported_date_created_by_uuid ON useview_pregnancy_counselling USING btree (reported_date, chv_uuid, patient_id);
+CREATE UNIQUE INDEX IF NOT EXISTS pregnancy_couselling_reported_date_created_by_uuid ON useview_pregnancy_counselling USING btree (reported_date, chv_uuid, patient_id);
 -- Permissions
 REASSIGN OWNED BY current_user TO full_access;
 GRANT SELECT ON useview_pregnancy_counselling TO full_access, dtree, periscope;
