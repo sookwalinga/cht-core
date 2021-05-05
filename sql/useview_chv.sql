@@ -11,6 +11,8 @@ CREATE MATERIALIZED VIEW useview_chv AS
     doc ->> 'name' AS name,
     doc ->> 'type' AS type,
     doc ->> 'phone' AS phone,
+    doc ->> 'sex' AS sex,
+    TO_DATE(doc ->> 'dob', 'YYYY-MM-DD') AS date_of_birth,
     doc #>> '{parent,_id}' AS catchment_area_uuid,
     doc #>> '{parent,parent,_id}' AS supervisory_area_uuid,
     to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
