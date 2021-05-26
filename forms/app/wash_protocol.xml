@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Wash Protocol</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/wash_protocol/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/wash_protocol/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/wash_protocol/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/wash_protocol/wash/cholera_note/cholera_signs:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/cholera_note/important_note_cholera:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cholera/ask_familiy:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps_pic:label">
+            <value form="image">jr://images/handwashsteps.png</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_environment/environment_cleanliness:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/cleanliness:label">
+            <value>Cleanliness</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/environment:label">
+            <value>Environment</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/water:label">
+            <value>Water</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_ors/ors_uses:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_water/cleanwater_audio:label">
+            <value form="audio">jr://audio/majisafi.mp3</value>
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_water/safe_water:label">
+            <value>-</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/wash_protocol/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/wash_protocol/wash/cholera_note/cholera_signs:label">
+            <value>&lt;strong&gt;Huduma ya kwanza kwa mtu alieanza kuonesha dalili za kipindupindu&lt;/strong&gt; 
+Sasa ningependa kuzungmza na nyie kuhusu hatua za kuchukua ikiwa wewe au kuna mwanafamilia mnahisi ana dalili za kipindupindu 
+• Kuharisha au kuharisha kinyesi kinachofanana na maji ya mchele
+• Kutapika
+• Je Ufanye nini ukiona una dalili za kipindupindu?
+• Nenda haraka kwenye kituo cha afya cha karibu 
+• Kunywa maji au ORS kama inapatikana mara kwa mara huku ukielekea kwenye kituo cha kutolea huduma za afya
+• Iwapo ni mtoto mdogo aliepata maambukizi, endelea kumnyonyesha hata kama anaharisha mnapoelekea kwenye kituo cha kutolea huduma za afya kupata matibabu
+• Watoto wakubwa na watu wazima waendelee kula chakula mara kwa mara</value>
+          </text>
+          <text id="/wash_protocol/wash/cholera_note/important_note_cholera:label">
+            <value>&lt;strong&gt;Ujumbe Muhumi&lt;/strong&gt;
+Kipindupindu kinapatikana kwa kunywa au kula chakula chenye maambukizi ya kipindupindu. Kipindupindu kinaepukika ikiwa watu watazingatia usafi wa mikono, chakula, maji na matumizi sahihi ya vyoo.</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cholera/ask_familiy:label">
+            <value>&lt;strong&gt;Kuelewa Kipindupindu&lt;/strong&gt; 
+
+Waulize wana familia: 
+• Unafahamu/mnafahamu chochote kuhusu kipindupindu?
+• Dalili za kipindupindu
+• Jinsi kinavyoenea 
+• Nani yupo katika hatari ya kupata kipindupindu?
+• Na vipi utajikinga na kipindupindu?
+
+&lt;span style="color:#f58a1f"&gt;Kulingana na majibu hapo juu tumia kitini rejea umuelezee zaidi kuhusu kipindupindu (Kipindupindu ni nini, Jinsi kinavyo enezwa na jinsi ya kuzuia kipindupindu)&lt;/span&gt;</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note:label">
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Usafi &lt;/span&gt;
+
+&lt;strong&gt;Usafi wa mikono kwajili ya kujikinga na kipindupindu.&lt;/strong&gt;</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance:label">
+            <value>Je unafahamu umuhimu wa kunawa mikono?</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Muombe akuoneshe jinsi ya kunawa mikono kwa maji tiririka na sabuni(zingatia hatua)&lt;/span&gt;
+• Vua urembo wowote, mfano pete au saa ya mkononi
+• Rowesha mikono kwa maji
+• Paka sabuni sehemu zote za mikono na viganja
+• Sugua viganja vya mikono
+• Sugua sehemu ya nyuma ya kiganja cha mkono na kwenye pachikwa za vidole
+• Sugua sehemu za viganja sawa sawa 
+• Sugua vidole gumba
+• Sugua ncha za vidole
+• Suuza mikono kwa kutumia maji tiririka
+• Funga mfereji
+• Kausha mikono</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps_pic:label">
+            <value form="image">jr://images/handwashsteps.png</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings:label">
+            <value>Nyakati muhimu unazo takiwa kunawa mikono ni: 
+• Kabla ya kula au kuandaa chakula 
+• Kabla ya kumlisha mtoto
+• Kabla ya kuaanda juice za matunda
+• Baada ya kutumia choo
+• Baada ya kumsafisha mtoto akimaliza kujisaidia, ama baada ya kumbadilisha nepi
+• Baada ya kumhudia mgonjwa wa kipindupindu</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama hapana tumia kitini rejea kuelimisha wana familia.&lt;/span&gt;</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_environment/environment_cleanliness:label">
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Mazingira &lt;/span&gt;
+
+&lt;strong&gt; Matumizi ya choo &lt;/strong&gt; 
+• Nielezee madhara wana Jamii wanayo weza kupata ikiwa hawana vyoo au havitumiwi kwa usahihi?
+ • Wasikilize wana Jamii, tumia kitini rejea ukurasa wa 19 umuelezee choo bora, aina ya vyoo, jinsi ya kutumia choo vizuri na kujisaidia kusiko sahihi
+
+&lt;strong&gt; Usafi wa mwili na mavazi&lt;/strong&gt; 
+Sasa ningependa tuzungumze kuhusu usafi wa mwili na mavazi ili kuzuia kuenea kwa vijidudu vikiwemo vimelea vya kipindupindu
+• Unaweza kunielezea umuhimu wa usafi wa mwili na mavazi kwa familia yako hususan watoto na athari zinazoweza kupatika ikiwa usafi wa mwili na mavazi ukikosekana
+&lt;span style="color:#f58a1f"&gt;Msiiklize mama na wanafamilia ,halafu tumia kitini rejea kuwaelimisha zaidi faida za usafi wa mwili na mavazi katika kuzuia kuenea kwa vijidudu vinavyoweza sababisha maambukizi ya maradhi. &lt;/span&gt;
+
+&lt;strong&gt; Usafi wa mazingira &lt;/strong&gt; 
+Sasa ningependa tuzungumze kuhusu umuhimu wa usafi wa mazingira ili tuwe na mazingira safi na kuzuia kuzaliana kwa vijidudu vinavyoweza kusababisha maambukizi ya magonjwa mbalimbali ikiwemo kipindupindu
+• Unaweza kunielezea usafi wa mazingira ni nini?
+Msikilize/wasikilize wana familia na kisha tumia kitini rejea uwafahamishe zaidi juu kuhusu
+ • Kuelewa maana ya usafi wa mazingira
+ • Kuelewa umuhimu wa usafi wa mazingira
+ • Kuelewa jinsi ya kuweka mazingira safi</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/cleanliness:label">
+            <value>Usafi</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/environment:label">
+            <value>Mazingira</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/water:label">
+            <value>Maji</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns:label">
+            <value>Ningependa tuongelee zaidi kuhusu:</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv:label">
+            <value>&lt;span style="color:#f58a1f"&gt;CHV chunguza na dadisi hali hatarishi zinahusu usafi kwenye nyumba hii na uchague ni sehemu gani ya ushauri inahitajika zaidi. Unaweza kuchagua zaidi ya eneo moja kulingana na uhitaji. &lt;/span&gt;</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_ors/ors_uses:label">
+            <value>&lt;strong&gt; Matumizi ya ORS &lt;/strong&gt; 
+
+&lt;strong&gt; Kuna mtu yoyote anaeweza kunieleza ORS ni nini?&lt;/strong&gt;
+ • ORS (Oral Rehydration Solution) ni kinywaji kinachotumika kurudisha maji na chumvichumvi iliyopotea wakati wa kuharisha au kutapika.
+&lt;strong&gt; Jinsi ya kutengeneza ORS kwa kutumia ORS ya kwenye pakiti&lt;/strong&gt;
+ • Nawa mikono kwa maji safi ya mtiririko na sabuni 
+ • Weka lita moja ya drop ya maji salama ya kunywa kwenye chombo kisafi 
+
+&lt;strong&gt;Angalizo&lt;/strong&gt; 
+Wakati wa kutengeneza ORS, tumia kiwango sahihi cha maji. Ukitumia maji kidogo, ORS itafanya kuharisha kuendelee. Ukitumia maji mengi, ORS haitafanya kazi yake. Usiongeze vinywaji vingine kwenye mchanganyiko wa ORS mfano maziwa, supu, juisi n.k.
+ • Safisha kijiko na chombo cha kuwekea maji kwa sabuni na maji salama 
+ • Weka ORS kutoka kwenye pakiti kwenye maji salama huku ukikoroga 
+ • Kunywa maji kidogo kidogo mara kwa mara</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_water/cleanwater_audio:label">
+            <value>Jinsi ya kuandaa na kuhifadhi maji safi na salama</value>
+            <value form="audio">jr://audio/majisafi.mp3</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_water/safe_water:label">
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Maji &lt;/span&gt;
+
+&lt;strong&gt;Maji safi na salama &lt;/strong&gt; 
+ Waulize wanafamilia wakuelezee maji safi na salama ni yepi? 
+ Maji salama ni: 
+ • Yale ambayo yako kwenye chupa yenye mfuniko ambao haujavunjika
+ • Yamechemshwa au
+ • Yamewekewa kitakasa maji
+
+Umuhimu wa kunywa maji safi na salama
+ • Ili kuzuia ueneaji wa maambukizi ya vimelea vinavyoweza kusababisha maradhi mbalimbali ikiwemo kipindupindu</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <wash_protocol id="wash_protocol" prefix="J1!wash_protocol!" delimiter="#" version="2021-05-26 11-42">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <wash>
+            <subgroup_cholera>
+              <ask_familiy/>
+            </subgroup_cholera>
+            <cholera_note>
+              <important_note_cholera/>
+              <cholera_signs/>
+            </cholera_note>
+            <subgroup_ors>
+              <ors_uses/>
+            </subgroup_ors>
+            <subgroup_health_concerns>
+              <health_concerns_note_to_chv/>
+              <health_concerns/>
+            </subgroup_health_concerns>
+            <subgroup_cleanliness>
+              <hand_cleanliness_note/>
+              <hand_wash_importance/>
+              <note_to_chv_kitini_rejea/>
+              <hand_wash_timings/>
+              <hand_wash_steps/>
+              <hand_wash_steps_pic/>
+            </subgroup_cleanliness>
+            <subgroup_water>
+              <safe_water/>
+              <cleanwater_audio/>
+            </subgroup_water>
+            <subgroup_environment>
+              <environment_cleanliness/>
+            </subgroup_environment>
+          </wash>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </wash_protocol>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/wash_protocol/inputs" relevant="false()"/>
+      <bind nodeset="/wash_protocol/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/wash_protocol/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/wash_protocol/inputs/user/name" type="string"/>
+      <bind nodeset="/wash_protocol/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/wash_protocol/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/wash_protocol/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/wash_protocol/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/wash_protocol/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/wash_protocol/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cholera/ask_familiy" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/cholera_note/important_note_cholera" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/cholera_note/cholera_signs" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_ors/ors_uses" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns" type="select" required="true()"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness" relevant="selected( /wash_protocol/wash/subgroup_health_concerns/health_concerns ,&quot;cleanliness&quot;)"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance" type="select1" required="true()"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps_pic" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_water" relevant="selected( /wash_protocol/wash/subgroup_health_concerns/health_concerns ,&quot;water&quot;)"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_water/safe_water" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_water/cleanwater_audio" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_environment" relevant="selected( /wash_protocol/wash/subgroup_health_concerns/health_concerns ,&quot;environment&quot;)"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_environment/environment_cleanliness" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/wash_protocol/inputs">
+      <group ref="/wash_protocol/inputs/user">
+        <input ref="/wash_protocol/inputs/user/contact_id">
+          <label ref="jr:itext('/wash_protocol/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/wash_protocol/inputs/user/facility_id">
+          <label ref="jr:itext('/wash_protocol/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/wash_protocol/inputs/user/name">
+          <label ref="jr:itext('/wash_protocol/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/wash_protocol/inputs/contact">
+        <input appearance="db-object" ref="/wash_protocol/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group ref="/wash_protocol/wash">
+      <group appearance="field-list" ref="/wash_protocol/wash/subgroup_cholera">
+        <input ref="/wash_protocol/wash/subgroup_cholera/ask_familiy">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_cholera/ask_familiy:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/wash_protocol/wash/cholera_note">
+        <input ref="/wash_protocol/wash/cholera_note/important_note_cholera">
+          <label ref="jr:itext('/wash_protocol/wash/cholera_note/important_note_cholera:label')"/>
+        </input>
+        <input ref="/wash_protocol/wash/cholera_note/cholera_signs">
+          <label ref="jr:itext('/wash_protocol/wash/cholera_note/cholera_signs:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/wash_protocol/wash/subgroup_ors">
+        <input ref="/wash_protocol/wash/subgroup_ors/ors_uses">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_ors/ors_uses:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/wash_protocol/wash/subgroup_health_concerns">
+        <input ref="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv:label')"/>
+        </input>
+        <select ref="/wash_protocol/wash/subgroup_health_concerns/health_concerns">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_health_concerns/health_concerns:label')"/>
+          <item>
+            <label ref="jr:itext('/wash_protocol/wash/subgroup_health_concerns/health_concerns/cleanliness:label')"/>
+            <value>cleanliness</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/wash_protocol/wash/subgroup_health_concerns/health_concerns/water:label')"/>
+            <value>water</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/wash_protocol/wash/subgroup_health_concerns/health_concerns/environment:label')"/>
+            <value>environment</value>
+          </item>
+        </select>
+      </group>
+      <group appearance="field-list" ref="/wash_protocol/wash/subgroup_cleanliness">
+        <input ref="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note:label')"/>
+        </input>
+        <select1 ref="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance:label')"/>
+          <item>
+            <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label')"/>
+        </input>
+        <input ref="/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings:label')"/>
+        </input>
+        <input ref="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps:label')"/>
+        </input>
+        <input ref="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps_pic">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps_pic:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/wash_protocol/wash/subgroup_water">
+        <input ref="/wash_protocol/wash/subgroup_water/safe_water">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_water/safe_water:label')"/>
+        </input>
+        <input ref="/wash_protocol/wash/subgroup_water/cleanwater_audio">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_water/cleanwater_audio:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/wash_protocol/wash/subgroup_environment">
+        <input ref="/wash_protocol/wash/subgroup_environment/environment_cleanliness">
+          <label ref="jr:itext('/wash_protocol/wash/subgroup_environment/environment_cleanliness:label')"/>
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>

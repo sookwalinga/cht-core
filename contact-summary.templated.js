@@ -17,7 +17,8 @@ module.exports = {
     risk_factor_labels: extras.getRiskFactorLabels('eng'), 
     risk_factor_labels_swahili:extras.getRiskFactorLabels('sw'),
     mitigation_list: extras.getMitigationList(),
-    high_risk_manual: extras.isHighRiskPregnancy()
+    high_risk_manual: extras.isHighRiskPregnancy(),
+    show_wash_protocol:extras.showWashProcotol()
   },
 
   fields: [

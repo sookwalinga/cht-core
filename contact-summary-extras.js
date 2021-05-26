@@ -1,5 +1,6 @@
 var isCatchmentInML=require('./enabel_catchments').isCatchmentInML;
 var risksMap=require('./pregnancy_risk_factors.json');
+var wash = require('./wash_supervisory_areas.js');
 var riskFactors = [];
 
 function get(obj,field){
@@ -12,6 +13,11 @@ function get(obj,field){
 module.exports = {
 
   week: 7,
+  
+  showWashProcotol: function () {  
+    return contact && contact.parent && contact.parent.parent && contact.parent.parent._id &&
+       wash.shouldGetWashProtocol(contact.parent.parent._id);
+  },
 
   isChildUnder5: function () {
     if (contact && contact.date_of_birth) {

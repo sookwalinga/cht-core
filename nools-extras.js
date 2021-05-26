@@ -1,5 +1,7 @@
 var enabel = require('./enabel_catchments.js');
 var RandomForestClassifier = require('./model-min.js');
+var wash = require('./wash_supervisory_areas.js');
+
 function get(obj,field){
   if(!obj){return;}
   var parts=field.split('.');
@@ -11,6 +13,12 @@ module.exports = {
   day: 1,
   week: 7,
   month: 30,
+
+  showWashProcotol: function (c){  
+    return c.contact && c.contact.parent && c.contact.parent.parent &&
+           c.contact.parent.parent.parent &&
+           wash.shouldGetWashProtocol(c.contact.parent.parent.parent._id) && 1;
+  },
 
   isChildUnder5: function (c) {
     if (c.contact && c.contact.parent && c.contact.parent.parent &&

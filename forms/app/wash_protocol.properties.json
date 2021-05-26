@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Wash Protocol"
+    },
+    {
+      "locale": "sw",
+      "content": "Kuhusu Kuosha"
+    }
+  ],
+  "icon": "general",
+  "context": {
+    "person": false,
+    "place": true,
+    "expression": "contact && contact.type === 'clinic' && summary.show_wash_protocol===true"
+  }
+}

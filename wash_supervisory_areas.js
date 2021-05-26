@@ -1,0 +1,203 @@
+ //Darasa and Prod supervisory areas for wete, micheweni, westa, urban (WestB not included yet)
+ var supervisoryAreas = 
+ //Urban Supervisory areas (Production)
+ '6d12992d-fd94-573a-875a-73d1cdebea12'+
+ 'c80dff37-c386-5f8c-9e58-73dfa6eaaaa9'+
+ '255011b8-a85f-5e9b-a37a-1423f8d24eaa'+
+ '3db41fc9-37b8-57b0-aade-ec1fc5b3fa4c'+
+ 'df6a5916-8fad-517a-9c5a-0bac450b8148'+
+ '5d224bb6-7344-51e9-bd67-b7acab6e0aa1'+
+ 'ffd98877-340c-5b2b-bf67-38b94bb8cb37'+
+ '1a0464d0-0d8f-5fda-8cdf-fda479f13eae'+
+ '368f04fa-87e0-5e87-bbc9-9ccc7c1c3eca'+
+ '1c2d81e0-6a38-5c9f-8204-d26b46504de2'+
+ 'a005ba05-bebc-5f70-803e-327d076412bd'+
+ '81c0d7f4-3843-5356-89a6-29deb0b988df'+
+ 'ffca2779-77fc-5f51-8f65-b44f6fe7b0ab'+
+ '115a439d-19a7-5be8-b6d2-f127bbedead9'+
+ '43be3cbd-e4d0-5114-a6a9-5ad3a5d1309b'+
+ '4694803b-c717-5cbd-9f80-dc8815b9bfbd'+
+ '76950844-a333-5d36-b308-b654ff5c7ff6'+
+ 'f2d03e08-6a23-5b16-a706-a903f5b79a0a'+
+ 'a65e3a0a-ddd5-5366-a883-800ef5c0a456'+
+ 'b8cd3b4a-715f-5660-b00f-7c6f4e21adae'+
+ '8ec7b784-5cc6-5c5c-8559-e2b088beb126'+
+ '2149ceb8-0234-5e29-a599-a63f4d6ce91e'+
+ '91402eca-2603-5159-a1c0-d01bdfa66ad7'+
+ '20f18e5e-96c2-5e76-b3c6-0a2877e2998e'+
+ '28f2f38d-78af-5596-a457-2e68b6e12fcf'+
+ 'edc30b5f-7b35-56aa-b1a4-f8794b12612e'+
+ '0ec18828-2287-5e20-8a19-7c2e93bfdaab'+
+ '0298a9ae-6127-5288-93b6-6d4c68b9c1e3'+
+ //Urban Supervisory Areas (Darasa) 
+'8eef6ea8-eb10-545b-81c8-f07ee6d5b4fe'+
+'524f1de8-62fa-5923-bfb3-1fcc847a5db1'+
+'fcf1b398-bab3-5913-8492-0ad02218e0bb'+
+'47be88c0-15c0-5d74-bfc0-39c5cfa42077'+
+'c8f8505f-e341-5012-8815-c76a59742c11'+
+'56478af5-aa52-5d4a-93de-ae426f4c7da0'+
+'66dc85c6-3339-5884-ab43-8f99756ecb5d'+
+'f586a384-58e6-58f3-9ba6-e78e86544a3f'+
+'c01f468e-3c7a-5609-a835-f432af70cc14'+
+'b4b4d2aa-3588-506e-9cbc-51541cc1220f'+
+'ac6ac817-1efa-592b-9a95-dd6127fb0feb'+
+'11061c41-864f-5c11-beca-825f8f0a07ed'+
+'2d68a61b-5da5-5e6c-b402-55762af15b17'+
+'06e4c26d-0c16-5b8d-be95-b2bcd9321c12'+
+'4f2cdcc0-feda-5658-99a3-2ea88255bf51'+
+'65ba5384-7493-52e7-972e-305be0e0fe5d'+
+'e3f5c459-519f-55a7-99d5-b30428abf05a'+
+'92359988-862d-5a07-a4b9-a1e73163ad6d'+
+'296ec4a6-e279-5758-9bf0-65e30c4bc45e'+
+'e2cc2b71-d07d-5e6a-92cf-1b35d0ea3e38'+
+'d86f5c1a-7337-58e9-bdd4-f0898cd9c3ac'+
+'d8c51d18-173e-5261-a355-fb93b69b493e'+
+'55f5afe5-cd2f-5553-a80c-543e7ea1bc89'+
+'b9578226-41ef-5d41-80f5-fa8e55947caa'+
+'ebff244e-4ca6-5498-bcbe-f553b8f761d9'+
+'e3a1f450-f1e2-5d13-90ff-97daa3bfc0c7'+
+'59350a37-8c49-5dec-8f33-36d545ff5818'+
+'549e41ea-bf25-5f7d-ac40-a0a92d8b2606'+
+//Micheweni Supervisory areas(Production)
+ 'b15b73f1-6b26-53e7-a8a4-7d6891691c04'+
+ '30323ddd-e0cc-5237-ba74-57be9b245345'+
+ 'a7cd391b-61db-574a-9c1c-c2acf5f9e5cf'+
+ 'b78aefae-fae0-5ae8-8386-d03ee66b0f10'+
+ '742d513b-497d-5f86-95a0-ab6e054a9b06'+
+ '5eec6be1-0472-51a5-96ce-d50dfad03045'+
+ 'a9ec0532-076e-58d5-84c2-4c7f969c89a7'+
+ 'b8a628d6-5da3-52e2-8229-a6cb947ea56b'+
+ '4954cfcf-4b04-5d45-b980-9ef21c26f44c'+
+ '59936b26-3a1c-5d3a-81da-58bea309254d'+
+ '407a86bc-9966-5e0d-8ffc-9c851f117bed'+
+ '8b6fbb71-53c8-5273-a367-c7aac1b6bbb3'+
+ '78b13800-9bb6-5691-beee-c2c432abb21e'+
+ '11eb8b5d-af8b-5032-9b6a-6af2162134e9'+
+ 'daa85f9d-1acf-5212-828f-30a26ffe1b97'+
+ 'dcc912d4-f42e-5a22-84b0-20feaaf09e1b'+
+ '7bcedda2-c9e9-569e-a5a5-e2a97917c41e'+
+ 'dd208c00-850d-5f7e-8bc9-241eaf3cf2fe'+
+ //Micheweni Supervisory Area (Darasa) 
+'ab1f396c-0e9d-5482-99fb-d0694f1edc66'+
+'5d4e4a93-4602-5ee7-8f73-b88abea5ab7c'+
+'08bf92c3-200d-5cb0-b728-e75386fa76e3'+
+'41a40511-3f62-5387-8f3d-b2f9f0fb37a1'+
+'04f9808c-75cf-5d29-ace7-3f10baab74fa'+
+'5d0f9814-aabf-56fb-8eee-9e7a4ebc225e'+
+'9d5440f1-20dd-5f89-8427-e2359c00d6e2'+
+'f235aa0b-8cd5-5130-9dca-438a188f9a67'+
+'612372b5-163d-5f52-a3ec-0f3a83fbef43'+
+'e44f20f6-6b8b-58ee-9cc1-fb4d51ef35b8'+
+'ab470937-eb8c-53ac-b7b9-6819784848eb'+
+'5527d0c3-850f-5c20-8123-777843554aa6'+
+'fea7e807-9bd0-5980-8a7f-8c600b9957ac'+
+'2c52f3cb-edb2-5a23-8c4f-0247de7e6719'+
+'eb1ffaf4-9887-5f95-b2fc-c457ae60d37a'+
+'857510af-16d0-5a59-8767-0cdf8d55aa00'+
+'24380543-b106-52ef-8c28-8ccde3bce62b'+
+'3eaedf0f-b5f1-5fa6-bdcf-87a4a5e3d319'+
+ //Wete supervisory areas (Production)
+'8b29a4c0-e8f4-5449-97e9-ead0f70f39d9'+
+'b2d1f333-0cc4-5d35-97f7-6ca42ec7db20'+
+'b3efb7ae-4599-5a47-8b84-afbffaa9197f'+
+'b1db8fc4-0cbb-5817-98dd-f0fd91862501'+
+'b03413cb-3bdc-5c77-9fd1-4a28c25bb9fb'+
+'96493f5e-3846-555f-ae54-ead5ea35eae2'+
+'e0d89c6a-14c2-5c58-b16c-839965c0109c'+
+'95a709df-7cbc-52be-8003-05b2430f21a6'+
+'745bcf8f-6aab-57ad-8675-525e10767653'+
+'06379b43-786a-54d3-b921-f54928a29626'+
+'5985a1eb-ad31-5cea-b386-a601d1b6e501'+
+'244059ae-59da-5b0b-8bc5-a1c645b0a2f5'+
+'6fb4a00a-ee81-5b28-8276-fc0bd8a33899'+
+'908e4ee0-2fe8-5872-924d-7c5ae9399994'+
+'1ee80155-959d-5322-ac73-147c9b502b94'+
+'d4a3500e-6a06-5a3a-906f-a98ee95d719f'+
+'564dfc16-9320-50bd-b447-6358a7214233'+
+'f8ed35f4-8f07-5bab-8342-201ca9c34979'+
+'be93c66d-0288-5773-aef7-b1ad9885b38c'+
+'b52d69b1-897b-5639-8d34-e56bdcf238d1'+ 
+//Wete Supervisory areas (Darasa) 
+'f081ae0d-2341-598a-807d-d15cda257a7a'+
+'74a8ca84-078e-585f-bf67-90ca50d3c59b'+
+'0350b44b-0fbe-5601-88e7-cbe8a88ba50c'+
+'9e55fc69-4d5f-5be2-bfbb-8eed93f230b9'+
+'85319e00-7ac0-5cb1-b2bc-baccd14cf47d'+
+'323f98f4-e5f1-5b5f-8e7d-5b93ae9d1880'+
+'7bd9ad7b-dcdc-584b-ae5f-859e0a2693b3'+
+'2c35df05-c096-5c95-a401-55444fdd18ba'+
+'38261bad-b0a5-5e68-be88-b7b37a455ab9'+
+'e19c84da-6043-5f1c-9dcd-b3b57b50be02'+
+'12cf4e0b-0b4e-540c-aebd-d9b841ea40ec'+
+'b8a84ded-b451-5ce4-a3a5-a861f04644a2'+
+'34089118-58d3-53f6-be12-6088f929b410'+
+'b0e28da0-ae3b-5da4-b275-7a81d430ed1e'+
+'3d24db33-2c9e-5664-bbd1-f5940dd97fdf'+
+'ab354027-5c62-589f-b27b-79c967802afa'+
+'83e5be28-4bed-5fd8-9516-bac3b9935dbc'+
+'00294bb0-1012-5a88-bba4-9c72add61762'+
+'2182da0e-190d-5917-adb1-9ad0b261fa90'+
+'4d136f06-8f2a-5628-b696-c8362cc2645f'+
+'39e8cb0b-1c8c-58f4-863e-c88dec9eeae3'+
+ //WestA supervisory areas (Production)
+'3201276f-825f-566c-8605-09c02f407c8b'+
+'27ff081d-883d-510c-acf7-a7f4fc9eea6a'+
+'d2a0ad9b-1adb-5c16-afe2-945765068439'+
+'a133f421-a0d4-5241-8402-45585494632b'+
+'05ee86ed-9814-5ba4-8a7d-5d356f7fe424'+
+'836285ca-455b-5dc1-a600-f1175affd3fa'+
+'7b31c8ee-18ad-59df-abfc-c7bb36a747eb'+
+'fc0c7c9d-8767-56c6-990d-cb56f259e5a2'+
+'c93d08b5-b29c-5af5-be05-7b435178bca1'+
+'7b285cfc-b0de-56e8-83ee-b53bf85be23b'+
+'97bde4bf-713f-5886-b7e5-6384c632c362'+
+'8b671b18-52aa-5b8b-8144-b2c17f9db6b3'+
+'ca3960ee-46c5-5bec-8b19-250e99866284'+
+'fc47b039-c25c-5f31-94a2-b3a677059568'+
+'f2a0b0ee-2500-5999-8a50-4a3e6a542725'+
+'965a5cb5-e949-5a1a-b820-0fe7cea9882e'+
+'4754c2e8-5376-51d0-8309-2d94adebc4c7'+
+'96b8c869-e61e-5c7b-89c9-5fcecb4c2e36'+
+'a8af8f04-77cd-5a7f-9a88-aa9ae310a19e'+
+'c9e714ec-e732-5134-8aa5-195db1d00e60'+
+'22e448ce-c982-5939-9cc6-8e93e4914ee4'+
+'386273d0-264b-5718-b259-bfd93cc7559f'+
+'74caa4a2-d774-533c-b875-5f6fa306b907'+
+'20c2bb2b-6d15-5c1d-94d9-4f98e7c23be3'+
+//WestA supervisory areas (Darasa) 
+'2e74b255-dfb8-5f2c-ad9b-a22439900983'+
+'e0d22383-e117-592c-b3d0-f39f63710db3'+
+'f8a95494-0269-5534-ae69-9c4a046bc529'+
+'32ca7406-0a18-5f13-bfa3-da9b81cb0154'+
+'34560b50-b1ac-515e-ad9b-2a04df4847eb'+
+'217e4f02-ef91-5f1b-8d5c-18b0e26f0b44'+
+'3f7bd472-1e67-5407-9b5f-45a72d5218b0'+
+'9f9d0412-1dcb-5176-90ed-09ee03fee7a8'+
+'1d2332e9-b2e9-561d-a60f-de8836337dca'+
+'662926ae-2f8a-5a90-b98b-ca738d0e316f'+
+'bbbeadd1-205f-5e9e-90f5-4e93736cd4dd'+
+'b7850d1b-57d4-5285-8457-9b22361a5b3e'+
+'088b0db1-7bc0-5888-afed-11d44d88d134'+
+'2de9baa6-aff4-5c7c-8376-f9496d7ff0d7'+
+'fc87b588-dca2-5461-99a8-367ff036528d'+
+'485f80dd-e13e-5140-a58d-a71b5097975d'+
+'4397d226-6567-5cf7-850a-72058b23a282'+
+'d4a10be2-8d03-5348-8245-9861c64563e9'+
+'09be9189-a892-5c6f-a762-a0dd38171da0'+
+'46af260f-974a-525f-a97e-e0074f3260e6'+
+'6512dd27-f066-514d-973b-0f3d6d3a24aa'+
+'225400e7-ed4f-5bde-85ae-b70c83eb9cab'+
+'ffedbef6-a4c8-5b45-97e9-f6ecd66d62a7'+
+'a688495b-5b8e-5d94-b634-a05cffcc2bbe'+
+//Dev instance supervisory area (For training purposes) 
+'661f267e-5782-50b7-bbea-5ffd0b505928';
+
+ 
+function shouldGetWashProtocol(uuid) { 
+    if(!uuid){return false;}
+     var isSupervisoryAreaPresent = supervisoryAreas.includes(uuid); 
+     return isSupervisoryAreaPresent;
+}
+
+module.exports={
+  shouldGetWashProtocol:shouldGetWashProtocol};

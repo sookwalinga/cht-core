@@ -366,13 +366,13 @@ Children communicate with us from a young age, even before learning to speak the
           <text id="/infant_child/child_danger_signs/covid19_child_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Now you are at the stage of screening danger signs for this child. Please avoid touching the child in order to avoid the possibility of corona virus transmission. In case you need to physically examine the child, please ask the client to do so on your behalf.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_139:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_141:label">
             <value>Child Danger Signs</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/child_cold/no:label">
@@ -441,16 +441,16 @@ Children communicate with us from a young age, even before learning to speak the
           <text id="/infant_child/child_other_danger_signs/child_skin_boils:label">
             <value>Does the child have skin boils ?</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_151:label">
+          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_153:label">
             <value>Child Other Danger Sign</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/no_child_other_danger_sign_note:label">
             <value>No danger signs were identified in your child, but if the child develops any of the signs we discussed, you should go the health facility immediately.</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/no:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/yes:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -506,7 +506,8 @@ Where does your child defecate? Where do you dispose your child feces?</value>
 Age: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/age_years "/> years, <output value=" /infant_child/age_months "/> months, <output value=" /infant_child/age_days_display "/> days&lt;/span&gt;
 Contact person: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/household_head "/>&lt;/span&gt; 
 House number: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/house_number "/>&lt;/span&gt;
-Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/kitongoji "/>&lt;/span&gt;</value>
+Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/kitongoji "/>&lt;/span&gt;
+Wash Protocol: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /infant_child/show_wash_protocol_c "/>&lt;/span&gt;</value>
           </text>
           <text id="/infant_child/client_information/intro_note:label">
             <value>Visit type: &lt;span style="font-weight:bold"&gt;Infant/Child&lt;/span&gt;</value>
@@ -1069,30 +1070,6 @@ For your newborn baby, you can:</value>
           <text id="/infant_child/group_summary:label">
             <value>Visit Summary</value>
           </text>
-          <text id="/infant_child/hand_washing/note_hand_washing:label">
-            <value>It is very important to wash your hands with soap and water before touching a baby.
-
-Newborns can get an infection more easily than an adult or an older childInfection in a newborn can be dangerous because child immunity is still weak/not fully developed. Frequent and correct hand washing is one of the most effective ways to prevent infections.</value>
-          </text>
-          <text id="/infant_child/hand_washing/note_material_hand_washing:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Discuss materials needed to wash hands:&lt;/span&gt;
-
-&lt;span style="display:block;padding-left:1em"&gt;We need clean flowing water and soap.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;If water and soap is not available, hands can be cleaned with ash instead.&lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/hand_washing/note_when_to_wash_hands:label">
-            <value>The most important moments to wash hands are:
-
-&lt;span style="display:block;padding-left:1em"&gt;After defecation&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;After cleaning a child's bottom&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Before feeding a child&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Before eating food&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Before preparing food&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;After handling raw meat, fish, or poultry&lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/hand_washing:label">
-            <value>Hand Washing</value>
-          </text>
           <text id="/infant_child/immunizations/ask_for_health_card:label">
             <value>Now I would like to review your child's health card to make sure they have received all their vaccines so far. Please hand me your child's health card.</value>
           </text>
@@ -1649,7 +1626,7 @@ SAY: Your child is in need of special care and attention to keep from getting ma
           <text id="/infant_child/neonatal_danger_signs/covid19_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Now you are at the stage of screening danger signs for this child. Please avoid touching the child in order to avoid the possibility of corona virus transmission. In case you need to physically examine the child, please ask the client to do so on your behalf.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_103:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_105:label">
             <value>Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -1760,13 +1737,13 @@ SAY: Your child is in need of special care and attention to keep from getting ma
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils:label">
             <value>Does the baby have skin boils?</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_123:label">
             <value>Other Neonatal Danger Signs Screening</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -1892,10 +1869,10 @@ SAY: Your child is in need of special care and attention to keep from getting ma
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;A danger sign has been identified. Advise the mother to go to any nearby health facility within the next 24 hours so a doctor can look at the baby and help.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124/no:label">
             <value>No</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124/yes:label">
             <value>Yes</value>
           </text>
           <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
@@ -2189,6 +2166,67 @@ For your newborn baby, you can:</value>
           </text>
           <text id="/infant_child/small_baby_stimulation:label">
             <value>Small baby care - Stimulation</value>
+          </text>
+          <text id="/infant_child/wash/cholera_note/cholera_signs:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/cholera_note/important_note_cholera:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cholera/ask_familiy:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_cleanliness_note:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_importance/no:label">
+            <value>No</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_importance/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_importance:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_steps:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_steps_pic:label">
+            <value form="image">jr://images/handwashsteps.png</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_timings:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_environment/environment_cleanliness:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns/cleanliness:label">
+            <value>Cleanliness</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns/environment:label">
+            <value>Environment</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns/water:label">
+            <value>Water</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns_note_to_chv:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_ors/ors_uses:label">
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_water/cleanwater_audio:label">
+            <value form="audio">jr://audio/majisafi.mp3</value>
+            <value>-</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_water/safe_water:label">
+            <value>-</value>
           </text>
         </translation>
         <translation lang="sw">
@@ -2559,13 +2597,13 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_danger_signs/covid19_child_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sasa hivi upo kwenye hatua ya kuchunguza dalili za hatari kwa mtoto huyu. Tafadhali epuka kumshika mtoto ili kukulinda kutokana na uwezako wa kuambukizwa virusi vya korona. Ikiwa kuna ulazima wa kumgusa ili kujua hali ya mtoto tafadhali muombe mteja afanye hivyo kwa niaba yako. &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/child_danger_signs/generated_table_list_label_139:label">
+          <text id="/infant_child/child_danger_signs/generated_table_list_label_141:label">
             <value>Dalili za hatari za mtoto</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/no:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/yes:label">
+          <text id="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/child_cold/no:label">
@@ -2634,16 +2672,16 @@ Watoto huwa wanawasiliana na sisi hata pale wanapokuwa katika umri mdogo. Hata k
           <text id="/infant_child/child_other_danger_signs/child_skin_boils:label">
             <value>Je mtoto ana majipu katika ngozi?</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_151:label">
+          <text id="/infant_child/child_other_danger_signs/generated_table_list_label_153:label">
             <value>Dalili nyengine za hatari za mtoto</value>
           </text>
           <text id="/infant_child/child_other_danger_signs/no_child_other_danger_sign_note:label">
             <value>Hakuna dalili ya hatari yoyote iliyoonekana kwa mtoto wako, lakini ikitokea mtoto ameonesha dalili yoyote ya hatari tulizojadili, hakikisha unamuwahisha kituo cha afya kilichopo karibu nawe haraka.</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/no:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/yes:label">
+          <text id="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/child_stool_disposal/discuss_stool:label">
@@ -3265,30 +3303,6 @@ Kwa mtoto wako unaweza :</value>
           <text id="/infant_child/group_summary:label">
             <value>Muhtasari wa Tembeleo</value>
           </text>
-          <text id="/infant_child/hand_washing/note_hand_washing:label">
-            <value>Ni muhimu kunawa mikono yako kwa maji na sabuni kabla ya kushika mtoto.
-
-Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au Maambukizo yanayoweza kuhama kutoka kwa mtu mzima kwenda kwa mtoto yanaweza kuwa hatari kwa sababu kinga ya watoto bado ni dhaifu / haijatengenezwa kikamilifu hivyo unawaji wa mikono kwa usahihi ni mojawapo ya njia bora sana za kuzuia maambukizi.</value>
-          </text>
-          <text id="/infant_child/hand_washing/note_material_hand_washing:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Mambo yanayopaswa kuwepo ili kukosha mikono vizuri:&lt;/span&gt;
-
-&lt;span style="display:block;padding-left:1em"&gt;Tunahitaji maji safi yenye kutiririka na sabuni.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Ikiwa maji na sabuni hamna unaweza kutumia jivu.&lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/hand_washing/note_when_to_wash_hands:label">
-            <value>Nyakati muhimu za kukosha mikono ni:
-
-&lt;span style="display:block;padding-left:1em"&gt;Baada ya kutoka chooni.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Kabla ya kumlisha mtoto.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Kabla ya kula.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Baada ya kumsafisha mtoto.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Kabla ya kuandaa chakula.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;Baada ya kutengeneza nyama, samaki au kuku.&lt;/span&gt;</value>
-          </text>
-          <text id="/infant_child/hand_washing:label">
-            <value>Uoshaji wa mikono</value>
-          </text>
           <text id="/infant_child/immunizations/ask_for_health_card:label">
             <value>Sasa nitapendelea kupitia kadi la kliniki la mtoto kuhakikisha amepata/wamepata chanjo zote stahiki mpaka sasa. Naomba unioneshe kadi ya mtoto wako.</value>
           </text>
@@ -3733,6 +3747,9 @@ Watoto wachanga wanaweza kupata maambukizi kwa urahisi zaidi kuliko mtu mzima au
           <text id="/infant_child/inputs/rota2:label">
             <value>-</value>
           </text>
+          <text id="/infant_child/inputs/show_wash_protocol:label">
+            <value>-</value>
+          </text>
           <text id="/infant_child/inputs/small_baby:label">
             <value>-</value>
           </text>
@@ -3932,7 +3949,7 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs/covid19_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Sasa hivi upo kwenye hatua ya kuchunguza dalili za hatari kwa mtoto huyu. Tafadhali epuka kumshika mtoto ili kukulinda kutokana na uwezako wa kuambukizwa virusi vya korona. Ikiwa kuna ulazima wa kumgusa ili kujua hali ya mtoto tafadhali muombe mteja afanye hivyo kwa niaba yako. &lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_103:label">
+          <text id="/infant_child/neonatal_danger_signs/generated_table_list_label_105:label">
             <value>Kuchunguza Dalili za hatari kwa mtoto mchanga</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs/has_neonatal_danger_note:label">
@@ -4043,13 +4060,13 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs/neonatal_skin_boils:label">
             <value>Je mtoto ana majipu katika ngozi?</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/no:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/yes:label">
+          <text id="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109/yes:label">
             <value>Ndiyo</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_123:label">
             <value>Kuchunguza dalili nyengine za hatari kwa mtoto</value>
           </text>
           <text id="/infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_distension/no:label">
@@ -4175,10 +4192,10 @@ Mtoto wako anahitaji uangalizi wa ziada ili kumuepusha na utapia mlo. Nitapokuja
           <text id="/infant_child/neonatal_danger_signs_secondary/refer_secondary_neonatal_danger_sign_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Dalili ya hatari imegundulika. Mshauri mama aende kituo cha Afya kilicho karibu nae ndani ya masaa 24 yajayo ili Daktari aweze kumuangalia mtoto na kutoa msaada.&lt;/span&gt;</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/no:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/yes:label">
+          <text id="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124/yes:label">
             <value>Ndiyo</value>
           </text>
           <text id="/infant_child/next_task_reminder/chvnote_next_task:label">
@@ -4475,6 +4492,141 @@ Kwa mtoto wako unaweza:</value>
           <text id="/infant_child/small_baby_stimulation:label">
             <value>Matunzo ya mtoto njiti - Kumchangamsha</value>
           </text>
+          <text id="/infant_child/wash/cholera_note/cholera_signs:label">
+            <value>&lt;strong&gt;Huduma ya kwanza kwa mtu alieanza kuonesha dalili za kipindupindu&lt;/strong&gt; 
+Sasa ningependa kuzungmza na nyie kuhusu hatua za kuchukua ikiwa wewe au kuna mwanafamilia mnahisi ana dalili za kipindupindu 
+• Kuharisha au kuharisha kinyesi kinachofanana na maji ya mchele
+• Kutapika
+• Je Ufanye nini ukiona una dalili za kipindupindu?
+• Nenda haraka kwenye kituo cha afya cha karibu 
+• Kunywa maji au ORS kama inapatikana mara kwa mara huku ukielekea kwenye kituo cha kutolea huduma za afya
+• Iwapo ni mtoto mdogo aliepata maambukizi, endelea kumnyonyesha hata kama anaharisha mnapoelekea kwenye kituo cha kutolea huduma za afya kupata matibabu
+• Watoto wakubwa na watu wazima waendelee kula chakula mara kwa mara</value>
+          </text>
+          <text id="/infant_child/wash/cholera_note/important_note_cholera:label">
+            <value>&lt;strong&gt;Ujumbe Muhumi&lt;/strong&gt;
+Kipindupindu kinapatikana kwa kunywa au kula chakula chenye maambukizi ya kipindupindu. Kipindupindu kinaepukika ikiwa watu watazingatia usafi wa mikono, chakula, maji na matumizi sahihi ya vyoo.</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cholera/ask_familiy:label">
+            <value>&lt;strong&gt;Kuelewa Kipindupindu&lt;/strong&gt; 
+
+Waulize wana familia: 
+• Unafahamu/mnafahamu chochote kuhusu kipindupindu?
+• Dalili za kipindupindu
+• Jinsi kinavyoenea 
+• Nani yupo katika hatari ya kupata kipindupindu?
+• Na vipi utajikinga na kipindupindu?
+
+&lt;span style="color:#f58a1f"&gt;Kulingana na majibu hapo juu tumia kitini rejea umuelezee zaidi kuhusu kipindupindu (Kipindupindu ni nini, Jinsi kinavyo enezwa na jinsi ya kuzuia kipindupindu)&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_cleanliness_note:label">
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Usafi &lt;/span&gt;
+
+&lt;strong&gt;Usafi wa mikono kwajili ya kujikinga na kipindupindu.&lt;/strong&gt;</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_importance/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_importance/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_importance:label">
+            <value>Je unafahamu umuhimu wa kunawa mikono?</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_steps:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Muombe akuoneshe jinsi ya kunawa mikono kwa maji tiririka na sabuni(zingatia hatua)&lt;/span&gt;
+• Vua urembo wowote, mfano pete au saa ya mkononi
+• Rowesha mikono kwa maji
+• Paka sabuni sehemu zote za mikono na viganja
+• Sugua viganja vya mikono
+• Sugua sehemu ya nyuma ya kiganja cha mkono na kwenye pachikwa za vidole
+• Sugua sehemu za viganja sawa sawa 
+• Sugua vidole gumba
+• Sugua ncha za vidole
+• Suuza mikono kwa kutumia maji tiririka
+• Funga mfereji
+• Kausha mikono</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_steps_pic:label">
+            <value form="image">jr://images/handwashsteps.png</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/hand_wash_timings:label">
+            <value>Nyakati muhimu unazo takiwa kunawa mikono ni: 
+• Kabla ya kula au kuandaa chakula 
+• Kabla ya kumlisha mtoto
+• Kabla ya kuaanda juice za matunda
+• Baada ya kutumia choo
+• Baada ya kumsafisha mtoto akimaliza kujisaidia, ama baada ya kumbadilisha nepi
+• Baada ya kumhudia mgonjwa wa kipindupindu</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama hapana tumia kitini rejea kuelimisha wana familia.&lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_environment/environment_cleanliness:label">
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Mazingira &lt;/span&gt;
+
+&lt;strong&gt; Matumizi ya choo &lt;/strong&gt; 
+• Nielezee madhara wana Jamii wanayo weza kupata ikiwa hawana vyoo au havitumiwi kwa usahihi?
+ • Wasikilize wana Jamii, tumia kitini rejea ukurasa wa 19 umuelezee choo bora, aina ya vyoo, jinsi ya kutumia choo vizuri na kujisaidia kusiko sahihi
+
+&lt;strong&gt; Usafi wa mwili na mavazi&lt;/strong&gt; 
+Sasa ningependa tuzungumze kuhusu usafi wa mwili na mavazi ili kuzuia kuenea kwa vijidudu vikiwemo vimelea vya kipindupindu
+• Unaweza kunielezea umuhimu wa usafi wa mwili na mavazi kwa familia yako hususan watoto na athari zinazoweza kupatika ikiwa usafi wa mwili na mavazi ukikosekana
+&lt;span style="color:#f58a1f"&gt;Msiiklize mama na wanafamilia ,halafu tumia kitini rejea kuwaelimisha zaidi faida za usafi wa mwili na mavazi katika kuzuia kuenea kwa vijidudu vinavyoweza sababisha maambukizi ya maradhi. &lt;/span&gt;
+
+&lt;strong&gt; Usafi wa mazingira &lt;/strong&gt; 
+Sasa ningependa tuzungumze kuhusu umuhimu wa usafi wa mazingira ili tuwe na mazingira safi na kuzuia kuzaliana kwa vijidudu vinavyoweza kusababisha maambukizi ya magonjwa mbalimbali ikiwemo kipindupindu
+• Unaweza kunielezea usafi wa mazingira ni nini?
+Msikilize/wasikilize wana familia na kisha tumia kitini rejea uwafahamishe zaidi juu kuhusu
+ • Kuelewa maana ya usafi wa mazingira, umuhimu wa usafi wa mazingira na jinsi ya kuweka mazingira safi</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns/cleanliness:label">
+            <value>Usafi</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns/environment:label">
+            <value>Mazingira</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns/water:label">
+            <value>Maji</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns:label">
+            <value>Ningependa tuongelee zaidi kuhusu:</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_health_concerns/health_concerns_note_to_chv:label">
+            <value>&lt;span style="color:#f58a1f"&gt;CHV chunguza na dadisi hali hatarishi zinahusu usafi kwenye nyumba hii na uchague ni sehemu gani ya ushauri inahitajika zaidi. Unaweza kuchagua zaidi ya eneo moja kulingana na uhitaji. &lt;/span&gt;</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_ors/ors_uses:label">
+            <value>&lt;strong&gt; Matumizi ya ORS &lt;/strong&gt; 
+
+&lt;strong&gt; Kuna mtu yoyote anaeweza kunieleza ORS ni nini?&lt;/strong&gt;
+ • ORS (Oral Rehydration Solution) ni kinywaji kinachotumika kurudisha maji na chumvichumvi iliyopotea wakati wa kuharisha au kutapika.
+&lt;strong&gt; Jinsi ya kutengeneza ORS kwa kutumia ORS ya kwenye pakiti&lt;/strong&gt;
+ • Nawa mikono kwa maji safi ya mtiririko na sabuni 
+ • Weka lita moja ya drop ya maji salama ya kunywa kwenye chombo kisafi 
+
+&lt;strong&gt;Angalizo&lt;/strong&gt; 
+Wakati wa kutengeneza ORS, tumia kiwango sahihi cha maji. Ukitumia maji kidogo, ORS itafanya kuharisha kuendelee. Ukitumia maji mengi, ORS haitafanya kazi yake. Usiongeze vinywaji vingine kwenye mchanganyiko wa ORS mfano maziwa, supu, juisi n.k.
+ • Safisha kijiko na chombo cha kuwekea maji kwa sabuni na maji salama 
+ • Weka ORS kutoka kwenye pakiti kwenye maji salama huku ukikoroga 
+ • Kunywa maji kidogo kidogo mara kwa mara</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_water/cleanwater_audio:label">
+            <value>Jinsi ya kuandaa na kuhifadhi maji safi na salama</value>
+            <value form="audio">jr://audio/majisafi.mp3</value>
+          </text>
+          <text id="/infant_child/wash/subgroup_water/safe_water:label">
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Maji &lt;/span&gt;
+
+&lt;strong&gt;Maji safi na salama &lt;/strong&gt; 
+ Waulize wanafamilia wakuelezee maji safi na salama ni yepi? 
+ Maji salama ni: 
+ • Yale ambayo yako kwenye chupa yenye mfuniko ambao haujavunjika
+ • Yamechemshwa au
+ • Yamewekewa kitakasa maji
+
+Umuhimu wa kunywa maji safi na salama
+ • Ili kuzuia ueneaji wa maambukizi ya vimelea vinavyoweza kusababisha maradhi mbalimbali ikiwemo kipindupindu</value>
+          </text>
         </translation>
       </itext>
       <instance>
@@ -4506,6 +4658,7 @@ Kwa mtoto wako unaweza:</value>
             <ipv/>
             <surua_rubella1/>
             <surua_rubella2/>
+            <show_wash_protocol/>
             <visit_id/>
             <due_date/>
             <due_date_human_readable/>
@@ -4547,6 +4700,7 @@ Kwa mtoto wako unaweza:</value>
           <previous_surua_rubella1/>
           <previous_surua_rubella2/>
           <visit_id/>
+          <show_wash_protocol_c/>
           <due_date/>
           <due_date_pretty_print/>
           <week/>
@@ -4589,11 +4743,11 @@ Kwa mtoto wako unaweza:</value>
             <encourage_small_baby_note/>
           </first_visit_6_months>
           <neonatal_danger_signs>
-            <generated_table_list_label_103/>
+            <generated_table_list_label_105/>
             <neonatal_danger_sign_bango_kitita/>
             <covid19_neonatal_danger_sign_note/>
             <neonatal_danger_signs_note/>
-            <reserved_name_for_field_list_labels_107/>
+            <reserved_name_for_field_list_labels_109/>
             <neonatal_not_able_feed/>
             <neonatal_had_convulsions/>
             <neonatal_difficulty_fast_breathing/>
@@ -4609,8 +4763,8 @@ Kwa mtoto wako unaweza:</value>
             <has_neonatal_danger_note/>
           </neonatal_danger_signs>
           <neonatal_danger_signs_secondary>
-            <generated_table_list_label_121/>
-            <reserved_name_for_field_list_labels_122/>
+            <generated_table_list_label_123/>
+            <reserved_name_for_field_list_labels_124/>
             <neonatal_cold/>
             <neonatal_yellow_pale_palms/>
             <neonatal_no_movement/>
@@ -4629,10 +4783,10 @@ Kwa mtoto wako unaweza:</value>
             <no_secondary_neonatal_danger_sign_note/>
           </neonatal_danger_signs_secondary>
           <child_danger_signs>
-            <generated_table_list_label_139/>
+            <generated_table_list_label_141/>
             <covid19_child_danger_sign_note/>
             <child_danger_signs_note/>
-            <reserved_name_for_field_list_labels_142/>
+            <reserved_name_for_field_list_labels_144/>
             <child_vomit/>
             <child_convulsions/>
             <child_lethargic/>
@@ -4643,8 +4797,8 @@ Kwa mtoto wako unaweza:</value>
             <child_danger_sign_note/>
           </child_danger_signs>
           <child_other_danger_signs>
-            <generated_table_list_label_151/>
-            <reserved_name_for_field_list_labels_152/>
+            <generated_table_list_label_153/>
+            <reserved_name_for_field_list_labels_154/>
             <child_drink_below_6_months/>
             <child_drink_6_months_to_2_years/>
             <child_drink_above_2_years/>
@@ -4676,11 +4830,37 @@ Kwa mtoto wako unaweza:</value>
             <mny_solid_food_feed_child/>
           </malnutrition_anemia>
           <small_baby_ever/>
-          <hand_washing>
-            <note_hand_washing/>
-            <note_material_hand_washing/>
-            <note_when_to_wash_hands/>
-          </hand_washing>
+          <wash>
+            <subgroup_cholera>
+              <ask_familiy/>
+            </subgroup_cholera>
+            <cholera_note>
+              <important_note_cholera/>
+              <cholera_signs/>
+            </cholera_note>
+            <subgroup_ors>
+              <ors_uses/>
+            </subgroup_ors>
+            <subgroup_health_concerns>
+              <health_concerns_note_to_chv/>
+              <health_concerns/>
+            </subgroup_health_concerns>
+            <subgroup_cleanliness>
+              <hand_cleanliness_note/>
+              <hand_wash_importance/>
+              <note_to_chv_kitini_rejea/>
+              <hand_wash_timings/>
+              <hand_wash_steps/>
+              <hand_wash_steps_pic/>
+            </subgroup_cleanliness>
+            <subgroup_water>
+              <safe_water/>
+              <cleanwater_audio/>
+            </subgroup_water>
+            <subgroup_environment>
+              <environment_cleanliness/>
+            </subgroup_environment>
+          </wash>
           <essential_newborn_breastfeeding>
             <small_baby_intro/>
             <baby_warm_note/>
@@ -4986,6 +5166,7 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/inputs/ipv" type="string"/>
       <bind nodeset="/infant_child/inputs/surua_rubella1" type="string"/>
       <bind nodeset="/infant_child/inputs/surua_rubella2" type="string"/>
+      <bind nodeset="/infant_child/inputs/show_wash_protocol" type="string"/>
       <bind nodeset="/infant_child/inputs/visit_id" type="string"/>
       <bind nodeset="/infant_child/inputs/due_date" type="string"/>
       <bind nodeset="/infant_child/inputs/due_date_human_readable" type="string"/>
@@ -5022,6 +5203,7 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/previous_surua_rubella1" type="string" calculate="../inputs/surua_rubella1"/>
       <bind nodeset="/infant_child/previous_surua_rubella2" type="string" calculate="../inputs/surua_rubella2"/>
       <bind nodeset="/infant_child/visit_id" type="string" calculate="../inputs/visit_id"/>
+      <bind nodeset="/infant_child/show_wash_protocol_c" type="string" calculate="../inputs/show_wash_protocol"/>
       <bind nodeset="/infant_child/due_date" type="string" calculate="../inputs/due_date"/>
       <bind nodeset="/infant_child/due_date_pretty_print" type="string" calculate="../inputs/due_date_human_readable"/>
       <bind nodeset="/infant_child/week" type="string" calculate="7"/>
@@ -5048,7 +5230,7 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/first_visit_6_months/delivery_location" type="select1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/child_card_available" type="select1" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/birthweight_on_child_card" type="select1" required="true()" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/first_visit_6_months/child_birthweight" type="decimal" required="true()" jr:constraintMsg="jr:itext('/infant_child/first_visit_6_months/child_birthweight:jr:constraintMsg')" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)" constraint=". &gt;= 0.5 and . &lt;= 7"/>
+      <bind nodeset="/infant_child/first_visit_6_months/child_birthweight" type="decimal" constraint=". &gt;= 0.5 and . &lt;= 7" jr:constraintMsg="jr:itext('/infant_child/first_visit_6_months/child_birthweight:jr:constraintMsg')" relevant="selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/first_visit_6_months/child_size_birth" type="select1" required="true()" relevant="(selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;no&quot;) or selected( /infant_child/first_visit_6_months/child_card_available ,&quot;no&quot;))"/>
       <bind nodeset="/infant_child/first_visit_6_months/normal_baby_note" readonly="true()" type="string" relevant=" /infant_child/first_visit_6_months/child_birthweight  &gt;= 2 or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;regular&quot;) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;large&quot;)"/>
       <bind nodeset="/infant_child/first_visit_6_months/small_baby_today" type="string" calculate="if((selected( /infant_child/first_visit_6_months/child_card_available ,&quot;yes&quot;) and selected( /infant_child/first_visit_6_months/birthweight_on_child_card ,&quot;yes&quot;) and  /infant_child/first_visit_6_months/child_birthweight  &gt;= 0.5 and  /infant_child/first_visit_6_months/child_birthweight  &lt; 2) or selected( /infant_child/first_visit_6_months/child_size_birth ,&quot;small&quot;),1,0)"/>
@@ -5058,11 +5240,11 @@ Kwa mtoto wako unaweza:</value>
       <bind nodeset="/infant_child/first_visit_6_months/refer_flag_small_baby" type="string" calculate="if(selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;no&quot;),1,0)"/>
       <bind nodeset="/infant_child/first_visit_6_months/encourage_small_baby_note" readonly="true()" type="string" relevant="selected( /infant_child/first_visit_6_months/has_received_small_baby_services ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/neonatal_danger_signs" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_103" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/generated_table_list_label_105" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/covid19_neonatal_danger_sign_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_not_able_feed" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_had_convulsions" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/neonatal_difficulty_fast_breathing" type="select1" required="true()"/>
@@ -5086,8 +5268,8 @@ selected( /infant_child/neonatal_danger_signs/neonatal_severe_diarrhea ,'yes') o
 selected( /infant_child/neonatal_danger_signs/neonatal_excessive_crying ,'yes'),1,0)"/>
       <bind nodeset="/infant_child/neonatal_danger_signs/has_neonatal_danger_note" readonly="true()" type="string" relevant=" /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary" relevant=" /infant_child/age_days  &lt;= ( /infant_child/week  * 6) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;))"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122" type="select1"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_123" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124" type="select1"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_cold" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_yellow_pale_palms" type="select1" required="true()"/>
       <bind nodeset="/infant_child/neonatal_danger_signs_secondary/neonatal_no_movement" type="select1" required="true()"/>
@@ -5128,10 +5310,10 @@ selected( /infant_child/neonatal_danger_signs_secondary/neonatal_abdominal_diste
 selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_urine ,'no') and 
 selected( /infant_child/neonatal_danger_signs_secondary/neonatal_no_stool ,'no')"/>
       <bind nodeset="/infant_child/child_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
-      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_139" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/child_danger_signs/generated_table_list_label_141" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs/covid19_child_danger_sign_note" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/child_danger_signs/child_danger_signs_note" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142" type="select1"/>
+      <bind nodeset="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144" type="select1"/>
       <bind nodeset="/infant_child/child_danger_signs/child_vomit" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_danger_signs/child_convulsions" type="select1" required="true()"/>
       <bind nodeset="/infant_child/child_danger_signs/child_lethargic" type="select1" required="true()"/>
@@ -5146,8 +5328,8 @@ selected( /infant_child/child_danger_signs/child_severe_diarrhea ,&quot;yes&quot
 selected( /infant_child/child_danger_signs/child_difficulty_fast_breathing ,&quot;yes&quot;),1,0)"/>
       <bind nodeset="/infant_child/child_danger_signs/child_danger_sign_note" readonly="true()" type="string" relevant=" /infant_child/child_danger_signs/refer_child_danger_sign_flag =1"/>
       <bind nodeset="/infant_child/child_other_danger_signs" relevant=" /infant_child/age_days  &gt; ( /infant_child/week  * 6) and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/generated_table_list_label_151" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152" type="select1"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/generated_table_list_label_153" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154" type="select1"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_drink_below_6_months" type="select1" required="true()" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 6)"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_drink_6_months_to_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 6) and  /infant_child/age_days  &lt;= ( /infant_child/month  * 24)"/>
       <bind nodeset="/infant_child/child_other_danger_signs/child_drink_above_2_years" type="select1" required="true()" relevant=" /infant_child/age_days  &gt; ( /infant_child/month  * 24)"/>
@@ -5189,10 +5371,25 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/malnutrition_anemia/calculated_score" type="string" calculate="if( /infant_child/malnutrition_anemia/score &gt;2,1,0)"/>
       <bind nodeset="/infant_child/malnutrition_anemia/mny_solid_food_feed_child" type="select1" required="true()" relevant=" /infant_child/age_days  &gt;= ( /infant_child/month  * 24) and  /infant_child/age_days  &lt; ( /infant_child/month  * 36)"/>
       <bind nodeset="/infant_child/small_baby_ever" type="string" calculate="if( /infant_child/first_visit_6_months/small_baby_today =1 or  /infant_child/previous_small_baby =1,1,0)"/>
-      <bind nodeset="/infant_child/hand_washing" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
-      <bind nodeset="/infant_child/hand_washing/note_hand_washing" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/hand_washing/note_material_hand_washing" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/hand_washing/note_when_to_wash_hands" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag  = 0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0 and  /infant_child/show_wash_protocol_c  = 1"/>
+      <bind nodeset="/infant_child/wash/subgroup_cholera/ask_familiy" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/cholera_note/important_note_cholera" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/cholera_note/cholera_signs" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_ors/ors_uses" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_health_concerns/health_concerns_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_health_concerns/health_concerns" type="select" required="true()"/>
+      <bind nodeset="/infant_child/wash/subgroup_cleanliness" relevant="selected( /infant_child/wash/subgroup_health_concerns/health_concerns ,&quot;cleanliness&quot;)"/>
+      <bind nodeset="/infant_child/wash/subgroup_cleanliness/hand_cleanliness_note" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_cleanliness/hand_wash_importance" type="select1" required="true()"/>
+      <bind nodeset="/infant_child/wash/subgroup_cleanliness/note_to_chv_kitini_rejea" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_cleanliness/hand_wash_timings" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_cleanliness/hand_wash_steps" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_cleanliness/hand_wash_steps_pic" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_water" relevant="selected( /infant_child/wash/subgroup_health_concerns/health_concerns ,&quot;water&quot;)"/>
+      <bind nodeset="/infant_child/wash/subgroup_water/safe_water" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_water/cleanwater_audio" readonly="true()" type="string"/>
+      <bind nodeset="/infant_child/wash/subgroup_environment" relevant="selected( /infant_child/wash/subgroup_health_concerns/health_concerns ,&quot;environment&quot;)"/>
+      <bind nodeset="/infant_child/wash/subgroup_environment/environment_cleanliness" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding" relevant="not(selected( /infant_child/consent/child_consent_today ,&quot;no&quot;)) and  /infant_child/neonatal_danger_signs/refer_neonatal_danger_sign_flag =0 and  /infant_child/child_danger_signs/refer_child_danger_sign_flag =0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/small_baby_intro" readonly="true()" type="string" relevant=" /infant_child/age_days  &lt;= ( /infant_child/month  * 3) and  /infant_child/small_baby_ever =1 and  /infant_child/n_child_visits  = 0"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_warm_note" readonly="true()" type="string" relevant=" /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
@@ -5206,7 +5403,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/not_breastfeeding_well" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/baby_breastfeed_well ,&quot;no&quot;) and ( /infant_child/small_baby_ever =0 or  /infant_child/small_baby_ever =1 and  /infant_child/age_days  &lt; ( /infant_child/month  * 6))"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/random_value" type="string" calculate="if( /infant_child/essential_newborn_breastfeeding/random_value ='', round(random()*10,0),  /infant_child/essential_newborn_breastfeeding/random_value )"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding" type="select1" required="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and  /infant_child/essential_newborn_breastfeeding/random_value  &lt;=5"/>
-      <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice" type="select" jr:constraintMsg="jr:itext('/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and  /infant_child/essential_newborn_breastfeeding/random_value  &gt; 5"/>
+      <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice:jr:constraintMsg')" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and  /infant_child/essential_newborn_breastfeeding/random_value  &gt; 5"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/praise_mother" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice ,&quot;none&quot;) or selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_advise" readonly="true()" type="string" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6) and not(selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding ,&quot;yes&quot;)) and not(selected( /infant_child/essential_newborn_breastfeeding/exclusive_breastfeeding_multiple_choice ,&quot;none&quot;))"/>
       <bind nodeset="/infant_child/essential_newborn_breastfeeding/baby_times_breastfed_daily" type="select1" required="true()" relevant="selected( /infant_child/essential_newborn_breastfeeding/currently_breastfeeding ,&quot;yes&quot;) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)"/>
@@ -5261,53 +5458,53 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_record_vaccine" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bcg" readonly="true()" type="string" relevant=" /infant_child/previous_bcg  = 0"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bcg" type="select1" relevant=" /infant_child/previous_bcg  = 0"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" type="date" required="true()" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bcg_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bcg_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;)" required="true()"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_to_chv_on_BCG_mark" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/record_vaccines/received_bcg ,&quot;yes&quot;) and  /infant_child/immunizations/record_vaccines/bcg_date  != '' and  /infant_child/immunizations/record_vaccines/bcg_date  &lt;= date-time(decimal-date-time(today()))"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv0" readonly="true()" type="string" relevant=" /infant_child/previous_bopv0  = 0"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv0" type="select1" required="true()" relevant=" /infant_child/previous_bopv0  = 0"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv0_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv0_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv0 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv1" readonly="true()" type="string" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv1" type="select1" required="true()" relevant=" /infant_child/previous_bopv1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv1 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib1" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib1 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi1" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi1" type="select1" required="true()" relevant=" /infant_child/previous_pcvi1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi1 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota1" readonly="true()" type="string" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota1" type="select1" required="true()" relevant=" /infant_child/previous_rota1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 6)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota1 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bobv2" readonly="true()" type="string" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv2" type="select1" required="true()" relevant=" /infant_child/previous_bopv2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv2 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_hepb_hib2" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib2 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_pcvi2" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi2" type="select1" required="true()" relevant=" /infant_child/previous_pcvi2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi2 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_rota2" readonly="true()" type="string" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_rota2" type="select1" required="true()" relevant=" /infant_child/previous_rota2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 10)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/rota2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/rota2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_rota2 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_bopv3" readonly="true()" type="string" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_bopv3" type="select1" required="true()" relevant=" /infant_child/previous_bopv3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/bopv3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/bopv3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_bopv3 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_dtp_hepb_hib3" readonly="true()" type="string" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3" type="select1" required="true()" relevant=" /infant_child/previous_dtp_hepb_hib3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/dtp_hebp_hib3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_dtp_hepb_hib3 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_received_pcvi3" readonly="true()" type="string" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_pcvi3" type="select1" required="true()" relevant=" /infant_child/previous_pcvi3  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/pcvi3_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/pcvi3_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_pcvi3 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_ipv" readonly="true()" type="string" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_ipv" type="select1" required="true()" relevant=" /infant_child/previous_ipv  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/week  * 14) and decimal-date-time( /infant_child/child_date_of_birth ) &gt;= decimal-date-time('2018-10-01')"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/ipv_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/ipv_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_ipv ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella1" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella1" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella1  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 9)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella1_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella1_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella1 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/msg_for_chv_surua_rubella2" readonly="true()" type="string" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
       <bind nodeset="/infant_child/immunizations/record_vaccines/received_surua_rubella2" type="select1" required="true()" relevant=" /infant_child/previous_surua_rubella2  = 0 and  /infant_child/age_days  &gt;= ( /infant_child/month  * 18)"/>
-      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg')" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)"/>
+      <bind nodeset="/infant_child/immunizations/record_vaccines/surua_rubella2_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /infant_child/child_date_of_birth )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/infant_child/immunizations/record_vaccines/surua_rubella2_date:jr:constraintMsg')" relevant="selected( /infant_child/immunizations/record_vaccines/received_surua_rubella2 ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/msg_for_chv_vaccine_up_to_date" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/vaccines_up_to_date" type="select1" required="true()" relevant="selected( /infant_child/immunizations/has_health_card ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/immunizations/up_to_date_congrats_note" readonly="true()" type="string" relevant="selected( /infant_child/immunizations/vaccines_up_to_date ,&quot;yes&quot;)"/>
@@ -5330,11 +5527,11 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/normal_behavior_at_age" readonly="true()" type="string"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/development_stage" type="select1" required="true()"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_3mo_to_6mo&quot;)"/>
-      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play" type="select" required="true()" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:jr:constraintMsg')" constraint="(selected(.,&quot;does_not_play&quot;) and count-selected(.)=1) or (not(selected(.,&quot;does_not_play&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play" type="select" constraint="(selected(.,&quot;does_not_play&quot;) and count-selected(.)=1) or (not(selected(.,&quot;does_not_play&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_play:jr:constraintMsg')" required="true()"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/praise_play" readonly="true()" type="string" relevant="selected(../how_play,&quot;moves_arms_legs&quot;) or selected(../how_play,&quot;gets_attention&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/concern_play" readonly="true()" type="string" relevant="selected(../how_play,&quot;does_not_play&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/demonstrate_play" readonly="true()" type="string"/>
-      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate" type="select" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate:jr:constraintMsg')" constraint="(selected(.,&quot;not_responsive&quot;) and count-selected(.)=1) or (not(selected(.,&quot;not_responsive&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate" type="select" constraint="(selected(.,&quot;not_responsive&quot;) and count-selected(.)=1) or (not(selected(.,&quot;not_responsive&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/how_communicate:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/praise_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;looks_talks&quot;) or selected(../how_communicate,&quot;responds_sounds&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/concern_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;does_not_talk&quot;) or selected(../how_communicate,&quot;not_responsive&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_lt_6mo/coach_communicate" readonly="true()" type="string"/>
@@ -5347,7 +5544,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_play_hide" readonly="true()" type="string" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_9mo_to_12mo&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_play_stack" readonly="true()" type="string" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_12mo_to_2yr&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_play_count" readonly="true()" type="string" relevant="selected( /infant_child/assess_dev_coach_play_communication/development_stage ,&quot;stage_2yr_plus&quot;)"/>
-      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate" type="select" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate:jr:constraintMsg')" constraint="(selected(.,&quot;not_responsive&quot;) and count-selected(.)=1) or (not(selected(.,&quot;not_responsive&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate" type="select" constraint="(selected(.,&quot;not_responsive&quot;) and count-selected(.)=1) or (not(selected(.,&quot;not_responsive&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/how_communicate:jr:constraintMsg')"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/praise_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;looks_talks&quot;) or selected(../how_communicate,&quot;draws_smile&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/concern_communicate" readonly="true()" type="string" relevant="selected(../how_communicate,&quot;does_not_talk&quot;) or selected(../how_communicate,&quot;not_responsive&quot;)"/>
       <bind nodeset="/infant_child/assess_dev_coach_play_communication/play_communicate_ge_6mo/tip_communicate" readonly="true()" type="string"/>
@@ -5384,7 +5581,7 @@ selected( /infant_child/child_other_danger_signs/child_skin_boils ,&quot;no&quot
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
       <bind nodeset="/infant_child/problem_solving/tip_time_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/has_time_concern_play_comm ,&quot;yes&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/engage_with_child" type="select" required="true()" jr:constraintMsg="jr:itext('/infant_child/problem_solving/engage_with_child:jr:constraintMsg')" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/infant_child/problem_solving/engage_with_child" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/infant_child/problem_solving/engage_with_child:jr:constraintMsg')" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)" required="true()"/>
       <bind nodeset="/infant_child/problem_solving/who_engages" type="select" required="true()" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;told_storied&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;sang&quot;) or 
@@ -5392,7 +5589,7 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;took_outside&qu
 selected( /infant_child/problem_solving/engage_with_child ,&quot;played&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/who_engages_other" type="string" relevant="selected( /infant_child/problem_solving/who_engages ,&quot;other&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/who_engages_how_many_hours" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 36" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
+      <bind nodeset="/infant_child/problem_solving/who_engages_how_many_hours" type="int" constraint=". &gt;= 0 and . &lt;= 36" required="true()" relevant="selected( /infant_child/problem_solving/engage_with_child ,&quot;read_books&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;told_storied&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;sang&quot;) or 
 selected( /infant_child/problem_solving/engage_with_child ,&quot;took_outside&quot;) or 
@@ -5406,15 +5603,15 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <bind nodeset="/infant_child/problem_solving/plays_with_toys_homemade" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
       <bind nodeset="/infant_child/problem_solving/plays_with_toys_manufactured" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
       <bind nodeset="/infant_child/problem_solving/plays_with_toys_household_objects" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/number_books" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 100" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/problem_solving/number_books" type="int" constraint=". &gt;= 0 and . &lt;= 100" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
       <bind nodeset="/infant_child/problem_solving/concern_leave_child" type="select1" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
  /infant_child/age_days  &gt;= ( /infant_child/month  * 24)"/>
       <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;yes&quot;)"/>
       <bind nodeset="/infant_child/problem_solving/tip_leave_child_concern_no" readonly="true()" type="string" relevant="selected( /infant_child/problem_solving/concern_leave_child ,&quot;no&quot;)"/>
-      <bind nodeset="/infant_child/problem_solving/days_left_alone_more_than_1h" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 7" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
-      <bind nodeset="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 7" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/problem_solving/days_left_alone_more_than_1h" type="int" constraint=". &gt;= 0 and . &lt;= 7" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
+      <bind nodeset="/infant_child/problem_solving/days_in_care_of_other_child_more_than_1h" type="int" constraint=". &gt;= 0 and . &lt;= 7" required="true()" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 6)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 9) and  /infant_child/age_days  &lt; ( /infant_child/month  * 12)) or ( /infant_child/age_days  &gt;= ( /infant_child/month  * 15) and  /infant_child/age_days  &lt; ( /infant_child/month  * 24)) or  /infant_child/age_days  &gt;= ( /infant_child/month  * 36)"/>
       <bind nodeset="/infant_child/problem_solving/covid19_play_communication_note" readonly="true()" type="string" relevant="( /infant_child/age_days  &gt;= ( /infant_child/week  * 11) and  /infant_child/age_days  &lt; ( /infant_child/week  * 15)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 6) and  /infant_child/age_days  &lt; ( /infant_child/month  * 9)) or 
 ( /infant_child/age_days  &gt;= ( /infant_child/month  * 12) and  /infant_child/age_days  &lt; ( /infant_child/month  * 15)) or 
@@ -5526,6 +5723,7 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/inputs/ipv"/>
       <input ref="/infant_child/inputs/surua_rubella1"/>
       <input ref="/infant_child/inputs/surua_rubella2"/>
+      <input ref="/infant_child/inputs/show_wash_protocol"/>
       <input ref="/infant_child/inputs/visit_id"/>
       <input ref="/infant_child/inputs/due_date"/>
       <input ref="/infant_child/inputs/due_date_human_readable"/>
@@ -5671,8 +5869,8 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs">
-      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_103">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_103:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs/generated_table_list_label_105">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs/generated_table_list_label_105:label')"/>
       </input>
       <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_sign_bango_kitita:label')"/>
@@ -5683,14 +5881,14 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/neonatal_danger_signs/neonatal_danger_signs_note">
         <label ref="jr:itext('/infant_child/neonatal_danger_signs/neonatal_danger_signs_note:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_107/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs/reserved_name_for_field_list_labels_109/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5820,17 +6018,17 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/neonatal_danger_signs_secondary">
-      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121">
-        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_121:label')"/>
+      <input ref="/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_123">
+        <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/generated_table_list_label_123:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122">
+      <select1 appearance="label" ref="/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/yes:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_122/no:label')"/>
+          <label ref="jr:itext('/infant_child/neonatal_danger_signs_secondary/reserved_name_for_field_list_labels_124/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -5985,8 +6183,8 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_danger_signs">
-      <input ref="/infant_child/child_danger_signs/generated_table_list_label_139">
-        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_139:label')"/>
+      <input ref="/infant_child/child_danger_signs/generated_table_list_label_141">
+        <label ref="jr:itext('/infant_child/child_danger_signs/generated_table_list_label_141:label')"/>
       </input>
       <input ref="/infant_child/child_danger_signs/covid19_child_danger_sign_note">
         <label ref="jr:itext('/infant_child/child_danger_signs/covid19_child_danger_sign_note:label')"/>
@@ -5994,14 +6192,14 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       <input ref="/infant_child/child_danger_signs/child_danger_signs_note">
         <label ref="jr:itext('/infant_child/child_danger_signs/child_danger_signs_note:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142">
+      <select1 appearance="label" ref="/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/yes:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_142/no:label')"/>
+          <label ref="jr:itext('/infant_child/child_danger_signs/reserved_name_for_field_list_labels_144/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -6076,17 +6274,17 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
       </input>
     </group>
     <group appearance="field-list" ref="/infant_child/child_other_danger_signs">
-      <input ref="/infant_child/child_other_danger_signs/generated_table_list_label_151">
-        <label ref="jr:itext('/infant_child/child_other_danger_signs/generated_table_list_label_151:label')"/>
+      <input ref="/infant_child/child_other_danger_signs/generated_table_list_label_153">
+        <label ref="jr:itext('/infant_child/child_other_danger_signs/generated_table_list_label_153:label')"/>
       </input>
-      <select1 appearance="label" ref="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152">
+      <select1 appearance="label" ref="/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154">
         <label></label>
         <item>
-          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/yes:label')"/>
+          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_152/no:label')"/>
+          <label ref="jr:itext('/infant_child/child_other_danger_signs/reserved_name_for_field_list_labels_154/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -6296,17 +6494,86 @@ selected( /infant_child/problem_solving/engage_with_child ,&quot;named_things&qu
         </item>
       </select1>
     </group>
-    <group appearance="field-list" ref="/infant_child/hand_washing">
-      <label ref="jr:itext('/infant_child/hand_washing:label')"/>
-      <input ref="/infant_child/hand_washing/note_hand_washing">
-        <label ref="jr:itext('/infant_child/hand_washing/note_hand_washing:label')"/>
-      </input>
-      <input ref="/infant_child/hand_washing/note_material_hand_washing">
-        <label ref="jr:itext('/infant_child/hand_washing/note_material_hand_washing:label')"/>
-      </input>
-      <input ref="/infant_child/hand_washing/note_when_to_wash_hands">
-        <label ref="jr:itext('/infant_child/hand_washing/note_when_to_wash_hands:label')"/>
-      </input>
+    <group ref="/infant_child/wash">
+      <group appearance="field-list" ref="/infant_child/wash/subgroup_cholera">
+        <input ref="/infant_child/wash/subgroup_cholera/ask_familiy">
+          <label ref="jr:itext('/infant_child/wash/subgroup_cholera/ask_familiy:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/infant_child/wash/cholera_note">
+        <input ref="/infant_child/wash/cholera_note/important_note_cholera">
+          <label ref="jr:itext('/infant_child/wash/cholera_note/important_note_cholera:label')"/>
+        </input>
+        <input ref="/infant_child/wash/cholera_note/cholera_signs">
+          <label ref="jr:itext('/infant_child/wash/cholera_note/cholera_signs:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/infant_child/wash/subgroup_ors">
+        <input ref="/infant_child/wash/subgroup_ors/ors_uses">
+          <label ref="jr:itext('/infant_child/wash/subgroup_ors/ors_uses:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/infant_child/wash/subgroup_health_concerns">
+        <input ref="/infant_child/wash/subgroup_health_concerns/health_concerns_note_to_chv">
+          <label ref="jr:itext('/infant_child/wash/subgroup_health_concerns/health_concerns_note_to_chv:label')"/>
+        </input>
+        <select ref="/infant_child/wash/subgroup_health_concerns/health_concerns">
+          <label ref="jr:itext('/infant_child/wash/subgroup_health_concerns/health_concerns:label')"/>
+          <item>
+            <label ref="jr:itext('/infant_child/wash/subgroup_health_concerns/health_concerns/cleanliness:label')"/>
+            <value>cleanliness</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/infant_child/wash/subgroup_health_concerns/health_concerns/water:label')"/>
+            <value>water</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/infant_child/wash/subgroup_health_concerns/health_concerns/environment:label')"/>
+            <value>environment</value>
+          </item>
+        </select>
+      </group>
+      <group appearance="field-list" ref="/infant_child/wash/subgroup_cleanliness">
+        <input ref="/infant_child/wash/subgroup_cleanliness/hand_cleanliness_note">
+          <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/hand_cleanliness_note:label')"/>
+        </input>
+        <select1 ref="/infant_child/wash/subgroup_cleanliness/hand_wash_importance">
+          <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/hand_wash_importance:label')"/>
+          <item>
+            <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/hand_wash_importance/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/hand_wash_importance/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/infant_child/wash/subgroup_cleanliness/note_to_chv_kitini_rejea">
+          <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label')"/>
+        </input>
+        <input ref="/infant_child/wash/subgroup_cleanliness/hand_wash_timings">
+          <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/hand_wash_timings:label')"/>
+        </input>
+        <input ref="/infant_child/wash/subgroup_cleanliness/hand_wash_steps">
+          <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/hand_wash_steps:label')"/>
+        </input>
+        <input ref="/infant_child/wash/subgroup_cleanliness/hand_wash_steps_pic">
+          <label ref="jr:itext('/infant_child/wash/subgroup_cleanliness/hand_wash_steps_pic:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/infant_child/wash/subgroup_water">
+        <input ref="/infant_child/wash/subgroup_water/safe_water">
+          <label ref="jr:itext('/infant_child/wash/subgroup_water/safe_water:label')"/>
+        </input>
+        <input ref="/infant_child/wash/subgroup_water/cleanwater_audio">
+          <label ref="jr:itext('/infant_child/wash/subgroup_water/cleanwater_audio:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/infant_child/wash/subgroup_environment">
+        <input ref="/infant_child/wash/subgroup_environment/environment_cleanliness">
+          <label ref="jr:itext('/infant_child/wash/subgroup_environment/environment_cleanliness:label')"/>
+        </input>
+      </group>
     </group>
     <group ref="/infant_child/essential_newborn_breastfeeding">
       <label ref="jr:itext('/infant_child/essential_newborn_breastfeeding:label')"/>
