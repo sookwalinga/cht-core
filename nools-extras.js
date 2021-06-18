@@ -13,7 +13,7 @@ module.exports = {
   day: 1,
   week: 7,
   month: 30,
-
+  get:get,
   showWashProcotol: function (c){  
     return c.contact && c.contact.parent && c.contact.parent.parent &&
            c.contact.parent.parent.parent &&

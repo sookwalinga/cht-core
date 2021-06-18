@@ -263,7 +263,7 @@ module.exports = [
   title: 'task.pregnancy_counselling_visit',
   appliesTo: 'reports',
   appliesIf: function (c) {
-    if(!enabel.isCatchmentInML(c.contact.parent.parent._id)){return false;}
+    if(!enabel.isCatchmentInML(extras.get(c,'contact.parent.parent._id'))){return false;}
     return extras.countPregnancyCounsellingVisits(c) < 3
           && extras.isCurrentlyPregnant(c)
           && (extras.isHighRiskPregnancy(c) 
