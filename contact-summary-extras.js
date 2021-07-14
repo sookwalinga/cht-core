@@ -19,6 +19,10 @@ module.exports = {
        wash.shouldGetWashProtocol(contact.parent.parent._id);
   },
 
+  isClientReportedDead: function () {
+    return reports.filter(r=>r.form === 'death_report').length>0;
+ },
+
   isChildUnder5: function () {
     if (contact && contact.date_of_birth) {
       var birthDate = new Date(contact.date_of_birth);

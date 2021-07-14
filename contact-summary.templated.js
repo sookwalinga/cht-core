@@ -18,7 +18,8 @@ module.exports = {
     risk_factor_labels_swahili:extras.getRiskFactorLabels('sw'),
     mitigation_list: extras.getMitigationList(),
     high_risk_manual: extras.isHighRiskPregnancy(),
-    show_wash_protocol:extras.showWashProcotol()
+    show_wash_protocol:extras.showWashProcotol(), 
+    is_contact_deceased:extras.isClientReportedDead()
   },
 
   fields: [

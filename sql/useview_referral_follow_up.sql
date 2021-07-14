@@ -19,6 +19,8 @@ CREATE MATERIALIZED VIEW useview_referral_follow_up AS
     doc #>> '{fields,patient_id}' AS patient_id,
     doc #>> '{fields,referral_source_form}' AS referral_source_form,
     doc #>> '{fields,referral_source_id}' AS referral_source_id,
+    NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
+    NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
     TO_TIMESTAMP((NULLIF(doc #>> '{fields,last_visit}', '')::BIGINT / 1000)::DOUBLE PRECISION) AS last_visit,
     TO_DATE(doc #>> '{fields,last_visit_formatted}', 'DD/MM/YYYY') AS last_visit_formatted,
     NULLIF(doc #>> '{fields,refer_flag_small_baby}', '')::BOOLEAN AS refer_flag_small_baby,

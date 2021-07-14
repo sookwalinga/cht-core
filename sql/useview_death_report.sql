@@ -18,6 +18,8 @@ CREATE MATERIALIZED VIEW useview_death_report AS
     doc ->> 'from' AS chv_phone, 
     doc #>> '{fields,client_name}' AS client_name,
     doc #>> '{fields,patient_id}' AS patient_id,
+    NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
+    NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
     TO_DATE(NULLIF(doc #>> '{fields,date_of_birth_c}', ''), 'YYYY-MM-DD') AS date_of_birth_c,
     doc #>> '{fields,sex_c}' AS sex_c,
     doc #>> '{fields,created_by}' AS chv_name,

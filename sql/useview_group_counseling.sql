@@ -17,6 +17,8 @@ CREATE MATERIALIZED VIEW useview_group_counseling AS
     doc #>> '{contact,parent,parent,_id}' AS supervisory_area_uuid,
     doc ->> 'from' AS chv_phone,
     doc #>> '{fields,created_by}' AS chv_name,
+    NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
+    NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
     doc #>> '{fields,chv_group_counseling,district}' AS district,
     doc #>> '{fields,chv_group_counseling,shehia}' AS shehia,
     doc #>> '{fields,chv_group_counseling,village}' AS village,

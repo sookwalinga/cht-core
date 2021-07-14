@@ -17,6 +17,9 @@ CREATE MATERIALIZED VIEW useview_covid_education AS
     doc #>> '{contact,parent,parent,_id}' AS supervisory_area_uuid,
     doc ->> 'from' AS chv_phone,
     doc #>> '{fields,created_by}' AS chv_name,
+    NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
+    NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
+    doc #>> '{fields,end}' AS end,
     doc #>> '{fields,inputs,contact,_id}' AS household_id,
     CASE 
       WHEN doc #>> '{fields,introductory_qns,corona_awareness}' = 'none'  

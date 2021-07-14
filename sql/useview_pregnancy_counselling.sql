@@ -24,6 +24,8 @@ CREATE MATERIALIZED VIEW useview_pregnancy_counselling AS
     NULLIF(doc #>> '{fields,show_research_questions}', '')::BOOLEAN AS show_research_questions,
     doc #>> '{fields,patient_id}' AS patient_id,
     doc #>> '{fields,created_by}' AS chv_name,
+    NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
+    NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
     TO_DATE(NULLIF(doc #>> '{fields,date_of_birth_c}', ''), 'YYYY-MM-DD') AS date_of_birth_c,
     NULLIF(NULLIF(doc #>> '{fields,age_days}', 'NaN'), '')::INTEGER AS age_days,
     NULLIF(NULLIF(doc #>> '{fields,age_months}', 'NaN'), '')::INTEGER AS age_months,

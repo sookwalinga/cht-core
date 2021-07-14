@@ -29,6 +29,8 @@ CREATE MATERIALIZED VIEW useview_pregnancy_outcomes AS
     doc #>> '{fields,house_number}' AS house_number,
     doc #>> '{fields,kitongoji}' AS kitongoji,
     doc #>> '{fields,phone}' AS phone,
+    NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
+    NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
     TO_DATE(NULLIF(doc #>> '{fields,client_EDD}', ''), 'YYYY-MM-DD') AS client_EDD,
     NULLIF(NULLIF(doc #>> '{fields,week}', 'NaN'), '')::INTEGER AS week,
     NULLIF(NULLIF(doc #>> '{fields,month}', 'NaN'), '')::INTEGER AS month,

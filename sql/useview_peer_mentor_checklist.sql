@@ -17,6 +17,8 @@ CREATE MATERIALIZED VIEW useview_peer_mentor_checklist AS
     doc #>> '{contact,parent,parent,_id}' AS supervisory_area_uuid,
     doc ->> 'from' AS chv_phone,
     doc #>> '{fields,created_by}' AS chv_name,
+    NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
+    NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
     doc #>> '{fields,chv_information,chv_first_name}' AS chv_first_name,
     doc #>> '{fields,chv_information,chv_middle_name}' AS chv_middle_name,
     doc #>> '{fields,chv_information,chv_last_name}' AS chv_last_name,

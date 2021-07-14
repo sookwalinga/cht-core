@@ -1,9 +1,9 @@
 ------------------------------------------------------------
--- Materialized view to show table of confirm meeting forms.
+-- Materialized view to show table of wash protocol forms.
 ------------------------------------------------------------
-DROP MATERIALIZED VIEW IF EXISTS useview_confirm_meeting;
+DROP MATERIALIZED VIEW IF EXISTS useview_wash_protocol;
 
-CREATE MATERIALIZED VIEW useview_confirm_meeting AS 
+CREATE MATERIALIZED VIEW useview_wash_protocol AS 
 (
   SELECT
     doc ->> '_id' AS _id,
@@ -19,7 +19,8 @@ CREATE MATERIALIZED VIEW useview_confirm_meeting AS
     doc #>> '{fields,created_by}' AS created_by,
     NULLIF(doc #>> '{fields,start}', '')::TIMESTAMP as start_time,
     NULLIF(doc #>> '{fields,end}', '')::TIMESTAMP as end_time,
-    doc #>> '{fields,user,confirm_meeting}' AS confirm_meeting,
+    NULLIF(doc #>> '{fields,wash,subgroup_cleanliness,hand_wash_importance}','')::BOOLEAN  AS is_hand_wash_important,
+    NULLIF(doc #>> '{fields,wash,subgroup_health_concerns,health_concerns}','') AS selected_health_concerns,
     NULLIF(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
     NULLIF(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,
     NULLIF(doc #>> '{geolocation,altitude}', '')::DECIMAL AS altitude,
@@ -27,10 +28,10 @@ CREATE MATERIALIZED VIEW useview_confirm_meeting AS
   FROM  
 	couchdb	
   WHERE 
-	doc ->> 'form' = 'confirm_meeting'
+	doc ->> 'form' = 'wash_protocol'
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS confirm_meeting_reported_date_created_by_uuid ON useview_confirm_meeting USING btree (reported_date, chv_uuid);
+CREATE UNIQUE INDEX IF NOT EXISTS wash_protocol_reported_date_created_by_uuid ON useview_wash_protocol USING btree (reported_date, chv_uuid);
 -- Permissions
 REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_confirm_meeting TO full_access, dtree, periscope;
+GRANT SELECT ON useview_wash_protocol TO full_access, dtree, periscope;
