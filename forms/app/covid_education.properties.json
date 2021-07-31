@@ -8,6 +8,6 @@
     "context": {
     "person": false,
     "place": true,
-    "expression": "contact && contact.type === 'clinic'"
+    "expression": "contact && contact.type === 'clinic' && user.parent.type === 'health_center'"
   }
 }

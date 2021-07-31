@@ -13,6 +13,6 @@
   "context": {
     "person": false,
     "place": true,
-    "expression": "!contact.parent.parent.parent && !contact.parent.parent"
+    "expression": "!contact.parent.parent.parent && !contact.parent.parent && user.parent.type === 'health_center'"
   }
 }

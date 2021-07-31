@@ -19,7 +19,11 @@ module.exports = {
     mitigation_list: extras.getMitigationList(),
     high_risk_manual: extras.isHighRiskPregnancy(),
     show_wash_protocol:extras.showWashProcotol(), 
-    is_contact_deceased:extras.isClientReportedDead()
+    quality_monitoring_count: extras.getQualityMonitoringCount(),
+    is_parent_health_center:extras.isParentHealthCenter(),
+    is_contact_deceased:extras.isClientReportedDead(), 
+    is_contact_retired: extras.isContactRetired()
+
   },
 
   fields: [

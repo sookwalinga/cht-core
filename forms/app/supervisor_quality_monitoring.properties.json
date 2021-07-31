@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Supervisor Quality Monitoring"
+    },
+    {
+      "locale": "sw",
+      "content": "Ufuatiliaji wa ubora wa Supervisor"
+    }
+  ],
+  "icon": "general",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "!contact.parent.parent.parent && !contact.parent.parent && user.parent.type === 'district_hospital'"
+  }
+}

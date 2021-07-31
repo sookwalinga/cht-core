@@ -40,6 +40,10 @@ module.exports = {
     } 
   },
 
+  isContactRetired: function(){  
+    return lineage[0] && lineage[0].contact && lineage[0].contact.retired;
+  },
+
   getVisitCount: function () {
     var count = [];
     count = reports.filter(function (r) {
@@ -47,6 +51,11 @@ module.exports = {
     });
     return count.length;
   },
+
+  
+  getQualityMonitoringCount: function() { 
+     return reports.filter(r =>r.form === 'chv_quality_monitoring').length;
+  }, 
 
   getContactHouseholdHead: function () {
     if (contact && contact.parent && contact.parent.parent && contact.parent.parent.parent) {
@@ -82,6 +91,10 @@ module.exports = {
       }
     }
     return null;
+  },
+
+  isParentHealthCenter: function(){ 
+    return lineage[0] && lineage[0].type === 'health_center';
   },
 
   getPositiveConsentingPregnancyRegistrations: function () {

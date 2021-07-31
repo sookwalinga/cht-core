@@ -13,6 +13,6 @@
   "context": {
     "person": false,
     "place": true,
-    "expression": "contact && contact.type === 'clinic' && summary.show_wash_protocol===true"
+    "expression": "contact && contact.type === 'clinic' && summary.show_wash_protocol===true && user.parent.type === 'health_center'"
   }
 }
