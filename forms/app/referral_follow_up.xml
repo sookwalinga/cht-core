@@ -213,7 +213,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
           <text id="/referral_follow_up/inputs/contact/_id:label">
             <value>-</value>
           </text>
-          <text id="/referral_follow_up/inputs/contact/date_of_birth:label">
+          <text id="/referral_follow_up/inputs/contact/dob:label">
             <value>-</value>
           </text>
           <text id="/referral_follow_up/inputs/contact/name:label">
@@ -481,7 +481,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
               <_id/>
               <name/>
               <sex/>
-              <date_of_birth/>
+              <dob/>
             </contact>
           </inputs>
           <patient_id/>
@@ -603,7 +603,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/inputs/contact/_id" type="db:person"/>
       <bind nodeset="/referral_follow_up/inputs/contact/name" type="string"/>
       <bind nodeset="/referral_follow_up/inputs/contact/sex" type="string"/>
-      <bind nodeset="/referral_follow_up/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/referral_follow_up/inputs/contact/dob" type="string"/>
       <bind nodeset="/referral_follow_up/patient_id" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/referral_follow_up/referral_source_form" type="string" calculate="../inputs/source_form"/>
       <bind nodeset="/referral_follow_up/referral_original_source_form" type="string" calculate="../inputs/original_source_form"/>
@@ -664,7 +664,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;yes&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/congratulate" readonly="true()" type="string"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/got_services" type="select1" required="true()"/>
-      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" type="select" required="true()" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
+      <bind nodeset="/referral_follow_up/referral_follow_up/did_go/reasons_no_services" type="select" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)" required="true()"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_go/discuss_reasons_no_services" readonly="true()" type="string" relevant="selected( /referral_follow_up/referral_follow_up/did_go/got_services ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go" relevant="selected( /referral_follow_up/referral_follow_up/went_to_facility ,&quot;no&quot;)"/>
       <bind nodeset="/referral_follow_up/referral_follow_up/did_not_go/reason_didnt_go" type="select" required="true()"/>
@@ -721,7 +721,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /refer
         <input appearance="db-object" ref="/referral_follow_up/inputs/contact/_id"/>
         <input ref="/referral_follow_up/inputs/contact/name"/>
         <input ref="/referral_follow_up/inputs/contact/sex"/>
-        <input ref="/referral_follow_up/inputs/contact/date_of_birth"/>
+        <input ref="/referral_follow_up/inputs/contact/dob"/>
       </group>
     </group>
     <group ref="/referral_follow_up/covid19_intro">
