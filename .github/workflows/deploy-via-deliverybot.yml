@@ -1,0 +1,87 @@
+name: App deployment
+
+on: ['deployment']
+
+jobs:
+  deployment:
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: 'Deployment pending'
+      uses: 'deliverybot/deployment-status@master'
+      with:
+        state: 'pending'
+        token: '${{ github.token }}'
+
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+
+    - name: Push APP to development
+      uses: './.github/actions/deploy-with-medic-conf'
+      if: github.event.deployment.environment == 'APP.development'
+      with:
+        directory: '.'
+        hostname: moh-zanzibar-testing.dev.medicmobile.org
+        username: ${{ secrets.TESTING_USERNAME }}
+        password: ${{ secrets.TESTING_PASSWORD }}
+
+    - name: Push APP to training
+      uses: './.github/actions/deploy-with-medic-conf'
+      if: github.event.deployment.environment == 'APP.training'
+      with:
+        directory: '.'
+        hostname: moh-zanzibar.dev.medicmobile.org
+        username: ${{ secrets.TRAINING_USERNAME }}
+        password: ${{ secrets.TRAINING_PASSWORD }}
+
+    - name: Push APP to production
+      uses: './.github/actions/deploy-with-medic-conf'
+      if: github.event.deployment.environment == 'production'
+      with:
+        directory: '.'
+        hostname: moh-zanzibar.app.medicmobile.org
+        username: ${{ secrets.PROD_USERNAME }}
+        password: ${{ secrets.PROD_PASSWORD }}
+        
+    - name: 'Slack notify success'
+      if: success() && github.event.deployment.environment == 'production'
+      uses: rtCamp/action-slack-notify@v2.2.0
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_CHANNEL: cht-d-tree
+        SLACK_USERNAME: deliverybot
+        SLACK_ICON_EMOJI: ':rocket:'
+        SLACK_TITLE: 'Production deployment successful :successful:'
+        SLACK_FOOTER: ''
+        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/deployments/activity_log?environment=production|View all deployments>'
+        MSG_MINIMAL: commit
+
+    - name: 'Slack notify failure'
+      if: failure() && github.event.deployment.environment == 'production'
+      uses: rtCamp/action-slack-notify@v2.2.0
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_CHANNEL: cht-d-tree
+        SLACK_USERNAME: deliverybot
+        SLACK_COLOR: '#B33A3A'
+        SLACK_ICON_EMOJI: ':rocket:'
+        SLACK_TITLE: 'Production deployment failed :warning:'
+        SLACK_FOOTER: '<https://github.com/medic/config-repo/deployments/activity_log?environment=production|View all deployments>'
+        SLACK_MESSAGE: ${{ github.repository }}
+        MSG_MINIMAL: commit
+
+    - name: 'Deployment success'
+      if: success()
+      uses: 'deliverybot/deployment-status@master'
+      with:
+        state: 'success'
+        token: '${{ github.token }}'
+
+    - name: 'Deployment failure'
+      if: failure()
+      uses: 'deliverybot/deployment-status@master'
+      with:
+        state: 'failure'
+        token: '${{ github.token }}'
