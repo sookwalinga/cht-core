@@ -23,7 +23,11 @@ CREATE MATERIALIZED VIEW useview_chv AS
   FROM 
 	  couchdb	
   WHERE 
-	  doc ->> 'type' = 'person' AND doc #>> '{parent,parent,_id}' IS NOT NULL AND doc #>> '{parent,parent,parent,_id}' IS NULL
+	  doc ->> 'type' = 'person' AND doc #>> '{parent,parent,_id}' IS NOT NULL 
+    AND doc #>> '{parent,parent,parent,_id}' IS NULL
+	  AND doc ->> 'phone' != '' 
+	  AND doc ->> 'name' != '' 
+	  AND doc ->> 'name' != 'DEV_CHV' 
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS chv_reported_date_uuid ON useview_chv USING btree (reported_date, _id);
