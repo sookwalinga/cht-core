@@ -1,14 +1,14 @@
 development:
   environment: development
   production_environment: false
-#  required_contexts: ["ci"]
+  required_contexts: []
 
 training:
   environment: training
   production_environment: false
-#  required_contexts: ["ci"]
+  required_contexts: ["test (16.x)"]
 
 production:
   environment: production
   production_environment: true
-#  required_contexts: ["ci"]
+  required_contexts: ["test (16.x)"]

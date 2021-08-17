@@ -44,7 +44,13 @@ jobs:
         hostname: moh-zanzibar.app.medicmobile.org
         username: ${{ secrets.PROD_USERNAME }}
         password: ${{ secrets.PROD_PASSWORD }}
-        
+
+    - name: 'Get message'
+      id: 'deploy-message'
+      run: |
+            echo "::set-output name=commit_msg::$(git log -1 --format=%B)"
+            echo "::set-output name=commit_sha::$(git log -1 --format=%H)"
+            
     - name: 'Slack notify success'
       if: success() && github.event.deployment.environment == 'production'
       uses: rtCamp/action-slack-notify@v2.2.0
@@ -54,9 +60,9 @@ jobs:
         SLACK_USERNAME: deliverybot
         SLACK_ICON_EMOJI: ':rocket:'
         SLACK_TITLE: 'Production deployment successful :successful:'
-        SLACK_FOOTER: ''
-        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/deployments/activity_log?environment=production|View all deployments>'
-        MSG_MINIMAL: commit
+        SLACK_FOOTER: '<https://github.com/medic/config-dtree/deployments/activity_log?environment=production|View all deployments>'
+        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/commit/${{ steps.deploy-message.outputs.commit_sha }}|${{ steps.deploy-message.outputs.commit_msg }}>'
+        MSG_MINIMAL: true
 
     - name: 'Slack notify failure'
       if: failure() && github.event.deployment.environment == 'production'
@@ -67,10 +73,10 @@ jobs:
         SLACK_USERNAME: deliverybot
         SLACK_COLOR: '#B33A3A'
         SLACK_ICON_EMOJI: ':rocket:'
-        SLACK_TITLE: 'Production deployment failed :warning:'
-        SLACK_FOOTER: '<https://github.com/medic/config-repo/deployments/activity_log?environment=production|View all deployments>'
-        SLACK_MESSAGE: ${{ github.repository }}
-        MSG_MINIMAL: commit
+        SLACK_TITLE: 'Deployment failed :warning:'
+        SLACK_FOOTER: '<https://github.com/medic/config-dtree/deployments/activity_log?environment=production|View all deployments>'
+        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/commit/${{ steps.deploy-message.outputs.commit_sha }}|${{ steps.deploy-message.outputs.commit_msg }}>'
+        MSG_MINIMAL: true
 
     - name: 'Deployment success'
       if: success()
