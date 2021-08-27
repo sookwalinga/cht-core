@@ -94,7 +94,7 @@ module.exports = {
   },
 
   isParentHealthCenter: function(){ 
-    return lineage[0] && lineage[0].type === 'health_center';
+    return lineage[0] && lineage[0].type && lineage[0].type === 'health_center';
   },
 
   getPositiveConsentingPregnancyRegistrations: function () {
