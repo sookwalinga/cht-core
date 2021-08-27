@@ -32,7 +32,7 @@ CREATE MATERIALIZED VIEW useview_covid_education AS
     doc #>> '{fields,hand_washing,is_practicing}' AS is_practicing,
     doc #>> '{fields,risks_and_directions,serious_diseases}' AS serious_diseases,
     NULLIF(replace(doc #>>'{fields,risks_and_directions,age_above_50}','none','no'),'')::BOOLEAN 
-    OR NULLIF(replace(doc #>>'{fields,corona_signs,age_above_50}','none','no'),'')::BOOLEAN ) AS age_above_50,
+    OR NULLIF(replace(doc #>>'{fields,corona_signs,age_above_50}','none','no'),'')::BOOLEAN AS age_above_50,
     NULLIF(replace(doc #>>'{fields,test_understading,asymptomatic}','none','no'),'')::BOOLEAN AS asymptomatic,
     NULLIF(replace(doc #>>'{fields,test_understading,infected_area}','none','no'),'')::BOOLEAN AS infected_area,
     NULLIF(doc #>> '{fields,corona_precautions,does_client_take_precautions}','')::BOOLEAN  AS does_client_take_precautions,
