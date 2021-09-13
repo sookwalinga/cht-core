@@ -5,6 +5,7 @@ on: ['deployment']
 jobs:
   deployment:
     runs-on: ubuntu-18.04
+    timeout-minutes: 15
 
     steps:
     - name: 'Deployment pending'
@@ -16,11 +17,11 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
-        node-version: 10.x
+        node-version: 16.x
 
     - name: Push APP to development
       uses: './.github/actions/deploy-with-medic-conf'
-      if: github.event.deployment.environment == 'APP.development'
+      if: github.event.deployment.environment == 'development'
       with:
         directory: '.'
         hostname: moh-zanzibar-testing.dev.medicmobile.org
@@ -29,7 +30,7 @@ jobs:
 
     - name: Push APP to training
       uses: './.github/actions/deploy-with-medic-conf'
-      if: github.event.deployment.environment == 'APP.training'
+      if: github.event.deployment.environment == 'training'
       with:
         directory: '.'
         hostname: moh-zanzibar.dev.medicmobile.org
