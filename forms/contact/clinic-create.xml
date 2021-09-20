@@ -50,6 +50,12 @@
           <text id="/data/contact/phone:label">
             <value>Phone Number</value>
           </text>
+          <text id="/data/contact/phone_owner:label">
+            <value>Phone Number Owner</value>
+          </text>
+          <text id="/data/contact/phone_owner_other:label">
+            <value>Other Primary Phone Number Owner</value>
+          </text>
           <text id="/data/contact/sex:label">
             <value>Gender</value>
           </text>
@@ -77,7 +83,7 @@
             <value>For each person, I will ask some basic details about who they are, starting with the best contact person for this household. Who should I list as the person I can reach out to coordinate care for themselves and other members of this household? This person should be reachable by phone.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:hint">
-            <value>Ask the person to list the names of all people who live in the house, and count to ensure that the number they provided is correct. Long term visitors to the house, such as a woman returning home for delivery, should not be counted - only people who are permanent residents of the house.</value>
+            <value>Ask the person to list the names of all people who live in the house, and count to ensure that the number they provided is correct.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:jr:constraintMsg">
             <value>Kayas can have between 1 and 30 members</value>
@@ -209,6 +215,24 @@
           </text>
           <text id="/data/init/primary_phone_contact:label">
             <value>What is the best contact phone number for <output value=" /data/init/first_name_contact "/>?</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/mine:label">
+            <value>My number</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/neighbor:label">
+            <value>My neighbor's number</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/partner:label">
+            <value>My partner's number</value>
+          </text>
+          <text id="/data/init/primary_phone_owner:label">
+            <value>Whose phone number is this?</value>
+          </text>
+          <text id="/data/init/primary_phone_owner_other:label">
+            <value>Please specify</value>
           </text>
           <text id="/data/init/secondary_phone_contact:hint">
             <value>You can leave this blank if there is only one good contact number for this household</value>
@@ -403,6 +427,12 @@
           <text id="/data/contact/phone:label">
             <value>Nambari ya simu</value>
           </text>
+          <text id="/data/contact/phone_owner:label">
+            <value>Mmiliki wa Nambari ya Simu</value>
+          </text>
+          <text id="/data/contact/phone_owner_other:label">
+            <value>Mmiliki mwengine wa nambari ya simu</value>
+          </text>
           <text id="/data/contact/sex:label">
             <value>Jinsia</value>
           </text>
@@ -434,7 +464,7 @@
             <value>Sasa nitakuuliza baadhi ya taarifa za msingi za utambulisho wa kila mtu, tukianza na mkuu wa kaya au mtu mzima yoyote ambaye naweza kuwasiliana naye kwenye nyumba hii. Je, ni nani anaweza kuratibu utowaji wa huduma kwenye familia hii? Mtu huyu awe na simu kurahisisha mawasiliano.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:hint">
-            <value>Muombe mwenyeji wako aorodheshe majina ya watu wanaoishi kwenye kaya, na hesabu ili kuhakikisha idadi ni sawa. Usiwahesabu wageni walikokuja kutembea kwa muda mrefu, mfano wanawake walikuja nyumbani ili kujifungua, hesabu wakaazi wakudumu peke yao.</value>
+            <value>Muombe mwenyeji wako aorodheshe majina ya watu wanaoishi kwenye kaya, na hesabu ili kuhakikisha idadi ni sawa.</value>
           </text>
           <text id="/data/hh_member_count/num_hh_members:jr:constraintMsg">
             <value>Kaya iwe kati ya mtu 1 hadi watu 30.</value>
@@ -569,6 +599,24 @@
           </text>
           <text id="/data/init/primary_phone_contact:label">
             <value>Je ni ipi nambari yake ya mawasiliano?</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/mine:label">
+            <value>Namba yangu</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/neighbor:label">
+            <value>Namba ya jirani yangu</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/other:label">
+            <value>Mtu mwengine</value>
+          </text>
+          <text id="/data/init/primary_phone_owner/partner:label">
+            <value>Namba ya mwenza wangu</value>
+          </text>
+          <text id="/data/init/primary_phone_owner:label">
+            <value>Je hii namba ya simu ya nani?</value>
+          </text>
+          <text id="/data/init/primary_phone_owner_other:label">
+            <value>Tafadhali taja ni nambari ya nani?</value>
           </text>
           <text id="/data/init/secondary_phone_contact:hint">
             <value>Unaweza acha pengo usijijaze chochote kama kuna nambari moja tu ya mawasiliano kwenye kaya hii</value>
@@ -718,7 +766,7 @@
         </translation>
       </itext>
       <instance>
-        <data id="contact:clinic:create" prefix="J1!contact:clinic:create!" delimiter="#" version="2020-10-06_01-45">
+        <data id="contact:clinic:create" prefix="J1!contact:clinic:create!" delimiter="#" version="2021-08-24 12-52">
           <inputs>
             <meta>
               <location>
@@ -766,6 +814,8 @@
             <exact_dob_known/>
             <date_of_birth/>
             <phone/>
+            <phone_owner/>
+            <phone_owner_other/>
             <alternate_phone/>
             <is_head_of_household/>
             <meta tag="hidden">
@@ -798,7 +848,11 @@
             <yob_contact/>
             <dob_contact/>
             <primary_phone_contact/>
+            <correct_primary_phone_number/>
+            <primary_phone_owner/>
+            <primary_phone_owner_other/>
             <secondary_phone_contact/>
+            <correct_secondary_phone_number/>
             <dob_contact_calc/>
             <age_contact_years/>
             <reproductive_age_c/>
@@ -877,15 +931,17 @@
       <bind nodeset="/data/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
       <bind nodeset="/data/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/data/contact/parent" type="string" calculate="."/>
-      <bind nodeset="/data/contact/first_name" type="string" calculate=" /data/init/first_name_contact " required="true()"/>
+      <bind nodeset="/data/contact/first_name" type="string" required="true()" calculate=" /data/init/first_name_contact "/>
       <bind nodeset="/data/contact/middle_name" type="string" calculate=" /data/init/middle_name_contact "/>
       <bind nodeset="/data/contact/last_name" type="string" calculate=" /data/init/last_name_contact "/>
       <bind nodeset="/data/contact/name" type="string" calculate=" /data/init/name_contact "/>
       <bind nodeset="/data/contact/sex" type="string" calculate=" /data/init/sex_contact "/>
       <bind nodeset="/data/contact/exact_dob_known" type="string" calculate=" /data/init/exact_dob_known_contact "/>
       <bind nodeset="/data/contact/date_of_birth" type="string" calculate=" /data/init/dob_contact_calc "/>
-      <bind nodeset="/data/contact/phone" type="string" calculate=" /data/init/primary_phone_contact "/>
-      <bind nodeset="/data/contact/alternate_phone" type="string" calculate=" /data/init/secondary_phone_contact "/>
+      <bind nodeset="/data/contact/phone" type="string" calculate=" /data/init/correct_primary_phone_number "/>
+      <bind nodeset="/data/contact/phone_owner" type="string" calculate=" /data/init/primary_phone_owner "/>
+      <bind nodeset="/data/contact/phone_owner_other" type="string" calculate=" /data/init/primary_phone_owner_other "/>
+      <bind nodeset="/data/contact/alternate_phone" type="string" calculate=" /data/init/correct_secondary_phone_number "/>
       <bind nodeset="/data/contact/is_head_of_household" type="string" calculate="&quot;yes&quot;"/>
       <bind nodeset="/data/contact/meta/created_by" type="string" calculate="../../../name"/>
       <bind nodeset="/data/contact/meta/created_by_person_uuid" type="string" calculate="../../../contact_id"/>
@@ -896,20 +952,24 @@
       <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/data/covid19_intro/covid19_visit_reminder" readonly="true()" type="string"/>
       <bind nodeset="/data/intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/hh_member_count/num_hh_members" type="int" jr:constraintMsg="jr:itext('/data/hh_member_count/num_hh_members:jr:constraintMsg')" constraint=". &gt; 0 and . &lt;= 30" required="true()"/>
+      <bind nodeset="/data/hh_member_count/num_hh_members" type="int" constraint=". &gt; 0 and . &lt;= 30" required="true()" jr:constraintMsg="jr:itext('/data/hh_member_count/num_hh_members:jr:constraintMsg')"/>
       <bind nodeset="/data/hh_member_count/hh_repeat_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/init/first_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/first_name_contact:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
-      <bind nodeset="/data/init/middle_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/middle_name_contact:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
-      <bind nodeset="/data/init/last_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/last_name_contact:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/data/init/first_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/init/first_name_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/middle_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/init/middle_name_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/last_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/init/last_name_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/name_contact" type="string" calculate="concat( /data/init/first_name_contact ,&quot; &quot;, /data/init/middle_name_contact ,&quot; &quot;, /data/init/last_name_contact )"/>
       <bind nodeset="/data/init/sex_contact_note" readonly="true()" type="string"/>
       <bind nodeset="/data/init/sex_contact" type="select1" required="true()"/>
       <bind nodeset="/data/init/exact_dob_known_contact" type="select1" required="true()"/>
-      <bind nodeset="/data/init/age_estimate_contact" type="int" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')" constraint=". &gt;= 12 and . &lt;= 100" required="true()" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;"/>
+      <bind nodeset="/data/init/age_estimate_contact" type="int" required="true()" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;" constraint=". &gt;= 12 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')"/>
       <bind nodeset="/data/init/yob_contact" type="string" calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact"/>
-      <bind nodeset="/data/init/dob_contact" type="date" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" required="true()" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)"/>
-      <bind nodeset="/data/init/primary_phone_contact" type="tel" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')" constraint="true()" required="true()"/>
-      <bind nodeset="/data/init/secondary_phone_contact" type="tel" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')" constraint="true()"/>
+      <bind nodeset="/data/init/dob_contact" type="date" required="true()" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/primary_phone_contact" type="string" constraint="regex(.,'^[0oO][0-9oO]{9}$')" required="true()" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/correct_primary_phone_number" type="string" calculate="translate (translate ( /data/init/primary_phone_contact , &quot;o&quot;,&quot;0&quot;), &quot;O&quot;,&quot;0&quot;)"/>
+      <bind nodeset="/data/init/primary_phone_owner" type="select1" required="true()"/>
+      <bind nodeset="/data/init/primary_phone_owner_other" type="string" relevant="selected( /data/init/primary_phone_owner ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/data/init/secondary_phone_contact" type="string" constraint="regex(.,'^[0oO][0-9oO]{9}$')" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/correct_secondary_phone_number" type="string" calculate="translate (translate ( /data/init/primary_phone_contact , &quot;o&quot;,&quot;0&quot;), &quot;O&quot;,&quot;0&quot;)"/>
       <bind nodeset="/data/init/dob_contact_calc" type="string" calculate="format-date(if(../dob_contact != '', ../dob_contact,concat(../yob_contact, '-01-01')), '%Y-%m-%d')"/>
       <bind nodeset="/data/init/age_contact_years" type="string" calculate="(decimal-date-time(today()) - decimal-date-time( /data/init/dob_contact_calc )) div 365"/>
       <bind nodeset="/data/init/reproductive_age_c" type="string" calculate="if(selected( /data/init/sex_contact ,&quot;female&quot;) and  /data/init/age_contact_years  &gt;= 15 and  /data/init/age_contact_years  &lt;= 49,1,0)"/>
@@ -920,9 +980,9 @@
       <bind nodeset="/data/repeat/child/hh_member_note" readonly="true()" type="string"/>
       <bind nodeset="/data/repeat/child/type" type="string"/>
       <bind nodeset="/data/repeat/child/parent" type="string" calculate="."/>
-      <bind nodeset="/data/repeat/child/first_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/first_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
-      <bind nodeset="/data/repeat/child/middle_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/middle_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
-      <bind nodeset="/data/repeat/child/last_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/last_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()"/>
+      <bind nodeset="/data/repeat/child/first_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/first_name:jr:constraintMsg')"/>
+      <bind nodeset="/data/repeat/child/middle_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/middle_name:jr:constraintMsg')"/>
+      <bind nodeset="/data/repeat/child/last_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/data/repeat/child/last_name:jr:constraintMsg')"/>
       <bind nodeset="/data/repeat/child/first_name_c" type="string" calculate="../first_name"/>
       <bind nodeset="/data/repeat/child/middle_name_c" type="string" calculate="../middle_name"/>
       <bind nodeset="/data/repeat/child/last_name_c" type="string" calculate="../last_name"/>
@@ -932,9 +992,9 @@
       <bind nodeset="/data/repeat/child/sex_c" type="string" calculate="../sex"/>
       <bind nodeset="/data/repeat/child/exact_dob_known" type="select1" required="true()"/>
       <bind nodeset="/data/repeat/child/exact_dob_known_c" type="string" calculate="../exact_dob_known"/>
-      <bind nodeset="/data/repeat/child/age_estimate" type="int" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')" constraint=". &gt;= 5 and . &lt;= 100" required="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;"/>
+      <bind nodeset="/data/repeat/child/age_estimate" type="int" required="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;" constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')"/>
       <bind nodeset="/data/repeat/child/yob" type="string" calculate="if(../age_estimate != &quot;&quot;, format-date-time(today(),&quot;%Y&quot;) - ../age_estimate, 1900)"/>
-      <bind nodeset="/data/repeat/child/dob" type="date" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')" constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))" required="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;"/>
+      <bind nodeset="/data/repeat/child/dob" type="date" required="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;" constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')"/>
       <bind nodeset="/data/repeat/child/temp_hh_member" type="select1" required="true()"/>
       <bind nodeset="/data/repeat/child/date_of_birth" type="string" calculate="format-date(if(../dob != &quot;&quot;, ../dob,concat(../yob, &quot;-01-01&quot;)), '%Y-%m-%d')"/>
       <bind nodeset="/data/repeat/child/date_of_birth_c" type="string" calculate="../date_of_birth"/>
@@ -956,14 +1016,14 @@
       <bind nodeset="/data/household_location/gps_note" readonly="true()" type="string"/>
       <bind nodeset="/data/household_location/gps" type="geopoint"/>
       <bind nodeset="/data/household_location/kitongoji_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/kitongoji" type="string" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" required="true()"/>
+      <bind nodeset="/data/household_location/kitongoji" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" required="true()" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')"/>
       <bind nodeset="/data/household_location/house_number_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/house_number" type="string" jr:constraintMsg="jr:itext('/data/household_location/house_number:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" required="true()"/>
+      <bind nodeset="/data/household_location/house_number" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" required="true()" jr:constraintMsg="jr:itext('/data/household_location/house_number:jr:constraintMsg')"/>
       <bind nodeset="/data/household_location/travel_time_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/travel_time" type="int" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')" constraint=". &gt; 0 and . &lt;= 120" required="true()"/>
+      <bind nodeset="/data/household_location/travel_time" type="int" constraint=". &gt; 0 and . &lt;= 120" required="true()" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')"/>
       <bind nodeset="/data/household_location/means_of_travel_house_note" readonly="true()" type="string"/>
       <bind nodeset="/data/household_location/means_of_travel_house" type="select1" required="true()"/>
-      <bind nodeset="/data/household_location/means_of_travel_other" type="string" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3" required="true()" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)"/>
+      <bind nodeset="/data/household_location/means_of_travel_other" type="string" required="true()" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')"/>
       <bind nodeset="/data/end_registration_note" readonly="true()" type="string"/>
       <bind nodeset="/data/clinic/parent" type="string" calculate="."/>
       <bind nodeset="/data/clinic/name" type="string" calculate="concat(../../contact/first_name, &quot; &quot;, ../../contact/middle_name, &quot; &quot;, ../../contact/last_name, &quot; - &quot;, ../../household_location/house_number )"/>
@@ -1058,10 +1118,32 @@
       <input ref="/data/init/dob_contact">
         <label ref="jr:itext('/data/init/dob_contact:label')"/>
       </input>
-      <input appearance="numbers" ref="/data/init/primary_phone_contact">
+      <input ref="/data/init/primary_phone_contact">
         <label ref="jr:itext('/data/init/primary_phone_contact:label')"/>
       </input>
-      <input appearance="numbers" ref="/data/init/secondary_phone_contact">
+      <select1 ref="/data/init/primary_phone_owner">
+        <label ref="jr:itext('/data/init/primary_phone_owner:label')"/>
+        <item>
+          <label ref="jr:itext('/data/init/primary_phone_owner/mine:label')"/>
+          <value>mine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/init/primary_phone_owner/partner:label')"/>
+          <value>partner</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/init/primary_phone_owner/neighbor:label')"/>
+          <value>neighbor</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/init/primary_phone_owner/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/data/init/primary_phone_owner_other">
+        <label ref="jr:itext('/data/init/primary_phone_owner_other:label')"/>
+      </input>
+      <input ref="/data/init/secondary_phone_contact">
         <label ref="jr:itext('/data/init/secondary_phone_contact:label')"/>
         <hint ref="jr:itext('/data/init/secondary_phone_contact:hint')"/>
       </input>
