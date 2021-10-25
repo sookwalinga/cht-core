@@ -131,7 +131,23 @@ CREATE MATERIALIZED VIEW useview_pregnancy AS
     NULLIF(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
     NULLIF(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,
     NULLIF(doc #>> '{geolocation,altitude}', '')::DECIMAL AS altitude,
-    NULLIF(doc #>> '{geolocation,accuracy}', '')::DECIMAL AS accuracy 
+    NULLIF(doc #>> '{geolocation,accuracy}', '')::DECIMAL AS accuracy,
+    NULLIF(doc #>> '{fields,facility_delivery_importance,allow_partner_to_deliver_facility}','')::BOOLEAN AS is_allow_partner_to_deliver_facility,
+    NULLIF(doc #>> '{fields,maternal_nutrition,anemia_tablets}','')::BOOLEAN AS is_anemia_tablets,
+    NULLIF(doc #>> '{fields,maternal_nutrition,nutrition_restrictions}','')::BOOLEAN AS is_nutrition_restrictions,
+    NULLIF(doc #>> '{fields,pregnant_woman_information,local_herbs}','')::BOOLEAN AS is_local_herbs,
+    NULLIF(doc #>> '{fields,pregnant_woman_information,previous_delivery_by_c_section}','')::BOOLEAN AS is_previous_delivery_by_c_section,
+    NULLIF(doc #>> '{fields,pregnant_woman_information,previous_delivery_by_vacuum}','')::BOOLEAN AS is_previous_delivery_by_vacuum,
+    NULLIF(doc #>> '{fields,pregnant_woman_information,previous_stillbirth}','')::BOOLEAN AS is_previous_stillbirth,
+    NULLIF(doc #>> '{fields,pregnant_woman_information,ten_or_more_years}','')::BOOLEAN AS is_delivery_ten_or_more_years,
+    NULLIF(doc #>> '{fields,rch_card,big_baby}','')::BOOLEAN AS is_big_baby,
+    NULLIF(doc #>> '{fields,rch_card,breech_position}','')::BOOLEAN AS is_breech_position,
+    NULLIF(doc #>> '{fields,rch_card,higher_facility_delivery}','')::BOOLEAN AS is_higher_facility_delivery,
+    NULLIF(doc #>> '{fields,rch_card,malpresentation}','')::BOOLEAN AS is_malpresentation,
+    NULLIF(doc #>> '{fields,rch_card,multiple_pregnancy}','')::BOOLEAN AS is_multiple_pregnancy,
+    doc #>> '{fields,pregnant_woman_information,delivery_complications}' AS delivery_complications,
+    doc #>> '{fields,maternal_nutrition,reason_no_tablets}' AS reason_no_tablets,
+    doc #>> '{fields,rch_card,medical_condition}' AS medical_condition
   FROM 
     couchdb
   WHERE
