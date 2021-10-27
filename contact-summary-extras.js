@@ -1,6 +1,7 @@
-var isCatchmentInML=require('./enabel_catchments').isCatchmentInML;
-var risksMap=require('./pregnancy_risk_factors.json');
-var wash = require('./wash_supervisory_areas.js');
+let isCatchmentInML=require('./enabel_catchments').isCatchmentInML;
+let risksMap=require('./pregnancy_risk_factors.json');
+let wash = require('./wash_supervisory_areas.js');
+let asrh = require('./asrh_shehias.js');
 var riskFactors = [];
 
 function get(obj,field){
@@ -17,6 +18,10 @@ module.exports = {
   showWashProcotol: function () {  
     return contact && contact.parent && contact.parent.parent && contact.parent.parent._id &&
        wash.shouldGetWashProtocol(contact.parent.parent._id);
+  },
+  
+  showASRHForm: function () {  
+    return contact && contact.shehia && asrh.shouldShowASRHForm(contact.shehia); 
   },
 
   isClientReportedDead: function () {

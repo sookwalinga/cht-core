@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "CHV Youth Peer Education and Reproductive health"
+    },
+    {
+      "locale": "sw",
+      "content": "Elimu rika na Afya ya uzazi"
+    }
+  ],
+  "icon": "general",
+  "context": {
+    "person": false,
+    "place": true,
+    "expression": "contact && contact.type === 'health_center' && summary.show_asrh_form===true && user.parent.type === 'health_center'"
+  }
+}

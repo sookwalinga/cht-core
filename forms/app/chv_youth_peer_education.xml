@@ -1,0 +1,593 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Elimu Rika na Afya Uzazi</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/chv_youth_peer_education/chv_attendance/did_chv_attend/no:label">
+            <value>No</value>
+          </text>
+          <text id="/chv_youth_peer_education/chv_attendance/did_chv_attend/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/chv_youth_peer_education/chv_attendance/did_chv_attend:label">
+            <value>Did you attend the meeting?</value>
+          </text>
+          <text id="/chv_youth_peer_education/chv_attendance:label">
+            <value>Meeting Attendance</value>
+          </text>
+          <text id="/chv_youth_peer_education/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
+
+• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
+• Keep a 2 meters distance while talking to your clients.
+• Don't shake hands with your clients. 
+• Avoid group gatherings.
+• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
+• Cover your mouth with a towel or elbow when you sneeze or cough. 
+• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.
+• Please remember to do the covid education visit before or after submitting this form. &lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/covid19_intro:label">
+            <value>Precautionary measures when visiting a client</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_challenges:label">
+            <value>Challenges encountered in the group meeting</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/meeting_topic:label">
+            <value>Meeting topic</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/peer_name:label">
+            <value>Name of youth peer educator</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/peer_phone:jr:constraintMsg">
+            <value>Use the following format 0XXXXXXXXX</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/peer_phone:label">
+            <value>Peer Educator phone number</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/shehia:label">
+            <value>Shehia name</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/visit_date:jr:constraintMsg">
+            <value>Meeting date cannot be in the future</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/visit_date:label">
+            <value>Enter visit date</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/educate_youth_educator:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/facility_referral_count:jr:constraintMsg">
+            <value>Facility referral should be between 0 and total referrals</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/facility_referral_count:label">
+            <value>Out of those, how many referrals were directed to health facility?</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/has_given_referral_this_month/no:label">
+            <value>No</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/has_given_referral_this_month/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/has_given_referral_this_month:label">
+            <value>Have you given a referral to a youth in this month?</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/parental_referral_count_answer:label">
+            <value><output value=" /chv_youth_peer_education/referral_info/parental_referral_count "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/parental_referral_count_qn:label">
+            <value>&lt;b&gt;Referrals which were directed to parents/guardians &lt;/b&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/referral_received_per_month:jr:constraintMsg">
+            <value>Referral count should be greater or equal to 0</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/referral_received_per_month:label">
+            <value>Referrals received this month</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info:label">
+            <value>Youth Referral</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_10_13:label">
+            <value>10-13</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_14_16:label">
+            <value>14-16</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_17_19:label">
+            <value>17-19</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group:label">
+            <value>Select the age group</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_absentees_note:label">
+            <value>&lt;b&gt;Count of female absentees:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/female_absentees "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_attended:jr:constraintMsg">
+            <value>Female attended cannot be greater than female registered</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_attended:label">
+            <value>Count of female participants</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_registered:jr:constraintMsg">
+            <value>Number of registered female should be greater than 0</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_registered:label">
+            <value>Count of registered female</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_absentees_note:label">
+            <value>&lt;b&gt;Count of male absentees:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/male_absentees "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_attended:jr:constraintMsg">
+            <value>Male attended cannot be greater than male registered</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_attended:label">
+            <value>Count of male participants</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_registered:jr:constraintMsg">
+            <value>Number of registered male should be greater than 0</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_registered:label">
+            <value>Count of registered male</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/total_absentees_note:label">
+            <value>&lt;b&gt;Total absentees:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/total_absentees "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/total_attended_note:label">
+            <value>Total youth participants: <output value=" /chv_youth_peer_education/youth_count_info/total_attended "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/total_registered_note:label">
+            <value>Total youth registered: <output value=" /chv_youth_peer_education/youth_count_info/total_registered "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/youth_not_attended_note:label">
+            <value>&lt;span style="color:#337ab7;font-style: italic"&gt;Number of youth not attend a the meeting&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/youth_participated_note:label">
+            <value>&lt;span style="color:#337ab7;font-style: italic"&gt;Number of youth participated in the meeting&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/youth_registered_note:label">
+            <value>&lt;span style="color:#337ab7;font-style: italic"&gt;Number of registered youth in the groups &lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info:label">
+            <value>Count of youth registered, attended, and not attended</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/chv_youth_peer_education/chv_attendance/did_chv_attend/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/chv_youth_peer_education/chv_attendance/did_chv_attend/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/chv_youth_peer_education/chv_attendance/did_chv_attend:label">
+            <value>Je ulihudhuria mkutano?</value>
+          </text>
+          <text id="/chv_youth_peer_education/chv_attendance:label">
+            <value>Mahudhurio ya mkutano</value>
+          </text>
+          <text id="/chv_youth_peer_education/covid19_intro/covid19_intro_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
+
+• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
+• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
+• Pindi ukiongea na wateja wako , usishikane mikono. 
+• Epuka mikusanyiko. 
+• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
+• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
+• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.
+• Tafadhali kumbuka kufungua fomu ya kuwaelimsiha wanakaya juu ya maambukizi ya korona na jinsi ya kuchukua tahadhari. Tembeleo kuhusu korona unaweza kulifanya kabla ya kuanza tembeleo lako au mara baada ya kumaliza tembeleo lako hili.&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/covid19_intro:label">
+            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_challenges:label">
+            <value>Changamoto zilizojitokeza katika mkutano wa kikundi</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/meeting_topic:label">
+            <value>Mada ya Mkutano</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/peer_name:label">
+            <value>Jina la M/rika</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/peer_phone:jr:constraintMsg">
+            <value>Tumia mfumo huu 0XXXXXXXXX.</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/peer_phone:label">
+            <value>Nambari ya simu ya M/rika</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/shehia:label">
+            <value>Jina la shehia</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/visit_date:jr:constraintMsg">
+            <value>Tarehe ya mkutano haiwezi kuzidi tarehe ya leo</value>
+          </text>
+          <text id="/chv_youth_peer_education/meeting_info/visit_date:label">
+            <value>Ingiza tarehe ya mkutano</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/educate_youth_educator:label">
+            <value>Msisitize Muelimishe rika na vijana kujenga Utayari na vijana kutoa taarifa juu ya changamoto zinazowakabili</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/facility_referral_count:jr:constraintMsg">
+            <value>Idadi ya rufaa za kituo cha afya haiwezi iwe baina ya 0 na jumla ya idadi za rufaa za mwezi</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/facility_referral_count:label">
+            <value>Kati ya hizo ni rufaa ngapi uliziwasilisha kituo cha Afya?</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/has_given_referral_this_month/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/has_given_referral_this_month/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/has_given_referral_this_month:label">
+            <value>Je umewahi kutoa rufaa kwa kijana ndani ya mwezi huu?</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/parental_referral_count_answer:label">
+            <value><output value=" /chv_youth_peer_education/referral_info/parental_referral_count "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/parental_referral_count_qn:label">
+            <value>&lt;b&gt;Rufaa ulizoziunganisha kwa Walezi/wazazi wa vijana&lt;/b&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/referral_received_per_month:jr:constraintMsg">
+            <value>idadi haiwezi kuwa chini ya 0</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info/referral_received_per_month:label">
+            <value>Idadi ya rufaa ulizopokea kwenye mwezi</value>
+          </text>
+          <text id="/chv_youth_peer_education/referral_info:label">
+            <value>Rufaa ya vijana</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_10_13:label">
+            <value>10-13</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_14_16:label">
+            <value>14-16</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_17_19:label">
+            <value>17-19</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group:label">
+            <value>Chagua umri husika</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_absentees_note:label">
+            <value>&lt;b&gt;Idadi ya wanawake wasiyohudhuria:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/female_absentees "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_attended:jr:constraintMsg">
+            <value>Idadi ya wanawake walioshiriki haiwezi kuwa kubwa kuliko idadi ya wanawake waliyosajiliwa</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_attended:label">
+            <value>Idadi ya wanawake</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_registered:jr:constraintMsg">
+            <value>Idadi ya wanawake waliosajiliwa iwe zaidi ya 0</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/female_registered:label">
+            <value>Idadi ya wanawake</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_absentees_note:label">
+            <value>&lt;b&gt;Idadi ya wanaume wasiyohudhuria:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/male_absentees "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_attended:jr:constraintMsg">
+            <value>Idadi ya wanaume walioshiriki haiwezi kuwa kubwa kuliko idadi ya waliyosajiliwa</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_attended:label">
+            <value>Idadi ya wanaume</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_registered:jr:constraintMsg">
+            <value>Idadi ya wanaume walisajiliwa iwe zaidi ya 0</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/male_registered:label">
+            <value>Idadi ya wanaume</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/total_absentees_note:label">
+            <value>&lt;b&gt;Jumla wasiyohudhuria:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/total_absentees "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/total_attended_note:label">
+            <value>&lt;b&gt;Jumla waliyoshiriki:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/total_attended "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/total_registered_note:label">
+            <value>&lt;b&gt;Jumla waliyosajiliwa:&lt;/b&gt; <output value=" /chv_youth_peer_education/youth_count_info/total_registered "/></value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/youth_not_attended_note:label">
+            <value>&lt;span style="color:#337ab7;font-style: italic"&gt;Idadi ya vijana wasiohudhuria katika mkutano wa vikundi&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/youth_participated_note:label">
+            <value>&lt;span style="color:#337ab7;font-style: italic"&gt;Vijana walioshiriki katika mkutano wa kikundi&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info/youth_registered_note:label">
+            <value>&lt;span style="color:#337ab7;font-style: italic"&gt;Idadi ya vijana waliosajiliwa katika vikundi&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_youth_peer_education/youth_count_info:label">
+            <value>Idadi ya vijana waliosajiliwa, waliyoshirikia na wasiyoshiriki</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <chv_youth_peer_education id="chv_youth_peer_education" prefix="J1!chv_youth_peer_education!" delimiter="#" version="2021-10-25 18-28">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+            <start/>
+            <end/>
+          </inputs>
+          <covid19_intro>
+            <covid19_intro_note/>
+          </covid19_intro>
+          <meeting_info>
+            <peer_name/>
+            <peer_phone/>
+            <shehia/>
+            <visit_date/>
+            <meeting_topic/>
+          </meeting_info>
+          <youth_count_info>
+            <age_group/>
+            <youth_registered_note/>
+            <male_registered/>
+            <female_registered/>
+            <total_registered>0</total_registered>
+            <total_registered_note/>
+            <youth_participated_note/>
+            <male_attended/>
+            <female_attended/>
+            <total_attended/>
+            <total_attended_note/>
+            <youth_not_attended_note/>
+            <male_absentees/>
+            <female_absentees/>
+            <total_absentees/>
+            <male_absentees_note/>
+            <female_absentees_note/>
+            <total_absentees_note/>
+          </youth_count_info>
+          <meeting_challenges/>
+          <referral_info>
+            <has_given_referral_this_month/>
+            <referral_received_per_month/>
+            <facility_referral_count/>
+            <parental_referral_count/>
+            <parental_referral_count_qn/>
+            <parental_referral_count_answer/>
+            <educate_youth_educator/>
+          </referral_info>
+          <chv_attendance>
+            <did_chv_attend/>
+          </chv_attendance>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </chv_youth_peer_education>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/chv_youth_peer_education/inputs" relevant="false()"/>
+      <bind nodeset="/chv_youth_peer_education/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/inputs/user/name" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/chv_youth_peer_education/inputs/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/chv_youth_peer_education/inputs/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/chv_youth_peer_education/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_info/peer_name" type="string" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_info/peer_phone" type="string" jr:constraintMsg="jr:itext('/chv_youth_peer_education/meeting_info/peer_phone:jr:constraintMsg')" constraint="regex(.,'^[0oO][0-9oO]{9}$')"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_info/shehia" type="string" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_info/visit_date" type="date" jr:constraintMsg="jr:itext('/chv_youth_peer_education/meeting_info/visit_date:jr:constraintMsg')" required="true()" constraint=". &lt;= date-time(decimal-date-time(today()))"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_info/meeting_topic" type="string" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/age_group" type="select1" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/youth_registered_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_registered" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/male_registered:jr:constraintMsg')" required="true()" constraint=". &gt; 0"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_registered" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/female_registered:jr:constraintMsg')" required="true()" constraint=". &gt; 0"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/total_registered" type="string" calculate="if( /chv_youth_peer_education/youth_count_info/male_registered =&quot;&quot; or  /chv_youth_peer_education/youth_count_info/male_registered  &lt;= 0 or  /chv_youth_peer_education/youth_count_info/female_registered  = &quot;&quot; or  /chv_youth_peer_education/youth_count_info/female_registered  &lt;= 0 , 0,number( /chv_youth_peer_education/youth_count_info/male_registered ) + number( /chv_youth_peer_education/youth_count_info/female_registered ))"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/total_registered_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/youth_participated_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_attended" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/male_attended:jr:constraintMsg')" required="true()" constraint="number( /chv_youth_peer_education/youth_count_info/male_attended ) &lt;= number( /chv_youth_peer_education/youth_count_info/male_registered ) and number( /chv_youth_peer_education/youth_count_info/male_attended ) &gt;= 0"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_attended" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/female_attended:jr:constraintMsg')" required="true()" constraint="number( /chv_youth_peer_education/youth_count_info/female_attended ) &lt;= number( /chv_youth_peer_education/youth_count_info/female_registered ) and number( /chv_youth_peer_education/youth_count_info/female_attended ) &gt;= 0"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/total_attended" type="string" calculate="if( /chv_youth_peer_education/youth_count_info/male_attended =&quot;&quot; or  /chv_youth_peer_education/youth_count_info/male_attended  &lt; 0 or  /chv_youth_peer_education/youth_count_info/female_attended  = &quot;&quot; or  /chv_youth_peer_education/youth_count_info/female_attended  &lt;= 0 , 0,number( /chv_youth_peer_education/youth_count_info/male_attended ) + number( /chv_youth_peer_education/youth_count_info/female_attended ))"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/total_attended_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/youth_not_attended_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_absentees" type="string" calculate="if( /chv_youth_peer_education/youth_count_info/male_registered =&quot;&quot; or  /chv_youth_peer_education/youth_count_info/male_registered  &lt;= 0 or  /chv_youth_peer_education/youth_count_info/male_attended  = &quot;&quot; or  /chv_youth_peer_education/youth_count_info/male_attended  &lt; 0 , 0,number( /chv_youth_peer_education/youth_count_info/male_registered )-number( /chv_youth_peer_education/youth_count_info/male_attended ))"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_absentees" type="string" calculate="if( /chv_youth_peer_education/youth_count_info/female_registered =&quot;&quot; or  /chv_youth_peer_education/youth_count_info/female_registered  &lt;= 0 or  /chv_youth_peer_education/youth_count_info/female_attended  = &quot;&quot; or  /chv_youth_peer_education/youth_count_info/female_attended  &lt; 0 , 0,number( /chv_youth_peer_education/youth_count_info/female_registered )-number( /chv_youth_peer_education/youth_count_info/female_attended ))"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/total_absentees" type="string" calculate="number( /chv_youth_peer_education/youth_count_info/male_absentees )+ number( /chv_youth_peer_education/youth_count_info/female_absentees )"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_absentees_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_absentees_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/total_absentees_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_challenges" type="string"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/has_given_referral_this_month" type="select1" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/referral_received_per_month" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/referral_info/referral_received_per_month:jr:constraintMsg')" required="true()" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;" constraint=".&gt;=0"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/facility_referral_count" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/referral_info/facility_referral_count:jr:constraintMsg')" required="true()" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;" constraint="number( /chv_youth_peer_education/referral_info/facility_referral_count ) &lt;= number( /chv_youth_peer_education/referral_info/referral_received_per_month ) and number( /chv_youth_peer_education/referral_info/facility_referral_count ) &gt;= 0"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/parental_referral_count" type="string" calculate="if( /chv_youth_peer_education/referral_info/referral_received_per_month =&quot;&quot; or  /chv_youth_peer_education/referral_info/referral_received_per_month  &lt; 0 or  /chv_youth_peer_education/referral_info/facility_referral_count  = &quot;&quot; or  /chv_youth_peer_education/referral_info/facility_referral_count  &lt; 0 or 
+number( /chv_youth_peer_education/referral_info/referral_received_per_month ) - number( /chv_youth_peer_education/referral_info/facility_referral_count ) &lt; 0
+ , 0, number( /chv_youth_peer_education/referral_info/referral_received_per_month ) - number( /chv_youth_peer_education/referral_info/facility_referral_count ) )"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/parental_referral_count_qn" readonly="true()" type="string" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/parental_referral_count_answer" readonly="true()" type="string" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/educate_youth_educator" readonly="true()" type="string" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;no&quot;"/>
+      <bind nodeset="/chv_youth_peer_education/chv_attendance/did_chv_attend" type="select1" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/chv_youth_peer_education/inputs">
+      <group ref="/chv_youth_peer_education/inputs/user">
+        <input ref="/chv_youth_peer_education/inputs/user/contact_id">
+          <label ref="jr:itext('/chv_youth_peer_education/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/chv_youth_peer_education/inputs/user/facility_id">
+          <label ref="jr:itext('/chv_youth_peer_education/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/chv_youth_peer_education/inputs/user/name">
+          <label ref="jr:itext('/chv_youth_peer_education/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/chv_youth_peer_education/inputs/contact">
+        <input appearance="db-object" ref="/chv_youth_peer_education/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group ref="/chv_youth_peer_education/covid19_intro">
+      <label ref="jr:itext('/chv_youth_peer_education/covid19_intro:label')"/>
+      <input ref="/chv_youth_peer_education/covid19_intro/covid19_intro_note">
+        <label ref="jr:itext('/chv_youth_peer_education/covid19_intro/covid19_intro_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/chv_youth_peer_education/meeting_info">
+      <input ref="/chv_youth_peer_education/meeting_info/peer_name">
+        <label ref="jr:itext('/chv_youth_peer_education/meeting_info/peer_name:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/meeting_info/peer_phone">
+        <label ref="jr:itext('/chv_youth_peer_education/meeting_info/peer_phone:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/meeting_info/shehia">
+        <label ref="jr:itext('/chv_youth_peer_education/meeting_info/shehia:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/meeting_info/visit_date">
+        <label ref="jr:itext('/chv_youth_peer_education/meeting_info/visit_date:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/meeting_info/meeting_topic">
+        <label ref="jr:itext('/chv_youth_peer_education/meeting_info/meeting_topic:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/chv_youth_peer_education/youth_count_info">
+      <label ref="jr:itext('/chv_youth_peer_education/youth_count_info:label')"/>
+      <select1 ref="/chv_youth_peer_education/youth_count_info/age_group">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/age_10_13:label')"/>
+          <value>age_10_13</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/age_14_16:label')"/>
+          <value>age_14_16</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/age_17_19:label')"/>
+          <value>age_17_19</value>
+        </item>
+      </select1>
+      <input ref="/chv_youth_peer_education/youth_count_info/youth_registered_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/youth_registered_note:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/male_registered">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/male_registered:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/female_registered">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/female_registered:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/total_registered_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/total_registered_note:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/youth_participated_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/youth_participated_note:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/male_attended">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/male_attended:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/female_attended">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/female_attended:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/total_attended_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/total_attended_note:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/youth_not_attended_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/youth_not_attended_note:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/male_absentees_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/male_absentees_note:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/female_absentees_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/female_absentees_note:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/youth_count_info/total_absentees_note">
+        <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/total_absentees_note:label')"/>
+      </input>
+    </group>
+    <input appearance="multiline" ref="/chv_youth_peer_education/meeting_challenges">
+      <label ref="jr:itext('/chv_youth_peer_education/meeting_challenges:label')"/>
+    </input>
+    <group appearance="field-list" ref="/chv_youth_peer_education/referral_info">
+      <label ref="jr:itext('/chv_youth_peer_education/referral_info:label')"/>
+      <select1 ref="/chv_youth_peer_education/referral_info/has_given_referral_this_month">
+        <label ref="jr:itext('/chv_youth_peer_education/referral_info/has_given_referral_this_month:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_youth_peer_education/referral_info/has_given_referral_this_month/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_youth_peer_education/referral_info/has_given_referral_this_month/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/chv_youth_peer_education/referral_info/referral_received_per_month">
+        <label ref="jr:itext('/chv_youth_peer_education/referral_info/referral_received_per_month:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/referral_info/facility_referral_count">
+        <label ref="jr:itext('/chv_youth_peer_education/referral_info/facility_referral_count:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/referral_info/parental_referral_count_qn">
+        <label ref="jr:itext('/chv_youth_peer_education/referral_info/parental_referral_count_qn:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/referral_info/parental_referral_count_answer">
+        <label ref="jr:itext('/chv_youth_peer_education/referral_info/parental_referral_count_answer:label')"/>
+      </input>
+      <input ref="/chv_youth_peer_education/referral_info/educate_youth_educator">
+        <label ref="jr:itext('/chv_youth_peer_education/referral_info/educate_youth_educator:label')"/>
+      </input>
+    </group>
+    <group ref="/chv_youth_peer_education/chv_attendance">
+      <label ref="jr:itext('/chv_youth_peer_education/chv_attendance:label')"/>
+      <select1 ref="/chv_youth_peer_education/chv_attendance/did_chv_attend">
+        <label ref="jr:itext('/chv_youth_peer_education/chv_attendance/did_chv_attend:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_youth_peer_education/chv_attendance/did_chv_attend/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_youth_peer_education/chv_attendance/did_chv_attend/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+  </h:body>
+</h:html>

@@ -22,7 +22,8 @@ module.exports = {
     quality_monitoring_count: extras.getQualityMonitoringCount(),
     is_parent_health_center:extras.isParentHealthCenter(),
     is_contact_deceased:extras.isClientReportedDead(), 
-    is_contact_retired: extras.isContactRetired()
+    is_contact_retired: extras.isContactRetired(),
+    show_asrh_form: extras.showASRHForm()
 
   },
 
