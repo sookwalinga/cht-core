@@ -23,10 +23,10 @@
           <text id="/peer_mentor_checklist/chv_information/chv_middle_name:label">
             <value>What is their middle name?</value>
           </text>
-          <text id="/peer_mentor_checklist/chv_information/phone:jr:constraintMsg">
+          <text id="/peer_mentor_checklist/chv_information/phone_raw:jr:constraintMsg">
             <value>Use the following format 0XXXXXXXXX</value>
           </text>
-          <text id="/peer_mentor_checklist/chv_information/phone:label">
+          <text id="/peer_mentor_checklist/chv_information/phone_raw:label">
             <value>CHV phone</value>
           </text>
           <text id="/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg">
@@ -321,10 +321,10 @@
           <text id="/peer_mentor_checklist/chv_information/chv_middle_name:label">
             <value>Ni lipi jina la baba yake?</value>
           </text>
-          <text id="/peer_mentor_checklist/chv_information/phone:jr:constraintMsg">
+          <text id="/peer_mentor_checklist/chv_information/phone_raw:jr:constraintMsg">
             <value>Tumia mfumo huu 0XXXXXXXXX.</value>
           </text>
-          <text id="/peer_mentor_checklist/chv_information/phone:label">
+          <text id="/peer_mentor_checklist/chv_information/phone_raw:label">
             <value>Nambari ya simu ya CHV</value>
           </text>
           <text id="/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg">
@@ -636,6 +636,7 @@
             <chv_first_name/>
             <chv_middle_name/>
             <chv_last_name/>
+            <phone_raw/>
             <phone/>
             <shehia/>
           </chv_information>
@@ -693,11 +694,12 @@
       <bind nodeset="/peer_mentor_checklist/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
       <bind nodeset="/peer_mentor_checklist/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/peer_mentor_checklist/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/chv_first_name" type="string" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_first_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/chv_middle_name" type="string" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_middle_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/chv_last_name" type="string" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/phone" type="tel" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/phone:jr:constraintMsg')" constraint="true()"/>
-      <bind nodeset="/peer_mentor_checklist/chv_information/shehia" type="string" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg')" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_first_name" type="string" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_first_name:jr:constraintMsg')"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_middle_name" type="string" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_middle_name:jr:constraintMsg')"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/chv_last_name" type="string" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:jr:constraintMsg')"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/phone_raw" type="string" required="true()" constraint="regex(.,'^[0oO][0-9oO]{9}$')" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/phone_raw:jr:constraintMsg')"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/phone" type="string" calculate="translate (translate ( /peer_mentor_checklist/chv_information/phone_raw , &quot;o&quot;,&quot;0&quot;), &quot;O&quot;,&quot;0&quot;)"/>
+      <bind nodeset="/peer_mentor_checklist/chv_information/shehia" type="string" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/peer_mentor_checklist/chv_information/shehia:jr:constraintMsg')"/>
       <bind nodeset="/peer_mentor_checklist/section_1/phone_usage" type="select1" required="true()"/>
       <bind nodeset="/peer_mentor_checklist/section_1/phone_usage_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_1/phone_usage ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_1/balance_check" type="select1" required="true()"/>
@@ -724,7 +726,7 @@
       <bind nodeset="/peer_mentor_checklist/section_3/fluent_conversation_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_3/fluent_conversation ,&quot;no&quot;)"/>
       <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns" type="select1" required="true()"/>
       <bind nodeset="/peer_mentor_checklist/section_3/answer_concerns_reason" type="string" required="true()" relevant="selected( /peer_mentor_checklist/section_3/answer_concerns ,&quot;no&quot;)"/>
-      <bind nodeset="/peer_mentor_checklist/comments/chv_support_options" type="select" required="true()" jr:constraintMsg="jr:itext('/peer_mentor_checklist/comments/chv_support_options:jr:constraintMsg')" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)"/>
+      <bind nodeset="/peer_mentor_checklist/comments/chv_support_options" type="select" required="true()" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/peer_mentor_checklist/comments/chv_support_options:jr:constraintMsg')"/>
       <bind nodeset="/peer_mentor_checklist/comments/tech_team_support" type="string" required="true()" relevant="selected(../chv_support_options ,&quot;tech_team&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))"/>
       <bind nodeset="/peer_mentor_checklist/comments/chmt_support" type="string" required="true()" relevant="selected(../chv_support_options ,&quot;chmt&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))"/>
       <bind nodeset="/peer_mentor_checklist/comments/supervisor_support" type="string" required="true()" relevant="selected(../chv_support_options ,&quot;supervisor&quot;) and not(selected(../chv_support_options ,&quot;none&quot;))"/>
@@ -762,8 +764,8 @@
       <input ref="/peer_mentor_checklist/chv_information/chv_last_name">
         <label ref="jr:itext('/peer_mentor_checklist/chv_information/chv_last_name:label')"/>
       </input>
-      <input appearance="numbers" ref="/peer_mentor_checklist/chv_information/phone">
-        <label ref="jr:itext('/peer_mentor_checklist/chv_information/phone:label')"/>
+      <input ref="/peer_mentor_checklist/chv_information/phone_raw">
+        <label ref="jr:itext('/peer_mentor_checklist/chv_information/phone_raw:label')"/>
       </input>
       <input ref="/peer_mentor_checklist/chv_information/shehia">
         <label ref="jr:itext('/peer_mentor_checklist/chv_information/shehia:label')"/>

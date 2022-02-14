@@ -1,25 +1,14 @@
-let isCatchmentInML=require('./enabel_catchments').isCatchmentInML;
-let risksMap=require('./pregnancy_risk_factors.json');
-let wash = require('./wash_supervisory_areas.js');
-let asrh = require('./asrh_shehias.js');
-var riskFactors = [];
-
-function get(obj,field){
-   if(!obj){return;}
-   var parts=field.split('.');
-   for(var f of parts){ if(!obj[f]){return;} obj=obj[f];}
-   return obj;
-}
+var wash = require('./wash_supervisory_areas.js');
+var asrh = require('./asrh_shehias.js');
 
 module.exports = {
-
   week: 7,
   
   showWashProcotol: function () {  
     return contact && contact.parent && contact.parent.parent && contact.parent.parent._id &&
        wash.shouldGetWashProtocol(contact.parent.parent._id);
   },
-  
+
   showASRHForm: function () {  
     return contact && contact.shehia && asrh.shouldShowASRHForm(contact.shehia); 
   },
@@ -38,15 +27,8 @@ module.exports = {
     return false;
   },
 
-  isEnrolledInML: function(){  
-    if(contact && contact.parent && contact.parent.parent)
-    {  
-      return isCatchmentInML(contact.parent.parent._id); 
-    } 
-  },
-
-  isContactRetired: function(){  
-    return lineage[0] && lineage[0].contact && lineage[0].contact.retired;
+  isContactRetired: function(){ 
+    return lineage[0] && lineage[0].contact && lineage[0].contact.retired; 
   },
 
   getVisitCount: function () {
@@ -57,7 +39,6 @@ module.exports = {
     return count.length;
   },
 
-  
   getQualityMonitoringCount: function() { 
      return reports.filter(r =>r.form === 'chv_quality_monitoring').length;
   }, 
@@ -99,7 +80,7 @@ module.exports = {
   },
 
   isParentHealthCenter: function(){ 
-    return lineage[0] && lineage[0].type && lineage[0].type === 'health_center';
+    return lineage[0] && lineage[0].type==='health_center'; 
   },
 
   getPositiveConsentingPregnancyRegistrations: function () {
@@ -309,61 +290,4 @@ module.exports = {
     }
     return isMuted;
   },
-
-  getPregnancyRiskFactors: function () {
-    var report = this.getRecentPregnancyReport() || {};
-    var deliveryComplications=get(report, 'fields.pregnant_woman_information.delivery_complications') || '';
-    var medicalConditions=get(report, 'fields.rch_card.medical_conditions') || '';
-    (deliveryComplications+' '+medicalConditions)
-    .split(' ')
-    .forEach(function(field){
-      if (field && risksMap[field]) {
-        riskFactors.push(risksMap[field]);
-      }});
-    var pregInfo = get(report, 'fields.pregnant_woman_information') || {};
-    var rchCard = get(report, 'fields.rch_card') || {};
-    var maternalNutrition = get(report, 'fields.maternal_nutrition') || {};
-    var facilityDeliveryImportance = get(report, 'report.fields.facility_delivery_importance') || {};
-    for (var field of Object.keys(risksMap)) {
-      risksMap[field].risk_name = field;
-      if (pregInfo[field] &&
-         (pregInfo[field] === 'yes' ||
-         (field === 'previous_pregnancies' && pregInfo[field] > 5) ||
-         (field === 'previous_miscarriages' && pregInfo[field] > 0))) {
-        riskFactors.push(risksMap[field]);
-      }
-      if(maternalNutrition[field]&& 
-        field === 'nutrition_restrictions'&&
-        maternalNutrition[field] === 'yes') {
-        riskFactors.push(risksMap[field]);
-      }
-      if (facilityDeliveryImportance[field]&&
-         field === 'allow_partner_to_deliver_facility'&&
-         facilityDeliveryImportance[field] === 'no') {
-        riskFactors.push(risksMap[field]);
-      }
-      if (rchCard[field]&&
-         (rchCard[field] === 'yes')) {
-        riskFactors.push(risksMap[field]);
-      }
-    }
-    return riskFactors.map(function(d){return d.risk_name;});
-  }, 
-
-  isHighRiskPregnancy: function(){   
-   return riskFactors.length>0;
-  },
-
-  getMitigationList: function(){ 
-   var d=[];
-   riskFactors.forEach(function(b){
-     b.mitigation.forEach(function(s){
-       d.push(s);});});
-   return [... new Set(d)].join(', ');
-  },
-  getRiskFactorLabels: function(lang){ 
-     return riskFactors.map(function(b){return b.label[lang==='sw'?1:0];})
-            .join(', ');
- }
 };
-

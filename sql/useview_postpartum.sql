@@ -63,6 +63,8 @@ CREATE MATERIALIZED VIEW useview_postpartum AS
     NULLIF(doc #>> '{fields,wash,subgroup_cleanliness,hand_wash_importance}','')::BOOLEAN  AS is_hand_wash_important,
     NULLIF(doc #>> '{fields,wash,subgroup_health_concerns,health_concerns}','') AS selected_health_concerns,
     NULLIF(doc #>> '{fields,check_facility_pnc,has_attended_facility_pnc}', '')::BOOLEAN AS has_attended_facility_pnc,
+    NULLIF(doc #>> '{fields,check_facility_pnc,has_attended_facility_pnc_within_48hrs}', '')::BOOLEAN AS has_attended_facility_pnc_within_48hrs,
+    TO_DATE(doc #>> '{fields,check_facility_pnc,facility_pnc_date}', 'YYYY-MM-DD') AS facility_pnc_date,
     doc #>> '{fields,check_facility_pnc,pnc_visit_count_zero}' AS pnc_visit_count_zero,
     NULLIF(doc #>> '{fields,check_facility_pnc,quality_of_care_consent}', '')::BOOLEAN AS quality_of_care_consent,
     doc #>> '{fields,quality_of_care,facility_island}' AS facility_island,
@@ -101,5 +103,5 @@ CREATE MATERIALIZED VIEW useview_postpartum AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS postpartum_reported_date_created_by_uuid ON useview_postpartum USING btree (reported_date, chv_uuid, patient_id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
+ALTER MATERIALIZED VIEW useview_postpartum owner to full_access;
 GRANT SELECT ON useview_postpartum TO full_access, dtree, periscope;

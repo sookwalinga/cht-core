@@ -1,4 +1,3 @@
-const enabel = require('./enabel_catchments.js');
 var extras = require('./nools-extras.js');
 module.exports = [
 
@@ -139,66 +138,6 @@ module.exports = [
     },
   },
 
-   // Pregnancy counselling referral follow-up
-   {
-    name: 'pregnancy_counselling_referral_followup',
-    icon: 'follow-up',
-    title: 'task.pregnancy_counselling_referral_follow_up',
-    appliesTo: 'reports',
-    appliesIf: function (c, r) {
-     if(r.fields.referral_original_source_form === 'pregnancy_counselling' || r.form === 'pregnancy_counselling')
-      return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy_counselling') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-        extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1';
-     },
-    appliesToType: ['referral_follow_up', 'pregnancy_counselling'],
-    actions: [{
-      form: 'referral_follow_up',
-      modifyContent: function (content, contact, report) {
-        content.original_source_form = 'pregnancy_counselling';
-        content.source_form = report.form;
-        content.source_id = report._id;
-        content.last_visit_date = report.reported_date;
-        content.due_date = Utils.addDate(new Date(report.reported_date), 3).getTime();
-        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
-          weekday: 'long',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        });
-        content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
-        content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
-        content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
-      }
-    }],
-    events: [
-      {
-        id: 'pregnancy_counselling_referral_follow_up',
-        dueDate: function (event, contact, report) {
-          var days = 3;
-          if (
-            report.fields &&
-            report.fields.referral_days
-          ) {
-            days = Number(report.fields.referral_days);
-          }
-          return Utils.addDate(new Date(report.reported_date), days);
-        },
-        start: 3,
-        end: 7,
-      }
-    ],
-    priority: {
-      level: 'high',
-      label: 'task.referral.high_priority'
-    },
-    resolvedIf: function (c, r) {
-      return (r.form === 'referral_follow_up' && !extras.shouldVisitAgain(r)) ||
-        extras.isFormSubmittedForSource(c.reports, 'referral_follow_up', r._id) ||
-        extras.isContactDeceased(c) ||
-        extras.isContactMuted(c);
-    },
-  },
-
   // Postpartum referral follow-up
   {
     name: 'postpartum_referral_followup',
@@ -207,7 +146,7 @@ module.exports = [
     appliesTo: 'reports',
     appliesIf: function (c, r) {
       return extras.hasReferral(r, 'postpartum') || extras.getPostpartumEmergencyDangerSigns(r) === '1' ||
-        extras.getPostpartumOtherDangerSigns(r) === '1';
+        extras.getPostpartumOtherDangerSigns(r) === '1' || extras.getPostpartumPNCReferral(r) === '1';
     },
     appliesToType: ['referral_follow_up', 'postpartum'],
     actions: [{
@@ -225,6 +164,7 @@ module.exports = [
         });
         content.refer_flag_postpartum_danger_signs = extras.getPostpartumEmergencyDangerSigns(report);
         content.refer_flag_postpartum_other_signs = extras.getPostpartumOtherDangerSigns(report);
+        content.refer_flag_postpartum_pnc_visit = extras.getPostpartumPNCReferral(report); 
       }
     }],
     events: [
@@ -255,69 +195,6 @@ module.exports = [
         extras.isContactMuted(c);
     },
   },
-
-  //Pregnancy counselling visit
-{
-  name: 'pregnancy_counselling_visit',
-  icon: 'counselling',
-  title: 'task.pregnancy_counselling_visit',
-  appliesTo: 'reports',
-  appliesIf: function (c) {
-    if(!enabel.isCatchmentInML(extras.get(c,'contact.parent.parent._id'))){return false;}
-    return extras.countPregnancyCounsellingVisits(c) < 3
-          && extras.isCurrentlyPregnant(c)
-          && (extras.isHighRiskPregnancy(c) 
-          || extras.isHighRiskPregnancyML(c));
-  },
-  appliesToType: ['pregnancy','pregnancy_counselling'],
-  actions: [{
-    form: 'pregnancy_counselling',  
-    modifyContent: function (content, contact, report) {
-      content.original_source_form = 'pregnancy';
-      content.source_form = report.form;
-      content.source_id = report._id;
-      content.last_visit_date = report.reported_date;
-      content.due_date = Utils.addDate(new Date(report.reported_date), 14).getTime();
-      content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      });
-      content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
-      content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
-      content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
-      content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
-      content.is_high_risk_pregnancy_ML = extras.isHighRiskPregnancyML(contact)?true:false; 
-      content.gestation_in_weeks = extras.getCurrentGestationAge(contact); 
-    }
-  }],
-  events: [
-    {
-      id: 'pregnancy_counselling_visit',
-      dueDate: function (event,c,report) {
-        var days = 14;
-        return Utils.addDate(new Date(report.reported_date), days);
-      },
-      start: 14,
-      end: 42,
-    }
-  ],
-  priority: {
-    level: 'high',
-    label: 'task.pregnancy_counselling.high_priority'
-  },
-  resolvedIf: function (c,r,event, dueDate) {
-     var isResolved = extras.shouldStopCounselling(c)
-      || 
-        Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_counselling',
-        Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime()) ||
-        extras.isContactDeceased(c) ||
-        extras.isContactMuted(c);
-      return isResolved;
-  },
-},
 
   // First-time infant child visit for children registered at 19 days of age or younger.
   // Task triggers with the high priority flag set and a due date of the same day the child was registered
@@ -450,7 +327,7 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime()) ||
+        Utils.addDate(dueDate, event.end+1).getTime()) ||
         extras.isContactDeceased(c) ||
         extras.isContactMuted(c);
     }
@@ -723,7 +600,7 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       return Utils.isFormSubmittedInWindow(c.reports, 'infant_child',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime()) ||
+        Utils.addDate(dueDate, event.end+1).getTime()) ||
         extras.isContactDeceased(c) ||
         extras.isContactMuted(c);
     }
@@ -746,8 +623,7 @@ module.exports = [
       modifyContent: function (content, c) {
         content.visit_id = extras.mapPregnancyVisitType(c);
         content.client_EDD = extras.getRecentEDDForThisPregnancy(c);
-        content.due_date = extras.getPregnancyDueDate(c).getTime();
-        content.is_high_risk_pregnancy = extras.isHighRiskPregnancyML(c); 
+        content.due_date = extras.getPregnancyDueDate(c).getTime(); 
         content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
@@ -790,7 +666,7 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'pregnancy',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime()) ||
+        Utils.addDate(dueDate, event.end+1).getTime()) ||
         extras.isContactDeceased(c) ||
         extras.isContactMuted(c);
       return isResolved;
@@ -822,6 +698,7 @@ module.exports = [
         content.c_section = extras.hadCSection(c);
         content.is_atleast_one_baby_alive = extras.isAtleastOneBabyAlive(c);
         content.show_quality_care = extras.showQualityOfCare(c);
+        content.delivery_date = extras.getDeliveryDate(c); 
       }
     }],
     events: [
@@ -865,6 +742,7 @@ module.exports = [
         content.c_section = extras.hadCSection(c);
         content.is_atleast_one_baby_alive = extras.isAtleastOneBabyAlive(c);
         content.show_quality_care = extras.showQualityOfCare(c);
+        content.delivery_date = extras.getDeliveryDate(c); 
       }
     }],
     events: [
@@ -882,7 +760,7 @@ module.exports = [
       // Resolved if there is a form submitted within the time window
       var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
         Utils.addDate(dueDate, -event.start).getTime(),
-        Utils.addDate(dueDate, event.end).getTime()) ||
+        Utils.addDate(dueDate, event.end+1).getTime()) ||
         extras.isContactDeceased(c) ||
         extras.isContactMuted(c);
       return isResolved;

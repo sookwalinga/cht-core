@@ -57,6 +57,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death
           <text id="/death_report/death_report_intro/reason_death:label">
             <value>What is the reason for the person's death?</value>
           </text>
+          <text id="/death_report/death_report_intro/reason_death_other:label">
+            <value>If other, please specify</value>
+          </text>
           <text id="/death_report/inputs/user/contact_id:label">
             <value>Contact ID of the logged in user</value>
           </text>
@@ -78,10 +81,10 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death
           <text id="/death_report/next_of_kin/next_of_kin_name:label">
             <value>Name</value>
           </text>
-          <text id="/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg">
+          <text id="/death_report/next_of_kin/next_of_kin_phone_raw:jr:constraintMsg">
             <value>Use the following format 0XXXXXXXXX</value>
           </text>
-          <text id="/death_report/next_of_kin/next_of_kin_phone:label">
+          <text id="/death_report/next_of_kin/next_of_kin_phone_raw:label">
             <value>Phone</value>
           </text>
           <text id="/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg">
@@ -104,6 +107,45 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death
           </text>
           <text id="/death_report/other/date_of_death_other:label">
             <value>Date of death</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/diarhoea:label">
+            <value>Diarhoea</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/malaria:label">
+            <value>Malaria</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/malnutrition:label">
+            <value>Malnutrition</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/respiratory_infection:label">
+            <value>Respiratory Infection</value>
+          </text>
+          <text id="/death_report/other/reason_death_child:label">
+            <value>What is the reason for the child's death?</value>
+          </text>
+          <text id="/death_report/other/reason_death_child_other:label">
+            <value>If other, please specify</value>
+          </text>
+          <text id="/death_report/other/where_death_child/health_facility:label">
+            <value>At health facility</value>
+          </text>
+          <text id="/death_report/other/where_death_child/home:label">
+            <value>At home</value>
+          </text>
+          <text id="/death_report/other/where_death_child/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/death_report/other/where_death_child/outside_home:label">
+            <value>Outside home</value>
+          </text>
+          <text id="/death_report/other/where_death_child:label">
+            <value>Where did the child die?</value>
+          </text>
+          <text id="/death_report/other/where_death_child_other:label">
+            <value>If other, please specify</value>
           </text>
           <text id="/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg">
             <value>The date of death must be between the date of birth (<output value=" /death_report/date_of_birth_c "/>) and today.</value>
@@ -158,6 +200,9 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /death
           </text>
           <text id="/death_report/suspected_maternal_death/where_death:label">
             <value>Where did she die?</value>
+          </text>
+          <text id="/death_report/suspected_maternal_death/where_death_woman_other:label">
+            <value>If other, please specify</value>
           </text>
           <text id="/death_report/suspected_maternal_death:label">
             <value>Suspected maternal death</value>
@@ -216,6 +261,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/death_report/death_report_intro/reason_death:label">
             <value>Ni sababu ipi ilipelekea kifo cha marehemu?</value>
           </text>
+          <text id="/death_report/death_report_intro/reason_death_other:label">
+            <value>Tafadhali taja sababu ya kifo</value>
+          </text>
           <text id="/death_report/death_report_intro:label">
             <value>-</value>
           </text>
@@ -261,10 +309,10 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/death_report/next_of_kin/next_of_kin_name:label">
             <value>Jina</value>
           </text>
-          <text id="/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg">
+          <text id="/death_report/next_of_kin/next_of_kin_phone_raw:jr:constraintMsg">
             <value>Tumia mfumo huu 0XXXXXXXXX</value>
           </text>
-          <text id="/death_report/next_of_kin/next_of_kin_phone:label">
+          <text id="/death_report/next_of_kin/next_of_kin_phone_raw:label">
             <value>Namba ya Simu</value>
           </text>
           <text id="/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg">
@@ -287,6 +335,45 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           </text>
           <text id="/death_report/other/date_of_death_other:label">
             <value>Tarehe ya kifo</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/diarhoea:label">
+            <value>Kuharisha</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/malaria:label">
+            <value>Malaria</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/malnutrition:label">
+            <value>Utapia mlo</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/other:label">
+            <value>Nyenginezo</value>
+          </text>
+          <text id="/death_report/other/reason_death_child/respiratory_infection:label">
+            <value>Maradhi ya kupumua</value>
+          </text>
+          <text id="/death_report/other/reason_death_child:label">
+            <value>Ni sababu ipi ilipelekea kifo cha marehemu?</value>
+          </text>
+          <text id="/death_report/other/reason_death_child_other:label">
+            <value>Tafadhali taja sababu ya kifo</value>
+          </text>
+          <text id="/death_report/other/where_death_child/health_facility:label">
+            <value>Kwenye kituo cha afya</value>
+          </text>
+          <text id="/death_report/other/where_death_child/home:label">
+            <value>Nyumbani</value>
+          </text>
+          <text id="/death_report/other/where_death_child/other:label">
+            <value>Penginepo</value>
+          </text>
+          <text id="/death_report/other/where_death_child/outside_home:label">
+            <value>Nje ya nyumbani</value>
+          </text>
+          <text id="/death_report/other/where_death_child:label">
+            <value>Amefia wapi ?</value>
+          </text>
+          <text id="/death_report/other/where_death_child_other:label">
+            <value>Tafadhali taja</value>
           </text>
           <text id="/death_report/other:label">
             <value>-</value>
@@ -345,13 +432,16 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <text id="/death_report/suspected_maternal_death/where_death:label">
             <value>Amefia wapi</value>
           </text>
+          <text id="/death_report/suspected_maternal_death/where_death_woman_other:label">
+            <value>Tafadhali taja</value>
+          </text>
           <text id="/death_report/suspected_maternal_death:label">
             <value>Utambuzi wa vifo vya akina mama</value>
           </text>
         </translation>
       </itext>
       <instance>
-        <death_report id="death_report" prefix="J1!death_report!" delimiter="#" version="2021-01-29 9-24">
+        <death_report id="death_report" prefix="J1!death_report!" delimiter="#" version="2022-02-11 11-02">
           <inputs>
             <meta>
               <location>
@@ -402,10 +492,12 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <death_report_intro>
             <intro/>
             <reason_death/>
+            <reason_death_other/>
           </death_report_intro>
           <suspected_maternal_death>
             <date_of_death_maternal/>
             <where_death/>
+            <where_death_woman_other/>
             <was_pregnant/>
             <during_childbirth/>
             <two_to_three_mo_after_pregnancy_childbirth/>
@@ -415,10 +507,15 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
             <next_of_kin_rel_w_deceased/>
             <next_of_kin_street_shehia/>
             <next_of_kin_district/>
+            <next_of_kin_phone_raw/>
             <next_of_kin_phone/>
           </next_of_kin>
           <other>
             <date_of_death_other/>
+            <where_death_child/>
+            <where_death_child_other/>
+            <reason_death_child/>
+            <reason_death_child_other/>
           </other>
           <meta tag="hidden">
             <instanceID/>
@@ -457,21 +554,28 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <bind nodeset="/death_report/client_information/household_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/client_information/phone_note" readonly="true()" type="string"/>
       <bind nodeset="/death_report/death_report_intro/intro" readonly="true()" type="string"/>
-      <bind nodeset="/death_report/death_report_intro/reason_death" type="select1" required="true()" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12"/>
+      <bind nodeset="/death_report/death_report_intro/reason_death" type="select1" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12" required="true()"/>
+      <bind nodeset="/death_report/death_report_intro/reason_death_other" type="string" relevant="selected( /death_report/death_report_intro/reason_death ,&quot;other&quot;)" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;"/>
-      <bind nodeset="/death_report/suspected_maternal_death/date_of_death_maternal" type="date" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" required="true()" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg')"/>
+      <bind nodeset="/death_report/suspected_maternal_death/date_of_death_maternal" type="date" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/suspected_maternal_death/date_of_death_maternal:jr:constraintMsg')" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death/where_death" type="select1" required="true()"/>
+      <bind nodeset="/death_report/suspected_maternal_death/where_death_woman_other" type="string" relevant="selected( /death_report/suspected_maternal_death/where_death ,&quot;other&quot;)" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death/was_pregnant" type="select1" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death/during_childbirth" type="select1" required="true()"/>
       <bind nodeset="/death_report/suspected_maternal_death/two_to_three_mo_after_pregnancy_childbirth" type="select1" required="true()"/>
       <bind nodeset="/death_report/next_of_kin" relevant=" /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_rel_w_deceased" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_street_shehia" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_district" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/next_of_kin/next_of_kin_phone" type="tel" constraint="true()" required="true()" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_phone:jr:constraintMsg')"/>
-      <bind nodeset="/death_report/other" relevant="not( /death_report/inputs/contact/sex  = &quot;female&quot; and  /death_report/age_in_years  &gt;= 12 and  /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;)"/>
-      <bind nodeset="/death_report/other/date_of_death_other" type="date" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" required="true()" jr:constraintMsg="jr:itext('/death_report/other/date_of_death_other:jr:constraintMsg')"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_name:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_rel_w_deceased" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_rel_w_deceased:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_street_shehia" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_street_shehia:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_district" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_district:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_phone_raw" type="string" constraint="regex(.,'^[0oO][0-9oO]{9}$')" jr:constraintMsg="jr:itext('/death_report/next_of_kin/next_of_kin_phone_raw:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/death_report/next_of_kin/next_of_kin_phone" type="string" calculate="translate (translate ( /death_report/next_of_kin/next_of_kin_phone_raw , &quot;o&quot;,&quot;0&quot;), &quot;O&quot;,&quot;0&quot;)"/>
+      <bind nodeset="/death_report/other" relevant="not( /death_report/death_report_intro/reason_death  = &quot;pregnancy_delivery&quot;)"/>
+      <bind nodeset="/death_report/other/date_of_death_other" type="date" constraint=". &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time( /death_report/date_of_birth_c ))" jr:constraintMsg="jr:itext('/death_report/other/date_of_death_other:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/death_report/other/where_death_child" type="select1" relevant=" /death_report/age_in_years  &lt; 12" required="true()"/>
+      <bind nodeset="/death_report/other/where_death_child_other" type="string" relevant=" /death_report/age_in_years  &lt; 12 and selected( /death_report/other/where_death_child ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/death_report/other/reason_death_child" type="select1" relevant=" /death_report/age_in_years  &lt; 12" required="true()"/>
+      <bind nodeset="/death_report/other/reason_death_child_other" type="string" relevant=" /death_report/age_in_years  &lt; 12 and selected( /death_report/other/reason_death_child ,&quot;other&quot;)" required="true()"/>
       <bind nodeset="/death_report/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
@@ -513,7 +617,7 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
         <label ref="jr:itext('/death_report/client_information/phone_note:label')"/>
       </input>
     </group>
-    <group ref="/death_report/death_report_intro">
+    <group appearance="field-list" ref="/death_report/death_report_intro">
       <input ref="/death_report/death_report_intro/intro">
         <label ref="jr:itext('/death_report/death_report_intro/intro:label')"/>
       </input>
@@ -540,6 +644,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <value>other</value>
         </item>
       </select1>
+      <input ref="/death_report/death_report_intro/reason_death_other">
+        <label ref="jr:itext('/death_report/death_report_intro/reason_death_other:label')"/>
+      </input>
     </group>
     <group appearance="field-list" ref="/death_report/suspected_maternal_death">
       <label ref="jr:itext('/death_report/suspected_maternal_death:label')"/>
@@ -569,6 +676,9 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
           <value>other</value>
         </item>
       </select1>
+      <input ref="/death_report/suspected_maternal_death/where_death_woman_other">
+        <label ref="jr:itext('/death_report/suspected_maternal_death/where_death_woman_other:label')"/>
+      </input>
       <select1 ref="/death_report/suspected_maternal_death/was_pregnant">
         <label ref="jr:itext('/death_report/suspected_maternal_death/was_pregnant:label')"/>
         <item>
@@ -621,13 +731,61 @@ Kitongoji: &lt;span style=&quot;&quot;font-weight:bold&quot;&quot;&gt;<output va
       <input ref="/death_report/next_of_kin/next_of_kin_district">
         <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_district:label')"/>
       </input>
-      <input appearance="numbers" ref="/death_report/next_of_kin/next_of_kin_phone">
-        <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_phone:label')"/>
+      <input ref="/death_report/next_of_kin/next_of_kin_phone_raw">
+        <label ref="jr:itext('/death_report/next_of_kin/next_of_kin_phone_raw:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/death_report/other">
       <input ref="/death_report/other/date_of_death_other">
         <label ref="jr:itext('/death_report/other/date_of_death_other:label')"/>
+      </input>
+      <select1 ref="/death_report/other/where_death_child">
+        <label ref="jr:itext('/death_report/other/where_death_child:label')"/>
+        <item>
+          <label ref="jr:itext('/death_report/other/where_death_child/home:label')"/>
+          <value>home</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/other/where_death_child/outside_home:label')"/>
+          <value>outside_home</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/other/where_death_child/health_facility:label')"/>
+          <value>health_facility</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/other/where_death_child/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/death_report/other/where_death_child_other">
+        <label ref="jr:itext('/death_report/other/where_death_child_other:label')"/>
+      </input>
+      <select1 ref="/death_report/other/reason_death_child">
+        <label ref="jr:itext('/death_report/other/reason_death_child:label')"/>
+        <item>
+          <label ref="jr:itext('/death_report/other/reason_death_child/respiratory_infection:label')"/>
+          <value>respiratory_infection</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/other/reason_death_child/diarhoea:label')"/>
+          <value>diarhoea</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/other/reason_death_child/malaria:label')"/>
+          <value>malaria</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/other/reason_death_child/malnutrition:label')"/>
+          <value>malnutrition</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/death_report/other/reason_death_child/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <input ref="/death_report/other/reason_death_child_other">
+        <label ref="jr:itext('/death_report/other/reason_death_child_other:label')"/>
       </input>
     </group>
   </h:body>

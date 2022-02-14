@@ -35,6 +35,7 @@ CREATE MATERIALIZED VIEW useview_death_report AS
     doc #>> '{fields,death_report_intro,reason_death}' AS reason_death,
     TO_DATE(NULLIF(doc #>> '{fields,suspected_maternal_death,date_of_death_maternal}', ''), 'YYYY-MM-DD') AS date_of_death_maternal,
     doc #>> '{fields,suspected_maternal_death,where_death}' AS where_death,
+    doc #>> '{fields,suspected_maternal_death,where_death_woman_other}' AS where_death_woman_other,
     doc #>> '{fields,suspected_maternal_death,was_pregnant}' AS was_pregnant,
     NULLIF(doc #>> '{fields,suspected_maternal_death,during_childbirth}', '')::BOOLEAN AS during_childbirth,
     NULLIF(doc #>> '{fields,suspected_maternal_death,two_to_three_mo_after_pregnancy_childbirth}', '')::BOOLEAN AS two_to_three_mo_after_pregnancy_childbirth,
@@ -44,6 +45,9 @@ CREATE MATERIALIZED VIEW useview_death_report AS
     doc #>> '{fields,next_of_kin,next_of_kin_district}' AS next_of_kin_district,
     doc #>> '{fields,next_of_kin,next_of_kin_phone}' AS next_of_kin_phone,
     TO_DATE(NULLIF(doc #>> '{fields,other,date_of_death_other}', ''), 'YYYY-MM-DD') AS date_of_death_other,
+    doc #>> '{fields,other,where_death_child}' AS where_death_child,
+    doc #>> '{fields,other,reason_death_child}' AS reason_death_child,
+    doc #>> '{fields,other,reason_death_child_other}' AS reason_death_child_other,
     NULLIF(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
     NULLIF(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,
     NULLIF(doc #>> '{geolocation,altitude}', '')::DECIMAL AS altitude,
@@ -56,5 +60,5 @@ CREATE MATERIALIZED VIEW useview_death_report AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS death_report ON useview_death_report USING btree (reported_date, chv_uuid, patient_id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
+ALTER MATERIALIZED VIEW useview_death_report owner to full_access;
 GRANT SELECT ON useview_death_report TO full_access, dtree, periscope;
