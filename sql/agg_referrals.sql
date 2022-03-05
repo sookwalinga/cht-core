@@ -79,6 +79,6 @@ WHERE COALESCE(issued_referrals_neonatal_danger_sign,
                issued_referrals_pregnancy_danger_sign,issued_referrals_pregnancy_issues,
                issued_referrals_pregnancy_complications) IS NOT NULL);
 
-CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia ON agg_referrals USING btree (district,month,shehia);
+CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_referrals ON agg_referrals USING btree (district,month,shehia);
 ALTER MATERIALIZED VIEW agg_referrals OWNER TO full_access;
 GRANT SELECT ON agg_referrals TO dtree;
