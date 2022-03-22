@@ -90,6 +90,7 @@ CREATE MATERIALIZED VIEW useview_postpartum AS
     NULLIF(NULLIF(doc #>> '{fields,research_questions,subgroup_multiple_wives,num_wives}', 'NaN'), '')::INTEGER AS num_wives,
     NULLIF(doc #>> '{fields,refer_postpartum_emergency_danger_sign_flag}', '')::BOOLEAN AS refer_postpartum_emergency_danger_sign_flag,
     NULLIF(doc #>> '{fields,refer_postpartum_other_danger_sign_flag}', '')::BOOLEAN AS refer_postpartum_other_danger_sign_flag,
+    NULLIF(doc #>> '{fields,refer_postpartum_pnc_visit}', '')::BOOLEAN AS refer_postpartum_pnc_visit,
     NULLIF(doc #>> '{fields,has_referral}', '')::BOOLEAN AS has_referral,
     NULLIF(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
     NULLIF(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,

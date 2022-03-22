@@ -46,6 +46,7 @@ CREATE MATERIALIZED VIEW useview_death_report AS
     doc #>> '{fields,next_of_kin,next_of_kin_phone}' AS next_of_kin_phone,
     TO_DATE(NULLIF(doc #>> '{fields,other,date_of_death_other}', ''), 'YYYY-MM-DD') AS date_of_death_other,
     doc #>> '{fields,other,where_death_child}' AS where_death_child,
+    doc #>> '{fields,other,where_death_child_other}' AS where_death_child_other,
     doc #>> '{fields,other,reason_death_child}' AS reason_death_child,
     doc #>> '{fields,other,reason_death_child_other}' AS reason_death_child_other,
     NULLIF(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
