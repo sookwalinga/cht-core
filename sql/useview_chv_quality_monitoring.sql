@@ -21,7 +21,7 @@ CREATE MATERIALIZED VIEW useview_chv_quality_monitoring AS
     doc #>> '{fields,user,name}' AS supervisor_user_name,
     doc #>> '{fields,visit_info,name}' AS supervisor_name,
     doc #>> '{fields,visit_info,user_district}' AS supervisor_district,
-    TO_DATE(NULLIF(doc #>> '{fields,visit_info,visit_date_pretty_print}', ''), 'YYYY-MM-DD') AS date_of_chv_quality_monitoring,
+    TO_DATE(NULLIF(doc #>> '{fields,visit_info,visit_date_pretty_print}', ''), 'DD-MM-YYYY') AS date_of_chv_quality_monitoring,
     NULLIF(doc #>> '{fields,ipc,does_chv_take_precautionary_measures}', '')::BOOLEAN AS  does_chv_take_precautionary_measures,
     NULLIF(doc #>>'{fields,ipc,does_chv_stay_one_meter}', '')::BOOLEAN AS  does_chv_stay_one_meter,  
     NULLIF(doc #>> '{fields,introduction,does_chv_introduce_themselves}', '')::BOOLEAN AS does_chv_introduce_themselves,

@@ -18,7 +18,7 @@ module.exports = {
   },
   showWashProcotol: function (c){  
     return this.isClient(c) &&
-           wash.shouldGetWashProtocol(c.contact.parent.parent.parent._id) && 1;
+           wash.shouldGetWashProtocol(c.contact.parent.parent.parent._id)?1:0;
   },
 
   isChildUnder5: function (c) {

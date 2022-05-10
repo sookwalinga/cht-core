@@ -7,41 +7,41 @@ CREATE MATERIALIZED VIEW agg_chv_activities AS
 (
 WITH skeleton AS (
   SELECT 
-    month::DATE
+    reported_month::DATE
     ,district
     ,shehia
     ,catchment_area_uuid 
-  FROM generate_series(
+  FROM GENERATE_SERIES(
     TIMESTAMP '2019-07-01'
     ,current_date
-    ,interval  '1 month') AS t(month)
+    ,interval  '1 month') AS t(reported_month)
   JOIN useview_jna_locations ON TRUE
-  ORDER BY district,shehia,month
+  ORDER BY district,shehia,reported_month
 ),
  houses AS (
   SELECT 
-    date_trunc('month', reported_date) AS month
+    date_trunc('month', reported_date) AS reported_month
     ,catchment_area_uuid
     ,COUNT(_id) houses 
   FROM useview_household
-  GROUP BY month,catchment_area_uuid
+  GROUP BY reported_month,catchment_area_uuid
 ),
 people AS (
   SELECT 
-    date_trunc('month', reported_date) AS month
+    date_trunc('month', reported_date) AS reported_month
     ,catchment_area_uuid
     ,COUNT(_id) people 
   FROM useview_person
-  GROUP BY month,catchment_area_uuid
+  GROUP BY reported_month,catchment_area_uuid
 ),
  infants AS(
   SELECT 
-    date_trunc('month', reported_date) AS month
+    date_trunc('month', reported_date) AS reported_month
     ,catchment_area_uuid
     ,SUM((child_consent_today='t')::INT) AS enrolled 
     ,SUM((child_consent_today='t' or child_consent_today is NULL)::INT) AS visits
    FROM useview_infant_child
-   GROUP BY month,catchment_area_uuid
+   GROUP BY reported_month,catchment_area_uuid
  ),
  pregnancy AS(
   SELECT 
@@ -54,15 +54,15 @@ people AS (
   ), 
   group_counselling AS(
    SELECT
-      date_trunc('month', reported_date) as month
+      date_trunc('month', reported_date) AS reported_month
       ,catchment_area_uuid
       ,COUNT(_id) as sessions
     FROM useview_group_counseling
-    GROUP BY month, catchment_area_uuid
+    GROUP BY reported_month, catchment_area_uuid
   ),
 data AS(
 SELECT 
-  skeleton.month AS month 
+  skeleton.reported_month AS reported_month 
   ,district
   ,shehia
   ,SUM(houses) AS registrations_households
@@ -75,20 +75,20 @@ SELECT
 FROM skeleton
 LEFT JOIN houses AS h
   ON h.catchment_area_uuid=skeleton.catchment_area_uuid
-  AND skeleton.month=h.month
+  AND skeleton.reported_month=h.reported_month
 LEFT JOIN people p
   ON p.catchment_area_uuid=skeleton.catchment_area_uuid
-  AND p.month=skeleton.month
+  AND p.reported_month=skeleton.reported_month
 LEFT JOIN infants i
   ON i.catchment_area_uuid=skeleton.catchment_area_uuid
-  AND i.month=skeleton.month
+  AND i.reported_month=skeleton.reported_month
 LEFT JOIN pregnancy pg
   ON pg.catchment_area_uuid=skeleton.catchment_area_uuid
-  AND pg.mwezi=skeleton.month
+  AND pg.mwezi=skeleton.reported_month
 LEFT JOIN group_counselling gc
   ON gc.catchment_area_uuid=skeleton.catchment_area_uuid
-  AND gc.month=skeleton.month
-GROUP BY shehia,district,skeleton.month
+  AND gc.reported_month=skeleton.reported_month
+GROUP BY shehia,district,skeleton.reported_month
 )
 SELECT * 
 FROM data 
@@ -98,6 +98,6 @@ WHERE COALESCE(registrations_households,
                visits_pregnancy,group_counselling_sessions) IS NOT NULL
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia ON agg_chv_activities USING btree (district,month,shehia);
+CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia ON agg_chv_activities USING btree (district,reported_month,shehia);
 ALTER MATERIALIZED VIEW agg_chv_activities OWNER TO full_access;
 GRANT SELECT ON agg_chv_activities TO dtree;

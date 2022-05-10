@@ -1,12 +1,18 @@
 var wash = require('./wash_supervisory_areas.js');
 var asrh = require('./asrh_shehias.js');
 
+function get(obj,field){
+  if(!obj){return;}
+  var parts=field.split('.');
+  for(var f of parts){ if(!obj[f]){return;} obj=obj[f];}
+  return obj;
+}
+
 module.exports = {
   week: 7,
   
-  showWashProcotol: function () {  
-    return contact && contact.parent && contact.parent.parent && contact.parent.parent._id &&
-       wash.shouldGetWashProtocol(contact.parent.parent._id);
+  showWashProcotol: function (){  
+   return wash.shouldGetWashProtocol(get(contact,'parent.parent.parent._id'))?1:0;
   },
 
   showASRHForm: function () {  

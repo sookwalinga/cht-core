@@ -30,8 +30,6 @@ CREATE MATERIALIZED VIEW useview_pregnancy AS
     NULLIF(NULLIF(doc #>> '{fields,age_years}', 'NaN'), '')::INTEGER AS age_years,
     NULLIF(NULLIF(doc #>> '{fields,age_in_years}', 'NaN'), '')::INTEGER AS age_in_years,
     NULLIF(NULLIF(doc #>> '{fields,age_days_display}', 'NaN'), '')::INTEGER AS age_days_display,
-    NULLIF(NULLIF(doc #>> '{fields,week}', 'NaN'), '')::INTEGER AS week,
-    NULLIF(NULLIF(doc #>> '{fields,month}', 'NaN'), '')::INTEGER AS month,
     doc #>> '{fields,household_head}' AS household_head,
     doc #>> '{fields,house_number}' AS house_number,
     doc #>> '{fields,kitongoji}' AS kitongoji,

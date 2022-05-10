@@ -19,6 +19,7 @@ CREATE MATERIALIZED VIEW useview_supervisory_area AS
     couchdb	
   WHERE 
     doc ->> 'type' = 'district_hospital'
+    AND doc ->>'district' IS NOT NULL
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS supervisory_area_reported_date_chv_uuid ON useview_supervisory_area USING btree (reported_date, supervisor_uuid, _id);
