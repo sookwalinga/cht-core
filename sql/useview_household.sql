@@ -34,5 +34,5 @@ CREATE MATERIALIZED VIEW useview_household AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS household_reported_date_created_by_uuid ON useview_household USING btree (reported_date, chv_uuid, _id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_household TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_household OWNER TO full_access;
+GRANT SELECT ON useview_household TO dtree, periscope;

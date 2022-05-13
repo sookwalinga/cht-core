@@ -33,5 +33,5 @@ CREATE MATERIALIZED VIEW useview_wash_protocol AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS wash_protocol_reported_date_created_by_uuid ON useview_wash_protocol USING btree (reported_date, chv_uuid);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_wash_protocol TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_wash_protocol OWNER TO full_access;
+GRANT SELECT ON useview_wash_protocol TO dtree, periscope;

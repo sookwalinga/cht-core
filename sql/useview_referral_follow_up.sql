@@ -65,5 +65,5 @@ CREATE MATERIALIZED VIEW useview_referral_follow_up AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS referral_follow_up_reported_date_created_by_uuid ON useview_referral_follow_up USING btree (reported_date, chv_uuid, patient_id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_referral_follow_up TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_referral_follow_up OWNER TO full_access;
+GRANT SELECT ON useview_referral_follow_up TO dtree, periscope;

@@ -66,5 +66,5 @@ ON total BETWEEN min AND max
 
 CREATE UNIQUE INDEX IF NOT EXISTS supervisor_p4p_month_uuid ON supervisor_p4p USING btree (reported_month, supervisor_uuid);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON supervisor_p4p TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW supervisor_p4p OWNER TO full_access;
+GRANT SELECT ON supervisor_p4p TO dtree, periscope;

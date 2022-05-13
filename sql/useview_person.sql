@@ -43,5 +43,5 @@ CREATE MATERIALIZED VIEW useview_person AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS person_reported_date_created_by_uuid ON useview_person USING btree (reported_date, chv_uuid, _id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_person TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_person OWNER TO full_access;
+GRANT SELECT ON useview_person TO dtree, periscope;

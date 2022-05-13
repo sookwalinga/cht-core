@@ -219,5 +219,5 @@ CREATE MATERIALIZED VIEW useview_infant_child AS
 );
 CREATE UNIQUE INDEX IF NOT EXISTS infant_child_reported_date_created_by_uuid ON useview_infant_child USING btree (reported_date, chv_uuid, patient_id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_infant_child TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_infant_child OWNER TO full_access;
+GRANT SELECT ON useview_infant_child TO dtree, periscope;

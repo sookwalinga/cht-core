@@ -24,6 +24,6 @@ CREATE MATERIALIZED VIEW useview_supervisor AS
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS supervisor_reported_date_uuid ON useview_supervisor USING btree (reported_date, _id);
--- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_supervisor TO full_access, dtree, periscope;
+-- Permissions 
+ALTER MATERIALIZED VIEW useview_supervisor OWNER TO full_access;
+GRANT SELECT ON useview_supervisor TO dtree, periscope;

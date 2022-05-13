@@ -24,5 +24,5 @@ CREATE MATERIALIZED VIEW useview_chv_latest_reported_date AS
 -- indexes
 CREATE UNIQUE INDEX useview_chv_latest_reported_date_index ON useview_chv_latest_reported_date USING btree (chv_uuid,latest_reported_date);
 -- permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_chv_latest_reported_date TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_chv_latest_reported_date OWNER TO full_access;
+GRANT SELECT ON useview_chv_latest_reported_date TO dtree, periscope;

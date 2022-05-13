@@ -87,3 +87,6 @@ SELECT * FROM
 )
 
 SELECT * FROM pop_znz_age_sex_2022_CTE;
+
+ALTER TABLE pop_znz_age_sex_2022 OWNER TO full_access;
+GRANT SELECT ON pop_znz_age_sex_2022 TO dtree, periscope;

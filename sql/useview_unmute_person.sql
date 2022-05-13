@@ -36,5 +36,5 @@ CREATE MATERIALIZED VIEW useview_unmute_person AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS unmute_person_reported_date_created_by_uuid ON useview_unmute_person USING btree (reported_date, chv_uuid, patient_id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_unmute_person TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_unmute_person OWNER TO full_access;
+GRANT SELECT ON useview_unmute_person TO dtree, periscope;

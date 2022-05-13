@@ -77,5 +77,5 @@ CREATE MATERIALIZED VIEW useview_pregnancy_outcomes AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS pregnancy_outcomes_reported_date_created_by_uuid ON useview_pregnancy_outcomes USING btree (reported_date, chv_uuid, patient_id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_pregnancy_outcomes TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_pregnancy_outcomes OWNER TO full_access;
+GRANT SELECT ON useview_pregnancy_outcomes TO dtree, periscope;

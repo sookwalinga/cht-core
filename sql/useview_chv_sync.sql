@@ -90,5 +90,5 @@ CREATE MATERIALIZED VIEW useview_chv_sync AS
 -- indexes
 CREATE UNIQUE INDEX useview_chv_sync_chw_uuid_latest_replication_date ON useview_chv_sync USING btree (chv_uuid,latest_replication_date);
 -- permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_chv_sync TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_chv_sync OWNER TO full_access;
+GRANT SELECT ON useview_chv_sync TO dtree, periscope;

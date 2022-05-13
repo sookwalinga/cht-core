@@ -43,5 +43,5 @@ CREATE MATERIALIZED VIEW useview_group_counseling AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS group_counseling_reported_date_created_by_uuid ON useview_group_counseling USING btree (reported_date, chv_uuid);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_group_counseling TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_group_counseling OWNER TO full_access;
+GRANT SELECT ON useview_group_counseling TO dtree, periscope;

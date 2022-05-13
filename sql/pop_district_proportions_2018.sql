@@ -17,3 +17,6 @@ WITH pop_district_proportions_2018_CTE AS (
 )
 
 SELECT * FROM pop_district_proportions_2018_CTE;
+
+ALTER TABLE pop_district_proportions_2018 OWNER TO full_access;
+GRANT SELECT ON pop_district_proportions_2018 TO dtree, periscope;

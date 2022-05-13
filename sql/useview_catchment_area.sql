@@ -25,5 +25,5 @@ CREATE MATERIALIZED VIEW useview_catchment_area AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS catchment_area_reported_date_chv_uuid ON useview_catchment_area USING btree (reported_date, chv_uuid, _id);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_catchment_area TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_catchment_area OWNER TO full_access;
+GRANT SELECT ON useview_catchment_area TO dtree, periscope;

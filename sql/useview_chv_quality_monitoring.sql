@@ -60,5 +60,5 @@ CREATE MATERIALIZED VIEW useview_chv_quality_monitoring AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS chv_quality_monitoring_reported_date_created_by_uuid ON useview_chv_quality_monitoring USING btree (reported_date, chv_uuid);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_chv_quality_monitoring TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_chv_quality_monitoring OWNER TO full_access;
+GRANT SELECT ON useview_chv_quality_monitoring TO dtree, periscope;

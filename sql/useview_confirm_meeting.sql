@@ -32,5 +32,5 @@ CREATE MATERIALIZED VIEW useview_confirm_meeting AS
 
 CREATE UNIQUE INDEX IF NOT EXISTS confirm_meeting_reported_date_created_by_uuid ON useview_confirm_meeting USING btree (reported_date, chv_uuid);
 -- Permissions
-REASSIGN OWNED BY current_user TO full_access;
-GRANT SELECT ON useview_confirm_meeting TO full_access, dtree, periscope;
+ALTER MATERIALIZED VIEW useview_confirm_meeting OWNER TO full_access;
+GRANT SELECT ON useview_confirm_meeting TO dtree, periscope;
