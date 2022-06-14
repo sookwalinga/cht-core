@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Pregnancy Outcomes Reminder</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/pregnancy_outcomes_reminder/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/reminder/reminder_note:label">
+            <value>You need to do a pregnancy outcome visit for <output value=" /pregnancy_outcomes_reminder/client_name "/> since her EDD has approached.</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/reminder:label">
+            <value>Pregnancy Outcomes Visit Reminder</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/pregnancy_outcomes_reminder/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/reminder/reminder_note:label">
+            <value><output value=" /pregnancy_outcomes_reminder/client_name "/> amefikisha siku zake za kujifungua, tafadhali mfanyie tembeleo la kusajili matokeo ya ujauzito.</value>
+          </text>
+          <text id="/pregnancy_outcomes_reminder/reminder:label">
+            <value>Ukumbusho wa tembeleo la Kusajili matokeo ya Ujauzito</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <pregnancy_outcomes_reminder id="pregnancy_outcomes_reminder" prefix="J1!pregnancy_outcomes_reminder!" delimiter="#" version="2022-06-08  10-30">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <client_name/>
+          <start/>
+          <end/>
+          <reminder>
+            <reminder_note/>
+          </reminder>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </pregnancy_outcomes_reminder>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/inputs" relevant="0"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/inputs/user/name" type="string"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/inputs/contact/name" type="string"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/reminder/reminder_note" readonly="true()" type="string"/>
+      <bind nodeset="/pregnancy_outcomes_reminder/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/pregnancy_outcomes_reminder/inputs">
+      <group ref="/pregnancy_outcomes_reminder/inputs/user">
+        <input ref="/pregnancy_outcomes_reminder/inputs/user/contact_id">
+          <label ref="jr:itext('/pregnancy_outcomes_reminder/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/pregnancy_outcomes_reminder/inputs/user/facility_id">
+          <label ref="jr:itext('/pregnancy_outcomes_reminder/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/pregnancy_outcomes_reminder/inputs/user/name">
+          <label ref="jr:itext('/pregnancy_outcomes_reminder/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/pregnancy_outcomes_reminder/inputs/contact">
+        <input appearance="db-object" ref="/pregnancy_outcomes_reminder/inputs/contact/_id"/>
+        <input ref="/pregnancy_outcomes_reminder/inputs/contact/name"/>
+        <input ref="/pregnancy_outcomes_reminder/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group ref="/pregnancy_outcomes_reminder/reminder">
+      <label ref="jr:itext('/pregnancy_outcomes_reminder/reminder:label')"/>
+      <input ref="/pregnancy_outcomes_reminder/reminder/reminder_note">
+        <label ref="jr:itext('/pregnancy_outcomes_reminder/reminder/reminder_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

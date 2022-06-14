@@ -241,13 +241,27 @@ module.exports = {
     return false;
   },
 
-  getANCVisitAfter6MonthsFlag: function (report) {
+  isLatestReport: function(c,report){
+    return c&&c.reports&&report&&
+      !c.reports.filter(r=>r.form === 'pregnancy' || r.form === 'pregnancy_outcomes_reminder')
+      .some(r=>r.reported_date>report.reported_date);
+ },
+
+ isMostRecentReport:function(c, report, forms) {
+  return report === c.reports
+    .filter(r=>forms.indexOf(r.form) >= 0 && !r.deleted)
+    .reduce((a, r) => {
+      return a && a.reported_date > r.reported_date ? a : r;
+    },null);
+},
+
+  getANCVisitFlag: function (report) {
     if (
       report &&
       report.fields &&
-      report.fields.refer_flag_anc_visit_6m_or_more
+      report.fields.refer_flag_anc_visit
     ) {
-      return report.fields.refer_flag_anc_visit_6m_or_more;
+      return report.fields.refer_flag_anc_visit;
     }
     return '0';
   },
@@ -1238,4 +1252,15 @@ getDeliveryMethod(c,deliveryMethod) {
     }
   }
 },
-  };
+isPregnancyOutcomesSubmitted: function (c) {
+  const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+  return  recentConsentReportDate && 
+    c.reports.some(r=>r.form==='pregnancy_outcomes' &&
+    r.reported_date>=recentConsentReportDate); 
+},
+isInPostpartumReminderTimeWindow(c) { 
+  let date = new Date(this.getRecentEDDForThisPregnancy(c));
+  date.setDate(date.getDate()-14); 
+  return new Date() >= date; 
+}, 
+};

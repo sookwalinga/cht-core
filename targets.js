@@ -25,20 +25,18 @@ module.exports = [
     icon: 'icon-people-person-general',
     goal: 16,
     appliesTo: 'reports',
-    appliesToType: ['infant_child', 'pregnancy'],
+    appliesToType: ['infant_child', 'pregnancy','postpartum','pregnancy_outcomes'],
     idType: 'report',
     appliesIf: function (c, r) {
-      if (r.form && r.form === 'infant_child') {
-        if (r.fields && ((r.fields.consent && r.fields.consent.child_consent_today && r.fields.consent.child_consent_today === 'yes') || !r.fields.consent)) {
-          return true;
-        } 
+      switch (r && r.form) {
+        case 'infant_child': return extras.get(r, 'fields.consent.child_consent_today') === 'yes' ||
+          extras.get(r, 'fields.consent')===undefined;
+        case 'pregnancy': return extras.get(r, 'fields.pregnancy_consent.consent') === 'yes' ||
+          extras.get(r, 'fields.pregnancy_consent')===undefined;
+        case 'postpartum': return true;
+        case 'pregnancy_outcomes': return true;
+        default: return false;
       }
-      else if (r.form && r.form === 'pregnancy') {
-        if (r.fields && ((r.fields.pregnancy_consent && r.fields.pregnancy_consent.consent && r.fields.pregnancy_consent.consent === 'yes') || !r.fields.pregnancy_consent)) {
-          return true;
-        } 
-      }
-      return false;
     },
     date: 'reported'
   }

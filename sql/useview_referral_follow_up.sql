@@ -46,6 +46,7 @@ CREATE MATERIALIZED VIEW useview_referral_follow_up AS
     doc #>> '{fields,kitongoji}' AS kitongoji,
     doc #>> '{fields,phone}' AS phone,
     NULLIF(doc #>> '{fields,referral_follow_up,went_to_facility}', '')::BOOLEAN AS went_to_facility,
+    NULLIF(doc #>> '{fields,referral_follow_up,went_to_facility_with_partner}', '')::BOOLEAN AS went_to_facility_with_partner,
     NULLIF(doc #>> '{fields,referral_follow_up,did_go,got_services}', '')::BOOLEAN AS got_services,
     doc #>> '{fields,referral_follow_up,did_go,reasons_no_services}' AS reasons_no_services,
     doc #>> '{fields,referral_follow_up,did_not_go,reason_didnt_go}' AS reason_didnt_go,

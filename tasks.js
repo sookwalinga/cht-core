@@ -86,7 +86,7 @@ module.exports = [
       if(r.fields.referral_original_source_form === 'pregnancy' || r.form === 'pregnancy')
         return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
           extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-          extras.getANCVisitAfter6MonthsFlag(r) === '1';
+          extras.getANCVisitFlag(r) === '1';
     },
     appliesToType: ['referral_follow_up', 'pregnancy'],
     actions: [{
@@ -106,7 +106,7 @@ module.exports = [
         content.refer_flag_emergency_danger_sign = extras.getPregnancyEmergencyDangerSigns(report);
         content.refer_flag_pregnancy_issues = extras.getPregnancyIssues(report);
         content.refer_flag_pregnancy_complications = extras.getPregnancyComplications(report);
-        content.refer_flag_anc_visit_6m_or_more = extras.getANCVisitAfter6MonthsFlag(report);
+        content.refer_flag_anc_visit = extras.getANCVisitFlag(report);
       }
     }],
     events: [
@@ -765,5 +765,55 @@ module.exports = [
         extras.isContactMuted(c);
       return isResolved;
     }
-  }
+  }, 
+   //Reminder task to remind CHVs to perform pregnancy outcomes & postpartum visits 
+   {
+    name: 'pregnancy_outcomes_reminder_visit',
+    icon: 'follow-up',
+    title: 'task.pregnancy_outcomes_reminder_visit',
+    appliesTo: 'reports',
+    appliesIf: function (c,r) {
+      return extras.isCurrentlyPregnant(c) &&
+       extras.isInPostpartumReminderTimeWindow(c) && 
+       extras.isMostRecentReport(c,r,['pregnancy','pregnancy_outcomes_reminder']);
+    },
+    appliesToType: ['pregnancy','pregnancy_outcomes_reminder'], 
+    actions: [{
+      form: 'pregnancy_outcomes_reminder',
+      modifyContent: function (content, c) {
+        content.show_wash_protocol = extras.showWashProcotol(c); 
+        content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+      }
+    }],
+    events: [
+      {
+        id: 'pregnancy_outcomes_reminder',
+        dueDate: function (event,c) {
+          return new Date(extras.getRecentEDDForThisPregnancy(c));
+        },
+        start: 14,
+        end: (extras.week * 6) //task will appear for 6 weeks after EDD (22 total reminders) 
+      },
+    ],
+    resolvedIf: function (c) {
+
+      let edd = new Date(extras.getRecentEDDForThisPregnancy(c));
+      let now = new Date();
+      let remindedSince = now > edd ? 2 : 14;
+
+      // Resolved if the outcomes  form is submitted for the current pregnancy or 
+      //reminder form is submitted in the time window or person id dead or muted  
+      return extras.isPregnancyOutcomesSubmitted(c) ||
+        Utils.isFormSubmittedInWindow(c.reports, 'pregnancy_outcomes_reminder',
+          Utils.addDate(now, -remindedSince).getTime(),
+          now.getTime()) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
+    }
+  },
 ];

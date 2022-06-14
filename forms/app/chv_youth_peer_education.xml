@@ -101,14 +101,11 @@
           <text id="/chv_youth_peer_education/referral_info:label">
             <value>Youth Referral</value>
           </text>
-          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_10_13:label">
-            <value>10-13</value>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/Age_10_14:label">
+            <value>10-14</value>
           </text>
-          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_14_16:label">
-            <value>14-16</value>
-          </text>
-          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_17_19:label">
-            <value>17-19</value>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/Age_15_19:label">
+            <value>15-19</value>
           </text>
           <text id="/chv_youth_peer_education/youth_count_info/age_group:label">
             <value>Select the age group</value>
@@ -274,14 +271,11 @@
           <text id="/chv_youth_peer_education/referral_info:label">
             <value>Rufaa ya vijana</value>
           </text>
-          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_10_13:label">
-            <value>10-13</value>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/Age_10_14:label">
+            <value>10-14</value>
           </text>
-          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_14_16:label">
-            <value>14-16</value>
-          </text>
-          <text id="/chv_youth_peer_education/youth_count_info/age_group/age_17_19:label">
-            <value>17-19</value>
+          <text id="/chv_youth_peer_education/youth_count_info/age_group/Age_15_19:label">
+            <value>15-19</value>
           </text>
           <text id="/chv_youth_peer_education/youth_count_info/age_group:label">
             <value>Chagua umri husika</value>
@@ -340,7 +334,7 @@
         </translation>
       </itext>
       <instance>
-        <chv_youth_peer_education id="chv_youth_peer_education" prefix="J1!chv_youth_peer_education!" delimiter="#" version="2021-11-04  14-33">
+        <chv_youth_peer_education id="chv_youth_peer_education" prefix="J1!chv_youth_peer_education!" delimiter="#" version="2022-06-06  15-11">
           <inputs>
             <meta>
               <location>
@@ -420,19 +414,19 @@
       <bind nodeset="/chv_youth_peer_education/inputs/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/chv_youth_peer_education/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/chv_youth_peer_education/meeting_info/peer_name" type="string" required="true()"/>
-      <bind nodeset="/chv_youth_peer_education/meeting_info/peer_phone" type="string" jr:constraintMsg="jr:itext('/chv_youth_peer_education/meeting_info/peer_phone:jr:constraintMsg')" constraint="regex(.,'^[0oO][0-9oO]{9}$')"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_info/peer_phone" type="string" constraint="regex(.,'^[0oO][0-9oO]{9}$')" jr:constraintMsg="jr:itext('/chv_youth_peer_education/meeting_info/peer_phone:jr:constraintMsg')"/>
       <bind nodeset="/chv_youth_peer_education/meeting_info/shehia" type="string" required="true()"/>
-      <bind nodeset="/chv_youth_peer_education/meeting_info/visit_date" type="date" jr:constraintMsg="jr:itext('/chv_youth_peer_education/meeting_info/visit_date:jr:constraintMsg')" constraint=". &lt;= date-time(decimal-date-time(today()))" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/meeting_info/visit_date" type="date" required="true()" constraint=". &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/chv_youth_peer_education/meeting_info/visit_date:jr:constraintMsg')"/>
       <bind nodeset="/chv_youth_peer_education/meeting_info/meeting_topic" type="string" required="true()"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/age_group" type="select1" required="true()"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/youth_registered_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_registered" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/male_registered:jr:constraintMsg')" constraint=". &gt; 0" required="true()"/>
-      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_registered" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/female_registered:jr:constraintMsg')" constraint=". &gt; 0" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_registered" type="int" required="true()" constraint=". &gt; 0" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/male_registered:jr:constraintMsg')"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_registered" type="int" required="true()" constraint=". &gt; 0" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/female_registered:jr:constraintMsg')"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/total_registered" type="string" calculate="if( /chv_youth_peer_education/youth_count_info/male_registered =&quot;&quot; or  /chv_youth_peer_education/youth_count_info/male_registered  &lt;= 0 or  /chv_youth_peer_education/youth_count_info/female_registered  = &quot;&quot; or  /chv_youth_peer_education/youth_count_info/female_registered  &lt;= 0 , 0,number( /chv_youth_peer_education/youth_count_info/male_registered ) + number( /chv_youth_peer_education/youth_count_info/female_registered ))"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/total_registered_note" readonly="true()" type="string"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/youth_participated_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_attended" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/male_attended:jr:constraintMsg')" constraint="number( /chv_youth_peer_education/youth_count_info/male_attended ) &lt;= number( /chv_youth_peer_education/youth_count_info/male_registered ) and number( /chv_youth_peer_education/youth_count_info/male_attended ) &gt;= 0" required="true()"/>
-      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_attended" type="int" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/female_attended:jr:constraintMsg')" constraint="number( /chv_youth_peer_education/youth_count_info/female_attended ) &lt;= number( /chv_youth_peer_education/youth_count_info/female_registered ) and number( /chv_youth_peer_education/youth_count_info/female_attended ) &gt;= 0" required="true()"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/male_attended" type="int" required="true()" constraint="number( /chv_youth_peer_education/youth_count_info/male_attended ) &lt;= number( /chv_youth_peer_education/youth_count_info/male_registered ) and number( /chv_youth_peer_education/youth_count_info/male_attended ) &gt;= 0" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/male_attended:jr:constraintMsg')"/>
+      <bind nodeset="/chv_youth_peer_education/youth_count_info/female_attended" type="int" required="true()" constraint="number( /chv_youth_peer_education/youth_count_info/female_attended ) &lt;= number( /chv_youth_peer_education/youth_count_info/female_registered ) and number( /chv_youth_peer_education/youth_count_info/female_attended ) &gt;= 0" jr:constraintMsg="jr:itext('/chv_youth_peer_education/youth_count_info/female_attended:jr:constraintMsg')"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/total_attended" type="string" calculate="if( /chv_youth_peer_education/youth_count_info/male_attended =&quot;&quot; or  /chv_youth_peer_education/youth_count_info/male_attended  &lt; 0 or  /chv_youth_peer_education/youth_count_info/female_attended  = &quot;&quot; or  /chv_youth_peer_education/youth_count_info/female_attended  &lt;= 0 , 0,number( /chv_youth_peer_education/youth_count_info/male_attended ) + number( /chv_youth_peer_education/youth_count_info/female_attended ))"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/total_attended_note" readonly="true()" type="string"/>
       <bind nodeset="/chv_youth_peer_education/youth_count_info/youth_not_attended_note" readonly="true()" type="string"/>
@@ -444,8 +438,8 @@
       <bind nodeset="/chv_youth_peer_education/youth_count_info/total_absentees_note" readonly="true()" type="string"/>
       <bind nodeset="/chv_youth_peer_education/meeting_challenges" type="string"/>
       <bind nodeset="/chv_youth_peer_education/referral_info/has_given_referral_this_month" type="select1" required="true()"/>
-      <bind nodeset="/chv_youth_peer_education/referral_info/referral_received_per_month" type="int" constraint=".&gt;=0" required="true()" jr:constraintMsg="jr:itext('/chv_youth_peer_education/referral_info/referral_received_per_month:jr:constraintMsg')" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;"/>
-      <bind nodeset="/chv_youth_peer_education/referral_info/facility_referral_count" type="int" constraint="number( /chv_youth_peer_education/referral_info/facility_referral_count ) &lt;= number( /chv_youth_peer_education/referral_info/referral_received_per_month ) and number( /chv_youth_peer_education/referral_info/facility_referral_count ) &gt;= 0" required="true()" jr:constraintMsg="jr:itext('/chv_youth_peer_education/referral_info/facility_referral_count:jr:constraintMsg')" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/referral_received_per_month" type="int" constraint=".&gt;=0" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;" required="true()" jr:constraintMsg="jr:itext('/chv_youth_peer_education/referral_info/referral_received_per_month:jr:constraintMsg')"/>
+      <bind nodeset="/chv_youth_peer_education/referral_info/facility_referral_count" type="int" constraint="number( /chv_youth_peer_education/referral_info/facility_referral_count ) &lt;= number( /chv_youth_peer_education/referral_info/referral_received_per_month ) and number( /chv_youth_peer_education/referral_info/facility_referral_count ) &gt;= 0" relevant=" /chv_youth_peer_education/referral_info/has_given_referral_this_month =&quot;yes&quot;" required="true()" jr:constraintMsg="jr:itext('/chv_youth_peer_education/referral_info/facility_referral_count:jr:constraintMsg')"/>
       <bind nodeset="/chv_youth_peer_education/referral_info/parental_referral_count" type="string" calculate="if( /chv_youth_peer_education/referral_info/referral_received_per_month =&quot;&quot; or  /chv_youth_peer_education/referral_info/referral_received_per_month  &lt; 0 or  /chv_youth_peer_education/referral_info/facility_referral_count  = &quot;&quot; or  /chv_youth_peer_education/referral_info/facility_referral_count  &lt; 0 or 
 number( /chv_youth_peer_education/referral_info/referral_received_per_month ) - number( /chv_youth_peer_education/referral_info/facility_referral_count ) &lt; 0
  , 0, number( /chv_youth_peer_education/referral_info/referral_received_per_month ) - number( /chv_youth_peer_education/referral_info/facility_referral_count ) )"/>
@@ -502,16 +496,12 @@ number( /chv_youth_peer_education/referral_info/referral_received_per_month ) - 
       <select1 ref="/chv_youth_peer_education/youth_count_info/age_group">
         <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group:label')"/>
         <item>
-          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/age_10_13:label')"/>
-          <value>age_10_13</value>
+          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/Age_10_14:label')"/>
+          <value>Age_10_14</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/age_14_16:label')"/>
-          <value>age_14_16</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/age_17_19:label')"/>
-          <value>age_17_19</value>
+          <label ref="jr:itext('/chv_youth_peer_education/youth_count_info/age_group/Age_15_19:label')"/>
+          <value>Age_15_19</value>
         </item>
       </select1>
       <input ref="/chv_youth_peer_education/youth_count_info/youth_registered_note">

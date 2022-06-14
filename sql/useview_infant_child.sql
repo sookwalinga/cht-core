@@ -125,6 +125,7 @@ CREATE MATERIALIZED VIEW useview_infant_child AS
     NULLIF(COALESCE(doc #>> '{fields,essential_newborn_breastfeeding,baby_breastfeed_well}', doc #>> '{fields,small_baby_breastfeeding,small_baby_breastfeed_well}'), '')::BOOLEAN AS breastfeed_well,
     NULLIF(doc #>> '{fields,small_baby_breastfeeding,small_baby_other_than_breast_milk}', '')::BOOLEAN AS small_baby_other_than_breast_milk,
     NULLIF(doc #>> '{fields,essential_newborn_care_nutrition,still_breastfeeding}', '')::BOOLEAN AS still_breastfeeding,
+    doc #>> '{fields,essential_newborn_care_nutrition,confirm_nutrition_counseling_c}' AS confirm_nutrition_counseling_c,
     NULLIF(doc #>> '{fields,immunizations,has_health_card}', '')::BOOLEAN AS has_health_card,
     NULLIF(doc #>> '{fields,immunizations,record_vaccines,received_bcg}', '')::BOOLEAN AS received_bcg,
     TO_DATE(doc #>> '{fields,immunizations,record_vaccines,bcg_date}', 'YYYY-MM-DD') AS bcg_date,
