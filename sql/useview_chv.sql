@@ -19,7 +19,8 @@ CREATE MATERIALIZED VIEW useview_chv AS
     to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date,
     doc ->> 'alternate_phone' AS alternate_phone,
     doc ->> 'retired' AS retired,
-    doc ->> 'retirement_reason' AS retirement_reason
+    doc ->> 'retirement_reason' AS retirement_reason,
+    doc ->> 'projects' AS projects
   FROM 
 	  couchdb	
   WHERE 

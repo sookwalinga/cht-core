@@ -19,12 +19,12 @@ module.exports = {
     previous_hiv_status: extras.showPMTCT(),
     previous_rchcard_status: extras.showPregnancyEDDEstimation(),
     hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant(),
-    show_wash_protocol:extras.showWashProcotol(), 
+    show_wash_protocol:extras.isCHVInProject('wash'), 
     quality_monitoring_count: extras.getQualityMonitoringCount(),
     is_parent_health_center:extras.isParentHealthCenter(),
     is_contact_deceased:extras.isClientReportedDead(), 
     is_contact_retired: extras.isContactRetired(),
-    show_asrh_form: extras.showASRHForm()
+    show_asrh_form: extras.isCHVInProject('asrh')
   },
 
   fields: [

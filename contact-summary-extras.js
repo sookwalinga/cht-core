@@ -1,22 +1,13 @@
-var wash = require('./wash_supervisory_areas.js');
-var asrh = require('./asrh_shehias.js');
-
-function get(obj,field){
-  if(!obj){return;}
-  var parts=field.split('.');
-  for(var f of parts){ if(!obj[f]){return;} obj=obj[f];}
-  return obj;
-}
-
 module.exports = {
   week: 7,
   
-  showWashProcotol: function (){  
-   return wash.shouldGetWashProtocol(get(contact,'parent.parent.parent._id'))?1:0;
-  },
-
-  showASRHForm: function () {  
-    return contact && contact.shehia && asrh.shouldShowASRHForm(contact.shehia); 
+  isCHVInProject:function(projectName){
+    return projectName && [contact, ...lineage]
+    .map(l => l && l.contact).some(c =>
+        c &&
+        c.projects &&
+        c.parent && c.parent.parent && !c.parent.parent.parent &&
+        c.projects.includes(projectName));
   },
 
   isClientReportedDead: function () {

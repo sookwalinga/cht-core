@@ -1,5 +1,3 @@
-var wash = require('./wash_supervisory_areas.js');
-
 function get(obj,field){
   if(!obj){return;}
   var parts=field.split('.');
@@ -16,9 +14,12 @@ module.exports = {
   isClient: function (c) { 
     return get(c,'contact.parent.parent.parent')?true:false; 
   },
-  showWashProcotol: function (c){  
-    return this.isClient(c) &&
-           wash.shouldGetWashProtocol(c.contact.parent.parent.parent._id)?1:0;
+
+  isCHVInProject:function(projectName){
+    return projectName &&
+      user.projects &&
+      user.parent.type === 'health_center' &&
+      user.projects.includes(projectName);
   },
 
   isChildUnder5: function (c) {

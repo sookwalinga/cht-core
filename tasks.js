@@ -233,7 +233,6 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.getContactReportedDate(c);
-        content.show_wash_protocol = extras.showWashProcotol(c); 
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -300,7 +299,6 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
-        content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -369,7 +367,6 @@ module.exports = [
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
-        content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.week).getTime();
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
@@ -432,7 +429,6 @@ module.exports = [
         content.surua_rubella1 = extras.getSurua_rubella1(c);
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
-        content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date = Utils.addDate(new Date(extras.getContactReportedDate(c)), extras.month).getTime();
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
@@ -497,7 +493,6 @@ module.exports = [
         content.surua_rubella2 = extras.getSurua_rubella2(c);
         content.visit_id = extras.mapInfantChildVisitType(c);
         content.due_date = extras.mapInfantChildVisitScheduleDueDates(c);
-        content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -624,7 +619,6 @@ module.exports = [
         content.visit_id = extras.mapPregnancyVisitType(c);
         content.client_EDD = extras.getRecentEDDForThisPregnancy(c);
         content.due_date = extras.getPregnancyDueDate(c).getTime(); 
-        content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -688,7 +682,6 @@ module.exports = [
       modifyContent: function (content, c) {
         content.visit_id = extras.mapPostPartumVisitType(c);
         content.due_date = new Date().getTime();
-        content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -732,7 +725,6 @@ module.exports = [
       modifyContent: function (content, c) {
         content.visit_id = extras.mapPostPartumVisitType(c);
         content.due_date = Utils.addDate(extras.getDeliveryDate(c), 5).getTime();
-        content.show_wash_protocol = extras.showWashProcotol(c);
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
@@ -780,8 +772,7 @@ module.exports = [
     appliesToType: ['pregnancy','pregnancy_outcomes_reminder'], 
     actions: [{
       form: 'pregnancy_outcomes_reminder',
-      modifyContent: function (content, c) {
-        content.show_wash_protocol = extras.showWashProcotol(c); 
+      modifyContent: function (content) {
         content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
           weekday: 'long',
           year: 'numeric',
