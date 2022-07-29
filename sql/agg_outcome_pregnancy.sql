@@ -4,6 +4,7 @@
 DROP MATERIALIZED VIEW IF EXISTS agg_outcome_pregnancy;
 CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
 (
+
 WITH other_visits_CTE AS (
   SELECT 
     po.patient_id
@@ -18,15 +19,6 @@ WITH other_visits_CTE AS (
     ON pp.patient_id=po.patient_id
     AND pp.reported_date>po.reported_date
   GROUP BY po.patient_id,po_uuid
-),
-categories AS(
-  SELECT * FROM ( VALUES 
-    (15,19,'15_19years','woman'),
-    (20,24,'20_24years','woman'),
-    (25,34,'25_34years','woman'),
-    (35,49,'35_49years','woman'),
-    (50,200,'50_200years','woman'))
-  AS age(low,up,category,kind)
 )
 SELECT 
   date_trunc('month',pg.reported_date) AS reported_month
@@ -44,7 +36,6 @@ SELECT
   ,SUM(COALESCE((pg.num_anc_visits=3)::INT,0)) AS anc_3
   ,SUM(COALESCE((pg.num_anc_visits>=4)::INT,0)) AS anc_4
   ,SUM(COALESCE(pp.has_attended_facility_pnc_within_48hrs::INT,0)) AS pp_care_2_days
-  ,category
 FROM useview_pregnancy_outcomes AS po
   INNER JOIN useview_jna_locations AS location 
     ON po.catchment_area_uuid=location.catchment_area_uuid
@@ -53,12 +44,10 @@ FROM useview_pregnancy_outcomes AS po
   INNER JOIN useview_pregnancy AS pg
     ON pg.patient_id=ov.patient_id
     AND pg.reported_date=ov.last_pregnancy_visit_date
-  INNER JOIN categories
-    ON po.age_years between categories.low and categories.up
   LEFT JOIN useview_postpartum AS pp
     ON pp.patient_id=ov.patient_id
     AND pp.reported_date=ov.first_postpartum_visit_date
-GROUP BY reported_month,shehia,district,category
+GROUP BY 1,shehia,district
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS agg_outcome_pregnancy_month_shehia ON agg_outcome_pregnancy USING btree (reported_month, shehia,district);
