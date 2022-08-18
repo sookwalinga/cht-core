@@ -1,0 +1,19 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Quality Monitoring Planning"
+    },
+    {
+      "locale": "sw",
+      "content": "Kupanga ufuatiliaji wa ubora"
+    }
+  ],
+  "icon": "",
+  "context": {
+      "person": true,
+      "place": false,
+      "expression": "contact.type === 'person' && contact.parent.parent && !contact.parent.parent.parent && user.parent.type === 'district_hospital' && summary.is_qm_planning_submitted_this_month === false"
+    },
+  "hidden_fields": []
+}

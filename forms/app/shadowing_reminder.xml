@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Shadowing Reminder</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/shadowing_reminder/inputs/contact/_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/contact/name:label">
+            <value>Patient Name</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/contact/patient_id:label">
+            <value>Medic ID</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/patient_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/patient_uuid:label">
+            <value>Patient UUID</value>
+          </text>
+          <text id="/shadowing_reminder/inputs:label">
+            <value>Inputs</value>
+          </text>
+          <text id="/shadowing_reminder/shadowing_reminder/reminder:label">
+            <value>**This is a reminder that your supervisor will be coming to shadow you on <output value=" /shadowing_reminder/c_formatted_visit_date "/>.**</value>
+          </text>
+          <text id="/shadowing_reminder/shadowing_reminder:label">
+            <value>Shadowing Reminder</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/shadowing_reminder/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/contact/patient_id:label">
+            <value>-</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/patient_id:label">
+            <value>-</value>
+          </text>
+          <text id="/shadowing_reminder/inputs/patient_uuid:label">
+            <value>-</value>
+          </text>
+          <text id="/shadowing_reminder/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/shadowing_reminder/shadowing_reminder/reminder:label">
+            <value>**Unakumbushwa kwamba supervisor wako atakuja kukutembelea <output value=" /shadowing_reminder/c_formatted_visit_date "/>.**</value>
+          </text>
+          <text id="/shadowing_reminder/shadowing_reminder:label">
+            <value>Ukumbusho wa Ufuatiliaji wa Ubora</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <shadowing_reminder id="shadowing_reminder" prefix="J1!shadowing_reminder!" delimiter="#" version="2022-08-17 12:39:16">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <task_id/>
+            <t_planned_visit_date/>
+            <patient_uuid/>
+            <patient_id/>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+            </contact>
+          </inputs>
+          <_id/>
+          <patient_id/>
+          <chw_id/>
+          <chw_name/>
+          <visit_date/>
+          <c_formatted_visit_date/>
+          <shadowing_reminder>
+            <reminder/>
+          </shadowing_reminder>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </shadowing_reminder>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/shadowing_reminder/inputs" relevant="./source='user'"/>
+      <bind nodeset="/shadowing_reminder/inputs/source" type="string"/>
+      <bind nodeset="/shadowing_reminder/inputs/source_id" type="string"/>
+      <bind nodeset="/shadowing_reminder/inputs/task_id" type="string"/>
+      <bind nodeset="/shadowing_reminder/inputs/t_planned_visit_date" type="string"/>
+      <bind nodeset="/shadowing_reminder/inputs/patient_uuid" type="string" calculate="../contact/_id"/>
+      <bind nodeset="/shadowing_reminder/inputs/patient_id" type="string" calculate="../contact/patient_id"/>
+      <bind nodeset="/shadowing_reminder/inputs/contact/_id" type="string"/>
+      <bind nodeset="/shadowing_reminder/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/shadowing_reminder/inputs/contact/name" type="string"/>
+      <bind nodeset="/shadowing_reminder/_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/shadowing_reminder/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/shadowing_reminder/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/shadowing_reminder/chw_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/shadowing_reminder/visit_date" type="string" calculate="../inputs/t_planned_visit_date"/>
+      <bind nodeset="/shadowing_reminder/c_formatted_visit_date" type="string" calculate="format-date( /shadowing_reminder/visit_date , '%a %e %b %Y')"/>
+      <bind nodeset="/shadowing_reminder/shadowing_reminder/reminder" readonly="true()" type="string" required="true()"/>
+      <bind nodeset="/shadowing_reminder/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/shadowing_reminder/meta/instanceName" type="string" calculate="D-tree"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/shadowing_reminder/inputs">
+      <label ref="jr:itext('/shadowing_reminder/inputs:label')"/>
+      <group ref="/shadowing_reminder/inputs/contact">
+        <input appearance="select-contact type-person" ref="/shadowing_reminder/inputs/contact/_id">
+          <label ref="jr:itext('/shadowing_reminder/inputs/contact/_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/shadowing_reminder/inputs/contact/patient_id">
+          <label ref="jr:itext('/shadowing_reminder/inputs/contact/patient_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/shadowing_reminder/inputs/contact/name">
+          <label ref="jr:itext('/shadowing_reminder/inputs/contact/name:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/shadowing_reminder/shadowing_reminder">
+      <label ref="jr:itext('/shadowing_reminder/shadowing_reminder:label')"/>
+      <input ref="/shadowing_reminder/shadowing_reminder/reminder">
+        <label ref="jr:itext('/shadowing_reminder/shadowing_reminder/reminder:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

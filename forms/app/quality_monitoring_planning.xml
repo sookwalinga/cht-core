@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Quality Monitoring Planning</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/quality_monitoring_planning/group_summary/r_chw_info:label">
+            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**CHV name:** <output value=" /quality_monitoring_planning/chw_name "/>&lt;/span&gt; 
+&lt;span&gt;**CHV ID:** <output value=" /quality_monitoring_planning/chw_id "/>&lt;/span&gt;&lt;/div&gt;</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_chw_info_title:label">
+            <value>CHW Details &lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_followup:label">
+            <value>Follow-up &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_followup_note:label">
+            <value>A quality monitoring task for <output value=" /quality_monitoring_planning/chw_name "/> will appear on *_<output value=" /quality_monitoring_planning/group_summary/c_formatted_task_date "/>_*.</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_planned_visit_date:label">
+            <value>Planned visit date on **_<output value=" /quality_monitoring_planning/group_summary/c_formatted_visit_date "/>_**</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary:label">
+            <value>Summary</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/contact/_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/contact/name:label">
+            <value>Patient Name</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/contact/patient_id:label">
+            <value>Medic ID</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/patient_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/patient_uuid:label">
+            <value>Patient UUID</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs:label">
+            <value>Inputs</value>
+          </text>
+          <text id="/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg">
+            <value>Date cannot be a past date or today</value>
+          </text>
+          <text id="/quality_monitoring_planning/visit_details/planned_visit_date:label">
+            <value>When do you intend to visit <output value=" /quality_monitoring_planning/chw_name "/>?</value>
+          </text>
+          <text id="/quality_monitoring_planning/visit_details:label">
+            <value>Supervision Details</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/quality_monitoring_planning/group_summary/r_chw_info:label">
+            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**Jina la CHV:** <output value=" /quality_monitoring_planning/chw_name "/>&lt;/span&gt; 
+&lt;span&gt;**CHV ID:** <output value=" /quality_monitoring_planning/chw_id "/>&lt;/span&gt;&lt;/div&gt;</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_chw_info_title:label">
+            <value>Taarifa za CHV &lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_followup:label">
+            <value>Ufuatiliaji &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_followup_note:label">
+            <value>Kazi ya ufuatiliaji wa ubora kwaajili ya <output value=" /quality_monitoring_planning/chw_name "/> itatokea tarehe *_<output value=" /quality_monitoring_planning/group_summary/c_formatted_task_date "/>_*.</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary/r_planned_visit_date:label">
+            <value>Tarehe ya kumtembelea **_<output value=" /quality_monitoring_planning/group_summary/c_formatted_visit_date "/>_**</value>
+          </text>
+          <text id="/quality_monitoring_planning/group_summary:label">
+            <value>Muhtasari</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/contact/patient_id:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/patient_id:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/patient_uuid:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/visit_details/planned_visit_date:label">
+            <value>Lini unategemea kumtembelea <output value=" /quality_monitoring_planning/chw_name "/>?</value>
+          </text>
+          <text id="/quality_monitoring_planning/visit_details:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <quality_monitoring_planning id="quality_monitoring_planning" prefix="J1!quality_monitoring_planning!" delimiter="#" version="2022-08-05 09:57:28">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <task_id/>
+            <patient_uuid/>
+            <patient_id/>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+            </contact>
+          </inputs>
+          <_id/>
+          <patient_id/>
+          <chw_id/>
+          <chw_name/>
+          <visit_details>
+            <planned_visit_date/>
+          </visit_details>
+          <group_summary>
+            <r_chw_info_title/>
+            <r_chw_info/>
+            <r_followup/>
+            <c_formatted_visit_date/>
+            <r_planned_visit_date/>
+            <c_formatted_task_date/>
+            <r_followup_note/>
+          </group_summary>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </quality_monitoring_planning>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/quality_monitoring_planning/inputs" relevant="./source='user'"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/source" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/source_id" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/task_id" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/patient_uuid" type="string" calculate="../contact/_id"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/patient_id" type="string" calculate="../contact/patient_id"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/contact/_id" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/inputs/contact/name" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/quality_monitoring_planning/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/quality_monitoring_planning/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/quality_monitoring_planning/chw_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/quality_monitoring_planning/visit_details/planned_visit_date" type="date" required="true()" constraint=". &gt; today()" jr:constraintMsg="jr:itext('/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg')"/>
+      <bind nodeset="/quality_monitoring_planning/group_summary/r_chw_info_title" readonly="true()" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/group_summary/r_chw_info" readonly="true()" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/group_summary/r_followup" readonly="true()" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/group_summary/c_formatted_visit_date" type="string" calculate="format-date( /quality_monitoring_planning/visit_details/planned_visit_date , '%a %e %b %Y')"/>
+      <bind nodeset="/quality_monitoring_planning/group_summary/r_planned_visit_date" readonly="true()" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /quality_monitoring_planning/visit_details/planned_visit_date ) - 2), '%a %e %b %Y')"/>
+      <bind nodeset="/quality_monitoring_planning/group_summary/r_followup_note" readonly="true()" type="string"/>
+      <bind nodeset="/quality_monitoring_planning/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/quality_monitoring_planning/meta/instanceName" type="string" calculate="D-tree"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/quality_monitoring_planning/inputs">
+      <label ref="jr:itext('/quality_monitoring_planning/inputs:label')"/>
+      <group ref="/quality_monitoring_planning/inputs/contact">
+        <input appearance="select-contact type-person" ref="/quality_monitoring_planning/inputs/contact/_id">
+          <label ref="jr:itext('/quality_monitoring_planning/inputs/contact/_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/quality_monitoring_planning/inputs/contact/patient_id">
+          <label ref="jr:itext('/quality_monitoring_planning/inputs/contact/patient_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/quality_monitoring_planning/inputs/contact/name">
+          <label ref="jr:itext('/quality_monitoring_planning/inputs/contact/name:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/quality_monitoring_planning/visit_details">
+      <label ref="jr:itext('/quality_monitoring_planning/visit_details:label')"/>
+      <input ref="/quality_monitoring_planning/visit_details/planned_visit_date">
+        <label ref="jr:itext('/quality_monitoring_planning/visit_details/planned_visit_date:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list summary" ref="/quality_monitoring_planning/group_summary">
+      <label ref="jr:itext('/quality_monitoring_planning/group_summary:label')"/>
+      <input appearance="h2 blue" ref="/quality_monitoring_planning/group_summary/r_chw_info_title">
+        <label ref="jr:itext('/quality_monitoring_planning/group_summary/r_chw_info_title:label')"/>
+      </input>
+      <input ref="/quality_monitoring_planning/group_summary/r_chw_info">
+        <label ref="jr:itext('/quality_monitoring_planning/group_summary/r_chw_info:label')"/>
+      </input>
+      <input appearance="h2 red" ref="/quality_monitoring_planning/group_summary/r_followup">
+        <label ref="jr:itext('/quality_monitoring_planning/group_summary/r_followup:label')"/>
+      </input>
+      <input ref="/quality_monitoring_planning/group_summary/r_planned_visit_date">
+        <label ref="jr:itext('/quality_monitoring_planning/group_summary/r_planned_visit_date:label')"/>
+      </input>
+      <input ref="/quality_monitoring_planning/group_summary/r_followup_note">
+        <label ref="jr:itext('/quality_monitoring_planning/group_summary/r_followup_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

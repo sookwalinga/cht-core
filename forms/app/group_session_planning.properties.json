@@ -1,0 +1,19 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Group Session Planning"
+    },
+    {
+      "locale": "sw",
+      "content": "Group Session Planning"
+    }
+  ],
+  "icon": "",
+  "context": {
+      "person": true,
+      "place": false,
+      "expression": "contact.type === 'person' && contact.parent.parent && !contact.parent.parent.parent && user.parent.type === 'health_center'"
+    },
+  "hidden_fields": []
+}

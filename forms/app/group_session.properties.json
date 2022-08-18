@@ -1,0 +1,19 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Group Session"
+    },
+    {
+      "locale": "sw",
+      "content": "Mkutano wa kikundi"
+    }
+  ],
+  "icon": "",
+  "context": {
+        "person": false,
+        "place": true,
+        "expression": "contact.type === 'health_center' && user.parent.type === 'district_hospital'"
+    },
+  "hidden_fields": []
+}

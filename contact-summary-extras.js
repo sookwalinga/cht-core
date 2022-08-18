@@ -1,3 +1,12 @@
+const NOW = new Date();
+const CURRENT_MONTH = NOW.getMonth();
+const CURRENT_YEAR = NOW.getFullYear();
+
+function get(obj, field,defaultValue) {
+  return obj && field && field.split('.')
+    .reduce((a, b) => a && a[b]||defaultValue, obj);
+}
+
 module.exports = {
   week: 7,
   
@@ -204,6 +213,41 @@ module.exports = {
     }
     return ancCount;
   },
+
+  getLastReportOfType: function (count,type){ 
+    return reports && count && 
+    reports.filter(r =>type.includes(r.form))
+           .sort((a,b) => 
+              a.reported_date> b.reported_date ? -1:
+              a.reported_date < b.reported_date ? 1:0
+         ).slice(0,1);
+  }, 
+  
+  getLatestMonthlyMeetingDate: function(){ 
+   return this.getLastReportOfType(1,'chw_monthly_meeting')
+   .map(r => {
+      let d = new Date(r.reported_date); 
+      return d.getDate() + '/' +  (d.getMonth() + 1) + '/' + d.getFullYear();
+
+   }); 
+  }, 
+
+  getLatestMonthlyMeetingTopic: function(){ 
+     return this.getLastReportOfType(1,'chw_monthly_meeting')
+     .map(r =>get(r,'fields.meeting_details.topics')); 
+    }, 
+
+    getLatestMonthlyMeetingAbsentees: function(){ 
+      return this.getLastReportOfType(1,'chw_monthly_meeting')
+      .map(r=>get(r,'fields.meeting_details.absent_chvs',[]).map(d=>d.name)).join(',');
+      // .map(r => {
+      //     return r && 
+      //            r.fields && 
+      //            r.fields.meeting_details && 
+      //            r.fields.meeting_details.absent_chvs && 
+      //            r.fields.meeting_details.absent_chvs.map(d=>d.name);
+      // }).join(','); 
+     },
   
   showPMTCT: function () {
     var previous_hiv_status = false;
@@ -287,4 +331,37 @@ module.exports = {
     }
     return isMuted;
   },
+
+  isQMPlanningSubmittedThisMonth: function()
+  { 
+    return this.getReportsThisMonth(reports,'quality_monitoring_planning').length> 0;
+  },
+
+  CURRENT_MONTH: CURRENT_MONTH,
+  CURRENT_YEAR: CURRENT_YEAR,
+  getNewestReport: function (reports, form) {
+    let newestReport;
+    let currentReport;
+    for (let i = 0; i < reports.length; i++) {
+      currentReport = reports[i];
+      if (!newestReport && currentReport.form === form) {
+        newestReport = currentReport;
+        continue;
+      }
+      if (currentReport.form === form && (newestReport.reported_date < currentReport.reported_date)) {
+        newestReport = currentReport;
+      }
+    }
+    return newestReport;
+  },
+  getReportsThisMonth: function (reports, forms) {
+    return reports.filter(r => forms.includes(r.form) &&
+      new Date().toISOString().slice(0, 7) ===
+      new Date(r.reported_date).toISOString().slice(0, 7));
+  },
+  getMonthlyMeetingsThisMonth: function (reports, forms) {
+    return this.getReportsThisMonth(reports,forms)
+    .filter(r=>get(r, 'fields.planned_meeting.meeting_option') === 'now'); 
+  }
+
 };

@@ -1,0 +1,19 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "CHW Activity"
+    },
+    {
+      "locale": "sw",
+      "content": "CHW Activity"
+    }
+  ],
+  "icon": "",
+  "context": {
+        "person": false,
+        "place": false,
+        "expression": "contact.type === 'person' && contact.parent.parent && !contact.parent.parent.parent && user.parent.type === 'district_hospital'"
+    },
+  "hidden_fields": []
+}

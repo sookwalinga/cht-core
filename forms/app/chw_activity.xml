@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>CHW Activity</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/chw_activity/chw_activeness/inactive_chw:label">
+            <value><output value=" /chw_activity/chw_name "/> has been inactive for the last 3 months. Kindly follow up with them.</value>
+          </text>
+          <text id="/chw_activity/chw_activeness:label">
+            <value>Supervision Details</value>
+          </text>
+          <text id="/chw_activity/inputs/contact/_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/chw_activity/inputs/contact/name:label">
+            <value>Patient Name</value>
+          </text>
+          <text id="/chw_activity/inputs/contact/patient_id:label">
+            <value>Medic ID</value>
+          </text>
+          <text id="/chw_activity/inputs/patient_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/chw_activity/inputs/patient_uuid:label">
+            <value>Patient UUID</value>
+          </text>
+          <text id="/chw_activity/inputs:label">
+            <value>Inputs</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <chw_activity id="chw_activity" prefix="J1!chw_activity!" delimiter="#" version="2022-05-17 10:59:14">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <task_id/>
+            <patient_uuid/>
+            <patient_id/>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+            </contact>
+          </inputs>
+          <_id/>
+          <chw_id/>
+          <chw_name/>
+          <chw_activeness>
+            <inactive_chw/>
+          </chw_activeness>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </chw_activity>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/chw_activity/inputs" relevant="./source='user'"/>
+      <bind nodeset="/chw_activity/inputs/source" type="string"/>
+      <bind nodeset="/chw_activity/inputs/source_id" type="string"/>
+      <bind nodeset="/chw_activity/inputs/task_id" type="string"/>
+      <bind nodeset="/chw_activity/inputs/patient_uuid" type="string" calculate="../contact/_id"/>
+      <bind nodeset="/chw_activity/inputs/patient_id" type="string" calculate="../contact/patient_id"/>
+      <bind nodeset="/chw_activity/inputs/contact/_id" type="string"/>
+      <bind nodeset="/chw_activity/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/chw_activity/inputs/contact/name" type="string"/>
+      <bind nodeset="/chw_activity/_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/chw_activity/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/chw_activity/chw_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/chw_activity/chw_activeness/inactive_chw" readonly="true()" type="string" required="true()"/>
+      <bind nodeset="/chw_activity/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/chw_activity/meta/instanceName" type="string" calculate="D-tree"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/chw_activity/inputs">
+      <label ref="jr:itext('/chw_activity/inputs:label')"/>
+      <group ref="/chw_activity/inputs/contact">
+        <input appearance="select-contact type-person" ref="/chw_activity/inputs/contact/_id">
+          <label ref="jr:itext('/chw_activity/inputs/contact/_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chw_activity/inputs/contact/patient_id">
+          <label ref="jr:itext('/chw_activity/inputs/contact/patient_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chw_activity/inputs/contact/name">
+          <label ref="jr:itext('/chw_activity/inputs/contact/name:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/chw_activity/chw_activeness">
+      <label ref="jr:itext('/chw_activity/chw_activeness:label')"/>
+      <input ref="/chw_activity/chw_activeness/inactive_chw">
+        <label ref="jr:itext('/chw_activity/chw_activeness/inactive_chw:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

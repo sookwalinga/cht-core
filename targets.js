@@ -11,6 +11,7 @@ module.exports = [
     goal: 4,
     appliesTo: 'contacts',
     appliesToType: ['person'],
+    context: 'user.parent.type === "health_center"',
     appliesIf: function (c) {    
      return extras.consentingVisitsThisMonth(c,'infant_child') || extras.consentingVisitsThisMonth(c,'pregnancy');
     }
@@ -26,6 +27,7 @@ module.exports = [
     goal: 16,
     appliesTo: 'reports',
     appliesToType: ['infant_child', 'pregnancy','postpartum','pregnancy_outcomes'],
+    context: 'user.parent.type === "health_center"',
     idType: 'report',
     appliesIf: function (c, r) {
       switch (r && r.form) {
@@ -40,4 +42,41 @@ module.exports = [
     },
     date: 'reported'
   }
+ , 
+  {
+    id: 'monthly-meetings-this-month',
+    type: 'count',
+    goal: 1,
+    translation_key: 'targets.monthly_meetings.title',
+    subtitle_translation_key: 'targets.this_month.subtitle',
+    appliesTo: 'reports',
+    context: 'user.parent.type === "district_hospital"',
+    appliesToType: ['chw_monthly_meeting'],
+    appliesIf: function (contact, report) {
+    return extras.get(report,'fields.planned_meeting.meeting_option') === 'now';},
+    date: 'reported'
+  },
+  {
+    id: 'group-sessions-this-month',
+    type: 'count',
+    goal: 1,
+    translation_key: 'targets.group_sessions.title',
+    subtitle_translation_key: 'targets.this_month.subtitle',
+    appliesTo: 'reports',
+    context: 'user.parent.type === "district_hospital"',
+    appliesToType: ['group_session'],
+    date: 'reported'
+  },
+  {
+    id: 'quality-monitoring-this-month',
+    type: 'count',
+    goal: 1,
+    translation_key: 'targets.quality_monitoring.title',
+    subtitle_translation_key: 'targets.this_month.subtitle',
+    appliesTo: 'reports',
+    context: 'user.parent.type === "district_hospital"',
+    appliesToType: ['chv_quality_monitoring'],
+    date: 'reported'
+  },
 ];
+  

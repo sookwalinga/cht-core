@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
-    <h:title>CHV Quality Monitoring</h:title>
+    <h:title>Quality Monitoring</h:title>
     <model>
       <itext>
         <translation lang="en">
@@ -12,10 +12,10 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude:label">
-            <value>Did CHV have the positive attitude towards client throughout the session ? (calmness, eye contact,language, and smile, not interrupt activities of clients)</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> have the positive attitude towards client throughout the session? (calmness, eye contact, language, and smile, not interrupt activities of clients)</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/note_to_supervisor_chv_communication:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Please observe and note down if chv was able to interact well with the client during the visit . &lt;/span&gt;</value>
+            <value>&lt;span style=&quot;color:#f58a1f&quot;&gt;Please observe and note down if <output value=" /chv_quality_monitoring/chw_name "/> was able to interact well with the client during the visit.&lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_approachable/no:label">
             <value>No</value>
@@ -24,7 +24,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_approachable:label">
-            <value>Was CHV kind and smiled towards the client ?</value>
+            <value>Was <output value=" /chv_quality_monitoring/chw_name "/> kind towards the client and smiling?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_attentive/no:label">
             <value>No</value>
@@ -33,7 +33,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_attentive:label">
-            <value>Was CHV llooking sat the client and paying attention througout the visit?</value>
+            <value>Was <output value=" /chv_quality_monitoring/chw_name "/> looking at the client and paying attention througout the visit?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_calm/no:label">
             <value>No</value>
@@ -42,7 +42,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_calm:label">
-            <value>Was CHV calm throughout the visit?</value>
+            <value>Was <output value=" /chv_quality_monitoring/chw_name "/> calm throughout the visit?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_interruptive/no:label">
             <value>No</value>
@@ -51,16 +51,10 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_interruptive:label">
-            <value>Was CHV interrupting activities of the client?</value>
+            <value>Was <output value=" /chv_quality_monitoring/chw_name "/> interrupting activities of the client?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude:label">
             <value>CHV Attitude</value>
-          </text>
-          <text id="/chv_quality_monitoring/chv_info/chv_name_note:label">
-            <value>&lt;b&gt;CHV Name :&lt;/b&gt; <output value=" /chv_quality_monitoring/contact_name "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/chv_info/chv_phone_note:label">
-            <value>&lt;b&gt;CHV Phone :&lt;/b&gt; <output value=" /chv_quality_monitoring/contact_phone "/></value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_encourage_discussion/no:label">
             <value>No</value>
@@ -69,7 +63,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_encourage_discussion:label">
-            <value>Did CHV communicate effectively with clients? (Congratulates when a positive results after physical examination, encourage discussion where appropriate)</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> communicate effectively with clients? (congratulates when a positive results after physical examination, encourage discussion where appropriate)</value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_refer_clients/no:label">
             <value>No</value>
@@ -78,7 +72,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_refer_clients:label">
-            <value>Did CHV answer concerns and questions from clients? (knows when to refer to heath facility or supervisor)</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> answer concerns and questions from clients? (knows when to refer to heath facility or supervisor)</value>
           </text>
           <text id="/chv_quality_monitoring/communication:label">
             <value>Communication</value>
@@ -90,16 +84,16 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/consenting/does_chv_ask_for_consent:label">
-            <value>Did CHV ask for consent from client?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> ask for consent from client?</value>
           </text>
           <text id="/chv_quality_monitoring/consenting:label">
             <value>Consenting</value>
           </text>
           <text id="/chv_quality_monitoring/covid19_intro/covid19_intro_note:label">
-            <value>&lt;span style="color:#f58a1f"&gt;As a supervisor, please be an example by taking all the precautionary measures against infectious diseases when you visit your CHVs. Please remember to use sanitizer and wear mask throughout the visit.&lt;/span&gt;</value>
+            <value>&lt;span style="color:#f58a1f"&gt; As a supervisor, please be an example by taking all the precautionary measures against infectious diseases when you visit your CHVs. Please remember to use sanitizer and wear mask throughout the visit. &lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/covid19_intro:label">
-            <value>Precautionary measures when visiting a client</value>
+            <value>Precautionery Measures</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly/no:label">
             <value>No</value>
@@ -111,7 +105,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly:label">
-            <value>Did CHV measure MUAC accurately?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> measure MUAC accurately?</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card/no:label">
             <value>No</value>
@@ -123,7 +117,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card:label">
-            <value>Was CHV able to read the pregnant woman/child's clinic card correctly?</value>
+            <value>Was <output value=" /chv_quality_monitoring/chw_name "/> able to read the pregnant woman/child's clinic card correctly?</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_enter_data_correctly/no:label">
             <value>No</value>
@@ -132,7 +126,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_enter_data_correctly:label">
-            <value>Did CHV enter data correctly as provided by client?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> enter data correctly as provided by client?</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_validate_responses/no:label">
             <value>No</value>
@@ -141,145 +135,157 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_validate_responses:label">
-            <value>Did CHV validate responses to questions that can be verified by asking the mother or Child's health card, or through visual inspection? (e.g newborn fast breathing, place of birth, at the time of data collection)</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> validate responses to questions that can be verified by asking the mother, from the child's health card, or through visual inspection at the time of data collection? (e.g newborn fast breathing, place of birth)</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity:label">
             <value>Data Validity</value>
           </text>
           <text id="/chv_quality_monitoring/document_actions/contact_numbers:label">
-            <value>If the CHV needs any support from HPU, CHMT or D-Tree, then please share their phone numbers and ask the CHV to call them immediately after the visit.</value>
+            <value>If the <output value=" /chv_quality_monitoring/chw_name "/> needs any support from HPU, CHMT or D-tree, then please share their phone numbers and ask the CHV to call them immediately after the visit.</value>
           </text>
           <text id="/chv_quality_monitoring/document_actions/provide_support:label">
-            <value>Document the support provided to the CHV based on your observation.</value>
+            <value>Document the support provided to the <output value=" /chv_quality_monitoring/chw_name "/> based on your observation.</value>
           </text>
           <text id="/chv_quality_monitoring/document_actions:label">
             <value>Document Actions</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer:label">
-            <value>Does CHV counsels or refers the client to facility?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication:label">
+            <value>Does CHV ask the caregiver about problems they may face in carrying out play and communication activities?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_problem_note:label">
-            <value>&lt;strong&gt;Problem:&lt;/strong&gt; &lt;em&gt;Conflic in home?&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns:label">
-            <value>Does CHV asks screening question for this problem?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child:label">
+            <value>Does CHV ask and observe how a caregiver comforts a child?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/counsel_or_refer_note:label">
-            <value>&lt;strong&gt;Does the CHV ask screening questions, and if yes, counsel or refer for the following problems:&lt;/strong&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/not_applicable:label">
+            <value>Not applicable</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play:label">
-            <value>Does the CHV demonstrate then observe and coach the caregiver in practicing play and communication activity with child ?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child:label">
+            <value>Does CHV ask and observe how a caregiver corrects a child? (If child age is above 6 months)</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone:label">
-            <value>Does the CHV conduct a screening of milestones for age?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk:label">
+            <value>Does CHV ask and observe how the caregiver plays and talks with the child or gets the child to smile?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_development/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_development/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer:label">
-            <value>Does CHV counsels or refers the client to facility?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_development:label">
+            <value>Does CHV ask and observe questions about a child's development stage?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_problem_note:label">
-            <value>&lt;strong&gt;Problem:&lt;/strong&gt; &lt;em&gt;Harsh Discipline?&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns:label">
-            <value>Does CHV asks screening question for this problem?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning:label">
+            <value>Does CHV ask if the caregiver has any concerns about how the child is learning?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/caregiver_child_interaction_note:label">
+            <value>&lt;span style="color:#337ab7"&gt;Caregiver Child Interactions&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer:label">
-            <value>Does CHV counsels or refers the client to facility?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems:label">
+            <value>Does CHV discuss with caregivers how they might try to solve problems in carrying out these recommendations?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_problem_note:label">
-            <value>&lt;strong&gt;Problem:&lt;/strong&gt;&lt;em&gt;Maternal stress?&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns:label">
-            <value>Does CHV asks screening question for this problem?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home:label">
+            <value>Does CHV encourage the caregiver to continue play activities at home daily?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/play_and_communication:label">
+            <value>&lt;span style="color:#337ab7"&gt;Advises on Play and Communication activities&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer:label">
-            <value>Does CHV counsels or refers the client to facility?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children:label">
+            <value>Does CHV ask caregivers to practice interactive play or communication activity with children?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_problem_note:label">
-            <value>&lt;strong&gt;Problem:&lt;/strong&gt; &lt;em&gt;No time to play&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns:label">
-            <value>Does CHV asks screening question for this problem?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction:label">
+            <value>Does CHV praise or advise for concerns in caregiver child interactions?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer:label">
-            <value>Does CHV counsels or refers the client to facility?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play:label">
+            <value>Does CHV praise caregivers for interactive play or communication at least once?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_problem_note:label">
-            <value>&lt;strong&gt;Problem:&lt;/strong&gt; &lt;em&gt;Parent concern of slow to learn?&lt;/em&gt;</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/problem_solved_on_home:label">
+            <value>&lt;span style="color:#337ab7"&gt;Problem Solved on home Challenges &lt;/span&gt;</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns:label">
-            <value>Does CHV asks screening question for this problem?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity:label">
+            <value>Does CHV suggest appropriate communication activity from the guide?</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity/no:label">
+            <value>No</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity:label">
+            <value>Does CHV suggest appropriate play activity from the guide?</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy/no:label">
+            <value>No</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy:label">
+            <value>Does CHV use appropriate toys to demonstrate to the caregiver?</value>
           </text>
           <text id="/chv_quality_monitoring/ecd_qi_questions:label">
             <value>ECD Quality Improvement Questions</value>
@@ -291,31 +297,65 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary:label">
-            <value>Did CHV provide visit summary, appreciation to client and promise to come next visit?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> provide visit summary, appreciation to client and promise to come next visit?</value>
           </text>
           <text id="/chv_quality_monitoring/ending_conversation:label">
             <value>Ending Conversation</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients/no:label">
+          <text id="/chv_quality_monitoring/group_summary/follow_up_again/no:label">
             <value>No</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients/yes:label">
+          <text id="/chv_quality_monitoring/group_summary/follow_up_again/yes:label">
             <value>Yes</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients:label">
-            <value>Did CHV encourage all clients to speak?</value>
+          <text id="/chv_quality_monitoring/group_summary/follow_up_again:label">
+            <value>Do you want to make a follow up with <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling:label">
-            <value>For Group Counselling</value>
+          <text id="/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg">
+            <value>Date cannot be a past date or today</value>
           </text>
-          <text id="/chv_quality_monitoring/inputs/user/contact_id:label">
-            <value>Contact ID of the logged in user</value>
+          <text id="/chv_quality_monitoring/group_summary/next_follow_up_date:label">
+            <value>When would you like to follow up with <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
-          <text id="/chv_quality_monitoring/inputs/user/facility_id:label">
-            <value>Facility ID for the parent user</value>
+          <text id="/chv_quality_monitoring/group_summary/r_chw_info:label">
+            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**CHV name:** <output value=" /chv_quality_monitoring/chw_name "/>&lt;/span&gt; 
+&lt;span&gt;**CHV ID:** <output value=" /chv_quality_monitoring/chw_id "/>&lt;/span&gt;&lt;/div&gt;</value>
           </text>
-          <text id="/chv_quality_monitoring/inputs/user/name:label">
-            <value>Name of the logged in user</value>
+          <text id="/chv_quality_monitoring/group_summary/r_chw_info_title:label">
+            <value>CHW Details &lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_followup:label">
+            <value>Follow-up &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_followup_note:label">
+            <value>A quality monitoring follow up task for <output value=" /chv_quality_monitoring/chw_name "/> will appear on *_<output value=" /chv_quality_monitoring/group_summary/c_formatted_task_date "/>_*.</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_improvement_areas:label">
+            <value><output value=" /chv_quality_monitoring/c_follow_up_areas "/></value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_improvement_areas_title:label">
+            <value>Areas of Improvement &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_next_follow_up:label">
+            <value>Next follow up on **_<output value=" /chv_quality_monitoring/group_summary/c_formatted_follow_up_date "/>_**.</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary:label">
+            <value>Summary</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs/contact/_id:label">
+            <value>Patient ID</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs/contact/name:label">
+            <value>Patient Name</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs/contact/patient_id:label">
+            <value>Medic ID</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs/contact/patient_uuid:label">
+            <value>Patient UUID</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs:label">
+            <value>Inputs</value>
           </text>
           <text id="/chv_quality_monitoring/introduction/does_chv_introduce_themselves/no:label">
             <value>No</value>
@@ -324,7 +364,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/introduction/does_chv_introduce_themselves:label">
-            <value>Did CHV introduce themselves and visitor(s), the program, their role and working tools?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> introduce themselves and visitor(s), the program, their role and working tools?</value>
           </text>
           <text id="/chv_quality_monitoring/introduction:label">
             <value>Introduction</value>
@@ -336,7 +376,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/ipc/does_chv_stay_one_meter:label">
-            <value>Did CHV take precautionary measures when visiting a client-CHV by staying one meter from the client?</value>
+            <value><output value=" /chv_quality_monitoring/chw_name "/> stayed one meter from the client.</value>
           </text>
           <text id="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures/no:label">
             <value>No</value>
@@ -345,19 +385,22 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures:label">
-            <value>Did CHV take precautionary measures? ( not touch the client when doing physical examinations without sanitizing /washing hands before and after)</value>
+            <value><output value=" /chv_quality_monitoring/chw_name "/> did not touch the client when doing physical examinations without sanitizing/washing hands before and after.</value>
+          </text>
+          <text id="/chv_quality_monitoring/ipc/n_precaution_question:label">
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> take precautionary measures?</value>
           </text>
           <text id="/chv_quality_monitoring/ipc:label">
-            <value>Precaution against infectious diseases</value>
+            <value>Precaution Against Infectious Diseases</value>
           </text>
           <text id="/chv_quality_monitoring/observation/areas_of_improvement:label">
             <value>What are areas for improvement identified during this visit?</value>
           </text>
           <text id="/chv_quality_monitoring/observation/note_to_supervisor_observation:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Before filling out this section of the form, please ensure that you sit down with the CHV and discuss areas where CHV did not perform well during the visit. After that outline a plan of resolving the challenges encountered and kindly give feedback where appropriate. &lt;/span&gt;</value>
+            <value>&lt;span style=&quot;color:#f58a1f&quot;&gt;Before filling out this section of the form, please ensure that you sit down with the <output value=" /chv_quality_monitoring/chw_name "/> and discuss areas where <output value=" /chv_quality_monitoring/chw_name "/> did not perform well during the visit. After that outline a plan of resolving the challenges encountered and kindly give feedback where appropriate. &lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/observation/progress_made:label">
-            <value>What progress made since the last CHV visit?</value>
+            <value>What progress made since <output value=" /chv_quality_monitoring/chw_name "/>'s last visit?</value>
           </text>
           <text id="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt/no:label">
             <value>No</value>
@@ -369,7 +412,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt:label">
-            <value>Did you receive any support from HPU, CHMT, or Dtree in resolving CHV's challenges?</value>
+            <value>Did you receive any support from HPU, CHMT, or D-tree in resolving <output value=" /chv_quality_monitoring/chw_name "/>'s challenges?</value>
           </text>
           <text id="/chv_quality_monitoring/observation:label">
             <value>Observation</value>
@@ -381,31 +424,31 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose:label">
-            <value>Did CHV explain the purpose of the topic/session?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> explain the purpose of the topic/session?</value>
           </text>
           <text id="/chv_quality_monitoring/purpose_of_visit:label">
             <value>Purpose of the visit</value>
           </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/more_than_three:label">
-            <value>More than three times</value>
-          </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/never:label">
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/0:label">
             <value>Never</value>
           </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/once:label">
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/1:label">
             <value>Once</value>
           </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/thrice:label">
-            <value>Three times</value>
-          </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/twice:label">
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/2:label">
             <value>Twice</value>
           </text>
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/3:label">
+            <value>Three times</value>
+          </text>
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/5:label">
+            <value>More than three times</value>
+          </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits:label">
-            <value>How many times did the CHV visit you in the past year?</value>
+            <value>How many times did <output value=" /chv_quality_monitoring/chw_name "/> visit you in the past year?</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/note_to_supervisor:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Ask the CHV to step out before asking the following questionsto the client.&lt;/span&gt;</value>
+            <value>&lt;span style=&quot;color:#f58a1f&quot;&gt;Ask the <output value=" /chv_quality_monitoring/chw_name "/> to step out before asking the following questions to the client.&lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client/infant_child:label">
             <value>About child</value>
@@ -414,7 +457,7 @@
             <value>About pregnancy</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client:label">
-            <value>When a CHV visited, what were the questions about ?</value>
+            <value>When <output value=" /chv_quality_monitoring/chw_name "/> visited, what were the questions about?</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns:label">
             <value>Quality Monitoring</value>
@@ -422,20 +465,26 @@
           <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions/no:label">
             <value>No</value>
           </text>
+          <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions/not_applicable:label">
+            <value>Not applicable</value>
+          </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions/yes:label">
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions:label">
-            <value>Did CHV assess all questions related to danger signs?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> assess all questions related to danger signs?</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/no:label">
             <value>No</value>
+          </text>
+          <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/not_applicable:label">
+            <value>Not applicable</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/yes:label">
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility:label">
-            <value>Did CHV encourage the client to visit the facility/take the child to the facility after identification of danger sign?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> encourage the client to visit the facility/take the child to the facility after identification of danger sign?</value>
           </text>
           <text id="/chv_quality_monitoring/referrals:label">
             <value>Referrals</value>
@@ -447,7 +496,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_app/can_chv_navigate_app:label">
-            <value>Did CHV navigate in the application, follow instructions, submit forms and sync data?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> navigate in the application, follow instructions, submit forms and sync data?</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_app:label">
             <value>Use of App</value>
@@ -459,25 +508,10 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_tools/does_chv_use_jobaids:label">
-            <value>Did CHV use job aids effectively? (Bango kitita, play &amp;communication actively guide)</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> use job aids effectively? (bango kitita, play and communication actively guide)</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_tools:label">
             <value>Use of Tools</value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_district_note:label">
-            <value>&lt;b&gt;Observer District:&lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/user_district "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_level:label">
-            <value>&lt;b&gt;Observer Level:&lt;/b&gt; Supervisor</value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_name_note:label">
-            <value>&lt;b&gt;Observer name:&lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/user_name "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_phone_note:label">
-            <value>&lt;b&gt;Observer Phone:&lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/user_phone "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/visit_date:label">
-            <value>&lt;b&gt;Visit Date: &lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/visit_date_pretty_print "/></value>
           </text>
           <text id="/chv_quality_monitoring/visit_recap/does_chv_do_visit_recap/no:label">
             <value>No</value>
@@ -486,7 +520,7 @@
             <value>Yes</value>
           </text>
           <text id="/chv_quality_monitoring/visit_recap/does_chv_do_visit_recap:label">
-            <value>Did CHV do a recap of the previous visit?</value>
+            <value>Did <output value=" /chv_quality_monitoring/chw_name "/> do a recap of the previous visit?</value>
           </text>
           <text id="/chv_quality_monitoring/visit_recap:label">
             <value>Visit Recap</value>
@@ -500,10 +534,10 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude:label">
-            <value>Je, CHV ana mtazamo chanya juu ya hali ya mteja ? (yaani hamkatishi tamaa, hamuogopeshi au kumtishia mteja wakati wa tembeleo).</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ana mtazamo chanya juu ya hali ya mteja? (yaani hamkatishi tamaa, hamuogopeshi au kumtishia mteja wakati wa tembeleo)</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/note_to_supervisor_chv_communication:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali chunguza na onyesha jinsi CHV alivoweza kuchangamana na mteja wakati wa tembeleo. &lt;/span&gt;</value>
+            <value>&lt;span style=&quot;color:#f58a1f&quot;&gt;Tafadhali chunguza na onyesha jinsi <output value=" /chv_quality_monitoring/chw_name "/> alivoweza kuchangamana na mteja wakati wa tembeleo.&lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_approachable/no:label">
             <value>Hapana</value>
@@ -512,7 +546,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_approachable:label">
-            <value>Je, CHV alikuwa na lugha au tabasamu nzuri kwa mteja?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> alikuwa na lugha au tabasamu nzuri kwa mteja?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_attentive/no:label">
             <value>Hapana</value>
@@ -521,7 +555,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_attentive:label">
-            <value>Je, CHV alimuangalia mteja na kusikiliza kwa makini muda wote wa tembeleo?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> alimuangalia mteja na kusikiliza kwa makini muda wote wa tembeleo?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_calm/no:label">
             <value>Hapana</value>
@@ -530,7 +564,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_calm:label">
-            <value>Je, CHV alikuwa mtulivu wakati wote wa tembeleo?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> alikuwa mtulivu wakati wote wa tembeleo?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_interruptive/no:label">
             <value>Hapana</value>
@@ -539,16 +573,10 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude/was_chv_interruptive:label">
-            <value>Je, CHV alikuwa anakatisha kazi za mteja?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> alikuwa anakatisha kazi za mteja?</value>
           </text>
           <text id="/chv_quality_monitoring/chv_attitude:label">
             <value>Mtazamo wa CHV</value>
-          </text>
-          <text id="/chv_quality_monitoring/chv_info/chv_name_note:label">
-            <value>&lt;b&gt;Jina la CHV : &lt;/b&gt; <output value=" /chv_quality_monitoring/contact_name "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/chv_info/chv_phone_note:label">
-            <value>&lt;b&gt;Nambari ya simu : &lt;/b&gt; <output value=" /chv_quality_monitoring/contact_phone "/></value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_encourage_discussion/no:label">
             <value>Hapana</value>
@@ -557,7 +585,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_encourage_discussion:label">
-            <value>Je, CHV anayo mawasiliano mazuri na wateja? ( anampongeza mteja anapopata matokeo chanya baada ya uchunguzi, anahimiza majadiliano yanapohitajika)</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> anayo mawasiliano mazuri na wateja? (anampongeza mteja anapopata matokeo chanya baada ya uchunguzi, anahimiza majadiliano yanapohitajika)</value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_refer_clients/no:label">
             <value>Hapana</value>
@@ -566,7 +594,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/communication/can_chv_refer_clients:label">
-            <value>Je CHV ameweza kutatua na kujibu maswali ya mteja? ( anajua ni wakati gani wa kumpa mteja rufaa kwenda kituo cha afya au kwa msimamizi)</value>
+            <value>Je <output value=" /chv_quality_monitoring/chw_name "/> ameweza kutatua na kujibu maswali ya mteja? (anajua ni wakati gani wa kumpa mteja rufaa kwenda kituo cha afya au kwa msimamizi)</value>
           </text>
           <text id="/chv_quality_monitoring/communication:label">
             <value>Mwasiliano</value>
@@ -578,7 +606,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/consenting/does_chv_ask_for_consent:label">
-            <value>Je, CHV ameomba idhini kutoka kwa mteja?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ameomba idhini kutoka kwa mteja?</value>
           </text>
           <text id="/chv_quality_monitoring/consenting:label">
             <value>Idhini</value>
@@ -587,7 +615,7 @@
             <value>&lt;span style="color:#f58a1f"&gt;Kama msimamizi wa wahudumu wa afya ya jamii, tafadhali kuwa mfano kwao kwa kuchukua tahadhari zote juu ya magonjwa ya kuambukiza pindi ukitembelea wahudumu wako. Kumbuka kutumia kitakasa mikono na kuvaa barakoa muda wote wa tembeleo.&lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/covid19_intro:label">
-            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
+            <value>Hatua za Kuchukua Pindi Unapoenda Kumtembelea Mteja Wako</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly/no:label">
             <value>Hapana</value>
@@ -599,7 +627,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly:label">
-            <value>Je, CHV amepima kwa usahihi kipimo cha MUAC?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> amepima kwa usahihi kipimo cha MUAC?</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card/no:label">
             <value>Hapana</value>
@@ -611,7 +639,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card:label">
-            <value>Je, CHV ameweza kusoma kadi ya kliniki ya mama mjamzito/ mtoto kwa usahihi?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ameweza kusoma kadi ya kliniki ya mama mjamzito/mtoto kwa usahihi?</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_enter_data_correctly/no:label">
             <value>Hapana</value>
@@ -620,7 +648,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_enter_data_correctly:label">
-            <value>Je, CHV ameingiza taarifa za mteja kwa usahihi?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ameingiza taarifa za mteja kwa usahihi?</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_validate_responses/no:label">
             <value>Hapana</value>
@@ -629,148 +657,160 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity/does_chv_validate_responses:label">
-            <value>Je, CHV ameweza kutumia kadi ya mtoto au vithibitisho vingine ili kuthibitisha majibu yaliyotolewa na mama ? Majibu kama kupumua kwa haraka kwa mtoto mchanga, mahali alipo zaliwa nk yanahitaji CHV kuthibitisha kwa kuangalia kadi, kuchunguza kwa macho nk.</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ameweza kutumia kadi ya mtoto au vithibitisho vingine ili kuthibitisha majibu yaliyotolewa na mama? (majibu kama kupumua kwa haraka kwa mtoto mchanga, mahali alipo zaliwa nk yanahitaji CHV kuthibitisha kwa kuangalia kadi, kuchunguza kwa macho nk.)</value>
           </text>
           <text id="/chv_quality_monitoring/data_validity:label">
-            <value>Uhalali wa data</value>
+            <value>Uhalali wa Data</value>
           </text>
           <text id="/chv_quality_monitoring/document_actions/contact_numbers:label">
-            <value>Ikiwa CHV atahitaji msaada wowote kutoka kwa HPU, CHMT au D-tree, tafadhali toa namba zao za simu na kumpa CHV na muhimizie CHV kuwapigia simu punde tu atakapomaliza kufanya tembeleo hili.</value>
+            <value>Ikiwa <output value=" /chv_quality_monitoring/chw_name "/> atahitaji msaada wowote kutoka kwa HPU, CHMT au D-tree, tafadhali toa namba zao za simu na kumpa <output value=" /chv_quality_monitoring/chw_name "/> na muhimizie <output value=" /chv_quality_monitoring/chw_name "/> kuwapigia simu punde tu atakapomaliza kufanya tembeleo hili.</value>
           </text>
           <text id="/chv_quality_monitoring/document_actions/provide_support:label">
-            <value>Andika usaidizi aliyoupata CHV kwa mujibu wa mtazamo wako.</value>
+            <value>Andika usaidizi aliyoupata <output value=" /chv_quality_monitoring/chw_name "/> kwa mujibu wa mtazamo wako.</value>
           </text>
           <text id="/chv_quality_monitoring/document_actions:label">
-            <value>Kuandika hatua</value>
+            <value>Kuandika Hatua</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer:label">
-            <value>Je, CHV anamshauri mteja na kumpa rufaa?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication:label">
+            <value>Je muhudumu wa afya wa kujitolea anamuuliza mlezi kuhusu matatizo anayoyapata akiwa katika shughuli za michezo na mawasiliano?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_problem_note:label">
-            <value>&lt;strong&gt;Tatizo:&lt;/strong&gt;&lt;em&gt;Mgogoro nyumbani?&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns:label">
-            <value>Je, CHV anauliza maswali ya uchunguzi?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child:label">
+            <value>Je muhudumu wa afya wa kujitolea anauliza na kuchunguza jinsi mlezi anavyo mfariji mtoto?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/counsel_or_refer_note:label">
-            <value>&lt;strong&gt;Je, CHV anauliza maswali ya uchunguzi, na ikiwa ndio, je anatoa ushauri na anampa rufaa kwa ajili ya kupata msaada zaidi katika maeneno yafuatayo:&lt;/strong&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/not_applicable:label">
+            <value>Haihusiani</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play:label">
-            <value>Je,CHV anamuelimisha kwa vitendo mzazi, ikisha anamuangalia mzazi jinsi ya kuwasiliana na kucheza na mtoto?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child:label">
+            <value>Je muhudumu wa afya wa kujitolea anauliza na kuchunguza jinsi mlezi anavyomkosoa mtoto?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone:label">
-            <value>Je, CHV hufanya uchunguzi wa hatua muhimu kwa kwa ukuwaji na maendeleo ya mtoto kulingana na umri?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk:label">
+            <value>Je muhudumu wa afya wa kujitolea anauliza na kuchunguza jinsi mlezi anacheza na kuzungumza na mtoto au namna anavyomfanya mtoto atabasamu?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_development/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_development/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer:label">
-            <value>Je, CHV anamshauri mteja na kumpa rufaa?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_development:label">
+            <value>Je muhudumu wa afya wa kujitolea anauliza na kuchunguza kuhusu hatua ya maendeleo kwa mtoto?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_problem_note:label">
-            <value>&lt;strong&gt;Tatizo:&lt;/strong&gt;&lt;em&gt;Nidhamu kali?&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns:label">
-            <value>Je, CHV anauliza maswali ya uchunguzi?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning:label">
+            <value>Je muhudumu wa afya wa kujitolea anamuuliza mlezi kama ana wasiwasi juu ya kujifunza kwa mtoto?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/caregiver_child_interaction_note:label">
+            <value>&lt;span style="color:#337ab7"&gt;Kuhusu Ukaribu na mtoto&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer:label">
-            <value>Je, CHV anamshauri mteja na kumpa rufaa?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems:label">
+            <value>Je muhudumu wa afya wa kujitoloea ana jadili na mlezi jinsi ya kutatua matatizo ili kuweza kutekeleza yaliyopendekezwa?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_problem_note:label">
-            <value>&lt;strong&gt;Tatizo:&lt;/strong&gt; &lt;em&gt;Mama ana msongo wa mawazo?&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns:label">
-            <value>Je, CHV anauliza maswali ya uchunguzi?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home:label">
+            <value>Je muhudumu wa afya wa kujitolea anamuhimiza mlezi kuendelea kucheza na mtoto nyumbani kwa kila siku?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/play_and_communication:label">
+            <value>&lt;span style="color:#337ab7"&gt;Ushauri kuhusu shughuli za kucheza na mawasiliano na mtoto&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer:label">
-            <value>Je, CHV anamshauri mteja na kumpa rufaa?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children:label">
+            <value>Je muhudumu wa afya wa kujitolea anamuuliza mlezi juu ya uchezaji wa mtoto na yeye au mwasiliano baina ya yeye na mtoto?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_problem_note:label">
-            <value>&lt;strong&gt;Tatizo:&lt;/strong&gt;&lt;em&gt;Hawana muda wa kucheza na mtoto wao&lt;/em&gt;</value>
-          </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns:label">
-            <value>Je, CHV anauliza maswali ya uchunguzi?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction:label">
+            <value>Je muhudumu wa afya wa kujitolea anapongeza na kumpa ushauri juu ya mahusiano ya mlezi na mtoto?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer:label">
-            <value>Je, CHV anamshauri mteja na kumpa rufaa?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play:label">
+            <value>Je muhudumu wa afya wa kujitolea anampongeza angalau mara moja mlezi kwa kucheza na kuwa na mawasiliano na mtoto?</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_problem_note:label">
-            <value>&lt;strong&gt;Tatizo:&lt;/strong&gt; &lt;em&gt;Mzazi anawasiwasi kuwa mwanawe anajifunza polepole?&lt;/em&gt;</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/problem_solved_on_home:label">
+            <value>&lt;span style="color:#337ab7"&gt;Utatuzi wa matatizo na changamoto za nyumbani &lt;/span&gt;</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns/no:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns/yes:label">
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns:label">
-            <value>Je, CHV anauliza maswali ya uchunguzi?</value>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity:label">
+            <value>Je muhudumu wa afya wa kujitolea anapendekeza kuhusu mawasiliano kwa kulingana na muongozo?</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity:label">
+            <value>Je muhudumu wa afya wa kujitolea ana pendekezo michezo sahihi inayotoka katika muongozo?</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy:label">
+            <value>Je muhudumu wa afya wa kujitolea ana tumia vifaa sahihi vya michezo katika kumuonyesha mlezi?</value>
           </text>
           <text id="/chv_quality_monitoring/ecd_qi_questions:label">
-            <value>Maswali kuboresha huduma za makuzi na malezi awali ya mtoto</value>
+            <value>Maswali Kuboresha Huduma za Makuzi na Malezi Awali ya Mtoto</value>
           </text>
           <text id="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary/no:label">
             <value>Hapana</value>
@@ -779,22 +819,50 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary:label">
-            <value>Je, CHV ametoa muhtasri wa tembeleo, shukrani kwa mteja na kuahidi kurudi kwenye tembeleo linalofuata?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ametoa muhtasri wa tembeleo, shukrani kwa mteja na kuahidi kurudi kwenye tembeleo linalofuata?</value>
           </text>
           <text id="/chv_quality_monitoring/ending_conversation:label">
-            <value>Muhtasari wa tembeleo</value>
+            <value>Muhtasari wa Tembeleo</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients/no:label">
+          <text id="/chv_quality_monitoring/group_summary/follow_up_again/no:label">
             <value>Hapana</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients/yes:label">
+          <text id="/chv_quality_monitoring/group_summary/follow_up_again/yes:label">
             <value>Ndio</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients:label">
-            <value>Je, CHV amewahimiza wateja wote kushiriki mazungumzo?</value>
+          <text id="/chv_quality_monitoring/group_summary/follow_up_again:label">
+            <value>Je unataka kumfuatilia tena <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
-          <text id="/chv_quality_monitoring/group_counselling:label">
-            <value>Ushauri wa kikundi</value>
+          <text id="/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/next_follow_up_date:label">
+            <value>Lini unataka kumfuatilia tena <output value=" /chv_quality_monitoring/chw_name "/>?</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_chw_info:label">
+            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**Jina la CHV:** <output value=" /chv_quality_monitoring/chw_name "/>&lt;/span&gt; 
+&lt;span&gt;**CHV ID:** <output value=" /chv_quality_monitoring/chw_id "/>&lt;/span&gt;&lt;/div&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_chw_info_title:label">
+            <value>Taarifa za CHV &lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_followup:label">
+            <value>Ufuatiliaji &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_followup_note:label">
+            <value>Kazi ya kumfuatilia <output value=" /chv_quality_monitoring/chw_name "/> itatokea tarehe *_<output value=" /chv_quality_monitoring/group_summary/c_formatted_task_date "/>_*.</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_improvement_areas:label">
+            <value><output value=" /chv_quality_monitoring/c_follow_up_areas_sw "/></value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_improvement_areas_title:label">
+            <value>Maeneo ya maboresho &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary/r_next_follow_up:label">
+            <value>Tarehe ya kumfuatilia ni **_<output value=" /chv_quality_monitoring/group_summary/c_formatted_follow_up_date "/>_**.</value>
+          </text>
+          <text id="/chv_quality_monitoring/group_summary:label">
+            <value>Muhtasari wa tembeleo</value>
           </text>
           <text id="/chv_quality_monitoring/inputs/contact/_id:label">
             <value>-</value>
@@ -802,19 +870,10 @@
           <text id="/chv_quality_monitoring/inputs/contact/name:label">
             <value>-</value>
           </text>
-          <text id="/chv_quality_monitoring/inputs/contact/phone:label">
+          <text id="/chv_quality_monitoring/inputs/contact/patient_id:label">
             <value>-</value>
           </text>
-          <text id="/chv_quality_monitoring/inputs/user/contact_id:label">
-            <value>-</value>
-          </text>
-          <text id="/chv_quality_monitoring/inputs/user/facility_id:label">
-            <value>-</value>
-          </text>
-          <text id="/chv_quality_monitoring/inputs/user/name:label">
-            <value>-</value>
-          </text>
-          <text id="/chv_quality_monitoring/inputs/user:label">
+          <text id="/chv_quality_monitoring/inputs/contact/patient_uuid:label">
             <value>-</value>
           </text>
           <text id="/chv_quality_monitoring/inputs:label">
@@ -827,7 +886,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/introduction/does_chv_introduce_themselves:label">
-            <value>Je, CHV amejitambulisha mwenyewe pamoja na majukumu yake, wageni walioko pamoja naye, ametambulisha mpango wa jamii ni afya na vifaa vya kutendea kazi?</value>
+            <value>Je,<output value=" /chv_quality_monitoring/chw_name "/> amejitambulisha mwenyewe pamoja na majukumu yake, wageni walioko pamoja naye, ametambulisha mpango wa jamii ni afya na vifaa vya kutendea kazi?</value>
           </text>
           <text id="/chv_quality_monitoring/introduction:label">
             <value>Utangulizi</value>
@@ -839,7 +898,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/ipc/does_chv_stay_one_meter:label">
-            <value>Je, CHV amechukua tahadhari za kujikinga na maambukizi ya ugonjwa wakati wa kumtembelea mteja? ( amekaa umbali wa mita moja kutoka kwa mteja)</value>
+            <value><output value=" /chv_quality_monitoring/chw_name "/> amekaa umbali wa mita moja kutoka kwa mteja.</value>
           </text>
           <text id="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures/no:label">
             <value>Hapana</value>
@@ -848,19 +907,22 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures:label">
-            <value>Je, CHV amechukua hatua za tahadhari za kujikinga na maambukizi ya ugonjwa? ( ametumia kitakasa mikono/kunawa mikoni kabla na baada ya kumfanyia mteja uchunguzi)</value>
+            <value><output value=" /chv_quality_monitoring/chw_name "/> ametumia kitakasa mikono/kunawa mikoni kabla na baada ya kumfanyia mteja uchunguzi.</value>
+          </text>
+          <text id="/chv_quality_monitoring/ipc/n_precaution_question:label">
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> amechukua hatua za tahadhari za kujikinga na maambukizi ya ugonjwa?</value>
           </text>
           <text id="/chv_quality_monitoring/ipc:label">
-            <value>Tahadhari dhidi ya magonjwa ambukizi</value>
+            <value>Tahadhari Dhidi ya Magonjwa Ambukizi</value>
           </text>
           <text id="/chv_quality_monitoring/observation/areas_of_improvement:label">
             <value>Ni maeneo gani uliyoyatambua wakati wa tembeleo yanayo hitaji maboresho zaidi?</value>
           </text>
           <text id="/chv_quality_monitoring/observation/note_to_supervisor_observation:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Kabla ya kujaza sehemu zifuatazo, hakikisha unakaa chini na CHV na kujadili maeneo yote ambayo CHV hajafanya vizuri wakati wa tembeleo lako. Baada ya hapo weka mpango mkakati wa kutatua changamoto zilizojitokeza na ahidi kurudisha mrejesho pale ikibidi.&lt;/span&gt;</value>
+            <value>&lt;span style=&quot;color:#f58a1f&quot;&gt;Kabla ya kujaza sehemu zifuatazo, hakikisha unakaa chini na <output value=" /chv_quality_monitoring/chw_name "/> na kujadili maeneo yote ambayo <output value=" /chv_quality_monitoring/chw_name "/> hajafanya vizuri wakati wa tembeleo lako. Baada ya hapo weka mpango mkakati wa kutatua changamoto zilizojitokeza na ahidi kurudisha mrejesho pale ikibidi.&lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/observation/progress_made:label">
-            <value>Ni maenedeleo gani yaliyofanywa na CHV ukilinganisha na tembeleo lililopita?</value>
+            <value>Ni maenedeleo gani yaliyofanywa na <output value=" /chv_quality_monitoring/chw_name "/> ukilinganisha na tembeleo lililopita?</value>
           </text>
           <text id="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt/no:label">
             <value>Hapana</value>
@@ -872,7 +934,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt:label">
-            <value>Je, CHMT, HPU au D-tree wamekuwa msaada katika kutatua changamoto za CHV?</value>
+            <value>Je, CHMT, HPU au D-tree wamekuwa msaada katika kutatua changamoto za <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
           <text id="/chv_quality_monitoring/observation:label">
             <value>Majadiliano</value>
@@ -884,31 +946,31 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose:label">
-            <value>Je, CHV ameeleza malengo ya tembeleo?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ameeleza malengo ya tembeleo?</value>
           </text>
           <text id="/chv_quality_monitoring/purpose_of_visit:label">
             <value>Lengo la tembeleo</value>
           </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/more_than_three:label">
-            <value>Zaidi ya mara tatu</value>
-          </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/never:label">
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/0:label">
             <value>Hajawahi kunitembelea</value>
           </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/once:label">
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/1:label">
             <value>Mara moja</value>
           </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/thrice:label">
-            <value>Mara tatu</value>
-          </text>
-          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/twice:label">
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/2:label">
             <value>Mara mbili</value>
           </text>
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/3:label">
+            <value>Mara tatu</value>
+          </text>
+          <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/5:label">
+            <value>Zaidi ya mara tatu</value>
+          </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits:label">
-            <value>Ni mara ngapi ulitembelewa na CHV huyu?</value>
+            <value>Ni mara ngapi ulitembelewa na <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/note_to_supervisor:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Muombe CHV atoke nje kidogo kabla ya kumuuliza mteja masuali yafuatayo.&lt;/span&gt;</value>
+            <value>&lt;span style=&quot;color:#f58a1f&quot;&gt;Muombe <output value=" /chv_quality_monitoring/chw_name "/> atoke nje kidogo kabla ya kumuuliza mteja masuali yafuatayo.&lt;/span&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client/infant_child:label">
             <value>Kuhusu mtoto</value>
@@ -917,28 +979,34 @@
             <value>Kuhusu ujauzito</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client:label">
-            <value>Je, alikuuliza masuali gani wakati alipokutembelea?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> alikuuliza masuali gani wakati alipokutembelea?</value>
           </text>
           <text id="/chv_quality_monitoring/quality_monitoring_qns:label">
-            <value>Ufuatiliaji wa ubora wa kazi</value>
+            <value>Ufuatiliaji wa Ubora wa Kazi</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions/no:label">
             <value>Hapana</value>
+          </text>
+          <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions/not_applicable:label">
+            <value>Haihusiani</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions/yes:label">
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_assess_all_questions:label">
-            <value>Je, CHV ametathmini maswali yote yanayo husu dalili za hatari?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> ametathmini maswali yote yanayo husu dalili za hatari?</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/no:label">
             <value>Hapana</value>
+          </text>
+          <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/not_applicable:label">
+            <value>Haihusiani</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/yes:label">
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility:label">
-            <value>Je, CHV amemuhimiza mteja kutembelea kituo cha afya/kumpeleka mtoto kituo cha afya baada ya kugundua daliliza za hatari?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> amemuhimiza mteja kutembelea kituo cha afya/kumpeleka mtoto kituo cha afya baada ya kugundua daliliza za hatari?</value>
           </text>
           <text id="/chv_quality_monitoring/referrals:label">
             <value>Rufaa</value>
@@ -950,10 +1018,10 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_app/can_chv_navigate_app:label">
-            <value>Je, CHV anatumia simu na kufuata maelekezo ya kwenye simu , amewasilisha fomu na kusawazisha taarifa?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> anatumia simu na kufuata maelekezo ya kwenye simu, amewasilisha fomu na kusawazisha taarifa?</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_app:label">
-            <value>Utumiaji wa app</value>
+            <value>Utumiaji wa App</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_tools/does_chv_use_jobaids/no:label">
             <value>Hapana</value>
@@ -962,28 +1030,10 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_tools/does_chv_use_jobaids:label">
-            <value>Je, CHV anatumia visaidizi vya kazi sawa sawa ? ( bango kitita, michezo na miongozo ya mawasiliano)</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> anatumia visaidizi vya kazi sawa sawa? (bango kitita, michezo na miongozo ya mawasiliano)</value>
           </text>
           <text id="/chv_quality_monitoring/use_of_tools:label">
-            <value>Utumiaj wa visadizi vya kazi</value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_district_note:label">
-            <value>&lt;b&gt;Wilaya:&lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/user_district "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_level:label">
-            <value>&lt;b&gt;Cheo:&lt;/b&gt; Supervisor</value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_name_note:label">
-            <value>&lt;b&gt;Jina la supervisor:&lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/user_name "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/observer_phone_note:label">
-            <value>&lt;b&gt;Nambari ya simu:&lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/user_phone "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info/visit_date:label">
-            <value>&lt;b&gt;Tarehe ya tembeleo: &lt;/b&gt; <output value=" /chv_quality_monitoring/visit_info/visit_date_pretty_print "/></value>
-          </text>
-          <text id="/chv_quality_monitoring/visit_info:label">
-            <value>-</value>
+            <value>Utumiaji wa Visadizi vya Kazi</value>
           </text>
           <text id="/chv_quality_monitoring/visit_recap/does_chv_do_visit_recap/no:label">
             <value>Hapana</value>
@@ -992,7 +1042,7 @@
             <value>Ndio</value>
           </text>
           <text id="/chv_quality_monitoring/visit_recap/does_chv_do_visit_recap:label">
-            <value>Je, CHV amerudia kukumbusha kuhusu tembeleo lililopita?</value>
+            <value>Je, <output value=" /chv_quality_monitoring/chw_name "/> amerudia kukumbusha kuhusu tembeleo lililopita?</value>
           </text>
           <text id="/chv_quality_monitoring/visit_recap:label">
             <value>Temebeleo Lililopita</value>
@@ -1000,7 +1050,7 @@
         </translation>
       </itext>
       <instance>
-        <chv_quality_monitoring id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" delimiter="#">
+        <chv_quality_monitoring id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" delimiter="#" version="2022-08-10 09:14:03">
           <inputs>
             <meta>
               <location>
@@ -1010,48 +1060,25 @@
                 <message/>
               </location>
             </meta>
-            <user>
-              <contact_id/>
-              <facility_id/>
-              <name/>
-            </user>
+            <source/>
+            <source_id/>
+            <task_id/>
             <contact>
               <_id/>
+              <patient_id/>
+              <patient_uuid/>
               <name/>
-              <phone/>
             </contact>
           </inputs>
+          <_id/>
           <patient_id/>
-          <created_by_person_uuid/>
-          <created_by_place_uuid/>
-          <contact_name/>
-          <contact_phone/>
-          <visit_count/>
-          <start/>
-          <end/>
+          <chw_id/>
+          <chw_name/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
-          <visit_info>
-            <_id/>
-            <phone/>
-            <name/>
-            <district/>
-            <user_phone/>
-            <user_district/>
-            <user_name/>
-            <visit_date_pretty_print/>
-            <visit_date/>
-            <observer_name_note/>
-            <observer_phone_note/>
-            <observer_district_note/>
-            <observer_level/>
-          </visit_info>
-          <chv_info>
-            <chv_name_note/>
-            <chv_phone_note/>
-          </chv_info>
           <ipc>
+            <n_precaution_question/>
             <does_chv_take_precautionary_measures/>
             <does_chv_stay_one_meter/>
           </ipc>
@@ -1095,28 +1122,24 @@
             <does_chv_encourage_client_facility/>
             <does_chv_assess_all_questions/>
           </referrals>
-          <group_counselling>
-            <does_chv_encourage_clients/>
-          </group_counselling>
           <ecd_qi_questions>
-            <does_chv_screen_age_milestone/>
-            <does_chv_demonstrate_play/>
-            <counsel_or_refer_note/>
-            <slow_to_learn_problem_note/>
-            <slow_to_learn_screening_qns/>
-            <slow_to_learn_counsel_or_refer/>
-            <no_time_to_play_problem_note/>
-            <no_time_to_play_screening_qns/>
-            <no_time_to_play_counsel_or_refer/>
-            <maternal_stress_problem_note/>
-            <maternal_stress_screening_qns/>
-            <maternal_stress_counsel_or_refer/>
-            <harsh_discipline_problem_note/>
-            <harsh_discipline_screening_qns/>
-            <harsh_discipline_counsel_or_refer/>
-            <conflict_in_home_problem_note/>
-            <conflict_in_home_screening_qns/>
-            <conflict_in_home_counsel_or_refer/>
+            <caregiver_child_interaction_note/>
+            <asks_child_learning/>
+            <asks_child_development/>
+            <asks_caregiver_play_and_talk/>
+            <asks_caregiver_comfort_child/>
+            <asks_caregiver_corrects_child/>
+            <praise_caregiver_child_interaction/>
+            <play_and_communication/>
+            <suggests_play_and_activity/>
+            <suggests_communication_activity/>
+            <use_appropriate_toy/>
+            <practice_play_with_children/>
+            <praise_caregiver_for_interactive_play/>
+            <problem_solved_on_home/>
+            <encourage_continue_play_at_home/>
+            <ask_problems_play_communication/>
+            <discuss_solve_problems/>
           </ecd_qi_questions>
           <ending_conversation>
             <does_chv_provide_visitsummary/>
@@ -1136,48 +1159,47 @@
             <provide_support/>
             <contact_numbers/>
           </document_actions>
+          <c_follow_up_areas/>
+          <c_follow_up_areas_sw/>
+          <c_needs_follow_up/>
+          <group_summary>
+            <r_chw_info_title/>
+            <r_chw_info/>
+            <r_improvement_areas_title/>
+            <r_improvement_areas/>
+            <r_followup/>
+            <follow_up_again/>
+            <next_follow_up_date/>
+            <c_formatted_follow_up_date/>
+            <r_next_follow_up/>
+            <c_formatted_task_date/>
+            <r_followup_note/>
+          </group_summary>
           <meta tag="hidden">
             <instanceID/>
+            <instanceName/>
           </meta>
         </chv_quality_monitoring>
       </instance>
       <instance id="contact-summary"/>
-      <bind nodeset="/chv_quality_monitoring/inputs" relevant="false()"/>
-      <bind nodeset="/chv_quality_monitoring/inputs/user/contact_id" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/inputs/user/facility_id" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/inputs/user/name" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/inputs/contact/_id" type="db:person"/>
-      <bind nodeset="/chv_quality_monitoring/inputs/contact/name" type="db:person"/>
-      <bind nodeset="/chv_quality_monitoring/inputs/contact/phone" type="db:person"/>
+      <bind nodeset="/chv_quality_monitoring/inputs" relevant="./source='user'"/>
+      <bind nodeset="/chv_quality_monitoring/inputs/source" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/inputs/source_id" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/inputs/task_id" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/inputs/contact/_id" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/inputs/contact/patient_uuid" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/inputs/contact/name" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/_id" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/chv_quality_monitoring/patient_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/chv_quality_monitoring/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
-      <bind nodeset="/chv_quality_monitoring/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
-      <bind nodeset="/chv_quality_monitoring/contact_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/chv_quality_monitoring/contact_phone" type="string" calculate="../inputs/contact/phone"/>
-      <bind nodeset="/chv_quality_monitoring/visit_count" type="string" calculate="instance('contact-summary')/context/quality_monitoring_count"/>
-      <bind nodeset="/chv_quality_monitoring/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
-      <bind nodeset="/chv_quality_monitoring/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/chv_quality_monitoring/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/chv_quality_monitoring/chw_name" type="string" calculate="../inputs/contact/name"/>
       <bind nodeset="/chv_quality_monitoring/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/_id" type="string" calculate=" /chv_quality_monitoring/inputs/user/contact_id "/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/phone" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/name" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/district" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/user_phone" type="string" calculate="../phone"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/user_district" type="string" calculate="../district"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/user_name" type="string" calculate="../name"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/visit_date_pretty_print" type="string" calculate="format-date(today(), &quot;%d-%m-%Y&quot;)"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/visit_date" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/observer_name_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/observer_phone_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/observer_district_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/visit_info/observer_level" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/chv_info/chv_name_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/chv_info/chv_phone_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/ipc/n_precaution_question" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/ipc/does_chv_stay_one_meter" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/introduction/does_chv_introduce_themselves" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/consenting/does_chv_ask_for_consent" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/visit_recap" relevant=" /chv_quality_monitoring/visit_count  &gt; 0"/>
       <bind nodeset="/chv_quality_monitoring/visit_recap/does_chv_do_visit_recap" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude" type="select1" required="true()"/>
@@ -1196,88 +1218,198 @@
       <bind nodeset="/chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/referrals/does_chv_assess_all_questions" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/counsel_or_refer_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_problem_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer" type="select1" required="true()" relevant="selected( /chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns ,&quot;yes&quot;)"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_problem_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer" type="select1" required="true()" relevant="selected( /chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns ,&quot;yes&quot;)"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_problem_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer" type="select1" required="true()" relevant="selected( /chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns ,&quot;yes&quot;)"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_problem_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer" type="select1" required="true()" relevant="selected( /chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns ,&quot;yes&quot;)"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_problem_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer" type="select1" required="true()" relevant="selected( /chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns ,&quot;yes&quot;)"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/caregiver_child_interaction_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_child_development" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/play_and_communication" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/problem_solved_on_home" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/note_to_supervisor" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client" type="select1" required="true()" relevant="not(selected( /chv_quality_monitoring/quality_monitoring_qns/count_chv_visits ,&quot;never&quot;))"/>
       <bind nodeset="/chv_quality_monitoring/observation/note_to_supervisor_observation" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/observation/areas_of_improvement" type="string" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/observation/progress_made" type="string" required="true()" relevant=" /chv_quality_monitoring/visit_count  &gt; 0"/>
-      <bind nodeset="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt" type="select1" required="true()" relevant=" /chv_quality_monitoring/visit_count  &gt; 0"/>
+      <bind nodeset="/chv_quality_monitoring/observation/progress_made" type="string" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/document_actions/provide_support" type="string" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/document_actions/contact_numbers" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/c_follow_up_areas" type="string" calculate="concat(
+if(selected( /chv_quality_monitoring/ipc/n_precaution_question , 'no'), 'Precaution, ', ''),
+if(selected( /chv_quality_monitoring/ipc/does_chv_stay_one_meter , 'no'), 'Social distance, ', ''),
+if(selected( /chv_quality_monitoring/introduction/does_chv_introduce_themselves , 'no'), 'Introduction, ', ''),
+if(selected( /chv_quality_monitoring/consenting/does_chv_ask_for_consent , 'no'), 'Consent, ', ''),
+if(selected( /chv_quality_monitoring/visit_recap/does_chv_do_visit_recap , 'no'), 'Visit recap, ', ''),
+if(selected( /chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose , 'no'), 'Visit purpose, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude , 'no'), 'Attitude, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_calm , 'no'), 'Calmness, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_attentive , 'no'), 'Attention, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_approachable , 'no'), 'Approachable, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_interruptive , 'yes'), 'Interuption, ', ''),
+if(selected( /chv_quality_monitoring/use_of_app/can_chv_navigate_app , 'no'), 'App navigation, ', ''),
+
+if(selected( /chv_quality_monitoring/communication/can_chv_refer_clients , 'no'), 'Client referrals, ', ''),
+if(selected( /chv_quality_monitoring/communication/can_chv_encourage_discussion , 'no'), 'Encouraging discussion, ', ''),
+
+if(selected( /chv_quality_monitoring/data_validity/does_chv_validate_responses , 'no'), 'Validating responses, ', ''),
+if(selected( /chv_quality_monitoring/data_validity/does_chv_enter_data_correctly , 'no'), 'Data entry, ', ''),
+if(selected( /chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly , 'no'), 'Reading MUAC, ', ''),
+if(selected( /chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card , 'no'), 'Reading clinic card, ', ''),
+if(selected( /chv_quality_monitoring/referrals/does_chv_encourage_client_facility , 'no'), 'Encouraging client facility, ', ''),
+if(selected( /chv_quality_monitoring/referrals/does_chv_assess_all_questions , 'no'), 'Accessing all questions, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_child_learning , 'no'), 'Child learning Concern, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_child_development , 'no'), 'Child development stage, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk , 'no'), 'Playing and talking with child, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child , 'no'), 'Comforting child, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child , 'no'), 'Correcting child, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction , 'no'), 'Praise/Advise caregiver child interaction, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity , 'no'), 'Appropriate play activity question, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity , 'no'), 'Communication activity question, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy , 'no'), 'Appropriate toy question, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/practice_play_with_children , 'no'), 'Practice play with children, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play , 'no'), 'Praise for interactive play, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home , 'no'), 'Encourage continue play at home, ', ''), 
+if(selected( /chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication , 'no'), 'Play activities at home, ', ''), 
+if(selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no'), 'Discuss solving problems, ', ''),)"/>
+      <bind nodeset="/chv_quality_monitoring/c_follow_up_areas_sw" type="string" calculate="concat(
+if(selected( /chv_quality_monitoring/ipc/n_precaution_question , 'no'), 'Tahadhari, ', ''),
+if(selected( /chv_quality_monitoring/ipc/does_chv_stay_one_meter , 'no'), 'Kukaa mbali, ', ''),
+if(selected( /chv_quality_monitoring/introduction/does_chv_introduce_themselves , 'no'), 'Utangulizi, ', ''),
+if(selected( /chv_quality_monitoring/consenting/does_chv_ask_for_consent , 'no'), 'Ridhaa, ', ''),
+if(selected( /chv_quality_monitoring/visit_recap/does_chv_do_visit_recap , 'no'), 'Muhtasari wa tembeleo, ', ''),
+if(selected( /chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose , 'no'), 'Dhumuni la tembeleo, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude , 'no'), 'Mtazamo, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_calm , 'no'), 'Utulivu, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_attentive , 'no'), 'Umakini, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_approachable , 'no'), 'Kufikika, ', ''),
+if(selected( /chv_quality_monitoring/chv_attitude/was_chv_interruptive , 'yes'), 'Usumbufu, ', ''),
+if(selected( /chv_quality_monitoring/use_of_app/can_chv_navigate_app , 'no'), 'Utumiaji wa app, ', ''),
+
+if(selected( /chv_quality_monitoring/communication/can_chv_refer_clients , 'no'), 'Rufaa kwa mteja, ', ''),
+if(selected( /chv_quality_monitoring/communication/can_chv_encourage_discussion , 'no'), 'Kuhamasisha majadiliano, ', ''),
+
+if(selected( /chv_quality_monitoring/data_validity/does_chv_validate_responses , 'no'), 'Kuhalalisha majibu, ', ''),
+if(selected( /chv_quality_monitoring/data_validity/does_chv_enter_data_correctly , 'no'), 'Uingizaji wa data, ', ''),
+if(selected( /chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly , 'no'), 'Usomaji wa MUAC, ', ''),
+if(selected( /chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card , 'no'), 'Usomaji wa kadi ya kliniki, ', ''),
+
+if(selected( /chv_quality_monitoring/referrals/does_chv_encourage_client_facility , 'no'), 'Kuhimiza mteja kuenda kituo cha afya, ', ''),
+
+if(selected( /chv_quality_monitoring/referrals/does_chv_assess_all_questions , 'no'), 'Kutathmini maswali yote, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_child_learning , 'no'), 'Kuzingatia juu ya kujifunza kwa mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_child_development , 'no'), 'Hatua za ukuaji wa mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk , 'no'), 'Kucheza na kuongea na mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child , 'no'), 'Kumfariji mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child , 'no'), 'Kumkosoa mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction , 'no'), 'Kumpongeza na kumshauri mlezi kuhusu kucheza na mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity , 'no'), 'Maswali sahihi juu ya michezo, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity , 'no'), 'Maswali sahihi juu ya mawasiliano, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy , 'no'), 'Maswali sahihi juu ya vifaa vya kuchezea mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/practice_play_with_children , 'no'), 'Kucheza na watoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play , 'no'), 'Kupongeza mlezi kwa kucheza na mtoto, ', ''),
+if(selected( /chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home , 'no'), 'Kuhimiza uendelezo wa kucheza ukiwa nyumbani, ', ''), 
+if(selected( /chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication , 'no'), 'Shughuli za michezo ukiwa nyumbani, ', ''), 
+if(selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no'), 'Jadili kutatua matatizo, ', ''),)"/>
+      <bind nodeset="/chv_quality_monitoring/c_needs_follow_up" type="string" calculate="if((selected( /chv_quality_monitoring/ipc/n_precaution_question , 'no')
+or selected( /chv_quality_monitoring/ipc/does_chv_stay_one_meter , 'no')
+
+or selected( /chv_quality_monitoring/introduction/does_chv_introduce_themselves , 'no')
+
+or selected( /chv_quality_monitoring/consenting/does_chv_ask_for_consent , 'no')
+
+or selected( /chv_quality_monitoring/visit_recap/does_chv_do_visit_recap , 'no')
+
+or selected( /chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose , 'no')
+
+or selected( /chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude , 'no')
+or selected( /chv_quality_monitoring/chv_attitude/was_chv_calm , 'no')
+or selected( /chv_quality_monitoring/chv_attitude/was_chv_attentive , 'no')
+or selected( /chv_quality_monitoring/chv_attitude/was_chv_approachable , 'no')
+or selected( /chv_quality_monitoring/chv_attitude/was_chv_interruptive , 'yes')
+
+or selected( /chv_quality_monitoring/use_of_app/can_chv_navigate_app , 'no')
+
+or selected( /chv_quality_monitoring/communication/can_chv_refer_clients , 'no')
+or selected( /chv_quality_monitoring/communication/can_chv_encourage_discussion , 'no')
+
+or selected( /chv_quality_monitoring/data_validity/does_chv_validate_responses , 'no')
+or selected( /chv_quality_monitoring/data_validity/does_chv_enter_data_correctly , 'no')
+or selected( /chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly , 'no')
+or selected( /chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card , 'no')
+
+or selected( /chv_quality_monitoring/referrals/does_chv_encourage_client_facility , 'no')
+
+or selected( /chv_quality_monitoring/referrals/does_chv_assess_all_questions , 'no')
+
+or selected( /chv_quality_monitoring/ecd_qi_questions/asks_child_learning , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/asks_child_development , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/practice_play_with_children , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home , 'no'),
+or selected( /chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication , 'no')
+or selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no')),'yes', 'no')"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_chw_info_title" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_chw_info" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_improvement_areas_title" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_improvement_areas" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_followup" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/follow_up_again" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/next_follow_up_date" type="date" constraint=". &gt; today()" required="true()" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" jr:constraintMsg="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg')"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_follow_up_date" type="string" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" calculate="format-date( /chv_quality_monitoring/group_summary/next_follow_up_date , '%a %e %b %Y')"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_next_follow_up" readonly="true()" type="string" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /chv_quality_monitoring/group_summary/next_follow_up_date ) - 2), '%a %e %b %Y')"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_followup_note" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/chv_quality_monitoring/meta/instanceName" type="string" calculate="D-tree"/>
     </model>
   </h:head>
   <h:body class="pages">
-    <group ref="/chv_quality_monitoring/inputs">
-      <group ref="/chv_quality_monitoring/inputs/user">
-        <input ref="/chv_quality_monitoring/inputs/user/facility_id">
-          <label ref="jr:itext('/chv_quality_monitoring/inputs/user/facility_id:label')"/>
-        </input>
-        <input ref="/chv_quality_monitoring/inputs/user/name">
-          <label ref="jr:itext('/chv_quality_monitoring/inputs/user/name:label')"/>
-        </input>
-      </group>
+    <group appearance="field-list" ref="/chv_quality_monitoring/inputs">
+      <label ref="jr:itext('/chv_quality_monitoring/inputs:label')"/>
       <group ref="/chv_quality_monitoring/inputs/contact">
-        <input appearance="db-object" ref="/chv_quality_monitoring/inputs/contact/_id"/>
-        <input appearance="db-object" ref="/chv_quality_monitoring/inputs/contact/name"/>
-        <input appearance="db-object" ref="/chv_quality_monitoring/inputs/contact/phone"/>
+        <input appearance="select-contact type-person" ref="/chv_quality_monitoring/inputs/contact/_id">
+          <label ref="jr:itext('/chv_quality_monitoring/inputs/contact/_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chv_quality_monitoring/inputs/contact/patient_id">
+          <label ref="jr:itext('/chv_quality_monitoring/inputs/contact/patient_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chv_quality_monitoring/inputs/contact/patient_uuid">
+          <label ref="jr:itext('/chv_quality_monitoring/inputs/contact/patient_uuid:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chv_quality_monitoring/inputs/contact/name">
+          <label ref="jr:itext('/chv_quality_monitoring/inputs/contact/name:label')"/>
+        </input>
       </group>
     </group>
-    <group ref="/chv_quality_monitoring/covid19_intro">
+    <group appearance="field-list" ref="/chv_quality_monitoring/covid19_intro">
       <label ref="jr:itext('/chv_quality_monitoring/covid19_intro:label')"/>
       <input ref="/chv_quality_monitoring/covid19_intro/covid19_intro_note">
         <label ref="jr:itext('/chv_quality_monitoring/covid19_intro/covid19_intro_note:label')"/>
       </input>
     </group>
-    <group appearance="field-list" ref="/chv_quality_monitoring/visit_info">
-      <input appearance="db-object hidden" ref="/chv_quality_monitoring/visit_info/_id"/>
-      <input ref="/chv_quality_monitoring/visit_info/visit_date">
-        <label ref="jr:itext('/chv_quality_monitoring/visit_info/visit_date:label')"/>
-      </input>
-      <input ref="/chv_quality_monitoring/visit_info/observer_name_note">
-        <label ref="jr:itext('/chv_quality_monitoring/visit_info/observer_name_note:label')"/>
-      </input>
-      <input ref="/chv_quality_monitoring/visit_info/observer_phone_note">
-        <label ref="jr:itext('/chv_quality_monitoring/visit_info/observer_phone_note:label')"/>
-      </input>
-      <input ref="/chv_quality_monitoring/visit_info/observer_district_note">
-        <label ref="jr:itext('/chv_quality_monitoring/visit_info/observer_district_note:label')"/>
-      </input>
-      <input ref="/chv_quality_monitoring/visit_info/observer_level">
-        <label ref="jr:itext('/chv_quality_monitoring/visit_info/observer_level:label')"/>
-      </input>
-    </group>
-    <group appearance="field-list" ref="/chv_quality_monitoring/chv_info">
-      <input ref="/chv_quality_monitoring/chv_info/chv_name_note">
-        <label ref="jr:itext('/chv_quality_monitoring/chv_info/chv_name_note:label')"/>
-      </input>
-      <input ref="/chv_quality_monitoring/chv_info/chv_phone_note">
-        <label ref="jr:itext('/chv_quality_monitoring/chv_info/chv_phone_note:label')"/>
-      </input>
-    </group>
     <group appearance="field-list" ref="/chv_quality_monitoring/ipc">
       <label ref="jr:itext('/chv_quality_monitoring/ipc:label')"/>
+      <input ref="/chv_quality_monitoring/ipc/n_precaution_question">
+        <label ref="jr:itext('/chv_quality_monitoring/ipc/n_precaution_question:label')"/>
+      </input>
       <select1 ref="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures">
         <label ref="jr:itext('/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures:label')"/>
         <item>
@@ -1538,6 +1670,10 @@
           <label ref="jr:itext('/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/no:label')"/>
           <value>no</value>
         </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/referrals/does_chv_encourage_client_facility/not_applicable:label')"/>
+          <value>not_applicable</value>
+        </item>
       </select1>
       <select1 ref="/chv_quality_monitoring/referrals/does_chv_assess_all_questions">
         <label ref="jr:itext('/chv_quality_monitoring/referrals/does_chv_assess_all_questions:label')"/>
@@ -1549,171 +1685,178 @@
           <label ref="jr:itext('/chv_quality_monitoring/referrals/does_chv_assess_all_questions/no:label')"/>
           <value>no</value>
         </item>
-      </select1>
-    </group>
-    <group appearance="field-list" ref="/chv_quality_monitoring/group_counselling">
-      <label ref="jr:itext('/chv_quality_monitoring/group_counselling:label')"/>
-      <select1 ref="/chv_quality_monitoring/group_counselling/does_chv_encourage_clients">
-        <label ref="jr:itext('/chv_quality_monitoring/group_counselling/does_chv_encourage_clients:label')"/>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/group_counselling/does_chv_encourage_clients/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/group_counselling/does_chv_encourage_clients/no:label')"/>
-          <value>no</value>
+          <label ref="jr:itext('/chv_quality_monitoring/referrals/does_chv_assess_all_questions/not_applicable:label')"/>
+          <value>not_applicable</value>
         </item>
       </select1>
     </group>
     <group appearance="field-list" ref="/chv_quality_monitoring/ecd_qi_questions">
       <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions:label')"/>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone:label')"/>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/does_chv_screen_age_milestone/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play:label')"/>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/does_chv_demonstrate_play/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/chv_quality_monitoring/ecd_qi_questions/counsel_or_refer_note">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/counsel_or_refer_note:label')"/>
+      <input ref="/chv_quality_monitoring/ecd_qi_questions/caregiver_child_interaction_note">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/caregiver_child_interaction_note:label')"/>
       </input>
-      <input ref="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_problem_note">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_problem_note:label')"/>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_child_learning:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_child_learning/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_child_learning/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/asks_child_development">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_child_development:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_child_development/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_child_development/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/no:label')"/>
+          <value>no</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child/not_applicable:label')"/>
+          <value>not_applicable</value>
+        </item>
+      </select1>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/chv_quality_monitoring/ecd_qi_questions/play_and_communication">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/play_and_communication:label')"/>
       </input>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns:label')"/>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity:label')"/>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns/yes:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_screening_qns/no:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer:label')"/>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity:label')"/>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer/yes:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/slow_to_learn_counsel_or_refer/no:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <input ref="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_problem_note">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_problem_note:label')"/>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/use_appropriate_toy/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/practice_play_with_children/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/chv_quality_monitoring/ecd_qi_questions/problem_solved_on_home">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/problem_solved_on_home:label')"/>
       </input>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns:label')"/>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home:label')"/>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns/yes:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_screening_qns/no:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer:label')"/>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication:label')"/>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer/yes:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/no_time_to_play_counsel_or_refer/no:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication/no:label')"/>
           <value>no</value>
         </item>
       </select1>
-      <input ref="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_problem_note">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/maternal_stress_problem_note:label')"/>
-      </input>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns:label')"/>
+      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems">
+        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems:label')"/>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns/yes:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems/yes:label')"/>
           <value>yes</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/maternal_stress_screening_qns/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer:label')"/>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/maternal_stress_counsel_or_refer/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_problem_note">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_problem_note:label')"/>
-      </input>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns:label')"/>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_screening_qns/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer:label')"/>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/harsh_discipline_counsel_or_refer/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_problem_note">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_problem_note:label')"/>
-      </input>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns:label')"/>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_screening_qns/no:label')"/>
-          <value>no</value>
-        </item>
-      </select1>
-      <select1 ref="/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer">
-        <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer:label')"/>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer/yes:label')"/>
-          <value>yes</value>
-        </item>
-        <item>
-          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/conflict_in_home_counsel_or_refer/no:label')"/>
+          <label ref="jr:itext('/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems/no:label')"/>
           <value>no</value>
         </item>
       </select1>
@@ -1740,24 +1883,24 @@
       <select1 ref="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits">
         <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits:label')"/>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/never:label')"/>
-          <value>never</value>
+          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/0:label')"/>
+          <value>0</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/once:label')"/>
-          <value>once</value>
+          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/1:label')"/>
+          <value>1</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/twice:label')"/>
-          <value>twice</value>
+          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/2:label')"/>
+          <value>2</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/thrice:label')"/>
-          <value>thrice</value>
+          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/3:label')"/>
+          <value>3</value>
         </item>
         <item>
-          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/more_than_three:label')"/>
-          <value>more_than_three</value>
+          <label ref="jr:itext('/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits/5:label')"/>
+          <value>5</value>
         </item>
       </select1>
       <select1 ref="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client">
@@ -1806,6 +1949,44 @@
       </input>
       <input ref="/chv_quality_monitoring/document_actions/contact_numbers">
         <label ref="jr:itext('/chv_quality_monitoring/document_actions/contact_numbers:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list summary" ref="/chv_quality_monitoring/group_summary">
+      <label ref="jr:itext('/chv_quality_monitoring/group_summary:label')"/>
+      <input appearance="h2 blue" ref="/chv_quality_monitoring/group_summary/r_chw_info_title">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/r_chw_info_title:label')"/>
+      </input>
+      <input ref="/chv_quality_monitoring/group_summary/r_chw_info">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/r_chw_info:label')"/>
+      </input>
+      <input appearance="h2 red" ref="/chv_quality_monitoring/group_summary/r_improvement_areas_title">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/r_improvement_areas_title:label')"/>
+      </input>
+      <input ref="/chv_quality_monitoring/group_summary/r_improvement_areas">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/r_improvement_areas:label')"/>
+      </input>
+      <input appearance="h2 red" ref="/chv_quality_monitoring/group_summary/r_followup">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/r_followup:label')"/>
+      </input>
+      <select1 ref="/chv_quality_monitoring/group_summary/follow_up_again">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/follow_up_again:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/group_summary/follow_up_again/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_quality_monitoring/group_summary/follow_up_again/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/chv_quality_monitoring/group_summary/next_follow_up_date">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:label')"/>
+      </input>
+      <input ref="/chv_quality_monitoring/group_summary/r_next_follow_up">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/r_next_follow_up:label')"/>
+      </input>
+      <input ref="/chv_quality_monitoring/group_summary/r_followup_note">
+        <label ref="jr:itext('/chv_quality_monitoring/group_summary/r_followup_note:label')"/>
       </input>
     </group>
   </h:body>

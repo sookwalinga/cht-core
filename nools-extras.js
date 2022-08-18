@@ -1,8 +1,6 @@
-function get(obj,field){
-  if(!obj){return;}
-  var parts=field.split('.');
-  for(var f of parts){ if(!obj[f]){return;} obj=obj[f];}
-  return obj;
+function get(obj, field,defaultValue) {
+  return obj && field && field.split('.')
+    .reduce((a, b) => a && a[b]||defaultValue, obj);
 }
 module.exports = {
 

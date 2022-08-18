@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>CHW Monthly Meeting</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/chw_monthly_meeting/group_summary/r_followup_note:label">
+            <value>A monthly meeting task will appear on *_<output value=" /chw_monthly_meeting/group_summary/c_formatted_task_date "/>_*.</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_next_meeting:label">
+            <value>Next meeting on **_<output value=" /chw_monthly_meeting/group_summary/c_formatted_next_meeting_date "/>_**</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_next_meeting_title:label">
+            <value>Next Meeting</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_topics_covered:label">
+            <value><output value=" /chw_monthly_meeting/meeting_details/topics "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_topics_covered_title:label">
+            <value>Topics Covered</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary:label">
+            <value>Summary</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/_id:label">
+            <value>Place ID</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/name:label">
+            <value>Place Name</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/patient_id:label">
+            <value>Medic ID</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/patient_uuid:label">
+            <value>Patient UUID</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/place_id:label">
+            <value>Medic ID</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs:label">
+            <value>Inputs</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv:label">
+            <value>CHV</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/absent_chvs:label">
+            <value>Select the absent CHVs if any:</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/actions:label">
+            <value>What are the actions you have taken to resolve the challenges?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/attended:jr:constraintMsg">
+            <value>Invalid number</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/attended:label">
+            <value>How many CHVs attended the meeting?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/challenges:label">
+            <value>What challenges are CHVs experiencing?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/not_attended:jr:constraintMsg">
+            <value>Invalid number</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/not_attended:label">
+            <value>How many CHVs did not attend the meeting?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/topics:label">
+            <value>What topics have you covered during the meeting?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details:label">
+            <value>Meeting Details</value>
+          </text>
+          <text id="/chw_monthly_meeting/next_meeting_details/next_meeting_date:jr:constraintMsg">
+            <value>Date cannot be a past date or today</value>
+          </text>
+          <text id="/chw_monthly_meeting/next_meeting_details/next_meeting_date:label">
+            <value>Please indicate the date of the next monthly meeting:</value>
+          </text>
+          <text id="/chw_monthly_meeting/next_meeting_details:label">
+            <value>Next Meeting</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting/meeting_option/future:label">
+            <value>Another date</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting/meeting_option/now:label">
+            <value>Now</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting/meeting_option:label">
+            <value>When are you planning to conduct the monthly meeting?</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting:label">
+            <value>Planned Meeting</value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting/absentees:label">
+            <value>&lt;b&gt;Absentees:&lt;/b&gt; <output value=" /chw_monthly_meeting/latest_monthly_meeting_absentees "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting/meeting_date:label">
+            <value>&lt;b&gt;Meeting Date:&lt;/b&gt; <output value=" /chw_monthly_meeting/latest_monthly_meeting_date "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting/meeting_topic:label">
+            <value>&lt;b&gt;Meeting Topic:&lt;/b&gt; <output value=" /chw_monthly_meeting/latest_monthly_meeting_topic "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting:label">
+            <value>Previous meeting</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/chw_monthly_meeting/group_summary/c_formatted_next_meeting_date:label">
+            <value>-</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_followup_note:label">
+            <value>Kazi ya mkutano wa mzewi itatokea *_<output value=" /chw_monthly_meeting/group_summary/c_formatted_task_date "/>_*.</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_next_meeting:label">
+            <value>Mkutano ujao ni **_<output value=" /chw_monthly_meeting/group_summary/c_formatted_next_meeting_date "/>_**</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_next_meeting_title:label">
+            <value>Mkutano Ujao</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_topics_covered:label">
+            <value><output value=" /chw_monthly_meeting/meeting_details/topics "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary/r_topics_covered_title:label">
+            <value>Mada Zilizozungumzwa</value>
+          </text>
+          <text id="/chw_monthly_meeting/group_summary:label">
+            <value>Muhtasari</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/patient_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/patient_uuid:label">
+            <value>-</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs/contact/place_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chw_monthly_meeting/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv:label">
+            <value>CHV</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/absent_chvs:label">
+            <value>Tafadhali chagua CHV waliokuwa hawajahudhuria:</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/actions:label">
+            <value>Ni hatua gani zimechukuliwa kutatua hizo changamoto?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/attended:jr:constraintMsg">
+            <value>Idadi uliyochagua haikubaliki</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/attended:label">
+            <value>CHV wangapi walihudhuria mkutano?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/challenges:label">
+            <value>Ni changamoto zipi ambazo CHV walipata?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/not_attended:jr:constraintMsg">
+            <value>Idadi uliyochagua haikubaliki</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/not_attended:label">
+            <value>CHV wangapi hawakuhudhuria mkutano?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details/topics:label">
+            <value>Ni mada gani ambazo zilizungumziwa wakati wa mkutano?</value>
+          </text>
+          <text id="/chw_monthly_meeting/meeting_details:label">
+            <value>Taarifa za mkutano</value>
+          </text>
+          <text id="/chw_monthly_meeting/next_meeting_details/next_meeting_date:jr:constraintMsg">
+            <value>Huwezi kuchagua tarehe ya leo au ya nyuma</value>
+          </text>
+          <text id="/chw_monthly_meeting/next_meeting_details/next_meeting_date:label">
+            <value>Tafadhali chagua tarehe ya mkutano ujao:</value>
+          </text>
+          <text id="/chw_monthly_meeting/next_meeting_details:label">
+            <value>Mkutano Ujao</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting/meeting_option/future:label">
+            <value>Siku nyengine</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting/meeting_option/now:label">
+            <value>Sasa hivi</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting/meeting_option:label">
+            <value>Lini unategemea kufanya mkutano wa mwezi?</value>
+          </text>
+          <text id="/chw_monthly_meeting/planned_meeting:label">
+            <value>Kupanga Mkutano</value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting/absentees:label">
+            <value>&lt;b&gt;Waliokuwa hawajahudhuria:&lt;/b&gt; <output value=" /chw_monthly_meeting/latest_monthly_meeting_absentees "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting/meeting_date:label">
+            <value>&lt;b&gt;Tarehe ya mkutano uliyopita:&lt;/b&gt; <output value=" /chw_monthly_meeting/latest_monthly_meeting_date "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting/meeting_topic:label">
+            <value>&lt;b&gt;Mada:&lt;/b&gt; <output value=" /chw_monthly_meeting/latest_monthly_meeting_topic "/></value>
+          </text>
+          <text id="/chw_monthly_meeting/prev_meeting:label">
+            <value>Mkutano uliyopita</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <chw_monthly_meeting id="chw_monthly_meeting" prefix="J1!chw_monthly_meeting!" delimiter="#" version="2022-08-12 10:13:27">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <task_id/>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <patient_uuid/>
+              <place_id/>
+              <name/>
+            </contact>
+          </inputs>
+          <_id/>
+          <patient_id/>
+          <place_id/>
+          <place_name/>
+          <latest_monthly_meeting_topic/>
+          <latest_monthly_meeting_date/>
+          <latest_monthly_meeting_absentees/>
+          <prev_meeting>
+            <meeting_date/>
+            <meeting_topic/>
+            <absentees/>
+          </prev_meeting>
+          <planned_meeting>
+            <meeting_option/>
+          </planned_meeting>
+          <meeting_details>
+            <attended/>
+            <not_attended/>
+            <absent_chvs_count/>
+            <absent_chvs jr:template="">
+              <absent_chv/>
+              <name/>
+            </absent_chvs>
+            <topics/>
+            <challenges/>
+            <actions/>
+          </meeting_details>
+          <next_meeting_details>
+            <next_meeting_date/>
+          </next_meeting_details>
+          <group_summary>
+            <r_topics_covered_title/>
+            <r_topics_covered/>
+            <r_next_meeting_title/>
+            <c_formatted_next_meeting_date/>
+            <r_next_meeting/>
+            <c_formatted_task_date/>
+            <r_followup_note/>
+          </group_summary>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </chw_monthly_meeting>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/chw_monthly_meeting/inputs" relevant="./source='user'"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/source" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/source_id" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/task_id" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/contact/_id" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/contact/patient_uuid" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/contact/place_id" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/inputs/contact/name" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/chw_monthly_meeting/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/chw_monthly_meeting/place_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/chw_monthly_meeting/place_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_topic" type="string" calculate="instance('contact-summary')/context/lastest_monthly_meeting_topic"/>
+      <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_date" type="string" calculate="instance('contact-summary')/context/latest_monthly_meeting_date"/>
+      <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_absentees" type="string" calculate="instance('contact-summary')/context/latest_monthly_meeting_absentees"/>
+      <bind nodeset="/chw_monthly_meeting/prev_meeting" relevant="string-length( /chw_monthly_meeting/latest_monthly_meeting_date ) &gt; 0"/>
+      <bind nodeset="/chw_monthly_meeting/prev_meeting/meeting_date" readonly="true()" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/prev_meeting/meeting_topic" readonly="true()" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/prev_meeting/absentees" readonly="true()" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/planned_meeting/meeting_option" type="select1" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/attended" type="int" jr:constraintMsg="jr:itext('/chw_monthly_meeting/meeting_details/attended:jr:constraintMsg')" constraint=". &gt;= 0" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/not_attended" type="int" jr:constraintMsg="jr:itext('/chw_monthly_meeting/meeting_details/not_attended:jr:constraintMsg')" constraint=". &gt;=0" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs_count" type="string" readonly="true()" calculate=" /chw_monthly_meeting/meeting_details/not_attended "/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs" relevant=" /chw_monthly_meeting/meeting_details/not_attended  &gt; 0" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs/name" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/topics" type="string" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/challenges" type="string" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/actions" type="string" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/next_meeting_details/next_meeting_date" type="date" jr:constraintMsg="jr:itext('/chw_monthly_meeting/next_meeting_details/next_meeting_date:jr:constraintMsg')" constraint=". &gt; today()" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/r_topics_covered_title" readonly="true()" type="string" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/r_topics_covered" readonly="true()" type="string" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/r_next_meeting_title" readonly="true()" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/c_formatted_next_meeting_date" type="string" calculate="format-date( /chw_monthly_meeting/next_meeting_details/next_meeting_date , '%a %e %b %Y')"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/r_next_meeting" readonly="true()" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /chw_monthly_meeting/next_meeting_details/next_meeting_date ) - 3), '%a %e %b %Y')"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/r_followup_note" readonly="true()" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/chw_monthly_meeting/meta/instanceName" type="string" calculate="D-tree"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/chw_monthly_meeting/inputs">
+      <label ref="jr:itext('/chw_monthly_meeting/inputs:label')"/>
+      <group ref="/chw_monthly_meeting/inputs/contact">
+        <input appearance="select-contact type-district_hospital" ref="/chw_monthly_meeting/inputs/contact/_id">
+          <label ref="jr:itext('/chw_monthly_meeting/inputs/contact/_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chw_monthly_meeting/inputs/contact/patient_id">
+          <label ref="jr:itext('/chw_monthly_meeting/inputs/contact/patient_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chw_monthly_meeting/inputs/contact/patient_uuid">
+          <label ref="jr:itext('/chw_monthly_meeting/inputs/contact/patient_uuid:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chw_monthly_meeting/inputs/contact/place_id">
+          <label ref="jr:itext('/chw_monthly_meeting/inputs/contact/place_id:label')"/>
+        </input>
+        <input appearance="hidden" ref="/chw_monthly_meeting/inputs/contact/name">
+          <label ref="jr:itext('/chw_monthly_meeting/inputs/contact/name:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/chw_monthly_meeting/prev_meeting">
+      <label ref="jr:itext('/chw_monthly_meeting/prev_meeting:label')"/>
+      <input ref="/chw_monthly_meeting/prev_meeting/meeting_date">
+        <label ref="jr:itext('/chw_monthly_meeting/prev_meeting/meeting_date:label')"/>
+      </input>
+      <input ref="/chw_monthly_meeting/prev_meeting/meeting_topic">
+        <label ref="jr:itext('/chw_monthly_meeting/prev_meeting/meeting_topic:label')"/>
+      </input>
+      <input ref="/chw_monthly_meeting/prev_meeting/absentees">
+        <label ref="jr:itext('/chw_monthly_meeting/prev_meeting/absentees:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/chw_monthly_meeting/planned_meeting">
+      <label ref="jr:itext('/chw_monthly_meeting/planned_meeting:label')"/>
+      <select1 ref="/chw_monthly_meeting/planned_meeting/meeting_option">
+        <label ref="jr:itext('/chw_monthly_meeting/planned_meeting/meeting_option:label')"/>
+        <item>
+          <label ref="jr:itext('/chw_monthly_meeting/planned_meeting/meeting_option/now:label')"/>
+          <value>now</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chw_monthly_meeting/planned_meeting/meeting_option/future:label')"/>
+          <value>future</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/chw_monthly_meeting/meeting_details">
+      <label ref="jr:itext('/chw_monthly_meeting/meeting_details:label')"/>
+      <input ref="/chw_monthly_meeting/meeting_details/attended">
+        <label ref="jr:itext('/chw_monthly_meeting/meeting_details/attended:label')"/>
+      </input>
+      <input ref="/chw_monthly_meeting/meeting_details/not_attended">
+        <label ref="jr:itext('/chw_monthly_meeting/meeting_details/not_attended:label')"/>
+      </input>
+      <group ref="/chw_monthly_meeting/meeting_details/absent_chvs">
+        <label ref="jr:itext('/chw_monthly_meeting/meeting_details/absent_chvs:label')"/>
+        <repeat nodeset="/chw_monthly_meeting/meeting_details/absent_chvs" jr:count=" /chw_monthly_meeting/meeting_details/absent_chvs_count ">
+          <input appearance="select-contact type-person" ref="/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv">
+            <label ref="jr:itext('/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv:label')"/>
+          </input>
+        </repeat>
+      </group>
+      <input ref="/chw_monthly_meeting/meeting_details/topics">
+        <label ref="jr:itext('/chw_monthly_meeting/meeting_details/topics:label')"/>
+      </input>
+      <input appearance="multiline" ref="/chw_monthly_meeting/meeting_details/challenges">
+        <label ref="jr:itext('/chw_monthly_meeting/meeting_details/challenges:label')"/>
+      </input>
+      <input ref="/chw_monthly_meeting/meeting_details/actions">
+        <label ref="jr:itext('/chw_monthly_meeting/meeting_details/actions:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/chw_monthly_meeting/next_meeting_details">
+      <label ref="jr:itext('/chw_monthly_meeting/next_meeting_details:label')"/>
+      <input ref="/chw_monthly_meeting/next_meeting_details/next_meeting_date">
+        <label ref="jr:itext('/chw_monthly_meeting/next_meeting_details/next_meeting_date:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list summary" ref="/chw_monthly_meeting/group_summary">
+      <label ref="jr:itext('/chw_monthly_meeting/group_summary:label')"/>
+      <input appearance="h1 green" ref="/chw_monthly_meeting/group_summary/r_topics_covered_title">
+        <label ref="jr:itext('/chw_monthly_meeting/group_summary/r_topics_covered_title:label')"/>
+      </input>
+      <input ref="/chw_monthly_meeting/group_summary/r_topics_covered">
+        <label ref="jr:itext('/chw_monthly_meeting/group_summary/r_topics_covered:label')"/>
+      </input>
+      <input appearance="h1 green" ref="/chw_monthly_meeting/group_summary/r_next_meeting_title">
+        <label ref="jr:itext('/chw_monthly_meeting/group_summary/r_next_meeting_title:label')"/>
+      </input>
+      <input ref="/chw_monthly_meeting/group_summary/r_next_meeting">
+        <label ref="jr:itext('/chw_monthly_meeting/group_summary/r_next_meeting:label')"/>
+      </input>
+      <input ref="/chw_monthly_meeting/group_summary/r_followup_note">
+        <label ref="jr:itext('/chw_monthly_meeting/group_summary/r_followup_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>
