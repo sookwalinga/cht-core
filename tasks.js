@@ -8,7 +8,8 @@ module.exports = [
     title: 'task.infant_child_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      return extras.hasReferral(r, 'infant_child') ||
+      return (extras.get(user,'parent.type')==='health_center') &&
+        extras.hasReferral(r, 'infant_child') ||
         extras.getSmallBabyFlag(r) === '1' ||
         extras.getNeonatalDangerSignFlag(r) === '1' ||
         extras.getSecondaryNeonatalDangerSignFlag(r) === '1' ||
@@ -83,10 +84,11 @@ module.exports = [
     title: 'task.pregnancy_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      if(r.fields.referral_original_source_form === 'pregnancy' || r.form === 'pregnancy')
+      if((r.fields.referral_original_source_form === 'pregnancy' || r.form === 'pregnancy') && 
+        (extras.get(user,'parent.type')==='health_center'))
         return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
-          extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-          extras.getANCVisitFlag(r) === '1';
+               extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
+               extras.getANCVisitFlag(r) === '1';
     },
     appliesToType: ['referral_follow_up', 'pregnancy'],
     actions: [{
@@ -145,8 +147,9 @@ module.exports = [
     title: 'task.postpartum_referral_follow_up',
     appliesTo: 'reports',
     appliesIf: function (c, r) {
-      return extras.hasReferral(r, 'postpartum') || extras.getPostpartumEmergencyDangerSigns(r) === '1' ||
-        extras.getPostpartumOtherDangerSigns(r) === '1' || extras.getPostpartumPNCReferral(r) === '1';
+      return  (extras.get(user,'parent.type')==='health_center') && 
+              (extras.hasReferral(r, 'postpartum') || extras.getPostpartumEmergencyDangerSigns(r) === '1' ||
+              extras.getPostpartumOtherDangerSigns(r) === '1' || extras.getPostpartumPNCReferral(r) === '1');
     },
     appliesToType: ['referral_follow_up', 'postpartum'],
     actions: [{
@@ -204,10 +207,9 @@ module.exports = [
     title: 'task.infant_child.first_visit_under_20_days',
     appliesTo: 'contacts',
     appliesIf: function (c) {
-      return c.contact.parent &&
-        c.contact.parent.parent &&
-        c.contact.parent.parent.parent &&
-        extras.isChildUnder20Days(c);
+      return (extras.get(user,'parent.type')==='health_center') &&
+             extras.get(c,'contact.parent.parent.parent') &&
+             extras.isChildUnder20Days(c);
     },
     appliesToType: ['person'],
     actions: [{
@@ -269,9 +271,8 @@ module.exports = [
     title: 'task.infant_child.second_visit_under_20_days',
     appliesTo: 'contacts',
     appliesIf: function (c) {
-      return c.contact.parent &&
-        c.contact.parent.parent &&
-        c.contact.parent.parent.parent &&
+      return (extras.get(user,'parent.type')==='health_center') &&
+        extras.get(c,'contact.parent.parent.parent') &&
         extras.isChildUnder20Days(c) &&
         extras.countConsentingInfantChildVisits(c) > 0;
     },
@@ -339,10 +340,9 @@ module.exports = [
     title: 'task.infant_child.first_visit_between_20_105_days',
     appliesTo: 'contacts',
     appliesIf: function (c) {
-      return c.contact.parent &&
-        c.contact.parent.parent &&
-        c.contact.parent.parent.parent &&
-        extras.isChildInWindow3Or4(c);
+      return (extras.get(user,'parent.type')==='health_center') &&
+             extras.get(c,'contact.parent.parent.parent') &&
+             extras.isChildInWindow3Or4(c);
     },
     appliesToType: ['person'],
     actions: [{
@@ -400,11 +400,10 @@ module.exports = [
     title: 'task.infant_child.first_visit_over_105_days',
     appliesTo: 'contacts',
     appliesIf: function (c) {
-      return c.contact.parent &&
-        c.contact.parent.parent &&
-        c.contact.parent.parent.parent &&
-        extras.isChildInWindow5Plus(c) &&
-        extras.isChildUnder5(c);
+      return (extras.get(user,'parent.type')==='health_center') &&
+             extras.get(c,'contact.parent.parent.parent') &&
+             extras.isChildInWindow5Plus(c) &&
+             extras.isChildUnder5(c);
     },
     appliesToType: ['person'],
     actions: [{
@@ -463,9 +462,8 @@ module.exports = [
     title: 'task.infant_child.second_plus_visit_over_20_days',
     appliesTo: 'contacts',
     appliesIf: function (c) {
-      return c.contact.parent &&
-        c.contact.parent.parent &&
-        c.contact.parent.parent.parent &&
+      return  (extras.get(user,'parent.type')==='health_center') &&
+         extras.get(c,'contact.parent.parent.parent') &&
         !extras.isChildUnder20Days(c) &&
         extras.countConsentingInfantChildVisits(c) > 0;
     },
@@ -609,7 +607,7 @@ module.exports = [
     title: 'task.pregnancy',
     appliesTo: 'contacts',
     appliesIf: function (c) {
-      return extras.isCurrentlyPregnant(c) &&
+      return extras.get(user,'parent.type')==='health_center' && extras.isCurrentlyPregnant(c) &&
         extras.isOver5MonthsPregnant(c);
     },
     appliesToType: ['person'],
@@ -674,7 +672,7 @@ module.exports = [
     title: 'task.postpartum',
     appliesTo: 'reports',
     appliesIf: function (c) {
-      return extras.didClientDeliver(c);
+      return extras.get(user,'parent.type')==='health_center' && extras.didClientDeliver(c);
     },
     appliesToType: ['pregnancy_outcomes'],
     actions: [{
@@ -717,7 +715,8 @@ module.exports = [
     title: 'task.postpartum',
     appliesTo: 'reports',
     appliesIf: function (c) {
-      return extras.didClientDeliver(c) && !(extras.noPostpartumVisitsCurrentPregnancy(c));
+      return extras.get(user,'parent.type')==='health_center' &&
+             extras.didClientDeliver(c) && !(extras.noPostpartumVisitsCurrentPregnancy(c));
     },
     appliesToType: ['pregnancy_outcomes'],
     actions: [{
@@ -765,9 +764,10 @@ module.exports = [
     title: 'task.pregnancy_outcomes_reminder_visit',
     appliesTo: 'reports',
     appliesIf: function (c,r) {
-      return extras.isCurrentlyPregnant(c) &&
-       extras.isInPostpartumReminderTimeWindow(c) && 
-       extras.isMostRecentReport(c,r,['pregnancy','pregnancy_outcomes_reminder']);
+      return extras.get(user,'parent.type')==='health_center' && 
+             extras.isCurrentlyPregnant(c) &&
+             extras.isInPostpartumReminderTimeWindow(c) && 
+             extras.isMostRecentReport(c,r,['pregnancy','pregnancy_outcomes_reminder']);
     },
     appliesToType: ['pregnancy','pregnancy_outcomes_reminder'], 
     actions: [{
