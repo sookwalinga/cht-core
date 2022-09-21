@@ -1,0 +1,19 @@
+[sqlfluff]
+dialect = postgres
+exclude_rules = L031,L032
+
+[sqlfluff:rules]
+tab_space_size = 2
+indent_unit = space
+comma_style = leading
+capitalisation_policy = upper
+min_alias_length = 3
+max_alias_length = 50
+max_line_length = 120
+
+[sqlfluff:indentation]
+#template_blocks_indent = false
+indented_using_on = True
+indented_on_contents = False
+
+
