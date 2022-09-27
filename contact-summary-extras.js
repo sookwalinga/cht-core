@@ -33,7 +33,13 @@ module.exports = {
     return false;
   },
 
-  isContactRetired: function(){ 
+  isClientAdult: function(){
+    const yearInMs = 365.25 * 24 * 60 * 60 * 1000;
+    return contact && contact.date_of_birth &&
+      (new Date().getTime() - new Date(contact.date_of_birth).getTime() >= 9 * yearInMs);
+  },
+  
+  isContactRetired: function(){   
     return lineage[0] && lineage[0].contact && lineage[0].contact.retired; 
   },
 

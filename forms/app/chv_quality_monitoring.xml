@@ -318,8 +318,7 @@
             <value>When would you like to follow up with <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
           <text id="/chv_quality_monitoring/group_summary/r_chw_info:label">
-            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**CHV name:** <output value=" /chv_quality_monitoring/chw_name "/>&lt;/span&gt; 
-&lt;span&gt;**CHV ID:** <output value=" /chv_quality_monitoring/chw_id "/>&lt;/span&gt;&lt;/div&gt;</value>
+            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**CHV name:** <output value=" /chv_quality_monitoring/chw_name "/>&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/group_summary/r_chw_info_title:label">
             <value>CHW Details &lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
@@ -834,14 +833,13 @@
             <value>Je unataka kumfuatilia tena <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
           <text id="/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg">
-            <value>-</value>
+            <value>Tafadhali chagua tarehe ya mbele</value>
           </text>
           <text id="/chv_quality_monitoring/group_summary/next_follow_up_date:label">
             <value>Lini unataka kumfuatilia tena <output value=" /chv_quality_monitoring/chw_name "/>?</value>
           </text>
           <text id="/chv_quality_monitoring/group_summary/r_chw_info:label">
-            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**Jina la CHV:** <output value=" /chv_quality_monitoring/chw_name "/>&lt;/span&gt; 
-&lt;span&gt;**CHV ID:** <output value=" /chv_quality_monitoring/chw_id "/>&lt;/span&gt;&lt;/div&gt;</value>
+            <value>&lt;div style=&quot;text-align:center;&quot;&gt;&lt;span&gt;**Jina la CHV:** <output value=" /chv_quality_monitoring/chw_name "/>&lt;/span&gt;&lt;/div&gt;</value>
           </text>
           <text id="/chv_quality_monitoring/group_summary/r_chw_info_title:label">
             <value>Taarifa za CHV &lt;i class="fa fa-user"&gt;&lt;/i&gt;</value>
@@ -1050,7 +1048,7 @@
         </translation>
       </itext>
       <instance>
-        <chv_quality_monitoring id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" delimiter="#" version="2022-08-10 09:14:03">
+        <chv_quality_monitoring id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" delimiter="#" version="2022-09-21 13:25:59">
           <inputs>
             <meta>
               <location>
@@ -1238,7 +1236,7 @@
       <bind nodeset="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/note_to_supervisor" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client" type="select1" required="true()" relevant="not(selected( /chv_quality_monitoring/quality_monitoring_qns/count_chv_visits ,&quot;never&quot;))"/>
+      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client" type="select1" relevant="not(selected( /chv_quality_monitoring/quality_monitoring_qns/count_chv_visits ,&quot;never&quot;))" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/observation/note_to_supervisor_observation" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/observation/areas_of_improvement" type="string" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/observation/progress_made" type="string" required="true()"/>
@@ -1372,11 +1370,11 @@ or selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , '
       <bind nodeset="/chv_quality_monitoring/group_summary/r_improvement_areas" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_followup" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/follow_up_again" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/next_follow_up_date" type="date" constraint=". &gt; today()" required="true()" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" jr:constraintMsg="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg')"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/next_follow_up_date" type="date" required="true()" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" constraint=". &gt; today()" jr:constraintMsg="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg')"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_follow_up_date" type="string" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" calculate="format-date( /chv_quality_monitoring/group_summary/next_follow_up_date , '%a %e %b %Y')"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/r_next_follow_up" readonly="true()" type="string" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_next_follow_up" readonly="true()" type="string" relevant=" /chv_quality_monitoring/group_summary/next_follow_up_date !='' and  /chv_quality_monitoring/group_summary/next_follow_up_date  &gt; today()"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /chv_quality_monitoring/group_summary/next_follow_up_date ) - 2), '%a %e %b %Y')"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/r_followup_note" readonly="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_followup_note" readonly="true()" type="string" relevant=" /chv_quality_monitoring/group_summary/next_follow_up_date !='' and  /chv_quality_monitoring/group_summary/next_follow_up_date  &gt; today()"/>
       <bind nodeset="/chv_quality_monitoring/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/chv_quality_monitoring/meta/instanceName" type="string" calculate="D-tree"/>
     </model>

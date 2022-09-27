@@ -43,7 +43,7 @@
             <value>Inputs</value>
           </text>
           <text id="/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg">
-            <value>Date cannot be a past date or today</value>
+            <value>Please choose a future date</value>
           </text>
           <text id="/quality_monitoring_planning/visit_details/planned_visit_date:label">
             <value>When do you intend to visit <output value=" /quality_monitoring_planning/chw_name "/>?</value>
@@ -91,18 +91,18 @@
             <value>-</value>
           </text>
           <text id="/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg">
-            <value>-</value>
+            <value>Tafadhali chagua tarehe ya mbele</value>
           </text>
           <text id="/quality_monitoring_planning/visit_details/planned_visit_date:label">
             <value>Lini unategemea kumtembelea <output value=" /quality_monitoring_planning/chw_name "/>?</value>
           </text>
           <text id="/quality_monitoring_planning/visit_details:label">
-            <value>-</value>
+            <value>Maelezo ya ufuatiliaji</value>
           </text>
         </translation>
       </itext>
       <instance>
-        <quality_monitoring_planning id="quality_monitoring_planning" prefix="J1!quality_monitoring_planning!" delimiter="#" version="2022-08-05 09:57:28">
+        <quality_monitoring_planning id="quality_monitoring_planning" prefix="J1!quality_monitoring_planning!" delimiter="#" version="2022-09-21 13:27:59">
           <inputs>
             <meta>
               <location>
@@ -159,7 +159,7 @@
       <bind nodeset="/quality_monitoring_planning/patient_id" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/quality_monitoring_planning/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
       <bind nodeset="/quality_monitoring_planning/chw_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/quality_monitoring_planning/visit_details/planned_visit_date" type="date" required="true()" constraint=". &gt; today()" jr:constraintMsg="jr:itext('/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg')"/>
+      <bind nodeset="/quality_monitoring_planning/visit_details/planned_visit_date" type="date" jr:constraintMsg="jr:itext('/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg')" required="true()" constraint=". &gt; today()"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_chw_info_title" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_chw_info" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_followup" readonly="true()" type="string"/>
