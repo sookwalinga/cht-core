@@ -1,4 +1,4 @@
-var extras = require('./nools-extras.js');
+const extras = require('./nools-extras.js');
 module.exports = [
 
   // Infant-child referral follow-up
@@ -34,7 +34,7 @@ module.exports = [
         content.refer_child_danger_sign_flag = extras.getChildDangerSignFlag(report);
         content.refer_child_other_danger_sign_flag = extras.getChildOtherDangerSignFlag(report);
         content.refer_muac_flag = extras.getMUACFlag(report);
-        content.refer_refer_palm_pallor_flag = extras.getPalmPallorFlag(report);
+        content.refer_palm_pallor_flag = extras.getPalmPallorFlag(report);
         content.refer_vaccines_flag = extras.getVaccinesFlag(report);
         content.refer_slow_to_learn_specifics_flag = extras.getSlowToLearnSpecificsFlag(report);
         content.due_date = Utils.addDate(new Date(report.reported_date), 3).getTime();
@@ -50,7 +50,7 @@ module.exports = [
       {
         id: 'infant_child_referral_follow_up',
         dueDate: function (event, contact, report) {
-          var days = 3;
+          let days = 3;
           if (
             report.fields &&
             report.fields.referral_days
@@ -86,9 +86,9 @@ module.exports = [
     appliesIf: function (c, r) {
       if((r.fields.referral_original_source_form === 'pregnancy' || r.form === 'pregnancy') && 
         (extras.get(user,'parent.type')==='health_center'))
-        return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
+      {return extras.isCurrentlyPregnant(c) && extras.hasReferral(r, 'pregnancy') || extras.getPregnancyEmergencyDangerSigns(r) === '1' ||
                extras.getPregnancyIssues(r) === '1' || extras.getPregnancyComplications(r) === '1' ||
-               extras.getANCVisitFlag(r) === '1';
+               extras.getANCVisitFlag(r) === '1';}
     },
     appliesToType: ['referral_follow_up', 'pregnancy'],
     actions: [{
@@ -115,7 +115,7 @@ module.exports = [
       {
         id: 'pregnancy_referral_follow_up',
         dueDate: function (event, contact, report) {
-          var days = 3;
+          let days = 3;
           if (
             report.fields &&
             report.fields.referral_days
@@ -174,7 +174,7 @@ module.exports = [
       {
         id: 'postpartum_referral_follow_up',
         dueDate: function (event, contact, report) {
-          var days = 3;
+          let days = 3;
           if (
             report.fields &&
             report.fields.referral_days
@@ -635,8 +635,8 @@ module.exports = [
       {
         id: 'pregnancy_month_5_month_7_visit',
         dueDate: function (event, c) {
-          var EDD = new Date(extras.getRecentEDDForThisPregnancy(c));
-          var dueDate = new Date(EDD.setDate(EDD.getDate() - (13 * extras.week)));
+          const EDD = new Date(extras.getRecentEDDForThisPregnancy(c));
+          const dueDate = new Date(EDD.setDate(EDD.getDate() - (13 * extras.week)));
           return dueDate;
         },
         start: (extras.week * 4.5),
@@ -645,8 +645,8 @@ module.exports = [
       {
         id: 'pregnancy_over_7_months_visit',
         dueDate: function (event, c) {
-          var EDD = new Date(extras.getRecentEDDForThisPregnancy(c));
-          var dueDate = new Date(EDD.setDate(EDD.getDate() - (4 * extras.week)));
+          const EDD = new Date(extras.getRecentEDDForThisPregnancy(c));
+          const dueDate = new Date(EDD.setDate(EDD.getDate() - (4 * extras.week)));
           return dueDate;
         },
         start: (extras.week * 4.5),
@@ -656,7 +656,7 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'pregnancy',
+      const isResolved = Utils.isFormSubmittedInWindow(c.reports, 'pregnancy',
         Utils.addDate(dueDate, -event.start).getTime(),
         Utils.addDate(dueDate, event.end+1).getTime()) ||
         extras.isContactDeceased(c) ||
@@ -740,7 +740,7 @@ module.exports = [
       {
         id: 'postpartum_visit_3_or_more_days',
         dueDate: function (event, c) {
-          var dueDate = Utils.addDate(extras.getDeliveryDate(c), 5);
+          const dueDate = Utils.addDate(extras.getDeliveryDate(c), 5);
           return dueDate;
         },
         start: (extras.day * 2),
@@ -749,7 +749,7 @@ module.exports = [
     ],
     resolvedIf: function (c, r, event, dueDate) {
       // Resolved if there is a form submitted within the time window
-      var isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
+      const isResolved = Utils.isFormSubmittedInWindow(c.reports, 'postpartum',
         Utils.addDate(dueDate, -event.start).getTime(),
         Utils.addDate(dueDate, event.end+1).getTime()) ||
         extras.isContactDeceased(c) ||
@@ -757,8 +757,8 @@ module.exports = [
       return isResolved;
     }
   }, 
-   //Reminder task to remind CHVs to perform pregnancy outcomes & postpartum visits 
-   {
+  //Reminder task to remind CHVs to perform pregnancy outcomes & postpartum visits 
+  {
     name: 'pregnancy_outcomes_reminder_visit',
     icon: 'follow-up',
     title: 'task.pregnancy_outcomes_reminder_visit',
@@ -793,9 +793,9 @@ module.exports = [
     ],
     resolvedIf: function (c) {
 
-      let edd = new Date(extras.getRecentEDDForThisPregnancy(c));
-      let now = new Date();
-      let remindedSince = now > edd ? 2 : 14;
+      const edd = new Date(extras.getRecentEDDForThisPregnancy(c));
+      const now = new Date();
+      const remindedSince = now > edd ? 2 : 14;
 
       // Resolved if the outcomes  form is submitted for the current pregnancy or 
       //reminder form is submitted in the time window or person id dead or muted  
@@ -826,9 +826,9 @@ module.exports = [
       {
         id: 'quality-monitoring-1',
         dueDate: function (event, contact, report) {
-         return extras.get(report,'fields.visit_details.planned_visit_date')?
-         new Date(report.fields.visit_details.planned_visit_date):
-         new Date();
+          return extras.get(report,'fields.visit_details.planned_visit_date')?
+            new Date(report.fields.visit_details.planned_visit_date):
+            new Date();
         },
         start: 2,
         end: 2,
@@ -853,8 +853,8 @@ module.exports = [
         form: 'shadowing_reminder',
         modifyContent: function(content, contact, report) {
           content.t_planned_visit_date = extras.get(report,'fields.visit_details.planned_visit_date')?
-                                         report.fields.visit_details.planned_visit_date:
-                                         'the planned visit date.';
+            report.fields.visit_details.planned_visit_date:
+            'the planned visit date.';
         }
       } 
     ],
@@ -862,9 +862,9 @@ module.exports = [
       {
         id: 'shadowing-reminder-1',
         dueDate: function (report) {
-        return extras.get(report,'fields.visit_details.planned_visit_date')?
-              new Date(report.fields.visit_details.planned_visit_date): 
-              new Date();
+          return extras.get(report,'fields.visit_details.planned_visit_date')?
+            new Date(report.fields.visit_details.planned_visit_date): 
+            new Date();
         },
         start:2,
         end:2,
@@ -910,10 +910,10 @@ module.exports = [
           if (report.fields 
             && report.fields.next_meeting_details 
             && report.fields.next_meeting_details.next_meeting_date) {
-              meetingDate = new Date(report.fields.next_meeting_details.next_meeting_date);                                    
-            } else {
-              meetingDate = new Date();
-            }
+            meetingDate = new Date(report.fields.next_meeting_details.next_meeting_date);                                    
+          } else {
+            meetingDate = new Date();
+          }
           return meetingDate;
         },
         start:3,
@@ -937,9 +937,9 @@ module.exports = [
       } 
     ],
     resolvedIf: function (contact) {
-      let date = new Date();
-      let firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-      let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+      const date = new Date();
+      const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+      const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
       return Utils.isFormSubmittedInWindow(
         contact.reports,
         'chw_monthly_meeting',
@@ -951,8 +951,8 @@ module.exports = [
       {
         id: 'chw-monthly-meeting-1',
         dueDate: function () {
-          let date = new Date();
-          let meetingDate = new Date(date.getFullYear(), date.getMonth(), 3);
+          const date = new Date();
+          const meetingDate = new Date(date.getFullYear(), date.getMonth(), 3);
           return meetingDate;
         },
         start:3,
@@ -981,7 +981,7 @@ module.exports = [
         modifyContent: function (content, contact, report) {
           content.t_follow_up_areas = extras.get(report, 'fields.c_follow_up_areas') || '';
           content.t_follow_up_areas_sw = extras.get(report, 'fields.c_follow_up_areas_sw') || '';
-          }
+        }
       } 
     ],
     events: [
@@ -989,9 +989,9 @@ module.exports = [
         id: 'quality-monitoring-follow-up-1',
         dueDate: function (event, contact, report) {
           return extras.get(report,'fields.group_summary.next_follow_up_date')?
-          new Date(report.fields.group_summary.next_follow_up_date): 
-          new Date();
-         },
+            new Date(report.fields.group_summary.next_follow_up_date): 
+            new Date();
+        },
         start:2,
         end:2,
       }
@@ -1003,7 +1003,9 @@ module.exports = [
     title: 'task.quality_monitoring_follow_up',
     appliesTo: 'reports',
     appliesIf: function (contact, report) {
-      return report.fields && report.fields.follow_up_details && report.fields.follow_up_details.follow_up_again === 'yes' && user.parent && user.parent.type === 'district_hospital';
+      return report.fields && report.fields.follow_up_details &&
+		report.fields.follow_up_details.follow_up_again === 'yes' &&
+		user.parent && user.parent.type === 'district_hospital';
     },
     appliesToType: [ 'quality_monitoring_follow_up' ],
     actions: [ 
@@ -1038,7 +1040,8 @@ module.exports = [
       const oneDay = 24 * 60 * 60 * 1000;
       let mostRecentReportDate = new Date(Utils.getMostRecentTimestamp(contact.reports, [
           'quality_monitoring',
-          'quality_monitoring_planning',
+          
+          quality_monitoring_planning',
           'chv_quality_monitoring',
           'chv_youth_peer_education', 
           'confirm_meeting', 

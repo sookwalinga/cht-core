@@ -12,7 +12,7 @@ module.exports = {
   
   isCHVInProject:function(projectName){
     return projectName && [contact, ...lineage]
-    .map(l => l && l.contact).some(c =>
+      .map(l => l && l.contact).some(c =>
         c &&
         c.projects &&
         c.parent && c.parent.parent && !c.parent.parent.parent &&
@@ -21,13 +21,13 @@ module.exports = {
 
   isClientReportedDead: function () {
     return reports.filter(r=>r.form === 'death_report').length>0;
- },
+  },
 
   isChildUnder5: function () {
     if (contact && contact.date_of_birth) {
-      var birthDate = new Date(contact.date_of_birth);
-      var ageInMs = new Date(Date.now() - birthDate.getTime());
-      var ageInMonths = (Math.abs(ageInMs.getFullYear() - 1970) * 12) + ageInMs.getMonth();
+      const birthDate = new Date(contact.date_of_birth);
+      const ageInMs = new Date(Date.now() - birthDate.getTime());
+      const ageInMonths = (Math.abs(ageInMs.getFullYear() - 1970) * 12) + ageInMs.getMonth();
       return ageInMonths < 60;
     }
     return false;
@@ -44,7 +44,7 @@ module.exports = {
   },
 
   getVisitCount: function () {
-    var count = [];
+    let count = [];
     count = reports.filter(function (r) {
       return r.form === 'infant_child';
     });
@@ -52,7 +52,7 @@ module.exports = {
   },
 
   getQualityMonitoringCount: function() { 
-     return reports.filter(r =>r.form === 'chv_quality_monitoring').length;
+    return reports.filter(r =>r.form === 'chv_quality_monitoring').length;
   }, 
 
   getContactHouseholdHead: function () {
@@ -96,7 +96,7 @@ module.exports = {
   },
 
   getPositiveConsentingPregnancyRegistrations: function () {
-    var positiveConsentingPregnancyRegistrations = [];
+    let positiveConsentingPregnancyRegistrations = [];
     positiveConsentingPregnancyRegistrations = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.fields &&
@@ -107,8 +107,8 @@ module.exports = {
   },
 
   getPregnancyOutcomes: function () {
-    var deliveryOutcomes = [];
-    var earlyTerminations = [];
+    let deliveryOutcomes = [];
+    let earlyTerminations = [];
     deliveryOutcomes = reports.filter(function (r) {
       return r.form === 'pregnancy_outcomes' &&
         r.fields &&
@@ -137,7 +137,7 @@ module.exports = {
   },
 
   getMostRecentReport: function (filteredReports, form) {
-    var result = null;
+    let result = null;
     filteredReports.forEach(function (r) {
       if (form === r.form &&
         !r.deleted &&
@@ -149,8 +149,8 @@ module.exports = {
   },
 
   getMostRecentPregnancyConsentDate: function () {
-    var reportedDate = '';
-    var reportsFound = [];
+    let reportedDate = '';
+    let reportsFound = [];
     reportsFound = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.fields &&
@@ -159,7 +159,7 @@ module.exports = {
         r.fields.pregnancy_consent.consent === 'yes';
     });
     if (reportsFound.length > 0) {
-      var report = this.getMostRecentReport(reportsFound, 'pregnancy');
+      const report = this.getMostRecentReport(reportsFound, 'pregnancy');
       reportedDate = report.reported_date;
     }
     return reportedDate;
@@ -170,8 +170,8 @@ module.exports = {
   },
 
   countPregnancyVisitsForThisPregnancy: function () {
-    var reportsFound = [];
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
     reportsFound = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
@@ -186,8 +186,8 @@ module.exports = {
   },
 
   countPostpartumVisitsForThisPregnancy: function () {
-    var reportsFound = [];
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
     reportsFound = reports.filter(function (r) {
       return r.form === 'postpartum' &&
         r.reported_date >= recentConsentReportDate;
@@ -196,16 +196,16 @@ module.exports = {
   },
 
   shouldResearchQnsBeShown: function () {
-    var totalVisitsThisPregnancy = this.countTotalVisitsThisPregnancy();
+    const totalVisitsThisPregnancy = this.countTotalVisitsThisPregnancy();
     if (totalVisitsThisPregnancy === 1)
-      return true;
+    {return true;}
     return false;
   },
 
   getRecentANCCountForThisPregnancy: function () {
-    var ancCount = 0;
-    var reportsFound = [];
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
+    let ancCount = 0;
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
     reportsFound = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
@@ -214,7 +214,7 @@ module.exports = {
         r.fields.anc_screening_and_counseling.num_anc_visits;
     });
     if (reportsFound.length > 0) {
-      var report = this.getMostRecentReport(reportsFound, 'pregnancy');
+      const report = this.getMostRecentReport(reportsFound, 'pregnancy');
       ancCount = report.fields.anc_screening_and_counseling.num_anc_visits;
     }
     return ancCount;
@@ -223,42 +223,42 @@ module.exports = {
   getLastReportOfType: function (count,type){ 
     return reports && count && 
     reports.filter(r =>type.includes(r.form))
-           .sort((a,b) => 
-              a.reported_date> b.reported_date ? -1:
-              a.reported_date < b.reported_date ? 1:0
-         ).slice(0,1);
+      .sort((a,b) => 
+        a.reported_date> b.reported_date ? -1:
+          a.reported_date < b.reported_date ? 1:0
+      ).slice(0,1);
   }, 
   
   getLatestMonthlyMeetingDate: function(){ 
-   return this.getLastReportOfType(1,'chw_monthly_meeting')
-   .map(r => {
-      let d = new Date(r.reported_date); 
-      return d.getDate() + '/' +  (d.getMonth() + 1) + '/' + d.getFullYear();
+    return this.getLastReportOfType(1,'chw_monthly_meeting')
+      .map(r => {
+        const d = new Date(r.reported_date); 
+        return d.getDate() + '/' +  (d.getMonth() + 1) + '/' + d.getFullYear();
 
-   }); 
+      }); 
   }, 
 
   getLatestMonthlyMeetingTopic: function(){ 
-     return this.getLastReportOfType(1,'chw_monthly_meeting')
-     .map(r =>get(r,'fields.meeting_details.topics')); 
-    }, 
+    return this.getLastReportOfType(1,'chw_monthly_meeting')
+      .map(r =>get(r,'fields.meeting_details.topics')); 
+  }, 
 
-    getLatestMonthlyMeetingAbsentees: function(){ 
-      return this.getLastReportOfType(1,'chw_monthly_meeting')
+  getLatestMonthlyMeetingAbsentees: function(){ 
+    return this.getLastReportOfType(1,'chw_monthly_meeting')
       .map(r=>get(r,'fields.meeting_details.absent_chvs',[]).map(d=>d.name)).join(',');
-      // .map(r => {
-      //     return r && 
-      //            r.fields && 
-      //            r.fields.meeting_details && 
-      //            r.fields.meeting_details.absent_chvs && 
-      //            r.fields.meeting_details.absent_chvs.map(d=>d.name);
-      // }).join(','); 
-     },
+    // .map(r => {
+    //     return r && 
+    //            r.fields && 
+    //            r.fields.meeting_details && 
+    //            r.fields.meeting_details.absent_chvs && 
+    //            r.fields.meeting_details.absent_chvs.map(d=>d.name);
+    // }).join(','); 
+  },
   
   showPMTCT: function () {
-    var previous_hiv_status = false;
-    var reportsFound = [];
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
+    let previous_hiv_status = false;
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
     reportsFound = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
@@ -267,7 +267,7 @@ module.exports = {
         r.fields.pmtct.hiv_status;
     });
     if (reportsFound.length > 0) {
-      var report = this.getMostRecentReport(reportsFound, 'pregnancy');
+      const report = this.getMostRecentReport(reportsFound, 'pregnancy');
       if (report.fields.pmtct.hiv_status === 'hiv_positive') {
         previous_hiv_status = true;
       }
@@ -276,9 +276,9 @@ module.exports = {
   },
 
   showPregnancyEDDEstimation: function () {
-    var previousRchCard = false;
-    var reportsFound = [];
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
+    let previousRchCard = false;
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate();
     reportsFound = reports.filter(function (r) {
       return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
@@ -294,9 +294,9 @@ module.exports = {
   },
 
   getRecentPregnancyReport: function () {
-    var report = '';
-    var reportsFound = [];
-    var recentReportDate = this.getMostRecentPregnancyConsentDate();
+    let report = '';
+    let reportsFound = [];
+    const recentReportDate = this.getMostRecentPregnancyConsentDate();
     if (recentReportDate !== '') {
       reportsFound = reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -310,7 +310,7 @@ module.exports = {
   },
 
   hideLastLMPOrEstimatedMonthsPregnant: function () {
-    var report = this.getRecentPregnancyReport();
+    const report = this.getRecentPregnancyReport();
     if (report && report.fields &&
       report.fields.rch_card &&
       report.fields.rch_card.is_rch_card_available &&
@@ -323,7 +323,7 @@ module.exports = {
   },
 
   isContactDeceased: function () {
-    var isDeceased = false;
+    let isDeceased = false;
     if (contact && contact.date_of_death) {
       isDeceased = true;
     }
@@ -331,7 +331,7 @@ module.exports = {
   },
 
   isContactMuted: function () {
-    var isMuted = false;
+    let isMuted = false;
     if (contact && contact.muted) {
       isMuted = true;
     }
@@ -367,7 +367,7 @@ module.exports = {
   },
   getMonthlyMeetingsThisMonth: function (reports, forms) {
     return this.getReportsThisMonth(reports,forms)
-    .filter(r=>get(r, 'fields.planned_meeting.meeting_option') === 'now'); 
+      .filter(r=>get(r, 'fields.planned_meeting.meeting_option') === 'now'); 
   }
 
 };

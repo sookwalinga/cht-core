@@ -174,7 +174,7 @@ Kitongoji: &lt;span style=&quot;font-weight:bold&quot;&gt;<output value=" /mute_
         </mute_person>
       </instance>
       <instance id="contact-summary"/>
-      <bind nodeset="/mute_person/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/mute_person/inputs" relevant="false()"/>
       <bind nodeset="/mute_person/inputs/user/contact_id" type="string"/>
       <bind nodeset="/mute_person/inputs/user/facility_id" type="string"/>
       <bind nodeset="/mute_person/inputs/user/name" type="string"/>

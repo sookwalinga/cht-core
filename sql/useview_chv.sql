@@ -3,7 +3,7 @@
 ------------------------------------------------------------
 DROP MATERIALIZED VIEW IF EXISTS useview_chv;
 
-CREATE MATERIALIZED VIEW useview_chv AS 
+CREATE MATERIALIZED VIEW useview_chv AS
 (
   SELECT
     doc ->> '_id' AS _id,
@@ -12,26 +12,26 @@ CREATE MATERIALIZED VIEW useview_chv AS
     doc ->> 'type' AS type,
     doc ->> 'phone' AS phone,
     doc ->> 'sex' AS sex,
-    TO_DATE(doc ->> 'dob', 'YYYY-MM-DD') AS date_of_birth,
+    to_date(doc ->> 'dob', 'YYYY-MM-DD') AS date_of_birth,
     doc #>> '{parent,_id}' AS catchment_area_uuid,
     doc #>> '{parent,parent,_id}' AS supervisory_area_uuid,
     to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
-    to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date,
+    to_timestamp(nullif(doc ->> 'reported_date', '')::double precision / 1000) AS reported_date,
     doc ->> 'alternate_phone' AS alternate_phone,
     doc ->> 'retired' AS retired,
     doc ->> 'retirement_reason' AS retirement_reason,
     doc ->> 'projects' AS projects
-  FROM 
-	  couchdb	
-  WHERE 
-	  doc ->> 'type' = 'person' AND doc #>> '{parent,parent,_id}' IS NOT NULL 
+  FROM
+    couchdb
+  WHERE
+    doc ->> 'type' = 'person' AND doc #>> '{parent,parent,_id}' IS NOT NULL
     AND doc #>> '{parent,parent,parent,_id}' IS NULL
-	  AND doc ->> 'phone' != '' 
-	  AND doc ->> 'name' != '' 
-	  AND doc ->> 'name' != 'DEV_CHV' 
+    AND doc ->> 'phone' != ''
+    AND doc ->> 'name' != ''
+    AND doc ->> 'name' != 'DEV_CHV'
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS chv_reported_date_uuid ON useview_chv USING btree (reported_date, _id);
+CREATE UNIQUE INDEX IF NOT EXISTS chv_reported_date_uuid ON useview_chv USING btree(reported_date, _id);
 -- Permissions
 ALTER MATERIALIZED VIEW useview_chv OWNER TO full_access;
 GRANT SELECT ON useview_chv TO dtree, periscope;

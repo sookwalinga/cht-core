@@ -58,7 +58,7 @@
         </translation>
       </itext>
       <instance>
-        <shadowing_reminder id="shadowing_reminder" prefix="J1!shadowing_reminder!" delimiter="#" version="2022-08-17 12:39:16">
+        <shadowing_reminder id="shadowing_reminder" prefix="J1!shadowing_reminder!" delimiter="#" version="2022-10-18 12:00:48">
           <inputs>
             <meta>
               <location>
@@ -112,7 +112,7 @@
       <bind nodeset="/shadowing_reminder/chw_name" type="string" calculate="../inputs/contact/name"/>
       <bind nodeset="/shadowing_reminder/visit_date" type="string" calculate="../inputs/t_planned_visit_date"/>
       <bind nodeset="/shadowing_reminder/c_formatted_visit_date" type="string" calculate="format-date( /shadowing_reminder/visit_date , '%a %e %b %Y')"/>
-      <bind nodeset="/shadowing_reminder/shadowing_reminder/reminder" readonly="true()" type="string" required="true()"/>
+      <bind nodeset="/shadowing_reminder/shadowing_reminder/reminder" readonly="true()" type="string"/>
       <bind nodeset="/shadowing_reminder/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
       <bind nodeset="/shadowing_reminder/meta/instanceName" type="string" calculate="D-tree"/>
     </model>

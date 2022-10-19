@@ -3,7 +3,7 @@
 ------------------------------------------------------------
 DROP MATERIALIZED VIEW IF EXISTS useview_catchment_area;
 
-CREATE MATERIALIZED VIEW useview_catchment_area AS 
+CREATE MATERIALIZED VIEW useview_catchment_area AS
 (
   SELECT
     doc ->> '_id' AS _id,
@@ -14,16 +14,16 @@ CREATE MATERIALIZED VIEW useview_catchment_area AS
     doc ->> 'shehia' AS shehia,
     doc #>> '{contact,_id}' AS chv_uuid,
     to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
-    to_timestamp((NULLIF(doc ->> 'reported_date', '')::bigint / 1000)::double precision) AS reported_date,
+    to_timestamp(nullif(doc ->> 'reported_date', '')::double precision / 1000) AS reported_date,
     doc ->> 'retired' AS retired,
     doc ->> 'retirement_reason' AS retirement_reason
-  FROM 
-    couchdb	
-  WHERE 
+  FROM
+    couchdb
+  WHERE
     doc ->> 'type' = 'health_center'
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS catchment_area_reported_date_chv_uuid ON useview_catchment_area USING btree (reported_date, chv_uuid, _id);
+CREATE UNIQUE INDEX IF NOT EXISTS catchment_area_reported_date_chv_uuid ON useview_catchment_area USING btree(reported_date, chv_uuid, _id);
 -- Permissions
 ALTER MATERIALIZED VIEW useview_catchment_area OWNER TO full_access;
 GRANT SELECT ON useview_catchment_area TO dtree, periscope;

@@ -3,7 +3,7 @@
 ------------------------------------------------------------
 DROP MATERIALIZED VIEW IF EXISTS useview_unmute_person;
 
-CREATE MATERIALIZED VIEW useview_unmute_person AS 
+CREATE MATERIALIZED VIEW useview_unmute_person AS
 (
   SELECT
     doc ->> '_id' AS _id,
@@ -11,7 +11,7 @@ CREATE MATERIALIZED VIEW useview_unmute_person AS
     doc ->> 'form' AS form,
     doc ->> 'type' AS type,
     doc ->> 'content_type' AS content_type,
-    TO_TIMESTAMP((NULLIF(doc ->> 'reported_date', '')::BIGINT / 1000)::DOUBLE PRECISION) AS reported_date,
+    to_timestamp(nullif(doc ->> 'reported_date', '')::DOUBLE PRECISION / 1000) AS reported_date,
     doc #>> '{contact,_id}' AS chv_uuid,
     doc #>> '{contact,parent,_id}' AS catchment_area_uuid,
     doc #>> '{contact,parent,parent,_id}' AS supervisory_area_uuid,
@@ -24,17 +24,17 @@ CREATE MATERIALIZED VIEW useview_unmute_person AS
     doc #>> '{fields,kitongoji}' AS kitongoji,
     doc #>> '{fields,phone}' AS phone,
     doc #>> '{fields,moving_reason,moving_reason}' AS moving_reason,
-    NULLIF(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
-    NULLIF(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,
-    NULLIF(doc #>> '{geolocation,altitude}', '')::DECIMAL AS altitude,
-    NULLIF(doc #>> '{geolocation,accuracy}', '')::DECIMAL AS accuracy 
-  FROM  
-	couchdb	
-  WHERE 
-	doc ->> 'form' = 'unmute_person'
+    nullif(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
+    nullif(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,
+    nullif(doc #>> '{geolocation,altitude}', '')::DECIMAL AS altitude,
+    nullif(doc #>> '{geolocation,accuracy}', '')::DECIMAL AS accuracy
+  FROM
+    couchdb
+  WHERE
+    doc ->> 'form' = 'unmute_person'
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS unmute_person_reported_date_created_by_uuid ON useview_unmute_person USING btree (reported_date, chv_uuid, patient_id);
+CREATE UNIQUE INDEX IF NOT EXISTS unmute_person_reported_date_created_by_uuid ON useview_unmute_person USING btree(reported_date, chv_uuid, patient_id);
 -- Permissions
 ALTER MATERIALIZED VIEW useview_unmute_person OWNER TO full_access;
 GRANT SELECT ON useview_unmute_person TO dtree, periscope;

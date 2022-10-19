@@ -3,7 +3,7 @@
 ------------------------------------------------------------
 DROP MATERIALIZED VIEW IF EXISTS useview_supervisor;
 
-CREATE MATERIALIZED VIEW useview_supervisor AS 
+CREATE MATERIALIZED VIEW useview_supervisor AS
 (
   SELECT
     doc ->> '_id' AS _id,
@@ -13,17 +13,17 @@ CREATE MATERIALIZED VIEW useview_supervisor AS
     doc ->> 'phone' AS phone,
     doc ->> 'sex' AS sex,
     doc #>> '{parent,_id}' AS supervisory_area_uuid,
-    TO_TIMESTAMP(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
-    TO_TIMESTAMP((NULLIF(doc ->> 'reported_date', '')::BIGINT / 1000)::DOUBLE PRECISION) AS reported_date,
+    to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
+    to_timestamp(nullif(doc ->> 'reported_date', '')::DOUBLE PRECISION / 1000) AS reported_date,
     doc ->> 'retired' AS retired,
     doc ->> 'retirement_reason' AS retirement_reason
-  FROM 
-	  couchdb	
-  WHERE 
-	  doc ->> 'type' = 'person' AND doc #>> '{parent,_id}' IS NOT NULL AND doc #>> '{parent,parent,_id}' IS NULL
+  FROM
+    couchdb
+  WHERE
+    doc ->> 'type' = 'person' AND doc #>> '{parent,_id}' IS NOT NULL AND doc #>> '{parent,parent,_id}' IS NULL
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS supervisor_reported_date_uuid ON useview_supervisor USING btree (reported_date, _id);
+CREATE UNIQUE INDEX IF NOT EXISTS supervisor_reported_date_uuid ON useview_supervisor USING btree(reported_date, _id);
 -- Permissions 
 ALTER MATERIALIZED VIEW useview_supervisor OWNER TO full_access;
 GRANT SELECT ON useview_supervisor TO dtree, periscope;

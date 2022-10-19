@@ -3,7 +3,7 @@
 ------------------------------------------------------------
 DROP MATERIALIZED VIEW IF EXISTS useview_supervisory_area;
 
-CREATE MATERIALIZED VIEW useview_supervisory_area AS 
+CREATE MATERIALIZED VIEW useview_supervisory_area AS
 (
   SELECT
     doc ->> '_id' AS _id,
@@ -11,18 +11,18 @@ CREATE MATERIALIZED VIEW useview_supervisory_area AS
     doc ->> 'name' AS name,
     doc ->> 'type' AS type,
     doc #>> '{contact,_id}' AS supervisor_uuid,
-    TO_TIMESTAMP((NULLIF(doc #>> '{contact,reported_date}', '')::BIGINT / 1000)::DOUBLE PRECISION) AS supervisor_reported_date,
+    to_timestamp(nullif(doc #>> '{contact,reported_date}', '')::DOUBLE PRECISION / 1000) AS supervisor_reported_date,
     doc ->> 'district' AS district,
-    TO_TIMESTAMP(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
-    TO_TIMESTAMP((NULLIF(doc ->> 'reported_date', '')::BIGINT / 1000)::DOUBLE PRECISION) AS reported_date
-  FROM 
-    couchdb	
-  WHERE 
+    to_timestamp(doc ->> 'imported_date', 'YYYY-MM-DD HH24:MI:SS') AS imported_date,
+    to_timestamp(nullif(doc ->> 'reported_date', '')::DOUBLE PRECISION / 1000) AS reported_date
+  FROM
+    couchdb
+  WHERE
     doc ->> 'type' = 'district_hospital'
-    AND doc ->>'district' IS NOT NULL
+    AND doc ->> 'district' IS NOT NULL
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS supervisory_area_reported_date_chv_uuid ON useview_supervisory_area USING btree (reported_date, supervisor_uuid, _id);
+CREATE UNIQUE INDEX IF NOT EXISTS supervisory_area_reported_date_chv_uuid ON useview_supervisory_area USING btree(reported_date, supervisor_uuid, _id);
 -- Permissions
 ALTER MATERIALIZED VIEW useview_supervisory_area OWNER TO full_access;
 GRANT SELECT ON useview_supervisory_area TO dtree, periscope;

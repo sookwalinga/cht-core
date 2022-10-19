@@ -1,19 +1,22 @@
 [sqlfluff]
-dialect = postgres
-exclude_rules = L031,L032
-
+large_file_skip_char_limit=30000
+dialect=postgres
+rules=L001,L002,L003,L004,L005,L006,L010,L011,L017,L018,L019,L022,L023,L030,L034,L035,L036,L037,L039,L045,L047,L050,L051,L052,L054
 [sqlfluff:rules]
-tab_space_size = 2
-indent_unit = space
-comma_style = leading
-capitalisation_policy = upper
-min_alias_length = 3
-max_alias_length = 50
 max_line_length = 120
-
-[sqlfluff:indentation]
-#template_blocks_indent = false
-indented_using_on = True
-indented_on_contents = False
-
-
+sqlfluff:rules:L002]
+tab_space_size=2
+[sqlfluff:rules:L003]
+indent_unit=space
+tab_space_size=2
+[sqlfluff:rules:L004]
+indent_unit=space
+tab_space_size=2
+[sqlfluff:rules:L010]
+capitalisation_policy=upper
+[sqlfluff:rules:L019]
+comma_style=trailing
+[sqlfluff:rules:L030]
+extended_capitalisation_policy=lower
+[sqlfluff:rules:L052]
+semicolon_newline=True

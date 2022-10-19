@@ -1,4 +1,4 @@
-var extras = require('./nools-extras.js');
+const extras = require('./nools-extras.js');
 module.exports = [
 
   // General: Total under 5 registrations this month + pregnant women registration this month
@@ -13,12 +13,12 @@ module.exports = [
     appliesToType: ['person'],
     context: 'user.parent.type === "health_center"',
     appliesIf: function (c) {    
-     return extras.consentingVisitsThisMonth(c,'infant_child') || extras.consentingVisitsThisMonth(c,'pregnancy');
+      return extras.consentingVisitsThisMonth(c,'infant_child') || extras.consentingVisitsThisMonth(c,'pregnancy');
     }
   },
 
-   // General: Total under 5 visits this month + Pregnancy Visits this month.  No credit for visits that result in denial of consent
-   {
+  // General: Total under 5 visits this month + Pregnancy Visits this month.  No credit for visits that result in denial of consent
+  {
     id: 'u5-and-anc-visits-this-month',
     translation_key: 'targets.u5-and-pregnant-women-visits.title',
     subtitle_translation_key: 'targets.this_month.subtitle',
@@ -31,18 +31,18 @@ module.exports = [
     idType: 'report',
     appliesIf: function (c, r) {
       switch (r && r.form) {
-        case 'infant_child': return extras.get(r, 'fields.consent.child_consent_today') === 'yes' ||
+      case 'infant_child': return extras.get(r, 'fields.consent.child_consent_today') === 'yes' ||
           extras.get(r, 'fields.consent')===undefined;
-        case 'pregnancy': return extras.get(r, 'fields.pregnancy_consent.consent') === 'yes' ||
+      case 'pregnancy': return extras.get(r, 'fields.pregnancy_consent.consent') === 'yes' ||
           extras.get(r, 'fields.pregnancy_consent')===undefined;
-        case 'postpartum': return true;
-        case 'pregnancy_outcomes': return true;
-        default: return false;
+      case 'postpartum': return true;
+      case 'pregnancy_outcomes': return true;
+      default: return false;
       }
     },
     date: 'reported'
   }
- , 
+  , 
   {
     id: 'monthly-meetings-this-month',
     type: 'count',
@@ -53,7 +53,7 @@ module.exports = [
     context: 'user.parent.type === "district_hospital"',
     appliesToType: ['chw_monthly_meeting'],
     appliesIf: function (contact, report) {
-    return extras.get(report,'fields.planned_meeting.meeting_option') === 'now';},
+      return extras.get(report,'fields.planned_meeting.meeting_option') === 'now';},
     date: 'reported'
   },
   {

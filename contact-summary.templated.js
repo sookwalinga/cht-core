@@ -1,8 +1,8 @@
-var extras = require('./contact-summary-extras.js');
+const extras = require('./contact-summary-extras.js');
 function get(obj,field){
   if(!obj){return;}
-  var parts=field.split('.');
-  for(var f of parts){ if(!obj[f]){return;} obj=obj[f];}
+  const parts=field.split('.');
+  for(const f of parts){ if(!obj[f]){return;} obj=obj[f];}
   return obj;
 }
 
@@ -148,15 +148,33 @@ module.exports = {
   },
 
   fields: [
-    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, label: 'contact.age', value: contact.date_of_birth, width: 4, filter: 'age' },
-    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, label: 'contact.sex', value: contact.sex === 'male' ? 'Mwanamme' : 'Mwanamke', width: 4 },
-    { appliesToType: 'person', appliesIf: function () { return contact.phone; }, label: 'contact.phone', value: contact.phone, width: 4, filter: 'phone' },
-    { appliesToType: 'person', appliesIf: function () { return contact.parent && !contact.phone && lineage[1] && lineage[1].parent; }, label: 'contact.phone', value: lineage[0] && lineage[0].contact ? lineage[0].contact.phone : '', width: 4, filter: 'phone' },
-    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, label: 'contact.parent', value: lineage[0], filter: 'lineage' },
-    { appliesToType: 'person', appliesIf: function () { return get(contact,'parent.parent') && !get(contact,'parent.parent.parent'); }, label: 'contact.grandparent', value: lineage[0], filter: 'lineage' },
-    { appliesToType: 'person', appliesIf: function () { return (contact.temp_hh_member === 'temporary' && !extras.isContactDeceased() && !extras.isContactMuted());}, label: 'contact.temporary_member', icon: 'moving'},
-    { appliesToType: 'person', appliesIf: function () { return (extras.isChildUnder5() && !extras.isContactDeceased() && !extras.isContactMuted()); }, label: 'contact.child_under_5', icon: 'child'},
-    { appliesToType: 'person', appliesIf: function () { return (extras.currentlyPregnant() && !extras.isContactDeceased() && !extras.isContactMuted()); }, label: 'contact.is_pregnant', icon: 'pregnancy-1'}
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, 
+      label: 'contact.age', value: contact.date_of_birth, width: 4, filter: 'age' 
+    },
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, 
+      label: 'contact.sex', value: contact.sex === 'male' ? 'Mwanamme' : 'Mwanamke', width: 4 
+    },
+    { appliesToType: 'person', appliesIf: function () { return contact.phone; }, 
+      label: 'contact.phone', value: contact.phone, width: 4, filter: 'phone' 
+    },
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && !contact.phone && lineage[1] && lineage[1].parent; }, 
+      label: 'contact.phone', value: lineage[0] && lineage[0].contact ? lineage[0].contact.phone : '', width: 4, filter: 'phone' 
+    },
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1]; }, 
+      label: 'contact.parent', value: lineage[0], filter: 'lineage' 
+    },
+    { appliesToType: 'person', appliesIf: function () { return get(contact, 'parent.parent') && !get(contact, 'parent.parent.parent'); }, 
+      label: 'contact.grandparent', value: lineage[0], filter: 'lineage' 
+    },
+    { appliesToType: 'person', appliesIf: function () { return (contact.temp_hh_member === 'temporary' && !extras.isContactDeceased() && !extras.isContactMuted()); }, 
+      label: 'contact.temporary_member', icon: 'moving' 
+    },
+    { appliesToType: 'person', appliesIf: function () { return (extras.isChildUnder5() && !extras.isContactDeceased() && !extras.isContactMuted()); }, 
+      label: 'contact.child_under_5', icon: 'child' 
+    },
+    { appliesToType: 'person', appliesIf: function () { return (extras.currentlyPregnant() && !extras.isContactDeceased() && !extras.isContactMuted()); }, 
+      label: 'contact.is_pregnant', icon: 'pregnancy-1' 
+    }
   ],
 
   cards:cards 

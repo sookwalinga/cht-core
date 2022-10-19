@@ -21,48 +21,48 @@ module.exports = {
   },
 
   isChildUnder5: function (c) {
-   if(!this.isClient(c) || !c.contact.date_of_birth) return false;  
-    var birthDate = new Date(c.contact.date_of_birth);
-    var ageInMs = new Date(Date.now() - birthDate.getTime());
-    var ageInMonths = Math.round(ageInMs / (1000 * 60 * 60 * 24 * 30));
+    if(!this.isClient(c) || !c.contact.date_of_birth) {return false;}  
+    const birthDate = new Date(c.contact.date_of_birth);
+    const ageInMs = new Date(Date.now() - birthDate.getTime());
+    const ageInMonths = Math.round(ageInMs / (1000 * 60 * 60 * 24 * 30));
     return ageInMonths < 60;
   },
 
   isChildUnder20Days: function (c) {
-    if(!this.isClient(c) || !c.contact.date_of_birth) return false; 
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(Date.now() - birthDate.getTime());
-      var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
-      return ageInDays < 20;
+    if(!this.isClient(c) || !c.contact.date_of_birth) {return false;} 
+    const birthDate = new Date(c.contact.date_of_birth);
+    const ageInMs = new Date(Date.now() - birthDate.getTime());
+    const ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
+    return ageInDays < 20;
   },
 
   isChildInWindow3Or4: function (c) {
-    if (!this.isClient(c) || !c.contact.date_of_birth) return false;
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(Date.now() - birthDate.getTime());
-      var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
-      return ageInDays >= 20 && ageInDays < (this.week * 15);
+    if (!this.isClient(c) || !c.contact.date_of_birth) {return false;}
+    const birthDate = new Date(c.contact.date_of_birth);
+    const ageInMs = new Date(Date.now() - birthDate.getTime());
+    const ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
+    return ageInDays >= 20 && ageInDays < (this.week * 15);
   },
 
   isChildInWindow5Plus: function (c) {
-    if (!this.isClient(c) || !c.contact.date_of_birth) return false;
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(Date.now() - birthDate.getTime());
-      var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
-      return ageInDays >= (this.week * 15);
+    if (!this.isClient(c) || !c.contact.date_of_birth) {return false;}
+    const birthDate = new Date(c.contact.date_of_birth);
+    const ageInMs = new Date(Date.now() - birthDate.getTime());
+    const ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
+    return ageInDays >= (this.week * 15);
   },
 
   countReportsSubmitted: function (c, form) {
-    var reportsFound = []; 
-    if(!c || !c.reports)  return 0; 
+    let reportsFound = []; 
+    if(!c || !c.reports)  {return 0;} 
     reportsFound = c.reports.filter(function (r) {
-        return r.form === form;
-      });
-      return reportsFound.length;
-    },
+      return r.form === form;
+    });
+    return reportsFound.length;
+  },
 
   countConsentingInfantChildVisits: function (c) {
-    var consentingVisits = [];
+    let consentingVisits = [];
     if (c && c.reports) {
       consentingVisits = c.reports.filter(function (r) {
         return r.form === 'infant_child' &&
@@ -78,7 +78,7 @@ module.exports = {
 
   daysAfterBirth: function (c, days) {
     if (c.contact && c.contact.date_of_birth && Number.isInteger(days)) {
-      var result = new Date(c.contact.date_of_birth);
+      const result = new Date(c.contact.date_of_birth);
       result.setDate(result.getDate() + days);
       return result;
     }
@@ -87,7 +87,7 @@ module.exports = {
 
   getContactReportedDate: function (c) {
     if (c.contact && c.contact.reported_date) {
-      var reported_date = new Date(c.contact.reported_date);
+      const reported_date = new Date(c.contact.reported_date);
       return reported_date.getTime();
     }
     return null;
@@ -95,9 +95,9 @@ module.exports = {
 
   mapInfantChildVisitType: function (c) {
     if (c.contact && c.contact.date_of_birth) {
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(Date.now() - birthDate.getTime());
-      var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
+      const birthDate = new Date(c.contact.date_of_birth);
+      const ageInMs = new Date(Date.now() - birthDate.getTime());
+      const ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
 
       if (ageInDays < (this.day * 3)) {
         return 'infant_child_0_2_day_pp_visit';
@@ -143,7 +143,7 @@ module.exports = {
   },
 
   mapPregnancyVisitType: function (c) {
-    var gestation_in_weeks = this.getCurrentGestationAge(c);
+    const gestation_in_weeks = this.getCurrentGestationAge(c);
     if (gestation_in_weeks >= 22.5 && gestation_in_weeks < 31.5) {
       return 'pregnancy_month_5_month_7_visit';
     }
@@ -154,9 +154,9 @@ module.exports = {
 
   mapInfantChildVisitScheduleDueDates: function (c) {
     if (c.contact && c.contact.date_of_birth) {
-      var birthDate = new Date(c.contact.date_of_birth);
-      var ageInMs = new Date(Date.now() - birthDate.getTime());
-      var ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
+      const birthDate = new Date(c.contact.date_of_birth);
+      const ageInMs = new Date(Date.now() - birthDate.getTime());
+      const ageInDays = Math.round(ageInMs / (1000 * 60 * 60 * 24));
 
       if (ageInDays < (this.day * 20)) {
         return this.daysAfterBirth(c, (this.day * 5)).getTime();
@@ -200,14 +200,14 @@ module.exports = {
   },
 
   isSmallBaby: function (c) {
-    var small;
-    var reportsFound = [];
+    let small;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'infant_child' && r.fields && r.fields.first_visit_6_months && r.fields.first_visit_6_months.small_baby_today !== '';
       });
       if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'infant_child');
+        const report = Utils.getMostRecentReport(reportsFound, 'infant_child');
         small = report.fields.first_visit_6_months.small_baby_today;
       }
     }
@@ -243,16 +243,16 @@ module.exports = {
   isLatestReport: function(c,report){
     return c&&c.reports&&report&&
       !c.reports.filter(r=>r.form === 'pregnancy' || r.form === 'pregnancy_outcomes_reminder')
-      .some(r=>r.reported_date>report.reported_date);
- },
+        .some(r=>r.reported_date>report.reported_date);
+  },
 
- isMostRecentReport:function(c, report, forms) {
-  return report === c.reports
-    .filter(r=>forms.indexOf(r.form) >= 0 && !r.deleted)
-    .reduce((a, r) => {
-      return a && a.reported_date > r.reported_date ? a : r;
-    },null);
-},
+  isMostRecentReport:function(c, report, forms) {
+    return report === c.reports
+      .filter(r=>forms.indexOf(r.form) >= 0 && !r.deleted)
+      .reduce((a, r) => {
+        return a && a.reported_date > r.reported_date ? a : r;
+      },null);
+  },
 
   getANCVisitFlag: function (report) {
     if (
@@ -489,11 +489,12 @@ module.exports = {
   },
 
   getBcg: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bcg === 'yes';
+        return r.form === 'infant_child' &&
+         get(r,'fields.immunizations.record_vaccines.received_bcg')==='yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -503,11 +504,15 @@ module.exports = {
   },
 
   getBopv0: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv0 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_bopv0 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -517,11 +522,15 @@ module.exports = {
   },
 
   getBopv1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv1 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_bopv1 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -531,11 +540,15 @@ module.exports = {
   },
 
   getDtp_hepb_hib1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib1 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_dtp_hepb_hib1 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -545,11 +558,15 @@ module.exports = {
   },
 
   getPcvi1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi1 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_pcvi1 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -559,11 +576,15 @@ module.exports = {
   },
 
   getRota1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota1 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_rota1 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -573,11 +594,15 @@ module.exports = {
   },
 
   getBopv2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv2 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_bopv2 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -587,11 +612,15 @@ module.exports = {
   },
 
   getDtp_hepb_hib2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib2 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_dtp_hepb_hib2 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -601,11 +630,15 @@ module.exports = {
   },
 
   getPcvi2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi2 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_pcvi2 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -615,11 +648,15 @@ module.exports = {
   },
 
   getRota2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_rota2 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_rota2 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -629,11 +666,15 @@ module.exports = {
   },
 
   getBopv3: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_bopv3 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_bopv3 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -643,11 +684,15 @@ module.exports = {
   },
 
   getDtp_hepb_hib3: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_dtp_hepb_hib3 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_dtp_hepb_hib3 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -657,11 +702,15 @@ module.exports = {
   },
 
   getPcvi3: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_pcvi3 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_pcvi3 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -671,11 +720,15 @@ module.exports = {
   },
 
   getIpv: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_ipv === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_ipv === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -685,11 +738,15 @@ module.exports = {
   },
 
   getSurua_rubella1: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella1 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_surua_rubella1 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -699,11 +756,15 @@ module.exports = {
   },
 
   getSurua_rubella2: function (c) {
-    var result = 0;
-    var reportsFound = [];
+    let result = 0;
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
-        return r.form === 'infant_child' && r.fields && r.fields.immunizations && r.fields.immunizations.record_vaccines && r.fields.immunizations.record_vaccines.received_surua_rubella2 === 'yes';
+        return r.form === 'infant_child' &&
+         r.fields &&
+         r.fields.immunizations &&
+         r.fields.immunizations.record_vaccines &&
+         r.fields.immunizations.record_vaccines.received_surua_rubella2 === 'yes';
       });
       if (reportsFound.length > 0) {
         result = 1;
@@ -713,7 +774,7 @@ module.exports = {
   },
 
   isFormSubmittedForSource: function (reports, source_form, source_id) {
-    var reportsFound = reports.filter(function (r) {
+    const reportsFound = reports.filter(function (r) {
       return (r.form === source_form) &&
         r.fields &&
         r.fields.referral_source_id &&
@@ -723,9 +784,9 @@ module.exports = {
   },
 
   getRecentEDDForThisPregnancy: function (c) {
-    var reportsFound = [];
-    var EDD = '';
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let reportsFound = [];
+    let EDD = '';
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -734,7 +795,7 @@ module.exports = {
           r.fields.EDD;
       });
       if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
         EDD = report.fields.EDD;
       }
     }
@@ -743,21 +804,20 @@ module.exports = {
 
   getCurrentGestationAge: function (c) {
     if (this.getRecentEDDForThisPregnancy(c) !== '') {
-      var EDD = new Date(this.getRecentEDDForThisPregnancy(c));
-      var gestation_in_weeks;
-      var estimatedDaysLeftInMs = new Date(EDD.getTime() - Date.now());
-      gestation_in_weeks = 40 - estimatedDaysLeftInMs / (1000 * 60 * 60 * 24 * 7);
+      const EDD = new Date(this.getRecentEDDForThisPregnancy(c));
+      const estimatedDaysLeftInMs = new Date(EDD.getTime() - Date.now());
+      const gestation_in_weeks = 40 - estimatedDaysLeftInMs / (1000 * 60 * 60 * 24 * 7);
       return gestation_in_weeks;
     }
     return 0;
   },
 
   getPregnancyDueDate: function (c) {
-    var dueDate = new Date();
+    let dueDate = new Date();
     if (this.getRecentEDDForThisPregnancy(c) !== '') {
       //Get EDD 
-      var EDD = new Date(this.getRecentEDDForThisPregnancy(c));
-      var gestation_in_weeks = this.getCurrentGestationAge(c);
+      const EDD = new Date(this.getRecentEDDForThisPregnancy(c));
+      const gestation_in_weeks = this.getCurrentGestationAge(c);
       if (gestation_in_weeks >= 22.5 && gestation_in_weeks < 31.5) {
         dueDate = new Date(EDD.setDate(EDD.getDate() - (13 * this.week)));
       }
@@ -769,7 +829,7 @@ module.exports = {
   },
 
   isOver5MonthsPregnant: function (c) {
-    var gestation_in_week = this.getCurrentGestationAge(c);
+    const gestation_in_week = this.getCurrentGestationAge(c);
     if (gestation_in_week >= 22.5) {
       return true;
     }
@@ -777,8 +837,8 @@ module.exports = {
   },
 
   getMostRecentPregnancyConsentDate: function (c) {
-    var reportedDate = '';
-    var reportsFound = [];
+    let reportedDate = '';
+    let reportsFound = [];
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -789,16 +849,16 @@ module.exports = {
       });
     }
     if (reportsFound.length > 0) {
-      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+      const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
       reportedDate = report.reported_date;
     }
     return reportedDate;
   },
 
   getRecentPregnancyReport: function (c) {
-    var report = '';
-    var reportsFound = [];
-    var recentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let report = '';
+    let reportsFound = [];
+    const recentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports && recentReportDate !== '') {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -812,7 +872,7 @@ module.exports = {
   },
 
   getPositiveConsentingPregnancyRegistrations: function (c) {
-    var positiveConsentingPregnancyRegistrations = [];
+    let positiveConsentingPregnancyRegistrations = [];
     if (c && c.reports) {
       positiveConsentingPregnancyRegistrations = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -825,8 +885,8 @@ module.exports = {
   },
 
   getPregnancyOutcomes: function (c) {
-    var deliveryOutcomes = [];
-    var earlyTerminations = [];
+    let deliveryOutcomes = [];
+    let earlyTerminations = [];
     if (c && c.reports) {
       deliveryOutcomes = c.reports.filter(function (r) {
         return r.form === 'pregnancy_outcomes' &&
@@ -857,8 +917,8 @@ module.exports = {
   },
 
   hadCSection: function (c) {
-    var report = '';
-    var flag = false;
+    let report = '';
+    let flag = false;
     if (c && c.reports) {
       report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report && report.fields && report.fields.delivery_information &&
@@ -871,9 +931,9 @@ module.exports = {
   },
 
   getDeliveryDate: function (c) {
-    var delivery_date = null;
+    let delivery_date = null;
     if (c && c.reports) {
-      var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
+      const report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report && report.fields && report.fields.confirm_delivery && report.fields.confirm_delivery.date_of_delivery) {
         delivery_date = new Date(report.fields.confirm_delivery.date_of_delivery);
       }
@@ -882,11 +942,11 @@ module.exports = {
   },
 
   showQualityOfCare: function (c) {
-    var deliveryDate = this.getDeliveryDate(c);
-    var flag = false;
+    const deliveryDate = this.getDeliveryDate(c);
+    let flag = false;
     if (deliveryDate !== null) {
-      var daysPassedInMs = new Date(Date.now() - deliveryDate.getTime());
-      var daysPassed = Math.round(daysPassedInMs / (1000 * 60 * 60 * 24));
+      const daysPassedInMs = new Date(Date.now() - deliveryDate.getTime());
+      const daysPassed = Math.round(daysPassedInMs / (1000 * 60 * 60 * 24));
       if (daysPassed >= 3) {
         flag = true;
       }
@@ -895,12 +955,12 @@ module.exports = {
   },
 
   noPostpartumVisitsCurrentPregnancy: function (c) {
-    var flag = true;
-    var reportsFound = [];
+    let flag = true;
+    let reportsFound = [];
     if (c && c.reports) {
-      var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
+      const report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report) {
-        var delivery_reported_date = report.reported_date;
+        const delivery_reported_date = report.reported_date;
         reportsFound = c.reports.filter(function (r) {
           return r.form === 'postpartum' &&
             r.reported_date &&
@@ -915,7 +975,7 @@ module.exports = {
   },
 
   isAtleastOneBabyAlive: function (report) {
-    var flag = false;
+    let flag = false;
     if (report &&
       report.fields &&
       report.fields.number_deliveries &&
@@ -936,9 +996,9 @@ module.exports = {
   },
 
   didClientDeliver: function (c) {
-    var flag = false;
+    let flag = false;
     if (c && c.reports) {
-      var report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
+      const report = Utils.getMostRecentReport(c.reports, 'pregnancy_outcomes');
       if (report && report.fields && report.fields.confirm_delivery &&
         report.fields.confirm_delivery.pregnancy_outcome &&
         report.fields.confirm_delivery.pregnancy_outcome === 'did_deliver'
@@ -950,18 +1010,18 @@ module.exports = {
   },
 
   consentingVisitsThisMonth: function (c, form_type) {
-    var flag = false;
-    var isReportedThisMonth = this.isOnSameMonth;
+    let flag = false;
+    const isReportedThisMonth = this.isOnSameMonth;
     if (c && c.reports) {
-      var counter = [];
+      let counter = [];
       counter = c.reports.filter(function (r) {
         switch (form_type) {
-          case 'pregnancy':
-            return r.form === 'pregnancy' && r.fields && r.fields.pregnancy_consent &&
+        case 'pregnancy':
+          return r.form === 'pregnancy' && r.fields && r.fields.pregnancy_consent &&
               r.fields.pregnancy_consent.consent && r.fields.pregnancy_consent.consent === 'yes' &&
               r.reported_date && isReportedThisMonth(new Date(r.reported_date), new Date());
-          case 'infant_child':
-            return r.form === 'infant_child' &&
+        case 'infant_child':
+          return r.form === 'infant_child' &&
               r.fields && r.fields.consent && r.fields.consent.child_consent_today &&
               r.fields.consent.child_consent_today === 'yes' &&
               isReportedThisMonth(new Date(r.reported_date), new Date());
@@ -975,14 +1035,14 @@ module.exports = {
   },
 
   isOnSameMonth: function (date1, date2) {
-    var firstDate = date1;
-    var secondDate = date2;
+    const firstDate = date1;
+    const secondDate = date2;
     return firstDate.getFullYear() === secondDate.getFullYear() &&
       firstDate.getMonth() + 1 === secondDate.getMonth() + 1;
   },
 
   isContactDeceased: function (c) {
-    var isDeceased = false;
+    let isDeceased = false;
     if (c && c.contact && c.contact.date_of_death) {
       isDeceased = true;
     }
@@ -990,7 +1050,7 @@ module.exports = {
   },
 
   isContactMuted: function (c) {
-    var isMuted = false;
+    let isMuted = false;
     if (c && c.contact && c.contact.muted) {
       isMuted = true;
     }
@@ -998,9 +1058,9 @@ module.exports = {
   },
 
   getPregnantWomanAge: function (c) {
-    var reportsFound = [];
-    var ageInYears = '';
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let reportsFound = [];
+    let ageInYears = '';
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -1009,7 +1069,7 @@ module.exports = {
           r.fields.age_years;
       });
       if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
         ageInYears = report.fields.age_years;
       }
     }
@@ -1017,9 +1077,9 @@ module.exports = {
   },
 
   getHIVStatus: function (c) {
-    var hiv_status = false;
-    var reportsFound = [];
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let hiv_status = false;
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -1040,9 +1100,9 @@ module.exports = {
   },
 
   getPrevMiscarrige: function (c) {
-    var reportsFound = [];
-    var prevMiscarriage = false;
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let reportsFound = [];
+    let prevMiscarriage = false;
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -1052,7 +1112,7 @@ module.exports = {
           r.fields.pregnant_woman_information.previous_miscarriages;
       });
       if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
         prevMiscarriage = report.fields.pregnant_woman_information.previous_miscarriages;
       }
     }
@@ -1060,9 +1120,9 @@ module.exports = {
   },
 
   getPrevPregnancies: function (c) {
-    var reportsFound = [];
-    var prevPregnancies = false;
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let reportsFound = [];
+    let prevPregnancies = false;
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -1072,7 +1132,7 @@ module.exports = {
           r.fields.pregnant_woman_information.previous_pregnancies;
       });
       if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
         prevPregnancies = report.fields.pregnant_woman_information.previous_pregnancies;
       }
     }
@@ -1080,13 +1140,13 @@ module.exports = {
   },
 
   getPreviousDeliveries: function (c) {
-    var prevDeliveries = this.getPrevPregnancies(c) - this.getPrevMiscarrige(c);
+    const prevDeliveries = this.getPrevPregnancies(c) - this.getPrevMiscarrige(c);
     return prevDeliveries;
   },
 
   getPrevDeliveryLocation: function (c) {
-    var reportsFound = [];
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -1096,16 +1156,16 @@ module.exports = {
           r.fields.facility_delivery_importance.delivery_location;
       });
       if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
         return report.fields.facility_delivery_importance.delivery_location;
       }
     }
   },
 
   getHouseInfo: function (c, property) {
-    var reportsFound = [];
-    var data = '';
-    var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    let reportsFound = [];
+    let data = '';
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
     if (c && c.reports) {
       reportsFound = c.reports.filter(function (r) {
         return r.form === 'pregnancy' &&
@@ -1115,151 +1175,151 @@ module.exports = {
           r.fields.education_and_prev_enrollment;
       });
       if (reportsFound.length > 0) {
-        var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
         data = report.fields.education_and_prev_enrollment;
         if (property === 'roof_material')
-          data = report.fields.education_and_prev_enrollment.roof_material;
+        {data = report.fields.education_and_prev_enrollment.roof_material;}
         else if (property === 'floor_material')
-          data = report.fields.education_and_prev_enrollment.floor_material;
+        {data = report.fields.education_and_prev_enrollment.floor_material;}
         else if (property === 'highest_school_level')
-          data = report.fields.education_and_prev_enrollment.highestSchoolLevel;
+        {data = report.fields.education_and_prev_enrollment.highestSchoolLevel;}
         else if (property === 'water_source')
-          data = report.fields.education_and_prev_enrollment.waterSource;
+        {data = report.fields.education_and_prev_enrollment.waterSource;}
         else if (property === 'home_electricity')
-          data = report.fields.education_and_prev_enrollment.homeElectricity;
+        {data = report.fields.education_and_prev_enrollment.homeElectricity;}
       }
     }
     return data;
   },
 
-getBreechCondition(c) { 
-  var reportsFound = [];
-  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
-  if (c && c.reports) {
-    reportsFound = c.reports.filter(function (r) {
-      return r.form === 'pregnancy' &&
+  getBreechCondition(c) { 
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
         r.fields &&
         r.fields.rch_card &&
         r.fields.rch_card.breech_position;
-    });
-    if (reportsFound.length > 0) {
-      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      return report.fields.rch_card.breech_position;
+      });
+      if (reportsFound.length > 0) {
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        return report.fields.rch_card.breech_position;
+      }
     }
-  }
-},
+  },
 
-getMedicalCondition(c,condition) { 
-  var reportsFound = [];
-  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
-  if (c && c.reports) {
-    reportsFound = c.reports.filter(function (r) {
-      return r.form === 'pregnancy' &&
+  getMedicalCondition(c,condition) { 
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
         r.fields &&
         r.fields.rch_card &&
         r.fields.rch_card.medical_condition;
-    });
-    if (reportsFound.length > 0) {
-      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      return report.fields.rch_card.medical_condition.toString().includes(condition);
+      });
+      if (reportsFound.length > 0) {
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        return report.fields.rch_card.medical_condition.toString().includes(condition);
      
+      }
     }
-  }
-},
-getMostRecentConsentingPregnancyReport:function(c){
-      let reportsFound= c&&
+  },
+  getMostRecentConsentingPregnancyReport:function(c){
+    const reportsFound= c&&
       c.reports&&
       c.reports.filter(r=> 
         r.form === 'pregnancy' &&
         get(r,'fields.pregnancy_consent.consent')==='yes'
       );
-      return Utils.getMostRecentReport(reportsFound, 'pregnancy');
+    return Utils.getMostRecentReport(reportsFound, 'pregnancy');
   },
-getDeliveryComplication(c,complication) { 
-  var reportsFound = [];
-  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
-  if (c && c.reports) {
-    reportsFound = c.reports.filter(function (r) {
-      return r.form === 'pregnancy' &&
+  getDeliveryComplication(c,complication) { 
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
         r.fields &&
         r.fields.pregnant_woman_information &&
         r.fields.pregnant_woman_information.delivery_complications;
-    });
-    if (reportsFound.length > 0) {
-      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      return report.fields.pregnant_woman_information.delivery_complications.includes(complication);
+      });
+      if (reportsFound.length > 0) {
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        return report.fields.pregnant_woman_information.delivery_complications.includes(complication);
+      }
     }
-  }
-},
+  },
 
-getStillBirth(c) { 
-  var reportsFound = [];
-  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
-  if (c && c.reports) {
-    reportsFound = c.reports.filter(function (r) {
-      return r.form === 'pregnancy' &&
+  getStillBirth(c) { 
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
         r.fields &&
         r.fields.pregnant_woman_information &&
         r.fields.pregnant_woman_information.previous_stillbirth;
-    });
-    if (reportsFound.length > 0) {
-      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      return report.fields.pregnant_woman_information.previous_stillbirth;
-    }
-  } 
-},
+      });
+      if (reportsFound.length > 0) {
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        return report.fields.pregnant_woman_information.previous_stillbirth;
+      }
+    } 
+  },
 
-getPartnerPermission(c) { 
-  var reportsFound = [];
-  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
-  if (c && c.reports) {
-    reportsFound = c.reports.filter(function (r) {
-      return r.form === 'pregnancy' &&
+  getPartnerPermission(c) { 
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
         r.fields &&
         r.fields.facility_delivery_importance &&
         r.fields.facility_delivery_importance.allow_partner_to_deliver_facility;
-    });
-    if (reportsFound.length > 0) {
-      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      return report.fields.facility_delivery_importance.allow_partner_to_deliver_facility === 'yes';
-    }
-  } 
-},
+      });
+      if (reportsFound.length > 0) {
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        return report.fields.facility_delivery_importance.allow_partner_to_deliver_facility === 'yes';
+      }
+    } 
+  },
 
-getDeliveryMethod(c,deliveryMethod) { 
-  var reportsFound = [];
-  var recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
-  if (c && c.reports) {
-    reportsFound = c.reports.filter(function (r) {
-      return r.form === 'pregnancy' &&
+  getDeliveryMethod(c,deliveryMethod) { 
+    let reportsFound = [];
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    if (c && c.reports) {
+      reportsFound = c.reports.filter(function (r) {
+        return r.form === 'pregnancy' &&
         r.reported_date >= recentConsentReportDate &&
         r.fields &&
         r.fields.pregnant_woman_information &&
          (r.fields.pregnant_woman_information.previous_delivery_by_vacuum
         || r.fields.pregnant_woman_information.previous_delivery_by_c_section); 
-    });
-    if (reportsFound.length > 0) {
-      var report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
-      return deliveryMethod==='vacuum'
+      });
+      if (reportsFound.length > 0) {
+        const report = Utils.getMostRecentReport(reportsFound, 'pregnancy');
+        return deliveryMethod==='vacuum'
           ?report.fields.pregnant_woman_information.previous_delivery_by_vacuum
           :report.fields.pregnant_woman_information.previous_delivery_by_c_section; 
+      }
     }
-  }
-},
-isPregnancyOutcomesSubmitted: function (c) {
-  const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
-  return  recentConsentReportDate && 
+  },
+  isPregnancyOutcomesSubmitted: function (c) {
+    const recentConsentReportDate = this.getMostRecentPregnancyConsentDate(c);
+    return  recentConsentReportDate && 
     c.reports.some(r=>r.form==='pregnancy_outcomes' &&
     r.reported_date>=recentConsentReportDate); 
-},
-isInPostpartumReminderTimeWindow(c) { 
-  let date = new Date(this.getRecentEDDForThisPregnancy(c));
-  date.setDate(date.getDate()-14); 
-  return new Date() >= date; 
-}, 
+  },
+  isInPostpartumReminderTimeWindow(c) { 
+    const date = new Date(this.getRecentEDDForThisPregnancy(c));
+    date.setDate(date.getDate()-14); 
+    return new Date() >= date; 
+  }, 
 };
