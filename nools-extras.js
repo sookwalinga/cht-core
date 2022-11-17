@@ -485,6 +485,13 @@ module.exports = {
     ) {
       return report.fields.refer_slow_to_learn_specifics_flag;
     }
+    if (
+      report &&
+      report.fields &&
+      report.fields.refer_slow_to_learn_specifics_flag_new
+    ) {
+      return report.fields.refer_slow_to_learn_specifics_flag_new;
+    }
     return '0';
   },
 

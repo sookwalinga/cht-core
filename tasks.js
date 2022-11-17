@@ -872,7 +872,7 @@ module.exports = [
     ]
   },
   {
-    name: 'chw-monthly-meeting-task-1',
+    name: 'chw-monthly-meeting-task-1', 
     icon: 'confirm-meeting',
     title: 'task.chw_monthly_meeting',
     appliesTo: 'reports',

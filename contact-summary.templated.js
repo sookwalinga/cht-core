@@ -144,7 +144,8 @@ module.exports = {
     latest_monthly_meeting_date: extras.getLatestMonthlyMeetingDate(), 
     latest_monthly_meeting_absentees: extras.getLatestMonthlyMeetingAbsentees(), 
     is_qm_planning_submitted_this_month: extras.isQMPlanningSubmittedThisMonth(), 
-    is_client_adult: extras.isClientAdult()
+    is_client_adult: extras.isClientAdult(), 
+    show_new_ecd_protocol:extras.isCHVInProject('new_ecd') 
   },
 
   fields: [
