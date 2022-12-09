@@ -211,7 +211,7 @@
         </translation>
       </itext>
       <instance>
-        <chw_monthly_meeting id="chw_monthly_meeting" prefix="J1!chw_monthly_meeting!" delimiter="#" version="2022-08-12 10:13:27">
+        <chw_monthly_meeting id="chw_monthly_meeting" prefix="J1!chw_monthly_meeting!" delimiter="#" version="2022-12-06 12:55:33">
           <inputs>
             <meta>
               <location>
@@ -239,6 +239,8 @@
           <latest_monthly_meeting_topic/>
           <latest_monthly_meeting_date/>
           <latest_monthly_meeting_absentees/>
+          <start/>
+          <end/>
           <prev_meeting>
             <meeting_date/>
             <meeting_topic/>
@@ -294,6 +296,8 @@
       <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_topic" type="string" calculate="instance('contact-summary')/context/lastest_monthly_meeting_topic"/>
       <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_date" type="string" calculate="instance('contact-summary')/context/latest_monthly_meeting_date"/>
       <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_absentees" type="string" calculate="instance('contact-summary')/context/latest_monthly_meeting_absentees"/>
+      <bind nodeset="/chw_monthly_meeting/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/chw_monthly_meeting/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/chw_monthly_meeting/prev_meeting" relevant="string-length( /chw_monthly_meeting/latest_monthly_meeting_date ) &gt; 0"/>
       <bind nodeset="/chw_monthly_meeting/prev_meeting/meeting_date" readonly="true()" type="string"/>
       <bind nodeset="/chw_monthly_meeting/prev_meeting/meeting_topic" readonly="true()" type="string"/>

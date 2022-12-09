@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - master
+      - v*maintenance*
   pull_request:
     branches:
       - master
+      - v*maintenance*
 
 jobs:
   test:

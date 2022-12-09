@@ -1048,7 +1048,7 @@
         </translation>
       </itext>
       <instance>
-        <chv_quality_monitoring id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" delimiter="#" version="2022-09-21 13:25:59">
+        <chv_quality_monitoring id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" delimiter="#" version="2022-12-07 10:48:23">
           <inputs>
             <meta>
               <location>
@@ -1072,6 +1072,8 @@
           <patient_id/>
           <chw_id/>
           <chw_name/>
+          <start/>
+          <end/>
           <covid19_intro>
             <covid19_intro_note/>
           </covid19_intro>
@@ -1192,6 +1194,8 @@
       <bind nodeset="/chv_quality_monitoring/patient_id" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/chv_quality_monitoring/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
       <bind nodeset="/chv_quality_monitoring/chw_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/chv_quality_monitoring/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/chv_quality_monitoring/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/chv_quality_monitoring/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/ipc/n_precaution_question" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures" type="select1" required="true()"/>
@@ -1236,7 +1240,7 @@
       <bind nodeset="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary" type="select1" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/note_to_supervisor" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client" type="select1" relevant="not(selected( /chv_quality_monitoring/quality_monitoring_qns/count_chv_visits ,&quot;never&quot;))" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client" type="select1" required="true()" relevant="not(selected( /chv_quality_monitoring/quality_monitoring_qns/count_chv_visits ,&quot;never&quot;))"/>
       <bind nodeset="/chv_quality_monitoring/observation/note_to_supervisor_observation" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/observation/areas_of_improvement" type="string" required="true()"/>
       <bind nodeset="/chv_quality_monitoring/observation/progress_made" type="string" required="true()"/>
@@ -1370,7 +1374,7 @@ or selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , '
       <bind nodeset="/chv_quality_monitoring/group_summary/r_improvement_areas" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_followup" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/follow_up_again" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/next_follow_up_date" type="date" required="true()" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" constraint=". &gt; today()" jr:constraintMsg="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg')"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/next_follow_up_date" type="date" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" constraint=". &gt; today()" required="true()" jr:constraintMsg="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg')"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_follow_up_date" type="string" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" calculate="format-date( /chv_quality_monitoring/group_summary/next_follow_up_date , '%a %e %b %Y')"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_next_follow_up" readonly="true()" type="string" relevant=" /chv_quality_monitoring/group_summary/next_follow_up_date !='' and  /chv_quality_monitoring/group_summary/next_follow_up_date  &gt; today()"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /chv_quality_monitoring/group_summary/next_follow_up_date ) - 2), '%a %e %b %Y')"/>

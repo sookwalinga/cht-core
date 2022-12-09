@@ -5,27 +5,7 @@ DROP MATERIALIZED VIEW IF EXISTS supervisor_performance;
 
 CREATE MATERIALIZED VIEW supervisor_performance AS
 (
-  WITH daily_meetings AS (
-    SELECT
-      supervisory_area_uuid,
-      date_trunc('day',reported_date) AS "day",
-      sum((confirm_meeting IN('my_supervisor_is','my_supervisor_is_attending'))::INT) AS num_individual_chv_meetings,
-      max((confirm_meeting = 'iam_attending')::INT) AS chv_meetings
-    FROM useview_confirm_meeting
-    GROUP BY supervisory_area_uuid,"day"
-  ),
-
-  meetings AS (
-    SELECT
-      supervisory_area_uuid,
-      date_trunc('month',day) AS reported_month,
-      sum(num_individual_chv_meetings) AS num_individual_chv_meetings,
-      sum(chv_meetings) AS chv_meetings
-    FROM daily_meetings
-    GROUP BY supervisory_area_uuid,reported_month
-  ),
-
-  skeleton AS (
+  WITH skeleton AS (
     SELECT
       _id,
       supervisory_area_uuid,
@@ -35,23 +15,66 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
       current_date,
       interval '1 month') AS t(reported_month)
     INNER JOIN useview_supervisor AS supervisor ON reported_month >= supervisor.reported_date
+      AND supervisor.retired IS NULL
     ORDER BY _id,reported_month
+  ),
+
+  chv_performance_CTE AS (
+    SELECT
+      supervisory_area_uuid,
+      reported_month,
+      coalesce(round(sum(num_child_enrollments + num_pregnancy_enrollments)::DECIMAL / count(chv_uuid),1),0) AS average_enrollments_per_chv,
+      coalesce(round(sum(num_child_visits + num_pregnancy_visits)::DECIMAL / count(chv_uuid),1),0) AS average_visits_per_chv
+    FROM chv_performance
+    GROUP BY supervisory_area_uuid,reported_month
+  ),
+
+  group_session_CTE AS (
+    SELECT
+      supervisory_area_uuid,
+      count(_id) AS num_group_sessions,
+      date_trunc('month',reported_date)::date AS reported_month
+    FROM useview_group_session
+    GROUP BY supervisory_area_uuid, reported_month
+  ),
+
+  monthly_meeting_CTE AS (
+    SELECT
+      supervisory_area_uuid,
+      count(_id) AS num_monthly_meetings,
+      date_trunc('month',reported_date)::date AS reported_month
+    FROM useview_monthly_meeting
+    GROUP BY supervisory_area_uuid, reported_month
+  ),
+
+  quality_monitoring_CTE AS (
+    SELECT
+      supervisory_area_uuid,
+      count(_id) AS num_monitoring_meetings,
+      date_trunc('month',reported_date)::date AS reported_month
+    FROM useview_chv_quality_monitoring
+    GROUP BY supervisory_area_uuid, reported_month
   )
 
   SELECT
     skeleton._id AS supervisor_uuid,
     skeleton.reported_month,
-    coalesce(meetings.num_individual_chv_meetings, 0) AS chv_field_visits,
-    coalesce(meetings.chv_meetings, 0) AS monthly_meetings,
-    coalesce(round(sum(cp.num_child_enrollments + cp.num_pregnancy_enrollments)::DECIMAL / count(cp.chv_uuid),1),0) AS average_enrollments_per_chv,
-    coalesce(round(sum(cp.num_child_visits + cp.num_pregnancy_visits)::DECIMAL / count(cp.chv_uuid),1),0) AS average_visits_per_chv
+    gs.num_group_sessions,
+    meeting.num_monthly_meetings,
+    qm.num_monitoring_meetings
   FROM skeleton
-  LEFT JOIN chv_performance AS cp
+  LEFT JOIN chv_performance_CTE AS cp
     ON skeleton.supervisory_area_uuid = cp.supervisory_area_uuid
-  LEFT JOIN meetings
-    ON skeleton.supervisory_area_uuid = meetings.supervisory_area_uuid
-      AND skeleton.reported_month = meetings.reported_month
-  GROUP BY skeleton.reported_month,supervisor_uuid,chv_field_visits,monthly_meetings
+      AND skeleton.reported_month = cp.reported_month
+  LEFT JOIN group_session_CTE AS gs
+    ON skeleton.supervisory_area_uuid = gs.supervisory_area_uuid
+      AND skeleton.reported_month = gs.reported_month
+  LEFT JOIN monthly_meeting_CTE AS meeting
+    ON skeleton.supervisory_area_uuid = meeting.supervisory_area_uuid
+      AND skeleton.reported_month = meeting.reported_month
+  LEFT JOIN quality_monitoring_CTE AS qm
+    ON skeleton.supervisory_area_uuid = qm.supervisory_area_uuid
+      AND skeleton.reported_month = qm.reported_month
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS supervisor_uuid_month ON supervisor_performance USING btree(supervisor_uuid,reported_month);

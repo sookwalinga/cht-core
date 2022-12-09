@@ -15,7 +15,7 @@ CREATE MATERIALIZED VIEW useview_chv_quality_monitoring AS
     doc ->> 'content_type' AS content_type,
     to_timestamp(nullif(doc ->> 'reported_date', '')::DOUBLE PRECISION / 1000) AS reported_date,
     doc #>> '{contact,_id}' AS supervisor_uuid,
-    doc #>> '{contact,parent,_id}' AS district_hospital_uuid,
+    doc #>> '{contact,parent,_id}' AS supervisory_area_uuid,
     doc ->> 'from' AS supervisor_phone,
     doc #>> '{fields,patient_id}' AS chv_uuid,
     to_date(nullif(doc #>> '{fields,visit_info,visit_date_pretty_print}', ''), 'DD-MM-YYYY') AS date_of_chv_quality_monitoring,

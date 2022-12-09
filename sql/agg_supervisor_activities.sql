@@ -7,26 +7,15 @@
 DROP MATERIALIZED VIEW IF EXISTS agg_supervisor_activities;
 CREATE MATERIALIZED VIEW agg_supervisor_activities AS
 (
-  WITH daily_meet AS (
-    SELECT
-      district,
-      sa.name AS facility,
-      date_trunc('day',cm.reported_date) AS reported_day,
-      max((confirm_meeting = 'iam_attending')::INT) AS chv_meetings,
-      sum((confirm_meeting IN ('my_supervisor_is','my_supervisor_is_attending'))::INT) AS shadowing_meetings
-    FROM useview_supervisory_area AS sa
-    LEFT JOIN useview_confirm_meeting AS cm
-      ON sa._id = cm.supervisory_area_uuid
-    GROUP BY district,supervisory_area_uuid,facility,reported_day
-  )
-
   SELECT
     district,
-    date_trunc('month', reported_day) AS reported_month,
-    -- ,facility
-    sum(chv_meetings) AS chv_meetings,
-    sum(shadowing_meetings) AS chv_shadowing_meetings
-  FROM daily_meet
+    reported_month,
+    num_group_sessions,
+    num_monthly_meetings,
+    num_monitoring_meetings
+  FROM supervisor_performance AS sp
+  INNER JOIN useview_supervisory_area AS sa
+    ON sa.supervisor_uuid = sp.supervisor_uuid
   GROUP BY district,reported_month--,facility
 );
 

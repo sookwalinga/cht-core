@@ -118,7 +118,7 @@
         </translation>
       </itext>
       <instance>
-        <group_session id="group_session" prefix="J1!group_session!" delimiter="#" version="2022-10-18 11:37:51">
+        <group_session id="group_session" prefix="J1!group_session!" delimiter="#" version="2022-12-06 11:43:12">
           <inputs>
             <meta>
               <location>
@@ -144,6 +144,8 @@
           <patient_id/>
           <place_id/>
           <place_name/>
+          <start/>
+          <end/>
           <meeting_details>
             <meeting_date/>
             <topics/>
@@ -178,7 +180,9 @@
       <bind nodeset="/group_session/patient_id" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/group_session/place_id" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/group_session/place_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/group_session/meeting_details/meeting_date" type="date" required="true()" jr:constraintMsg="jr:itext('/group_session/meeting_details/meeting_date:jr:constraintMsg')" constraint=". &lt;= today()"/>
+      <bind nodeset="/group_session/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/group_session/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/group_session/meeting_details/meeting_date" type="date" jr:constraintMsg="jr:itext('/group_session/meeting_details/meeting_date:jr:constraintMsg')" required="true()" constraint=". &lt;= today()"/>
       <bind nodeset="/group_session/meeting_details/topics" type="string" required="true()"/>
       <bind nodeset="/group_session/meeting_details/challenges" type="string" required="true()"/>
       <bind nodeset="/group_session/meeting_details/actions" type="string" required="true()"/>
