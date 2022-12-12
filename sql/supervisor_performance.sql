@@ -41,7 +41,7 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
   monthly_meeting_CTE AS (
     SELECT
       supervisory_area_uuid,
-      count(_id) AS num_monthly_meetings,
+      count(_id) AS monthly_meetings,
       date_trunc('month',reported_date)::date AS reported_month
     FROM useview_monthly_meeting
     GROUP BY supervisory_area_uuid, reported_month
@@ -50,7 +50,7 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
   quality_monitoring_CTE AS (
     SELECT
       supervisory_area_uuid,
-      count(_id) AS num_monitoring_meetings,
+      count(_id) AS chv_field_visits,
       date_trunc('month',reported_date)::date AS reported_month
     FROM useview_chv_quality_monitoring
     GROUP BY supervisory_area_uuid, reported_month
@@ -59,9 +59,11 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
   SELECT
     skeleton._id AS supervisor_uuid,
     skeleton.reported_month,
-    gs.num_group_sessions,
-    meeting.num_monthly_meetings,
-    qm.num_monitoring_meetings
+    coalesce(gs.num_group_sessions,0) AS num_group_sessions,
+    coalesce(meeting.monthly_meetings,0) AS monthly_meetings,
+    coalesce(qm.chv_field_visits,0) AS chv_field_visits,
+    coalesce(cp.average_enrollments_per_chv,0) AS average_enrollments_per_chv,
+    coalesce(cp.average_visits_per_chv,0) AS average_visits_per_chv
   FROM skeleton
   LEFT JOIN chv_performance_CTE AS cp
     ON skeleton.supervisory_area_uuid = cp.supervisory_area_uuid

@@ -11,8 +11,8 @@ CREATE MATERIALIZED VIEW agg_supervisor_activities AS
     district,
     reported_month,
     num_group_sessions,
-    num_monthly_meetings,
-    num_monitoring_meetings
+    monthly_meetings,
+    chv_field_visits
   FROM supervisor_performance AS sp
   INNER JOIN useview_supervisory_area AS sa
     ON sa.supervisor_uuid = sp.supervisor_uuid
