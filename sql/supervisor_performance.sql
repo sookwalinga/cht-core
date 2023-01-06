@@ -5,7 +5,7 @@ DROP MATERIALIZED VIEW IF EXISTS supervisor_performance;
 
 CREATE MATERIALIZED VIEW supervisor_performance AS
 (
-  WITH skeleton AS (
+ WITH skeleton AS (
     SELECT
       _id,
       supervisory_area_uuid,
@@ -38,6 +38,25 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
     GROUP BY supervisory_area_uuid, reported_month
   ),
 
+  old_daily_meetings_CTE AS (
+  SELECT 
+      supervisory_area_uuid
+     ,date_trunc('day',reported_date) AS day_reported
+      ,SUM((confirm_meeting IN('my_supervisor_is','my_supervisor_is_attending'))::INT) AS num_individual_chv_meetings
+      ,MAX((confirm_meeting = 'iam_attending')::INT) AS chv_meetings 
+  FROM useview_confirm_meeting 
+  GROUP BY supervisory_area_uuid,day_reported
+  ),
+
+  old_monthly_meetings_CTE as (
+    SELECT 
+      supervisory_area_uuid
+      ,date_trunc('month',day_reported) AS reported_month
+      ,SUM(num_individual_chv_meetings) AS chv_field_visits
+      ,SUM(chv_meetings) AS monthly_meetings 
+    FROM old_daily_meetings_CTE
+    GROUP by supervisory_area_uuid,reported_month
+  ),
   monthly_meeting_CTE AS (
     SELECT
       supervisory_area_uuid,
@@ -60,8 +79,8 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
     skeleton._id AS supervisor_uuid,
     skeleton.reported_month,
     coalesce(gs.num_group_sessions,0) AS num_group_sessions,
-    coalesce(meeting.monthly_meetings,0) AS monthly_meetings,
-    coalesce(qm.chv_field_visits,0) AS chv_field_visits,
+    coalesce(meeting.monthly_meetings,old_meeting.monthly_meetings,0) AS monthly_meetings,
+    coalesce(qm.chv_field_visits,old_meeting.chv_field_visits,0) AS chv_field_visits,
     coalesce(cp.average_enrollments_per_chv,0) AS average_enrollments_per_chv,
     coalesce(cp.average_visits_per_chv,0) AS average_visits_per_chv
   FROM skeleton
@@ -71,6 +90,9 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
   LEFT JOIN group_session_CTE AS gs
     ON skeleton.supervisory_area_uuid = gs.supervisory_area_uuid
       AND skeleton.reported_month = gs.reported_month
+  LEFT JOIN old_monthly_meetings_CTE AS old_meeting
+    ON skeleton.supervisory_area_uuid = old_meeting.supervisory_area_uuid
+      AND skeleton.reported_month = old_meeting.reported_month
   LEFT JOIN monthly_meeting_CTE AS meeting
     ON skeleton.supervisory_area_uuid = meeting.supervisory_area_uuid
       AND skeleton.reported_month = meeting.reported_month
