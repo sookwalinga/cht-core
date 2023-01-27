@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Wash Protocol</h:title>
     <model>
@@ -113,6 +113,9 @@ Sasa ningependa kuzungmza na nyie kuhusu hatua za kuchukua ikiwa wewe au kuna mw
             <value>&lt;strong&gt;Ujumbe Muhumi&lt;/strong&gt;
 Kipindupindu kinapatikana kwa kunywa au kula chakula chenye maambukizi ya kipindupindu. Kipindupindu kinaepukika ikiwa watu watazingatia usafi wa mikono, chakula, maji na matumizi sahihi ya vyoo.</value>
           </text>
+          <text id="/wash_protocol/wash/cholera_note:label">
+            <value>-</value>
+          </text>
           <text id="/wash_protocol/wash/subgroup_cholera/ask_familiy:label">
             <value>&lt;strong&gt;Kuelewa Kipindupindu&lt;/strong&gt; 
 
@@ -124,6 +127,9 @@ Waulize wana familia:
 • Na vipi utajikinga na kipindupindu?
 
 &lt;span style="color:#f58a1f"&gt;Kulingana na majibu hapo juu tumia kitini rejea umuelezee zaidi kuhusu kipindupindu (Kipindupindu ni nini, Jinsi kinavyo enezwa na jinsi ya kuzuia kipindupindu)&lt;/span&gt;</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_cholera:label">
+            <value>-</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note:label">
             <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Usafi &lt;/span&gt;
@@ -168,6 +174,9 @@ Waulize wana familia:
           <text id="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label">
             <value>&lt;span style="color:#f58a1f"&gt;Kama hapana tumia kitini rejea kuelimisha wana familia.&lt;/span&gt;</value>
           </text>
+          <text id="/wash_protocol/wash/subgroup_cleanliness:label">
+            <value>-</value>
+          </text>
           <text id="/wash_protocol/wash/subgroup_environment/environment_cleanliness:label">
             <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Mazingira &lt;/span&gt;
 
@@ -188,6 +197,9 @@ Msikilize/wasikilize wana familia na kisha tumia kitini rejea uwafahamishe zaidi
  • Kuelewa umuhimu wa usafi wa mazingira
  • Kuelewa jinsi ya kuweka mazingira safi</value>
           </text>
+          <text id="/wash_protocol/wash/subgroup_environment:label">
+            <value>-</value>
+          </text>
           <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/cleanliness:label">
             <value>Usafi</value>
           </text>
@@ -202,6 +214,9 @@ Msikilize/wasikilize wana familia na kisha tumia kitini rejea uwafahamishe zaidi
           </text>
           <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv:label">
             <value>&lt;span style="color:#f58a1f"&gt;CHV chunguza na dadisi hali hatarishi zinahusu usafi kwenye nyumba hii na uchague ni sehemu gani ya ushauri inahitajika zaidi. Unaweza kuchagua zaidi ya eneo moja kulingana na uhitaji. &lt;/span&gt;</value>
+          </text>
+          <text id="/wash_protocol/wash/subgroup_health_concerns:label">
+            <value>-</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_ors/ors_uses:label">
             <value>&lt;strong&gt; Matumizi ya ORS &lt;/strong&gt; 
@@ -218,9 +233,12 @@ Wakati wa kutengeneza ORS, tumia kiwango sahihi cha maji. Ukitumia maji kidogo, 
  • Weka ORS kutoka kwenye pakiti kwenye maji salama huku ukikoroga 
  • Kunywa maji kidogo kidogo mara kwa mara</value>
           </text>
+          <text id="/wash_protocol/wash/subgroup_ors:label">
+            <value>-</value>
+          </text>
           <text id="/wash_protocol/wash/subgroup_water/cleanwater_audio:label">
-            <value>Jinsi ya kuandaa na kuhifadhi maji safi na salama</value>
             <value form="audio">jr://audio/majisafi.mp3</value>
+            <value>Jinsi ya kuandaa na kuhifadhi maji safi na salama</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_water/safe_water:label">
             <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Maji &lt;/span&gt;
@@ -235,10 +253,13 @@ Wakati wa kutengeneza ORS, tumia kiwango sahihi cha maji. Ukitumia maji kidogo, 
 Umuhimu wa kunywa maji safi na salama
  • Ili kuzuia ueneaji wa maambukizi ya vimelea vinavyoweza kusababisha maradhi mbalimbali ikiwemo kipindupindu</value>
           </text>
+          <text id="/wash_protocol/wash:label">
+            <value>-</value>
+          </text>
         </translation>
       </itext>
       <instance>
-        <wash_protocol id="wash_protocol" prefix="J1!wash_protocol!" delimiter="#" version="2021-05-26 11-42">
+        <wash_protocol delimiter="#" id="wash_protocol" prefix="J1!wash_protocol!" version="2022-11-04_01-54">
           <inputs>
             <meta>
               <location>
@@ -304,20 +325,20 @@ Umuhimu wa kunywa maji safi na salama
       <bind nodeset="/wash_protocol/inputs/user/facility_id" type="string"/>
       <bind nodeset="/wash_protocol/inputs/user/name" type="string"/>
       <bind nodeset="/wash_protocol/inputs/contact/_id" type="db:person"/>
-      <bind nodeset="/wash_protocol/created_by" type="string" calculate="../inputs/user/name"/>
-      <bind nodeset="/wash_protocol/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
-      <bind nodeset="/wash_protocol/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
-      <bind nodeset="/wash_protocol/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
-      <bind nodeset="/wash_protocol/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind calculate="../inputs/user/name" nodeset="/wash_protocol/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/wash_protocol/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/wash_protocol/created_by_place_uuid" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/wash_protocol/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/wash_protocol/end" type="dateTime"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cholera/ask_familiy" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/cholera_note/important_note_cholera" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/cholera_note/cholera_signs" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_ors/ors_uses" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv" readonly="true()" type="string"/>
-      <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns" type="select" required="true()"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns" required="true()" type="select"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness" relevant="selected( /wash_protocol/wash/subgroup_health_concerns/health_concerns ,&quot;cleanliness&quot;)"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note" readonly="true()" type="string"/>
-      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance" type="select1" required="true()"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance" required="true()" type="select1"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps" readonly="true()" type="string"/>
@@ -327,7 +348,7 @@ Umuhimu wa kunywa maji safi na salama
       <bind nodeset="/wash_protocol/wash/subgroup_water/cleanwater_audio" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_environment" relevant="selected( /wash_protocol/wash/subgroup_health_concerns/health_concerns ,&quot;environment&quot;)"/>
       <bind nodeset="/wash_protocol/wash/subgroup_environment/environment_cleanliness" readonly="true()" type="string"/>
-      <bind nodeset="/wash_protocol/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/wash_protocol/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">

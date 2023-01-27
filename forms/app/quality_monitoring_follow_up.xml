@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Quality Monitoring Follow-up</h:title>
     <model>
@@ -124,7 +124,7 @@
             <value>Ufuatiliaji &lt;i class="fa fa-flag"&gt;&lt;/i&gt;</value>
           </text>
           <text id="/quality_monitoring_follow_up/group_summary/r_followup_note:label">
-            <value>Akazi ya ufuatiliaji kwaajili ya <output value=" /quality_monitoring_follow_up/chw_name "/> itatokea *_<output value=" /quality_monitoring_follow_up/group_summary/c_formatted_task_date "/>_*.</value>
+            <value>Kazi ya ufuatiliaji kwaajili ya <output value=" /quality_monitoring_follow_up/chw_name "/> itatokea *_<output value=" /quality_monitoring_follow_up/group_summary/c_formatted_task_date "/>_*.</value>
           </text>
           <text id="/quality_monitoring_follow_up/group_summary/r_improvement_areas:label">
             <value><output value=" /quality_monitoring_follow_up/follow_up_details/follow_up_topics "/></value>
@@ -147,10 +147,19 @@
           <text id="/quality_monitoring_follow_up/inputs/contact/patient_id:label">
             <value>-</value>
           </text>
+          <text id="/quality_monitoring_follow_up/inputs/contact:label">
+            <value>-</value>
+          </text>
           <text id="/quality_monitoring_follow_up/inputs/patient_id:label">
             <value>-</value>
           </text>
           <text id="/quality_monitoring_follow_up/inputs/patient_uuid:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_follow_up/inputs/source:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_follow_up/inputs/source_id:label">
             <value>-</value>
           </text>
           <text id="/quality_monitoring_follow_up/inputs/t_follow_up_areas:label">
@@ -159,13 +168,16 @@
           <text id="/quality_monitoring_follow_up/inputs/t_follow_up_areas_sw:label">
             <value>-</value>
           </text>
+          <text id="/quality_monitoring_follow_up/inputs/task_id:label">
+            <value>-</value>
+          </text>
           <text id="/quality_monitoring_follow_up/inputs:label">
             <value>-</value>
           </text>
         </translation>
       </itext>
       <instance>
-        <quality_monitoring_follow_up id="quality_monitoring_follow_up" prefix="J1!quality_monitoring_follow_up!" delimiter="#" version="2022-08-17 13:06:32">
+        <quality_monitoring_follow_up delimiter="#" id="quality_monitoring_follow_up" prefix="J1!quality_monitoring_follow_up!" version="2022-11-04 02:03:43">
           <inputs>
             <meta>
               <location>
@@ -222,30 +234,30 @@
       <bind nodeset="/quality_monitoring_follow_up/inputs/task_id" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/inputs/t_follow_up_areas" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/inputs/t_follow_up_areas_sw" type="string"/>
-      <bind nodeset="/quality_monitoring_follow_up/inputs/patient_uuid" type="string" calculate="../contact/_id"/>
-      <bind nodeset="/quality_monitoring_follow_up/inputs/patient_id" type="string" calculate="../contact/patient_id"/>
+      <bind calculate="../contact/_id" nodeset="/quality_monitoring_follow_up/inputs/patient_uuid" type="string"/>
+      <bind calculate="../contact/patient_id" nodeset="/quality_monitoring_follow_up/inputs/patient_id" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/inputs/contact/_id" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/inputs/contact/patient_id" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/inputs/contact/name" type="string"/>
-      <bind nodeset="/quality_monitoring_follow_up/_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/quality_monitoring_follow_up/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
-      <bind nodeset="/quality_monitoring_follow_up/patient_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/quality_monitoring_follow_up/chw_name" type="string" calculate="../inputs/contact/name"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/quality_monitoring_follow_up/_id" type="string"/>
+      <bind calculate="../inputs/contact/patient_id" nodeset="/quality_monitoring_follow_up/chw_id" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/quality_monitoring_follow_up/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/quality_monitoring_follow_up/chw_name" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/follow_up_details/follow_up_topics" readonly="true()" type="string"/>
-      <bind nodeset="/quality_monitoring_follow_up/follow_up_details/improved" type="select1" required="true()"/>
-      <bind nodeset="/quality_monitoring_follow_up/follow_up_details/follow_up_again" type="select1" required="true()"/>
-      <bind nodeset="/quality_monitoring_follow_up/follow_up_details/next_follow_up_date" type="date" relevant="selected( /quality_monitoring_follow_up/follow_up_details/follow_up_again , &quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/quality_monitoring_follow_up/follow_up_details/improved" required="true()" type="select1"/>
+      <bind nodeset="/quality_monitoring_follow_up/follow_up_details/follow_up_again" required="true()" type="select1"/>
+      <bind nodeset="/quality_monitoring_follow_up/follow_up_details/next_follow_up_date" relevant="selected( /quality_monitoring_follow_up/follow_up_details/follow_up_again , &quot;yes&quot;)" required="true()" type="date"/>
       <bind nodeset="/quality_monitoring_follow_up/group_summary/r_chw_info_title" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/group_summary/r_chw_info" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/group_summary/r_improvement_areas_title" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/group_summary/r_improvement_areas" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/group_summary/r_followup" readonly="true()" type="string"/>
-      <bind nodeset="/quality_monitoring_follow_up/group_summary/c_formatted_follow_up_date" type="string" calculate="format-date( /quality_monitoring_follow_up/follow_up_details/next_follow_up_date , '%a %e %b %Y')" relevant="selected( /quality_monitoring_follow_up/follow_up_details/follow_up_again , &quot;yes&quot;)"/>
-      <bind nodeset="/quality_monitoring_follow_up/group_summary/r_next_follow_up" readonly="true()" type="string" relevant="selected( /quality_monitoring_follow_up/follow_up_details/follow_up_again , &quot;yes&quot;)"/>
-      <bind nodeset="/quality_monitoring_follow_up/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /quality_monitoring_follow_up/follow_up_details/next_follow_up_date ) - 2), '%a %e %b %Y')"/>
+      <bind calculate="format-date( /quality_monitoring_follow_up/follow_up_details/next_follow_up_date , '%a %e %b %Y')" nodeset="/quality_monitoring_follow_up/group_summary/c_formatted_follow_up_date" relevant="selected( /quality_monitoring_follow_up/follow_up_details/follow_up_again , &quot;yes&quot;)" type="string"/>
+      <bind nodeset="/quality_monitoring_follow_up/group_summary/r_next_follow_up" readonly="true()" relevant="selected( /quality_monitoring_follow_up/follow_up_details/follow_up_again , &quot;yes&quot;)" type="string"/>
+      <bind calculate="format-date(date(decimal-date-time( /quality_monitoring_follow_up/follow_up_details/next_follow_up_date ) - 2), '%a %e %b %Y')" nodeset="/quality_monitoring_follow_up/group_summary/c_formatted_task_date" type="string"/>
       <bind nodeset="/quality_monitoring_follow_up/group_summary/r_followup_note" readonly="true()" type="string"/>
-      <bind nodeset="/quality_monitoring_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-      <bind nodeset="/quality_monitoring_follow_up/meta/instanceName" type="string" calculate="D-tree"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/quality_monitoring_follow_up/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="D-tree" nodeset="/quality_monitoring_follow_up/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">

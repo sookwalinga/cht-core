@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Quality Monitoring</h:title>
     <model>
@@ -874,6 +874,18 @@
           <text id="/chv_quality_monitoring/inputs/contact/patient_uuid:label">
             <value>-</value>
           </text>
+          <text id="/chv_quality_monitoring/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs/source:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs/source_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_quality_monitoring/inputs/task_id:label">
+            <value>-</value>
+          </text>
           <text id="/chv_quality_monitoring/inputs:label">
             <value>-</value>
           </text>
@@ -1048,7 +1060,7 @@
         </translation>
       </itext>
       <instance>
-        <chv_quality_monitoring id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" delimiter="#" version="2022-12-07 10:48:23">
+        <chv_quality_monitoring delimiter="#" id="chv_quality_monitoring" prefix="J1!chv_quality_monitoring!" version="2023-01-22 22:50:57">
           <inputs>
             <meta>
               <location>
@@ -1190,43 +1202,43 @@
       <bind nodeset="/chv_quality_monitoring/inputs/contact/patient_id" type="string"/>
       <bind nodeset="/chv_quality_monitoring/inputs/contact/patient_uuid" type="string"/>
       <bind nodeset="/chv_quality_monitoring/inputs/contact/name" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/chv_quality_monitoring/patient_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/chv_quality_monitoring/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
-      <bind nodeset="/chv_quality_monitoring/chw_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/chv_quality_monitoring/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
-      <bind nodeset="/chv_quality_monitoring/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/chv_quality_monitoring/_id" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/chv_quality_monitoring/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/patient_id" nodeset="/chv_quality_monitoring/chw_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/chv_quality_monitoring/chw_name" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/chv_quality_monitoring/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/chv_quality_monitoring/end" type="dateTime"/>
       <bind nodeset="/chv_quality_monitoring/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/ipc/n_precaution_question" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ipc/does_chv_stay_one_meter" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/introduction/does_chv_introduce_themselves" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/consenting/does_chv_ask_for_consent" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/visit_recap/does_chv_do_visit_recap" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ipc/does_chv_take_precautionary_measures" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ipc/does_chv_stay_one_meter" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/introduction/does_chv_introduce_themselves" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/consenting/does_chv_ask_for_consent" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/visit_recap/does_chv_do_visit_recap" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/purpose_of_visit/does_chv_explain_visit_purpose" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/chv_attitude/does_chv_show_positive_attitude" required="true()" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/chv_attitude/note_to_supervisor_chv_communication" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_calm" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_attentive" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_approachable" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_interruptive" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/use_of_tools/does_chv_use_jobaids" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/use_of_app/can_chv_navigate_app" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/communication/can_chv_refer_clients" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_calm" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_attentive" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_approachable" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/chv_attitude/was_chv_interruptive" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/use_of_tools/does_chv_use_jobaids" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/use_of_app/can_chv_navigate_app" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/communication/can_chv_refer_clients" required="true()" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/communication/can_chv_encourage_discussion" type="select1"/>
-      <bind nodeset="/chv_quality_monitoring/data_validity/does_chv_validate_responses" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/data_validity/does_chv_enter_data_correctly" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/referrals/does_chv_assess_all_questions" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/data_validity/does_chv_validate_responses" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/data_validity/does_chv_enter_data_correctly" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/data_validity/can_chv_measure_muac_correctly" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/data_validity/can_chv_measure_read_clinic_card" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/referrals/does_chv_encourage_client_facility" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/referrals/does_chv_assess_all_questions" required="true()" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/caregiver_child_interaction_note" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_child_development" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_child_learning" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_child_development" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_play_and_talk" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_comfort_child" required="true()" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/asks_caregiver_corrects_child" type="select1"/>
-      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/praise_caregiver_child_interaction" required="true()" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/play_and_communication" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/suggests_play_and_activity" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/suggests_communication_activity" type="select1"/>
@@ -1237,17 +1249,17 @@
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems" type="select1"/>
-      <bind nodeset="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary" type="select1" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/ending_conversation/does_chv_provide_visitsummary" required="true()" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/note_to_supervisor" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client" type="select1" required="true()" relevant="not(selected( /chv_quality_monitoring/quality_monitoring_qns/count_chv_visits ,&quot;never&quot;))"/>
+      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/count_chv_visits" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/quality_monitoring_qns/questions_to_client" relevant="not(selected( /chv_quality_monitoring/quality_monitoring_qns/count_chv_visits ,&quot;never&quot;))" required="true()" type="select1"/>
       <bind nodeset="/chv_quality_monitoring/observation/note_to_supervisor_observation" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/observation/areas_of_improvement" type="string" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/observation/progress_made" type="string" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/document_actions/provide_support" type="string" required="true()"/>
+      <bind nodeset="/chv_quality_monitoring/observation/areas_of_improvement" required="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/observation/progress_made" required="true()" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/observation/support_from_dtree_hpu_chmt" required="true()" type="select1"/>
+      <bind nodeset="/chv_quality_monitoring/document_actions/provide_support" required="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/document_actions/contact_numbers" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/c_follow_up_areas" type="string" calculate="concat(
+      <bind calculate="concat(
 if(selected( /chv_quality_monitoring/ipc/n_precaution_question , 'no'), 'Precaution, ', ''),
 if(selected( /chv_quality_monitoring/ipc/does_chv_stay_one_meter , 'no'), 'Social distance, ', ''),
 if(selected( /chv_quality_monitoring/introduction/does_chv_introduce_themselves , 'no'), 'Introduction, ', ''),
@@ -1283,8 +1295,8 @@ if(selected( /chv_quality_monitoring/ecd_qi_questions/practice_play_with_childre
 if(selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play , 'no'), 'Praise for interactive play, ', ''),
 if(selected( /chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home , 'no'), 'Encourage continue play at home, ', ''), 
 if(selected( /chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication , 'no'), 'Play activities at home, ', ''), 
-if(selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no'), 'Discuss solving problems, ', ''),)"/>
-      <bind nodeset="/chv_quality_monitoring/c_follow_up_areas_sw" type="string" calculate="concat(
+if(selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no'), 'Discuss solving problems, ', ''),)" nodeset="/chv_quality_monitoring/c_follow_up_areas" type="string"/>
+      <bind calculate="concat(
 if(selected( /chv_quality_monitoring/ipc/n_precaution_question , 'no'), 'Tahadhari, ', ''),
 if(selected( /chv_quality_monitoring/ipc/does_chv_stay_one_meter , 'no'), 'Kukaa mbali, ', ''),
 if(selected( /chv_quality_monitoring/introduction/does_chv_introduce_themselves , 'no'), 'Utangulizi, ', ''),
@@ -1322,8 +1334,8 @@ if(selected( /chv_quality_monitoring/ecd_qi_questions/practice_play_with_childre
 if(selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play , 'no'), 'Kupongeza mlezi kwa kucheza na mtoto, ', ''),
 if(selected( /chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home , 'no'), 'Kuhimiza uendelezo wa kucheza ukiwa nyumbani, ', ''), 
 if(selected( /chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication , 'no'), 'Shughuli za michezo ukiwa nyumbani, ', ''), 
-if(selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no'), 'Jadili kutatua matatizo, ', ''),)"/>
-      <bind nodeset="/chv_quality_monitoring/c_needs_follow_up" type="string" calculate="if((selected( /chv_quality_monitoring/ipc/n_precaution_question , 'no')
+if(selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no'), 'Jadili kutatua matatizo, ', ''),)" nodeset="/chv_quality_monitoring/c_follow_up_areas_sw" type="string"/>
+      <bind calculate="if((selected( /chv_quality_monitoring/ipc/n_precaution_question , 'no')
 or selected( /chv_quality_monitoring/ipc/does_chv_stay_one_meter , 'no')
 
 or selected( /chv_quality_monitoring/introduction/does_chv_introduce_themselves , 'no')
@@ -1367,20 +1379,20 @@ or selected( /chv_quality_monitoring/ecd_qi_questions/practice_play_with_childre
 or selected( /chv_quality_monitoring/ecd_qi_questions/praise_caregiver_for_interactive_play , 'no')
 or selected( /chv_quality_monitoring/ecd_qi_questions/encourage_continue_play_at_home , 'no'),
 or selected( /chv_quality_monitoring/ecd_qi_questions/ask_problems_play_communication , 'no')
-or selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no')),'yes', 'no')"/>
+or selected( /chv_quality_monitoring/ecd_qi_questions/discuss_solve_problems , 'no')),'yes', 'no')" nodeset="/chv_quality_monitoring/c_needs_follow_up" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_chw_info_title" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_chw_info" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_improvement_areas_title" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_improvement_areas" readonly="true()" type="string"/>
       <bind nodeset="/chv_quality_monitoring/group_summary/r_followup" readonly="true()" type="string"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/follow_up_again" type="select1" required="true()"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/next_follow_up_date" type="date" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" constraint=". &gt; today()" required="true()" jr:constraintMsg="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg')"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_follow_up_date" type="string" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" calculate="format-date( /chv_quality_monitoring/group_summary/next_follow_up_date , '%a %e %b %Y')"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/r_next_follow_up" readonly="true()" type="string" relevant=" /chv_quality_monitoring/group_summary/next_follow_up_date !='' and  /chv_quality_monitoring/group_summary/next_follow_up_date  &gt; today()"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /chv_quality_monitoring/group_summary/next_follow_up_date ) - 2), '%a %e %b %Y')"/>
-      <bind nodeset="/chv_quality_monitoring/group_summary/r_followup_note" readonly="true()" type="string" relevant=" /chv_quality_monitoring/group_summary/next_follow_up_date !='' and  /chv_quality_monitoring/group_summary/next_follow_up_date  &gt; today()"/>
-      <bind nodeset="/chv_quality_monitoring/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-      <bind nodeset="/chv_quality_monitoring/meta/instanceName" type="string" calculate="D-tree"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/follow_up_again" required="true()" type="select1"/>
+      <bind constraint=". &gt; today()" jr:constraintMsg="jr:itext('/chv_quality_monitoring/group_summary/next_follow_up_date:jr:constraintMsg')" nodeset="/chv_quality_monitoring/group_summary/next_follow_up_date" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" required="true()" type="date"/>
+      <bind calculate="format-date( /chv_quality_monitoring/group_summary/next_follow_up_date , '%a %e %b %Y')" nodeset="/chv_quality_monitoring/group_summary/c_formatted_follow_up_date" relevant="selected( /chv_quality_monitoring/group_summary/follow_up_again , &quot;yes&quot;)" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_next_follow_up" readonly="true()" relevant=" /chv_quality_monitoring/group_summary/next_follow_up_date !='' and  /chv_quality_monitoring/group_summary/next_follow_up_date  &gt; today()" type="string"/>
+      <bind calculate="format-date(date(decimal-date-time( /chv_quality_monitoring/group_summary/next_follow_up_date ) - 2), '%a %e %b %Y')" nodeset="/chv_quality_monitoring/group_summary/c_formatted_task_date" type="string"/>
+      <bind nodeset="/chv_quality_monitoring/group_summary/r_followup_note" readonly="true()" relevant=" /chv_quality_monitoring/group_summary/next_follow_up_date !='' and  /chv_quality_monitoring/group_summary/next_follow_up_date  &gt; today()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/chv_quality_monitoring/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="D-tree" nodeset="/chv_quality_monitoring/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">

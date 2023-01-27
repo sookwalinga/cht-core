@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Group Session</h:title>
     <model>
@@ -88,10 +88,22 @@
           <text id="/group_session/inputs/contact/place_id:label">
             <value>-</value>
           </text>
+          <text id="/group_session/inputs/contact:label">
+            <value>-</value>
+          </text>
           <text id="/group_session/inputs/patient_id:label">
             <value>-</value>
           </text>
           <text id="/group_session/inputs/patient_uuid:label">
+            <value>-</value>
+          </text>
+          <text id="/group_session/inputs/source:label">
+            <value>-</value>
+          </text>
+          <text id="/group_session/inputs/source_id:label">
+            <value>-</value>
+          </text>
+          <text id="/group_session/inputs/task_id:label">
             <value>-</value>
           </text>
           <text id="/group_session/inputs:label">
@@ -118,7 +130,7 @@
         </translation>
       </itext>
       <instance>
-        <group_session id="group_session" prefix="J1!group_session!" delimiter="#" version="2022-12-06 11:43:12">
+        <group_session delimiter="#" id="group_session" prefix="J1!group_session!" version="2023-01-23 14:25:49">
           <inputs>
             <meta>
               <location>
@@ -170,29 +182,29 @@
       <bind nodeset="/group_session/inputs/source" type="string"/>
       <bind nodeset="/group_session/inputs/source_id" type="string"/>
       <bind nodeset="/group_session/inputs/task_id" type="string"/>
-      <bind nodeset="/group_session/inputs/patient_uuid" type="string" calculate="../contact/_id"/>
-      <bind nodeset="/group_session/inputs/patient_id" type="string" calculate="../contact/patient_id"/>
+      <bind calculate="../contact/_id" nodeset="/group_session/inputs/patient_uuid" type="string"/>
+      <bind calculate="../contact/patient_id" nodeset="/group_session/inputs/patient_id" type="string"/>
       <bind nodeset="/group_session/inputs/contact/_id" type="string"/>
       <bind nodeset="/group_session/inputs/contact/patient_id" type="string"/>
       <bind nodeset="/group_session/inputs/contact/place_id" type="string"/>
       <bind nodeset="/group_session/inputs/contact/name" type="string"/>
-      <bind nodeset="/group_session/_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/group_session/patient_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/group_session/place_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/group_session/place_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/group_session/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
-      <bind nodeset="/group_session/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
-      <bind nodeset="/group_session/meeting_details/meeting_date" type="date" jr:constraintMsg="jr:itext('/group_session/meeting_details/meeting_date:jr:constraintMsg')" required="true()" constraint=". &lt;= today()"/>
-      <bind nodeset="/group_session/meeting_details/topics" type="string" required="true()"/>
-      <bind nodeset="/group_session/meeting_details/challenges" type="string" required="true()"/>
-      <bind nodeset="/group_session/meeting_details/actions" type="string" required="true()"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/group_session/_id" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/group_session/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/group_session/place_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/group_session/place_name" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/group_session/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/group_session/end" type="dateTime"/>
+      <bind constraint=". &lt;= today()" jr:constraintMsg="jr:itext('/group_session/meeting_details/meeting_date:jr:constraintMsg')" nodeset="/group_session/meeting_details/meeting_date" required="true()" type="date"/>
+      <bind nodeset="/group_session/meeting_details/topics" required="true()" type="string"/>
+      <bind nodeset="/group_session/meeting_details/challenges" required="true()" type="string"/>
+      <bind nodeset="/group_session/meeting_details/actions" required="true()" type="string"/>
       <bind nodeset="/group_session/group_summary/r_community_meeting_title" readonly="true()" type="string"/>
-      <bind nodeset="/group_session/group_summary/c_formatted_meeting_date" type="string" calculate="format-date( /group_session/meeting_details/meeting_date , '%a %e %b %Y')"/>
+      <bind calculate="format-date( /group_session/meeting_details/meeting_date , '%a %e %b %Y')" nodeset="/group_session/group_summary/c_formatted_meeting_date" type="string"/>
       <bind nodeset="/group_session/group_summary/r_meeting_date" readonly="true()" type="string"/>
       <bind nodeset="/group_session/group_summary/r_topics_covered_title" readonly="true()" type="string"/>
       <bind nodeset="/group_session/group_summary/r_topics_covered" readonly="true()" type="string"/>
-      <bind nodeset="/group_session/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-      <bind nodeset="/group_session/meta/instanceName" type="string" calculate="D-tree"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/group_session/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="D-tree" nodeset="/group_session/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">

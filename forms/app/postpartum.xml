@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Postpartum Screening</h:title>
     <model>
@@ -2043,6 +2043,9 @@ Sasa ningependa kuzungmza na nyie kuhusu hatua za kuchukua ikiwa wewe au kuna mw
             <value>&lt;strong&gt;Ujumbe Muhumi&lt;/strong&gt;
 Kipindupindu kinapatikana kwa kunywa au kula chakula chenye maambukizi ya kipindupindu. Kipindupindu kinaepukika ikiwa watu watazingatia usafi wa mikono, chakula, maji na matumizi sahihi ya vyoo.</value>
           </text>
+          <text id="/postpartum/wash/cholera_note:label">
+            <value>-</value>
+          </text>
           <text id="/postpartum/wash/subgroup_cholera/ask_familiy:label">
             <value>&lt;strong&gt;Kuelewa Kipindupindu&lt;/strong&gt; 
 
@@ -2054,6 +2057,9 @@ Waulize wana familia:
 • Na vipi utajikinga na kipindupindu?
 
 &lt;span style="color:#f58a1f"&gt;Kulingana na majibu hapo juu tumia kitini rejea umuelezee zaidi kuhusu kipindupindu (Kipindupindu ni nini, Jinsi kinavyo enezwa na jinsi ya kuzuia kipindupindu)&lt;/span&gt;</value>
+          </text>
+          <text id="/postpartum/wash/subgroup_cholera:label">
+            <value>-</value>
           </text>
           <text id="/postpartum/wash/subgroup_cleanliness/hand_cleanliness_note:label">
             <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Usafi &lt;/span&gt;
@@ -2098,6 +2104,9 @@ Waulize wana familia:
           <text id="/postpartum/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label">
             <value>&lt;span style="color:#f58a1f"&gt;Kama hapana tumia kitini rejea kuelimisha wana familia.&lt;/span&gt;</value>
           </text>
+          <text id="/postpartum/wash/subgroup_cleanliness:label">
+            <value>-</value>
+          </text>
           <text id="/postpartum/wash/subgroup_environment/environment_cleanliness:label">
             <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Mazingira &lt;/span&gt;
 
@@ -2116,6 +2125,9 @@ Sasa ningependa tuzungumze kuhusu umuhimu wa usafi wa mazingira ili tuwe na mazi
 Msikilize/wasikilize wana familia na kisha tumia kitini rejea uwafahamishe zaidi juu kuhusu
  • Kuelewa maana ya usafi wa mazingira, umuhimu wa usafi wa mazingira na jinsi ya kuweka mazingira safi</value>
           </text>
+          <text id="/postpartum/wash/subgroup_environment:label">
+            <value>-</value>
+          </text>
           <text id="/postpartum/wash/subgroup_health_concerns/health_concerns/cleanliness:label">
             <value>Usafi</value>
           </text>
@@ -2130,6 +2142,9 @@ Msikilize/wasikilize wana familia na kisha tumia kitini rejea uwafahamishe zaidi
           </text>
           <text id="/postpartum/wash/subgroup_health_concerns/health_concerns_note_to_chv:label">
             <value>&lt;span style="color:#f58a1f"&gt;CHV chunguza na dadisi hali hatarishi zinahusu usafi kwenye nyumba hii na uchague ni sehemu gani ya ushauri inahitajika zaidi. Unaweza kuchagua zaidi ya eneo moja kulingana na uhitaji. &lt;/span&gt;</value>
+          </text>
+          <text id="/postpartum/wash/subgroup_health_concerns:label">
+            <value>-</value>
           </text>
           <text id="/postpartum/wash/subgroup_ors/ors_uses:label">
             <value>&lt;strong&gt; Matumizi ya ORS &lt;/strong&gt; 
@@ -2146,9 +2161,12 @@ Wakati wa kutengeneza ORS, tumia kiwango sahihi cha maji. Ukitumia maji kidogo, 
  • Weka ORS kutoka kwenye pakiti kwenye maji salama huku ukikoroga 
  • Kunywa maji kidogo kidogo mara kwa mara</value>
           </text>
+          <text id="/postpartum/wash/subgroup_ors:label">
+            <value>-</value>
+          </text>
           <text id="/postpartum/wash/subgroup_water/cleanwater_audio:label">
-            <value>Jinsi ya kuandaa na kuhifadhi maji safi na salama</value>
             <value form="audio">jr://audio/majisafi.mp3</value>
+            <value>Jinsi ya kuandaa na kuhifadhi maji safi na salama</value>
           </text>
           <text id="/postpartum/wash/subgroup_water/safe_water:label">
             <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Maji &lt;/span&gt;
@@ -2162,6 +2180,12 @@ Wakati wa kutengeneza ORS, tumia kiwango sahihi cha maji. Ukitumia maji kidogo, 
 
 Umuhimu wa kunywa maji safi na salama
  • Ili kuzuia ueneaji wa maambukizi ya vimelea vinavyoweza kusababisha maradhi mbalimbali ikiwemo kipindupindu</value>
+          </text>
+          <text id="/postpartum/wash/subgroup_water:label">
+            <value>-</value>
+          </text>
+          <text id="/postpartum/wash:label">
+            <value>-</value>
           </text>
           <text id="static_instance-anc_visit_facility-0">
             <value>Hospitali ya wilaya ya Chake Chake</value>
@@ -2664,7 +2688,7 @@ Umuhimu wa kunywa maji safi na salama
         </translation>
       </itext>
       <instance>
-        <postpartum id="postpartum" prefix="J1!postpartum!" delimiter="#">
+        <postpartum delimiter="#" id="postpartum" prefix="J1!postpartum!">
           <inputs>
             <meta>
               <location>
@@ -2882,502 +2906,71 @@ Umuhimu wa kunywa maji safi na salama
         </postpartum>
       </instance>
       <instance id="contact-summary"/>
-      <instance id="yes_no">
+      <instance id="travel_time">
         <root>
           <item>
-            <itextId>static_instance-yes_no-0</itextId>
-            <name>yes</name>
+            <itextId>static_instance-travel_time-0</itextId>
+            <name>less_than_30</name>
           </item>
           <item>
-            <itextId>static_instance-yes_no-1</itextId>
-            <name>no</name>
+            <itextId>static_instance-travel_time-1</itextId>
+            <name>30_to_1hr</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-2</itextId>
+            <name>more_than_1hr</name>
+          </item>
+          <item>
+            <itextId>static_instance-travel_time-3</itextId>
+            <name>travel_time_dont_know_decline</name>
           </item>
         </root>
       </instance>
-      <instance id="c_section_condition">
+      <instance id="marital_status">
         <root>
           <item>
-            <itextId>static_instance-c_section_condition-0</itextId>
-            <name>clean</name>
+            <itextId>static_instance-marital_status-0</itextId>
+            <name>married</name>
           </item>
           <item>
-            <itextId>static_instance-c_section_condition-1</itextId>
-            <name>discharge_swelling</name>
+            <itextId>static_instance-marital_status-1</itextId>
+            <name>single</name>
+          </item>
+          <item>
+            <itextId>static_instance-marital_status-2</itextId>
+            <name>widowed</name>
+          </item>
+          <item>
+            <itextId>static_instance-marital_status-3</itextId>
+            <name>divorced</name>
+          </item>
+          <item>
+            <itextId>static_instance-marital_status-4</itextId>
+            <name>marital_status_dont_know_decline</name>
           </item>
         </root>
       </instance>
-      <instance id="facility_island">
+      <instance id="decision_maker">
         <root>
           <item>
-            <itextId>static_instance-facility_island-0</itextId>
-            <name>unguja</name>
+            <itextId>static_instance-decision_maker-0</itextId>
+            <name>herself</name>
           </item>
           <item>
-            <itextId>static_instance-facility_island-1</itextId>
-            <name>pemba</name>
+            <itextId>static_instance-decision_maker-1</itextId>
+            <name>husband</name>
           </item>
           <item>
-            <itextId>static_instance-facility_island-2</itextId>
-            <name>other</name>
+            <itextId>static_instance-decision_maker-2</itextId>
+            <name>herself_and_husband</name>
           </item>
-        </root>
-      </instance>
-      <instance id="facility_district">
-        <root>
           <item>
-            <itextId>static_instance-facility_district-0</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>north_a</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-1</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>north_b</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-2</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>central</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-3</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>south</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-4</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>west_a</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-5</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>west_b</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-6</itextId>
-            <choice_filter>unguja</choice_filter>
-            <name>urban</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-7</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>chakechake</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-8</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>micheweni</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-9</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>mkoani</name>
-          </item>
-          <item>
-            <itextId>static_instance-facility_district-10</itextId>
-            <choice_filter>pemba</choice_filter>
-            <name>wete</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="anc_visit_facility">
-        <root>
-          <item>
-            <itextId>static_instance-anc_visit_facility-0</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>chakechakedistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-1</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>pujiniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-2</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>tundauwaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-3</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>vitongojiphcc</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-4</itextId>
-            <choice_filter>chakechake</choice_filter>
-            <name>weshaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-5</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>kondephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-6</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>makangalephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-7</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>maziwangombephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-8</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>micheweniphcc</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-9</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>wingwiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-10</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>kiuyumbuyuniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-11</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>bogoaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-12</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>kengejaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-13</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>abdallahmzeedistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-14</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>michenzaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-15</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>fundophcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-16</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>kojaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-17</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>makongeniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-18</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>wetedistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-19</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>mzambarauniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-20</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>junguniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-21</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>ukunjwiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-22</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>uondwephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-23</itextId>
-            <choice_filter>central</choice_filter>
-            <name>chwakaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-24</itextId>
-            <choice_filter>central</choice_filter>
-            <name>mweraphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-25</itextId>
-            <choice_filter>central</choice_filter>
-            <name>ungujaukuuphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-26</itextId>
-            <choice_filter>central</choice_filter>
-            <name>uziniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-27</itextId>
-            <choice_filter>central</choice_filter>
-            <name>uroaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-28</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>kivungedistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-29</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>matemwephcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-30</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>nungwiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-31</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>pwanimchanganiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-32</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>tumbatugomaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-33</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>kendwaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-34</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>bumbwinimisufiniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-35</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>dongevijibweniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-36</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>kiongwephcu</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-37</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>kitopephcu</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-38</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>mahondaphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-39</itextId>
-            <choice_filter>south</choice_filter>
-            <name>jambianiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-40</itextId>
-            <choice_filter>south</choice_filter>
-            <name>makunduchidistricthospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-41</itextId>
-            <choice_filter>south</choice_filter>
-            <name>muyuniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-42</itextId>
-            <choice_filter>south</choice_filter>
-            <name>bwejuuphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-43</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>chumbuniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-44</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>mnazimmojahospital</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-45</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>mwembeladumchclinic</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-46</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>sebleniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-47</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>chukwaniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-48</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>fuoniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-49</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>kombeniphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-50</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>mtofaaniphcu+(kinuni)</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-51</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>bumbwisudiphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-52</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>selemphcu+</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-53</itextId>
-            <choice_filter>chakechake</choice_filter>
+            <itextId>static_instance-decision_maker-3</itextId>
             <name>other</name>
           </item>
           <item>
-            <itextId>static_instance-anc_visit_facility-54</itextId>
-            <choice_filter>micheweni</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-55</itextId>
-            <choice_filter>mkoani</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-56</itextId>
-            <choice_filter>wete</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-57</itextId>
-            <choice_filter>central</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-58</itextId>
-            <choice_filter>north_a</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-59</itextId>
-            <choice_filter>north_b</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-60</itextId>
-            <choice_filter>south</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-61</itextId>
-            <choice_filter>urban</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-62</itextId>
-            <choice_filter>west_b</choice_filter>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-anc_visit_facility-63</itextId>
-            <choice_filter>west_a</choice_filter>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="is_service_received">
-        <root>
-          <item>
-            <itextId>static_instance-is_service_received-0</itextId>
-            <name>yes</name>
-          </item>
-          <item>
-            <itextId>static_instance-is_service_received-1</itextId>
-            <name>yes_but</name>
-          </item>
-          <item>
-            <itextId>static_instance-is_service_received-2</itextId>
-            <name>no</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="service_reason">
-        <root>
-          <item>
-            <itextId>static_instance-service_reason-0</itextId>
-            <name>no_staff</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-1</itextId>
-            <name>closed_facility</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-2</itextId>
-            <name>no_reagents</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-3</itextId>
-            <name>waiting_too_long</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-4</itextId>
-            <name>no_money</name>
-          </item>
-          <item>
-            <itextId>static_instance-service_reason-5</itextId>
-            <name>other</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="second_facility">
-        <root>
-          <item>
-            <itextId>static_instance-second_facility-0</itextId>
-            <name>pregnancy_supplements</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-1</itextId>
-            <name>bp_reading</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-2</itextId>
-            <name>hb_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-3</itextId>
-            <name>bp_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-4</itextId>
-            <name>urine_test</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-5</itextId>
-            <name>ultrasound</name>
-          </item>
-          <item>
-            <itextId>static_instance-second_facility-6</itextId>
-            <name>other</name>
+            <itextId>static_instance-decision_maker-4</itextId>
+            <name>decision_maker_dont_know_decline</name>
           </item>
         </root>
       </instance>
@@ -3425,51 +3018,399 @@ Umuhimu wa kunywa maji safi na salama
           </item>
         </root>
       </instance>
-      <instance id="baby_services_received">
+      <instance id="highest_school_level">
         <root>
           <item>
-            <itextId>static_instance-baby_services_received-0</itextId>
-            <name>check_abnormalities</name>
+            <itextId>static_instance-highest_school_level-0</itextId>
+            <name>no_formal_education</name>
           </item>
           <item>
-            <itextId>static_instance-baby_services_received-1</itextId>
-            <name>check_reflexes</name>
+            <itextId>static_instance-highest_school_level-1</itextId>
+            <name>incomplete_primary</name>
           </item>
           <item>
-            <itextId>static_instance-baby_services_received-2</itextId>
-            <name>cord_exam</name>
+            <itextId>static_instance-highest_school_level-2</itextId>
+            <name>primary_education</name>
           </item>
           <item>
-            <itextId>static_instance-baby_services_received-3</itextId>
-            <name>breast_feed_demo</name>
+            <itextId>static_instance-highest_school_level-3</itextId>
+            <name>incomplete_secondary</name>
           </item>
           <item>
-            <itextId>static_instance-baby_services_received-4</itextId>
-            <name>other</name>
+            <itextId>static_instance-highest_school_level-4</itextId>
+            <name>secondary</name>
           </item>
           <item>
-            <itextId>static_instance-baby_services_received-5</itextId>
-            <name>none</name>
+            <itextId>static_instance-highest_school_level-5</itextId>
+            <name>completed_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-6</itextId>
+            <name>more_than_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-highest_school_level-7</itextId>
+            <name>school_level_dont_know_decline</name>
           </item>
         </root>
       </instance>
-      <instance id="travel_time">
+      <instance id="partner_highest_school_level">
         <root>
           <item>
-            <itextId>static_instance-travel_time-0</itextId>
-            <name>less_than_30</name>
+            <itextId>static_instance-partner_highest_school_level-0</itextId>
+            <name>partner_no_formal_education</name>
           </item>
           <item>
-            <itextId>static_instance-travel_time-1</itextId>
-            <name>30_to_1hr</name>
+            <itextId>static_instance-partner_highest_school_level-1</itextId>
+            <name>partner_incomplete_primary</name>
           </item>
           <item>
-            <itextId>static_instance-travel_time-2</itextId>
-            <name>more_than_1hr</name>
+            <itextId>static_instance-partner_highest_school_level-2</itextId>
+            <name>partner_primary_education</name>
           </item>
           <item>
-            <itextId>static_instance-travel_time-3</itextId>
-            <name>travel_time_dont_know_decline</name>
+            <itextId>static_instance-partner_highest_school_level-3</itextId>
+            <name>partner_incomplete_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-4</itextId>
+            <name>partner_secondary</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-5</itextId>
+            <name>partner_completed_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-6</itextId>
+            <name>partner_more_than_high_school</name>
+          </item>
+          <item>
+            <itextId>static_instance-partner_highest_school_level-7</itextId>
+            <name>partner_school_level_dont_know_decline</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="anc_visit_facility">
+        <root>
+          <item>
+            <itextId>static_instance-anc_visit_facility-0</itextId>
+            <name>chakechakedistricthospital</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-1</itextId>
+            <name>pujiniphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-2</itextId>
+            <name>tundauwaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-3</itextId>
+            <name>vitongojiphcc</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-4</itextId>
+            <name>weshaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-5</itextId>
+            <name>kondephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-6</itextId>
+            <name>makangalephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-7</itextId>
+            <name>maziwangombephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-8</itextId>
+            <name>micheweniphcc</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-9</itextId>
+            <name>wingwiphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-10</itextId>
+            <name>kiuyumbuyuniphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-11</itextId>
+            <name>bogoaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-12</itextId>
+            <name>kengejaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-13</itextId>
+            <name>abdallahmzeedistricthospital</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-14</itextId>
+            <name>michenzaniphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-15</itextId>
+            <name>fundophcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-16</itextId>
+            <name>kojaniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-17</itextId>
+            <name>makongeniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-18</itextId>
+            <name>wetedistricthospital</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-19</itextId>
+            <name>mzambarauniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-20</itextId>
+            <name>junguniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-21</itextId>
+            <name>ukunjwiphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-22</itextId>
+            <name>uondwephcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-23</itextId>
+            <name>chwakaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-24</itextId>
+            <name>mweraphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-25</itextId>
+            <name>ungujaukuuphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-26</itextId>
+            <name>uziniphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-27</itextId>
+            <name>uroaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-28</itextId>
+            <name>kivungedistricthospital</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-29</itextId>
+            <name>matemwephcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-30</itextId>
+            <name>nungwiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-31</itextId>
+            <name>pwanimchanganiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-32</itextId>
+            <name>tumbatugomaniphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-33</itextId>
+            <name>kendwaphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-34</itextId>
+            <name>bumbwinimisufiniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-35</itextId>
+            <name>dongevijibweniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-36</itextId>
+            <name>kiongwephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-37</itextId>
+            <name>kitopephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-38</itextId>
+            <name>mahondaphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-39</itextId>
+            <name>jambianiphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-40</itextId>
+            <name>makunduchidistricthospital</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-41</itextId>
+            <name>muyuniphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-42</itextId>
+            <name>bwejuuphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-43</itextId>
+            <name>chumbuniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-44</itextId>
+            <name>mnazimmojahospital</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-45</itextId>
+            <name>mwembeladumchclinic</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-46</itextId>
+            <name>sebleniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-47</itextId>
+            <name>chukwaniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-48</itextId>
+            <name>fuoniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-49</itextId>
+            <name>kombeniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-50</itextId>
+            <name>mtofaaniphcu+(kinuni)</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-51</itextId>
+            <name>bumbwisudiphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-52</itextId>
+            <name>selemphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-53</itextId>
+            <name>other</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-54</itextId>
+            <name>other</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-55</itextId>
+            <name>other</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-56</itextId>
+            <name>other</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-57</itextId>
+            <name>other</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-58</itextId>
+            <name>other</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-59</itextId>
+            <name>other</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-60</itextId>
+            <name>other</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-61</itextId>
+            <name>other</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-62</itextId>
+            <name>other</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-anc_visit_facility-63</itextId>
+            <name>other</name>
+            <choice_filter>west_a</choice_filter>
           </item>
         </root>
       </instance>
@@ -3513,142 +3454,6 @@ Umuhimu wa kunywa maji safi na salama
           </item>
         </root>
       </instance>
-      <instance id="highest_school_level">
-        <root>
-          <item>
-            <itextId>static_instance-highest_school_level-0</itextId>
-            <name>no_formal_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-1</itextId>
-            <name>incomplete_primary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-2</itextId>
-            <name>primary_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-3</itextId>
-            <name>incomplete_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-4</itextId>
-            <name>secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-5</itextId>
-            <name>completed_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-6</itextId>
-            <name>more_than_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-highest_school_level-7</itextId>
-            <name>school_level_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="decision_maker">
-        <root>
-          <item>
-            <itextId>static_instance-decision_maker-0</itextId>
-            <name>herself</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-1</itextId>
-            <name>husband</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-2</itextId>
-            <name>herself_and_husband</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-3</itextId>
-            <name>other</name>
-          </item>
-          <item>
-            <itextId>static_instance-decision_maker-4</itextId>
-            <name>decision_maker_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="marital_status">
-        <root>
-          <item>
-            <itextId>static_instance-marital_status-0</itextId>
-            <name>married</name>
-          </item>
-          <item>
-            <itextId>static_instance-marital_status-1</itextId>
-            <name>single</name>
-          </item>
-          <item>
-            <itextId>static_instance-marital_status-2</itextId>
-            <name>widowed</name>
-          </item>
-          <item>
-            <itextId>static_instance-marital_status-3</itextId>
-            <name>divorced</name>
-          </item>
-          <item>
-            <itextId>static_instance-marital_status-4</itextId>
-            <name>marital_status_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="partner_highest_school_level">
-        <root>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-0</itextId>
-            <name>partner_no_formal_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-1</itextId>
-            <name>partner_incomplete_primary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-2</itextId>
-            <name>partner_primary_education</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-3</itextId>
-            <name>partner_incomplete_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-4</itextId>
-            <name>partner_secondary</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-5</itextId>
-            <name>partner_completed_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-6</itextId>
-            <name>partner_more_than_high_school</name>
-          </item>
-          <item>
-            <itextId>static_instance-partner_highest_school_level-7</itextId>
-            <name>partner_school_level_dont_know_decline</name>
-          </item>
-        </root>
-      </instance>
-      <instance id="yes_no_decline_to_answer">
-        <root>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-0</itextId>
-            <name>yes</name>
-          </item>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-1</itextId>
-            <name>no</name>
-          </item>
-          <item>
-            <itextId>static_instance-yes_no_decline_to_answer-2</itextId>
-            <name>decline_to_answer</name>
-          </item>
-        </root>
-      </instance>
       <instance id="pnc_visit_count_zero">
         <root>
           <item>
@@ -3681,6 +3486,213 @@ Umuhimu wa kunywa maji safi na salama
           </item>
         </root>
       </instance>
+      <instance id="facility_island">
+        <root>
+          <item>
+            <itextId>static_instance-facility_island-0</itextId>
+            <name>unguja</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-1</itextId>
+            <name>pemba</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-2</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no_decline_to_answer">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-1</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no_decline_to_answer-2</itextId>
+            <name>decline_to_answer</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="is_service_received">
+        <root>
+          <item>
+            <itextId>static_instance-is_service_received-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-is_service_received-1</itextId>
+            <name>yes_but</name>
+          </item>
+          <item>
+            <itextId>static_instance-is_service_received-2</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="c_section_condition">
+        <root>
+          <item>
+            <itextId>static_instance-c_section_condition-0</itextId>
+            <name>clean</name>
+          </item>
+          <item>
+            <itextId>static_instance-c_section_condition-1</itextId>
+            <name>discharge_swelling</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="second_facility">
+        <root>
+          <item>
+            <itextId>static_instance-second_facility-0</itextId>
+            <name>pregnancy_supplements</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-1</itextId>
+            <name>bp_reading</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-2</itextId>
+            <name>hb_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-3</itextId>
+            <name>bp_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-4</itextId>
+            <name>urine_test</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-5</itextId>
+            <name>ultrasound</name>
+          </item>
+          <item>
+            <itextId>static_instance-second_facility-6</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_district">
+        <root>
+          <item>
+            <itextId>static_instance-facility_district-0</itextId>
+            <name>north_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-1</itextId>
+            <name>north_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-2</itextId>
+            <name>central</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-3</itextId>
+            <name>south</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-4</itextId>
+            <name>west_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-5</itextId>
+            <name>west_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-6</itextId>
+            <name>urban</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-7</itextId>
+            <name>chakechake</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-8</itextId>
+            <name>micheweni</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-9</itextId>
+            <name>mkoani</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-10</itextId>
+            <name>wete</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="service_reason">
+        <root>
+          <item>
+            <itextId>static_instance-service_reason-0</itextId>
+            <name>no_staff</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-1</itextId>
+            <name>closed_facility</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-2</itextId>
+            <name>no_reagents</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-3</itextId>
+            <name>waiting_too_long</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-4</itextId>
+            <name>no_money</name>
+          </item>
+          <item>
+            <itextId>static_instance-service_reason-5</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="baby_services_received">
+        <root>
+          <item>
+            <itextId>static_instance-baby_services_received-0</itextId>
+            <name>check_abnormalities</name>
+          </item>
+          <item>
+            <itextId>static_instance-baby_services_received-1</itextId>
+            <name>check_reflexes</name>
+          </item>
+          <item>
+            <itextId>static_instance-baby_services_received-2</itextId>
+            <name>cord_exam</name>
+          </item>
+          <item>
+            <itextId>static_instance-baby_services_received-3</itextId>
+            <name>breast_feed_demo</name>
+          </item>
+          <item>
+            <itextId>static_instance-baby_services_received-4</itextId>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-baby_services_received-5</itextId>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
       <instance id="health_concerns">
         <root>
           <item>
@@ -3694,6 +3706,18 @@ Umuhimu wa kunywa maji safi na salama
           <item>
             <itextId>static_instance-health_concerns-2</itextId>
             <name>environment</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no-1</itextId>
+            <name>no</name>
           </item>
         </root>
       </instance>
@@ -3711,34 +3735,34 @@ Umuhimu wa kunywa maji safi na salama
       <bind nodeset="/postpartum/inputs/contact/_id" type="db:person"/>
       <bind nodeset="/postpartum/inputs/contact/name" type="string"/>
       <bind nodeset="/postpartum/inputs/contact/date_of_birth" type="string"/>
-      <bind nodeset="/postpartum/client_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/postpartum/patient_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/postpartum/created_by" type="string" calculate="../inputs/user/name"/>
-      <bind nodeset="/postpartum/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
-      <bind nodeset="/postpartum/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
-      <bind nodeset="/postpartum/had_c_section" type="string" calculate="../inputs/c_section"/>
-      <bind nodeset="/postpartum/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
-      <bind nodeset="/postpartum/delivery_date_c" type="string" calculate="../inputs/delivery_date"/>
-      <bind nodeset="/postpartum/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /postpartum/date_of_birth_c ))"/>
-      <bind nodeset="/postpartum/age_months" type="string" calculate="int(( /postpartum/age_days  - ( /postpartum/age_years  * 12 * 30)) div 30,0)"/>
-      <bind nodeset="/postpartum/age_years" type="string" calculate="int( /postpartum/age_days  div (30 *12),0)"/>
-      <bind nodeset="/postpartum/age_in_years" type="string" calculate="round((decimal-date-time(today()) - decimal-date-time( /postpartum/date_of_birth_c )) div 365,0)"/>
-      <bind nodeset="/postpartum/age_days_display" type="string" calculate=" /postpartum/age_days  - ( /postpartum/age_months  * 30) - ( /postpartum/age_years  *12*30)"/>
-      <bind nodeset="/postpartum/week" type="string" calculate="7"/>
-      <bind nodeset="/postpartum/month" type="string" calculate="30"/>
-      <bind nodeset="/postpartum/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
-      <bind nodeset="/postpartum/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
-      <bind nodeset="/postpartum/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
-      <bind nodeset="/postpartum/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
-      <bind nodeset="/postpartum/due_date" type="string" calculate="../inputs/due_date"/>
-      <bind nodeset="/postpartum/due_date_pretty_print" type="string" calculate="../inputs/due_date_human_readable"/>
-      <bind nodeset="/postpartum/show_research_questions" type="string" calculate="instance('contact-summary')/context/show_research_questions"/>
-      <bind nodeset="/postpartum/show_quality_care_c" type="string" calculate="../inputs/show_quality_care"/>
-      <bind nodeset="/postpartum/visit_id" type="string" calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)"/>
-      <bind nodeset="/postpartum/is_atleast_one_baby_alive_c" type="string" calculate="../inputs/is_atleast_one_baby_alive"/>
-      <bind nodeset="/postpartum/show_wash_protocol" type="string" calculate="instance('contact-summary')/context/show_wash_protocol"/>
-      <bind nodeset="/postpartum/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
-      <bind nodeset="/postpartum/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind calculate="../inputs/contact/name" nodeset="/postpartum/client_name" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/postpartum/patient_id" type="string"/>
+      <bind calculate="../inputs/user/name" nodeset="/postpartum/created_by" type="string"/>
+      <bind calculate="../inputs/user/contact_id" nodeset="/postpartum/created_by_person_uuid" type="string"/>
+      <bind calculate="../inputs/user/facility_id" nodeset="/postpartum/created_by_place_uuid" type="string"/>
+      <bind calculate="../inputs/c_section" nodeset="/postpartum/had_c_section" type="string"/>
+      <bind calculate="../inputs/contact/date_of_birth" nodeset="/postpartum/date_of_birth_c" type="string"/>
+      <bind calculate="../inputs/delivery_date" nodeset="/postpartum/delivery_date_c" type="string"/>
+      <bind calculate="int(decimal-date-time(now())-decimal-date-time( /postpartum/date_of_birth_c ))" nodeset="/postpartum/age_days" type="string"/>
+      <bind calculate="int(( /postpartum/age_days  - ( /postpartum/age_years  * 12 * 30)) div 30,0)" nodeset="/postpartum/age_months" type="string"/>
+      <bind calculate="int( /postpartum/age_days  div (30 *12),0)" nodeset="/postpartum/age_years" type="string"/>
+      <bind calculate="round((decimal-date-time(today()) - decimal-date-time( /postpartum/date_of_birth_c )) div 365,0)" nodeset="/postpartum/age_in_years" type="string"/>
+      <bind calculate=" /postpartum/age_days  - ( /postpartum/age_months  * 30) - ( /postpartum/age_years  *12*30)" nodeset="/postpartum/age_days_display" type="string"/>
+      <bind calculate="7" nodeset="/postpartum/week" type="string"/>
+      <bind calculate="30" nodeset="/postpartum/month" type="string"/>
+      <bind calculate="instance('contact-summary')/context/household_head" nodeset="/postpartum/household_head" type="string"/>
+      <bind calculate="instance('contact-summary')/context/house_number" nodeset="/postpartum/house_number" type="string"/>
+      <bind calculate="instance('contact-summary')/context/kitongoji" nodeset="/postpartum/kitongoji" type="string"/>
+      <bind calculate="instance('contact-summary')/context/phone" nodeset="/postpartum/phone" type="string"/>
+      <bind calculate="../inputs/due_date" nodeset="/postpartum/due_date" type="string"/>
+      <bind calculate="../inputs/due_date_human_readable" nodeset="/postpartum/due_date_pretty_print" type="string"/>
+      <bind calculate="instance('contact-summary')/context/show_research_questions" nodeset="/postpartum/show_research_questions" type="string"/>
+      <bind calculate="../inputs/show_quality_care" nodeset="/postpartum/show_quality_care_c" type="string"/>
+      <bind calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)" nodeset="/postpartum/visit_id" type="string"/>
+      <bind calculate="../inputs/is_atleast_one_baby_alive" nodeset="/postpartum/is_atleast_one_baby_alive_c" type="string"/>
+      <bind calculate="if(instance('contact-summary')/context/show_wash_protocol=&quot;true&quot;,1,0)" nodeset="/postpartum/show_wash_protocol" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/postpartum/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/postpartum/end" type="dateTime"/>
       <bind nodeset="/postpartum/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/client_information/intro_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/client_information/household_note" readonly="true()" type="string"/>
@@ -3750,31 +3774,31 @@ Umuhimu wa kunywa maji safi na salama
       <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/covid19_postpartum_danger_sign_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/generated_table_list_label_66" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/reserved_name_for_field_list_labels_67" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now" type="select1" required="true()" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;no&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;no&quot;)"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_not_right_now_note" readonly="true()" type="string" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;no&quot;)"/>
-      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_referral_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag  = 1"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;no&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;no&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_not_right_now_note" readonly="true()" relevant="selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_referral_note" readonly="true()" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag  = 1" type="string"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_note" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/generated_table_list_label_78" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/reserved_name_for_field_list_labels_79" type="select1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_urine" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_dizziness" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_exhaustion" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_lower_abdominal_pain" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_vaginal_discharge" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_fever_chills" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/c_section_condition" type="select1" required="true()" relevant=" /postpartum/had_c_section =&quot;yes&quot;"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" type="select1" required="true()" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or 
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_urine" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_dizziness" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_exhaustion" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_lower_abdominal_pain" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_vaginal_discharge" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_fever_chills" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/c_section_condition" relevant=" /postpartum/had_c_section =&quot;yes&quot;" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/client_been_facility_3_days" relevant="selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;discharge_swelling&quot;) or 
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_blurred_vision ,&quot;yes&quot;) or
@@ -3787,12 +3811,12 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot ,&quot;yes&quot;) or
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior ,&quot;yes&quot;) or
-selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/already_went_to_facility_note" readonly="true()" type="string" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility" type="select1" required="true()" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_referral_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 1"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_no_referral_note" readonly="true()" type="string" relevant="selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;no&quot;)"/>
-      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_not_found_note" readonly="true()" type="string" relevant="( /postpartum/had_c_section  = &quot;yes&quot; and
+selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/already_went_to_facility_note" readonly="true()" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)" type="string"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility" relevant="selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_referral_note" readonly="true()" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 1" type="string"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_no_referral_note" readonly="true()" relevant="selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;no&quot;)" type="string"/>
+      <bind nodeset="/postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign_not_found_note" readonly="true()" relevant="( /postpartum/had_c_section  = &quot;yes&quot; and
 selected( /postpartum/postpartum_other_danger_signs/c_section_condition ,&quot;clean&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_pale_pallor ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_frontal_headache ,&quot;no&quot;) and
@@ -3821,7 +3845,7 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breathing_difficulty ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_severe_pain_foot ,&quot;no&quot;) and
 selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_behavior ,&quot;no&quot;) and
-selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;no&quot;))"/>
+selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_signs_table/postpartum_breast ,&quot;no&quot;))" type="string"/>
       <bind nodeset="/postpartum/pnc_care_visit" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag  = 0"/>
       <bind nodeset="/postpartum/pnc_care_visit/pn_care_visit_message" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/nutrition" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0"/>
@@ -3833,10 +3857,10 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
       <bind nodeset="/postpartum/wash/cholera_note/cholera_signs" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/wash/subgroup_ors/ors_uses" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/wash/subgroup_health_concerns/health_concerns_note_to_chv" readonly="true()" type="string"/>
-      <bind nodeset="/postpartum/wash/subgroup_health_concerns/health_concerns" type="select" required="true()"/>
+      <bind nodeset="/postpartum/wash/subgroup_health_concerns/health_concerns" required="true()" type="select"/>
       <bind nodeset="/postpartum/wash/subgroup_cleanliness" relevant="selected( /postpartum/wash/subgroup_health_concerns/health_concerns ,&quot;cleanliness&quot;)"/>
       <bind nodeset="/postpartum/wash/subgroup_cleanliness/hand_cleanliness_note" readonly="true()" type="string"/>
-      <bind nodeset="/postpartum/wash/subgroup_cleanliness/hand_wash_importance" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/wash/subgroup_cleanliness/hand_wash_importance" required="true()" type="select1"/>
       <bind nodeset="/postpartum/wash/subgroup_cleanliness/note_to_chv_kitini_rejea" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/wash/subgroup_cleanliness/hand_wash_timings" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/wash/subgroup_cleanliness/hand_wash_steps" readonly="true()" type="string"/>
@@ -3847,15 +3871,15 @@ selected( /postpartum/postpartum_other_danger_signs/postpartum_other_danger_sign
       <bind nodeset="/postpartum/wash/subgroup_environment" relevant="selected( /postpartum/wash/subgroup_health_concerns/health_concerns ,&quot;environment&quot;)"/>
       <bind nodeset="/postpartum/wash/subgroup_environment/environment_cleanliness" readonly="true()" type="string"/>
       <bind nodeset="/postpartum/check_facility_pnc" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and  /postpartum/show_quality_care_c =&quot;true&quot;"/>
-      <bind nodeset="/postpartum/check_facility_pnc/has_attended_facility_pnc" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/check_facility_pnc/has_attended_facility_pnc_within_48hrs" type="select1" required="true()" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/check_facility_pnc/facility_pnc_date" type="date" constraint=". &gt;= date-time(decimal-date-time( /postpartum/delivery_date_c )) and . &lt;= date-time(decimal-date-time(today()))" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;) and selected( /postpartum/check_facility_pnc/has_attended_facility_pnc_within_48hrs ,&quot;no&quot;)" jr:constraintMsg="jr:itext('/postpartum/check_facility_pnc/facility_pnc_date:jr:constraintMsg')" required="true()"/>
-      <bind nodeset="/postpartum/check_facility_pnc/pnc_visit_count_zero" type="select" required="true()" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,'no')"/>
-      <bind nodeset="/postpartum/check_facility_pnc/quality_of_care_consent" type="select1" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)"/>
+      <bind nodeset="/postpartum/check_facility_pnc/has_attended_facility_pnc" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/check_facility_pnc/has_attended_facility_pnc_within_48hrs" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)" required="true()" type="select1"/>
+      <bind constraint=". &gt;= date-time(decimal-date-time( /postpartum/delivery_date_c )) and . &lt;= date-time(decimal-date-time(today()))" jr:constraintMsg="jr:itext('/postpartum/check_facility_pnc/facility_pnc_date:jr:constraintMsg')" nodeset="/postpartum/check_facility_pnc/facility_pnc_date" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;) and selected( /postpartum/check_facility_pnc/has_attended_facility_pnc_within_48hrs ,&quot;no&quot;)" required="true()" type="date"/>
+      <bind nodeset="/postpartum/check_facility_pnc/pnc_visit_count_zero" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,'no')" required="true()" type="select"/>
+      <bind nodeset="/postpartum/check_facility_pnc/quality_of_care_consent" relevant="selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)" type="select1"/>
       <bind nodeset="/postpartum/quality_of_care" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and selected( /postpartum/check_facility_pnc/quality_of_care_consent ,&quot;yes&quot;) and selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/facility_island" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/quality_of_care/facility_district" type="select1" required="true()" relevant="selected( /postpartum/quality_of_care/facility_island ,&quot;unguja&quot;) or selected( /postpartum/quality_of_care/facility_island ,&quot;pemba&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" type="select1" required="true()" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or 
+      <bind nodeset="/postpartum/quality_of_care/facility_island" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/quality_of_care/facility_district" relevant="selected( /postpartum/quality_of_care/facility_island ,&quot;unguja&quot;) or selected( /postpartum/quality_of_care/facility_island ,&quot;pemba&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility" relevant="selected( /postpartum/quality_of_care/facility_district ,&quot;north_a&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;north_b&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;central&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;south&quot;) or 
@@ -3865,38 +3889,38 @@ selected( /postpartum/quality_of_care/facility_district ,&quot;urban&quot;) or
 selected( /postpartum/quality_of_care/facility_district ,&quot;chakechake&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;micheweni&quot;) or 
 selected( /postpartum/quality_of_care/facility_district ,&quot;mkoani&quot;) or 
-selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility_other" type="string" required="true()" relevant="selected( /postpartum/quality_of_care/subgroup_facility/anc_visit_facility ,&quot;other&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/is_service_received" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/quality_of_care/no_service_reason" type="select" required="true()" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;) or selected( /postpartum/quality_of_care/is_service_received ,&quot;no&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/second_facility" type="select" required="true()" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;)"/>
-      <bind nodeset="/postpartum/quality_of_care/pnc_services_received" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" required="true()" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/pnc_services_received:jr:constraintMsg')"/>
-      <bind nodeset="/postpartum/quality_of_care/baby_services_recevied" type="select" constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/baby_services_recevied:jr:constraintMsg')" required="true()"/>
+selected( /postpartum/quality_of_care/facility_district ,&quot;wete&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/quality_of_care/subgroup_facility/anc_visit_facility_other" relevant="selected( /postpartum/quality_of_care/subgroup_facility/anc_visit_facility ,&quot;other&quot;)" required="true()" type="string"/>
+      <bind nodeset="/postpartum/quality_of_care/is_service_received" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/quality_of_care/no_service_reason" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;) or selected( /postpartum/quality_of_care/is_service_received ,&quot;no&quot;)" required="true()" type="select"/>
+      <bind nodeset="/postpartum/quality_of_care/second_facility" relevant="selected( /postpartum/quality_of_care/is_service_received ,&quot;yes_but&quot;)" required="true()" type="select"/>
+      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/pnc_services_received:jr:constraintMsg')" nodeset="/postpartum/quality_of_care/pnc_services_received" required="true()" type="select"/>
+      <bind constraint="(selected(.,&quot;none&quot;) and count-selected(.)=1) or (not(selected(.,&quot;none&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/postpartum/quality_of_care/baby_services_recevied:jr:constraintMsg')" nodeset="/postpartum/quality_of_care/baby_services_recevied" relevant=" /postpartum/is_atleast_one_baby_alive_c  = &quot;true&quot;" required="true()" type="select"/>
       <bind nodeset="/postpartum/personal_information_consent" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =0 and  /postpartum/show_research_questions  = &quot;true&quot;"/>
-      <bind nodeset="/postpartum/personal_information_consent/research_questions_consent" type="select1" required="true()"/>
+      <bind nodeset="/postpartum/personal_information_consent/research_questions_consent" required="true()" type="select1"/>
       <bind nodeset="/postpartum/research_questions" relevant="selected( /postpartum/personal_information_consent/research_questions_consent ,&quot;yes&quot;)"/>
-      <bind nodeset="/postpartum/research_questions/travel_time" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/research_questions/transport/travel_means" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/research_questions/transport/other_means" type="string" required="true()" relevant="selected( /postpartum/research_questions/transport/travel_means ,&quot;other&quot;)"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/decision_maker" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/some_other_decision_maker" type="string" required="true()" relevant="selected( /postpartum/research_questions/subgroup_decision_maker/decision_maker ,&quot;other&quot;)"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_marital_status/marital_status" type="select1" required="true()"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together" type="select1" required="true()" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)"/>
-      <bind nodeset="/postpartum/research_questions/partner_info/subgroup_partner_age" type="int" constraint=". &gt;= 18 and .&lt;= 90" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" jr:constraintMsg="jr:itext('/postpartum/research_questions/partner_info/subgroup_partner_age:jr:constraintMsg')"/>
-      <bind nodeset="/postpartum/research_questions/partner_info/partner_highest_school_level" type="select1" required="true()" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife" type="select1" required="true()" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)"/>
-      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/num_wives" type="int" constraint=".&gt;= 1 and .&lt;= 10" relevant="selected( /postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" jr:constraintMsg="jr:itext('/postpartum/research_questions/subgroup_multiple_wives/num_wives:jr:constraintMsg')"/>
+      <bind nodeset="/postpartum/research_questions/travel_time" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/transport/travel_means" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/transport/other_means" relevant="selected( /postpartum/research_questions/transport/travel_means ,&quot;other&quot;)" required="true()" type="string"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/decision_maker" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_decision_maker/some_other_decision_maker" relevant="selected( /postpartum/research_questions/subgroup_decision_maker/decision_maker ,&quot;other&quot;)" required="true()" type="string"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_marital_status/marital_status" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_partner_info/does_partner_live_together" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
+      <bind constraint=". &gt;= 18 and .&lt;= 90" jr:constraintMsg="jr:itext('/postpartum/research_questions/partner_info/subgroup_partner_age:jr:constraintMsg')" nodeset="/postpartum/research_questions/partner_info/subgroup_partner_age" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" type="int"/>
+      <bind nodeset="/postpartum/research_questions/partner_info/partner_highest_school_level" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
+      <bind nodeset="/postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife" relevant="selected( /postpartum/research_questions/subgroup_marital_status/marital_status ,&quot;married&quot;)" required="true()" type="select1"/>
+      <bind constraint=".&gt;= 1 and .&lt;= 10" jr:constraintMsg="jr:itext('/postpartum/research_questions/subgroup_multiple_wives/num_wives:jr:constraintMsg')" nodeset="/postpartum/research_questions/subgroup_multiple_wives/num_wives" relevant="selected( /postpartum/research_questions/subgroup_multiple_wives/more_than_one_wife ,&quot;yes&quot;)" type="int"/>
       <bind nodeset="/postpartum/next_task_reminder/chvnote_next_task" readonly="true()" type="string"/>
-      <bind nodeset="/postpartum/group_summary/healthy_note" readonly="true()" type="string" relevant=" /postpartum/has_referral =0"/>
-      <bind nodeset="/postpartum/group_summary/needs_referral_note" readonly="true()" type="string" relevant=" /postpartum/has_referral =1"/>
-      <bind nodeset="/postpartum/group_summary/needs_referral_emergency_danger_sign_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =1"/>
-      <bind nodeset="/postpartum/group_summary/needs_referral_other_danger_sign_note" readonly="true()" type="string" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag =1"/>
+      <bind nodeset="/postpartum/group_summary/healthy_note" readonly="true()" relevant=" /postpartum/has_referral =0" type="string"/>
+      <bind nodeset="/postpartum/group_summary/needs_referral_note" readonly="true()" relevant=" /postpartum/has_referral =1" type="string"/>
+      <bind nodeset="/postpartum/group_summary/needs_referral_emergency_danger_sign_note" readonly="true()" relevant=" /postpartum/refer_postpartum_emergency_danger_sign_flag =1" type="string"/>
+      <bind nodeset="/postpartum/group_summary/needs_referral_other_danger_sign_note" readonly="true()" relevant=" /postpartum/refer_postpartum_other_danger_sign_flag =1" type="string"/>
       <bind nodeset="/postpartum/group_summary/needs_referral_pnc_visit" readonly="true()" type="string"/>
-      <bind nodeset="/postpartum/refer_postpartum_emergency_danger_sign_flag" type="string" calculate="if((selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;yes&quot;)) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;yes&quot;) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;yes&quot;),1,0)"/>
-      <bind nodeset="/postpartum/refer_postpartum_other_danger_sign_flag" type="string" calculate="if(selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;yes&quot;) or selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;no&quot;),1,0)"/>
-      <bind nodeset="/postpartum/refer_postpartum_pnc_visit" type="string" calculate="if(selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;no&quot;),1,0)"/>
-      <bind nodeset="/postpartum/has_referral" type="string" calculate="if( /postpartum/refer_postpartum_emergency_danger_sign_flag =1 or  /postpartum/refer_postpartum_other_danger_sign_flag =1 or  /postpartum/refer_postpartum_pnc_visit =1,1,0)"/>
-      <bind nodeset="/postpartum/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind calculate="if((selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_severe_vaginal_bleeding ,&quot;yes&quot;) and selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_bleeding_right_now ,&quot;yes&quot;)) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_convulsions ,&quot;yes&quot;) or selected( /postpartum/postpartum_danger_signs/postpartum_emergency_danger_signs/postpartum_emergency_danger_signs_table/postpartum_unconscious ,&quot;yes&quot;),1,0)" nodeset="/postpartum/refer_postpartum_emergency_danger_sign_flag" type="string"/>
+      <bind calculate="if(selected( /postpartum/postpartum_other_danger_signs/chv_thinks_needs_return_facility ,&quot;yes&quot;) or selected( /postpartum/postpartum_other_danger_signs/client_been_facility_3_days ,&quot;no&quot;),1,0)" nodeset="/postpartum/refer_postpartum_other_danger_sign_flag" type="string"/>
+      <bind calculate="if(selected( /postpartum/check_facility_pnc/has_attended_facility_pnc ,&quot;no&quot;),1,0)" nodeset="/postpartum/refer_postpartum_pnc_visit" type="string"/>
+      <bind calculate="if( /postpartum/refer_postpartum_emergency_danger_sign_flag =1 or  /postpartum/refer_postpartum_other_danger_sign_flag =1 or  /postpartum/refer_postpartum_pnc_visit =1,1,0)" nodeset="/postpartum/has_referral" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/postpartum/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">

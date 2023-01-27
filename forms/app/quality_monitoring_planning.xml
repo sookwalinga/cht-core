@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
     <h:title>Quality Monitoring Planning</h:title>
     <model>
@@ -81,10 +81,22 @@
           <text id="/quality_monitoring_planning/inputs/contact/patient_id:label">
             <value>-</value>
           </text>
+          <text id="/quality_monitoring_planning/inputs/contact:label">
+            <value>-</value>
+          </text>
           <text id="/quality_monitoring_planning/inputs/patient_id:label">
             <value>-</value>
           </text>
           <text id="/quality_monitoring_planning/inputs/patient_uuid:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/source:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/source_id:label">
+            <value>-</value>
+          </text>
+          <text id="/quality_monitoring_planning/inputs/task_id:label">
             <value>-</value>
           </text>
           <text id="/quality_monitoring_planning/inputs:label">
@@ -102,7 +114,7 @@
         </translation>
       </itext>
       <instance>
-        <quality_monitoring_planning id="quality_monitoring_planning" prefix="J1!quality_monitoring_planning!" delimiter="#" version="2022-09-21 13:27:59">
+        <quality_monitoring_planning delimiter="#" id="quality_monitoring_planning" prefix="J1!quality_monitoring_planning!" version="2022-11-04 01:44:11">
           <inputs>
             <meta>
               <location>
@@ -150,25 +162,25 @@
       <bind nodeset="/quality_monitoring_planning/inputs/source" type="string"/>
       <bind nodeset="/quality_monitoring_planning/inputs/source_id" type="string"/>
       <bind nodeset="/quality_monitoring_planning/inputs/task_id" type="string"/>
-      <bind nodeset="/quality_monitoring_planning/inputs/patient_uuid" type="string" calculate="../contact/_id"/>
-      <bind nodeset="/quality_monitoring_planning/inputs/patient_id" type="string" calculate="../contact/patient_id"/>
+      <bind calculate="../contact/_id" nodeset="/quality_monitoring_planning/inputs/patient_uuid" type="string"/>
+      <bind calculate="../contact/patient_id" nodeset="/quality_monitoring_planning/inputs/patient_id" type="string"/>
       <bind nodeset="/quality_monitoring_planning/inputs/contact/_id" type="string"/>
       <bind nodeset="/quality_monitoring_planning/inputs/contact/patient_id" type="string"/>
       <bind nodeset="/quality_monitoring_planning/inputs/contact/name" type="string"/>
-      <bind nodeset="/quality_monitoring_planning/_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/quality_monitoring_planning/patient_id" type="string" calculate="../inputs/contact/_id"/>
-      <bind nodeset="/quality_monitoring_planning/chw_id" type="string" calculate="../inputs/contact/patient_id"/>
-      <bind nodeset="/quality_monitoring_planning/chw_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/quality_monitoring_planning/visit_details/planned_visit_date" type="date" jr:constraintMsg="jr:itext('/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg')" required="true()" constraint=". &gt; today()"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/quality_monitoring_planning/_id" type="string"/>
+      <bind calculate="../inputs/contact/_id" nodeset="/quality_monitoring_planning/patient_id" type="string"/>
+      <bind calculate="../inputs/contact/patient_id" nodeset="/quality_monitoring_planning/chw_id" type="string"/>
+      <bind calculate="../inputs/contact/name" nodeset="/quality_monitoring_planning/chw_name" type="string"/>
+      <bind constraint=". &gt; today()" jr:constraintMsg="jr:itext('/quality_monitoring_planning/visit_details/planned_visit_date:jr:constraintMsg')" nodeset="/quality_monitoring_planning/visit_details/planned_visit_date" required="true()" type="date"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_chw_info_title" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_chw_info" readonly="true()" type="string"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_followup" readonly="true()" type="string"/>
-      <bind nodeset="/quality_monitoring_planning/group_summary/c_formatted_visit_date" type="string" calculate="format-date( /quality_monitoring_planning/visit_details/planned_visit_date , '%a %e %b %Y')"/>
+      <bind calculate="format-date( /quality_monitoring_planning/visit_details/planned_visit_date , '%a %e %b %Y')" nodeset="/quality_monitoring_planning/group_summary/c_formatted_visit_date" type="string"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_planned_visit_date" readonly="true()" type="string"/>
-      <bind nodeset="/quality_monitoring_planning/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /quality_monitoring_planning/visit_details/planned_visit_date ) - 2), '%a %e %b %Y')"/>
+      <bind calculate="format-date(date(decimal-date-time( /quality_monitoring_planning/visit_details/planned_visit_date ) - 2), '%a %e %b %Y')" nodeset="/quality_monitoring_planning/group_summary/c_formatted_task_date" type="string"/>
       <bind nodeset="/quality_monitoring_planning/group_summary/r_followup_note" readonly="true()" type="string"/>
-      <bind nodeset="/quality_monitoring_planning/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
-      <bind nodeset="/quality_monitoring_planning/meta/instanceName" type="string" calculate="D-tree"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/quality_monitoring_planning/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="D-tree" nodeset="/quality_monitoring_planning/meta/instanceName" type="string"/>
     </model>
   </h:head>
   <h:body class="pages">
