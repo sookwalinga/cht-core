@@ -8,15 +8,15 @@ CREATE MATERIALIZED VIEW coverage_pregnancy AS
 
   WITH skeleton AS (
     SELECT
-      month::DATE,
+      reported_month::DATE AS reported_month,
       district
     FROM generate_series(
       TIMESTAMP '2019-07-01',
       current_date,
-      interval '1 month') AS t(month)
+      interval '1 month') AS t(reported_month)
     INNER JOIN useview_jna_locations ON TRUE
-    GROUP BY district, month -- only want district, not shehias
-    ORDER BY district,month
+    GROUP BY district, reported_month -- only want district, not shehias
+    ORDER BY district,reported_month
   ),
 
   client_info AS (
@@ -34,15 +34,15 @@ CREATE MATERIALIZED VIEW coverage_pregnancy AS
 
   numerator AS (
     SELECT
-      skeleton.month,
+      skeleton.reported_month,
       skeleton.district,
-      count(enrollment_start_date) AS enrolled
+      count(enrollment_start_date) AS pregnancy_enrolled
     FROM skeleton
     LEFT JOIN client_info
       ON skeleton.district = client_info.district
-        AND enrollment_start_date <= month
-        AND enrollment_end_date >= month
-    GROUP BY month, skeleton.district
+        AND enrollment_start_date <= reported_month
+        AND enrollment_end_date >= reported_month
+    GROUP BY reported_month, skeleton.district
   ),
 
   total_births AS (
@@ -60,20 +60,20 @@ CREATE MATERIALIZED VIEW coverage_pregnancy AS
       -- Multiply by 9/12 because pregnancy lasts for 9 months
       -- So in a given month, 9/12 of all women that will be
       -- pregnant during the year will be pregnant during that month
-      (proportion * 9 * total / 12)::INT AS population_pregnant
+      (proportion * 9 * total / 12)::INT AS pregnancy_population
     FROM pop_district_proportions_2018
     INNER JOIN total_births ON TRUE
   )
 
   SELECT
     numerator.*,
-    denominator.population_pregnant
+    denominator.pregnancy_population
   FROM numerator
   INNER JOIN denominator
     ON numerator.district = denominator.district
 
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS month_district ON coverage_pregnancy USING btree(month, district);
+CREATE UNIQUE INDEX IF NOT EXISTS month_district ON coverage_pregnancy USING btree(reported_month, district);
 ALTER MATERIALIZED VIEW enrollments_pregnancy OWNER TO full_access;
 GRANT SELECT ON enrollments_pregnancy TO dtree, periscope;
