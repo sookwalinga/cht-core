@@ -92,6 +92,6 @@ CREATE MATERIALIZED VIEW coverage_child AS
     ON numerator.district = denominator.district
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS month_district ON coverage_child USING btree(reported_month, district);
-ALTER MATERIALIZED VIEW enrollments_child OWNER TO full_access;
-GRANT SELECT ON enrollments_child TO dtree, periscope;
+CREATE UNIQUE INDEX IF NOT EXISTS coverage_child_month_district ON coverage_child USING btree(reported_month, district,disaggregation_value);
+ALTER MATERIALIZED VIEW coverage_child OWNER TO full_access;
+GRANT SELECT ON coverage_child TO dtree, periscope;

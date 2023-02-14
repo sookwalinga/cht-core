@@ -56,6 +56,8 @@ CREATE MATERIALIZED VIEW agg_referrals AS
       max(refer_neonatal_danger_sign_flag::INT) * max(got_services::INT) AS neonatal_danger_sign_got_services,
       max(refer_neonatal_danger_sign_flag::INT) * max(complete_referral::INT) AS neonatal_danger_sign_cancelled_followup,
       max(refer_secondary_neonatal_danger_sign_flag::INT) * max(went_to_facility::INT) AS secondary_neonatal_danger_sign_went_to_facility,
+      max(refer_secondary_neonatal_danger_sign_flag::INT) * max(got_services::INT) AS secondary_neonatal_danger_sign_got_services,
+      max(refer_secondary_neonatal_danger_sign_flag::INT) * max(complete_referral::INT) AS secondary_neonatal_danger_sign_cancelled_followup,
       max(refer_child_danger_sign_flag::INT) * max(got_services::INT) AS child_danger_sign_got_services,
       max(refer_child_danger_sign_flag::INT) * max(complete_referral::INT) AS child_danger_sign_cancelled_followup,
       max(refer_child_danger_sign_flag::INT) * max(went_to_facility::INT) AS child_danger_sign_went_to_facility,
@@ -107,6 +109,8 @@ CREATE MATERIALIZED VIEW agg_referrals AS
     sum(neonatal_danger_sign_got_services) AS neonatal_danger_sign_got_services,
     sum(neonatal_danger_sign_cancelled_followup) AS neonatal_danger_sign_cancelled_followup,
     sum(secondary_neonatal_danger_sign_went_to_facility) AS secondary_neonatal_danger_sign_went_to_facility,
+    sum(secondary_neonatal_danger_sign_got_services) AS secondary_neonatal_danger_sign_got_services,
+    sum(secondary_neonatal_danger_sign_cancelled_followup) AS secondary_neonatal_danger_sign_cancelled_followup,
     sum(child_danger_sign_got_services) AS child_danger_sign_got_services,
     sum(child_danger_sign_cancelled_followup) AS child_danger_sign_cancelled_followup,
     sum(child_danger_sign_went_to_facility) AS child_danger_sign_went_to_facility,
@@ -157,12 +161,12 @@ CREATE MATERIALIZED VIEW agg_referrals AS
     sum((
       date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
       AND infant.refer_neonatal_danger_sign_flag = 't'
-    )::int) AS followup_within3days_slow_to_learn_specifics,
+    )::int) AS followup_within3days_neonatal_danger_sign_flag,
     sum((
       date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
       AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
       AND infant.refer_neonatal_danger_sign_flag = 't'
-    )::int) AS followup_within7days_slow_to_learn_specifics,
+    )::int) AS followup_within7days_neonatal_danger_sign_flag,
     sum((
       infant.refer_secondary_neonatal_danger_sign_flag = 't'
       AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
@@ -243,6 +247,6 @@ CREATE MATERIALIZED VIEW agg_referrals AS
   GROUP BY
     district,shehia,issued_month,original_source_form,disaggregation,disaggregation_values
 );
-CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_referrals ON agg_referrals USING btree(district,shehia,issued_month,source_form,disaggregation_values);
+CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_referrals ON agg_referrals USING btree(district,shehia,issued_month,original_source_form,disaggregation_values);
 ALTER MATERIALIZED VIEW agg_referrals OWNER TO full_access;
 GRANT SELECT ON agg_referrals TO dtree;

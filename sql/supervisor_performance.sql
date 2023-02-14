@@ -5,7 +5,7 @@ DROP MATERIALIZED VIEW IF EXISTS supervisor_performance;
 
 CREATE MATERIALIZED VIEW supervisor_performance AS
 (
- WITH skeleton AS (
+  WITH skeleton AS (
     SELECT
       _id,
       supervisory_area_uuid,
@@ -39,24 +39,25 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
   ),
 
   old_daily_meetings_CTE AS (
-  SELECT 
-      supervisory_area_uuid
-     ,date_trunc('day',reported_date) AS day_reported
-      ,SUM((confirm_meeting IN('my_supervisor_is','my_supervisor_is_attending'))::INT) AS num_individual_chv_meetings
-      ,MAX((confirm_meeting = 'iam_attending')::INT) AS chv_meetings 
-  FROM useview_confirm_meeting 
-  GROUP BY supervisory_area_uuid,day_reported
+    SELECT
+      supervisory_area_uuid,
+      date_trunc('day',reported_date) AS day_reported,
+      sum((confirm_meeting IN('my_supervisor_is','my_supervisor_is_attending'))::INT) AS num_individual_chv_meetings,
+      max((confirm_meeting = 'iam_attending')::INT) AS chv_meetings
+    FROM useview_confirm_meeting
+    GROUP BY supervisory_area_uuid,day_reported
   ),
 
-  old_monthly_meetings_CTE as (
-    SELECT 
-      supervisory_area_uuid
-      ,date_trunc('month',day_reported) AS reported_month
-      ,SUM(num_individual_chv_meetings) AS chv_field_visits
-      ,SUM(chv_meetings) AS monthly_meetings 
+  old_monthly_meetings_CTE AS (
+    SELECT
+      supervisory_area_uuid,
+      date_trunc('month',day_reported) AS reported_month,
+      sum(num_individual_chv_meetings) AS chv_field_visits,
+      sum(chv_meetings) AS monthly_meetings
     FROM old_daily_meetings_CTE
-    GROUP by supervisory_area_uuid,reported_month
+    GROUP BY supervisory_area_uuid,reported_month
   ),
+
   monthly_meeting_CTE AS (
     SELECT
       supervisory_area_uuid,

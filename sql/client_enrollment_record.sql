@@ -57,6 +57,6 @@ CREATE MATERIALIZED VIEW client_enrollment_record AS
   UNION
   SELECT * FROM child_enrollments
 );
-CREATE UNIQUE INDEX IF NOT EXISTS patientid_service_enrollment ON client_enrollment_record USING btree(patient_id,service,enrollment_start_date);
+CREATE UNIQUE INDEX IF NOT EXISTS patientid_service_enrollment ON client_enrollment_record USING btree(patient_id,service,enrollment_start_date,enrollment_end_date);
 ALTER MATERIALIZED VIEW client_enrollment_record OWNER TO full_access;
 GRANT SELECT ON client_enrollment_record TO dtree;

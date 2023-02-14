@@ -74,6 +74,6 @@ CREATE MATERIALIZED VIEW coverage_pregnancy AS
 
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS month_district ON coverage_pregnancy USING btree(reported_month, district);
-ALTER MATERIALIZED VIEW enrollments_pregnancy OWNER TO full_access;
-GRANT SELECT ON enrollments_pregnancy TO dtree, periscope;
+CREATE UNIQUE INDEX IF NOT EXISTS coverage_pregnancy_month_district ON coverage_pregnancy USING btree(reported_month, district);
+ALTER MATERIALIZED VIEW coverage_pregnancy OWNER TO full_access;
+GRANT SELECT ON coverage_pregnancy TO dtree, periscope;
