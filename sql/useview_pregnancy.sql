@@ -125,7 +125,6 @@ CREATE MATERIALIZED VIEW useview_pregnancy AS
     nullif(doc #>> '{fields,refer_flag_emergency_danger_sign}', '')::BOOLEAN AS refer_flag_emergency_danger_sign,
     nullif(doc #>> '{fields,refer_flag_pregnancy_issues}', '')::BOOLEAN AS refer_flag_pregnancy_issues,
     nullif(doc #>> '{fields,refer_flag_pregnancy_complications}', '')::BOOLEAN AS refer_flag_pregnancy_complications,
-    nullif(doc #>> '{fields,refer_flag_anc_visit_6m_or_more}', '')::BOOLEAN AS refer_flag_anc_visit_6m_or_more,
     nullif(doc #>> '{fields,refer_flag_anc_visit}', '')::BOOLEAN AS refer_flag_anc_visit,
     nullif(doc #>> '{geolocation,latitude}', '')::DECIMAL AS latitude,
     nullif(doc #>> '{geolocation,longitude}', '')::DECIMAL AS longitude,

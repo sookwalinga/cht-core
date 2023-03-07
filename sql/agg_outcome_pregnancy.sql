@@ -21,7 +21,7 @@ CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
   ),
 
   categories AS (
-    SELECT cat.* FROM ( VALUES
+    SELECT cat.* FROM (VALUES
       (15, 19, '15_19years', 'woman'),
       (20, 24, '20_24years', 'woman'),
       (25, 34, '25_34years', 'woman'),
@@ -42,6 +42,10 @@ CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
     sum(coalesce((po.delivery_location = 'facility')::INT, 0)) AS woman_delivery_facility,
     sum(coalesce((po.delivery_location = 'home')::INT, 0)) AS woman_delivery_home,
     sum(coalesce((po.delivery_location = 'in_transit')::INT, 0)) AS woman_delivery_in_transit,
+    sum((po.delivery_location = 'home')::INT * coalesce(po.num_live_births,po.live_birth::INT)) AS infants_born_home_alive,
+    sum((po.delivery_location = 'home')::INT * coalesce(po.num_babies_delivered,1)) AS all_infants_born_home,
+    sum((po.delivery_location IS NOT NULL)::INT * coalesce(po.num_live_births,po.live_birth::INT)) AS all_infants_born_alive,
+    sum((po.delivery_location IS NOT NULL)::INT * coalesce(po.num_babies_delivered,1)) AS all_infants_born,
     sum(coalesce((pg.num_anc_visits = 0)::INT, 0)) AS anc_0,
     sum(coalesce((pg.num_anc_visits = 1)::INT, 0)) AS anc_1,
     sum(coalesce((pg.num_anc_visits = 2)::INT, 0)) AS anc_2,
