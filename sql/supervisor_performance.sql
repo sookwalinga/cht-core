@@ -23,8 +23,8 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
     SELECT
       supervisory_area_uuid,
       reported_month,
-      coalesce(round(sum(num_child_enrollments + num_pregnancy_enrollments)::DECIMAL / count(chv_uuid),1),0) AS average_enrollments_per_chv,
-      coalesce(round(sum(num_child_visits + num_pregnancy_visits)::DECIMAL / count(chv_uuid),1),0) AS average_visits_per_chv
+      coalesce(round(sum(total_enrollments)::DECIMAL / count(chv_uuid),1),0) AS average_enrollments_per_chv,
+      coalesce(round(sum(total_visits)::DECIMAL / count(chv_uuid),1),0) AS average_visits_per_chv
     FROM chv_performance
     GROUP BY supervisory_area_uuid,reported_month
   ),
