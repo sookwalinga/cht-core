@@ -17,8 +17,10 @@ CREATE MATERIALIZED VIEW client_enrollment_record AS
 
   pregnancy_enrollments AS (
     SELECT
+      preg.catchment_area_uuid,
+      preg.supervisory_area_uuid,
       visits.patient_id,
-      visits.reported_date::date AS enrollment_start_date,
+      visits.reported_date AS enrollment_start_date,
       'pregnancy'::TEXT AS service,
       'edd'::TEXT AS enrollment_end,
       coalesce(death.date_of_death_maternal,min(preg.EDD))::date AS enrollment_end_date
@@ -28,7 +30,7 @@ CREATE MATERIALIZED VIEW client_enrollment_record AS
         AND visits.reported_date = preg.reported_date
     LEFT JOIN useview_death_report AS death
       ON death.patient_id = visits.patient_id
-    GROUP BY visits.patient_id, service, enrollment_start_date, enrollment_end,death.date_of_death_maternal
+    GROUP BY preg.catchment_area_uuid,preg.supervisory_area_uuid,visits.patient_id, service, enrollment_start_date, enrollment_end,death.date_of_death_maternal
   ),
 
   child_consent_visits AS (
@@ -43,8 +45,10 @@ CREATE MATERIALIZED VIEW client_enrollment_record AS
 
   child_enrollments AS (
     SELECT
+      person.catchment_area_uuid,
+      person.supervisory_area_uuid,
       visits.patient_id,
-      visits.reported_date::date AS enrollment_start_date,
+      visits.reported_date AS enrollment_start_date,
       'child'::TEXT AS service,
       'fifth birthday'::TEXT AS enrollment_end,
       least((person.date_of_birth + interval '5 years')::date, coalesce(person.date_of_death::date, '2100-01-01'::date)) AS enrollment_end_date
@@ -54,7 +58,7 @@ CREATE MATERIALIZED VIEW client_enrollment_record AS
   )
 
   SELECT * FROM pregnancy_enrollments
-  UNION
+  UNION ALL
   SELECT * FROM child_enrollments
 );
 CREATE UNIQUE INDEX IF NOT EXISTS patientid_service_enrollment ON client_enrollment_record USING btree(patient_id,service,enrollment_start_date,enrollment_end_date);

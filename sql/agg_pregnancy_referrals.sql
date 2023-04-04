@@ -25,9 +25,9 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
       sum(went_to_facility::INT) AS went_to_facility,
       sum(got_services::INT) AS got_services,
       sum(complete_referral::INT) AS followup_cancelled,
-      max(CASE WHEN refer_flag_pregnancy_danger_sign THEN got_services::INT END) AS pregancy_danger_signs_got_services,
-      max(CASE WHEN refer_flag_pregnancy_danger_sign THEN complete_referral::INT END) AS pregancy_danger_signs_cancelled_followup,
-      max(CASE WHEN refer_flag_pregnancy_danger_sign THEN went_to_facility::INT END) AS pregancy_danger_signs_went_to_facility,
+      max(CASE WHEN refer_flag_pregnancy_danger_sign THEN got_services::INT END) AS pregnancy_danger_signs_got_services,
+      max(CASE WHEN refer_flag_pregnancy_danger_sign THEN complete_referral::INT END) AS pregnancy_danger_signs_cancelled_followup,
+      max(CASE WHEN refer_flag_pregnancy_danger_sign THEN went_to_facility::INT END) AS pregnancy_danger_signs_went_to_facility,
       max(CASE WHEN refer_flag_pregnancy_issues THEN got_services::INT END) AS pregnancy_issues_got_services,
       max(CASE WHEN refer_flag_pregnancy_issues THEN complete_referral::INT END) AS pregnancy_issues_cancelled_followup,
       max(CASE WHEN refer_flag_pregnancy_issues THEN went_to_facility::INT END) AS pregnancy_issues_went_to_facility,
@@ -58,10 +58,10 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
     combo.disaggregation,
     combo.disaggregation_values,
     date_trunc('month',coalesce(pg.reported_date,ppt.reported_date)) AS issued_month,
-    sum(pregancy_danger_signs_cancelled_followup) AS pregancy_danger_signs_cancelled_followup,
-    sum(pregancy_danger_signs_got_services) AS pregancy_danger_signs_got_services,
-    sum(pregancy_danger_signs_went_to_facility) AS pregancy_danger_signs_went_to_facility,
-    sum((pregancy_danger_signs_went_to_facility = 0)::INT) AS pregancy_danger_signs_didnt_go_facility,
+    sum(pregnancy_danger_signs_cancelled_followup) AS pregnancy_danger_signs_cancelled_followup,
+    sum(pregnancy_danger_signs_got_services) AS pregnancy_danger_signs_got_services,
+    sum(pregnancy_danger_signs_went_to_facility) AS pregnancy_danger_signs_went_to_facility,
+    sum((pregnancy_danger_signs_went_to_facility = 0)::INT) AS pregnancy_danger_signs_didnt_go_facility,
     sum(pregnancy_issues_went_to_facility) AS pregnancy_issues_went_to_facility,
     sum((pregnancy_issues_went_to_facility = 0)::INT) AS pregnancy_issues_didnt_go_facility,
     sum(pregnancy_issues_got_services) AS pregnancy_issues_got_services,
@@ -153,11 +153,8 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
     ON ppt._id = referral_cte.original_source_form_uuid
   INNER JOIN category_option_combos AS combo
     ON(
-      (pg.age_years BETWEEN combo.low AND combo.up
-        AND original_source_form = 'pregnancy'
-      )
-      OR (ppt.age_years BETWEEN combo.low AND combo.up
-        AND original_source_form = 'postpartum')
+      (pg.age_years BETWEEN combo.low AND combo.up)
+      OR (ppt.age_years BETWEEN combo.low AND combo.up)
     )
   INNER JOIN useview_jna_locations AS loc
     ON loc.catchment_area_uuid = referral_cte.catchment_area_uuid
