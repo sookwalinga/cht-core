@@ -49,7 +49,7 @@ jobs:
     - name: 'Get message'
       id: 'deploy-message'
       run: |
-            echo "::set-output name=commit_msg::$(git log -1 --format=%B)"
+            echo "::set-output name=commit_msg::$(git log -1 --format=%B | tr '\n' ' ')"
             echo "::set-output name=commit_sha::$(git log -1 --format=%H)"
             
     - name: 'Slack notify success'
