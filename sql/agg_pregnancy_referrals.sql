@@ -69,6 +69,7 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
     sum(pregnancy_complications_went_to_facility) AS pregnancy_complications_went_to_facility,
     sum((pregnancy_complications_went_to_facility = 0)::INT) AS pregnancy_complications_didnt_go_facility,
     sum(pregnancy_complications_got_services) AS pregnancy_complications_got_services,
+    sum(pregnancy_complications_cancelled_followup) AS pregnancy_complications_got_services,
     sum(postpartum_danger_signs_got_services) AS postpartum_danger_signs_got_services,
     sum(postpartum_danger_signs_cancelled_followup) AS postpartum_danger_signs_cancelled_followup,
     sum(postpartum_danger_signs_went_to_facility) AS postpartum_danger_signs_went_to_facility,
@@ -145,7 +146,17 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
       refer_postpartum_pnc_visit = 't'
       AND date_part('day',pg.reported_date - referral_cte.first_followup_date) > 3
       AND date_part('day',pg.reported_date - referral_cte.first_followup_date) <= 7
-    )::INT) AS followup_within7days_postpartum_pnc_visit
+    )::INT) AS followup_within7days_postpartum_pnc_visit,
+    sum((
+      pg.refer_flag_anc_visit = 't'
+      AND date_part('day',pg.reported_date - referral_cte.first_followup_date) <= 3
+    )::INT) AS followup_within3days_anc_visit,
+    sum((
+      pg.refer_flag_anc_visit = 't'
+      AND date_part('day',pg.reported_date - referral_cte.first_followup_date) > 3
+      AND date_part('day',pg.reported_date - referral_cte.first_followup_date) <= 7
+    )::INT) AS followup_within7days_anc_visit
+
   FROM referral_cte
   FULL OUTER JOIN useview_pregnancy AS pg
     ON pg._id = referral_cte.original_source_form_uuid
