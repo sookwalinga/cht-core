@@ -86,7 +86,7 @@ CREATE MATERIALIZED VIEW agg_child_referrals AS
     shehia,
     original_source_form,
     (combo.cat_1_kind || ',' || combo.cat_2_kind) AS disaggregation,
-    (combo.cat_1_option || ',' || combo.cat_2_option) AS disaggregation_values,
+    (combo.cat_1_option || ',' || combo.cat_2_option) AS disaggregation_value,
     date_trunc('month',infant.reported_date) AS issued_month,
     sum(small_baby_went_to_facility) AS small_baby_went_to_facility,
     sum((small_baby_went_to_facility = 0)::INT) AS small_baby_didnt_go_facility,
@@ -227,8 +227,8 @@ CREATE MATERIALIZED VIEW agg_child_referrals AS
     --this filter is necessary as we have a few children above 5 yrs due to a bug on the app    
     cat_1_kind IS NOT NULL
   GROUP BY
-    district,shehia,issued_month,original_source_form,disaggregation,disaggregation_values
+    district,shehia,issued_month,original_source_form,disaggregation,disaggregation_value
 );
-CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_child_referrals ON agg_child_referrals USING btree(district,shehia,issued_month,original_source_form,disaggregation_values);
+CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_child_referrals ON agg_child_referrals USING btree(district,shehia,issued_month,original_source_form,disaggregation_value);
 ALTER MATERIALIZED VIEW agg_child_referrals OWNER TO full_access;
 GRANT SELECT ON agg_child_referrals TO dtree;

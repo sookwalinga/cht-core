@@ -7,7 +7,9 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
 (
   WITH skeleton AS (
     SELECT
-      _id,
+      district,
+      sarea.name as facility,
+      supervisor._id,
       supervisory_area_uuid,
       reported_month::DATE
     FROM generate_series(
@@ -16,6 +18,8 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
       interval '1 month') AS t(reported_month)
     INNER JOIN useview_supervisor AS supervisor ON reported_month >= supervisor.reported_date
       AND supervisor.retired IS NULL
+    INNER JOIN useview_supervisory_area AS sarea
+    ON supervisor.supervisory_area_uuid=sarea._id
     ORDER BY _id,reported_month
   ),
 
@@ -77,7 +81,10 @@ CREATE MATERIALIZED VIEW supervisor_performance AS
   )
 
   SELECT
+    skeleton.district,
+    skeleton.facility,
     skeleton._id AS supervisor_uuid,
+    skeleton.supervisory_area_uuid,
     skeleton.reported_month,
     coalesce(gs.num_group_sessions,0) AS num_group_sessions,
     coalesce(meeting.monthly_meetings,old_meeting.monthly_meetings,0) AS monthly_meetings,

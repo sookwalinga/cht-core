@@ -10,8 +10,8 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
       (20, 24, '20_24years', 'maternal_age'),
       (25, 34, '25_34years', 'maternal_age'),
       (35, 49, '35_49years', 'maternal_age'),
-      (50, 200, '50_200years', 'maternal_age')
-    )AS co(low, up, disaggregation_values, disaggregation)
+      (50, 200, '50+years', 'maternal_age')
+    )AS co(low, up, disaggregation_value, disaggregation)
   ),
 
   referral_cte AS (
@@ -56,7 +56,7 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
     shehia,
     original_source_form,
     combo.disaggregation,
-    combo.disaggregation_values,
+    combo.disaggregation_value,
     date_trunc('month',coalesce(pg.reported_date,ppt.reported_date)) AS issued_month,
     sum(pregnancy_danger_signs_cancelled_followup) AS pregnancy_danger_signs_cancelled_followup,
     sum(pregnancy_danger_signs_got_services) AS pregnancy_danger_signs_got_services,
@@ -93,6 +93,15 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
     sum((ppt.refer_postpartum_emergency_danger_sign_flag = 't')::INT) AS issued_refer_postpartum_emergency_danger_sign_flag,
     sum((ppt.refer_postpartum_other_danger_sign_flag = 't')::INT) AS issued_refer_postpartum_other_danger_sign_flag,
     sum((ppt.refer_postpartum_pnc_visit = 't')::INT) AS issued_refer_postpartum_pnc_visit,
+    sum((
+      pg.refer_flag_emergency_danger_sign = 't'
+      AND date_part('day',pg.reported_date - referral_cte.first_followup_date) <= 3
+    )::int) followup_within3days_missed_anc,
+    sum((
+      pg.refer_flag_emergency_danger_sign = 't'
+      AND date_part('day',pg.reported_date - referral_cte.first_followup_date) > 3
+      AND date_part('day',pg.reported_date - referral_cte.first_followup_date) <= 7
+    )::int) followup_within7days_missed_anc,
     sum((
       pg.refer_flag_emergency_danger_sign = 't'
       AND date_part('day',pg.reported_date - referral_cte.first_followup_date) <= 3
@@ -172,8 +181,8 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
       OR loc.catchment_area_uuid = pg.catchment_area_uuid
       OR loc.catchment_area_uuid = ppt.catchment_area_uuid
   GROUP BY
-    district,shehia,issued_month,original_source_form,disaggregation,disaggregation_values
+    district,shehia,issued_month,original_source_form,disaggregation,disaggregation_value
 );
-CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_pregnancy_referrals ON agg_pregnancy_referrals USING btree(district,shehia,issued_month,original_source_form,disaggregation_values);
+CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_pregnancy_referrals ON agg_pregnancy_referrals USING btree(issued_month,district,shehia,original_source_form,disaggregation_value);
 ALTER MATERIALIZED VIEW agg_pregnancy_referrals OWNER TO full_access;
 GRANT SELECT ON agg_pregnancy_referrals TO dtree;

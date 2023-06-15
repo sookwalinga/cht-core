@@ -18,9 +18,9 @@ CREATE MATERIALIZED VIEW agg_chv_activities AS
       (0, 0, 'default', 'default'),
       (1, 1, 'male', 'sex'),
       (2, 2, 'female', 'sex'),
-      (1, 1, '1trimester', 'trimester'),
-      (2, 2, '2trimester', 'trimester'),
-      (3, 20, '3trimester', 'trimester'),
+      (1, 1, '1st_trimester', 'trimester'),
+      (2, 2, '2nd_trimester', 'trimester'),
+      (3, 20, '3rd_trimester', 'trimester'),
       (0, 5, '0_5months', 'child_age'),
       (6, 23, '6_23months', 'child_age'),
       (24, 59, '24_59months', 'child_age'),
@@ -28,7 +28,7 @@ CREATE MATERIALIZED VIEW agg_chv_activities AS
       (20, 24, '20_24years', 'maternal_age'),
       (25, 34, '25_34years', 'maternal_age'),
       (35, 49, '35_49years', 'maternal_age'),
-      (50, 200, '50_200years', 'maternal_age'))
+      (50, 200, '50+years', 'maternal_age'))
       AS co(low, up, option, kind)
   ),
 

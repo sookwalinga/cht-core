@@ -26,7 +26,7 @@ CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
       (20, 24, '20_24years', 'woman'),
       (25, 34, '25_34years', 'woman'),
       (35, 49, '35_49years', 'woman'),
-      (50, 200, '50_200years', 'woman'))
+      (50, 200, '50+years', 'woman'))
       AS cat(low, up, category, kind)
   ),
 
@@ -57,7 +57,13 @@ CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
       categories.category AS disaggregation_value,
       date_trunc('month', po.reported_date) AS reported_month,
       sum(coalesce(po.live_birth::INT, 0)) AS live_births,
+      sum(coalesce((po.live_birth AND po.delivery_location='home')::INT, 0)) AS live_births_home,
+      sum(coalesce((po.live_birth AND po.delivery_location='facility')::INT, 0)) AS live_births_facility,
+      sum(coalesce((po.live_birth AND po.delivery_location='other')::INT, 0)) AS live_births_other,
       sum(coalesce((po.miscarriage_or_stillbirth = 'stillbirth')::INT, 0)) AS stillbirths,
+      sum(coalesce((po.miscarriage_or_stillbirth = 'stillbirth' and po.delivery_location = 'home')::INT, 0)) AS stillbirths_home,
+      sum(coalesce((po.miscarriage_or_stillbirth = 'stillbirth' and po.delivery_location = 'facility')::INT, 0)) AS stillbirths_facility,
+      sum(coalesce((po.miscarriage_or_stillbirth = 'stillbirth' and po.delivery_location = 'other')::INT, 0)) AS stillbirths_other,
       sum(coalesce((po.miscarriage_or_stillbirth = 'miscarriage')::INT, 0)) AS miscarriages,
       sum(coalesce((po.delivery_location = 'facility')::INT, 0)) AS woman_delivery_facility,
       sum(coalesce((po.delivery_location = 'home')::INT, 0)) AS woman_delivery_home,
@@ -96,7 +102,13 @@ CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
     'marternal_age' AS disaggregation,
     coalesce(outcomes.disaggregation_value,ce_records.disaggregation_value) AS disaggregation_value,
     outcomes.live_births,
+    outcomes.live_births_home,
+    outcomes.live_births_facility,
+    outcomes.live_births_other,
     outcomes.stillbirths,
+    outcomes.stillbirths_home,
+    outcomes.stillbirths_facility,
+    outcomes.stillbirths_other,
     outcomes.miscarriages,
     outcomes.woman_delivery_facility,
     outcomes.woman_delivery_home,
