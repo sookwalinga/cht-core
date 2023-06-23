@@ -4,7 +4,7 @@ on: ['deployment']
 
 jobs:
   deployment:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     timeout-minutes: 15
 
     steps:
