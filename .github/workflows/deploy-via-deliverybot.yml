@@ -14,10 +14,10 @@ jobs:
         state: 'pending'
         token: '${{ github.token }}'
 
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
       with:
-        node-version: 16.x
+        node-version: 18.x
 
     - name: Push APP to development
       uses: './.github/actions/deploy-with-medic-conf'
@@ -49,9 +49,9 @@ jobs:
     - name: 'Get message'
       id: 'deploy-message'
       run: |
-            echo "::set-output name=commit_msg::$(git log -1 --format=%B | tr '\n' ' ')"
-            echo "::set-output name=commit_sha::$(git log -1 --format=%H)"
-            
+            echo "COMMIT_MSG=$(git log -1 --format=%B)" >> $GITHUB_ENV
+            echo "COMMIT_SHA=$(git log -1 --format=%H)" >> $GITHUB_ENV
+
     - name: 'Slack notify success'
       if: success() && github.event.deployment.environment == 'production'
       uses: rtCamp/action-slack-notify@v2.2.0
@@ -62,7 +62,7 @@ jobs:
         SLACK_ICON_EMOJI: ':rocket:'
         SLACK_TITLE: 'Production deployment successful :successful:'
         SLACK_FOOTER: '<https://github.com/medic/config-dtree/deployments/activity_log?environment=production|View all deployments>'
-        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/commit/${{ steps.deploy-message.outputs.commit_sha }}|${{ steps.deploy-message.outputs.commit_msg }}>'
+        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/commit/${{ env.COMMIT_SHA }}|${{ env.COMMIT_MSG }}>'
         MSG_MINIMAL: true
 
     - name: 'Slack notify failure'
@@ -76,7 +76,7 @@ jobs:
         SLACK_ICON_EMOJI: ':rocket:'
         SLACK_TITLE: 'Deployment failed :warning:'
         SLACK_FOOTER: '<https://github.com/medic/config-dtree/deployments/activity_log?environment=production|View all deployments>'
-        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/commit/${{ steps.deploy-message.outputs.commit_sha }}|${{ steps.deploy-message.outputs.commit_msg }}>'
+        SLACK_MESSAGE: '<https://github.com/medic/config-dtree/commit/${{ env.COMMIT_SHA }}|${{ env.COMMIT_MSG }}>'
         MSG_MINIMAL: true
 
     - name: 'Deployment success'
