@@ -46,7 +46,8 @@ CREATE MATERIALIZED VIEW agg_chvs_and_supervisors_count AS
 
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS agg_chvs_and_supervisors_count  ON  agg_chvs_and_supervisors_count USING btree(district,disaggregation_value);
+
+CREATE UNIQUE INDEX IF NOT EXISTS agg_chvs_and_supervisors_count_district_disaggregation_value  ON  agg_chvs_and_supervisors_count USING btree(district,disaggregation_value);
 -- Permissions
 ALTER MATERIALIZED VIEW agg_chvs_and_supervisors_count OWNER TO full_access;
 GRANT SELECT ON agg_chvs_and_supervisors_count TO dtree, periscope;

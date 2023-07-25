@@ -134,85 +134,85 @@ CREATE MATERIALIZED VIEW agg_child_referrals AS
     sum((infant.refer_slow_to_learn_specifics_flag = 't')::INT) AS issued_referrals_slow_to_learn_specifics,
     sum((infant.refer_flag_small_baby = 't')::INT) AS issued_referrals_small_baby,
     sum((
-      date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
+      date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
       AND infant.refer_neonatal_danger_sign_flag = 't'
     )::INT) AS followup_within3days_neonatal_danger_sign_flag,
     sum((
-      date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+      date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
       AND infant.refer_neonatal_danger_sign_flag = 't'
     )::INT) AS followup_within7days_neonatal_danger_sign_flag,
     sum((
       infant.refer_secondary_neonatal_danger_sign_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
     )::INT) AS followup_within3days_secondary_neonatal_danger_sign,
     sum((
       infant.refer_secondary_neonatal_danger_sign_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_secondary_neonatal_danger_sign,
     sum((
       infant.refer_child_danger_sign_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
     )::INT) AS followup_within3days_child_danger_sign,
     sum((
       infant.refer_child_danger_sign_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_child_danger_sign,
     sum((
       infant.refer_child_other_danger_sign_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
     )::INT) AS followup_within3days_child_other_danger_sign,
     sum((
       infant.refer_child_other_danger_sign_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_child_other_danger_sign,
     sum((
         (infant.has_health_card = 'f' AND infant.age_years <= 2 OR infant.vaccines_up_to_date = 'f')
-        AND date_part('day',infant.reported_date - referral_cte.first_followup_date) < 3
+        AND date_part('day',referral_cte.first_followup_date - infant.reported_date) < 3
     )::INT) AS followup_within3days_child_missed_services,
     sum((
         (infant.has_health_card = 'f' AND infant.age_years < 2 OR infant.vaccines_up_to_date = 'f')
-        AND date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-        AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+        AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+        AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_child_missed_services,
     sum((
       infant.refer_muac_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
+      AND date_part('day',  referral_cte.first_followup_date - infant.reported_date) <=3
     )::INT) AS followup_within3days_muac,
     sum((
       infant.refer_muac_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_muac,
     sum((
       infant.refer_palm_pallor_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
     )::INT) AS followup_within3days_palm_pallor,
     sum((
       infant.refer_palm_pallor_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_palm_pallor,
     sum((
       infant.refer_slow_to_learn_specifics_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
     )::INT) AS followup_within3days_slow_to_learn_specifics,
     sum((
       infant.refer_slow_to_learn_specifics_flag = 't'
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day',infant.reported_date - referral_cte.first_followup_date) <= 7
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_slow_to_learn_specifics, 
      sum((
       infant.refer_flag_small_baby = 't'
-      AND date_part('day', infant.reported_date - referral_cte.first_followup_date) <= 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
     )::INT) AS followup_within3days_small_baby,
     sum((
       infant.refer_flag_small_baby = 't'
-      AND date_part('day', infant.reported_date - referral_cte.first_followup_date) > 3
-      AND date_part('day', infant.reported_date - referral_cte.first_followup_date) <= 7
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_small_baby
 
   FROM useview_infant_child AS infant
