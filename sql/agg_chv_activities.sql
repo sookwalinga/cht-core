@@ -170,6 +170,7 @@ CREATE MATERIALIZED VIEW agg_chv_activities AS
   FROM data
   WHERE coalesce(registrations_households,
                  registrations_people,
+                 enrollments_pregnancy,
                  enrollments_child, visits_child,
                  visits_pregnancy, group_counselling_sessions) IS NOT NULL
 );

@@ -29,6 +29,6 @@ CREATE MATERIALIZED VIEW agg_neonatal_referrals AS
   FROM agg_child_referrals
   GROUP BY issued_month,disaggregation,district,shehia,substring(disaggregation_values,'(female|male)')
 );
-CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_neonatal_referrals ON agg_neonatal_referrals USING btree(issued_month,district,shehia,disaggregation_values);
+CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_neonatal_referrals ON agg_neonatal_referrals USING btree(issued_month,district,shehia,disaggregation_value);
 ALTER MATERIALIZED VIEW agg_neonatal_referrals OWNER TO full_access;
 GRANT SELECT ON agg_neonatal_referrals TO dtree;
