@@ -49,7 +49,7 @@ jobs:
     - name: 'Get message'
       id: 'deploy-message'
       run: |
-            echo "COMMIT_MSG=$(git log -1 --format=%B)" >> $GITHUB_ENV
+            echo "COMMIT_MSG=$(git log -1 --format=%B | tr '\n' ' ')" >> $GITHUB_ENV
             echo "COMMIT_SHA=$(git log -1 --format=%H)" >> $GITHUB_ENV
 
     - name: 'Slack notify success'
