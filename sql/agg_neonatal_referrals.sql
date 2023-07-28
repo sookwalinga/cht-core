@@ -7,7 +7,7 @@ CREATE MATERIALIZED VIEW agg_neonatal_referrals AS
     district,
     shehia,
     'sex'::TEXT AS disaggregation,
-    substring(disaggregation_values,'(female|male)') AS disaggregation_values,
+    substring(disaggregation_value,'(female|male)') AS disaggregation_value,
     sum(small_baby_went_to_facility) AS small_baby_went_to_facility,
     sum(small_baby_got_services) AS small_baby_got_services,
     sum(small_baby_cancelled_followup) AS small_baby_cancelled_followup,
@@ -27,7 +27,7 @@ CREATE MATERIALIZED VIEW agg_neonatal_referrals AS
     sum(followup_within3days_secondary_neonatal_danger_sign) AS followup_within3days_secondary_neonatal_danger_sign,
     sum(followup_within7days_secondary_neonatal_danger_sign) AS followup_within7days_secondary_neonatal_danger_sign
   FROM agg_child_referrals
-  GROUP BY issued_month,disaggregation,district,shehia,substring(disaggregation_values,'(female|male)')
+  GROUP BY issued_month,disaggregation,district,shehia,substring(disaggregation_value,'(female|male)')
 );
 CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_neonatal_referrals ON agg_neonatal_referrals USING btree(issued_month,district,shehia,disaggregation_value);
 ALTER MATERIALIZED VIEW agg_neonatal_referrals OWNER TO full_access;

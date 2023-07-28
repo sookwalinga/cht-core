@@ -1,0 +1,650 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Chv Challenges Reporting</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/chv_challenges_reporting/chv_problem_type/chv_dropout/retirement_reason:label">
+            <value>Reason of dropout</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/chv_dropout:label">
+            <value>CHV Dropout</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/app_opening:label">
+            <value>JnA application doesn't open</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/contacts_disappear:label">
+            <value>Contacts are not appearing in the JnA app</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/form_opening:label">
+            <value>Forms don't open</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/jna_out_issue:label">
+            <value>JnA application is not installed</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/language_changing:label">
+            <value>Cannot switch languages</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/sync_issue:label">
+            <value>Reports does not sync</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues:label">
+            <value>Type of app issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/other:label">
+            <value>Please specify:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue:label">
+            <value>App issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date:jr:constraintMsg">
+            <value>Please select any month from the last two months</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date:label">
+            <value>Month claiming</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/problems_description:label">
+            <value>Description of relevant problem:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved:jr:constraintMsg">
+            <value>Amount must be between 2000 and 50150</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved:label">
+            <value>Total deserved</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid:jr:constraintMsg">
+            <value>Amount must be between 2000 and 50150</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid:label">
+            <value>Total paid</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming:label">
+            <value>P4P Issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/other/other_problem_type:label">
+            <value>Please specify:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/other:label">
+            <value>Other problem type</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/ac_issue:label">
+            <value>Phone is overheating</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/battery_issue:label">
+            <value>Phone doesn't stay long with power</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/mic_issue:label">
+            <value>Phone mic is not working</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/network_issue:label">
+            <value>Network is not good</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_1:label">
+            <value>Screen does not display</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_2:label">
+            <value>Touch doesn't work well</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_3:label">
+            <value>Screen dark marks</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/speaker_issue:label">
+            <value>Phone speaker is not working</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/switch_issue:label">
+            <value>Phone switch is not working</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/system_charge:label">
+            <value>Phone doesn't get power</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/wifi_issue:label">
+            <value>Phone wifi doesn't work</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category:label">
+            <value>Type of phone problem:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened:jr:constraintMsg">
+            <value>Please select previous month</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened:label">
+            <value>Date incident happened:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/if_selected_no:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Please ensure that CHV have submitted the documents prior to submit this form&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted/no:label">
+            <value>No</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted:label">
+            <value>Did the CHV submit loss report and letter from sheha?</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/other:label">
+            <value>Please specify:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/broken_phone:label">
+            <value>Phone is broken</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/lost_phone:label">
+            <value>Phone is lost</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/stolen_phone:label">
+            <value>Phone is stolen</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type:label">
+            <value>Type of phone issue:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue:label">
+            <value>Phone Issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/chv_dropout:label">
+            <value>Dropout Issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/jna_application:label">
+            <value>JnA app Issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/month_payment_claim:label">
+            <value>P4P Issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/phone_issue:label">
+            <value>Phone Issue</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type:label">
+            <value>Type of problem</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/chv_challenges_reporting/chv_problem_type/chv_dropout/retirement_reason:label">
+            <value>Sababu ya kuacha kazi:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/chv_dropout:label">
+            <value>Kuacha kazi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/app_opening:label">
+            <value>App ya JnA haifunguki</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/contacts_disappear:label">
+            <value>Matembeleo kwenye grafu hayaongezeki</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/form_opening:label">
+            <value>Fomu za matembeleo hazifunguki</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/jna_out_issue:label">
+            <value>App ya jamii ni afya imefutika</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/language_changing:label">
+            <value>Lugha haibadilishiki</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/other:label">
+            <value>Changamoto nyingine ya app</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/sync_issue:label">
+            <value>Ripoti zikitumwa haziendi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues:label">
+            <value>Aina ya changamoto ya app</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue/other:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/jna_app_issue:label">
+            <value>Changamoto ya App</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date:jr:constraintMsg">
+            <value>Tafadhali chagua mwezi wowote kati ya miezi miwili iliyopita</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date:label">
+            <value>Mwezi husika:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/problems_description:label">
+            <value>Maelezo ya zaidi kuhusu malipo:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved:jr:constraintMsg">
+            <value>Kiasi kinatakiwa kiwe zaidi ya kiasi alicholipwa na kisizidi 50150</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved:label">
+            <value>Kiasi alichostahili kulipwa:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid:jr:constraintMsg">
+            <value>Kiasi kinatakiwa kiwe kati ya 2000 na 50150</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid:label">
+            <value>Kiasi alicholipwa:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/month_claiming:label">
+            <value>Changamoto ya malipo ya mwezi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/other/other_problem_type:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/other:label">
+            <value>Changamoto nyingine</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/ac_issue:label">
+            <value>Simu inakuwa yamoto sana</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/battery_issue:label">
+            <value>Simu haikai chaji</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/mic_issue:label">
+            <value>maiki ya simu haifanyi kazi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/network_issue:label">
+            <value>Network inasumbua mnara haupandi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/other:label">
+            <value>Tatizo jengine</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_1:label">
+            <value>Kioo hakionyeshi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_2:label">
+            <value>Touch ya kioo inasumbua</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_3:label">
+            <value>Kioo kinaonyesha weusi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/speaker_issue:label">
+            <value>Spika ya simu haifanyi kazi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/switch_issue:label">
+            <value>Swichi ya kuwashia simu mbovu</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/system_charge:label">
+            <value>Simu haingii chaji</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/wifi_issue:label">
+            <value>Wifi ya simu haifanyi kazi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category:label">
+            <value>Aina ya tatizo la simu:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened:jr:constraintMsg">
+            <value>Tafadhali chagua mwezi na mwaka sahihi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened:label">
+            <value>Tarehe ya tukio:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/if_selected_no:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Tafadhali mjulishe CHV afikishe barua mahali husika kabla ya kutuma fomu hii&lt;/span&gt;</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted:label">
+            <value>Je, amepeleka barua ya polisi na ya sheha mahali husika?</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/other:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/broken_phone:label">
+            <value>Simu imeharibika</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/lost_phone:label">
+            <value>Simu imepotea</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/stolen_phone:label">
+            <value>Simu imeibiwa</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type:label">
+            <value>Aina ya changamoto ya simu:</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/phone_issue:label">
+            <value>Changamoto ya simu</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/chv_dropout:label">
+            <value>Kaacha kazi</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/jna_application:label">
+            <value>Changamoto ya App ya JnA</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/month_payment_claim:label">
+            <value>Changamoto ya malipo</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/other:label">
+            <value>Changamoto Nyingine</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type/phone_issue:label">
+            <value>Changamoto ya simu</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type/problems_type:label">
+            <value>Aina ya changamoto</value>
+          </text>
+          <text id="/chv_challenges_reporting/chv_problem_type:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/chv_challenges_reporting/inputs:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <chv_challenges_reporting id="chv_challenges_reporting" prefix="J1!chv_challenges_reporting!" delimiter="#" version="2019-05-11 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <chv_problem_type>
+            <problems_type/>
+            <phone_issue>
+              <phone_problem_type/>
+              <date_problem_happened/>
+              <loss_report_submitted/>
+              <if_selected_no/>
+              <broken_category/>
+              <other/>
+            </phone_issue>
+            <chv_dropout>
+              <retirement_reason/>
+            </chv_dropout>
+            <month_claiming>
+              <total_paid/>
+              <total_deserved/>
+              <month_claiming_date/>
+              <problems_description/>
+            </month_claiming>
+            <jna_app_issue>
+              <app_issues/>
+              <other/>
+            </jna_app_issue>
+            <other>
+              <other_problem_type/>
+            </other>
+          </chv_problem_type>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </chv_challenges_reporting>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/chv_challenges_reporting/inputs" relevant="false()"/>
+      <bind nodeset="/chv_challenges_reporting/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/chv_challenges_reporting/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/chv_challenges_reporting/inputs/user/name" type="string"/>
+      <bind nodeset="/chv_challenges_reporting/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/chv_challenges_reporting/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/chv_challenges_reporting/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/chv_challenges_reporting/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/chv_challenges_reporting/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/chv_challenges_reporting/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/problems_type" type="select" required="true()"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/phone_issue" relevant="selected( /chv_challenges_reporting/chv_problem_type/problems_type ,&quot;phone_issue&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type" type="select1" required="true()" relevant="selected( /chv_challenges_reporting/chv_problem_type/problems_type ,&quot;phone_issue&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened" type="date" required="true()" relevant="selected( /chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type ,&quot;lost_phone&quot;) or selected( /chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type ,&quot;stolen_phone&quot;)" jr:constraintMsg="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened:jr:constraintMsg')" constraint=". &gt;= date('2023-01-01') and . &lt;= today()"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted" type="select1" required="true()" relevant="selected( /chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type ,&quot;lost_phone&quot;) or selected( /chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type ,&quot;stolen_phone&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/phone_issue/if_selected_no" readonly="true()" type="string" relevant="selected( /chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted ,&quot;no&quot;) and (selected( /chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type ,&quot;lost_phone&quot;) or selected( /chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type ,&quot;stolen_phone&quot;))"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category" type="select" required="true()" relevant="selected( /chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type ,&quot;broken_phone&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/phone_issue/other" type="string" required="true()" relevant="selected( /chv_challenges_reporting/chv_problem_type/phone_issue/broken_category ,&quot;other&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/chv_dropout" relevant="selected( /chv_challenges_reporting/chv_problem_type/problems_type ,&quot;chv_dropout&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/chv_dropout/retirement_reason" type="string" required="true()"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/month_claiming" relevant="selected( /chv_challenges_reporting/chv_problem_type/problems_type ,&quot;month_payment_claim&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid" type="int" required="true()" jr:constraintMsg="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid:jr:constraintMsg')" constraint=". &gt;= 2000 and . &lt;= 50150"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved" type="int" required="true()" jr:constraintMsg="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved:jr:constraintMsg')" constraint=". &gt;  /chv_challenges_reporting/chv_problem_type/month_claiming/total_paid  and . &lt;= 50150"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date" type="date" required="true()" jr:constraintMsg="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date:jr:constraintMsg')" constraint="(. &gt;= today() - 90) and . &lt;= today()"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/month_claiming/problems_description" type="string"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/jna_app_issue" relevant="selected( /chv_challenges_reporting/chv_problem_type/problems_type ,&quot;jna_application&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues" type="select" required="true()"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/jna_app_issue/other" type="string" required="true()" relevant="selected( /chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues ,&quot;other&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/other" relevant="selected( /chv_challenges_reporting/chv_problem_type/problems_type ,&quot;other&quot;)"/>
+      <bind nodeset="/chv_challenges_reporting/chv_problem_type/other/other_problem_type" type="string" required="true()"/>
+      <bind nodeset="/chv_challenges_reporting/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/chv_challenges_reporting/inputs">
+      <group ref="/chv_challenges_reporting/inputs/user">
+        <input ref="/chv_challenges_reporting/inputs/user/contact_id">
+          <label ref="jr:itext('/chv_challenges_reporting/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/chv_challenges_reporting/inputs/user/facility_id">
+          <label ref="jr:itext('/chv_challenges_reporting/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/chv_challenges_reporting/inputs/user/name">
+          <label ref="jr:itext('/chv_challenges_reporting/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/chv_challenges_reporting/inputs/contact">
+        <input appearance="db-object" ref="/chv_challenges_reporting/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group ref="/chv_challenges_reporting/chv_problem_type">
+      <select ref="/chv_challenges_reporting/chv_problem_type/problems_type">
+        <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/problems_type:label')"/>
+        <item>
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/problems_type/phone_issue:label')"/>
+          <value>phone_issue</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/problems_type/month_payment_claim:label')"/>
+          <value>month_payment_claim</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/problems_type/jna_application:label')"/>
+          <value>jna_application</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/problems_type/chv_dropout:label')"/>
+          <value>chv_dropout</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/problems_type/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <group appearance="field-list" ref="/chv_challenges_reporting/chv_problem_type/phone_issue">
+        <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue:label')"/>
+        <select1 ref="/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type:label')"/>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/stolen_phone:label')"/>
+            <value>stolen_phone</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/lost_phone:label')"/>
+            <value>lost_phone</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/phone_problem_type/broken_phone:label')"/>
+            <value>broken_phone</value>
+          </item>
+        </select1>
+        <input ref="/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/date_problem_happened:label')"/>
+        </input>
+        <select1 ref="/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted:label')"/>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted/yes:label')"/>
+            <value>yes</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/loss_report_submitted/no:label')"/>
+            <value>no</value>
+          </item>
+        </select1>
+        <input ref="/chv_challenges_reporting/chv_problem_type/phone_issue/if_selected_no">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/if_selected_no:label')"/>
+        </input>
+        <select ref="/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category:label')"/>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/system_charge:label')"/>
+            <value>system_charge</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/battery_issue:label')"/>
+            <value>battery_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/ac_issue:label')"/>
+            <value>ac_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_1:label')"/>
+            <value>screen_issue_1</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_2:label')"/>
+            <value>screen_issue_2</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/screen_issue_3:label')"/>
+            <value>screen_issue_3</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/wifi_issue:label')"/>
+            <value>wifi_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/speaker_issue:label')"/>
+            <value>speaker_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/network_issue:label')"/>
+            <value>network_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/mic_issue:label')"/>
+            <value>mic_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/switch_issue:label')"/>
+            <value>switch_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/broken_category/other:label')"/>
+            <value>other</value>
+          </item>
+        </select>
+        <input appearance="multiline" ref="/chv_challenges_reporting/chv_problem_type/phone_issue/other">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/phone_issue/other:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/chv_challenges_reporting/chv_problem_type/chv_dropout">
+        <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/chv_dropout:label')"/>
+        <input ref="/chv_challenges_reporting/chv_problem_type/chv_dropout/retirement_reason">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/chv_dropout/retirement_reason:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/chv_challenges_reporting/chv_problem_type/month_claiming">
+        <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming:label')"/>
+        <input ref="/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming/total_paid:label')"/>
+        </input>
+        <input ref="/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming/total_deserved:label')"/>
+        </input>
+        <input appearance="month-year" ref="/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming/month_claiming_date:label')"/>
+        </input>
+        <input appearance="multiline" ref="/chv_challenges_reporting/chv_problem_type/month_claiming/problems_description">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/month_claiming/problems_description:label')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/chv_challenges_reporting/chv_problem_type/jna_app_issue">
+        <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue:label')"/>
+        <select ref="/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues:label')"/>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/form_opening:label')"/>
+            <value>form_opening</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/language_changing:label')"/>
+            <value>language_changing</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/app_opening:label')"/>
+            <value>app_opening</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/sync_issue:label')"/>
+            <value>sync_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/jna_out_issue:label')"/>
+            <value>jna_out_issue</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/contacts_disappear:label')"/>
+            <value>contacts_disappear</value>
+          </item>
+          <item>
+            <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/app_issues/other:label')"/>
+            <value>other</value>
+          </item>
+        </select>
+        <input appearance="multiline" ref="/chv_challenges_reporting/chv_problem_type/jna_app_issue/other">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/jna_app_issue/other:label')"/>
+        </input>
+      </group>
+      <group appearance="Field-list" ref="/chv_challenges_reporting/chv_problem_type/other">
+        <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/other:label')"/>
+        <input appearance="multiline" ref="/chv_challenges_reporting/chv_problem_type/other/other_problem_type">
+          <label ref="jr:itext('/chv_challenges_reporting/chv_problem_type/other/other_problem_type:label')"/>
+        </input>
+      </group>
+    </group>
+  </h:body>
+</h:html>
