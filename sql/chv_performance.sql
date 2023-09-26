@@ -71,7 +71,7 @@ CREATE MATERIALIZED VIEW chv_performance AS
       current_date,
       INTERVAL '1 month') AS t(reported_month)
     INNER JOIN useview_chv AS chv
-      ON t.reported_month >= chv.reported_date
+      ON t.reported_month >= date_trunc('month',chv.reported_date)
     WHERE chv.retired IS NULL
     ORDER BY chv_uuid, reported_month
   )
