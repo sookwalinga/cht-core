@@ -10,7 +10,9 @@ module.exports = {
   get:get,
 
   isClient: function (c) { 
-    return get(c,'contact.parent.parent.parent')?true:false; 
+    return (get(c,'contact.parent.parent.parent') 
+          && c.contact.date_of_birth 
+          && new Date(c.contact.date_of_birth) <= new Date())?true:false; 
   },
 
   isCHVInProject:function(projectName){
@@ -21,7 +23,7 @@ module.exports = {
   },
 
   isChildUnder5: function (c) {
-    if(!this.isClient(c) || !c.contact.date_of_birth) {return false;}  
+    if(!this.isClient(c)) {return false;}  
     const birthDate = new Date(c.contact.date_of_birth);
     const ageInMs = new Date(Date.now() - birthDate.getTime());
     const ageInMonths = Math.round(ageInMs / (1000 * 60 * 60 * 24 * 30));
