@@ -78,6 +78,7 @@ CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
       sum(coalesce((pg.num_anc_visits = 3)::INT, 0)) AS anc_3,
       sum(coalesce((pg.num_anc_visits >= 4)::INT, 0)) AS anc_4,
       sum(coalesce(pp.has_attended_facility_pnc_within_48hrs::INT, 0)) AS pp_care_2_days
+      sum(coalesce(pp.has_attended_facility_pnc::INT, 0)) AS pp_care_7_days
 
     FROM useview_pregnancy_outcomes AS po
     INNER JOIN useview_jna_locations AS loc
@@ -123,6 +124,7 @@ CREATE MATERIALIZED VIEW agg_outcome_pregnancy AS
     outcomes.anc_3,
     outcomes.anc_4,
     outcomes.pp_care_2_days,
+    outcomes.pp_care_7_days,
     ce_records.end_of_pregnancy
   FROM outcomes
   FULL OUTER JOIN agg_client_records AS ce_records

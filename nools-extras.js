@@ -475,10 +475,11 @@ module.exports = {
     if ( // delete this if after refactoring the infant-child form
       report &&
       report.fields &&
-      report.fields.development_concerns &&
-      report.fields.development_concerns.refer_slow_to_learn_specifics_flag
+      report.fields.assess_dev_coach_play_communication_new
+      &&
+      report.fields.assess_dev_coach_play_communication_new.refer_slow_to_learn_specifics_flag_new
     ) {
-      return report.fields.development_concerns.refer_slow_to_learn_specifics_flag;
+      return report.fields.assess_dev_coach_play_communication_new.refer_slow_to_learn_specifics_flag_new;
     }
     if (
       report &&
@@ -486,13 +487,6 @@ module.exports = {
       report.fields.refer_slow_to_learn_specifics_flag
     ) {
       return report.fields.refer_slow_to_learn_specifics_flag;
-    }
-    if (
-      report &&
-      report.fields &&
-      report.fields.refer_slow_to_learn_specifics_flag_new
-    ) {
-      return report.fields.refer_slow_to_learn_specifics_flag_new;
     }
     return '0';
   },
