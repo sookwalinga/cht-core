@@ -5,21 +5,23 @@ DROP MATERIALIZED VIEW IF EXISTS agg_child_referrals;
 CREATE MATERIALIZED VIEW agg_child_referrals AS
 (
   WITH combos AS (
-    SELECT t.* FROM (VALUES
+    SELECT t.* FROM (
+      VALUES
       ('child_age', 'sex'),
       ('default', 'default')
-    ) AS t(cat_1, cat_2)
+    ) AS t (cat_1, cat_2)
   ),
 
   category_options AS (
-    SELECT co.* FROM (VALUES
+    SELECT co.* FROM (
+      VALUES
       (0, 0, 'default', 'default'),
       (1, 1, 'male', 'sex'),
       (2, 2, 'female', 'sex'),
       (0, 5, '0_5months', 'child_age'),
       (6, 23, '6_23months', 'child_age'),
       (24, 59, '24_59months', 'child_age')
-    )AS co(low, up, option, kind)
+    ) AS co (low, up, option, kind)
   ),
 
   category_options_combos AS (
@@ -78,7 +80,7 @@ CREATE MATERIALIZED VIEW agg_child_referrals AS
       max(CASE WHEN refer_slow_to_learn_specifics_flag THEN went_to_facility::INT END) AS slow_to_learn_specifics_went_to_facility
     FROM useview_referral_follow_up AS r
     WHERE original_source_form = 'infant_child'
-    GROUP BY original_source_form,original_source_form_uuid,catchment_area_uuid
+    GROUP BY original_source_form, original_source_form_uuid, catchment_area_uuid
   )
 
   SELECT
@@ -87,7 +89,7 @@ CREATE MATERIALIZED VIEW agg_child_referrals AS
     original_source_form,
     (combo.cat_1_kind || ',' || combo.cat_2_kind) AS disaggregation,
     (combo.cat_1_option || ',' || combo.cat_2_option) AS disaggregation_value,
-    date_trunc('month',infant.reported_date) AS issued_month,
+    date_trunc('month', infant.reported_date) AS issued_month,
     sum(small_baby_went_to_facility) AS small_baby_went_to_facility,
     sum((small_baby_went_to_facility = 0)::INT) AS small_baby_didnt_go_facility,
     sum(small_baby_got_services) AS small_baby_got_services,
@@ -134,85 +136,85 @@ CREATE MATERIALIZED VIEW agg_child_referrals AS
     sum((infant.refer_slow_to_learn_specifics_flag = 't')::INT) AS issued_referrals_slow_to_learn_specifics,
     sum((infant.refer_flag_small_baby = 't')::INT) AS issued_referrals_small_baby,
     sum((
-      date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
+      date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
       AND infant.refer_neonatal_danger_sign_flag = 't'
     )::INT) AS followup_within3days_neonatal_danger_sign_flag,
     sum((
-      date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
       AND infant.refer_neonatal_danger_sign_flag = 't'
     )::INT) AS followup_within7days_neonatal_danger_sign_flag,
     sum((
       infant.refer_secondary_neonatal_danger_sign_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
     )::INT) AS followup_within3days_secondary_neonatal_danger_sign,
     sum((
       infant.refer_secondary_neonatal_danger_sign_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_secondary_neonatal_danger_sign,
     sum((
       infant.refer_child_danger_sign_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
     )::INT) AS followup_within3days_child_danger_sign,
     sum((
       infant.refer_child_danger_sign_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_child_danger_sign,
     sum((
       infant.refer_child_other_danger_sign_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
     )::INT) AS followup_within3days_child_other_danger_sign,
     sum((
       infant.refer_child_other_danger_sign_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_child_other_danger_sign,
     sum((
-        (infant.has_health_card = 'f' AND infant.age_years <= 2 OR infant.vaccines_up_to_date = 'f')
-        AND date_part('day',referral_cte.first_followup_date - infant.reported_date) < 3
+      (infant.has_health_card = 'f' AND infant.age_years <= 2 OR infant.vaccines_up_to_date = 'f')
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) < 3
     )::INT) AS followup_within3days_child_missed_services,
     sum((
-        (infant.has_health_card = 'f' AND infant.age_years < 2 OR infant.vaccines_up_to_date = 'f')
-        AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-        AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      (infant.has_health_card = 'f' AND infant.age_years < 2 OR infant.vaccines_up_to_date = 'f')
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_child_missed_services,
     sum((
       infant.refer_muac_flag = 't'
-      AND date_part('day',  referral_cte.first_followup_date - infant.reported_date) <=3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
     )::INT) AS followup_within3days_muac,
     sum((
       infant.refer_muac_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_muac,
     sum((
       infant.refer_palm_pallor_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
     )::INT) AS followup_within3days_palm_pallor,
     sum((
       infant.refer_palm_pallor_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_palm_pallor,
     sum((
       infant.refer_slow_to_learn_specifics_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
     )::INT) AS followup_within3days_slow_to_learn_specifics,
     sum((
       infant.refer_slow_to_learn_specifics_flag = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
-    )::INT) AS followup_within7days_slow_to_learn_specifics, 
-     sum((
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
+    )::INT) AS followup_within7days_slow_to_learn_specifics,
+    sum((
       infant.refer_flag_small_baby = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <=3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 3
     )::INT) AS followup_within3days_small_baby,
     sum((
       infant.refer_flag_small_baby = 't'
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) > 3
-      AND date_part('day',referral_cte.first_followup_date - infant.reported_date) <= 7
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) > 3
+      AND date_part('day', referral_cte.first_followup_date - infant.reported_date) <= 7
     )::INT) AS followup_within7days_small_baby
 
   FROM useview_infant_child AS infant
@@ -221,14 +223,15 @@ CREATE MATERIALIZED VIEW agg_child_referrals AS
   LEFT JOIN referral_cte
     ON infant._id = referral_cte.original_source_form_uuid
   LEFT JOIN category_options_combos AS combo
-    ON infant.age_days::INT / 30 BETWEEN combo.cat_1_low AND combo.cat_1_up
+    ON
+      infant.age_days::INT / 30 BETWEEN combo.cat_1_low AND combo.cat_1_up
       AND infant.child_sex = combo.cat_2_option
   WHERE
     --this filter is necessary as we have a few children above 5 yrs due to a bug on the app    
     cat_1_kind IS NOT NULL
   GROUP BY
-    district,shehia,issued_month,original_source_form,disaggregation,disaggregation_value
+    district, shehia, issued_month, original_source_form, disaggregation, disaggregation_value
 );
-CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_child_referrals ON agg_child_referrals USING btree(district,shehia,issued_month,original_source_form,disaggregation_value);
+CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_child_referrals ON agg_child_referrals USING btree (district, shehia, issued_month, original_source_form, disaggregation_value);
 ALTER MATERIALIZED VIEW agg_child_referrals OWNER TO full_access;
 GRANT SELECT ON agg_child_referrals TO dtree;

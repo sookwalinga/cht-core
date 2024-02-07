@@ -6,11 +6,13 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
 (
   WITH category_option_combos AS (
     SELECT co.* FROM (VALUES
+      (9, 14, '9_14years:moh', 'maternal_age'),
       (15, 19, '15_19years', 'maternal_age'),
       (20, 24, '20_24years', 'maternal_age'),
       (25, 34, '25_34years', 'maternal_age'),
       (35, 49, '35_49years', 'maternal_age'),
-      (50, 200, '50+years', 'maternal_age')
+      (50, 200, '50+years', 'maternal_age'),
+      (35, 200, '35+years:moh', 'maternal_age')
     )AS co(low, up, disaggregation_value, disaggregation)
   ),
 

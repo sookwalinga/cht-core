@@ -137,7 +137,8 @@ CREATE MATERIALIZED VIEW agg_chv_activities AS
       sum(pg.enrolled) AS enrollments_pregnancy,
       sum(i.visits) AS visits_child,
       sum(pg.visits) AS visits_pregnancy,
-      sum(gc.sessions) AS group_counselling_sessions
+      sum(gc.sessions) AS group_counselling_sessions, 
+      count(gc.catchment_area_uuid) AS chv_conducted_group_counselling
     FROM skeleton AS sk
     LEFT JOIN houses AS h
       ON h.catchment_area_uuid = sk.catchment_area_uuid
