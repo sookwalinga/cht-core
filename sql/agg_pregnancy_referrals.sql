@@ -71,7 +71,7 @@ CREATE MATERIALIZED VIEW agg_pregnancy_referrals AS
     sum(pregnancy_complications_went_to_facility) AS pregnancy_complications_went_to_facility,
     sum((pregnancy_complications_went_to_facility = 0)::INT) AS pregnancy_complications_didnt_go_facility,
     sum(pregnancy_complications_got_services) AS pregnancy_complications_got_services,
-    sum(pregnancy_complications_cancelled_followup) AS pregnancy_complications_got_services,
+    sum(pregnancy_complications_cancelled_followup) AS pregnancy_complications_cancelled_followup,
     sum(postpartum_danger_signs_got_services) AS postpartum_danger_signs_got_services,
     sum(postpartum_danger_signs_cancelled_followup) AS postpartum_danger_signs_cancelled_followup,
     sum(postpartum_danger_signs_went_to_facility) AS postpartum_danger_signs_went_to_facility,

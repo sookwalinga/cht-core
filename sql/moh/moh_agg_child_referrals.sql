@@ -21,7 +21,6 @@ CREATE MATERIALIZED VIEW moh_agg_child_referrals AS (
     sum(muac_cancelled_followup) AS muac_cancelled_followup,
     sum(followup_within7days_palm_pallor) AS followup_within7days_palm_pallor,
     sum(palm_pallor_cancelled_followup) AS palm_pallor_cancelled_followup,
-    sum(followup_within7days_child_other_danger_sign) AS followup_within7days_child_other_danger_sign,
     sum(child_other_danger_sign_cancelled_followup) AS child_other_danger_sign_cancelled_followup,
     sum(followup_within7days_small_baby) AS followup_within7days_small_baby,
     sum(small_baby_cancelled_followup) AS small_baby_cancelled_followup,
@@ -52,11 +51,10 @@ CREATE MATERIALIZED VIEW moh_agg_child_referrals AS (
     sum(palm_pallor_got_services) AS palm_pallor_got_services,
     sum(child_other_danger_sign_went_to_facility) AS child_other_danger_sign_went_to_facility,
     sum((child_other_danger_sign_went_to_facility = 0)::INT) AS child_other_danger_sign_didnt_go_facility,
-    sum(child_other_danger_sign_got_services) AS child_other_danger_sign_got_services,
     sum(small_baby_went_to_facility) AS small_baby_went_to_facility,
     sum((small_baby_went_to_facility = 0)::INT) AS small_baby_didnt_go_facility,
     sum(small_baby_got_services) AS small_baby_got_services,
-    'sex' AS disaggregation,
+    'sex'::text AS disaggregation,
     substring(disaggregation_value, '((female|male)|\d+_\d+(?=years)|default)') AS disaggregation_value
   FROM agg_child_referrals
   GROUP BY district, shehia, issued_month, disaggregation, substring(disaggregation_value, '((female|male)|\d+_\d+(?=years)|default)')
