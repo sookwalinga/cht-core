@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>CHW Monthly Meeting</h:title>
     <model>
@@ -142,26 +142,11 @@
           <text id="/chw_monthly_meeting/inputs/contact/place_id:label">
             <value>-</value>
           </text>
-          <text id="/chw_monthly_meeting/inputs/contact:label">
-            <value>-</value>
-          </text>
-          <text id="/chw_monthly_meeting/inputs/source:label">
-            <value>-</value>
-          </text>
-          <text id="/chw_monthly_meeting/inputs/source_id:label">
-            <value>-</value>
-          </text>
-          <text id="/chw_monthly_meeting/inputs/task_id:label">
-            <value>-</value>
-          </text>
           <text id="/chw_monthly_meeting/inputs:label">
             <value>-</value>
           </text>
           <text id="/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv:label">
             <value>CHV</value>
-          </text>
-          <text id="/chw_monthly_meeting/meeting_details/absent_chvs/name:label">
-            <value>-</value>
           </text>
           <text id="/chw_monthly_meeting/meeting_details/absent_chvs:label">
             <value>Tafadhali chagua CHV waliokuwa hawajahudhuria:</value>
@@ -226,7 +211,7 @@
         </translation>
       </itext>
       <instance>
-        <chw_monthly_meeting delimiter="#" id="chw_monthly_meeting" prefix="J1!chw_monthly_meeting!" version="2023-01-23 14:23:04">
+        <chw_monthly_meeting id="chw_monthly_meeting" prefix="J1!chw_monthly_meeting!" delimiter="#" version="2023-01-23 01:09:05">
           <inputs>
             <meta>
               <location>
@@ -304,40 +289,40 @@
       <bind nodeset="/chw_monthly_meeting/inputs/contact/patient_uuid" type="string"/>
       <bind nodeset="/chw_monthly_meeting/inputs/contact/place_id" type="string"/>
       <bind nodeset="/chw_monthly_meeting/inputs/contact/name" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/chw_monthly_meeting/_id" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/chw_monthly_meeting/patient_id" type="string"/>
-      <bind calculate="../inputs/contact/_id" nodeset="/chw_monthly_meeting/place_id" type="string"/>
-      <bind calculate="../inputs/contact/name" nodeset="/chw_monthly_meeting/place_name" type="string"/>
-      <bind calculate="instance('contact-summary')/context/lastest_monthly_meeting_topic" nodeset="/chw_monthly_meeting/latest_monthly_meeting_topic" type="string"/>
-      <bind calculate="instance('contact-summary')/context/latest_monthly_meeting_date" nodeset="/chw_monthly_meeting/latest_monthly_meeting_date" type="string"/>
-      <bind calculate="instance('contact-summary')/context/latest_monthly_meeting_absentees" nodeset="/chw_monthly_meeting/latest_monthly_meeting_absentees" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/chw_monthly_meeting/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/chw_monthly_meeting/end" type="dateTime"/>
+      <bind nodeset="/chw_monthly_meeting/_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/chw_monthly_meeting/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/chw_monthly_meeting/place_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/chw_monthly_meeting/place_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_topic" type="string" calculate="instance('contact-summary')/context/lastest_monthly_meeting_topic"/>
+      <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_date" type="string" calculate="instance('contact-summary')/context/latest_monthly_meeting_date"/>
+      <bind nodeset="/chw_monthly_meeting/latest_monthly_meeting_absentees" type="string" calculate="instance('contact-summary')/context/latest_monthly_meeting_absentees"/>
+      <bind nodeset="/chw_monthly_meeting/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/chw_monthly_meeting/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/chw_monthly_meeting/prev_meeting" relevant="string-length( /chw_monthly_meeting/latest_monthly_meeting_date ) &gt; 0"/>
       <bind nodeset="/chw_monthly_meeting/prev_meeting/meeting_date" readonly="true()" type="string"/>
       <bind nodeset="/chw_monthly_meeting/prev_meeting/meeting_topic" readonly="true()" type="string"/>
       <bind nodeset="/chw_monthly_meeting/prev_meeting/absentees" readonly="true()" type="string"/>
-      <bind nodeset="/chw_monthly_meeting/planned_meeting/meeting_option" required="true()" type="select1"/>
+      <bind nodeset="/chw_monthly_meeting/planned_meeting/meeting_option" type="select1" required="true()"/>
       <bind nodeset="/chw_monthly_meeting/meeting_details" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')"/>
-      <bind constraint=". &gt;= 0" jr:constraintMsg="jr:itext('/chw_monthly_meeting/meeting_details/attended:jr:constraintMsg')" nodeset="/chw_monthly_meeting/meeting_details/attended" required="true()" type="int"/>
-      <bind constraint=". &gt;=0" jr:constraintMsg="jr:itext('/chw_monthly_meeting/meeting_details/not_attended:jr:constraintMsg')" nodeset="/chw_monthly_meeting/meeting_details/not_attended" required="true()" type="int"/>
-      <bind calculate=" /chw_monthly_meeting/meeting_details/not_attended " nodeset="/chw_monthly_meeting/meeting_details/absent_chvs_count" readonly="true()" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/attended" type="int" required="true()" constraint=". &gt;= 0" jr:constraintMsg="jr:itext('/chw_monthly_meeting/meeting_details/attended:jr:constraintMsg')"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/not_attended" type="int" required="true()" constraint=". &gt;=0" jr:constraintMsg="jr:itext('/chw_monthly_meeting/meeting_details/not_attended:jr:constraintMsg')"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs_count" type="string" readonly="true()" calculate=" /chw_monthly_meeting/meeting_details/not_attended "/>
       <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs" relevant=" /chw_monthly_meeting/meeting_details/not_attended  &gt; 0" required="true()"/>
       <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv" type="string"/>
       <bind nodeset="/chw_monthly_meeting/meeting_details/absent_chvs/name" type="string"/>
-      <bind nodeset="/chw_monthly_meeting/meeting_details/topics" required="true()" type="string"/>
-      <bind nodeset="/chw_monthly_meeting/meeting_details/challenges" required="true()" type="string"/>
-      <bind nodeset="/chw_monthly_meeting/meeting_details/actions" required="true()" type="string"/>
-      <bind constraint=". &gt; today()" jr:constraintMsg="jr:itext('/chw_monthly_meeting/next_meeting_details/next_meeting_date:jr:constraintMsg')" nodeset="/chw_monthly_meeting/next_meeting_details/next_meeting_date" required="true()" type="date"/>
-      <bind nodeset="/chw_monthly_meeting/group_summary/r_topics_covered_title" readonly="true()" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')" type="string"/>
-      <bind nodeset="/chw_monthly_meeting/group_summary/r_topics_covered" readonly="true()" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/topics" type="string" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/challenges" type="string" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/meeting_details/actions" type="string" required="true()"/>
+      <bind nodeset="/chw_monthly_meeting/next_meeting_details/next_meeting_date" type="date" required="true()" constraint=". &gt; today()" jr:constraintMsg="jr:itext('/chw_monthly_meeting/next_meeting_details/next_meeting_date:jr:constraintMsg')"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/r_topics_covered_title" readonly="true()" type="string" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/r_topics_covered" readonly="true()" type="string" relevant="selected( /chw_monthly_meeting/planned_meeting/meeting_option , 'now')"/>
       <bind nodeset="/chw_monthly_meeting/group_summary/r_next_meeting_title" readonly="true()" type="string"/>
-      <bind calculate="format-date( /chw_monthly_meeting/next_meeting_details/next_meeting_date , '%a %e %b %Y')" nodeset="/chw_monthly_meeting/group_summary/c_formatted_next_meeting_date" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/c_formatted_next_meeting_date" type="string" calculate="format-date( /chw_monthly_meeting/next_meeting_details/next_meeting_date , '%a %e %b %Y')"/>
       <bind nodeset="/chw_monthly_meeting/group_summary/r_next_meeting" readonly="true()" type="string"/>
-      <bind calculate="format-date(date(decimal-date-time( /chw_monthly_meeting/next_meeting_details/next_meeting_date ) - 3), '%a %e %b %Y')" nodeset="/chw_monthly_meeting/group_summary/c_formatted_task_date" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/group_summary/c_formatted_task_date" type="string" calculate="format-date(date(decimal-date-time( /chw_monthly_meeting/next_meeting_details/next_meeting_date ) - 3), '%a %e %b %Y')"/>
       <bind nodeset="/chw_monthly_meeting/group_summary/r_followup_note" readonly="true()" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/chw_monthly_meeting/meta/instanceID" readonly="true()" type="string"/>
-      <bind calculate="D-tree" nodeset="/chw_monthly_meeting/meta/instanceName" type="string"/>
+      <bind nodeset="/chw_monthly_meeting/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/chw_monthly_meeting/meta/instanceName" type="string" calculate="D-tree"/>
     </model>
   </h:head>
   <h:body class="pages">
@@ -397,7 +382,7 @@
       </input>
       <group ref="/chw_monthly_meeting/meeting_details/absent_chvs">
         <label ref="jr:itext('/chw_monthly_meeting/meeting_details/absent_chvs:label')"/>
-        <repeat jr:count=" /chw_monthly_meeting/meeting_details/absent_chvs_count " nodeset="/chw_monthly_meeting/meeting_details/absent_chvs">
+        <repeat nodeset="/chw_monthly_meeting/meeting_details/absent_chvs" jr:count=" /chw_monthly_meeting/meeting_details/absent_chvs_count ">
           <input appearance="select-contact type-person" ref="/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv">
             <label ref="jr:itext('/chw_monthly_meeting/meeting_details/absent_chvs/absent_chv:label')"/>
           </input>

@@ -31,4 +31,4 @@ CREATE MATERIALIZED VIEW agg_neonatal_referrals AS
 );
 CREATE UNIQUE INDEX IF NOT EXISTS district_month_shehia_agg_neonatal_referrals ON agg_neonatal_referrals USING btree(issued_month,district,shehia,disaggregation_value);
 ALTER MATERIALIZED VIEW agg_neonatal_referrals OWNER TO full_access;
-GRANT SELECT ON agg_neonatal_referrals TO dtree;
+GRANT SELECT ON agg_neonatal_referrals TO dtree, periscope;

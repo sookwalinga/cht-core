@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
   <h:head>
     <h:title>Wash Protocol</h:title>
     <model>
@@ -15,16 +15,38 @@
             <value>Name of the logged in user</value>
           </text>
           <text id="/wash_protocol/wash/cholera_note/cholera_signs:label">
-            <value>-</value>
+            <value>&lt;strong&gt;First Aid for the person with Cholera symptoms &lt;/strong&gt;
+
+First aid for the person with cholera symptoms
+ Now, I would like to discus the steps to follow to help you or someone in your family with the following cholera symptoms:
+• Diarrhea and watery diarrhea
+• Vomiting
+• What to do when your showing Cholera symptoms? 
+• Visit to the health facility near you 
+• Drink water or ORS frequently if available while your going to the healthy facility.
+• If the child is showing cholera symptoms, keep on breastfeeding the child while your giong to the healthy facility even if she is diarrhea.
+• Older children and adults should eat food frequently.</value>
           </text>
           <text id="/wash_protocol/wash/cholera_note/important_note_cholera:label">
-            <value>-</value>
+            <value>&lt;strong&gt; Important Message &lt;/strong&gt; 
+
+ A person can get cholera by drinking water or eating food contaminated with cholera bacteria.Cholera is prevented by washing hands with clean water and soap frequently, eating safely prepared food, driniking clean and safe water and proper use of toilets.</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cholera/ask_familiy:label">
-            <value>-</value>
+            <value>&lt;strong&gt; Understanding Cholera&lt;/strong&gt;
+
+Ask the family: 
+• What do you understand about cholera?
+• What are the symptoms of cholera?
+• How cholera is transmitted? 
+• Who is at most risk for Cholera?
+• Can Cholera be prevented?
+
+&lt;span style="color:#f58a1f"&gt;Use Bango Kitita to explain more about Cholera based on the answers above &lt;/span&gt;</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note:label">
-            <value>-</value>
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Cleanliness&lt;/span&gt;
+&lt;strong&gt;Hand cleanlineness to prevent transmition of cholera.&lt;/strong&gt;</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance/no:label">
             <value>No</value>
@@ -33,22 +55,55 @@
             <value>Yes</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance:label">
-            <value>-</value>
+            <value>Do you understand the importance of washing hands?</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps:label">
-            <value>-</value>
+            <value>&lt;span style="color:#f58a1f"&gt;Ask the client to show how to wash hands through running water and soap.( observe the steps) &lt;/span&gt;
+• Remove any finger ring and watch before washing your hands.
+• Wet your hands with clean, running water
+• Apply soap to all parties of your hands.
+• Lather your hands by rubbing them together with the soapo
+•Lather the backs of your hands, between your fingers
+• Scrub your hand palm throughly 
+•.Scrub your fingers and under your nails.
+• scrub your thumbs
+• Rinse your hands well under clean, running water.
+• Turn off the tap
+•Dry your hands using a clean towel or air dry them.</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps_pic:label">
             <value form="image">jr://images/handwashsteps.png</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings:label">
-            <value>-</value>
+            <value>Important moments required to wash hands: 
+•Before, during, and after preparing food
+• Before feeding the child
+• Before and after preparing fruit juice
+• After using the toilet
+• After changing diapers or cleaning up a child who has used the toilet
+•Before and after caring for someone at home who is sick with vomiting or diarrhea</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea:label">
-            <value>-</value>
+            <value>&lt;span style="color:#f58a1f"&gt;If No, use Bango Kitita to educate the household.
+&lt;/span&gt;</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_environment/environment_cleanliness:label">
-            <value>-</value>
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Environment&lt;/span&gt;
+&lt;strong&gt;Toilet uses &lt;/strong&gt;
+• Can you expalin the effects to the commuinty for not having toilets or using toilets improper ways.
+ • Listen to the commuinty , use Bango kitita page number 19 to explain about good toilets, types of toilets, how to properly use toilets and improper ways of using toilets. 
+
+&lt;strong&gt;Body cleanliness and clothes&lt;/strong&gt;
+Now, I would like to discuss about body cleanliness and clothes, in order to prevent the transmition of Cholera bacteria. 
+• Can you explain about the importance of body and clothes cleanliness to your family , specifically to the children and its effects when body and clothes iare dirty.
+&lt;span style="color:#f58a1f"&gt; Listen from mom and family members, then use Bango kitita to explain more about the benefits of body and clothes cleanliness in preventing the spread of disease. &lt;/span&gt;
+&lt;strong&gt;Sanitation&lt;/strong&gt; 
+Now, I would like to discuss about the importance of sanitation in preventing the transimition of bacteria espacially cholera bacteria.
+• Can you explain what is sanitation? 
+Listen to the family and use bango kitita to explain more about sanitation
+ • Understanding the meaning of sanitation
+ • Understanding the Importance of sanitation
+ • Understanding on how to keep enviroment clean</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns/cleanliness:label">
             <value>Cleanliness</value>
@@ -60,20 +115,40 @@
             <value>Water</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns:label">
-            <value>-</value>
+            <value>I would like to discuss about:</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv:label">
-            <value>-</value>
+            <value>&lt;span style="color:#f58a1f"&gt;CHV investigate and check risks associated with hygiene and sanitation in this house and choose the component which is more likely for couselling. You can choose more than one component according to the need of the household. &lt;/span&gt;</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_ors/ors_uses:label">
-            <value>-</value>
+            <value>&lt;strong&gt; The ORS Uses &lt;/strong&gt; 
+&lt;strong&gt;Can someone expalin what is ORS?&lt;/strong&gt;
+ • ORS ( Oral Rehydration solution) is the solution used to raplace salt and water that the body loses during diarrhea and vomiting.
+&lt;strong&gt;How to prepare ORS solution by using packaged ORS &lt;/strong&gt;
+ • Wash your hands by using clean running water with soap.
+ • Measure 1 litre of drinking water and put on the clean vessel. 
+&lt;strong&gt;Precaution &lt;/strong&gt;
+During the prepartion of ORS solution, measure exctly 1 litre of water. The use of less water or more water makes ORS solution concentration to be ineffective. Do not add any other drink like milk, soup and juice in ORS solution.
+ • .Wash the spoon and vessel for mixing ORS solution with clean water and soap.
+ • Put on clean water packaged ORS and stir throughly. 
+ • Drink ORS solution slowly and frequently</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_water/cleanwater_audio:label">
+            <value>How to prepare and store clean and safe water</value>
             <value form="audio">jr://audio/majisafi.mp3</value>
-            <value>-</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_water/safe_water:label">
-            <value>-</value>
+            <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Water&lt;/span&gt;
+How to prepare and keep clean and safe water [Audio] 
+&lt;strong&gt;Maji safi na salama&lt;/strong&gt;
+ Waulize wanafamilia wakuelezee maji safi na salama ni yepi? 
+ Maji salama ni: 
+ • Yale ambayo yako kwenye chupa yenye mfuniko ambao haujavunjika
+ • Yamechemshwa au
+ • Yamewekewa kitakasa maji
+
+Umuhimu wa kunywa maji safi na salama
+ • Ili kuzuia ueneaji wa maambukizi ya vimelea vinavyoweza kusababisha maradhi mbalimbali ikiwemo kipindupindu</value>
           </text>
         </translation>
         <translation lang="sw">
@@ -237,8 +312,8 @@ Wakati wa kutengeneza ORS, tumia kiwango sahihi cha maji. Ukitumia maji kidogo, 
             <value>-</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_water/cleanwater_audio:label">
-            <value form="audio">jr://audio/majisafi.mp3</value>
             <value>Jinsi ya kuandaa na kuhifadhi maji safi na salama</value>
+            <value form="audio">jr://audio/majisafi.mp3</value>
           </text>
           <text id="/wash_protocol/wash/subgroup_water/safe_water:label">
             <value>&lt;span style="color:#337ab7;font-weight: bold;text-align:center"&gt;Maji &lt;/span&gt;
@@ -259,7 +334,7 @@ Umuhimu wa kunywa maji safi na salama
         </translation>
       </itext>
       <instance>
-        <wash_protocol delimiter="#" id="wash_protocol" prefix="J1!wash_protocol!" version="2022-11-04_01-54">
+        <wash_protocol id="wash_protocol" prefix="J1!wash_protocol!" delimiter="#" version="2023-03-07_02-41">
           <inputs>
             <meta>
               <location>
@@ -325,20 +400,20 @@ Umuhimu wa kunywa maji safi na salama
       <bind nodeset="/wash_protocol/inputs/user/facility_id" type="string"/>
       <bind nodeset="/wash_protocol/inputs/user/name" type="string"/>
       <bind nodeset="/wash_protocol/inputs/contact/_id" type="db:person"/>
-      <bind calculate="../inputs/user/name" nodeset="/wash_protocol/created_by" type="string"/>
-      <bind calculate="../inputs/user/contact_id" nodeset="/wash_protocol/created_by_person_uuid" type="string"/>
-      <bind calculate="../inputs/user/facility_id" nodeset="/wash_protocol/created_by_place_uuid" type="string"/>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/wash_protocol/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/wash_protocol/end" type="dateTime"/>
+      <bind nodeset="/wash_protocol/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/wash_protocol/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/wash_protocol/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/wash_protocol/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/wash_protocol/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cholera/ask_familiy" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/cholera_note/important_note_cholera" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/cholera_note/cholera_signs" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_ors/ors_uses" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns_note_to_chv" readonly="true()" type="string"/>
-      <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns" required="true()" type="select"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_health_concerns/health_concerns" type="select" required="true()"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness" relevant="selected( /wash_protocol/wash/subgroup_health_concerns/health_concerns ,&quot;cleanliness&quot;)"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_cleanliness_note" readonly="true()" type="string"/>
-      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance" required="true()" type="select1"/>
+      <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_importance" type="select1" required="true()"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/note_to_chv_kitini_rejea" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_timings" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_cleanliness/hand_wash_steps" readonly="true()" type="string"/>
@@ -348,7 +423,7 @@ Umuhimu wa kunywa maji safi na salama
       <bind nodeset="/wash_protocol/wash/subgroup_water/cleanwater_audio" readonly="true()" type="string"/>
       <bind nodeset="/wash_protocol/wash/subgroup_environment" relevant="selected( /wash_protocol/wash/subgroup_health_concerns/health_concerns ,&quot;environment&quot;)"/>
       <bind nodeset="/wash_protocol/wash/subgroup_environment/environment_cleanliness" readonly="true()" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/wash_protocol/meta/instanceID" readonly="true()" type="string"/>
+      <bind nodeset="/wash_protocol/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
     </model>
   </h:head>
   <h:body class="pages">
