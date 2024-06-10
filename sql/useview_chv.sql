@@ -11,6 +11,7 @@ CREATE MATERIALIZED VIEW useview_chv AS
     doc ->> 'name' AS name,
     doc ->> 'type' AS type,
     doc ->> 'phone' AS phone,
+    doc ->> 'tigo_phone' AS tigo_phone,
     doc ->> 'sex' AS sex,
     to_date(doc ->> 'dob', 'YYYY-MM-DD') AS date_of_birth,
     doc #>> '{parent,_id}' AS catchment_area_uuid,
