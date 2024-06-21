@@ -1,4 +1,5 @@
 const extras = require('./contact-summary-extras.js');
+const currentDate = new Date();
 function get(obj,field){
   if(!obj){return;}
   const parts=field.split('.');
@@ -6,8 +7,181 @@ function get(obj,field){
   return obj;
 }
 
+// Adding P4P summary on condition card for CHW profile
+const current_and_previous_month_names = extras.isMonthName(currentDate);
+const current_month_name = current_and_previous_month_names[0];
+const previous_month_name = current_and_previous_month_names[1];
+
+const last_chw_month_performance_metrics = extras.isCHWPerformanceLastMonth(targetDoc,contact);
+const this_chw_month_performance_metrics = extras.isCHWPerformanceThisMonth(targetDoc,contact);
+
+const supervisor_monthly_performance_metrics_last_month = extras.isSupervisorPerformanceLastMonth(targetDoc);
+const supervisor_monthly_performance_metrics_this_month = extras.isSupervisorPerformanceThisMonth(targetDoc);
+
+//Calculating payment details for both last month and this month
+const last_month_base_enrollment_pay = extras.getCHWEnrollmentPay(last_chw_month_performance_metrics);
+const last_month_base_visit_pay = extras.getCHWVisitPay(last_chw_month_performance_metrics);
+const this_month_base_enrollment_pay =extras.getCHWEnrollmentPay(this_chw_month_performance_metrics);
+const this_month_base_visit_pay = extras.getCHWVisitPay(this_chw_month_performance_metrics);
+const chw_basic_pay = 5000;
+const last_month_total_pay = chw_basic_pay + last_month_base_enrollment_pay + last_month_base_visit_pay;
+const this_month_total_pay = chw_basic_pay + this_month_base_enrollment_pay + this_month_base_visit_pay;
+
+// Calculating payment details for CHW supervisor
+const supervisor_chv_monthly_meeting_pay_last_month = extras.getSupervisorMeetingPay(supervisor_monthly_performance_metrics_last_month);
+const supervisor_chv_monthly_meeting_pay_this_month = extras.getSupervisorMeetingPay(supervisor_monthly_performance_metrics_this_month);
+const supervisor_chv_visiting_pay_last_month = extras.getSupervisorVisitingPay(supervisor_monthly_performance_metrics_last_month);
+const supervisor_chv_visiting_pay_this_month = extras.getSupervisorVisitingPay(supervisor_monthly_performance_metrics_this_month);
+const last_month_supervisor_total_pay = supervisor_chv_monthly_meeting_pay_last_month + supervisor_chv_visiting_pay_last_month 
++ chw_basic_pay;
+const this_month_supervisor_total_pay = supervisor_chv_monthly_meeting_pay_this_month + supervisor_chv_visiting_pay_this_month 
++ chw_basic_pay;
+
+// Calculate Total payment amount with tarrif
+const last_month_total_pay_with_tarrif = last_month_total_pay + extras.getTarrifCost(last_month_total_pay);
+const this_month_total_pay_with_tarrif = this_month_total_pay + extras.getTarrifCost(this_month_total_pay);
+const last_month_supervisor_total_pay_with_tarrif = last_month_supervisor_total_pay + extras.getTarrifCost(last_month_supervisor_total_pay);
+const this_month_supervisor_total_pay_with_tarrif = this_month_supervisor_total_pay + extras.getTarrifCost(this_month_supervisor_total_pay);
+
+// Including a condition card that contains P4P summary
 const allReports = reports;
 const cards = [
+  {
+    label: 'contact.profile.performance.p4p.month' + previous_month_name,
+    appliesToType: 'person',
+    appliesIf: function () { 
+      if (typeof targetDoc !== 'undefined'){
+        return contact.role === 'chw' || contact.role === 'chv';}},    
+    fields: [
+      {
+        label: 'contact.profile.performance.p4p.enrollment_amount',
+        value: last_month_base_enrollment_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.visit_amount',
+        value: last_month_base_visit_pay , 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.basic_pay',
+        value: chw_basic_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount',
+        value: last_month_total_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount_with_tarrif',
+        value: last_month_total_pay_with_tarrif, 
+        width: 6,
+      }
+    ]
+  },
+  {
+    label: 'contact.profile.performance.p4p.month' + current_month_name,
+    appliesToType: 'person',
+    appliesIf: function () { 
+      if (typeof targetDoc !== 'undefined'){
+        return contact.role === 'chw' || contact.role === 'chv';}},
+    fields: [
+      {
+        label: 'contact.profile.performance.p4p.enrollment_amount',
+        value: this_month_base_enrollment_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.visit_amount',
+        value: this_month_base_visit_pay , 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.basic_pay',
+        value: chw_basic_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount',
+        value: this_month_total_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount_with_tarrif',
+        value: this_month_total_pay_with_tarrif, 
+        width: 6,
+      }
+    ]
+  },
+  // Adding P4P summary for CHW supervisor profile for last month
+  {
+    label: 'contact.profile.performance.p4p.month' + previous_month_name,
+    appliesToType: 'person',
+    appliesIf: function () { 
+      return contact.role === 'chw_supervisor'; },
+    fields: [
+      {
+        label: 'contact.profile.performance.p4p.monthy_meeting_attendance_pay',
+        value: supervisor_chv_monthly_meeting_pay_last_month, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.supervisor_visitng_chv_pay',
+        value: supervisor_chv_visiting_pay_last_month , 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.supervisor_base_payment',
+        value: chw_basic_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount',
+        value: last_month_supervisor_total_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount_with_tarrif',
+        value: last_month_supervisor_total_pay_with_tarrif, 
+        width: 6,
+      }
+    ]
+  },
+  // Adding P4P summary for CHW supervisor profile for this month
+  {
+    label: 'contact.profile.performance.p4p.month' + current_month_name,
+    appliesToType: 'person',
+    appliesIf: function () { 
+      return contact.role === 'chw_supervisor'; },
+    fields: [
+      {
+        label: 'contact.profile.performance.p4p.monthy_meeting_attendance_pay',
+        value: supervisor_chv_monthly_meeting_pay_this_month, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.supervisor_visitng_chv_pay',
+        value: supervisor_chv_visiting_pay_this_month , 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.supervisor_base_payment',
+        value: chw_basic_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount',
+        value: this_month_supervisor_total_pay, 
+        width: 6,
+      },
+      {
+        label: 'contact.profile.performance.p4p.total_amount_with_tarrif',
+        value: this_month_supervisor_total_pay_with_tarrif, 
+        width: 6,
+      }
+    ]
+  },
   {
     label: 'contact.profile.performance.monthly_meeting',
     appliesToType: 'report',
@@ -142,10 +316,13 @@ module.exports = {
     show_asrh_form: extras.isCHVInProject('asrh'),
     lastest_monthly_meeting_topic: extras.getLatestMonthlyMeetingTopic(), 
     latest_monthly_meeting_date: extras.getLatestMonthlyMeetingDate(), 
-    latest_monthly_meeting_absentees: extras.getLatestMonthlyMeetingAbsentees(), 
-    is_qm_planning_submitted_this_month: extras.isQMPlanningSubmittedThisMonth(), 
-    is_client_adult: extras.isClientAdult(), 
-    show_new_ecd_protocol:extras.isCHVInProject('new_ecd') 
+    latest_monthly_meeting_absentees: extras.getLatestMonthlyMeetingAbsentees(),
+    is_qm_planning_submitted_this_month: extras.isFormSubmittedThisMonth('quality_monitoring_planning'),
+    is_qm_submitted_this_month: extras.isFormSubmittedThisMonth('chv_quality_monitoring'),  
+    is_monthly_meeting_submitted_this_month: extras.isFormSubmittedThisMonth('monthly_meeting'),
+    is_group_session_submitted_this_month: extras.isFormSubmittedThisMonth('group_session'), 
+    is_client_adult: extras.isClientAdult(),
+    show_new_ecd_protocol:extras.isCHVInProject('new_ecd')
   },
 
   fields: [

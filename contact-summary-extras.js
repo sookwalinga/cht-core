@@ -2,6 +2,22 @@ const NOW = new Date();
 const CURRENT_MONTH = NOW.getMonth();
 const CURRENT_YEAR = NOW.getFullYear();
 
+// Defining tarrif amounts
+const tariffs = [
+  { min: 2000, max: 2999, cost: 410 },
+  { min: 3000, max: 3999, cost: 615 },
+  { min: 4000, max: 4999, cost: 680 },
+  { min: 5000, max: 6999, cost: 1010 },
+  { min: 7000, max: 9999, cost: 1070 },
+  { min: 10000, max: 14999, cost: 1578 },
+  { min: 15000, max: 19999, cost: 1693 },
+  { min: 20000, max: 29999, cost: 2233 },
+  { min: 30000, max: 39999, cost: 2289 },
+  { min: 40000, max: 49999, cost: 2949 },
+  { min: 50000, max: 99999, cost: 3518 },
+];
+
+//Defining metrics for P4P metrics
 function get(obj, field,defaultValue) {
   return obj && field && field.split('.')
     .reduce((a, b) => a && a[b]||defaultValue, obj);
@@ -9,6 +25,17 @@ function get(obj, field,defaultValue) {
 
 module.exports = {
   week: 7,
+
+  isMonthName:function(NOW) {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const currentMonthName = months[NOW.getMonth()];
+    let previousMonthName = months[NOW.getMonth()-1];
+    if (CURRENT_MONTH === 0){
+      previousMonthName = 'December';
+      return previousMonthName;
+    }
+    return[currentMonthName,previousMonthName];
+  },
   
   isCHVInProject:function(projectName){
     return projectName && [contact, ...lineage]
@@ -338,9 +365,9 @@ module.exports = {
     return isMuted;
   },
 
-  isQMPlanningSubmittedThisMonth: function()
+  isFormSubmittedThisMonth: function(formName)
   { 
-    return this.getReportsThisMonth(reports,'quality_monitoring_planning').length> 0;
+    return this.getReportsThisMonth(reports,formName).length> 0;
   },
 
   CURRENT_MONTH: CURRENT_MONTH,
@@ -368,6 +395,127 @@ module.exports = {
   getMonthlyMeetingsThisMonth: function (reports, forms) {
     return this.getReportsThisMonth(reports,forms)
       .filter(r=>get(r, 'fields.planned_meeting.meeting_option') === 'now'); 
-  }
+  },
+  // Finding number of registrations and visits last month
+  isCHWPerformanceLastMonth(targetDoc,contact) {
+    if (((contact.type === 'person' &&  contact.role === 'chw') || (contact.type === 'person' &&  contact.role === 'chv')) && !!targetDoc) {
+      const target_in_array = targetDoc.targets;
+      const enrollment_full_details = target_in_array.find(u => u.id === 'u5-and-pregnant-registrations-last-month').value;
+      const visit_full_details = target_in_array.find(u => u.id === 'u5-and-anc-visits-last-month').value;
+      const enrolled_u5_pregnant_women = enrollment_full_details.pass;
+      const visited_u5_pregnant_women = visit_full_details.pass;
+      return [enrolled_u5_pregnant_women,visited_u5_pregnant_women];
+    }
+    return [];
+  },
+  // Finding number of registrations and visits this month
+  isCHWPerformanceThisMonth(targetDoc,contact) {
+    if (((contact.type === 'person' &&  contact.role === 'chw') || (contact.type === 'person' &&  contact.role === 'chv')) && !!targetDoc) {
+      const target_in_array = targetDoc.targets;
+      const enrollment_full_details_this_month = target_in_array.find(u => u.id === 'u5-and-pregnant-registrations-this-month').value;
+      const visit_full_details_this_month = target_in_array.find(u => u.id === 'u5-and-anc-visits-this-month').value;
+      const enrolled_u5_pregnant_women_this_month = enrollment_full_details_this_month.pass;
+      const visited_u5_pregnant_women_this_month = visit_full_details_this_month.pass;
+      return [enrolled_u5_pregnant_women_this_month,visited_u5_pregnant_women_this_month];
+    }
+    return [];
+  },
+  // Getting payment for registering pregnant mothers who consent to receiving consequent services
+  getCHWEnrollmentPay(answer){
+    if (answer.length !== 0){
+      const enrollment_pay_multiplier = 2500;
+      const exact_enrollment_number = answer[0];
+      if(exact_enrollment_number <= 3){
+        const enrollment_pay = exact_enrollment_number * enrollment_pay_multiplier;
+        return enrollment_pay;
+      } else{
+        const enrollment_pay = 10000;
+        return enrollment_pay;
+      }
+    }
+    return;
+  },
+  getCHWVisitPay(answer){
+    if (answer.length !== 0){
+      const exact_visit_number = answer[1];
+      const actual_visit_number = exact_visit_number;
+      if(actual_visit_number >= 16){
+        const visit_pay = 35000;
+        return visit_pay;
+      }else if(actual_visit_number >= 12 && actual_visit_number <= 15){
+        const visit_pay = 20000;
+        return visit_pay;
+      }else if(actual_visit_number >= 5 && actual_visit_number <= 11){
+        const visit_pay = 10000;
+        return visit_pay;
+      }else {
+        const visit_pay = 0;
+        return visit_pay;
+      }  
+    }
+    return;
+  },
+  // Calculating Supervisor performance for last month
+  isSupervisorPerformanceLastMonth(targetDoc) {
+    if (contact.type === 'person' &&  contact.role === 'chw_supervisor' && !!targetDoc) {
+      const target_in_array_for_supervisor = targetDoc.targets;
+      const monthly_meetings_full_details_last_month = target_in_array_for_supervisor.find(u => u.id === 'monthly-meetings-last-month').value;
+      const quality_monitoring_full_details_last_month = target_in_array_for_supervisor.find(u => u.id === 'quality-monitoring-last-month').value;
+      const sup_monthly_meetings_last_month = monthly_meetings_full_details_last_month.pass;
+      const sup_quality_monitoring_last_month = quality_monitoring_full_details_last_month.pass;
+      return [sup_monthly_meetings_last_month,sup_quality_monitoring_last_month];
+    }
+    return [];
+  },
+  // Calculating Supervisor performance for this month
+  isSupervisorPerformanceThisMonth(targetDoc) {
+    if (contact.type === 'person' &&  contact.role === 'chw_supervisor' && !!targetDoc) {
+      const target_in_array_for_supervisor = targetDoc.targets;
+      const monthly_meetings_full_details_this_month = target_in_array_for_supervisor.find(u => u.id === 'monthly-meetings-this-month').value;
+      const quality_monitoring_full_details_this_month = target_in_array_for_supervisor.find(u => u.id === 'quality-monitoring-this-month').value;
+      const sup_monthly_meetings_this_month = monthly_meetings_full_details_this_month.pass;
+      const sup_quality_monitoring_this_month = quality_monitoring_full_details_this_month.pass;
+      return [sup_monthly_meetings_this_month,sup_quality_monitoring_this_month];
+    }
+    return [];
+  },
+  getSupervisorMeetingPay(this_sup_month_performance_metrics){
+    if (this_sup_month_performance_metrics.length !== 0){
+      const supervisor_monthly_meeting = this_sup_month_performance_metrics[0];
+      if (supervisor_monthly_meeting > 0){
+        const supervisor_monthly_meeting_pay = 10000;
+        return supervisor_monthly_meeting_pay;
+      }
+      else{
+        const supervisor_monthly_meeting_pay = 0;
+        return supervisor_monthly_meeting_pay;
+      }
+    }
+    return;
+  },
+  getSupervisorVisitingPay(this_sup_month_performance_metrics){
+    if (this_sup_month_performance_metrics.length !== 0){
+      const supervisor_quality_monitoring = this_sup_month_performance_metrics[1];
+      if (supervisor_quality_monitoring > 0){
+        const supervisor_quality_monitoring_pay = 10000;
+        return supervisor_quality_monitoring_pay;
+      }
+      else{
+        const supervisor_quality_monitoring_pay = 0;
+        return supervisor_quality_monitoring_pay;
+      }
+    }
+    return;
+  },
+  //Calculate tarrifs to be added to payment amount
+  
+  getTarrifCost(paymentAmount) {
+    for (const tariff of tariffs) {
+      if (paymentAmount >= tariff.min && paymentAmount <= tariff.max) {
+        return tariff.cost;
+      }
+    }
+    return null; // or some default value if the amount doesn't match any range
+  },
 
 };

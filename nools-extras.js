@@ -1325,4 +1325,50 @@ module.exports = {
     date.setDate(date.getDate()-14); 
     return new Date() >= date; 
   }, 
+  //Calculating last months' pregnancy and u5 visits
+  consentingVisitsLastMonth: function (c, form_type) {
+    let flag = false;
+    const isReportedLastMonth = this.isFromPreviousMonth;
+    if (c && c.reports) {
+      let counter = [];
+      counter = c.reports.filter(function (r) {
+        switch (form_type) {
+        case 'pregnancy':
+          return r.form === 'pregnancy' && r.fields && r.fields.pregnancy_consent &&
+              r.fields.pregnancy_consent.consent && r.fields.pregnancy_consent.consent === 'yes' &&
+              r.reported_date && isReportedLastMonth(new Date(r.reported_date), new Date());
+        case 'infant_child':
+          return r.form === 'infant_child' &&
+              r.fields && r.fields.consent && r.fields.consent.child_consent_today &&
+              r.fields.consent.child_consent_today === 'yes' &&
+              isReportedLastMonth(new Date(r.reported_date), new Date());
+        }
+      });
+      if (counter.length > 0) {
+        flag = true;
+      }
+    }
+    return flag;
+  },
+  //Calculating number of home visits from last month
+  consentingHomeVisitsLastMonth: function (c, reports_date_as_string) {
+    let flag = false;
+    const isReportedLastMonth = this.isFromPreviousMonth;
+    const reports_date_as_object = new Date(reports_date_as_string);
+    if (c && c.reports) {
+      const counter = [];
+      if (counter.length > 0) {
+        flag = true;
+        return isReportedLastMonth(reports_date_as_object);
+      }
+    }
+    return flag;
+  },
+  isFromPreviousMonth: function (date1) {
+    const currentDate = new Date();
+    const specific_report_date = new Date(date1);
+    const firstDayOfCurrentMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+    const firstDayOfLastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+    return specific_report_date >= firstDayOfLastMonth && specific_report_date < firstDayOfCurrentMonth;
+  }
 };
