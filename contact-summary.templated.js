@@ -51,7 +51,9 @@ const cards = [
     appliesToType: 'person',
     appliesIf: function () { 
       if (typeof targetDoc !== 'undefined'){
-        return contact.role === 'chw' || contact.role === 'chv';}},    
+        return contact.projects && contact.projects.includes('jna');
+      }
+    },    
     fields: [
       {
         label: 'contact.profile.performance.p4p.enrollment_amount',
@@ -94,7 +96,7 @@ const cards = [
       },
       {
         label: 'contact.profile.performance.p4p.visit_amount',
-        value: this_month_base_visit_pay , 
+        value: this_month_base_visit_pay, 
         width: 6,
       },
       {
@@ -119,7 +121,7 @@ const cards = [
     label: 'contact.profile.performance.p4p.month' + previous_month_name,
     appliesToType: 'person',
     appliesIf: function () { 
-      return contact.role === 'chw_supervisor'; },
+      return contact.role === 'supervisor'; },
     fields: [
       {
         label: 'contact.profile.performance.p4p.monthy_meeting_attendance_pay',
@@ -153,7 +155,7 @@ const cards = [
     label: 'contact.profile.performance.p4p.month' + current_month_name,
     appliesToType: 'person',
     appliesIf: function () { 
-      return contact.role === 'chw_supervisor'; },
+      return contact.role === 'supervisor'; },
     fields: [
       {
         label: 'contact.profile.performance.p4p.monthy_meeting_attendance_pay',

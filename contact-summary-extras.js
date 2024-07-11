@@ -396,29 +396,51 @@ module.exports = {
     return this.getReportsThisMonth(reports,forms)
       .filter(r=>get(r, 'fields.planned_meeting.meeting_option') === 'now'); 
   },
-  // Finding number of registrations and visits last month
-  isCHWPerformanceLastMonth(targetDoc,contact) {
+  //Finding number of registrations and visits last month
+  isCHWPerformanceLastMonth(targetDoc, contact) {
     if (((contact.type === 'person' &&  contact.role === 'chw') || (contact.type === 'person' &&  contact.role === 'chv')) && !!targetDoc) {
       const target_in_array = targetDoc.targets;
-      const enrollment_full_details = target_in_array.find(u => u.id === 'u5-and-pregnant-registrations-last-month').value;
-      const visit_full_details = target_in_array.find(u => u.id === 'u5-and-anc-visits-last-month').value;
-      const enrolled_u5_pregnant_women = enrollment_full_details.pass;
-      const visited_u5_pregnant_women = visit_full_details.pass;
-      return [enrolled_u5_pregnant_women,visited_u5_pregnant_women];
+      let enrolled_u5_pregnant_women_last_month = 0;
+      let visited_u5_pregnant_women_last_month = 0;
+
+      // Find the enrollment target for u5 and pregnant registrations last month
+      const enrollment_target = target_in_array.find(u => u.id === 'u5-and-pregnant-registrations-last-month');
+      if (enrollment_target !== undefined) {
+        enrolled_u5_pregnant_women_last_month = enrollment_target.value.pass;
+      }
+
+      // Find the visit target for u5 and ANC visits last month
+      const visit_target = target_in_array.find(u => u.id === 'u5-and-anc-visits-last-month');
+      if (visit_target !==undefined) {
+        visited_u5_pregnant_women_last_month = visit_target.value.pass;
+      }
+
+      return [enrolled_u5_pregnant_women_last_month, visited_u5_pregnant_women_last_month];
     }
-    return [];
+    return [0, 0]; // Return 0 for both values if conditions are not met
   },
   // Finding number of registrations and visits this month
-  isCHWPerformanceThisMonth(targetDoc,contact) {
+  isCHWPerformanceThisMonth(targetDoc, contact) {
     if (((contact.type === 'person' &&  contact.role === 'chw') || (contact.type === 'person' &&  contact.role === 'chv')) && !!targetDoc) {
       const target_in_array = targetDoc.targets;
-      const enrollment_full_details_this_month = target_in_array.find(u => u.id === 'u5-and-pregnant-registrations-this-month').value;
-      const visit_full_details_this_month = target_in_array.find(u => u.id === 'u5-and-anc-visits-this-month').value;
-      const enrolled_u5_pregnant_women_this_month = enrollment_full_details_this_month.pass;
-      const visited_u5_pregnant_women_this_month = visit_full_details_this_month.pass;
-      return [enrolled_u5_pregnant_women_this_month,visited_u5_pregnant_women_this_month];
+      let enrolled_u5_pregnant_women_this_month = 0;
+      let visited_u5_pregnant_women_this_month = 0;
+
+      // Find the enrollment target for u5 and pregnant registrations this month
+      const enrollment_target = target_in_array.find(u => u.id === 'u5-and-pregnant-registrations-this-month');
+      if (enrollment_target !== undefined) {
+        enrolled_u5_pregnant_women_this_month = enrollment_target.value.pass;
+      }
+
+      // Find the visit target for u5 and ANC visits this month
+      const visit_target = target_in_array.find(u => u.id === 'u5-and-anc-visits-this-month');
+      if (visit_target !==undefined) {
+        visited_u5_pregnant_women_this_month = visit_target.value.pass;
+      }
+
+      return [enrolled_u5_pregnant_women_this_month, visited_u5_pregnant_women_this_month];
     }
-    return [];
+    return [0, 0]; // Return 0 for both values if conditions are not met
   },
   // Getting payment for registering pregnant mothers who consent to receiving consequent services
   getCHWEnrollmentPay(answer){
@@ -433,7 +455,7 @@ module.exports = {
         return enrollment_pay;
       }
     }
-    return;
+    return 0;
   },
   getCHWVisitPay(answer){
     if (answer.length !== 0){
@@ -453,11 +475,11 @@ module.exports = {
         return visit_pay;
       }  
     }
-    return;
+    return 0;
   },
   // Calculating Supervisor performance for last month
   isSupervisorPerformanceLastMonth(targetDoc) {
-    if (contact.type === 'person' &&  contact.role === 'chw_supervisor' && !!targetDoc) {
+    if (contact.type === 'person' &&  contact.role === 'supervisor' && !!targetDoc) {
       const target_in_array_for_supervisor = targetDoc.targets;
       const monthly_meetings_full_details_last_month = target_in_array_for_supervisor.find(u => u.id === 'monthly-meetings-last-month').value;
       const quality_monitoring_full_details_last_month = target_in_array_for_supervisor.find(u => u.id === 'quality-monitoring-last-month').value;
@@ -469,7 +491,7 @@ module.exports = {
   },
   // Calculating Supervisor performance for this month
   isSupervisorPerformanceThisMonth(targetDoc) {
-    if (contact.type === 'person' &&  contact.role === 'chw_supervisor' && !!targetDoc) {
+    if (contact.type === 'person' &&  contact.role === 'supervisor' && !!targetDoc) {
       const target_in_array_for_supervisor = targetDoc.targets;
       const monthly_meetings_full_details_this_month = target_in_array_for_supervisor.find(u => u.id === 'monthly-meetings-this-month').value;
       const quality_monitoring_full_details_this_month = target_in_array_for_supervisor.find(u => u.id === 'quality-monitoring-this-month').value;
@@ -491,7 +513,7 @@ module.exports = {
         return supervisor_monthly_meeting_pay;
       }
     }
-    return;
+    return 0;
   },
   getSupervisorVisitingPay(this_sup_month_performance_metrics){
     if (this_sup_month_performance_metrics.length !== 0){
@@ -505,7 +527,7 @@ module.exports = {
         return supervisor_quality_monitoring_pay;
       }
     }
-    return;
+    return 0;
   },
   //Calculate tarrifs to be added to payment amount
   
@@ -515,7 +537,7 @@ module.exports = {
         return tariff.cost;
       }
     }
-    return null; // or some default value if the amount doesn't match any range
+    return 0; // or some default value if the amount doesn't match any range
   },
 
 };
