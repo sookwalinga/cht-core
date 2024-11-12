@@ -128,37 +128,101 @@ CREATE MATERIALIZED VIEW useview_infant_child AS
     doc #>> '{fields,essential_newborn_care_nutrition,confirm_nutrition_counseling_c}' AS confirm_nutrition_counseling_c,
     nullif(doc #>> '{fields,immunizations,has_health_card}', '')::BOOLEAN AS has_health_card,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_bcg}', '')::BOOLEAN AS received_bcg,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,bcg_date}', 'YYYY-MM-DD') AS bcg_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,bcg_date}' > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,bcg_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS bcg_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_bopv0}', '')::BOOLEAN AS received_bopv0,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,bopv0_date}', 'YYYY-MM-DD') AS bopv0_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,bopv0_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,bopv0_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS bopv0_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_bopv1}', '')::BOOLEAN AS received_bopv1,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,bopv1_date}', 'YYYY-MM-DD') AS bopv1_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,bopv1_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,bopv1_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS bopv1_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_dtp_hepb_hib1}', '')::BOOLEAN AS received_dtp_hepb_hib1,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,dtp_hebp_hib1_date}', 'YYYY-MM-DD') AS dtp_hepb_hib1_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,dtp_hepb_hib1_date}'   > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,dtp_hepb_hib1_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS dtp_hepb_hib1_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_pcvi1}', '')::BOOLEAN AS received_pcvi1,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,pcvi1_date}', 'YYYY-MM-DD') AS pcvi1_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,pcvi1_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,pcvi1_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS pcvi1_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_rota1}', '')::BOOLEAN AS received_rota1,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,rota1_date}', 'YYYY-MM-DD') AS rota1_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,rota1_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,rota1_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS rota1_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_bopv2}', '')::BOOLEAN AS received_bopv2,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,bopv2_date}', 'YYYY-MM-DD') AS bopv2_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,bopv2_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,bopv2_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS bopv2_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_dtp_hepb_hib2}', '')::BOOLEAN AS received_dtp_hepb_hib2,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,dtp_hebp_hib2_date}', 'YYYY-MM-DD') AS dtp_hepb_hib2_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,dtp_hebp_hib2_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,dtp_hebp_hib2_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS dtp_hebp_hib2_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_pcvi2}', '')::BOOLEAN AS received_pcvi2,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,pcvi2_date}', 'YYYY-MM-DD') AS pcvi2_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,pcvi2_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,pcvi2_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS pcvi2_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_rota2}', '')::BOOLEAN AS received_rota2,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,rota2_date}', 'YYYY-MM-DD') AS rota2_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,rota2_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,rota2_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS rota2_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_bopv3}', '')::BOOLEAN AS received_bopv3,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,bopv3_date}', 'YYYY-MM-DD') AS bopv3_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,bopv3_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,bopv3_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS bopv3_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_dtp_hepb_hib3}', '')::BOOLEAN AS received_dtp_hepb_hib3,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,dtp_hebp_hib3_date}', 'YYYY-MM-DD') AS dtp_hepb_hib3_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,dtp_hebp_hib3_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,dtp_hebp_hib3_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS dtp_hebp_hib3_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_pcvi3}', '')::BOOLEAN AS received_pcvi3,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,pcvi3_date}', 'YYYY-MM-DD') AS pcvi3_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,pcvi3_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,pcvi3_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS pcvi3_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_ipv}', '')::BOOLEAN AS received_ipv,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,ipv_date}', 'YYYY-MM-DD') AS ipv_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,ipv_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,ipv_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS ipv_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_surua_rubella1}', '')::BOOLEAN AS received_surua_rubella1,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,surua_rubella1_date}', 'YYYY-MM-DD') AS surua_rubella1_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,surua_rubella1_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,surua_rubella1_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS surua_rubella1_date,
     nullif(doc #>> '{fields,immunizations,record_vaccines,received_surua_rubella2}', '')::BOOLEAN AS received_surua_rubella2,
-    to_date(doc #>> '{fields,immunizations,record_vaccines,surua_rubella2_date}', 'YYYY-MM-DD') AS surua_rubella2_date,
+    CASE 
+      WHEN doc #>> '{fields,immunizations,record_vaccines,surua_rubella2_date}'  > '1901-01-01'
+      THEN to_date(doc #>> '{fields,immunizations,record_vaccines,surua_rubella2_date}', 'YYYY-MM-DD')
+      ELSE NULL
+    END AS surua_rubella2_date,
     nullif(doc #>> '{fields,immunizations,vaccines_up_to_date}', '')::BOOLEAN AS vaccines_up_to_date,
     doc #>> '{fields,immunizations,why_not_vaccines_up_to_date}' AS why_not_vaccines_up_to_date,
     nullif(doc #>> '{fields,immunizations,refer_vaccines_flag}', '')::BOOLEAN AS refer_vaccines_flag,
