@@ -1,7 +1,8 @@
 ------------------------------------------------------------
 -- Materialized view to show table of infant_child forms.
 ------------------------------------------------------------
-DROP MATERIALIZED VIEW IF EXISTS useview_infant_child;
+-- SELECT deps_save_and_drop_dependencies('public'::VARCHAR, 'useview_infant_child'::VARCHAR);
+-- DROP MATERIALIZED VIEW IF EXISTS useview_infant_child;
 
 CREATE MATERIALIZED VIEW useview_infant_child AS
 (
@@ -263,16 +264,21 @@ CREATE MATERIALIZED VIEW useview_infant_child AS
                     doc #>> '{fields,problem_solving_new,who_engages_other_new}'),
                     '') AS who_engages_other,
 
-    nullif(doc #>> '{fields,problem_solving_new,who_engages_how_many_hours_over_15}','')::INTEGER AS who_engages_how_many_hours_over_15,
-    nullif(doc #>> '{fields,problem_solving,who_engages_how_many_hours}', '')::INTEGER AS who_engages_how_many_hours,
-    nullif(doc #>> '{fields,problem_solving_new,who_engages_how_many_hours}', '')::INTEGER AS who_engages_how_many_hours,
+    nullif(doc #>> '{fields,problem_solving_new,who_engages_how_many_hours_over_15}','')::VARCHAR AS who_engages_how_many_hours_over_15,
+    COALESCE(
+      nullif(doc #>> '{fields,problem_solving,who_engages_how_many_hours}', ''),
+      nullif(doc #>> '{fields,problem_solving_new,who_engages_how_many_hours}', '')
+    )::DECIMAL AS who_engages_how_many_hours,
+    -- nullif(doc #>> '{fields,problem_solving,who_engages_how_many_hours}', '')::INTEGER AS who_engages_how_many_hours,
+    -- nullif(doc #>> '{fields,problem_solving_new,who_engages_how_many_hours}', '')::INTEGER AS who_engages_how_many_hours,
 
     nullif(doc #>> '{fields,problem_solving,concern_toys}', '')::BOOLEAN AS concern_toys,
-    nullif(coalesce(doc #>> '{fields,problem_solving,who_engages_other}',
-                    doc #>> '{fields,problem_solving_new,who_engages_other_new}'),
-                    '') AS who_engages_other,
-    nullif(doc #>> '{fields,problem_solving,plays_with_toys_homemade}', '')::BOOLEAN AS plays_with_toys_homemade,
-    nullif(doc #>> '{fields,problem_solving_new,plays_with_toys_homemade_new}', '')::BOOLEAN AS plays_with_toys_homemade,
+    COALESCE(
+      nullif(doc #>> '{fields,problem_solving,plays_with_toys_homemade}', ''),
+      nullif(doc #>> '{fields,problem_solving_new,plays_with_toys_homemade_new}', '')
+    )::BOOLEAN AS plays_with_toys_homemade,
+    -- nullif(doc #>> '{fields,problem_solving,plays_with_toys_homemade}', '')::BOOLEAN AS plays_with_toys_homemade,
+    -- nullif(doc #>> '{fields,problem_solving_new,plays_with_toys_homemade_new}', '')::BOOLEAN AS plays_with_toys_homemade,
 
     nullif(doc #>> '{fields,problem_solving,plays_with_toys_manufactured}', '')::BOOLEAN AS plays_with_toys_manufactured,
     nullif(coalesce(doc #>> '{fields,problem_solving,plays_with_toys_household_objects}', 
@@ -367,3 +373,4 @@ CREATE UNIQUE INDEX IF NOT EXISTS infant_child_reported_date_created_by_uuid ON 
 -- Permissions
 ALTER MATERIALIZED VIEW useview_infant_child OWNER TO full_access;
 GRANT SELECT ON useview_infant_child TO dtree, periscope;
+SELECT deps_restore_dependencies('public'::VARCHAR, 'useview_infant_child'::VARCHAR);
