@@ -5,7 +5,7 @@
     <model>
       <itext>
         <translation lang="en">
-          <text id="/data/covid19_intro/covid19_intro_note:label">
+          <text id="/data/convid_intro/covid19_intro_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
 
 • Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
@@ -16,7 +16,7 @@
 • Cover your mouth with a towel or elbow when you sneeze or cough. 
 • Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.&lt;/span&gt;</value>
           </text>
-          <text id="/data/covid19_intro:label">
+          <text id="/data/convid_intro:label">
             <value>Precautionary measures when visiting a client</value>
           </text>
           <text id="/data/inputs/user/contact_id:label">
@@ -28,6 +28,12 @@
           <text id="/data/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
+          <text id="/data/inputs/user/project:label">
+            <value>Nameof the project</value>
+          </text>
+          <text id="/data/person/barcode/android-app-outputs/SCAN_RESULT:label">
+            <value>Result</value>
+          </text>
           <text id="/data/person/date_of_birth:jr:constraintMsg">
             <value>Date of birth cannot be in the future</value>
           </text>
@@ -36,6 +42,48 @@
           </text>
           <text id="/data/person/first_name:label">
             <value>First Name</value>
+          </text>
+          <text id="/data/person/has_health_card_id/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/person/has_health_card_id/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/person/has_health_card_id:label">
+            <value>Does the client have the health card ID ?</value>
+          </text>
+          <text id="/data/person/is_client_in_kym_app/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/person/is_client_in_kym_app/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/person/is_client_in_kym_app:label">
+            <value>Is the client available in the Kadi ya matibabu app?</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_read_only:hint">
+            <value>Health card ID should be a 12 digit number</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_read_only:jr:constraintMsg">
+            <value>Heath card ID should be 12 digit numbers</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_read_only:label">
+            <value>Health card ID</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_text_field:hint">
+            <value>Health card ID should be a 12 digit number</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_text_field:jr:constraintMsg">
+            <value>Heath card ID should be 12 digit numbers</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_text_field:label">
+            <value>Health card ID</value>
+          </text>
+          <text id="/data/person/kym_message/kym_message_note:label">
+            <value>The Health Card is a national program that was adopted by the government of Zanzibar. It means that every Zanzibari should be registered, have a Health Card, and use it every time they receive services at a health facility. This card collects all medical information that the patient has received, enabling access to essential information for future treatments. Additionally, it enables the government to track the usage of health resources such as medical equipment and medicines, thus helping to plan and budget effectively to improve health services. The Health Card also enhances transparency and efficiency in the collection of health data, providing better health services that are essential for the development of citizens and the health sector as a whole.</value>
+          </text>
+          <text id="/data/person/kym_message/kym_message_title:label">
+            <value>&lt;span style="font-weight:bold;color:#337ab7"&gt;About Health Card&lt;/span&gt;</value>
           </text>
           <text id="/data/person/last_name:label">
             <value>Last Name</value>
@@ -55,6 +103,15 @@
           <text id="/data/person/phone_alternate:label">
             <value>Alternate Phone Number</value>
           </text>
+          <text id="/data/person/register_client_note_read_only:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Please go ahead and register the client in the Kadi ya Matibabu app, and use the Jamii ni Afya app to scan the new Kadi ya Matibabu.&lt;/span&gt;</value>
+          </text>
+          <text id="/data/person/resigter_client_note_manually:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Copy their kadi ya matibabu ID and paste them in the field below.&lt;/span&gt;</value>
+          </text>
+          <text id="/data/person/scan_kym_id_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Before scanning the health card, please confirm that the card belongs to the client. Check the name on the back of the card to make sure it matches the client. If there is no name, use the Kadi ya Matibabu app to scan the card and verify the client's details. Once the details are verified, you can proceed to scan the card in the Jamii ni Afya app &lt;/span&gt;</value>
+          </text>
           <text id="/data/person/sex/female:label">
             <value>Female</value>
           </text>
@@ -69,7 +126,7 @@
           </text>
         </translation>
         <translation lang="sw">
-          <text id="/data/covid19_intro/covid19_intro_note:label">
+          <text id="/data/convid_intro/covid19_intro_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
 • Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
 • Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
@@ -79,7 +136,7 @@
 • Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
 • Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.&lt;/span&gt;</value>
           </text>
-          <text id="/data/covid19_intro:label">
+          <text id="/data/convid_intro:label">
             <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
           </text>
           <text id="/data/inputs/user/contact_id:label">
@@ -91,6 +148,18 @@
           <text id="/data/inputs/user/name:label">
             <value>Jina la mtumizi</value>
           </text>
+          <text id="/data/inputs/user/project:label">
+            <value>Jina la project</value>
+          </text>
+          <text id="/data/person/barcode/action:label">
+            <value>-</value>
+          </text>
+          <text id="/data/person/barcode/android-app-outputs/SCAN_RESULT:label">
+            <value>-</value>
+          </text>
+          <text id="/data/person/barcode:label">
+            <value>-</value>
+          </text>
           <text id="/data/person/date_of_birth:jr:constraintMsg">
             <value>-</value>
           </text>
@@ -99,6 +168,48 @@
           </text>
           <text id="/data/person/first_name:label">
             <value>Jina la kwanza</value>
+          </text>
+          <text id="/data/person/has_health_card_id/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/person/has_health_card_id/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/data/person/has_health_card_id:label">
+            <value>Je mteja ana kadi ya matibabu?</value>
+          </text>
+          <text id="/data/person/is_client_in_kym_app/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/person/is_client_in_kym_app/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/data/person/is_client_in_kym_app:label">
+            <value>Je, mteja anapatikana kwenye app ya Kadi ya Matibabu?</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_read_only:hint">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_read_only:jr:constraintMsg">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_read_only:label">
+            <value>Kadi ya matibabu</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_text_field:hint">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_text_field:jr:constraintMsg">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/person/kadi_ya_matibabu_id_text_field:label">
+            <value>Kadi ya matibabu</value>
+          </text>
+          <text id="/data/person/kym_message/kym_message_note:label">
+            <value>Kadi ya Matibabu ni mpango wa kitaifa ambao ulipitishwa na serikali ya Zanzibar. Ikimaanisha kuwa kila Mzanibari aandikishwe, awe na Kadi Ya Madibabu na aitumie kila anapopata huduma kwenye kituo cha afya. Kadi hii hukusanya taarifa zote za matibabu ambazo mgonjwa amepokea, hivyo kuwezesha upatikanaji wa taarifa muhimu kwa matibabu ya baadaye. Aidha, inaiwezesha Serikali kufuatilia matumizi ya rasilimali za afya kama vile vifaa tiba na dawa, hivyo kusaidia kupanga mipango na bajeti bora za kuboresha huduma za afya. Kadi ya Matibabu pia huongeza uwazi na ufanisi wa ukusanyaji wa taarifa za afya, huduma bora za afya ambazo ni muhimu kwa maendeleo ya wananchi na sekta ya afya kwa ujumla.</value>
+          </text>
+          <text id="/data/person/kym_message/kym_message_title:label">
+            <value>&lt;span style="font-weight:bold;color:#337ab7"&gt;Kuhusu Kadi ya matibabu&lt;/span&gt;</value>
           </text>
           <text id="/data/person/last_name:label">
             <value>Jina la babu</value>
@@ -118,6 +229,15 @@
           <text id="/data/person/phone_alternate:label">
             <value>Namba nyingine ya simu</value>
           </text>
+          <text id="/data/person/register_client_note_read_only:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali endelea na usajili wa mteja katika app ya Kadi ya Matibabu, na tumia app ya Jamii ni Afya kuskan Kadi ya Matibabu mpya uliyompatia mteja. &lt;/span&gt;</value>
+          </text>
+          <text id="/data/person/resigter_client_note_manually:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Nakili kitambulisho chake cha Kadi ya Matibabu na weka kwenye sehemu inayofuata.&lt;/span&gt;</value>
+          </text>
+          <text id="/data/person/scan_kym_id_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kabla ya kuskani kadi ya matibabu, tafadhali hakikisha kuwa kadi hiyo ni ya mteja. Angalia jina lililo nyuma ya kadi ili kuhakikisha kuwa ni jina la mteja. Ikiwa hakuna jina, tumia app ya Kadi ya Matibabu kuskani kadi na kuthibitisha taarifa za mteja. Baada ya kuthibitisha, unaweza kuendelea na uskani wa kadi katika app ya Jamii ni Afya.&lt;/span&gt;</value>
+          </text>
           <text id="/data/person/sex/female:label">
             <value>Mwanamke</value>
           </text>
@@ -133,7 +253,7 @@
         </translation>
       </itext>
       <instance>
-        <data id="contact:person:edit" prefix="J1!contact:person:edit!" delimiter="#" version="2024-03-19_23-17">
+        <data id="contact:person:edit" prefix="J1!contact:person:edit!" delimiter="#" version="2024-11-21 7-42">
           <inputs>
             <meta>
               <location>
@@ -147,11 +267,33 @@
               <contact_id/>
               <facility_id/>
               <name/>
+              <project/>
             </user>
           </inputs>
           <person>
             <_id/>
             <type>person</type>
+            <kym_id/>
+            <kym_message>
+              <kym_message_title/>
+              <kym_message_note/>
+            </kym_message>
+            <display_health_card_id/>
+            <has_health_card_id/>
+            <scan_kym_id_note/>
+            <is_client_in_kym_app/>
+            <barcode>
+              <action>com.google.zxing.client.android.SCAN</action>
+              <android-app-inputs/>
+              <android-app-outputs>
+                <SCAN_RESULT/>
+              </android-app-outputs>
+            </barcode>
+            <register_client_note_read_only/>
+            <kadi_ya_matibabu_id_read_only/>
+            <resigter_client_note_manually/>
+            <kadi_ya_matibabu_id_text_field/>
+            <kadi_ya_matibabu_id/>
             <first_name/>
             <middle_name/>
             <last_name/>
@@ -174,9 +316,10 @@
               <last_edited_by_place_uuid/>
             </meta>
           </person>
-          <covid19_intro>
+          <project_c/>
+          <convid_intro>
             <covid19_intro_note/>
-          </covid19_intro>
+          </convid_intro>
           <meta tag="hidden">
             <instanceID/>
           </meta>
@@ -186,16 +329,39 @@
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/inputs/user/name" type="string"/>
-      <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/inputs/user/project" type="string"/>
+      <bind nodeset="/data/project_c" type="string" calculate="../inputs/user/project"/>
+      <bind nodeset="/data/convid_intro/covid19_intro_note" readonly="true()" type="string"/>
       <bind nodeset="/data/person/_id" type="string" readonly="true()"/>
       <bind nodeset="/data/person/type" type="string" readonly="true()"/>
+      <bind nodeset="/data/person/kym_id" readonly="true()" type="string" calculate=" /data/person/barcode/android-app-outputs/SCAN_RESULT "/>
+      <bind nodeset="/data/person/kym_message" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and  /data/person/kym_id ='' and  /data/person/kadi_ya_matibabu_id =''"/>
+      <bind nodeset="/data/person/kym_message/kym_message_title" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/kym_message/kym_message_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/person/display_health_card_id" type="string" calculate="if( /data/person/kym_id !='', /data/person/kym_id ,  /data/person/kadi_ya_matibabu_id )"/>
+      <bind nodeset="/data/person/has_health_card_id" type="select1" relevant=" /data/project_c =&quot;kadiyamatibabu&quot;"/>
+      <bind nodeset="/data/person/scan_kym_id_note" readonly="true()" type="string" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and selected( /data/person/has_health_card_id ,&quot;yes&quot;)"/>
+      <bind nodeset="/data/person/is_client_in_kym_app" type="select1" required="true()" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and selected( /data/person/has_health_card_id ,&quot;no&quot;)"/>
+      <bind nodeset="/data/person/barcode" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and
+(selected( /data/person/has_health_card_id ,&quot;yes&quot;) or 
+(selected( /data/person/has_health_card_id ,&quot;no&quot;) and selected( /data/person/is_client_in_kym_app ,&quot;no&quot;)))"/>
+      <bind nodeset="/data/person/barcode/action" type="string"/>
+      <bind nodeset="/data/person/barcode/android-app-outputs/SCAN_RESULT" type="string"/>
+      <bind nodeset="/data/person/register_client_note_read_only" readonly="true()" type="string" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and selected( /data/person/has_health_card_id ,&quot;no&quot;) and selected( /data/person/is_client_in_kym_app ,&quot;no&quot;)"/>
+      <bind nodeset="/data/person/kadi_ya_matibabu_id_read_only" readonly="true()" type="string" jr:constraintMsg="jr:itext('/data/person/kadi_ya_matibabu_id_read_only:jr:constraintMsg')" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and 
+ (selected( /data/person/has_health_card_id ,&quot;yes&quot;) or (selected( /data/person/has_health_card_id ,&quot;no&quot;) and selected( /data/person/is_client_in_kym_app ,&quot;no&quot;)))" calculate=" /data/person/barcode/android-app-outputs/SCAN_RESULT " constraint="regex(., '^\d{12}$')"/>
+      <bind nodeset="/data/person/resigter_client_note_manually" readonly="true()" type="string" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and 
+selected( /data/person/has_health_card_id ,&quot;no&quot;) and selected( /data/person/is_client_in_kym_app ,&quot;yes&quot;)"/>
+      <bind nodeset="/data/person/kadi_ya_matibabu_id_text_field" readonly="false()" type="string" jr:constraintMsg="jr:itext('/data/person/kadi_ya_matibabu_id_text_field:jr:constraintMsg')" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and 
+selected( /data/person/has_health_card_id ,&quot;no&quot;) and selected( /data/person/is_client_in_kym_app ,&quot;yes&quot;)" constraint="regex(., '^\d{12}$')"/>
+      <bind nodeset="/data/person/kadi_ya_matibabu_id" type="string" calculate="if( /data/person/kadi_ya_matibabu_id_text_field !='', /data/person/kadi_ya_matibabu_id_text_field , /data/person/kadi_ya_matibabu_id )"/>
       <bind nodeset="/data/person/first_name" type="string" required="true()"/>
       <bind nodeset="/data/person/middle_name" type="string" required="true()"/>
       <bind nodeset="/data/person/last_name" type="string" required="true()"/>
       <bind nodeset="/data/person/is_head_of_household" type="string"/>
       <bind nodeset="/data/person/date_of_birth" type="date" required="true()" constraint=". &lt;= today()" jr:constraintMsg="jr:itext('/data/person/date_of_birth:jr:constraintMsg')"/>
-      <bind nodeset="/data/person/phone" type="tel" constraint="true()" jr:constraintMsg="jr:itext('/data/person/phone:jr:constraintMsg')" required="true()" relevant=" /data/person/is_head_of_household =&quot;yes&quot;"/>
-      <bind nodeset="/data/person/phone_alternate" type="tel" constraint="true()" relevant=" /data/person/is_head_of_household =&quot;yes&quot;" jr:constraintMsg="jr:itext('/data/person/phone_alternate:jr:constraintMsg')"/>
+      <bind nodeset="/data/person/phone" type="string" required="true()" jr:constraintMsg="jr:itext('/data/person/phone:jr:constraintMsg')" relevant=" /data/person/is_head_of_household =&quot;yes&quot;" constraint="regex(.,'^0[0-9]{9}$')"/>
+      <bind nodeset="/data/person/phone_alternate" type="string" jr:constraintMsg="jr:itext('/data/person/phone_alternate:jr:constraintMsg')" relevant=" /data/person/is_head_of_household =&quot;yes&quot;" constraint="regex(.,'^0[0-9]{9}$')"/>
       <bind nodeset="/data/person/sex" type="select1" required="true()"/>
       <bind nodeset="/data/person/first_name_c" type="string" calculate="../first_name"/>
       <bind nodeset="/data/person/middle_name_c" type="string" calculate="../middle_name"/>
@@ -223,16 +389,76 @@
         <input ref="/data/inputs/user/name">
           <label ref="jr:itext('/data/inputs/user/name:label')"/>
         </input>
+        <input ref="/data/inputs/user/project">
+          <label ref="jr:itext('/data/inputs/user/project:label')"/>
+        </input>
       </group>
     </group>
-    <group ref="/data/covid19_intro">
-      <label ref="jr:itext('/data/covid19_intro:label')"/>
-      <input ref="/data/covid19_intro/covid19_intro_note">
-        <label ref="jr:itext('/data/covid19_intro/covid19_intro_note:label')"/>
+    <group ref="/data/convid_intro">
+      <label ref="jr:itext('/data/convid_intro:label')"/>
+      <input ref="/data/convid_intro/covid19_intro_note">
+        <label ref="jr:itext('/data/convid_intro/covid19_intro_note:label')"/>
       </input>
     </group>
     <group appearance="field-list" ref="/data/person">
       <label ref="jr:itext('/data/person:label')"/>
+      <input appearance="hidden" ref="/data/person/kym_id"/>
+      <group ref="/data/person/kym_message">
+        <input ref="/data/person/kym_message/kym_message_title">
+          <label ref="jr:itext('/data/person/kym_message/kym_message_title:label')"/>
+        </input>
+        <input ref="/data/person/kym_message/kym_message_note">
+          <label ref="jr:itext('/data/person/kym_message/kym_message_note:label')"/>
+        </input>
+      </group>
+      <select1 ref="/data/person/has_health_card_id">
+        <label ref="jr:itext('/data/person/has_health_card_id:label')"/>
+        <item>
+          <label ref="jr:itext('/data/person/has_health_card_id/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/person/has_health_card_id/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/data/person/scan_kym_id_note">
+        <label ref="jr:itext('/data/person/scan_kym_id_note:label')"/>
+      </input>
+      <select1 ref="/data/person/is_client_in_kym_app">
+        <label ref="jr:itext('/data/person/is_client_in_kym_app:label')"/>
+        <item>
+          <label ref="jr:itext('/data/person/is_client_in_kym_app/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/person/is_client_in_kym_app/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <group appearance="android-app-launcher field-list" ref="/data/person/barcode">
+        <input appearance="hidden" ref="/data/person/barcode/action"/>
+        <group appearance="android-app-inputs" ref="/data/person/barcode/android-app-inputs"/>
+        <group appearance="android-app-outputs" ref="/data/person/barcode/android-app-outputs">
+          <input appearance="hidden" ref="/data/person/barcode/android-app-outputs/SCAN_RESULT">
+            <label ref="jr:itext('/data/person/barcode/android-app-outputs/SCAN_RESULT:label')"/>
+          </input>
+        </group>
+      </group>
+      <input ref="/data/person/register_client_note_read_only">
+        <label ref="jr:itext('/data/person/register_client_note_read_only:label')"/>
+      </input>
+      <input appearance="number" ref="/data/person/kadi_ya_matibabu_id_read_only">
+        <label ref="jr:itext('/data/person/kadi_ya_matibabu_id_read_only:label')"/>
+        <hint ref="jr:itext('/data/person/kadi_ya_matibabu_id_read_only:hint')"/>
+      </input>
+      <input ref="/data/person/resigter_client_note_manually">
+        <label ref="jr:itext('/data/person/resigter_client_note_manually:label')"/>
+      </input>
+      <input appearance="number" ref="/data/person/kadi_ya_matibabu_id_text_field">
+        <label ref="jr:itext('/data/person/kadi_ya_matibabu_id_text_field:label')"/>
+        <hint ref="jr:itext('/data/person/kadi_ya_matibabu_id_text_field:hint')"/>
+      </input>
       <input ref="/data/person/first_name">
         <label ref="jr:itext('/data/person/first_name:label')"/>
       </input>

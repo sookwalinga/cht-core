@@ -38,6 +38,12 @@
           <text id="/data/contact/first_name:label">
             <value>First name</value>
           </text>
+          <text id="/data/contact/kadi_ya_matibabu_id_read_only:label">
+            <value>SCAN_RESULT</value>
+          </text>
+		  <text id="/data/contact/kadi_ya_matibabu_id:label">
+            <value></value>
+          </text>
           <text id="/data/contact/last_name:label">
             <value>Last name</value>
           </text>
@@ -59,23 +65,6 @@
           <text id="/data/contact/sex:label">
             <value>Gender</value>
           </text>
-          <text id="/data/covid19_intro/covid19_intro_note:label">
-            <value>&lt;span style="color:#f58a1f"&gt;As a CHV, you are responsible for making sure that you are providing the community with health education and services while trying to take precautions to stop the transmission of Corona virus to one another. Therefore, make sure you consider the following while you conduct the visits: 
-
-• Wash your hands with soap/sanitizer as many time as you can while at home, once you are at the client's house and when you leave.
-• Keep a 2 meters distance while talking to your clients.
-• Don't shake hands with your clients. 
-• Avoid group gatherings.
-• Provide the service at the open space and if it should be inside, make sure the windows and doors are open. 
-• Cover your mouth with a towel or elbow when you sneeze or cough. 
-• Do not go for a visit if you have symptoms of fever, cough or frequent sneezing.</value>
-          </text>
-          <text id="/data/covid19_intro/covid19_visit_reminder:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Please do the covid education visit right after the household registration. &lt;/span&gt;</value>
-          </text>
-          <text id="/data/covid19_intro:label">
-            <value>Precautionary measures when visiting a client</value>
-          </text>
           <text id="/data/end_registration_note:label">
             <value>Thank you very much for your cooperation. We have reached the end of the household registration.</value>
           </text>
@@ -96,8 +85,8 @@
           </text>
           <text id="/data/household_location/gps_note:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;
-
-&lt;span style="color:#f58a1f"&gt;Press the button below to capture GPS coordinates for the house. You will know the data has been captured if you see numbers appear in the four boxes below - you don't need to write anything yourself in these boxes. It may take some time for the numbers to appear. If you are waiting more than one minute and the numbers have not appeared, you should move on to the rest of the form without them.&lt;/span&gt;</value>
+ 
+ &lt;span style="color:#f58a1f"&gt;Press the button below to capture GPS coordinates for the house. You will know the data has been captured if you see numbers appear in the four boxes below - you don't need to write anything yourself in these boxes. It may take some time for the numbers to appear. If you are waiting more than one minute and the numbers have not appeared, you should move on to the rest of the form without them.&lt;/span&gt;</value>
           </text>
           <text id="/data/household_location/house_number:hint">
             <value>Enter the entire house number separated by slashes</value>
@@ -174,6 +163,9 @@
           <text id="/data/init/age_estimate_contact:label">
             <value>What is <output value=" /data/init/first_name_contact "/>'s estimated age in years?</value>
           </text>
+          <text id="/data/init/barcode/android-app-outputs/SCAN_RESULT:label">
+            <value>Result</value>
+          </text>
           <text id="/data/init/contact_reproductive_age_note:label">
             <value>You are of reproductive age. I'd like to ask your permission to return later to speak with you personally about issues related to health during pregnancy and childbirth.</value>
           </text>
@@ -197,6 +189,33 @@
           </text>
           <text id="/data/init/first_name_contact:label">
             <value>What is the first name of the best contact person for your household?</value>
+          </text>
+          <text id="/data/init/has_health_card_id/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/init/has_health_card_id/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/init/has_health_card_id:label">
+            <value>Does the client have the health card ID ?</value>
+          </text>
+          <text id="/data/init/is_client_in_kym_app/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/init/is_client_in_kym_app/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/init/is_client_in_kym_app:label">
+            <value>Is the client available in the Kadi ya matibabu app?</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_read_only:hint">
+            <value>Health card ID should be a 12 digit number</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_read_only:jr:constraintMsg">
+            <value>Heath card ID should be 12 digit numbers</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_read_only:label">
+            <value>Health card ID</value>
           </text>
           <text id="/data/init/last_name_contact:jr:constraintMsg">
             <value>Enter a last name</value>
@@ -234,6 +253,24 @@
           <text id="/data/init/primary_phone_owner_other:label">
             <value>Please specify</value>
           </text>
+          <text id="/data/init/register_client_note_read_only:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Please go ahead and register the client in the Kadi ya Matibabu app, and use the Jamii ni Afya app to scan the new Kadi ya Matibabu.&lt;/span&gt;</value>
+          </text>
+          <text id="/data/init/resigter_client_note_manually:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Copy their kadi ya matibabu ID and paste them in the field below. &lt;/span&gt;</value>
+          </text>
+		   <text id="/data/init/kadi_ya_matibabu_id_text_field:hint">
+            <value>Health card ID should be a 12 digit number</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_text_field:jr:constraintMsg">
+            <value>Heath card ID should be 12 digit numbers</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_text_field:label">
+            <value>Health card ID</value>
+          </text>
+          <text id="/data/init/scan_kym_id_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Before scanning the health card, please confirm that the card belongs to the client. Check the name on the back of the card to make sure it matches the client. If there is no name, use the Kadi ya Matibabu app to scan the card and verify the client's details. Once the details are verified, you can proceed to scan the card in the Jamii ni Afya app &lt;/span&gt;</value>
+          </text>
           <text id="/data/init/secondary_phone_contact:hint">
             <value>You can leave this blank if there is only one good contact number for this household</value>
           </text>
@@ -267,14 +304,23 @@
           <text id="/data/inputs/user/name:label">
             <value>Name of the logged in user</value>
           </text>
+          <text id="/data/inputs/user/project:label">
+            <value>Name of the project</value>
+          </text>
           <text id="/data/intro_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;This form is to be used for registering a household that has consented to participate in the Jamii ni Afya program. Remember, if you are speaking to a household and they do not consent to be registered you will need to exit this form using the "X" button rather than submitting it. When speaking to the household, it's important that you try to first speak to the head of household to explain who you are and the project, and to get his consent for the family to participate. Then, you can ask who the best contact person for the family is and begin registering each individual person with them. If the head of household is not available that is ok, you can try to speak with them at a later visit, but it's important to make an effort to speak with them now if possible.&lt;/span&gt;
-
-&lt;span style="color:#f58a1f"&gt;Explain who you are and what your role as a community health volunteer is. Key points to mention include:&lt;/span&gt;
-
-&lt;span style="display:block;padding-left:1em"&gt;This is a nationwide effort implemented by the Ministry of Health to improve health services for communities in Zanzibar.&lt;/span&gt; 
-&lt;span style="display:block;padding-left:1em"&gt;Every area will now have a CHV who can care for families and children up to age 5 in all issues related to their health care, nutrition, and child development.&lt;/span&gt;
-&lt;span style="display:block;padding-left:1em"&gt;The CHVs will also be visiting and providing counseling for pregnant women and mothers who have delivered. &lt;/span&gt;</value>
+ 
+ &lt;span style="color:#f58a1f"&gt;Explain who you are and what your role as a community health volunteer is. Key points to mention include:&lt;/span&gt;
+ 
+ &lt;span style="display:block;padding-left:1em"&gt;This is a nationwide effort implemented by the Ministry of Health to improve health services for communities in Zanzibar.&lt;/span&gt; 
+ &lt;span style="display:block;padding-left:1em"&gt;Every area will now have a CHV who can care for families and children up to age 5 in all issues related to their health care, nutrition, and child development.&lt;/span&gt;
+ &lt;span style="display:block;padding-left:1em"&gt;The CHVs will also be visiting and providing counseling for pregnant women and mothers who have delivered. &lt;/span&gt;</value>
+          </text>
+          <text id="/data/kym_message/kym_message_note:label">
+            <value>The Health Card is a national program adopted by the Zanzibar government, meaning that every Zanzibari should be registered, have a Health Card, and use it whenever they receive services at a health facility. This card collects all medical information that a patient has received, thus enabling access to important information for future treatments. Additionally, it enables the government to monitor the use of health resources, such as medical supplies and medicines, thereby assisting in planning and budgeting better to improve health services. The Health Card also enhances transparency and efficiency in the collection of health information, providing better healthcare services essential for the development of citizens and the health sector as a whole</value>
+          </text>
+          <text id="/data/kym_message:label">
+            <value>About Health Card</value>
           </text>
           <text id="/data/other_members_registration_note:label">
             <value>Now that I've registered your households primary contact person, I'll continue to register all of the other members of your household.</value>
@@ -284,6 +330,9 @@
           </text>
           <text id="/data/repeat/child/age_estimate:label">
             <value>Do you know <output value=" /data/repeat/child/first_name_c "/>'s estimated age in years?</value>
+          </text>
+          <text id="/data/repeat/child/barcode_repeat/android-app-outputs/SCAN_RESULT:label">
+            <value>Result</value>
           </text>
           <text id="/data/repeat/child/debug_note:label">
             <value>date of birth: <output value=" /data/repeat/child/date_of_birth_c "/> under_5_flag: <output value=" /data/repeat/child/is_under_5_binary "/> is reproductive age: <output value=" /data/repeat/child/reproductive_age "/></value></text>
@@ -314,6 +363,42 @@
           <text id="/data/repeat/child/hh_member_note:label">
             <value>_Now, please enter information for the next member of the kaya._</value>
           </text>
+		  <text id="/data/repeat/child/is_client_in_kym_app_repeat/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/repeat/child/is_client_in_kym_app_repeat/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/repeat/child/is_client_in_kym_app_repeat:label">
+            <value>Is the client available in the Kadi ya matibabu app?</value>
+          </text>
+		  <text id="/data/repeat/child/has_health_card_id_repeat/no:label">
+            <value>No</value>
+          </text>
+          <text id="/data/repeat/child/has_health_card_id_repeat/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/data/repeat/child/has_health_card_id_repeat:label">
+            <value>Does the client have the health card ID ?</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id:hint">
+            <value>Health card ID should be a 12 digit number</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id:jr:constraintMsg">
+            <value>Heath card ID should be 12 digit numbers</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id:label">
+            <value>Health card ID</value>
+          </text>
+		   <text id="/data/repeat/child/kadi_ya_matibabu_id_read_only:hint">
+            <value>Health card ID should be a 12 digit number</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id_read_only:jr:constraintMsg">
+            <value>Heath card ID should be 12 digit numbers</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id_read_only:label">
+            <value>Health card ID</value>
+          </text>
           <text id="/data/repeat/child/last_name:jr:constraintMsg">
             <value>Enter a last name</value>
           </text>
@@ -326,6 +411,12 @@
           <text id="/data/repeat/child/middle_name:label">
             <value>What is their middle name?</value>
           </text>
+		   <text id="/data/repeat/child/register_client_note_read_only_repeat:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Please go ahead and register the client in the Kadi ya Matibabu app, and use the Jamii ni Afya app to scan the new Kadi ya Matibabu.&lt;/span&gt;</value>
+          </text>
+		  <text id="/data/repeat/child/resigter_client_note_manually_repeat:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Copy their kadi ya matibabu ID and paste them in the field below. &lt;/span&gt;</value>
+          </text>
           <text id="/data/repeat/child/return_child_note_20_or_above_days:label">
             <value>From this registration, I've see that you have a child under 5 who can benefit from this national program. Therefore, I'd like to return later to start checking up on all issues related to their health care, nutrition, and child development. Do you have any questions for me now about this?</value>
           </text>
@@ -334,6 +425,9 @@
           </text>
           <text id="/data/repeat/child/return_women_note:label">
             <value>I see that <output value=" /data/repeat/child/first_name_c "/> is of reproductive age in your family. I'd like to ask your permission to return later to speak with her personally about issues related to health during pregnancy and childbirth.</value>
+          </text>
+		  <text id="/data/repeat/child/scan_kym_id_note_repeat:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Before scanning the health card, please confirm that the card belongs to the client. Check the name on the back of the card to make sure it matches the client. If there is no name, use the Kadi ya Matibabu app to scan the card and verify the client's details. Once the details are verified, you can proceed to scan the card in the Jamii ni Afya app &lt;/span&gt;</value>
           </text>
           <text id="/data/repeat/child/sex/female:label">
             <value>Female</value>
@@ -409,6 +503,9 @@
           <text id="/data/contact/first_name:label">
             <value>Jina la kwanza</value>
           </text>
+          <text id="/data/contact/kadi_ya_matibabu_id:label">
+            <value>-</value>
+          </text>
           <text id="/data/contact/last_name:label">
             <value>Jina la babu</value>
           </text>
@@ -439,23 +536,6 @@
           <text id="/data/contact:label">
             <value>-</value>
           </text>
-          <text id="/data/covid19_intro/covid19_intro_note:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Kama mhudumu wa afya ya jamii, una jukumu la kuhakikisha unatoa elimu ya afya ya jamii na huduma huku ukijikinga ili kuepusha kusambaa kwa maambukizi ya korona kutoka kwa mtu mmoja kwenda kwa mwengine. Hivyo hakikisha unazingatia yafuatayo wakati ukiwa unatoa huduma:
-• Osha mikono yako kwa maji na sabuni au kutumia vitakasa mikono mara nyingi kadiri unavyoweza ukiwa nyumbani kwako,nyumbani kwa mteja wako na pindi ukimaliza kutoa huduma. 
-• Hakikisha kuna umbali wa mita mbili kati yako na mteja wako unayeenda kumtembelea 
-• Pindi ukiongea na wateja wako , usishikane mikono. 
-• Epuka mikusanyiko. 
-• Toa huduma katika maeneo yaliyo wazi na ikitokea ukafanya ndani hakikisha milango na madirisha yanakuwa wazi. 
-• Funika mdomo wako kwa kitambaa au kiwiko unavyooenda chafya au kukohoa. 
-• Tafadhali usiende kutoa huduma ukijihisi na dalili za homa na kukohoa na kwenda chafya kwa wingi.
-&lt;/span&gt;</value>
-          </text>
-          <text id="/data/covid19_intro/covid19_visit_reminder:label">
-            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali kumbuka kufungua fomu ya kuwaelimisha wanakaya juu ya maambukizi ya korona na jinsi ya kuchukua tahadhari. Tembeleo kuhusu korona utalifanya mara tu baada ya kumaliza kusajili kaya.&lt;/span&gt;</value>
-          </text>
-          <text id="/data/covid19_intro:label">
-            <value>Hatua za kuchukua pindi unapoenda kumtembelea mteja wako</value>
-          </text>
           <text id="/data/end_registration_note:label">
             <value>Asante sana, nashukuru kwa mashirikiano yenu, tumefikia mwisho wa usajili wa kaya.</value>
           </text>
@@ -479,8 +559,8 @@
           </text>
           <text id="/data/household_location/gps_note:label">
             <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV).&lt;/span&gt;
-
-&lt;span style="color:#f58a1f"&gt;Bonyeza kitufe hichi kupata GPS ya nyumba hii. Utatambua kuwa taarifa zimepatikana endapo utaona nambari zinatokea kwenye jadueli nne chini. Hutakiwi kuandika chochote kwenye jadueli hizi. Inaweza kuchukua muda kidogo mpaka nambari kutokea. Ukiona umesubiria kwa zaidi ya dakika moja na hakuna nambari iliyotokea, tafadhali endelea kujaza fomu yako bila ya kuzisubiria zaidi.&lt;/span&gt;</value>
+ 
+ &lt;span style="color:#f58a1f"&gt;Bonyeza kitufe hichi kupata GPS ya nyumba hii. Utatambua kuwa taarifa zimepatikana endapo utaona nambari zinatokea kwenye jadueli nne chini. Hutakiwi kuandika chochote kwenye jadueli hizi. Inaweza kuchukua muda kidogo mpaka nambari kutokea. Ukiona umesubiria kwa zaidi ya dakika moja na hakuna nambari iliyotokea, tafadhali endelea kujaza fomu yako bila ya kuzisubiria zaidi.&lt;/span&gt;</value>
           </text>
           <text id="/data/household_location/house_number:hint">
             <value>Ingiza nambari ya nyumba yote na tenganisha kwa kutumia alama ya Mkwaju</value>
@@ -557,6 +637,21 @@
           <text id="/data/init/age_estimate_contact:label">
             <value>Je kwa makadirio <output value=" /data/init/first_name_contact "/> ana miaka mingapi?</value>
           </text>
+          <text id="/data/init/barcode/action:label">
+            <value>-</value>
+          </text>
+          <text id="/data/init/barcode/android-app-inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/init/barcode/android-app-outputs/SCAN_RESULT:label">
+            <value>-</value>
+          </text>
+          <text id="/data/init/barcode/android-app-outputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/init/barcode:label">
+            <value>-</value>
+          </text>
           <text id="/data/init/contact_reproductive_age_note:label">
             <value>Umri wako unaonesha kwamba unaweza kupata ujauzito. Ningeomba ridhaa yako kurudia ili kuja kuzungumza na wewe mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
           </text>
@@ -580,6 +675,33 @@
           </text>
           <text id="/data/init/first_name_contact:label">
             <value>Ni lipi jina la kwanza la mtu ambaye naweza kuwasiliana naye kwenye kaya yenu?</value>
+          </text>
+          <text id="/data/init/has_health_card_id/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/init/has_health_card_id/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/data/init/has_health_card_id:label">
+            <value>Je mteja ana kadi ya matibabu?</value>
+          </text>
+          <text id="/data/init/is_client_in_kym_app/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/init/is_client_in_kym_app/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/data/init/is_client_in_kym_app:label">
+            <value>Je, mteja anapatikana kwenye app ya Kadi ya Matibabu?</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_read_only:hint">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_read_only:jr:constraintMsg">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_read_only:label">
+            <value>Kadi ya matibabu</value>
           </text>
           <text id="/data/init/last_name_contact:jr:constraintMsg">
             <value>Jaza jina la babu</value>
@@ -617,6 +739,24 @@
           <text id="/data/init/primary_phone_owner_other:label">
             <value>Tafadhali taja ni nambari ya nani?</value>
           </text>
+          <text id="/data/init/register_client_note_read_only:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali endelea na usajili wa mteja katika app ya Kadi ya Matibabu, na tumia app ya Jamii ni Afya kuskan Kadi ya Matibabu mpya uliyompatia mteja. &lt;/span&gt;</value>
+          </text>
+          <text id="/data/init/resigter_client_note_manually:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Nakili kitambulisho chake cha Kadi ya Matibabu na weka kwenye sehemu inayofuata.&lt;/span&gt;</value>
+          </text>
+		  <text id="/data/init/kadi_ya_matibabu_id_text_field:hint">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_text_field:jr:constraintMsg">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/init/kadi_ya_matibabu_id_text_field:label">
+            <value>Kadi ya matibabu</value>
+          </text>
+          <text id="/data/init/scan_kym_id_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kabla ya kuskani kadi ya matibabu, tafadhali hakikisha kuwa kadi hiyo ni ya mteja. Angalia jina lililo nyuma ya kadi ili kuhakikisha kuwa ni jina la mteja. Ikiwa hakuna jina, tumia app ya Kadi ya Matibabu kuskani kadi na kuthibitisha taarifa za mteja. Baada ya kuthibitisha, unaweza kuendelea na uskani wa kadi katika app ya Jamii ni Afya.&lt;/span&gt;</value>
+          </text>
           <text id="/data/init/secondary_phone_contact:hint">
             <value>Unaweza acha pengo usijijaze chochote kama kuna nambari moja tu ya mawasiliano kwenye kaya hii</value>
           </text>
@@ -636,7 +776,7 @@
             <value>Ingiza jinsia yake:</value>
           </text>
           <text id="/data/init/sex_contact_note:label">
-            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee,jaza wewe (CHV). &lt;/span&gt;</value>
           </text>
           <text id="/data/init:label">
             <value>Tarifa za mawasiliano za kaya</value>
@@ -650,6 +790,9 @@
           <text id="/data/inputs/user/name:label">
             <value>-</value>
           </text>
+          <text id="/data/inputs/user/project:label">
+            <value>-</value>
+          </text>
           <text id="/data/inputs/user:label">
             <value>-</value>
           </text>
@@ -658,10 +801,16 @@
           </text>
           <text id="/data/intro_note:label">
             <value>&lt;span style="color:#f58a1f"&gt;Fomu hii inatumika kusajili nyumba iliyokubaliwa kushiriki katika mpango wa jamii ni afya. Kumbuka, kama umeenda kwenye nyumba na hawakukubali kushiriki basi inabidi utoke kwenye fomu hii kwa kubonyeza kitufe "X" bila ya kuituma. Ukienda kwenye nyumba, tafadhali jaribu kuzungumza na Mkuu wa familia kwa kumueleza wewe ni nani na unafanya shughuli zipi, Pia Jaribu kumuomba ruhusa ya kushirikisha familia yake kwenye mpango huu. Baada ya hapo, unaweza kuomba kuchagua mtu anaeweza kuratibu na kuwasiliana na wewe mara kwa mara ndani ya familia hii na kisha uanze kusajili kila mtu kwenye nyumba. Kama mkuu wa familia hatapatikana ni sawa kuendelea na kisha kujaribu kumtafuta muda mwengine. Kumbuka ni muhimu sana kumpata mkuu wa familia kabla ya kusajili nyumba yake.&lt;/span&gt;
-
-&lt;span style="color:#f58a1f"&gt;Taja jina lako na shehia.&lt;/span&gt;
-
-&lt;span style="display:block;padding-left:1em"&gt;Mimi ni mhudumu wa afya ya jamii. Nafanya kazi katika mpango wa taifa wa afya ya jamii chini ya wizara ya afya Zanzibar. Kila eneo sasa litakua na mhudumu wa afya ya jamii ambae atashughulika afya ya mama mjamzito, mama aliyejifungua, na watoto chini ya miaka mitano katika masuala ya lishe na makuzi ya mtoto.&lt;/span&gt;</value>
+ 
+ &lt;span style="color:#f58a1f"&gt;Taja jina lako na shehia.&lt;/span&gt;
+ 
+ &lt;span style="display:block;padding-left:1em"&gt;Mimi ni mhudumu wa afya ya jamii. Nafanya kazi katika mpango wa taifa wa afya ya jamii chini ya wizara ya afya Zanzibar. Kila eneo sasa litakua na mhudumu wa afya ya jamii ambae atashughulika afya ya mama mjamzito, mama aliyejifungua, na watoto chini ya miaka mitano katika masuala ya lishe na makuzi ya mtoto.&lt;/span&gt;</value>
+          </text>
+          <text id="/data/kym_message/kym_message_note:label">
+            <value>Kadi ya Matibabu ni mpango wa kitaifa ambao ulipitishwa na serikali ya Zanzibar. Ikimaanisha kuwa kila Mzanibari aandikishwe, awe na Kadi Ya Madibabu na aitumie kila anapopata huduma kwenye kituo cha afya. Kadi hii hukusanya taarifa zote za matibabu ambazo mgonjwa amepokea, hivyo kuwezesha upatikanaji wa taarifa muhimu kwa matibabu ya baadaye. Aidha, inaiwezesha Serikali kufuatilia matumizi ya rasilimali za afya kama vile vifaa tiba na dawa, hivyo kusaidia kupanga mipango na bajeti bora za kuboresha huduma za afya. Kadi ya Matibabu pia huongeza uwazi na ufanisi wa ukusanyaji wa taarifa za afya, huduma bora za afya ambazo ni muhimu kwa maendeleo ya wananchi na sekta ya afya kwa ujumla.</value>
+          </text>
+          <text id="/data/kym_message:label">
+            <value>Kuhusu Kadi ya Matibabu</value>
           </text>
           <text id="/data/other_members_registration_note:label">
             <value>Sasa kwa vile nishasajili mtu wa karibu kwa ajili ya mawasiliano na mimi kwenye nyumba hii, nitaendelea kusajili kila mtu anaeishi nyumbani kwako.</value>
@@ -671,6 +820,48 @@
           </text>
           <text id="/data/repeat/child/age_estimate:label">
             <value>Je kwa makadirio <output value=" /data/repeat/child/first_name_c "/> ana miaka mingapi?</value>
+          </text>
+		   <text id="/data/repeat/child/is_client_in_kym_app_repeat/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/repeat/child/is_client_in_kym_app_repeat/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/data/repeat/child/is_client_in_kym_app_repeat:label">
+            <value>Je, mteja anapatikana kwenye app ya Kadi ya Matibabu?</value>
+          </text>
+		  <text id="/data/repeat/child/has_health_card_id_repeat/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/data/repeat/child/has_health_card_id_repeat/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/data/repeat/child/has_health_card_id_repeat:label">
+            <value>Je mteja ana kadi ya matibabu?</value>
+          </text>
+		   <text id="/data/repeat/child/kadi_ya_matibabu_id_read_only:hint">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id_read_only:jr:constraintMsg">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id_read_only:label">
+            <value>Kadi ya matibabu</value>
+          </text>
+          <text id="/data/repeat/child/barcode_repeat/action:label">
+            <value>-</value>
+          </text>
+          <text id="/data/repeat/child/barcode_repeat/android-app-inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/repeat/child/barcode_repeat/android-app-outputs/SCAN_RESULT:label">
+            <value>-</value>
+          </text>
+          <text id="/data/repeat/child/barcode_repeat/android-app-outputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/repeat/child/barcode_repeat:label">
+            <value>-</value>
           </text>
           <text id="/data/repeat/child/debug_note:label">
             <value>-</value>
@@ -702,6 +893,15 @@
           <text id="/data/repeat/child/hh_member_note:label">
             <value>_Sasa, tafadhali ingiza taarifa za mtu anayefuata katika kaya yako._</value>
           </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id:hint">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id:jr:constraintMsg">
+            <value>Kadi ya matibabu iwe na tarakimu 12</value>
+          </text>
+          <text id="/data/repeat/child/kadi_ya_matibabu_id:label">
+            <value>Kadi ya matibabu</value>
+          </text>
           <text id="/data/repeat/child/last_name:jr:constraintMsg">
             <value>Jaza jina la babu</value>
           </text>
@@ -720,6 +920,12 @@
           <text id="/data/repeat/child/parent:label">
             <value>-</value>
           </text>
+		  <text id="/data/repeat/child/register_client_note_read_only_repeat:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Tafadhali endelea na usajili wa mteja katika app ya Kadi ya Matibabu, na tumia app ya Jamii ni Afya kuskan Kadi ya Matibabu mpya uliyompatia mteja. &lt;/span&gt;</value>
+          </text>
+		  <text id="/data/repeat/child/resigter_client_note_manually_repeat:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Nakili kitambulisho chake cha Kadi ya Matibabu na weka kwenye sehemu inayofuata.&lt;/span&gt;</value>
+          </text>
           <text id="/data/repeat/child/return_child_note_20_or_above_days:label">
             <value>Baada ya usajili huu, nimeona kuwa una mtoto mwenye umri chini ya miaka 5 ambaye atafaidika na mpango huu wa taifa, kwa hivyo ningependa kurudi baadae kwa ajili ya kuangalia afya yake, lishe na Makuzi ya mtoto. Je una swali lolote kufikia hapa?</value>
           </text>
@@ -728,6 +934,9 @@
           </text>
           <text id="/data/repeat/child/return_women_note:label">
             <value>Nimeona kuwa <output value=" /data/repeat/child/first_name_c "/> yuko katika umri wa uzazi katika kaya yako. Ningeomba ridhaa yako kurudia ili kuja kuzungumza nae mambo muhimu ya afya kipindi cha ujauzito na baada ya kujifungua.</value>
+          </text>
+		  <text id="/data/repeat/child/scan_kym_id_note_repeat:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kabla ya kuskani kadi ya matibabu, tafadhali hakikisha kuwa kadi hiyo ni ya mteja. Angalia jina lililo nyuma ya kadi ili kuhakikisha kuwa ni jina la mteja. Ikiwa hakuna jina, tumia app ya Kadi ya Matibabu kuskani kadi na kuthibitisha taarifa za mteja. Baada ya kuthibitisha, unaweza kuendelea na uskani wa kadi katika app ya Jamii ni Afya.&lt;/span&gt;</value>
           </text>
           <text id="/data/repeat/child/sex/female:label">
             <value>Mwanamke</value>
@@ -765,7 +974,7 @@
         </translation>
       </itext>
       <instance>
-        <data id="contact:clinic:create" prefix="J1!contact:clinic:create!" delimiter="#" version="2024-03-19_23-14">
+        <data id="contact:clinic:create" prefix="J1!contact:clinic:create!" delimiter="#" version="2024-10-29 11-46">
           <inputs>
             <meta>
               <location>
@@ -779,6 +988,7 @@
               <contact_id/>
               <facility_id/>
               <name/>
+              <project/>
             </user>
           </inputs>
           <clinic>
@@ -803,6 +1013,8 @@
           <name/>
           <contact>
             <parent>PARENT</parent>
+            <kadi_ya_matibabu_id_read_only/>
+			<kadi_ya_matibabu_id/>
             <first_name/>
             <middle_name/>
             <last_name/>
@@ -821,11 +1033,11 @@
               <created_by_place_uuid/>
             </meta>
           </contact>
-          <covid19_intro>
-            <covid19_intro_note/>
-            <covid19_visit_reminder/>
-          </covid19_intro>
+          <project_c/>
           <intro_note/>
+          <kym_message>
+            <kym_message_note/>
+          </kym_message>
           <hh_member_count>
             <num_hh_members/>
             <hh_repeat_note/>
@@ -851,6 +1063,20 @@
             <age_contact_years/>
             <reproductive_age_c/>
             <contact_reproductive_age_note/>
+            <has_health_card_id/>
+            <scan_kym_id_note/>
+            <is_client_in_kym_app/>
+            <register_client_note_read_only/>
+            <barcode>
+              <action>com.google.zxing.client.android.SCAN</action>
+              <android-app-inputs/>
+              <android-app-outputs>
+                <SCAN_RESULT/>
+              </android-app-outputs>
+            </barcode>
+            <resigter_client_note_manually/>
+            <kadi_ya_matibabu_id_read_only/>
+			<kadi_ya_matibabu_id_text_field/>
           </init>
           <other_members_registration_note/>
           <repeat>
@@ -875,6 +1101,20 @@
               <yob/>
               <dob/>
               <temp_hh_member/>
+			  <has_health_card_id_repeat/>
+			  <scan_kym_id_note_repeat/>
+              <is_client_in_kym_app_repeat/>
+              <register_client_note_read_only_repeat/>
+              <resigter_client_note_manually_repeat/>
+              <barcode_repeat>
+                <action>com.google.zxing.client.android.SCAN</action>
+                <android-app-inputs/>
+                <android-app-outputs>
+                  <SCAN_RESULT/>
+                </android-app-outputs>
+              </barcode_repeat>
+			  <kadi_ya_matibabu_id_read_only/>
+              <kadi_ya_matibabu_id/>
               <date_of_birth/>
               <date_of_birth_c/>
               <is_exact_dob_in_range/>
@@ -916,11 +1156,15 @@
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/user/project" type="string"/>
       <bind nodeset="/data/contact_id" type="string" calculate="../inputs/user/contact_id"/>
       <bind nodeset="/data/facility_id" type="string" calculate="../inputs/user/facility_id"/>
       <bind nodeset="/data/name" type="string" calculate="../inputs/user/name"/>
       <bind nodeset="/data/contact/parent" type="string" calculate="."/>
-      <bind nodeset="/data/contact/first_name" type="string" calculate=" /data/init/first_name_contact " required="true()"/>
+      <bind nodeset="/data/contact/kadi_ya_matibabu_id_read_only" type="string" calculate="../../init/barcode/android-app-outputs/SCAN_RESULT" relevant="selected( /data/init/has_health_card_id ,&quot;yes&quot;) or
+(selected( /data/init/has_health_card_id ,&quot;no&quot;) and selected( /data/init/is_client_in_kym_app ,&quot;no&quot;))"/>
+	  <bind nodeset="/data/contact/kadi_ya_matibabu_id" type="string" calculate=" /data/init/kadi_ya_matibabu_id_text_field " relevant="(selected( /data/init/has_health_card_id ,&quot;no&quot;) and selected( /data/init/is_client_in_kym_app ,&quot;yes&quot;))"/>
+      <bind nodeset="/data/contact/first_name" type="string" required="true()" calculate=" /data/init/first_name_contact "/>
       <bind nodeset="/data/contact/middle_name" type="string" calculate=" /data/init/middle_name_contact "/>
       <bind nodeset="/data/contact/last_name" type="string" calculate=" /data/init/last_name_contact "/>
       <bind nodeset="/data/contact/name" type="string" calculate=" /data/init/name_contact "/>
@@ -935,40 +1179,52 @@
       <bind nodeset="/data/contact/meta/created_by" type="string" calculate="../../../name"/>
       <bind nodeset="/data/contact/meta/created_by_person_uuid" type="string" calculate="../../../contact_id"/>
       <bind nodeset="/data/contact/meta/created_by_place_uuid" type="string" calculate="../../../facility_id"/>
-      <bind nodeset="/data/covid19_intro/covid19_intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/covid19_intro/covid19_visit_reminder" readonly="true()" type="string"/>
+      <bind nodeset="/data/project_c" type="string" calculate="../inputs/user/project"/>
       <bind nodeset="/data/intro_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/hh_member_count/num_hh_members" type="int" constraint=". &gt; 0 and . &lt;= 30" jr:constraintMsg="jr:itext('/data/hh_member_count/num_hh_members:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/kym_message" relevant=" /data/project_c =&quot;kadiyamatibabu&quot;"/>
+      <bind nodeset="/data/kym_message/kym_message_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/hh_member_count/num_hh_members" type="int" jr:constraintMsg="jr:itext('/data/hh_member_count/num_hh_members:jr:constraintMsg')" required="true()" constraint=". &gt; 0 and . &lt;= 30"/>
       <bind nodeset="/data/hh_member_count/hh_repeat_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/init/first_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/init/first_name_contact:jr:constraintMsg')" required="true()"/>
-      <bind nodeset="/data/init/middle_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/init/middle_name_contact:jr:constraintMsg')" required="true()"/>
-      <bind nodeset="/data/init/last_name_contact" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/init/last_name_contact:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/init/first_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/first_name_contact:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/init/middle_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/middle_name_contact:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/init/last_name_contact" type="string" jr:constraintMsg="jr:itext('/data/init/last_name_contact:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
       <bind nodeset="/data/init/name_contact" type="string" calculate="concat( /data/init/first_name_contact ,&quot; &quot;, /data/init/middle_name_contact ,&quot; &quot;, /data/init/last_name_contact )"/>
       <bind nodeset="/data/init/sex_contact_note" readonly="true()" type="string"/>
       <bind nodeset="/data/init/sex_contact" type="select1" required="true()"/>
       <bind nodeset="/data/init/exact_dob_known_contact" type="select1" required="true()"/>
-      <bind nodeset="/data/init/age_estimate_contact" type="int" constraint=". &gt;= 12 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')" required="true()" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;"/>
+      <bind nodeset="/data/init/age_estimate_contact" type="int" jr:constraintMsg="jr:itext('/data/init/age_estimate_contact:jr:constraintMsg')" relevant=" /data/init/exact_dob_known_contact  = &quot;no&quot;" required="true()" constraint=". &gt;= 12 and . &lt;= 100"/>
       <bind nodeset="/data/init/yob_contact" type="string" calculate="format-date-time(today(),&quot;%Y&quot;) - ../age_estimate_contact"/>
-      <bind nodeset="/data/init/dob_contact" type="date" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" required="true()" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)"/>
-      <bind nodeset="/data/init/primary_phone_contact" type="string" constraint="regex(.,'^[0oO][0-9oO]{9}$')" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/init/dob_contact" type="date" jr:constraintMsg="jr:itext('/data/init/dob_contact:jr:constraintMsg')" relevant="selected( /data/init/exact_dob_known_contact ,&quot;yes&quot;)" required="true()" constraint=". &lt;= date-time(decimal-date-time(today() - (12 * 365.25))) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))"/>
+      <bind nodeset="/data/init/primary_phone_contact" type="string" jr:constraintMsg="jr:itext('/data/init/primary_phone_contact:jr:constraintMsg')" required="true()" constraint="regex(.,'^[0oO][0-9oO]{9}$')"/>
       <bind nodeset="/data/init/correct_primary_phone_number" type="string" calculate="translate (translate ( /data/init/primary_phone_contact , &quot;o&quot;,&quot;0&quot;), &quot;O&quot;,&quot;0&quot;)"/>
       <bind nodeset="/data/init/primary_phone_owner" type="select1" required="true()"/>
-      <bind nodeset="/data/init/primary_phone_owner_other" type="string" required="true()" relevant="selected( /data/init/primary_phone_owner ,&quot;other&quot;)"/>
-      <bind nodeset="/data/init/secondary_phone_contact" type="string" constraint="regex(.,'^[0oO][0-9oO]{9}$')" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')"/>
+      <bind nodeset="/data/init/primary_phone_owner_other" type="string" relevant="selected( /data/init/primary_phone_owner ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/data/init/secondary_phone_contact" type="string" jr:constraintMsg="jr:itext('/data/init/secondary_phone_contact:jr:constraintMsg')" constraint="regex(.,'^[0oO][0-9oO]{9}$')"/>
       <bind nodeset="/data/init/correct_secondary_phone_number" type="string" calculate="translate (translate ( /data/init/secondary_phone_contact , &quot;o&quot;,&quot;0&quot;), &quot;O&quot;,&quot;0&quot;)"/>
       <bind nodeset="/data/init/dob_contact_calc" type="string" calculate="format-date(if(../dob_contact != '', ../dob_contact,concat(../yob_contact, '-01-01')), '%Y-%m-%d')"/>
       <bind nodeset="/data/init/age_contact_years" type="string" calculate="(decimal-date-time(today()) - decimal-date-time( /data/init/dob_contact_calc )) div 365"/>
       <bind nodeset="/data/init/reproductive_age_c" type="string" calculate="if(selected( /data/init/sex_contact ,&quot;female&quot;) and  /data/init/age_contact_years  &gt;= 15 and  /data/init/age_contact_years  &lt;= 49,1,0)"/>
       <bind nodeset="/data/init/contact_reproductive_age_note" readonly="true()" type="string" relevant=" /data/init/reproductive_age_c =1"/>
+      <bind nodeset="/data/init/has_health_card_id" type="select1" relevant=" /data/project_c =&quot;kadiyamatibabu&quot;" required="true()"/>
+      <bind nodeset="/data/init/scan_kym_id_note" readonly="true()" type="string" relevant="selected( /data/init/has_health_card_id ,&quot;yes&quot;)"/>
+      <bind nodeset="/data/init/is_client_in_kym_app" type="select1" relevant="selected( /data/init/has_health_card_id ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/data/init/register_client_note_read_only" readonly="true()" type="string" relevant="(selected( /data/init/has_health_card_id ,&quot;no&quot;) and selected( /data/init/is_client_in_kym_app ,&quot;no&quot;))"/>
+      <bind nodeset="/data/init/barcode" relevant="selected( /data/init/has_health_card_id ,&quot;yes&quot;) or (selected( /data/init/has_health_card_id ,&quot;no&quot;) and selected( /data/init/is_client_in_kym_app ,&quot;no&quot;))"/>
+      <bind nodeset="/data/init/barcode/action" type="string"/>
+      <bind nodeset="/data/init/barcode/android-app-outputs/SCAN_RESULT" type="string"/>
+      <bind nodeset="/data/init/resigter_client_note_manually" readonly="true()" type="string" relevant="selected( /data/init/has_health_card_id ,&quot;no&quot;) and selected( /data/init/is_client_in_kym_app ,&quot;yes&quot;)"/>
+      <bind nodeset="/data/init/kadi_ya_matibabu_id_read_only" readonly="true()" type="string" jr:constraintMsg="jr:itext('/data/init/kadi_ya_matibabu_id_read_only:jr:constraintMsg')" relevant="selected( /data/init/has_health_card_id ,&quot;yes&quot;) or
+ (selected( /data/init/has_health_card_id ,&quot;no&quot;) and selected( /data/init/is_client_in_kym_app ,&quot;no&quot;))" calculate="../barcode/android-app-outputs/SCAN_RESULT" constraint="regex(., '^\d{12}$')"/>
+ <bind nodeset="/data/init/kadi_ya_matibabu_id_text_field" readonly="false()" type="string" jr:constraintMsg="jr:itext('/data/init/kadi_ya_matibabu_id_text_field:jr:constraintMsg')" relevant=" /data/project_c =&quot;kadiyamatibabu&quot; and  selected( /data/init/has_health_card_id ,&quot;no&quot;) and selected( /data/init/is_client_in_kym_app ,&quot;yes&quot;)" constraint="regex(., '^\d{12}$')"/>
       <bind nodeset="/data/other_members_registration_note" readonly="true()" type="string" relevant=" /data/hh_member_count/num_hh_members &gt;1"/>
       <bind nodeset="/data/repeat" relevant=" /data/hh_member_count/num_hh_members &gt;1"/>
       <bind nodeset="/data/repeat/child_count" type="string" readonly="true()" calculate=" /data/hh_member_count/num_hh_members -1"/>
       <bind nodeset="/data/repeat/child/hh_member_note" readonly="true()" type="string"/>
       <bind nodeset="/data/repeat/child/type" type="string"/>
       <bind nodeset="/data/repeat/child/parent" type="string" calculate="."/>
-      <bind nodeset="/data/repeat/child/first_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/repeat/child/first_name:jr:constraintMsg')" required="true()"/>
-      <bind nodeset="/data/repeat/child/middle_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/repeat/child/middle_name:jr:constraintMsg')" required="true()"/>
-      <bind nodeset="/data/repeat/child/last_name" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2" jr:constraintMsg="jr:itext('/data/repeat/child/last_name:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/repeat/child/first_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/first_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/repeat/child/middle_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/middle_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
+      <bind nodeset="/data/repeat/child/last_name" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/last_name:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 2"/>
       <bind nodeset="/data/repeat/child/first_name_c" type="string" calculate="../first_name"/>
       <bind nodeset="/data/repeat/child/middle_name_c" type="string" calculate="../middle_name"/>
       <bind nodeset="/data/repeat/child/last_name_c" type="string" calculate="../last_name"/>
@@ -978,10 +1234,22 @@
       <bind nodeset="/data/repeat/child/sex_c" type="string" calculate="../sex"/>
       <bind nodeset="/data/repeat/child/exact_dob_known" type="select1" required="true()"/>
       <bind nodeset="/data/repeat/child/exact_dob_known_c" type="string" calculate="../exact_dob_known"/>
-      <bind nodeset="/data/repeat/child/age_estimate" type="int" constraint=". &gt;= 5 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')" required="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;"/>
+      <bind nodeset="/data/repeat/child/age_estimate" type="int" jr:constraintMsg="jr:itext('/data/repeat/child/age_estimate:jr:constraintMsg')" relevant=" /data/repeat/child/exact_dob_known_c =&quot;no&quot;" required="true()" constraint=". &gt;= 5 and . &lt;= 100"/>
       <bind nodeset="/data/repeat/child/yob" type="string" calculate="if(../age_estimate != &quot;&quot;, format-date-time(today(),&quot;%Y&quot;) - ../age_estimate, 1900)"/>
-      <bind nodeset="/data/repeat/child/dob" type="date" constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')" required="true()" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;"/>
+      <bind nodeset="/data/repeat/child/dob" type="date" jr:constraintMsg="jr:itext('/data/repeat/child/dob:jr:constraintMsg')" relevant=" /data/repeat/child/exact_dob_known_c =&quot;yes&quot;" required="true()" constraint="( /data/repeat/child/exact_dob_known_c =&quot;yes&quot; and . &lt;= date-time(decimal-date-time(today())) and . &gt;= date-time(decimal-date-time(today() - (100 * 365.25))))"/>
       <bind nodeset="/data/repeat/child/temp_hh_member" type="select1" required="true()"/>
+	   <bind nodeset="/data/repeat/child/has_health_card_id_repeat" type="select1" required="true()" relevant=" /data/project_c =&quot;kadiyamatibabu&quot;"/>
+      <bind nodeset="/data/repeat/child/scan_kym_id_note_repeat" readonly="true()" type="string" relevant="selected( /data/repeat/child/has_health_card_id_repeat ,&quot;yes&quot;)"/>
+      <bind nodeset="/data/repeat/child/is_client_in_kym_app_repeat" type="select1" required="true()" relevant="selected( /data/repeat/child/has_health_card_id_repeat ,&quot;no&quot;)"/>
+      <bind nodeset="/data/repeat/child/register_client_note_read_only_repeat" readonly="true()" type="string" relevant="(selected( /data/repeat/child/has_health_card_id_repeat ,&quot;no&quot;) and selected( /data/repeat/child/is_client_in_kym_app_repeat ,&quot;no&quot;))"/>
+      <bind nodeset="/data/repeat/child/resigter_client_note_manually_repeat" readonly="true()" type="string" relevant="selected( /data/repeat/child/has_health_card_id_repeat ,&quot;no&quot;) and selected( /data/repeat/child/is_client_in_kym_app_repeat ,&quot;yes&quot;)"/>
+       <bind nodeset="/data/repeat/child/barcode_repeat" relevant="selected( /data/repeat/child/has_health_card_id_repeat ,&quot;yes&quot;) or 
+(selected( /data/repeat/child/has_health_card_id_repeat ,&quot;yes&quot;) and selected( /data/repeat/child/is_client_in_kym_app_repeat ,&quot;no&quot;))"/>
+      <bind nodeset="/data/repeat/child/barcode_repeat/action" type="string"/>
+      <bind nodeset="/data/repeat/child/barcode_repeat/android-app-outputs/SCAN_RESULT" type="string"/>
+	   <bind nodeset="/data/repeat/child/kadi_ya_matibabu_id_read_only" readonly="true()" type="string" relevant="selected( /data/repeat/child/has_health_card_id_repeat ,&quot;yes&quot;) or 
+(selected( /data/repeat/child/has_health_card_id_repeat ,&quot;no&quot;) and selected( /data/repeat/child/is_client_in_kym_app_repeat ,&quot;no&quot;))" constraint="regex(., '^\d{12}$')" jr:constraintMsg="jr:itext('/data/repeat/child/kadi_ya_matibabu_id_read_only:jr:constraintMsg')" calculate="../barcode_repeat/android-app-outputs/SCAN_RESULT"/>
+      <bind nodeset="/data/repeat/child/kadi_ya_matibabu_id" readonly="false()" type="string" jr:constraintMsg="jr:itext('/data/repeat/child/kadi_ya_matibabu_id:jr:constraintMsg')" relevant="(selected( /data/repeat/child/has_health_card_id_repeat ,&quot;no&quot;) and selected( /data/repeat/child/is_client_in_kym_app_repeat ,&quot;yes&quot;))" constraint="regex(., '^\d{12}$')"/>
       <bind nodeset="/data/repeat/child/date_of_birth" type="string" calculate="format-date(if(../dob != &quot;&quot;, ../dob,concat(../yob, &quot;-01-01&quot;)), '%Y-%m-%d')"/>
       <bind nodeset="/data/repeat/child/date_of_birth_c" type="string" calculate="../date_of_birth"/>
       <bind nodeset="/data/repeat/child/is_exact_dob_in_range" type="string" calculate="if((../date_of_birth_c &lt;= date-time(decimal-date-time(today())) and ../date_of_birth_c &gt;= date-time(decimal-date-time(today() - (100 * 365.25)))),1,0)"/>
@@ -999,14 +1267,14 @@
       <bind nodeset="/data/household_location/gps_note" readonly="true()" type="string"/>
       <bind nodeset="/data/household_location/gps" type="geopoint"/>
       <bind nodeset="/data/household_location/kitongoji_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/kitongoji" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/household_location/kitongoji" type="string" jr:constraintMsg="jr:itext('/data/household_location/kitongoji:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1"/>
       <bind nodeset="/data/household_location/house_number_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/house_number" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1" jr:constraintMsg="jr:itext('/data/household_location/house_number:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/household_location/house_number" type="string" jr:constraintMsg="jr:itext('/data/household_location/house_number:jr:constraintMsg')" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 1"/>
       <bind nodeset="/data/household_location/travel_time_note" readonly="true()" type="string"/>
-      <bind nodeset="/data/household_location/travel_time" type="int" constraint=". &gt; 0 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/household_location/travel_time" type="int" jr:constraintMsg="jr:itext('/data/household_location/travel_time:jr:constraintMsg')" required="true()" constraint=". &gt; 0 and . &lt;= 120"/>
       <bind nodeset="/data/household_location/means_of_travel_house_note" readonly="true()" type="string"/>
       <bind nodeset="/data/household_location/means_of_travel_house" type="select1" required="true()"/>
-      <bind nodeset="/data/household_location/means_of_travel_other" type="string" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')" required="true()" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)"/>
+      <bind nodeset="/data/household_location/means_of_travel_other" type="string" jr:constraintMsg="jr:itext('/data/household_location/means_of_travel_other:jr:constraintMsg')" relevant="selected( /data/household_location/means_of_travel_house ,&quot;other&quot;)" required="true()" constraint="string-length(translate(.,&quot; &quot;,&quot;&quot;)) &gt;= 3"/>
       <bind nodeset="/data/end_registration_note" readonly="true()" type="string"/>
       <bind nodeset="/data/clinic/parent" type="string" calculate="."/>
       <bind nodeset="/data/clinic/name" type="string" calculate="concat(../../contact/first_name, &quot; &quot;, ../../contact/middle_name, &quot; &quot;, ../../contact/last_name, &quot; - &quot;, ../../household_location/house_number )"/>
@@ -1036,20 +1304,20 @@
         <input ref="/data/inputs/user/name">
           <label ref="jr:itext('/data/inputs/user/name:label')"/>
         </input>
+        <input ref="/data/inputs/user/project">
+          <label ref="jr:itext('/data/inputs/user/project:label')"/>
+        </input>
       </group>
-    </group>
-    <group appearance="field-list" ref="/data/covid19_intro">
-      <label ref="jr:itext('/data/covid19_intro:label')"/>
-      <input ref="/data/covid19_intro/covid19_intro_note">
-        <label ref="jr:itext('/data/covid19_intro/covid19_intro_note:label')"/>
-      </input>
-      <input ref="/data/covid19_intro/covid19_visit_reminder">
-        <label ref="jr:itext('/data/covid19_intro/covid19_visit_reminder:label')"/>
-      </input>
     </group>
     <input ref="/data/intro_note">
       <label ref="jr:itext('/data/intro_note:label')"/>
     </input>
+    <group ref="/data/kym_message">
+      <label ref="jr:itext('/data/kym_message:label')"/>
+      <input ref="/data/kym_message/kym_message_note">
+        <label ref="jr:itext('/data/kym_message/kym_message_note:label')"/>
+      </input>
+    </group>
     <group ref="/data/hh_member_count">
       <input ref="/data/hh_member_count/num_hh_members">
         <label ref="jr:itext('/data/hh_member_count/num_hh_members:label')"/>
@@ -1133,11 +1401,59 @@
       <input ref="/data/init/contact_reproductive_age_note">
         <label ref="jr:itext('/data/init/contact_reproductive_age_note:label')"/>
       </input>
+      <select1 ref="/data/init/has_health_card_id">
+        <label ref="jr:itext('/data/init/has_health_card_id:label')"/>
+        <item>
+          <label ref="jr:itext('/data/init/has_health_card_id/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/init/has_health_card_id/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/data/init/scan_kym_id_note">
+        <label ref="jr:itext('/data/init/scan_kym_id_note:label')"/>
+      </input>
+      <select1 ref="/data/init/is_client_in_kym_app">
+        <label ref="jr:itext('/data/init/is_client_in_kym_app:label')"/>
+        <item>
+          <label ref="jr:itext('/data/init/is_client_in_kym_app/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/data/init/is_client_in_kym_app/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/data/init/register_client_note_read_only">
+        <label ref="jr:itext('/data/init/register_client_note_read_only:label')"/>
+      </input>
+      <group appearance="android-app-launcher field-list" ref="/data/init/barcode">
+        <input appearance="hidden" ref="/data/init/barcode/action"/>
+        <group appearance="android-app-inputs" ref="/data/init/barcode/android-app-inputs"/>
+        <group appearance="android-app-outputs" ref="/data/init/barcode/android-app-outputs">
+          <input appearance="hidden" ref="/data/init/barcode/android-app-outputs/SCAN_RESULT">
+            <label ref="jr:itext('/data/init/barcode/android-app-outputs/SCAN_RESULT:label')"/>
+          </input>
+      </group>
+      </group>
+      <input ref="/data/init/resigter_client_note_manually">
+        <label ref="jr:itext('/data/init/resigter_client_note_manually:label')"/>
+      </input>
+	  <input appearance="number" ref="/data/init/kadi_ya_matibabu_id_text_field">
+        <label ref="jr:itext('/data/init/kadi_ya_matibabu_id_text_field:label')"/>
+        <hint ref="jr:itext('/data/init/kadi_ya_matibabu_id_text_field:hint')"/>
+      </input>
+      <input appearance="number" ref="/data/init/kadi_ya_matibabu_id_read_only">
+        <label ref="jr:itext('/data/init/kadi_ya_matibabu_id_read_only:label')"/>
+        <hint ref="jr:itext('/data/init/kadi_ya_matibabu_id_read_only:hint')"/>
+      </input>
       <group appearance="field-list" ref="/data/contact">
         <input appearance="hidden" ref="/data/contact/parent"/>
         <group ref="/data/contact/meta"/>
-        </group>
       </group>
+    </group>
     <input ref="/data/other_members_registration_note">
       <label ref="jr:itext('/data/other_members_registration_note:label')"/>
     </input>
@@ -1202,6 +1518,54 @@
               <value>temporary</value>
             </item>
           </select1>
+		  <select1 ref="/data/repeat/child/has_health_card_id_repeat">
+            <label ref="jr:itext('/data/repeat/child/has_health_card_id_repeat:label')"/>
+            <item>
+              <label ref="jr:itext('/data/repeat/child/has_health_card_id_repeat/yes:label')"/>
+              <value>yes</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/repeat/child/has_health_card_id_repeat/no:label')"/>
+              <value>no</value>
+            </item>
+          </select1>
+		  <input ref="/data/repeat/child/scan_kym_id_note_repeat">
+            <label ref="jr:itext('/data/repeat/child/scan_kym_id_note_repeat:label')"/>
+          </input>
+		  <select1 ref="/data/repeat/child/is_client_in_kym_app_repeat">
+            <label ref="jr:itext('/data/repeat/child/is_client_in_kym_app_repeat:label')"/>
+            <item>
+              <label ref="jr:itext('/data/repeat/child/is_client_in_kym_app_repeat/yes:label')"/>
+              <value>yes</value>
+            </item>
+            <item>
+              <label ref="jr:itext('/data/repeat/child/is_client_in_kym_app_repeat/no:label')"/>
+              <value>no</value>
+            </item>
+          </select1>
+          <input ref="/data/repeat/child/register_client_note_read_only_repeat">
+            <label ref="jr:itext('/data/repeat/child/register_client_note_read_only_repeat:label')"/>
+          </input>
+          <input ref="/data/repeat/child/resigter_client_note_manually_repeat">
+            <label ref="jr:itext('/data/repeat/child/resigter_client_note_manually_repeat:label')"/>
+          </input>
+          <group appearance="android-app-launcher field-list" ref="/data/repeat/child/barcode_repeat">
+            <input appearance="hidden" ref="/data/repeat/child/barcode_repeat/action"/>
+            <group appearance="android-app-inputs" ref="/data/repeat/child/barcode_repeat/android-app-inputs"/>
+            <group appearance="android-app-outputs" ref="/data/repeat/child/barcode_repeat/android-app-outputs">
+              <input appearance="hidden" ref="/data/repeat/child/barcode_repeat/android-app-outputs/SCAN_RESULT">
+                <label ref="jr:itext('/data/repeat/child/barcode_repeat/android-app-outputs/SCAN_RESULT:label')"/>
+              </input>
+            </group>
+          </group>
+		   <input appearance="number" ref="/data/repeat/child/kadi_ya_matibabu_id_read_only">
+            <label ref="jr:itext('/data/repeat/child/kadi_ya_matibabu_id_read_only:label')"/>
+            <hint ref="jr:itext('/data/repeat/child/kadi_ya_matibabu_id_read_only:hint')"/>
+          </input>
+          <input appearance="number" ref="/data/repeat/child/kadi_ya_matibabu_id">
+            <label ref="jr:itext('/data/repeat/child/kadi_ya_matibabu_id:label')"/>
+            <hint ref="jr:itext('/data/repeat/child/kadi_ya_matibabu_id:hint')"/>
+          </input>
           <input ref="/data/repeat/child/return_child_note_20_or_above_days">
             <label ref="jr:itext('/data/repeat/child/return_child_note_20_or_above_days:label')"/>
           </input>

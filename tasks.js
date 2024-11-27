@@ -1028,7 +1028,9 @@ module.exports = [
         end:2,
       }
     ]
-  }/*,
+  }, 
+  
+  /*,
   // This won't work on < 3.14
   {
     name: 'chw-activity-task-1',

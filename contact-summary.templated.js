@@ -354,7 +354,10 @@ module.exports = {
     },
     { appliesToType: 'person', appliesIf: function () { return (extras.currentlyPregnant() && !extras.isContactDeceased() && !extras.isContactMuted()); }, 
       label: 'contact.is_pregnant', icon: 'pregnancy-1' 
-    }
+    }, 
+    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1] && (contact.kadi_ya_matibabu_id || contact.kadi_ya_matibabu_id_read_only); }, 
+      label: 'contact.kadi_ya_matibabu', value: (contact.kadi_ya_matibabu_id || contact.kadi_ya_matibabu_id_read_only), width: 4 
+    },
   ],
 
   cards:cards 
