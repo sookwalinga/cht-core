@@ -32,7 +32,6 @@ module.exports = {
     let previousMonthName = months[NOW.getMonth()-1];
     if (CURRENT_MONTH === 0){
       previousMonthName = 'December';
-      return previousMonthName;
     }
     return[currentMonthName,previousMonthName];
   },
