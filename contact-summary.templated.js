@@ -50,9 +50,7 @@ const cards = [
     label: 'contact.profile.performance.p4p.month' + previous_month_name,
     appliesToType: 'person',
     appliesIf: function () { 
-      if (typeof targetDoc !== 'undefined'){
-        return contact.projects && contact.projects.includes('jna');
-      }
+      return contact.role === 'chv' || contact.role === 'chw';
     },    
     fields: [
       {
@@ -86,8 +84,7 @@ const cards = [
     label: 'contact.profile.performance.p4p.month' + current_month_name,
     appliesToType: 'person',
     appliesIf: function () { 
-      if (typeof targetDoc !== 'undefined'){
-        return contact.role === 'chw' || contact.role === 'chv';}},
+      return contact.role === 'chw' || contact.role === 'chv';},
     fields: [
       {
         label: 'contact.profile.performance.p4p.enrollment_amount',
