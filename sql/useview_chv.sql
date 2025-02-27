@@ -1,6 +1,7 @@
 ------------------------------------------------------------
 -- Materialized view to show table of all CHVs.
 ------------------------------------------------------------
+SELECT deps_save_and_drop_dependencies('public'::VARCHAR, 'useview_chv'::VARCHAR);
 DROP MATERIALIZED VIEW IF EXISTS useview_chv;
 
 CREATE MATERIALIZED VIEW useview_chv AS
@@ -36,3 +37,4 @@ CREATE UNIQUE INDEX IF NOT EXISTS chv_reported_date_uuid ON useview_chv USING bt
 -- Permissions
 ALTER MATERIALIZED VIEW useview_chv OWNER TO full_access;
 GRANT SELECT ON useview_chv TO dtree, periscope;
+SELECT deps_restore_dependencies('public'::VARCHAR, 'useview_chv'::VARCHAR);
