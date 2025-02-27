@@ -290,12 +290,14 @@ CREATE MATERIALIZED VIEW useview_infant_child AS
     nullif(coalesce(doc #>> '{fields,problem_solving,concern_leave_child}',
                     doc #>> '{fields,problem_solving_new,concern_leave_child_new}'),
                      '')::BOOLEAN AS concern_leave_child,
-    nullif(coalesce(doc #>> '{fields,problem_solving,days_left_alone_more_than_1h}', 
-                    doc #>> '{fields,problem_solving_new,days_left_alone_more_than_1h}'),
-                    '')::INTEGER AS days_left_alone_more_than_1h,
-    nullif(coalesce(doc #>> '{fields,problem_solving,days_in_care_of_other_child_more_than_1h}', 
-                    doc #>> '{fields,problem_solving_new,days_in_care_of_other_child_more_than_1h}'),
-                    '')::INTEGER AS days_in_care_of_other_child_more_than_1h,
+    coalesce(
+            (nullif(doc #>> '{fields,problem_solving,days_left_alone_more_than_1h}','')::INT > 0)::INTEGER, 
+            (nullif(doc #>> '{fields,problem_solving_new,days_left_alone_more_than_1h}', '')::BOOLEAN)::INTEGER
+        ) AS was_child_left_alone_more_than_1h,
+    coalesce(
+            (nullif(doc #>> '{fields,problem_solving,days_in_care_of_other_child_more_than_1h}','')::INT > 0)::INTEGER, 
+            (nullif(doc #>> '{fields,problem_solving_new,days_in_care_of_other_child_more_than_1h}', '')::BOOLEAN)::INT
+        ) AS was_child_left_in_care_of_other_child_more_than_1h,
     nullif(coalesce(doc #>> '{fields,problem_solving,concern_harsh_treatment}',
                     doc #>> '{fields,problem_solving_new,concern_harsh_treatment_new}'),
                    '')::BOOLEAN AS concern_harsh_treatment,
