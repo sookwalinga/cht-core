@@ -1,0 +1,12 @@
+{
+    "icon": "tb-treatment-outcome",
+    "title": {
+        "en": "About NTD", 
+        "sw": "Kuhusu NTD"
+    },
+    "context": {
+    "person": false,
+    "place": true,
+    "expression": "contact && contact.type === 'clinic' && user.parent.type === 'health_center' && summary.show_new_modules"
+  }
+}

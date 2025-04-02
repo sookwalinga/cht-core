@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Malaria Visit"
+    },
+    {
+      "locale": "sw",
+      "content": "Tembeleo la Malaria"
+    }
+  ],
+  "icon": "malaria",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "summary.is_active_household_member && user.parent.type === 'health_center' && summary.show_new_modules"
+  }
+}

@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>TB Education</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/tb_education/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/tb_education/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/tb_education/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/tb_education/note_on_tb/important_note_on_tb:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/note_on_tb:label">
+            <value>Important Note on TB</value>
+          </text>
+          <text id="/tb_education/prevent_tb_spread/prevent_tb_spread_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/prevent_tb_spread:label">
+            <value>Prevent spread of TB</value>
+          </text>
+          <text id="/tb_education/question_for_chv/note_to_chv:label">
+            <value>Note to CHV</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_reached:jr:constraintMsg">
+            <value>Number must be between 0 and 100</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_reached:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_with_tb:jr:constraintMsg">
+            <value>Number must be between 0 and number of people reached</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_with_tb:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/question_for_chv/people_reached_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/tb_education/question_for_chv/tb_symptoms_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/tb_education/question_for_chv:label">
+            <value>Questions for CHV</value>
+          </text>
+          <text id="/tb_education/suggestion_for_chv/submit_form_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/suggestion_for_chv/take_sample_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/suggestion_for_chv:label">
+            <value>Suggestions for CHV</value>
+          </text>
+          <text id="/tb_education/tb_causes/tb_causes_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/tb_causes:label">
+            <value>Causes of TB</value>
+          </text>
+          <text id="/tb_education/tb_introduction/tb_intro:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/tb_introduction:label">
+            <value>TB Introduction</value>
+          </text>
+          <text id="/tb_education/tb_meaning/tb_meaning_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/tb_meaning:label">
+            <value>Meaning of TB</value>
+          </text>
+          <text id="/tb_education/tb_symptops/tb_symptoms_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/tb_symptops:label">
+            <value>TB Symptoms</value>
+          </text>
+          <text id="/tb_education/types_of_tb/types_of_tb_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/types_of_tb:label">
+            <value>Types of TB</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/tb_education/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_education/note_on_tb/important_note_on_tb:label">
+            <value>Kumbuka kwamba ugonjwa wa TB si wa kurogwa au kurithi
+Ugonjwa wa TB unatibika kwa dawa za hospitali</value>
+          </text>
+          <text id="/tb_education/note_on_tb:label">
+            <value>Tanbihi</value>
+          </text>
+          <text id="/tb_education/prevent_tb_spread/prevent_tb_spread_note:label">
+            <value>Njia ya kuzuia maambukizi:
+Kikohozi salama
+Kuepuka mikusanyiko ya watu wengi
+Kukaa sehemu inayopitisha upepo wa kutosha
+Kugundua wagonjwa na kuwatibu mapema</value>
+          </text>
+          <text id="/tb_education/prevent_tb_spread:label">
+            <value>Njia ya kuzuia maambukizi</value>
+          </text>
+          <text id="/tb_education/question_for_chv/note_to_chv:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kwa CHW:- Uliza kama kuna swali.&lt;/.span&gt;</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_reached:jr:constraintMsg">
+            <value>Idadi iwe baina ya 0 na 100</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_reached:label">
+            <value>Kwa kikao hiki umewafikia watu wangapi uliowapa elimu ya TB?</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_with_tb:jr:constraintMsg">
+            <value>Idadi iwe baina ya 0 na idadi ya watu waliofikiwa</value>
+          </text>
+          <text id="/tb_education/question_for_chv/num_people_with_tb:label">
+            <value>Kwa kikao hiki ni wangapi wana dalili za TB?</value>
+          </text>
+          <text id="/tb_education/question_for_chv/people_reached_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/tb_education/question_for_chv/tb_symptoms_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/tb_education/question_for_chv:label">
+            <value>Masuali kwa CHV</value>
+          </text>
+          <text id="/tb_education/suggestion_for_chv/submit_form_note:label">
+            <value>Tuma hii fomu ya elimu, alafu uendelee kuhudimia watu kwa huu mfumo upendavyo</value>
+          </text>
+          <text id="/tb_education/suggestion_for_chv/take_sample_note:label">
+            <value>Unapaswa kuchukua sampuli au kutoa rufaa. 
+Tuma hii fomu ya Elimu, alafu ufungue fomu ya uchunguzi ya kila mtu ili umchuguze vilivyo</value>
+          </text>
+          <text id="/tb_education/suggestion_for_chv:label">
+            <value>Ushauri kwa CHV</value>
+          </text>
+          <text id="/tb_education/tb_causes/tb_causes_note:label">
+            <value>Njia za maambukizi ni:
+Unaambukizwa kwa hewa wakati mtu anakohoa, kupiga chafya, kuongea, kuimba, kucheka.</value>
+          </text>
+          <text id="/tb_education/tb_causes:label">
+            <value>Njia za maambukizi</value>
+          </text>
+          <text id="/tb_education/tb_introduction/tb_intro:label">
+            <value>TB ni janga ya kitaifa ambayo inaathiri dunia ikiwemo Tanzania. 
+Huku Zanzibar wagonjwa wengi wa TB wanagundulikana kila mwaka.</value>
+          </text>
+          <text id="/tb_education/tb_introduction:label">
+            <value>Utangulizi wa TB</value>
+          </text>
+          <text id="/tb_education/tb_meaning/tb_meaning_note:label">
+            <value>TB ni nini? 
+TB ni ugonjwa sugu wa kuambukizwa
+Unasababishwa na vimelea wanaojulikana kama Mycobacterium Tuberculosis</value>
+          </text>
+          <text id="/tb_education/tb_meaning:label">
+            <value>Maana ya TB</value>
+          </text>
+          <text id="/tb_education/tb_symptops/tb_symptoms_note:label">
+            <value>Dalili za TB ni hizi: 
+Kukohoa mfululizo kwa wiki mbili au zaidi
+Kutoa makohozi yaliyochanganyika na damu, wiki mbili au zaidi
+Kupata homa za jioni, wiki mbili au zaidi
+Kupungua uzito au kukonda, wiki mbili au zaidi
+Kutoka jasho jingi nyakati za usiku, wiki mbili au zaidi
+Na dalili zinginezo
+
+Mtu akiwa na dalili moja au zaidi kunauwezekano mkubwa ana TB</value>
+          </text>
+          <text id="/tb_education/tb_symptops:label">
+            <value>Dalili za TB</value>
+          </text>
+          <text id="/tb_education/types_of_tb/types_of_tb_note:label">
+            <value>Aina za TB:
+TB ya mapafu
+TB ya nje ya mapafu</value>
+          </text>
+          <text id="/tb_education/types_of_tb:label">
+            <value>Aina za TB</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <tb_education id="tb_education" prefix="J1!tb_education!" delimiter="#" version="2019-05-11 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <tb_introduction>
+            <tb_intro/>
+          </tb_introduction>
+          <tb_meaning>
+            <tb_meaning_note/>
+          </tb_meaning>
+          <tb_causes>
+            <tb_causes_note/>
+          </tb_causes>
+          <types_of_tb>
+            <types_of_tb_note/>
+          </types_of_tb>
+          <tb_symptops>
+            <tb_symptoms_note/>
+          </tb_symptops>
+          <prevent_tb_spread>
+            <prevent_tb_spread_note/>
+          </prevent_tb_spread>
+          <note_on_tb>
+            <important_note_on_tb/>
+          </note_on_tb>
+          <question_for_chv>
+            <note_to_chv/>
+            <people_reached_note_to_chv/>
+            <num_people_reached/>
+            <tb_symptoms_note_to_chv/>
+            <num_people_with_tb/>
+          </question_for_chv>
+          <suggestion_for_chv>
+            <take_sample_note/>
+            <submit_form_note/>
+          </suggestion_for_chv>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </tb_education>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/tb_education/inputs" relevant="false()"/>
+      <bind nodeset="/tb_education/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/tb_education/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/tb_education/inputs/user/name" type="string"/>
+      <bind nodeset="/tb_education/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/tb_education/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/tb_education/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/tb_education/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/tb_education/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/tb_education/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/tb_education/tb_introduction/tb_intro" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/tb_meaning/tb_meaning_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/tb_causes/tb_causes_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/types_of_tb/types_of_tb_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/tb_symptops/tb_symptoms_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/prevent_tb_spread/prevent_tb_spread_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/note_on_tb/important_note_on_tb" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/question_for_chv/note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/question_for_chv/people_reached_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/question_for_chv/num_people_reached" type="int" constraint=".&gt;= 0 and .&lt;= 100" jr:constraintMsg="jr:itext('/tb_education/question_for_chv/num_people_reached:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/tb_education/question_for_chv/tb_symptoms_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/tb_education/question_for_chv/num_people_with_tb" type="int" constraint=".&gt;= 0 and .&lt;=  /tb_education/question_for_chv/num_people_reached " jr:constraintMsg="jr:itext('/tb_education/question_for_chv/num_people_with_tb:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/tb_education/suggestion_for_chv/take_sample_note" readonly="true()" type="string" relevant=" /tb_education/question_for_chv/num_people_with_tb &gt; 0"/>
+      <bind nodeset="/tb_education/suggestion_for_chv/submit_form_note" readonly="true()" type="string" relevant=" /tb_education/question_for_chv/num_people_with_tb &gt; 0"/>
+      <bind nodeset="/tb_education/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/tb_education/inputs">
+      <group ref="/tb_education/inputs/user">
+        <input ref="/tb_education/inputs/user/contact_id">
+          <label ref="jr:itext('/tb_education/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/tb_education/inputs/user/facility_id">
+          <label ref="jr:itext('/tb_education/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/tb_education/inputs/user/name">
+          <label ref="jr:itext('/tb_education/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/tb_education/inputs/contact">
+        <input appearance="db-object" ref="/tb_education/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group ref="/tb_education/tb_introduction">
+      <label ref="jr:itext('/tb_education/tb_introduction:label')"/>
+      <input ref="/tb_education/tb_introduction/tb_intro">
+        <label ref="jr:itext('/tb_education/tb_introduction/tb_intro:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_education/tb_meaning">
+      <label ref="jr:itext('/tb_education/tb_meaning:label')"/>
+      <input ref="/tb_education/tb_meaning/tb_meaning_note">
+        <label ref="jr:itext('/tb_education/tb_meaning/tb_meaning_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_education/tb_causes">
+      <label ref="jr:itext('/tb_education/tb_causes:label')"/>
+      <input ref="/tb_education/tb_causes/tb_causes_note">
+        <label ref="jr:itext('/tb_education/tb_causes/tb_causes_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_education/types_of_tb">
+      <label ref="jr:itext('/tb_education/types_of_tb:label')"/>
+      <input ref="/tb_education/types_of_tb/types_of_tb_note">
+        <label ref="jr:itext('/tb_education/types_of_tb/types_of_tb_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_education/tb_symptops">
+      <label ref="jr:itext('/tb_education/tb_symptops:label')"/>
+      <input ref="/tb_education/tb_symptops/tb_symptoms_note">
+        <label ref="jr:itext('/tb_education/tb_symptops/tb_symptoms_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_education/prevent_tb_spread">
+      <label ref="jr:itext('/tb_education/prevent_tb_spread:label')"/>
+      <input ref="/tb_education/prevent_tb_spread/prevent_tb_spread_note">
+        <label ref="jr:itext('/tb_education/prevent_tb_spread/prevent_tb_spread_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_education/note_on_tb">
+      <label ref="jr:itext('/tb_education/note_on_tb:label')"/>
+      <input ref="/tb_education/note_on_tb/important_note_on_tb">
+        <label ref="jr:itext('/tb_education/note_on_tb/important_note_on_tb:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/tb_education/question_for_chv">
+      <label ref="jr:itext('/tb_education/question_for_chv:label')"/>
+      <input ref="/tb_education/question_for_chv/note_to_chv">
+        <label ref="jr:itext('/tb_education/question_for_chv/note_to_chv:label')"/>
+      </input>
+      <input ref="/tb_education/question_for_chv/people_reached_note_to_chv">
+        <label ref="jr:itext('/tb_education/question_for_chv/people_reached_note_to_chv:label')"/>
+      </input>
+      <input ref="/tb_education/question_for_chv/num_people_reached">
+        <label ref="jr:itext('/tb_education/question_for_chv/num_people_reached:label')"/>
+      </input>
+      <input ref="/tb_education/question_for_chv/tb_symptoms_note_to_chv">
+        <label ref="jr:itext('/tb_education/question_for_chv/tb_symptoms_note_to_chv:label')"/>
+      </input>
+      <input ref="/tb_education/question_for_chv/num_people_with_tb">
+        <label ref="jr:itext('/tb_education/question_for_chv/num_people_with_tb:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_education/suggestion_for_chv">
+      <label ref="jr:itext('/tb_education/suggestion_for_chv:label')"/>
+      <input ref="/tb_education/suggestion_for_chv/take_sample_note">
+        <label ref="jr:itext('/tb_education/suggestion_for_chv/take_sample_note:label')"/>
+      </input>
+      <input ref="/tb_education/suggestion_for_chv/submit_form_note">
+        <label ref="jr:itext('/tb_education/suggestion_for_chv/submit_form_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

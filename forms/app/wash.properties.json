@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Wash"
+    },
+    {
+      "locale": "sw",
+      "content": "Kuhusu Kuosha"
+    }
+  ],
+  "icon": "general",
+  "context": {
+    "person": false,
+    "place": true,
+    "expression": "contact && contact.type === 'clinic' && user.parent.type === 'health_center'  && summary.show_new_modules"
+  }
+}

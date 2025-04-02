@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Medication Monitoring</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/medication_monitoring/client_gps/client_gps:label">
+            <value>Collect client GPS</value>
+          </text>
+          <text id="/medication_monitoring/client_gps:label">
+            <value>Client GPS</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_12:label">
+            <value>12 hours</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_5:label">
+            <value>5 hours</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_8:label">
+            <value>8 hours</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/other_hours:label">
+            <value>Other hours</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine:label">
+            <value>How many hours after should you take the medicine?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/changes_mood_behavior:label">
+            <value>Changes in mood and behavior</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/dizziness_and_drowsiness:label">
+            <value>Dizziness and drowsiness</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/fatigue_and_weakness:label">
+            <value>Fatigue and weakness</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_blood_pressure:label">
+            <value>Increased blood pressure</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_fever:label">
+            <value>Increased fever</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_heart_rate:label">
+            <value>Increased heart rate (Palpitations)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/itching_and_rash_allergy:label">
+            <value>Itching and rash (Allergy)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/loss_of_appetite:label">
+            <value>Loss of appetite</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/memory_loss_confusion:label">
+            <value>Memory loss and confusion</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/nausea_and_vomiting:label">
+            <value>Nausea and vomiting</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/shortness_of_breath:label">
+            <value>Shortness of breath</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/sleep_disturbances:label">
+            <value>Sleep disturbances (Insomnia)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/stomach_pain_diarrhea:label">
+            <value>Stomach pain and diarrhea</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/weight_gain_loss:label">
+            <value>Weight gain or loss</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify:label">
+            <value>Please specify.</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine/no:label">
+            <value>No</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine:label">
+            <value>Have you been given instructions on the proper use of the medicine?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/blood_pressure:label">
+            <value>Blood pressure</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/diabetes:label">
+            <value>Diabetes</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/family_planning:label">
+            <value>Family planning</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/hiv_aids_management:label">
+            <value>HIV/AIDS management (ARVs)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/malaria:label">
+            <value>Malaria</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/tuberculosis_tb:label">
+            <value>Tuberculosis (TB)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease:label">
+            <value>Which disease is the medicine you used related to?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/msg_for_chv_medicine:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe. &lt;/span&gt;</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/other_option:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating/no:label">
+            <value>No</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating:label">
+            <value>Did he/she experience any minor side effects after taking the medication?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine/no:label">
+            <value>No</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine:label">
+            <value>Are there any side effects or problems after using the medicine?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/took_any_medication/no:label">
+            <value>No</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/took_any_medication/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/took_any_medication:label">
+            <value>Did you take any medication?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct/no:label">
+            <value>No</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct:label">
+            <value>Were the answers correct?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use:label">
+            <value>Drug Quality and Safety During Use</value>
+          </text>
+          <text id="/medication_monitoring/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/medication_monitoring/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/medication_monitoring/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/medication_monitoring/client_gps/client_gps:label">
+            <value>Chukua GPS</value>
+          </text>
+          <text id="/medication_monitoring/client_gps:label">
+            <value>GPS ya mteja</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_12:label">
+            <value>Masaa 12</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_5:label">
+            <value>Masaa 5</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_8:label">
+            <value>Masaa 8</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/other_hours:label">
+            <value>Masaa mengine</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine:label">
+            <value>Ni masaa mangapi baada ya hapo unatakiwa kutumia dawa hiyo?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/changes_mood_behavior:label">
+            <value>Mabidiliko ya mhemko wa tabia</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/dizziness_and_drowsiness:label">
+            <value>Kizunguzungu na kusinzia</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/fatigue_and_weakness:label">
+            <value>Uchovu na udhaifu</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_blood_pressure:label">
+            <value>Kuongezeka kwa shinikizo la damu</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_fever:label">
+            <value>Kuongezeka kwa homa</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_heart_rate:label">
+            <value>Kuongezeka kwa mapigo ya moyo</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/itching_and_rash_allergy:label">
+            <value>Kuwashwa na upele (Mzio)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/loss_of_appetite:label">
+            <value>Kupungua kwa haku ya chakula</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/memory_loss_confusion:label">
+            <value>Kupoteza kumbukumbu na kuchanganyikiwa</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/nausea_and_vomiting:label">
+            <value>Kichefuchefu na kutapika</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/shortness_of_breath:label">
+            <value>Kupumua kwa shida</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/sleep_disturbances:label">
+            <value>Matatizo ya usingizi</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/stomach_pain_diarrhea:label">
+            <value>Maumivu na tumbo na kuharisha</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/weight_gain_loss:label">
+            <value>Kuongezeka kwa uzito au kupungua kwa uzito</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify:label">
+            <value>Tafadhali yataje:</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine:label">
+            <value>Je, umepewa maelekezo kuhusu matumizi sahihi ya dawa?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/blood_pressure:label">
+            <value>Shinikizo la damu</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/diabetes:label">
+            <value>Sukari</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/family_planning:label">
+            <value>Uzazi wa mpango</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/hiv_aids_management:label">
+            <value>Kupunguza makali ya virusi vya ukimwi (ARVs)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/malaria:label">
+            <value>Malaria</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/other:label">
+            <value>Nyenginezo</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/tuberculosis_tb:label">
+            <value>Kifua kikuu (TB)</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease:label">
+            <value>Dawa uliyotumia inahusiana na maradhi gani?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/msg_for_chv_medicine:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe. &lt;/span&gt;</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/other_option:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating:label">
+            <value>Je kuna maudhi yatokanayo na dawa?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine:label">
+            <value>Je, kuna maudhi au athari yeyote baada ya kutumia dawa?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/took_any_medication/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/took_any_medication/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/took_any_medication:label">
+            <value>Ulitumia dawa zozote ?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct:label">
+            <value>Je, majibu yake yalikuwa sahihi?</value>
+          </text>
+          <text id="/medication_monitoring/drug_quality_safety_during_use:label">
+            <value>Ubora wa madawa na usalama wakati wa matumizi</value>
+          </text>
+          <text id="/medication_monitoring/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs/visit_id:label">
+            <value>-</value>
+          </text>
+          <text id="/medication_monitoring/inputs:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <medication_monitoring id="medication_monitoring" prefix="J1!medication_monitoring!" delimiter="#" version="2024-12-13 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <visit_id/>
+            <due_date/>
+            <due_date_human_readable/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <start/>
+          <end/>
+          <drug_quality_safety_during_use>
+            <took_any_medication/>
+            <side_effects_after_medicating/>
+            <if_yes_please_specify/>
+            <medicine_related_to_disease/>
+            <other_option/>
+            <instructions_use_of_medicine/>
+            <hours_after_taking_medicine/>
+            <msg_for_chv_medicine/>
+            <were_answers_correct/>
+            <side_effects_using_medicine/>
+          </drug_quality_safety_during_use>
+          <client_gps>
+            <client_gps/>
+          </client_gps>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </medication_monitoring>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/medication_monitoring/inputs" relevant="false()"/>
+      <bind nodeset="/medication_monitoring/inputs/visit_id" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/due_date" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/user/name" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/medication_monitoring/inputs/contact/name" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/contact/sex" type="string"/>
+      <bind nodeset="/medication_monitoring/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/medication_monitoring/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/medication_monitoring/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/took_any_medication" type="select1" required="true()"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating" type="select1" required="true()" relevant=" /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes'"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify" type="select" required="true()" relevant=" /medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating  = 'yes' and  /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes'"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease" type="select" required="true()" relevant=" /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes'"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/other_option" type="string" required="true()" relevant="selected( /medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease ,&quot;other&quot;) and  /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes'"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine" type="select1" required="true()" relevant=" /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes'"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine" type="select1" required="true()" relevant=" /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes' and  /medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine  = 'yes'"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/msg_for_chv_medicine" readonly="true()" type="string" relevant=" /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes' and  /medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine  = 'yes' and (selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;hours_12&quot;) or selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;hours_5&quot;) or selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;hours_8&quot;) or selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;other_hours&quot;))"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct" type="select1" required="true()" relevant=" /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes' and  /medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine  = 'yes' and (selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;hours_12&quot;) or selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;hours_5&quot;) or selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;hours_8&quot;) or selected( /medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine ,&quot;other_hours&quot;))"/>
+      <bind nodeset="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine" type="select1" required="true()" relevant=" /medication_monitoring/drug_quality_safety_during_use/took_any_medication  = 'yes'"/>
+      <bind nodeset="/medication_monitoring/client_gps/client_gps" type="geopoint" required="true()"/>
+      <bind nodeset="/medication_monitoring/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="hidden" ref="/medication_monitoring/inputs">
+      <input ref="/medication_monitoring/inputs/visit_id"/>
+      <input ref="/medication_monitoring/inputs/due_date"/>
+      <input ref="/medication_monitoring/inputs/due_date_human_readable"/>
+      <group ref="/medication_monitoring/inputs/user">
+        <input ref="/medication_monitoring/inputs/user/contact_id">
+          <label ref="jr:itext('/medication_monitoring/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/medication_monitoring/inputs/user/facility_id">
+          <label ref="jr:itext('/medication_monitoring/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/medication_monitoring/inputs/user/name">
+          <label ref="jr:itext('/medication_monitoring/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/medication_monitoring/inputs/contact">
+        <input appearance="db-object" ref="/medication_monitoring/inputs/contact/_id"/>
+        <input ref="/medication_monitoring/inputs/contact/name"/>
+        <input ref="/medication_monitoring/inputs/contact/sex"/>
+        <input ref="/medication_monitoring/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/medication_monitoring/drug_quality_safety_during_use">
+      <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use:label')"/>
+      <select1 ref="/medication_monitoring/drug_quality_safety_during_use/took_any_medication">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/took_any_medication:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/took_any_medication/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/took_any_medication/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/side_effects_after_medicating/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/nausea_and_vomiting:label')"/>
+          <value>nausea_and_vomiting</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/dizziness_and_drowsiness:label')"/>
+          <value>dizziness_and_drowsiness</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_fever:label')"/>
+          <value>increased_fever</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_heart_rate:label')"/>
+          <value>increased_heart_rate</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/increased_blood_pressure:label')"/>
+          <value>increased_blood_pressure</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/weight_gain_loss:label')"/>
+          <value>weight_gain_loss</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/memory_loss_confusion:label')"/>
+          <value>memory_loss_confusion</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/shortness_of_breath:label')"/>
+          <value>shortness_of_breath</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/loss_of_appetite:label')"/>
+          <value>loss_of_appetite</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/itching_and_rash_allergy:label')"/>
+          <value>itching_and_rash_allergy</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/changes_mood_behavior:label')"/>
+          <value>changes_mood_behavior</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/stomach_pain_diarrhea:label')"/>
+          <value>stomach_pain_diarrhea</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/sleep_disturbances:label')"/>
+          <value>sleep_disturbances</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/if_yes_please_specify/fatigue_and_weakness:label')"/>
+          <value>fatigue_and_weakness</value>
+        </item>
+      </select>
+      <select ref="/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/hiv_aids_management:label')"/>
+          <value>hiv_aids_management</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/tuberculosis_tb:label')"/>
+          <value>tuberculosis_tb</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/malaria:label')"/>
+          <value>malaria</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/family_planning:label')"/>
+          <value>family_planning</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/blood_pressure:label')"/>
+          <value>blood_pressure</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/diabetes:label')"/>
+          <value>diabetes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/medicine_related_to_disease/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <input ref="/medication_monitoring/drug_quality_safety_during_use/other_option">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/other_option:label')"/>
+      </input>
+      <select1 ref="/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/instructions_use_of_medicine/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_12:label')"/>
+          <value>hours_12</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_5:label')"/>
+          <value>hours_5</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/hours_8:label')"/>
+          <value>hours_8</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/hours_after_taking_medicine/other_hours:label')"/>
+          <value>other_hours</value>
+        </item>
+      </select1>
+      <input ref="/medication_monitoring/drug_quality_safety_during_use/msg_for_chv_medicine">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/msg_for_chv_medicine:label')"/>
+      </input>
+      <select1 ref="/medication_monitoring/drug_quality_safety_during_use/were_answers_correct">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/were_answers_correct:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/were_answers_correct/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/were_answers_correct/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine">
+        <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine:label')"/>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/medication_monitoring/drug_quality_safety_during_use/side_effects_using_medicine/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/medication_monitoring/client_gps">
+      <label ref="jr:itext('/medication_monitoring/client_gps:label')"/>
+      <input ref="/medication_monitoring/client_gps/client_gps">
+        <label ref="jr:itext('/medication_monitoring/client_gps/client_gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

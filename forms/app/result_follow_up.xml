@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Result followup</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/result_follow_up/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/result_follow_up/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/result_follow_up/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/dr_tb:label">
+            <value>DR-TB (Drug-resistant tuberculosis)</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/incomplete_referral:label">
+            <value>Incomplete Referral</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/no_tb:label">
+            <value>No TB</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/tb_in_other_areas:label">
+            <value>TB in other areas</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/tb_in_sputum:label">
+            <value>TB in sputum</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results:jr:constraintMsg">
+            <value>You cannot select "No TB" or "Incomplete Referral" with other options</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results:label">
+            <value>TB Sample Results</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/result_follow_up/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/delivery_date:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/dr_tb:label">
+            <value>DR-TB kifua kikuu</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/incomplete_referral:label">
+            <value>Rufaa haijakamilika</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/no_tb:label">
+            <value>Hana TB</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/tb_in_other_areas:label">
+            <value>TB sehemu nyingine</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results/tb_in_sputum:label">
+            <value>TB kwenye makohozi</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results:jr:constraintMsg">
+            <value>Huwezi kuchagua hana TB au Rufaa Haijakamilika na chaguo jengine</value>
+          </text>
+          <text id="/result_follow_up/tb_sample_results:label">
+            <value>Matoke ya TB</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <result_follow_up id="result_follow_up" prefix="J1!result_follow_up!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <due_date/>
+            <due_date_human_readable/>
+            <delivery_date/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <tb_sample_results/>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </result_follow_up>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/result_follow_up/inputs" relevant="false()"/>
+      <bind nodeset="/result_follow_up/inputs/due_date" type="string"/>
+      <bind nodeset="/result_follow_up/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/result_follow_up/inputs/delivery_date" type="string"/>
+      <bind nodeset="/result_follow_up/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/result_follow_up/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/result_follow_up/inputs/user/name" type="string"/>
+      <bind nodeset="/result_follow_up/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/result_follow_up/inputs/contact/name" type="string"/>
+      <bind nodeset="/result_follow_up/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/result_follow_up/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/result_follow_up/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/result_follow_up/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/result_follow_up/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/result_follow_up/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/result_follow_up/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/result_follow_up/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/result_follow_up/tb_sample_results" type="select" jr:constraintMsg="jr:itext('/result_follow_up/tb_sample_results:jr:constraintMsg')" constraint="((selected(., &quot;no_tb&quot;) or selected(., &quot;incomplete_referral&quot;)) and count-selected(.) = 1) 
+or 
+((not(selected(., &quot;no_tb&quot;)) and not(selected(., &quot;incomplete_referral&quot;)) and count-selected(.) &gt;= 1))"/>
+      <bind nodeset="/result_follow_up/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/result_follow_up/inputs">
+      <input ref="/result_follow_up/inputs/due_date"/>
+      <input ref="/result_follow_up/inputs/due_date_human_readable"/>
+      <input ref="/result_follow_up/inputs/delivery_date"/>
+      <group ref="/result_follow_up/inputs/user">
+        <input ref="/result_follow_up/inputs/user/contact_id">
+          <label ref="jr:itext('/result_follow_up/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/result_follow_up/inputs/user/facility_id">
+          <label ref="jr:itext('/result_follow_up/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/result_follow_up/inputs/user/name">
+          <label ref="jr:itext('/result_follow_up/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/result_follow_up/inputs/contact">
+        <input ref="/result_follow_up/inputs/contact/_id"/>
+        <input ref="/result_follow_up/inputs/contact/name"/>
+        <input ref="/result_follow_up/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <select ref="/result_follow_up/tb_sample_results">
+      <label ref="jr:itext('/result_follow_up/tb_sample_results:label')"/>
+      <item>
+        <label ref="jr:itext('/result_follow_up/tb_sample_results/no_tb:label')"/>
+        <value>no_tb</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/result_follow_up/tb_sample_results/tb_in_sputum:label')"/>
+        <value>tb_in_sputum</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/result_follow_up/tb_sample_results/tb_in_other_areas:label')"/>
+        <value>tb_in_other_areas</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/result_follow_up/tb_sample_results/dr_tb:label')"/>
+        <value>dr_tb</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/result_follow_up/tb_sample_results/incomplete_referral:label')"/>
+        <value>incomplete_referral</value>
+      </item>
+    </select>
+  </h:body>
+</h:html>

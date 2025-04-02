@@ -1,0 +1,679 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>elimu ya afya ya jamii</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/community_health_education/client_gps/client_gps:label">
+            <value>Collect client GPS</value>
+          </text>
+          <text id="/community_health_education/client_gps:label">
+            <value>Client GPS</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets/no:label">
+            <value>No</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets:label">
+            <value>Have you distributed the pamphlets?</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/note_to_chv_four:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/note_to_chv_three:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/number_of_pamphlets:jr:constraintMsg">
+            <value>Please provide valid input</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/number_of_pamphlets:label">
+            <value>Please write the number of pamphlets you have distributed.</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/child_health:label">
+            <value>Child health</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/community_awareness/advocacy:label">
+            <value>Community awareness/advocacy</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/elderly_health:label">
+            <value>Elderly health</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/environmental_cleanliness:label">
+            <value>Environmental cleanliness</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/non-communicable_diseases:label">
+            <value>Non-communicable diseases</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/prevention_of_infectious_diseases:label">
+            <value>Prevention of infectious diseases</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/youth_health:label">
+            <value>Youth health</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets:label">
+            <value>Choose the type of pamphlets you have distributed in the educational outreach.</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets:label">
+            <value>Distribution of pamphlets</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/note_to_chv_five:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/provided_health_education_about_malaria/no:label">
+            <value>No</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/provided_health_education_about_malaria/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/provided_health_education_about_malaria:label">
+            <value>Have you provided health education about Malaria?</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/environmental_hygiene:label">
+            <value>Environmental hygiene</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/preventing_mosquito_bites_outside_sleeping_areas:label">
+            <value>Preventing mosquito bites when outside sleeping areas</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/proper_use_of_insecticide_treated_nets:label">
+            <value>Proper use of insecticide-treated nets</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/testing_before_using_medication:label">
+            <value>Testing before using medication</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/use_of_combination_malaria_medicine:label">
+            <value>Use of combination malaria medicine</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/visiting_health_facility_promptly:label">
+            <value>Visiting a health facility promptly</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention:label">
+            <value>Types of Education on Malaria Prevention</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria:label">
+            <value>Education About Malaria</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/note_to_chv_one:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/note_to_chv_two:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/provided_health_education_to_client/no:label">
+            <value>No</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/provided_health_education_to_client/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/provided_health_education_to_client:label">
+            <value>Have you provided health education to the client?</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/disease_prevention_education:label">
+            <value>Disease prevention education (epidemic diseases)</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/environmental_hygiene_education:label">
+            <value>Environmental hygiene education</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/family_planning_education:label">
+            <value>Family planning education</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_breastfeeding_for_infants:label">
+            <value>Importance of breastfeeding for infants</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_proper_nutrition_for_children:label">
+            <value>Importance of proper nutrition for children</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_vaccination_education:label">
+            <value>Importance of vaccination education</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/maternal_and_child_health_education:label">
+            <value>Maternal and child health education</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/ncd_education:label">
+            <value>Non-communicable diseases (NCD) education</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/personal_hygiene_education:label">
+            <value>Personal hygiene education</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/prevention_of_hiv_aids_education:label">
+            <value>Education on preventing HIV/AIDS</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/prevention_of_tb_and_leprosy_education:label">
+            <value>Education on prevention of tuberculosis and leprosy</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/youth_health_education:label">
+            <value>Youth health education</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided:label">
+            <value>Specify the health education provided</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery:label">
+            <value>Health education delivery</value>
+          </text>
+          <text id="/community_health_education/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/community_health_education/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/community_health_education/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/community_health_education/select_visit/select_visit_you_are_working_on/new:label">
+            <value>New</value>
+          </text>
+          <text id="/community_health_education/select_visit/select_visit_you_are_working_on/review:label">
+            <value>Review</value>
+          </text>
+          <text id="/community_health_education/select_visit/select_visit_you_are_working_on:label">
+            <value>Select the visit you are working on</value>
+          </text>
+          <text id="/community_health_education/select_visit:label">
+            <value>Select visit</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/community_health_education/client_gps/client_gps:label">
+            <value>Chukua GPS</value>
+          </text>
+          <text id="/community_health_education/client_gps:label">
+            <value>GPS ya mteja</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets:label">
+            <value>Je umegawa vipeperushi?</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/note_to_chv_four:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/note_to_chv_three:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/number_of_pamphlets:jr:constraintMsg">
+            <value>Tafadhali weka idadi sahihi</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/number_of_pamphlets:label">
+            <value>Andika idadi ya vipepeprushi ulivyogawa</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/child_health:label">
+            <value>Afya ya watoto</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/community_awareness/advocacy:label">
+            <value>Uhamasishaji wa jamii</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/elderly_health:label">
+            <value>Afya ya wazee</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/environmental_cleanliness:label">
+            <value>Usafi wa mazingira</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/non-communicable_diseases:label">
+            <value>Magonjwa yasiyo ya kuambukiza</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/prevention_of_infectious_diseases:label">
+            <value>Kujikinga na magonjwa ya kuambukiza</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets/youth_health:label">
+            <value>Afya ya vijana</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets/types_of_pamphlets:label">
+            <value>Chagua aina ya vipeperushi ulivyogawa katika utoaji wa elimu</value>
+          </text>
+          <text id="/community_health_education/distribution_of_pamphlets:label">
+            <value>Ugawaji wa vipeperushi</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/note_to_chv_five:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/provided_health_education_about_malaria/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/provided_health_education_about_malaria/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/provided_health_education_about_malaria:label">
+            <value>Je umetoa elimu ya afya kuhusu Malaria?</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/environmental_hygiene:label">
+            <value>Usafi wa mazingiira</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/preventing_mosquito_bites_outside_sleeping_areas:label">
+            <value>Kujikinga na mbu awapo nje ya malazi</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/proper_use_of_insecticide_treated_nets:label">
+            <value>Matumizi sahihi ya chandarua</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/testing_before_using_medication:label">
+            <value>Kupima kabla ya kutumia dawa</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/use_of_combination_malaria_medicine:label">
+            <value>Matumizi ya dawa mchanganyiko za malaria</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/visiting_health_facility_promptly:label">
+            <value>Kuwahi kituo cha afya</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention:label">
+            <value>Ainisha aina ya elimu kuhusiana na kujikinga na ugonjwa wa malaria</value>
+          </text>
+          <text id="/community_health_education/education_about_malaria:label">
+            <value>Elimu kuhusu malaria</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/note_to_chv_one:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/note_to_chv_two:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/provided_health_education_to_client/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/provided_health_education_to_client/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/provided_health_education_to_client:label">
+            <value>Je umetoa elimu ya afya kwa mteja?</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/disease_prevention_education:label">
+            <value>Kujikinga magonjwa mripuko</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/environmental_hygiene_education:label">
+            <value>Elimu ya usafi wa mazingira</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/family_planning_education:label">
+            <value>Elimu ya uzaziwa mpangilio</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_breastfeeding_for_infants:label">
+            <value>Umuhimu wa unyonyeshaji wa maziwa ya mama kwa mtoto</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_proper_nutrition_for_children:label">
+            <value>Umuhimu wa lishe bora kwa watoto</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_vaccination_education:label">
+            <value>Elimu ya umuhimu wa chanjo</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/maternal_and_child_health_education:label">
+            <value>Elimu ya afya uzazi na mtoto</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/ncd_education:label">
+            <value>Elimu ya magonjwa yasiyoambukiza (NCD)</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/personal_hygiene_education:label">
+            <value>Elimu ya usafi wa mwili</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/prevention_of_hiv_aids_education:label">
+            <value>Elimu ya kujikinga na gonjwa la UKIMWI (HIV/AIDS)</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/prevention_of_tb_and_leprosy_education:label">
+            <value>Elimu ya kujikinga na ugonjwa wa kifua kikuu na ukoma</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided/youth_health_education:label">
+            <value>Elimu ya huduma kwa vijana</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery/specify_health_education_provided:label">
+            <value>Ainisha elimu ya afya iliyotoa</value>
+          </text>
+          <text id="/community_health_education/health_education_delivery:label">
+            <value>Utoaji wa elimu ya afya</value>
+          </text>
+          <text id="/community_health_education/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs/visit_id:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/community_health_education/select_visit/select_visit_you_are_working_on/new:label">
+            <value>Jipya</value>
+          </text>
+          <text id="/community_health_education/select_visit/select_visit_you_are_working_on/review:label">
+            <value>Marudio</value>
+          </text>
+          <text id="/community_health_education/select_visit/select_visit_you_are_working_on:label">
+            <value>Chagua tembeleo unalofanya kazi</value>
+          </text>
+          <text id="/community_health_education/select_visit:label">
+            <value>Chagua tembeleo</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <community_health_education id="community_health_education" prefix="J1!community_health_education!" delimiter="#" version="2019-04-25 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <visit_id/>
+            <due_date/>
+            <due_date_human_readable/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <start/>
+          <end/>
+          <select_visit>
+            <select_visit_you_are_working_on/>
+          </select_visit>
+          <health_education_delivery>
+            <note_to_chv_one/>
+            <provided_health_education_to_client/>
+            <note_to_chv_two/>
+            <specify_health_education_provided/>
+          </health_education_delivery>
+          <distribution_of_pamphlets>
+            <note_to_chv_three/>
+            <distributed_the_pamphlets/>
+            <number_of_pamphlets/>
+            <note_to_chv_four/>
+            <types_of_pamphlets/>
+          </distribution_of_pamphlets>
+          <education_about_malaria>
+            <note_to_chv_five/>
+            <provided_health_education_about_malaria/>
+            <specify_types_of_education_malaria_prevention/>
+          </education_about_malaria>
+          <client_gps>
+            <client_gps/>
+          </client_gps>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </community_health_education>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/community_health_education/inputs" relevant="0"/>
+      <bind nodeset="/community_health_education/inputs/visit_id" type="string"/>
+      <bind nodeset="/community_health_education/inputs/due_date" type="string"/>
+      <bind nodeset="/community_health_education/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/community_health_education/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/community_health_education/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/community_health_education/inputs/user/name" type="string"/>
+      <bind nodeset="/community_health_education/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/community_health_education/inputs/contact/name" type="string"/>
+      <bind nodeset="/community_health_education/inputs/contact/sex" type="string"/>
+      <bind nodeset="/community_health_education/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/community_health_education/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/community_health_education/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/community_health_education/select_visit/select_visit_you_are_working_on" type="select1" required="true()"/>
+      <bind nodeset="/community_health_education/health_education_delivery/note_to_chv_one" readonly="true()" type="string"/>
+      <bind nodeset="/community_health_education/health_education_delivery/provided_health_education_to_client" type="select1" required="true()"/>
+      <bind nodeset="/community_health_education/health_education_delivery/note_to_chv_two" readonly="true()" type="string" relevant=" /community_health_education/health_education_delivery/provided_health_education_to_client  = 'yes'"/>
+      <bind nodeset="/community_health_education/health_education_delivery/specify_health_education_provided" type="select" required="true()" relevant=" /community_health_education/health_education_delivery/provided_health_education_to_client  = 'yes'"/>
+      <bind nodeset="/community_health_education/distribution_of_pamphlets/note_to_chv_three" readonly="true()" type="string" relevant=" /community_health_education/health_education_delivery/provided_health_education_to_client  = 'yes'"/>
+      <bind nodeset="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets" type="select1" required="true()" relevant=" /community_health_education/health_education_delivery/provided_health_education_to_client  = 'yes'"/>
+      <bind nodeset="/community_health_education/distribution_of_pamphlets/number_of_pamphlets" type="int" required="true()" jr:constraintMsg="jr:itext('/community_health_education/distribution_of_pamphlets/number_of_pamphlets:jr:constraintMsg')" constraint=". &gt;= 0 and . &lt;= 200" relevant=" /community_health_education/health_education_delivery/provided_health_education_to_client  = 'yes' and  /community_health_education/distribution_of_pamphlets/distributed_the_pamphlets  = 'yes'"/>
+      <bind nodeset="/community_health_education/distribution_of_pamphlets/note_to_chv_four" readonly="true()" type="string" relevant=" /community_health_education/health_education_delivery/provided_health_education_to_client  = 'yes' and  /community_health_education/distribution_of_pamphlets/distributed_the_pamphlets  = 'yes'"/>
+      <bind nodeset="/community_health_education/distribution_of_pamphlets/types_of_pamphlets" type="select" required="true()" relevant=" /community_health_education/health_education_delivery/provided_health_education_to_client  = 'yes' and  /community_health_education/distribution_of_pamphlets/distributed_the_pamphlets  = 'yes'"/>
+      <bind nodeset="/community_health_education/education_about_malaria/note_to_chv_five" readonly="true()" type="string"/>
+      <bind nodeset="/community_health_education/education_about_malaria/provided_health_education_about_malaria" type="select1" required="true()"/>
+      <bind nodeset="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention" type="select" required="true()" relevant=" /community_health_education/education_about_malaria/provided_health_education_about_malaria  = 'yes'"/>
+      <bind nodeset="/community_health_education/client_gps/client_gps" type="geopoint" required="true()"/>
+      <bind nodeset="/community_health_education/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="hidden" ref="/community_health_education/inputs">
+      <input ref="/community_health_education/inputs/visit_id"/>
+      <input ref="/community_health_education/inputs/due_date"/>
+      <input ref="/community_health_education/inputs/due_date_human_readable"/>
+      <group ref="/community_health_education/inputs/user">
+        <input ref="/community_health_education/inputs/user/contact_id">
+          <label ref="jr:itext('/community_health_education/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/community_health_education/inputs/user/facility_id">
+          <label ref="jr:itext('/community_health_education/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/community_health_education/inputs/user/name">
+          <label ref="jr:itext('/community_health_education/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/community_health_education/inputs/contact">
+        <input appearance="db-object" ref="/community_health_education/inputs/contact/_id"/>
+        <input ref="/community_health_education/inputs/contact/name"/>
+        <input ref="/community_health_education/inputs/contact/sex"/>
+        <input ref="/community_health_education/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/community_health_education/select_visit">
+      <label ref="jr:itext('/community_health_education/select_visit:label')"/>
+      <select1 ref="/community_health_education/select_visit/select_visit_you_are_working_on">
+        <label ref="jr:itext('/community_health_education/select_visit/select_visit_you_are_working_on:label')"/>
+        <item>
+          <label ref="jr:itext('/community_health_education/select_visit/select_visit_you_are_working_on/new:label')"/>
+          <value>new</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/select_visit/select_visit_you_are_working_on/review:label')"/>
+          <value>review</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/community_health_education/health_education_delivery">
+      <label ref="jr:itext('/community_health_education/health_education_delivery:label')"/>
+      <input ref="/community_health_education/health_education_delivery/note_to_chv_one">
+        <label ref="jr:itext('/community_health_education/health_education_delivery/note_to_chv_one:label')"/>
+      </input>
+      <select1 ref="/community_health_education/health_education_delivery/provided_health_education_to_client">
+        <label ref="jr:itext('/community_health_education/health_education_delivery/provided_health_education_to_client:label')"/>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/provided_health_education_to_client/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/provided_health_education_to_client/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/community_health_education/health_education_delivery/note_to_chv_two">
+        <label ref="jr:itext('/community_health_education/health_education_delivery/note_to_chv_two:label')"/>
+      </input>
+      <select ref="/community_health_education/health_education_delivery/specify_health_education_provided">
+        <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided:label')"/>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_vaccination_education:label')"/>
+          <value>importance_of_vaccination_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/disease_prevention_education:label')"/>
+          <value>disease_prevention_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/ncd_education:label')"/>
+          <value>ncd_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/environmental_hygiene_education:label')"/>
+          <value>environmental_hygiene_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_breastfeeding_for_infants:label')"/>
+          <value>importance_of_breastfeeding_for_infants</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/importance_of_proper_nutrition_for_children:label')"/>
+          <value>importance_of_proper_nutrition_for_children</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/personal_hygiene_education:label')"/>
+          <value>personal_hygiene_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/youth_health_education:label')"/>
+          <value>youth_health_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/family_planning_education:label')"/>
+          <value>family_planning_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/maternal_and_child_health_education:label')"/>
+          <value>maternal_and_child_health_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/prevention_of_tb_and_leprosy_education:label')"/>
+          <value>prevention_of_tb_and_leprosy_education</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/health_education_delivery/specify_health_education_provided/prevention_of_hiv_aids_education:label')"/>
+          <value>prevention_of_hiv_aids_education</value>
+        </item>
+      </select>
+    </group>
+    <group appearance="field-list" ref="/community_health_education/distribution_of_pamphlets">
+      <label ref="jr:itext('/community_health_education/distribution_of_pamphlets:label')"/>
+      <input ref="/community_health_education/distribution_of_pamphlets/note_to_chv_three">
+        <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/note_to_chv_three:label')"/>
+      </input>
+      <select1 ref="/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets">
+        <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets:label')"/>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/distributed_the_pamphlets/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/community_health_education/distribution_of_pamphlets/number_of_pamphlets">
+        <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/number_of_pamphlets:label')"/>
+      </input>
+      <input ref="/community_health_education/distribution_of_pamphlets/note_to_chv_four">
+        <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/note_to_chv_four:label')"/>
+      </input>
+      <select ref="/community_health_education/distribution_of_pamphlets/types_of_pamphlets">
+        <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets:label')"/>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets/environmental_cleanliness:label')"/>
+          <value>environmental_cleanliness</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets/non-communicable_diseases:label')"/>
+          <value>non-communicable_diseases</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets/prevention_of_infectious_diseases:label')"/>
+          <value>prevention_of_infectious_diseases</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets/community_awareness/advocacy:label')"/>
+          <value>community_awareness/advocacy</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets/child_health:label')"/>
+          <value>child_health</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets/youth_health:label')"/>
+          <value>youth_health</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/distribution_of_pamphlets/types_of_pamphlets/elderly_health:label')"/>
+          <value>elderly_health</value>
+        </item>
+      </select>
+    </group>
+    <group appearance="field-list" ref="/community_health_education/education_about_malaria">
+      <label ref="jr:itext('/community_health_education/education_about_malaria:label')"/>
+      <input ref="/community_health_education/education_about_malaria/note_to_chv_five">
+        <label ref="jr:itext('/community_health_education/education_about_malaria/note_to_chv_five:label')"/>
+      </input>
+      <select1 ref="/community_health_education/education_about_malaria/provided_health_education_about_malaria">
+        <label ref="jr:itext('/community_health_education/education_about_malaria/provided_health_education_about_malaria:label')"/>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/provided_health_education_about_malaria/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/provided_health_education_about_malaria/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention">
+        <label ref="jr:itext('/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention:label')"/>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/preventing_mosquito_bites_outside_sleeping_areas:label')"/>
+          <value>preventing_mosquito_bites_outside_sleeping_areas</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/visiting_health_facility_promptly:label')"/>
+          <value>visiting_health_facility_promptly</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/proper_use_of_insecticide_treated_nets:label')"/>
+          <value>proper_use_of_insecticide_treated_nets</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/use_of_combination_malaria_medicine:label')"/>
+          <value>use_of_combination_malaria_medicine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/testing_before_using_medication:label')"/>
+          <value>testing_before_using_medication</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_health_education/education_about_malaria/specify_types_of_education_malaria_prevention/environmental_hygiene:label')"/>
+          <value>environmental_hygiene</value>
+        </item>
+      </select>
+    </group>
+    <group appearance="field-list" ref="/community_health_education/client_gps">
+      <label ref="jr:itext('/community_health_education/client_gps:label')"/>
+      <input ref="/community_health_education/client_gps/client_gps">
+        <label ref="jr:itext('/community_health_education/client_gps/client_gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

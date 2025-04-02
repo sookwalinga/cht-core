@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>First treatment followup</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/first_treatment_followup/first_followup/eat_medicine_location/clinic:label">
+            <value>Clinic</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/eat_medicine_location/home:label">
+            <value>Home</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/eat_medicine_location:label">
+            <value>Where do you eat your medicine?</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/chv:label">
+            <value>CHV</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/family:label">
+            <value>Family</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/friend:label">
+            <value>Friend</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/neighbor:label">
+            <value>Neighbor</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/sheha:label">
+            <value>Sheha</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor:label">
+            <value>Who is your supervisor?</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/next_of_kin_phone:jr:constraintMsg">
+            <value>Use the following format 0XXXXXXXXX</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/next_of_kin_phone:label">
+            <value>Next of kin phone number</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/supervisor_phone:jr:constraintMsg">
+            <value>Use the following format 0XXXXXXXXX</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/supervisor_phone:label">
+            <value>Supervisor's phone number</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/thank_client_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Thanks the client for their time &lt;/span&gt;</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/treatment_end_date_note:label">
+            <value>Treatment end date will be <output value=" /first_treatment_followup/first_followup/treatment_end_date "/></value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/treatment_start_date:jr:constraintMsg">
+            <value>Date must not be in the future and date must be after <output value=" /first_treatment_followup/first_treatment_date_constraint_c "/></value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/treatment_start_date:label">
+            <value>Treatment start date</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup:label">
+            <value>First treatment Followup</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/first_treatment_followup/first_followup/eat_medicine_location/clinic:label">
+            <value>Kituo cha afya</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/eat_medicine_location/home:label">
+            <value>Nyumbani</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/eat_medicine_location:label">
+            <value>Dawa zako (DOT) unakula wapi?</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/chv:label">
+            <value>CHV</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/family:label">
+            <value>Familia</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/friend:label">
+            <value>Rafiki</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/neighbor:label">
+            <value>Jirani</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor/sheha:label">
+            <value>Sheha</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/medicine_supervisor:label">
+            <value>Msimamizi wako ni nani?</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/next_of_kin_phone:jr:constraintMsg">
+            <value>Tumia mfumo huu 0XXXXXXXXX.</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/next_of_kin_phone:label">
+            <value>Namba ya simu ya mtu wa karibu</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/supervisor_phone:jr:constraintMsg">
+            <value>Tumia mfumo huu 0XXXXXXXXX.</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/supervisor_phone:label">
+            <value>Namba ya simu ya Msimamizi</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/thank_client_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Mshukuru mteja kwa wakati wake&lt;/span&gt;</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/treatment_end_date_note:label">
+            <value>Tarehe ya kumaliza matibabu itakuwa <output value=" /first_treatment_followup/first_followup/treatment_end_date "/></value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/treatment_start_date:jr:constraintMsg">
+            <value>Tarehe iwe baina ya <output value=" /first_treatment_followup/first_treatment_date_constraint_c "/> na leo</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup/treatment_start_date:label">
+            <value>Tarehe ya kuanza matibabu</value>
+          </text>
+          <text id="/first_treatment_followup/first_followup:label">
+            <value>Ufuatiliaji wa kwanza</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/c_section:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/delivery_date:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/first_treatment_date_constraint:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/is_atleast_one_baby_alive:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/show_quality_care:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs/visit_id:label">
+            <value>-</value>
+          </text>
+          <text id="/first_treatment_followup/inputs:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <first_treatment_followup id="first_treatment_followup" prefix="J1!first_treatment_followup!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <first_treatment_date_constraint/>
+            <show_quality_care/>
+            <c_section/>
+            <due_date/>
+            <due_date_human_readable/>
+            <delivery_date/>
+            <visit_id/>
+            <is_atleast_one_baby_alive/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <had_c_section/>
+          <date_of_birth_c/>
+          <delivery_date_c/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <age_in_years/>
+          <age_days_display/>
+          <week/>
+          <month/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <due_date/>
+          <due_date_pretty_print/>
+          <show_research_questions/>
+          <show_quality_care_c/>
+          <visit_id/>
+          <is_atleast_one_baby_alive_c/>
+          <show_wash_protocol/>
+          <first_treatment_date_constraint_c/>
+          <start/>
+          <end/>
+          <first_followup>
+            <treatment_start_date/>
+            <treatment_end_date/>
+            <treatment_end_date_note/>
+            <eat_medicine_location/>
+            <medicine_supervisor/>
+            <supervisor_phone/>
+            <next_of_kin_phone/>
+            <thank_client_note/>
+          </first_followup>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </first_treatment_followup>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/first_treatment_followup/inputs" relevant="false()"/>
+      <bind nodeset="/first_treatment_followup/inputs/first_treatment_date_constraint" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/show_quality_care" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/c_section" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/due_date" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/delivery_date" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/visit_id" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/is_atleast_one_baby_alive" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/user/name" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/first_treatment_followup/inputs/contact/name" type="string"/>
+      <bind nodeset="/first_treatment_followup/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/first_treatment_followup/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/first_treatment_followup/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/first_treatment_followup/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/first_treatment_followup/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/first_treatment_followup/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/first_treatment_followup/had_c_section" type="string" calculate="../inputs/c_section"/>
+      <bind nodeset="/first_treatment_followup/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/first_treatment_followup/delivery_date_c" type="string" calculate="../inputs/delivery_date"/>
+      <bind nodeset="/first_treatment_followup/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /first_treatment_followup/date_of_birth_c ))"/>
+      <bind nodeset="/first_treatment_followup/age_months" type="string" calculate="int(( /first_treatment_followup/age_days  - ( /first_treatment_followup/age_years  * 12 * 30)) div 30,0)"/>
+      <bind nodeset="/first_treatment_followup/age_years" type="string" calculate="int( /first_treatment_followup/age_days  div (30 *12),0)"/>
+      <bind nodeset="/first_treatment_followup/age_in_years" type="string" calculate="round((decimal-date-time(today()) - decimal-date-time( /first_treatment_followup/date_of_birth_c )) div 365,0)"/>
+      <bind nodeset="/first_treatment_followup/age_days_display" type="string" calculate=" /first_treatment_followup/age_days  - ( /first_treatment_followup/age_months  * 30) - ( /first_treatment_followup/age_years  *12*30)"/>
+      <bind nodeset="/first_treatment_followup/week" type="string" calculate="7"/>
+      <bind nodeset="/first_treatment_followup/month" type="string" calculate="30"/>
+      <bind nodeset="/first_treatment_followup/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/first_treatment_followup/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/first_treatment_followup/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/first_treatment_followup/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/first_treatment_followup/due_date" type="string" calculate="../inputs/due_date"/>
+      <bind nodeset="/first_treatment_followup/due_date_pretty_print" type="string" calculate="../inputs/due_date_human_readable"/>
+      <bind nodeset="/first_treatment_followup/show_research_questions" type="string" calculate="instance('contact-summary')/context/show_research_questions"/>
+      <bind nodeset="/first_treatment_followup/show_quality_care_c" type="string" calculate="../inputs/show_quality_care"/>
+      <bind nodeset="/first_treatment_followup/visit_id" type="string" calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)"/>
+      <bind nodeset="/first_treatment_followup/is_atleast_one_baby_alive_c" type="string" calculate="../inputs/is_atleast_one_baby_alive"/>
+      <bind nodeset="/first_treatment_followup/show_wash_protocol" type="string" calculate="if(instance('contact-summary')/context/show_wash_protocol=&quot;true&quot;,1,0)"/>
+      <bind nodeset="/first_treatment_followup/first_treatment_date_constraint_c" type="string" calculate="../inputs/first_treatment_date_constraint"/>
+      <bind nodeset="/first_treatment_followup/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/first_treatment_followup/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/first_treatment_followup/first_followup/treatment_start_date" type="date" required="true()" jr:constraintMsg="jr:itext('/first_treatment_followup/first_followup/treatment_start_date:jr:constraintMsg')" constraint=". &lt;= today() and . &gt;=  /first_treatment_followup/first_treatment_date_constraint_c "/>
+      <bind nodeset="/first_treatment_followup/first_followup/treatment_end_date" type="string" calculate="if( /first_treatment_followup/first_followup/treatment_start_date  != '', format-date(date(decimal-date-time( /first_treatment_followup/first_followup/treatment_start_date ) + 200), '%Y-%m-%d'), '')"/>
+      <bind nodeset="/first_treatment_followup/first_followup/treatment_end_date_note" readonly="true()" type="string" relevant="not(selected( /first_treatment_followup/first_followup/treatment_start_date ,&quot;&quot;))"/>
+      <bind nodeset="/first_treatment_followup/first_followup/eat_medicine_location" type="select1" required="true()"/>
+      <bind nodeset="/first_treatment_followup/first_followup/medicine_supervisor" type="select1" required="true()" relevant="selected( /first_treatment_followup/first_followup/eat_medicine_location ,&quot;home&quot;)"/>
+      <bind nodeset="/first_treatment_followup/first_followup/supervisor_phone" type="string" relevant="selected( /first_treatment_followup/first_followup/eat_medicine_location ,&quot;home&quot;)" jr:constraintMsg="jr:itext('/first_treatment_followup/first_followup/supervisor_phone:jr:constraintMsg')" constraint="regex(.,'^[0oO][0-9oO]{9}$')"/>
+      <bind nodeset="/first_treatment_followup/first_followup/next_of_kin_phone" type="string" required="true()" jr:constraintMsg="jr:itext('/first_treatment_followup/first_followup/next_of_kin_phone:jr:constraintMsg')" constraint="regex(.,'^[0oO][0-9oO]{9}$')"/>
+      <bind nodeset="/first_treatment_followup/first_followup/thank_client_note" readonly="true()" type="string"/>
+      <bind nodeset="/first_treatment_followup/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/first_treatment_followup/inputs">
+      <input ref="/first_treatment_followup/inputs/first_treatment_date_constraint"/>
+      <input ref="/first_treatment_followup/inputs/show_quality_care"/>
+      <input ref="/first_treatment_followup/inputs/c_section"/>
+      <input ref="/first_treatment_followup/inputs/due_date"/>
+      <input ref="/first_treatment_followup/inputs/due_date_human_readable"/>
+      <input ref="/first_treatment_followup/inputs/delivery_date"/>
+      <input ref="/first_treatment_followup/inputs/visit_id"/>
+      <input ref="/first_treatment_followup/inputs/is_atleast_one_baby_alive"/>
+      <group ref="/first_treatment_followup/inputs/user">
+        <input ref="/first_treatment_followup/inputs/user/contact_id">
+          <label ref="jr:itext('/first_treatment_followup/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/first_treatment_followup/inputs/user/facility_id">
+          <label ref="jr:itext('/first_treatment_followup/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/first_treatment_followup/inputs/user/name">
+          <label ref="jr:itext('/first_treatment_followup/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/first_treatment_followup/inputs/contact">
+        <input ref="/first_treatment_followup/inputs/contact/_id"/>
+        <input ref="/first_treatment_followup/inputs/contact/name"/>
+        <input ref="/first_treatment_followup/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/first_treatment_followup/first_followup">
+      <label ref="jr:itext('/first_treatment_followup/first_followup:label')"/>
+      <input ref="/first_treatment_followup/first_followup/treatment_start_date">
+        <label ref="jr:itext('/first_treatment_followup/first_followup/treatment_start_date:label')"/>
+      </input>
+      <input ref="/first_treatment_followup/first_followup/treatment_end_date_note">
+        <label ref="jr:itext('/first_treatment_followup/first_followup/treatment_end_date_note:label')"/>
+      </input>
+      <select1 ref="/first_treatment_followup/first_followup/eat_medicine_location">
+        <label ref="jr:itext('/first_treatment_followup/first_followup/eat_medicine_location:label')"/>
+        <item>
+          <label ref="jr:itext('/first_treatment_followup/first_followup/eat_medicine_location/clinic:label')"/>
+          <value>clinic</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/first_treatment_followup/first_followup/eat_medicine_location/home:label')"/>
+          <value>home</value>
+        </item>
+      </select1>
+      <select1 ref="/first_treatment_followup/first_followup/medicine_supervisor">
+        <label ref="jr:itext('/first_treatment_followup/first_followup/medicine_supervisor:label')"/>
+        <item>
+          <label ref="jr:itext('/first_treatment_followup/first_followup/medicine_supervisor/family:label')"/>
+          <value>family</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/first_treatment_followup/first_followup/medicine_supervisor/neighbor:label')"/>
+          <value>neighbor</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/first_treatment_followup/first_followup/medicine_supervisor/friend:label')"/>
+          <value>friend</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/first_treatment_followup/first_followup/medicine_supervisor/chv:label')"/>
+          <value>chv</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/first_treatment_followup/first_followup/medicine_supervisor/sheha:label')"/>
+          <value>sheha</value>
+        </item>
+      </select1>
+      <input appearance="numbers" ref="/first_treatment_followup/first_followup/supervisor_phone">
+        <label ref="jr:itext('/first_treatment_followup/first_followup/supervisor_phone:label')"/>
+      </input>
+      <input appearance="numbers" ref="/first_treatment_followup/first_followup/next_of_kin_phone">
+        <label ref="jr:itext('/first_treatment_followup/first_followup/next_of_kin_phone:label')"/>
+      </input>
+      <input ref="/first_treatment_followup/first_followup/thank_client_note">
+        <label ref="jr:itext('/first_treatment_followup/first_followup/thank_client_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Treatment Outcome</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/treatment_outcome/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/treatment_outcome/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/treatment_outcome/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/treatment_outcome/treatment_info/treatment_end_date_note:label">
+            <value>Treatment end date : <output value=" /treatment_outcome/treatment_end_date "/></value>
+          </text>
+          <text id="/treatment_outcome/treatment_info/treatment_start_date_note:label">
+            <value>Treatment start date : <output value=" /treatment_outcome/treatment_start_date "/></value>
+          </text>
+          <text id="/treatment_outcome/treatment_info:jr:constraintMsg">
+            <value>You cannot select "No TB" with other options</value>
+          </text>
+          <text id="/treatment_outcome/treatment_info:label">
+            <value>Treatment Information</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/cured:label">
+            <value>Cured</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/died:label">
+            <value>Died</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/loss_to_followup:label">
+            <value>Loss to followup</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/treatment_completed:label">
+            <value>Treatment Completed</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/treatment_failure:label">
+            <value>Treatment Failure</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome:label">
+            <value>Treatment Outcome</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/treatment_outcome_praise:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Congratulate the client for completing the treatment and recovering. Explain to them to strive to avoid risk factors for getting TB, as TB can return.&lt;/span&gt;</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/treatment_outcome_refer:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group:label">
+            <value>Treatment Outcome</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/treatment_outcome/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/delivery_date:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/treatment_outcome/treatment_info/treatment_end_date_note:label">
+            <value>Tarehe ya kumaliza matibabu: <output value=" /treatment_outcome/treatment_end_date "/></value>
+          </text>
+          <text id="/treatment_outcome/treatment_info/treatment_start_date_note:label">
+            <value>Tarehe ya kuanza matibabu: <output value=" /treatment_outcome/treatment_start_date "/></value>
+          </text>
+          <text id="/treatment_outcome/treatment_info:jr:constraintMsg">
+            <value>Huwezi kuchagua hana TB na chaguo jengine</value>
+          </text>
+          <text id="/treatment_outcome/treatment_info:label">
+            <value>Taarifa ya matibabu</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/cured:label">
+            <value>Amepoa</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/died:label">
+            <value>Amefariki</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/loss_to_followup:label">
+            <value>Ametoroka matibabu</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/treatment_completed:label">
+            <value>Matibabu Yamekamilika</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/treatment_failure:label">
+            <value>Matibabu yamefeli</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome:label">
+            <value>Matokeo ya matibabu</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/treatment_outcome_praise:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Pongeza mteja kwa kumaliza dozi na kupona. 
+Mueleze ajitahidi kuepuka vihatarishi vya kupata TB kwa vile TB inaweza kumrejea.&lt;/span&gt;</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group/treatment_outcome_refer:label">
+            <value>&lt;span style="color:#f58a1f"&gt; Mpe maneno ya busara ya kumrudisha kwa matibabu
+Mshauri arudi kituo cha afya. Akikataa, ongea na CHW supervisor akusaidie. &lt;/span&gt;</value>
+          </text>
+          <text id="/treatment_outcome/treatment_outcome_group:label">
+            <value>Matokeo ya matibabu</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <treatment_outcome id="treatment_outcome" prefix="J1!treatment_outcome!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <due_date/>
+            <due_date_human_readable/>
+            <delivery_date/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <treatment_end_date/>
+          <treatment_start_date/>
+          <treatment_info>
+            <treatment_start_date_note/>
+            <treatment_end_date_note/>
+          </treatment_info>
+          <treatment_outcome_group>
+            <tb_treatment_outcome/>
+            <treatment_outcome_praise/>
+            <treatment_outcome_refer/>
+          </treatment_outcome_group>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </treatment_outcome>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/treatment_outcome/inputs" relevant="false()"/>
+      <bind nodeset="/treatment_outcome/inputs/due_date" type="string"/>
+      <bind nodeset="/treatment_outcome/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/treatment_outcome/inputs/delivery_date" type="string"/>
+      <bind nodeset="/treatment_outcome/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/treatment_outcome/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/treatment_outcome/inputs/user/name" type="string"/>
+      <bind nodeset="/treatment_outcome/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/treatment_outcome/inputs/contact/name" type="string"/>
+      <bind nodeset="/treatment_outcome/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/treatment_outcome/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/treatment_outcome/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/treatment_outcome/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/treatment_outcome/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/treatment_outcome/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/treatment_outcome/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/treatment_outcome/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/treatment_outcome/treatment_end_date" type="string" calculate="instance('contact-summary')/context/treatment_end_date"/>
+      <bind nodeset="/treatment_outcome/treatment_start_date" type="string" calculate="instance('contact-summary')/context/treatment_start_date"/>
+      <bind nodeset="/treatment_outcome/treatment_info" constraint="(selected(.,&quot;no_tb&quot;) and count-selected(.)=1) or (not(selected(.,&quot;no_tb&quot;)) and count-selected(.)&gt;=1)" jr:constraintMsg="jr:itext('/treatment_outcome/treatment_info:jr:constraintMsg')"/>
+      <bind nodeset="/treatment_outcome/treatment_info/treatment_start_date_note" readonly="true()" type="string"/>
+      <bind nodeset="/treatment_outcome/treatment_info/treatment_end_date_note" readonly="true()" type="string"/>
+      <bind nodeset="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome" type="select1"/>
+      <bind nodeset="/treatment_outcome/treatment_outcome_group/treatment_outcome_praise" readonly="true()" type="string" relevant="selected( /treatment_outcome ,&quot;cured&quot;)"/>
+      <bind nodeset="/treatment_outcome/treatment_outcome_group/treatment_outcome_refer" readonly="true()" type="string" relevant="selected( /treatment_outcome ,&quot;loss_to_followup&quot;)"/>
+      <bind nodeset="/treatment_outcome/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/treatment_outcome/inputs">
+      <input ref="/treatment_outcome/inputs/due_date"/>
+      <input ref="/treatment_outcome/inputs/due_date_human_readable"/>
+      <input ref="/treatment_outcome/inputs/delivery_date"/>
+      <group ref="/treatment_outcome/inputs/user">
+        <input ref="/treatment_outcome/inputs/user/contact_id">
+          <label ref="jr:itext('/treatment_outcome/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/treatment_outcome/inputs/user/facility_id">
+          <label ref="jr:itext('/treatment_outcome/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/treatment_outcome/inputs/user/name">
+          <label ref="jr:itext('/treatment_outcome/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/treatment_outcome/inputs/contact">
+        <input ref="/treatment_outcome/inputs/contact/_id"/>
+        <input ref="/treatment_outcome/inputs/contact/name"/>
+        <input ref="/treatment_outcome/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/treatment_outcome/treatment_info">
+      <label ref="jr:itext('/treatment_outcome/treatment_info:label')"/>
+      <input ref="/treatment_outcome/treatment_info/treatment_start_date_note">
+        <label ref="jr:itext('/treatment_outcome/treatment_info/treatment_start_date_note:label')"/>
+      </input>
+      <input ref="/treatment_outcome/treatment_info/treatment_end_date_note">
+        <label ref="jr:itext('/treatment_outcome/treatment_info/treatment_end_date_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/treatment_outcome/treatment_outcome_group">
+      <label ref="jr:itext('/treatment_outcome/treatment_outcome_group:label')"/>
+      <select1 ref="/treatment_outcome/treatment_outcome_group/tb_treatment_outcome">
+        <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/tb_treatment_outcome:label')"/>
+        <item>
+          <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/cured:label')"/>
+          <value>cured</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/treatment_completed:label')"/>
+          <value>treatment_completed</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/loss_to_followup:label')"/>
+          <value>loss_to_followup</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/treatment_failure:label')"/>
+          <value>treatment_failure</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/tb_treatment_outcome/died:label')"/>
+          <value>died</value>
+        </item>
+      </select1>
+      <input ref="/treatment_outcome/treatment_outcome_group/treatment_outcome_praise">
+        <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/treatment_outcome_praise:label')"/>
+      </input>
+      <input ref="/treatment_outcome/treatment_outcome_group/treatment_outcome_refer">
+        <label ref="jr:itext('/treatment_outcome/treatment_outcome_group/treatment_outcome_refer:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

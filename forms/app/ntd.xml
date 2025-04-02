@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>NTD</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/ntd/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/ntd/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/ntd/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/ntd/ntd/hydrocele/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ntd/ntd/hydrocele/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ntd/ntd/hydrocele:label">
+            <value>Is there any male in this household with hydrocele (scrotal swelling)?</value>
+          </text>
+          <text id="/ntd/ntd/painful_urination/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ntd/ntd/painful_urination/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ntd/ntd/painful_urination:label">
+            <value>Is there anyone in this household who experiences pain and blood in their urine?</value>
+          </text>
+          <text id="/ntd/ntd/received_treatment/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ntd/ntd/received_treatment/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ntd/ntd/received_treatment:label">
+            <value>Is there anyone among them who has never received treatment for schistosomiasis, intestinal worms, or lymphatic filariasis when distributed in the community or schools?</value>
+          </text>
+          <text id="/ntd/ntd/referral_for_hydrocele:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Advise them to visit a hospital for further examination and surgery.&lt;/span&gt;</value>
+          </text>
+          <text id="/ntd/ntd/referral_for_painful_urination:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Advise them to visit a hospital for testing and treatment.&lt;/span&gt;</value>
+          </text>
+          <text id="/ntd/ntd/referral_for_swollen_legs:label">
+            <value>Observe how the leg has swollen and schedule another day for providing care (home-based care for cleaning of the affected limb).</value>
+          </text>
+          <text id="/ntd/ntd/swollen_legs/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ntd/ntd/swollen_legs/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ntd/ntd/swollen_legs:label">
+            <value>Is there anyone in this household with swollen legs?</value>
+          </text>
+          <text id="/ntd/ntd:label">
+            <value>NTD</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/ntd/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ntd/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/ntd/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ntd/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ntd/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/ntd/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/ntd/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/ntd/ntd/hydrocele/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ntd/ntd/hydrocele/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ntd/ntd/hydrocele:label">
+            <value>Jee kuna mtu yoyote (mwanamme) mwenye busha?</value>
+          </text>
+          <text id="/ntd/ntd/painful_urination/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ntd/ntd/painful_urination/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ntd/ntd/painful_urination:label">
+            <value>Je katika kaya hii kuna mtu yoyote anapata maumivu na kutokwa na damu wakati wa kukojoa ?</value>
+          </text>
+          <text id="/ntd/ntd/received_treatment/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ntd/ntd/received_treatment/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ntd/ntd/received_treatment:label">
+            <value>Je kuna mtu yoyote ambaye hajawahi kupewa dawa za kichocho, minyoo au matende wakati zinapotolewa kwenye jamii au mashuleni?</value>
+          </text>
+          <text id="/ntd/ntd/referral_for_hydrocele:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mshauri aende hospitali kwa ajili ya kufanyiwa uchunguzi zaidi na kufanyiwa upasuaji.&lt;/span&gt;</value>
+          </text>
+          <text id="/ntd/ntd/referral_for_painful_urination:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mshauri aende hospitali kwa ajili ya kufanya kipimo na kupata matibabu.&lt;/span&gt;</value>
+          </text>
+          <text id="/ntd/ntd/referral_for_swollen_legs:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Angalia jinsi mguu ulivyovimba na upange siku yengine ya kupatia huduma&lt;/span&gt;</value>
+          </text>
+          <text id="/ntd/ntd/swollen_legs/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ntd/ntd/swollen_legs/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ntd/ntd/swollen_legs:label">
+            <value>Je kuna mtu yoyote amevimba mguu (au miguu) wake?</value>
+          </text>
+          <text id="/ntd/ntd:label">
+            <value>NTD</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ntd id="ntd" prefix="J1!ntd!" delimiter="#" version="2019-05-11 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <num_household_members/>
+          <ntd>
+            <received_treatment/>
+            <painful_urination/>
+            <referral_for_painful_urination/>
+            <swollen_legs/>
+            <referral_for_swollen_legs/>
+            <hydrocele/>
+            <referral_for_hydrocele/>
+          </ntd>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </ntd>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/ntd/inputs" relevant="false()"/>
+      <bind nodeset="/ntd/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/ntd/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/ntd/inputs/user/name" type="string"/>
+      <bind nodeset="/ntd/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/ntd/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/ntd/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/ntd/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/ntd/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/ntd/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/ntd/num_household_members" type="string" calculate="instance('contact-summary')/context/num_household_members"/>
+      <bind nodeset="/ntd/ntd/received_treatment" type="select1" required="true()"/>
+      <bind nodeset="/ntd/ntd/painful_urination" type="select1" required="true()"/>
+      <bind nodeset="/ntd/ntd/referral_for_painful_urination" readonly="true()" type="string" relevant="selected( /ntd/ntd/painful_urination ,&quot;yes&quot;)"/>
+      <bind nodeset="/ntd/ntd/swollen_legs" type="select1" required="true()"/>
+      <bind nodeset="/ntd/ntd/referral_for_swollen_legs" readonly="true()" type="string" relevant="selected( /ntd/ntd/swollen_legs ,&quot;yes&quot;)"/>
+      <bind nodeset="/ntd/ntd/hydrocele" type="select1" required="true()"/>
+      <bind nodeset="/ntd/ntd/referral_for_hydrocele" readonly="true()" type="string" relevant="selected( /ntd/ntd/hydrocele ,&quot;yes&quot;)"/>
+      <bind nodeset="/ntd/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/ntd/inputs">
+      <group ref="/ntd/inputs/user">
+        <input ref="/ntd/inputs/user/contact_id">
+          <label ref="jr:itext('/ntd/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/ntd/inputs/user/facility_id">
+          <label ref="jr:itext('/ntd/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/ntd/inputs/user/name">
+          <label ref="jr:itext('/ntd/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/ntd/inputs/contact">
+        <input appearance="db-object" ref="/ntd/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/ntd/ntd">
+      <label ref="jr:itext('/ntd/ntd:label')"/>
+      <select1 ref="/ntd/ntd/received_treatment">
+        <label ref="jr:itext('/ntd/ntd/received_treatment:label')"/>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/received_treatment/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/received_treatment/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ntd/ntd/painful_urination">
+        <label ref="jr:itext('/ntd/ntd/painful_urination:label')"/>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/painful_urination/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/painful_urination/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ntd/ntd/referral_for_painful_urination">
+        <label ref="jr:itext('/ntd/ntd/referral_for_painful_urination:label')"/>
+      </input>
+      <select1 ref="/ntd/ntd/swollen_legs">
+        <label ref="jr:itext('/ntd/ntd/swollen_legs:label')"/>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/swollen_legs/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/swollen_legs/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ntd/ntd/referral_for_swollen_legs">
+        <label ref="jr:itext('/ntd/ntd/referral_for_swollen_legs:label')"/>
+      </input>
+      <select1 ref="/ntd/ntd/hydrocele">
+        <label ref="jr:itext('/ntd/ntd/hydrocele:label')"/>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/hydrocele/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ntd/ntd/hydrocele/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ntd/ntd/referral_for_hydrocele">
+        <label ref="jr:itext('/ntd/ntd/referral_for_hydrocele:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

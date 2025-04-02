@@ -1,0 +1,1684 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Mental Health</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/mental_health/additional_psychological_services/psychological_services/education_mental_health:label">
+            <value>Health education on mental health</value>
+          </text>
+          <text id="/mental_health/additional_psychological_services/psychological_services/mental_health_care:label">
+            <value>Primary mental health care</value>
+          </text>
+          <text id="/mental_health/additional_psychological_services/psychological_services:label">
+            <value>Classify the mental health services you provided:</value>
+          </text>
+          <text id="/mental_health/additional_psychological_services:label">
+            <value>Additional psychological services provided</value>
+          </text>
+          <text id="/mental_health/attend_hc/attend_health_center/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/attend_hc/attend_health_center/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/attend_hc/attend_health_center:label">
+            <value>Have you attended any health center?</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_district:label">
+            <value>Which district is the health facility located?</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island/pemba:label">
+            <value>Pemba</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island/unguja:label">
+            <value>Unguja</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island:label">
+            <value>Where is the health facility located?</value>
+          </text>
+          <text id="/mental_health/attend_hc/mental_visit_facility:label">
+            <value>Which facility did you visit?</value>
+          </text>
+          <text id="/mental_health/attend_hc/mental_visit_facility_other:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/mental_health/gps/take_gps:label">
+            <value>Please press the button below to capture GPS</value>
+          </text>
+          <text id="/mental_health/gps/take_gps_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/mental_health/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/mental_health/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/mental_health/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/mental_health/mental_health/anxious_fearful_nervous/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/anxious_fearful_nervous/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/anxious_fearful_nervous:label">
+            <value>Do you often feel anxious, fearful, or nervous?</value>
+          </text>
+          <text id="/mental_health/mental_health/ask_guardian_note:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;Ask their loved one about the change in behavior&lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/mental_health/chv_note_general:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;For CHW: When asking these questions, make sure they are only asked for the past two weeks, not more than that period&lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/mental_health/give_referral:label">
+            <value>I am referring you to the nearest health center, and I will follow up on the referral in a few days.</value>
+          </text>
+          <text id="/mental_health/mental_health/has_sleep_issues/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/has_sleep_issues/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/has_sleep_issues:label">
+            <value>Have there been days when you couldn't sleep at all or slept too much?</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type/combination:label">
+            <value>A combination of both</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type/hospital:label">
+            <value>Hospital</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type/natural:label">
+            <value>Natural and alternative medicine</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type:label">
+            <value>What types of medications are you taking:</value>
+          </text>
+          <text id="/mental_health/mental_health/sad_stressed_hopeless/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/sad_stressed_hopeless/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/sad_stressed_hopeless:label">
+            <value>Do you feel sad, stressed, or hopeless?</value>
+          </text>
+          <text id="/mental_health/mental_health/seen_heard_things/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/seen_heard_things/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/seen_heard_things:label">
+            <value>Have you at times seen or heard things that other people do not see or hear?</value>
+          </text>
+          <text id="/mental_health/mental_health/struggled_to_make_decisions/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/struggled_to_make_decisions/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/struggled_to_make_decisions:label">
+            <value>Have you struggled to make decisions or take action?</value>
+          </text>
+          <text id="/mental_health/mental_health/thought_of_self_harm/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/thought_of_self_harm/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/thought_of_self_harm:label">
+            <value>Have you had thoughts that it would be better if you were dead, or thought about harming yourself or someone else in any way?</value>
+          </text>
+          <text id="/mental_health/mental_health/tired_no_energy/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/tired_no_energy/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/tired_no_energy:label">
+            <value>Have you felt tired, lacked energy, or lost interest in doing things?</value>
+          </text>
+          <text id="/mental_health/mental_health/unable_control_anxiety/no:label">
+            <value>No</value>
+          </text>
+          <text id="/mental_health/mental_health/unable_control_anxiety/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/mental_health/mental_health/unable_control_anxiety:label">
+            <value>Have you ever been unable to control your anxiety?</value>
+          </text>
+          <text id="/mental_health/mental_health:label">
+            <value>Mental Health</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_type/new:label">
+            <value>New</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_type/review:label">
+            <value>Review</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_type:label">
+            <value>Select Visit</value>
+          </text>
+          <text id="/mental_health/select_visit:label">
+            <value>Select Visit</value>
+          </text>
+          <text id="static_instance-facility_district-0">
+            <value>North A</value>
+          </text>
+          <text id="static_instance-facility_district-1">
+            <value>North B</value>
+          </text>
+          <text id="static_instance-facility_district-10">
+            <value>Wete</value>
+          </text>
+          <text id="static_instance-facility_district-2">
+            <value>Central</value>
+          </text>
+          <text id="static_instance-facility_district-3">
+            <value>South</value>
+          </text>
+          <text id="static_instance-facility_district-4">
+            <value>West A</value>
+          </text>
+          <text id="static_instance-facility_district-5">
+            <value>West B</value>
+          </text>
+          <text id="static_instance-facility_district-6">
+            <value>Urban</value>
+          </text>
+          <text id="static_instance-facility_district-7">
+            <value>Chake Chake</value>
+          </text>
+          <text id="static_instance-facility_district-8">
+            <value>Micheweni</value>
+          </text>
+          <text id="static_instance-facility_district-9">
+            <value>Mkoani</value>
+          </text>
+          <text id="static_instance-facility_island-0">
+            <value>Unguja</value>
+          </text>
+          <text id="static_instance-facility_island-1">
+            <value>Pemba</value>
+          </text>
+          <text id="static_instance-facility_island-2">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-medicine_type-0">
+            <value>Hospital</value>
+          </text>
+          <text id="static_instance-medicine_type-1">
+            <value>Natural and alternative medicine</value>
+          </text>
+          <text id="static_instance-medicine_type-2">
+            <value>A combination of both</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-0">
+            <value>Chake Chake District Hospital</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-1">
+            <value>Pujini PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-10">
+            <value>Kiuyu Mbuyuni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-11">
+            <value>Bogoa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-12">
+            <value>Kengeja PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-13">
+            <value>Abdallah Mzee District Hospital</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-14">
+            <value>Michenzani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-15">
+            <value>Fundo PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-16">
+            <value>Kojani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-17">
+            <value>Makongeni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-18">
+            <value>Wete District Hospital</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-19">
+            <value>Mzambarauni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-2">
+            <value>Tundauwa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-20">
+            <value>Junguni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-21">
+            <value>Ukunjwi PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-22">
+            <value>Uondwe PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-23">
+            <value>Chwaka PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-24">
+            <value>Mwera PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-25">
+            <value>Unguja Ukuu PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-26">
+            <value>Uzini PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-27">
+            <value>Uroa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-28">
+            <value>Kivunge District Hospital</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-29">
+            <value>Matemwe PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-3">
+            <value>Vitongoji PHCC</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-30">
+            <value>Nungwi PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-31">
+            <value>Pwani Mchangani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-32">
+            <value>Tumbatu Gomani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-33">
+            <value>Kendwa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-34">
+            <value>Bumbwini Misufini PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-35">
+            <value>Donge Vijibweni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-36">
+            <value>Kiongwe PHCU</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-37">
+            <value>Kitope PHCU</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-38">
+            <value>Mahonda PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-39">
+            <value>Jambiani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-4">
+            <value>Wesha PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-40">
+            <value>Makunduchi District Hospital</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-41">
+            <value>Muyuni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-42">
+            <value>Bwejuu PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-43">
+            <value>Chumbuni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-44">
+            <value>Mnazi Mmoja Hospital</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-45">
+            <value>Mwembeladu MCH Clinic</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-46">
+            <value>Sebleni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-47">
+            <value>Chukwani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-48">
+            <value>Fuoni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-49">
+            <value>Kombeni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-5">
+            <value>Konde PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-50">
+            <value>Mtofaani PHCU+ (Kinuni)</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-51">
+            <value>Bumbwisudi PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-52">
+            <value>Selem PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-53">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-54">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-55">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-56">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-57">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-58">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-59">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-6">
+            <value>Makangale PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-60">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-61">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-62">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-63">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-7">
+            <value>Maziwa Ngombe PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-8">
+            <value>Micheweni PHCC</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-9">
+            <value>Wingwi PHCU+</value>
+          </text>
+          <text id="static_instance-new_review-0">
+            <value>New</value>
+          </text>
+          <text id="static_instance-new_review-1">
+            <value>Review</value>
+          </text>
+          <text id="static_instance-psychological_services-0">
+            <value>Primary mental health care</value>
+          </text>
+          <text id="static_instance-psychological_services-1">
+            <value>Health education on mental health</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/mental_health/additional_psychological_services/psychological_services/education_mental_health:label">
+            <value>Elimu ya afya juu ya afya ya akili</value>
+          </text>
+          <text id="/mental_health/additional_psychological_services/psychological_services/mental_health_care:label">
+            <value>Huduma ya kwanza ya afya ya akili</value>
+          </text>
+          <text id="/mental_health/additional_psychological_services/psychological_services:label">
+            <value>Ainisha huduma za afya akili ulizozitoa:</value>
+          </text>
+          <text id="/mental_health/additional_psychological_services:label">
+            <value>Huduma za ziada za kisaikolojia zilizotolewa</value>
+          </text>
+          <text id="/mental_health/attend_hc/attend_health_center/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/attend_hc/attend_health_center/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/attend_hc/attend_health_center:label">
+            <value>Je umehudhuria kituo chochote cha Afya?</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_district:label">
+            <value>Ni wilaya gani kituo cha afya kipo?</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island/other:label">
+            <value>Kwengine</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island/pemba:label">
+            <value>Pemba</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island/unguja:label">
+            <value>Unguja</value>
+          </text>
+          <text id="/mental_health/attend_hc/facility_island:label">
+            <value>Ni wapi kituo cha afya kilipo?</value>
+          </text>
+          <text id="/mental_health/attend_hc/mental_visit_facility:label">
+            <value>Ulienda kituo gani cha afya ?</value>
+          </text>
+          <text id="/mental_health/attend_hc/mental_visit_facility_other:label">
+            <value>Tafadhali orodhesha</value>
+          </text>
+          <text id="/mental_health/gps/take_gps:label">
+            <value>Tafadhali bonyeza kitufe kilichopo chini ili kuchukua GPS</value>
+          </text>
+          <text id="/mental_health/gps/take_gps_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/gps:label">
+            <value>Chukua GPS</value>
+          </text>
+          <text id="/mental_health/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/mental_health/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/mental_health/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/mental_health/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/mental_health/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/mental_health/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/mental_health/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/mental_health/mental_health/anxious_fearful_nervous/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/anxious_fearful_nervous/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/anxious_fearful_nervous:label">
+            <value>Je unakuwa ukihisi wasiwasi, hofu au wahka?</value>
+          </text>
+          <text id="/mental_health/mental_health/ask_guardian_note:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;Muulize mtu wake wa karibu kuhusu mabadiliko ya tabia&lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/mental_health/chv_note_general:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;Kwa CHW: Unapouliza maswali haya hakikisha yanaulizwa kwa kipindi cha wiki mbili zilizopita pekee, isizidi kipindi hicho&lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/mental_health/give_referral:label">
+            <value>Nakupa rufaa kwenda kituo cha afya kilichopo karibu yako na nitarudi siku chache kufuatilia kuhusu rufaa.</value>
+          </text>
+          <text id="/mental_health/mental_health/has_sleep_issues/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/has_sleep_issues/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/has_sleep_issues:label">
+            <value>Je baadhi ya siku ulikosa usingizi kabisa au ulilala sana?</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type/combination:label">
+            <value>Mchanganyiko</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type/hospital:label">
+            <value>Za Hospitali</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type/natural:label">
+            <value>Za tiba asili na mbadala</value>
+          </text>
+          <text id="/mental_health/mental_health/medication_type:label">
+            <value>Aina gani za dawa unazotumia:</value>
+          </text>
+          <text id="/mental_health/mental_health/sad_stressed_hopeless/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/sad_stressed_hopeless/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/sad_stressed_hopeless:label">
+            <value>Je unahisi kuwa na huzuni, msongo wa mawazo au kukata tamaa?</value>
+          </text>
+          <text id="/mental_health/mental_health/seen_heard_things/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/seen_heard_things/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/seen_heard_things:label">
+            <value>Je baadhi ya wakati ulikuwa ukiona au kusikia vitu ambavyo watu
+wengine hawavioni?</value>
+          </text>
+          <text id="/mental_health/mental_health/struggled_to_make_decisions/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/struggled_to_make_decisions/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/struggled_to_make_decisions:label">
+            <value>Je ulishindwa kufanya maamuzi au jambo?</value>
+          </text>
+          <text id="/mental_health/mental_health/thought_of_self_harm/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/thought_of_self_harm/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/thought_of_self_harm:label">
+            <value>Je ulikuwa na fikra za kwamba afadhali ungekufa, kujidhuru au
+kumdhuru mtu mwingine kwa njia yoyote ile?</value>
+          </text>
+          <text id="/mental_health/mental_health/tired_no_energy/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/tired_no_energy/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/tired_no_energy:label">
+            <value>Je ulijisikia kuchoka au kukosa nguvu na kukosa hamu ya kufanya
+jambo?</value>
+          </text>
+          <text id="/mental_health/mental_health/unable_control_anxiety/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/mental_health/mental_health/unable_control_anxiety/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/mental_health/mental_health/unable_control_anxiety:label">
+            <value>Je ulishindwa kudhibiti wasiwasi?</value>
+          </text>
+          <text id="/mental_health/mental_health:label">
+            <value>Afya ya akili</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_type/new:label">
+            <value>Jipya</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_type/review:label">
+            <value>Marudio</value>
+          </text>
+          <text id="/mental_health/select_visit/select_visit_type:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="/mental_health/select_visit:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="static_instance-facility_district-0">
+            <value>North A</value>
+          </text>
+          <text id="static_instance-facility_district-1">
+            <value>North B</value>
+          </text>
+          <text id="static_instance-facility_district-10">
+            <value>Wete</value>
+          </text>
+          <text id="static_instance-facility_district-2">
+            <value>Central</value>
+          </text>
+          <text id="static_instance-facility_district-3">
+            <value>South</value>
+          </text>
+          <text id="static_instance-facility_district-4">
+            <value>West A</value>
+          </text>
+          <text id="static_instance-facility_district-5">
+            <value>West B</value>
+          </text>
+          <text id="static_instance-facility_district-6">
+            <value>Urban</value>
+          </text>
+          <text id="static_instance-facility_district-7">
+            <value>Chake Chake</value>
+          </text>
+          <text id="static_instance-facility_district-8">
+            <value>Micheweni</value>
+          </text>
+          <text id="static_instance-facility_district-9">
+            <value>Mkoani</value>
+          </text>
+          <text id="static_instance-facility_island-0">
+            <value>Unguja</value>
+          </text>
+          <text id="static_instance-facility_island-1">
+            <value>Pemba</value>
+          </text>
+          <text id="static_instance-facility_island-2">
+            <value>Kwengine</value>
+          </text>
+          <text id="static_instance-medicine_type-0">
+            <value>Za Hospitali</value>
+          </text>
+          <text id="static_instance-medicine_type-1">
+            <value>Za tiba asili na mbadala</value>
+          </text>
+          <text id="static_instance-medicine_type-2">
+            <value>Mchanganyiko</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-0">
+            <value>Hospitali ya wilaya ya Chake Chake</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-1">
+            <value>Pujini PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-10">
+            <value>Kiuyu Mbuyuni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-11">
+            <value>Bogoa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-12">
+            <value>Kengeja PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-13">
+            <value>Hospitali ya Abdallah mzee</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-14">
+            <value>Michenzani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-15">
+            <value>Fundo PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-16">
+            <value>Kojani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-17">
+            <value>Makongeni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-18">
+            <value>Hospitali ya Wilaya ya Wete</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-19">
+            <value>Mzambarauni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-2">
+            <value>Tundauwa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-20">
+            <value>Junguni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-21">
+            <value>Ukunjwi PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-22">
+            <value>Uondwe PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-23">
+            <value>Chwaka PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-24">
+            <value>Mwera PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-25">
+            <value>Unguja Ukuu PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-26">
+            <value>Uzini PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-27">
+            <value>Uroa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-28">
+            <value>Hospitali ya wailaya ya Kivunge</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-29">
+            <value>Matemwe PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-3">
+            <value>Vitongoji PHCC</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-30">
+            <value>Nungwi PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-31">
+            <value>Pwani Mchangani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-32">
+            <value>Tumbatu Gomani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-33">
+            <value>Kendwa PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-34">
+            <value>Bumbwini Misufini PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-35">
+            <value>Donge Vijibweni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-36">
+            <value>Kiongwe PHCU</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-37">
+            <value>Kitope PHCU</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-38">
+            <value>Mahonda PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-39">
+            <value>Jambiani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-4">
+            <value>Wesha PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-40">
+            <value>Hospitali ya wilaya ya Makunduchi</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-41">
+            <value>Muyuni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-42">
+            <value>Bwejuu PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-43">
+            <value>Chumbuni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-44">
+            <value>Hospitali ya Mnazi Mmoja</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-45">
+            <value>Kliniki ya Mwembeladu</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-46">
+            <value>Sebleni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-47">
+            <value>Chukwani PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-48">
+            <value>Fuoni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-49">
+            <value>Kombeni PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-5">
+            <value>Konde PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-50">
+            <value>Mtofaani PHCU+ (Kinuni)</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-51">
+            <value>Bumbwisudi PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-52">
+            <value>Selem PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-53">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-54">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-55">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-56">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-57">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-58">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-59">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-6">
+            <value>Makangale PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-60">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-61">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-62">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-63">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-7">
+            <value>Maziwa Ngombe PHCU+</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-8">
+            <value>Micheweni PHCC</value>
+          </text>
+          <text id="static_instance-mental_visit_facility-9">
+            <value>Wingwi PHCU+</value>
+          </text>
+          <text id="static_instance-new_review-0">
+            <value>Jipya</value>
+          </text>
+          <text id="static_instance-new_review-1">
+            <value>Marudio</value>
+          </text>
+          <text id="static_instance-psychological_services-0">
+            <value>Huduma ya kwanza ya afya ya akili</value>
+          </text>
+          <text id="static_instance-psychological_services-1">
+            <value>Elimu ya afya juu ya afya ya akili</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Ndiyo</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>Hapana</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <mental_health id="mental_health" prefix="J1!mental_health!" delimiter="#" version="2025-03-11 10-44">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <select_visit>
+            <select_visit_note_to_chv/>
+            <select_visit_type/>
+          </select_visit>
+          <mental_health>
+            <chv_note_general/>
+            <sad_stressed_hopeless/>
+            <anxious_fearful_nervous/>
+            <unable_control_anxiety/>
+            <seen_heard_things/>
+            <has_sleep_issues/>
+            <tired_no_energy/>
+            <struggled_to_make_decisions/>
+            <thought_of_self_harm/>
+            <ask_guardian_note/>
+            <give_referral/>
+            <medication_type/>
+          </mental_health>
+          <attend_hc>
+            <attend_health_center/>
+            <facility_island/>
+            <facility_district/>
+            <mental_visit_facility/>
+            <mental_visit_facility_other/>
+          </attend_hc>
+          <additional_psychological_services>
+            <psychological_services/>
+          </additional_psychological_services>
+          <gps>
+            <take_gps_note_to_chv/>
+            <take_gps/>
+          </gps>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </mental_health>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="new_review">
+        <root>
+          <item>
+            <itextId>static_instance-new_review-0</itextId>
+            <name>new</name>
+          </item>
+          <item>
+            <itextId>static_instance-new_review-1</itextId>
+            <name>review</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="medicine_type">
+        <root>
+          <item>
+            <itextId>static_instance-medicine_type-0</itextId>
+            <name>hospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-medicine_type-1</itextId>
+            <name>natural</name>
+          </item>
+          <item>
+            <itextId>static_instance-medicine_type-2</itextId>
+            <name>combination</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_island">
+        <root>
+          <item>
+            <itextId>static_instance-facility_island-0</itextId>
+            <name>unguja</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-1</itextId>
+            <name>pemba</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-2</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_district">
+        <root>
+          <item>
+            <itextId>static_instance-facility_district-0</itextId>
+            <name>north_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-1</itextId>
+            <name>north_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-2</itextId>
+            <name>central</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-3</itextId>
+            <name>south</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-4</itextId>
+            <name>west_a</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-5</itextId>
+            <name>west_b</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-6</itextId>
+            <name>urban</name>
+            <choice_filter>unguja</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-7</itextId>
+            <name>chakechake</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-8</itextId>
+            <name>micheweni</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-9</itextId>
+            <name>mkoani</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-10</itextId>
+            <name>wete</name>
+            <choice_filter>pemba</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="mental_visit_facility">
+        <root>
+          <item>
+            <itextId>static_instance-mental_visit_facility-0</itextId>
+            <name>chakechakedistricthospital</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-1</itextId>
+            <name>pujiniphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-2</itextId>
+            <name>tundauwaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-3</itextId>
+            <name>vitongojiphcc</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-4</itextId>
+            <name>weshaphcu+</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-5</itextId>
+            <name>kondephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-6</itextId>
+            <name>makangalephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-7</itextId>
+            <name>maziwangombephcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-8</itextId>
+            <name>micheweniphcc</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-9</itextId>
+            <name>wingwiphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-10</itextId>
+            <name>kiuyumbuyuniphcu+</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-11</itextId>
+            <name>bogoaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-12</itextId>
+            <name>kengejaphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-13</itextId>
+            <name>abdallahmzeedistricthospital</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-14</itextId>
+            <name>michenzaniphcu+</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-15</itextId>
+            <name>fundophcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-16</itextId>
+            <name>kojaniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-17</itextId>
+            <name>makongeniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-18</itextId>
+            <name>wetedistricthospital</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-19</itextId>
+            <name>mzambarauniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-20</itextId>
+            <name>junguniphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-21</itextId>
+            <name>ukunjwiphcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-22</itextId>
+            <name>uondwephcu+</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-23</itextId>
+            <name>chwakaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-24</itextId>
+            <name>mweraphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-25</itextId>
+            <name>ungujaukuuphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-26</itextId>
+            <name>uziniphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-27</itextId>
+            <name>uroaphcu+</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-28</itextId>
+            <name>kivungedistricthospital</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-29</itextId>
+            <name>matemwephcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-30</itextId>
+            <name>nungwiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-31</itextId>
+            <name>pwanimchanganiphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-32</itextId>
+            <name>tumbatugomaniphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-33</itextId>
+            <name>kendwaphcu+</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-34</itextId>
+            <name>bumbwinimisufiniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-35</itextId>
+            <name>dongevijibweniphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-36</itextId>
+            <name>kiongwephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-37</itextId>
+            <name>kitopephcu</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-38</itextId>
+            <name>mahondaphcu+</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-39</itextId>
+            <name>jambianiphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-40</itextId>
+            <name>makunduchidistricthospital</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-41</itextId>
+            <name>muyuniphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-42</itextId>
+            <name>bwejuuphcu+</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-43</itextId>
+            <name>chumbuniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-44</itextId>
+            <name>mnazimmojahospital</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-45</itextId>
+            <name>mwembeladumchclinic</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-46</itextId>
+            <name>sebleniphcu+</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-47</itextId>
+            <name>chukwaniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-48</itextId>
+            <name>fuoniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-49</itextId>
+            <name>kombeniphcu+</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-50</itextId>
+            <name>mtofaaniphcu+(kinuni)</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-51</itextId>
+            <name>bumbwisudiphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-52</itextId>
+            <name>selemphcu+</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-53</itextId>
+            <name>other</name>
+            <choice_filter>chakechake</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-54</itextId>
+            <name>other</name>
+            <choice_filter>micheweni</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-55</itextId>
+            <name>other</name>
+            <choice_filter>mkoani</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-56</itextId>
+            <name>other</name>
+            <choice_filter>wete</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-57</itextId>
+            <name>other</name>
+            <choice_filter>central</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-58</itextId>
+            <name>other</name>
+            <choice_filter>north_a</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-59</itextId>
+            <name>other</name>
+            <choice_filter>north_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-60</itextId>
+            <name>other</name>
+            <choice_filter>south</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-61</itextId>
+            <name>other</name>
+            <choice_filter>urban</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-62</itextId>
+            <name>other</name>
+            <choice_filter>west_b</choice_filter>
+          </item>
+          <item>
+            <itextId>static_instance-mental_visit_facility-63</itextId>
+            <name>other</name>
+            <choice_filter>west_a</choice_filter>
+          </item>
+        </root>
+      </instance>
+      <instance id="psychological_services">
+        <root>
+          <item>
+            <itextId>static_instance-psychological_services-0</itextId>
+            <name>mental_health_care</name>
+          </item>
+          <item>
+            <itextId>static_instance-psychological_services-1</itextId>
+            <name>education_mental_health</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/mental_health/inputs" relevant="false()"/>
+      <bind nodeset="/mental_health/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/mental_health/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/mental_health/inputs/user/name" type="string"/>
+      <bind nodeset="/mental_health/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/mental_health/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/mental_health/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/mental_health/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/mental_health/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/mental_health/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/mental_health/select_visit/select_visit_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/mental_health/select_visit/select_visit_type" type="select1"/>
+      <bind nodeset="/mental_health/mental_health" relevant="selected( /mental_health/select_visit/select_visit_type ,&quot;new&quot;)"/>
+      <bind nodeset="/mental_health/mental_health/chv_note_general" readonly="true()" type="string"/>
+      <bind nodeset="/mental_health/mental_health/sad_stressed_hopeless" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/anxious_fearful_nervous" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/unable_control_anxiety" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/seen_heard_things" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/has_sleep_issues" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/tired_no_energy" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/struggled_to_make_decisions" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/thought_of_self_harm" type="select1" required="true()"/>
+      <bind nodeset="/mental_health/mental_health/ask_guardian_note" readonly="true()" type="string"/>
+      <bind nodeset="/mental_health/mental_health/give_referral" readonly="true()" type="string" relevant=" /mental_health/mental_health/sad_stressed_hopeless  = 'yes' or  /mental_health/mental_health/anxious_fearful_nervous  = 'yes' or  /mental_health/mental_health/unable_control_anxiety  = 'yes' or  /mental_health/mental_health/seen_heard_things  = 'yes' or  /mental_health/mental_health/has_sleep_issues  = 'yes' or  /mental_health/mental_health/tired_no_energy  = 'yes' or  /mental_health/mental_health/struggled_to_make_decisions ='yes' or  /mental_health/mental_health/thought_of_self_harm ='yes'"/>
+      <bind nodeset="/mental_health/mental_health/medication_type" type="select1"/>
+      <bind nodeset="/mental_health/attend_hc" relevant="selected( /mental_health/select_visit/select_visit_type ,&quot;review&quot;)"/>
+      <bind nodeset="/mental_health/attend_hc/attend_health_center" type="select1"/>
+      <bind nodeset="/mental_health/attend_hc/facility_island" type="select1" required="true()" relevant="selected( /mental_health/attend_hc/attend_health_center ,&quot;yes&quot;)"/>
+      <bind nodeset="/mental_health/attend_hc/facility_district" type="select1" required="true()" relevant="selected( /mental_health/attend_hc/attend_health_center ,&quot;yes&quot;) and (selected( /mental_health/attend_hc/facility_island ,&quot;unguja&quot;) or selected( /mental_health/attend_hc/facility_island ,&quot;pemba&quot;))"/>
+      <bind nodeset="/mental_health/attend_hc/mental_visit_facility" type="select1" required="true()" relevant="selected( /mental_health/attend_hc/attend_health_center ,&quot;yes&quot;) and (selected( /mental_health/attend_hc/facility_island ,&quot;unguja&quot;) or selected( /mental_health/attend_hc/facility_island ,&quot;pemba&quot;)) and 
+(selected( /mental_health/attend_hc/facility_district ,&quot;north_a&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;north_b&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;central&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;south&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;west_a&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;west_b&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;urban&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;chakechake&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;micheweni&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;mkoani&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;wete&quot;))"/>
+      <bind nodeset="/mental_health/attend_hc/mental_visit_facility_other" type="string" required="true()" relevant="selected( /mental_health/attend_hc/attend_health_center ,&quot;yes&quot;) and (selected( /mental_health/attend_hc/facility_island ,&quot;unguja&quot;) or selected( /mental_health/attend_hc/facility_island ,&quot;pemba&quot;) )
+and 
+(selected( /mental_health/attend_hc/facility_district ,&quot;north_a&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;north_b&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;central&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;south&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;west_a&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;west_b&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;urban&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;chakechake&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;micheweni&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;mkoani&quot;) or 
+selected( /mental_health/attend_hc/facility_district ,&quot;wete&quot;)) and selected( /mental_health/attend_hc/mental_visit_facility ,&quot;other&quot;)"/>
+      <bind nodeset="/mental_health/additional_psychological_services" relevant="selected( /mental_health/select_visit/select_visit_type ,&quot;new&quot;)"/>
+      <bind nodeset="/mental_health/additional_psychological_services/psychological_services" type="select"/>
+      <bind nodeset="/mental_health/gps/take_gps_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/mental_health/gps/take_gps" type="geopoint" required="true()"/>
+      <bind nodeset="/mental_health/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/mental_health/inputs">
+      <group ref="/mental_health/inputs/user">
+        <input ref="/mental_health/inputs/user/contact_id">
+          <label ref="jr:itext('/mental_health/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/mental_health/inputs/user/facility_id">
+          <label ref="jr:itext('/mental_health/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/mental_health/inputs/user/name">
+          <label ref="jr:itext('/mental_health/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/mental_health/inputs/contact">
+        <input appearance="db-object" ref="/mental_health/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/mental_health/select_visit">
+      <label ref="jr:itext('/mental_health/select_visit:label')"/>
+      <input ref="/mental_health/select_visit/select_visit_note_to_chv">
+        <label ref="jr:itext('/mental_health/select_visit/select_visit_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/mental_health/select_visit/select_visit_type">
+        <label ref="jr:itext('/mental_health/select_visit/select_visit_type:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/select_visit/select_visit_type/new:label')"/>
+          <value>new</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/select_visit/select_visit_type/review:label')"/>
+          <value>review</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/mental_health/mental_health">
+      <label ref="jr:itext('/mental_health/mental_health:label')"/>
+      <input ref="/mental_health/mental_health/chv_note_general">
+        <label ref="jr:itext('/mental_health/mental_health/chv_note_general:label')"/>
+      </input>
+      <select1 ref="/mental_health/mental_health/sad_stressed_hopeless">
+        <label ref="jr:itext('/mental_health/mental_health/sad_stressed_hopeless:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/sad_stressed_hopeless/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/sad_stressed_hopeless/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/mental_health/anxious_fearful_nervous">
+        <label ref="jr:itext('/mental_health/mental_health/anxious_fearful_nervous:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/anxious_fearful_nervous/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/anxious_fearful_nervous/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/mental_health/unable_control_anxiety">
+        <label ref="jr:itext('/mental_health/mental_health/unable_control_anxiety:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/unable_control_anxiety/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/unable_control_anxiety/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/mental_health/seen_heard_things">
+        <label ref="jr:itext('/mental_health/mental_health/seen_heard_things:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/seen_heard_things/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/seen_heard_things/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/mental_health/has_sleep_issues">
+        <label ref="jr:itext('/mental_health/mental_health/has_sleep_issues:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/has_sleep_issues/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/has_sleep_issues/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/mental_health/tired_no_energy">
+        <label ref="jr:itext('/mental_health/mental_health/tired_no_energy:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/tired_no_energy/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/tired_no_energy/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/mental_health/struggled_to_make_decisions">
+        <label ref="jr:itext('/mental_health/mental_health/struggled_to_make_decisions:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/struggled_to_make_decisions/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/struggled_to_make_decisions/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/mental_health/thought_of_self_harm">
+        <label ref="jr:itext('/mental_health/mental_health/thought_of_self_harm:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/thought_of_self_harm/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/thought_of_self_harm/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/mental_health/mental_health/ask_guardian_note">
+        <label ref="jr:itext('/mental_health/mental_health/ask_guardian_note:label')"/>
+      </input>
+      <input ref="/mental_health/mental_health/give_referral">
+        <label ref="jr:itext('/mental_health/mental_health/give_referral:label')"/>
+      </input>
+      <select1 ref="/mental_health/mental_health/medication_type">
+        <label ref="jr:itext('/mental_health/mental_health/medication_type:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/medication_type/hospital:label')"/>
+          <value>hospital</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/medication_type/natural:label')"/>
+          <value>natural</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/mental_health/medication_type/combination:label')"/>
+          <value>combination</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/mental_health/attend_hc">
+      <select1 ref="/mental_health/attend_hc/attend_health_center">
+        <label ref="jr:itext('/mental_health/attend_hc/attend_health_center:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/attend_hc/attend_health_center/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/attend_hc/attend_health_center/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/attend_hc/facility_island">
+        <label ref="jr:itext('/mental_health/attend_hc/facility_island:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/attend_hc/facility_island/unguja:label')"/>
+          <value>unguja</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/attend_hc/facility_island/pemba:label')"/>
+          <value>pemba</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/attend_hc/facility_island/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <select1 ref="/mental_health/attend_hc/facility_district">
+        <label ref="jr:itext('/mental_health/attend_hc/facility_district:label')"/>
+        <itemset nodeset="instance('facility_district')/root/item[choice_filter= /mental_health/attend_hc/facility_island ]">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/mental_health/attend_hc/mental_visit_facility">
+        <label ref="jr:itext('/mental_health/attend_hc/mental_visit_facility:label')"/>
+        <itemset nodeset="instance('mental_visit_facility')/root/item[choice_filter= /mental_health/attend_hc/facility_district ]">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/mental_health/attend_hc/mental_visit_facility_other">
+        <label ref="jr:itext('/mental_health/attend_hc/mental_visit_facility_other:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/mental_health/additional_psychological_services">
+      <label ref="jr:itext('/mental_health/additional_psychological_services:label')"/>
+      <select ref="/mental_health/additional_psychological_services/psychological_services">
+        <label ref="jr:itext('/mental_health/additional_psychological_services/psychological_services:label')"/>
+        <item>
+          <label ref="jr:itext('/mental_health/additional_psychological_services/psychological_services/mental_health_care:label')"/>
+          <value>mental_health_care</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/mental_health/additional_psychological_services/psychological_services/education_mental_health:label')"/>
+          <value>education_mental_health</value>
+        </item>
+      </select>
+    </group>
+    <group appearance="field-list" ref="/mental_health/gps">
+      <label ref="jr:itext('/mental_health/gps:label')"/>
+      <input ref="/mental_health/gps/take_gps_note_to_chv">
+        <label ref="jr:itext('/mental_health/gps/take_gps_note_to_chv:label')"/>
+      </input>
+      <input ref="/mental_health/gps/take_gps">
+        <label ref="jr:itext('/mental_health/gps/take_gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

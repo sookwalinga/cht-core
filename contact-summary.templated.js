@@ -43,6 +43,7 @@ const this_month_total_pay_with_tarrif = this_month_total_pay + extras.getTarrif
 const last_month_supervisor_total_pay_with_tarrif = last_month_supervisor_total_pay + extras.getTarrifCost(last_month_supervisor_total_pay);
 const this_month_supervisor_total_pay_with_tarrif = this_month_supervisor_total_pay + extras.getTarrifCost(this_month_supervisor_total_pay);
 
+
 // Including a condition card that contains P4P summary
 const allReports = reports;
 const cards = [
@@ -308,6 +309,7 @@ module.exports = {
     previous_rchcard_status: extras.showPregnancyEDDEstimation(),
     hide_lmp_or_months_pregnant: extras.hideLastLMPOrEstimatedMonthsPregnant(),
     show_wash_protocol:extras.isCHVInProject('wash'), 
+    show_new_modules:extras.isCHVInProject('new_modules'),
     quality_monitoring_count: extras.getQualityMonitoringCount(),
     is_parent_health_center:extras.isParentHealthCenter(),
     is_contact_deceased:extras.isClientReportedDead(), 
@@ -321,7 +323,16 @@ module.exports = {
     is_monthly_meeting_submitted_this_month: extras.isFormSubmittedThisMonth('monthly_meeting'),
     is_group_session_submitted_this_month: extras.isFormSubmittedThisMonth('group_session'), 
     is_client_adult: extras.isClientAdult(),
-    show_new_ecd_protocol:extras.isCHVInProject('new_ecd')
+    show_new_ecd_protocol:extras.isCHVInProject('new_ecd'), 
+    is_child_above_5:extras.isChildAbove5(), 
+    treatment_start_date:extras.getTBTreatmentStartDate(),  
+    treatment_end_date:extras.getTBTreatmentEndDate(), 
+    should_show_tb_investigation:extras.shouldShowTBInvestigationForm(),
+    should_show_tb_treatment_outcome:extras.shouldShowTBTreatmentOutcomeForm(), 
+    should_show_defaulter_tracing:extras.shouldShowDefaulterTracingForm(),
+    is_active_household_member: extras.isActiveHouseholdMember(),
+    num_household_members:extras.countHouseholdMembers(),
+    is_child_below_10:extras.isChildBelow10()
   },
 
   fields: [
@@ -351,10 +362,7 @@ module.exports = {
     },
     { appliesToType: 'person', appliesIf: function () { return (extras.currentlyPregnant() && !extras.isContactDeceased() && !extras.isContactMuted()); }, 
       label: 'contact.is_pregnant', icon: 'pregnancy-1' 
-    }, 
-    { appliesToType: 'person', appliesIf: function () { return contact.parent && lineage[1] && (contact.kadi_ya_matibabu_id || contact.kadi_ya_matibabu_id_read_only); }, 
-      label: 'contact.kadi_ya_matibabu', value: (contact.kadi_ya_matibabu_id || contact.kadi_ya_matibabu_id_read_only), width: 4 
-    },
+    }
   ],
 
   cards:cards 

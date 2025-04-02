@@ -1,0 +1,1695 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>ncd</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/ncd/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/ncd/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/ncd/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/asthma_education_given_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/asthma_education_givens:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group/attend_clinic:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group/attend_group:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group/no_clinic_or_group:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_reading:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_reading:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_reading_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_readingnote_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_before_meal_reading:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_before_meal_reading:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_before_meal_readingnote_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/bmi_measurement_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/bmi_value2:label">
+            <value>BMI is <output value=" /ncd/ncd/bmi_value "/></value>
+          </text>
+          <text id="/ncd/ncd/bp_reading:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/bp_reading:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/bp_reading_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/bp_reading_select_reasons:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/cancer_education_given:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/cancer_education_given_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/erectile_dysfunction:label">
+            <value>Erectile dysfunction</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/foot_ulcers:label">
+            <value>Foot ulcers</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/memory_loss:label">
+            <value>Memory loss</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/numbness:label">
+            <value>Numbness</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/other_challenge:label">
+            <value>Other</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/poor_vision:label">
+            <value>Poor vision</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes:label">
+            <value>If no, please specify</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_education_givens:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement:label">
+            <value>Did you measure height?</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/height_measures:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/height_measures:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/instruction_height:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/instruction_pb:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/instruction_weight:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_after_meal/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_after_meal/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_after_meal:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_before_meal/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_before_meal/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_before_meal:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/measure_glucose_before_meal_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected/both_hosp_non_hosp:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected/hospital_medicine:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected/non_hospital_medicine:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/normal_weight:label">
+            <value>Normal Weight</value>
+          </text>
+          <text id="/ncd/ncd/obesity:label">
+            <value>Obesity</value>
+          </text>
+          <text id="/ncd/ncd/other_challenge_specify:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/ncd/ncd/over_weight:label">
+            <value>Over weight</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic/long_distance:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic/long_queue:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic/other:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic_other:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_select_other:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reason_select_other:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_1:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_2:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_3:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_4:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_other:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/referral_given/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/referral_given/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/referral_given:label">
+            <value>Was the client referred to the health facility for NCD?</value>
+          </text>
+          <text id="/ncd/ncd/referral_given_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma/select_asthma_1:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma/select_asthma_2:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma/select_asthma_other:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer/select_cancer_1:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer/select_cancer_2:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer/select_cancer_other:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/bad_mashine:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/mashine_no_charge:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/no_mashine:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/no_persons:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/select_others:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell/select_sickle_cell_1:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell/select_sickle_cell_2:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell/select_sickle_cell_3:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_education_givens:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_diet_education_givens:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/specify_other_illness:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/ncd/ncd/take_bp_medicine/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/take_bp_medicine/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/take_bp_medicine:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/take_gps:label">
+            <value>Please press the button below to capture GPS</value>
+          </text>
+          <text id="/ncd/ncd/take_gps_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/asthma:label">
+            <value>Asthma</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/diabetes:label">
+            <value>Diabetes</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/high_bp:label">
+            <value>High blood pressure</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/other_illness:label">
+            <value>Other illnesses</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/prostate_cancer:label">
+            <value>Prostate cancer</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/sickle_cell:label">
+            <value>Sickle cell disease</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness:label">
+            <value>Ask the client what type of illness they are suffering from.</value>
+          </text>
+          <text id="/ncd/ncd/under_weight:label">
+            <value>Under weight</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement:label">
+            <value>Did you measure weight?</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement_note_to_chv1:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/weight_measures:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/weight_measures:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd:label">
+            <value>NCD</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/ncd/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit:label">
+            <value>Je mgonjwa wa pumu amewahi kufika kituo cha afya kupata matibabu?</value>
+          </text>
+          <text id="/ncd/ncd/asthma_client_health_facility_visit_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/asthma_education_given_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/asthma_education_givens:label">
+            <value>&lt;span style="color:orange;font-style: italic"&gt;Toa elimu ya afya kuhusu ugonjwa wa Pumu &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence:label">
+            <value>Je mgonjwa anatumia dawa za pumu?</value>
+          </text>
+          <text id="/ncd/ncd/asthma_medication_adherence_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group/attend_clinic:label">
+            <value>Mgonjwa anahudhuria kliniki kupata huduma za shinikizo la damu</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group/attend_group:label">
+            <value>Mgonjwa anahudhuria kikundi kupata huduma za shinikizo la damu kwa wakati</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group/no_clinic_or_group:label">
+            <value>Mgonjwa hahudhurii kliniki wala kikundi maalum kwa matibabu ya shinikizo la damu</value>
+          </text>
+          <text id="/ncd/ncd/attend_clinic_or_group:label">
+            <value>Je unahudhuria kituo cha afya au kikundi maalumu?</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_reading:jr:constraintMsg">
+            <value>kipimo kinatakiwa kiwe kati ya 0 na 50</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_reading:label">
+            <value>Andika kipimo cha sukari baada ya kula (mmol/l)</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_reading_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_after_meal_readingnote_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_before_meal_reading:jr:constraintMsg">
+            <value>kipimo kinatakiwa kiwe kati ya 0 na 50</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_before_meal_reading:label">
+            <value>Andika kipimo cha sukari kabla ya kula (mmol/l)</value>
+          </text>
+          <text id="/ncd/ncd/blood_glucose_before_meal_readingnote_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/bmi_measurement_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/bmi_value2:label">
+            <value>Uwiano wa mwili(BMI) ni <output value=" /ncd/ncd/bmi_value "/></value>
+          </text>
+          <text id="/ncd/ncd/bp_reading:jr:constraintMsg">
+            <value>Tafadhali ingiza shinikizo la damu kwa muundo sahihi (mfano: 120/80 au 90/60).</value>
+          </text>
+          <text id="/ncd/ncd/bp_reading:label">
+            <value>Andika kipimo cha shinikizo la damu</value>
+          </text>
+          <text id="/ncd/ncd/bp_reading_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/bp_reading_select_reasons:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/cancer_education_given:label">
+            <value>&lt;span style="color:orange;font-style: italic"&gt;Toa elimu ya afya kuhusu ugonjwa wa Saratani. &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/cancer_education_given_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt:label">
+            <value>Je mteja anapata matibabu ya saratani?</value>
+          </text>
+          <text id="/ncd/ncd/cancer_trtmt_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/erectile_dysfunction:label">
+            <value>Kupungua nguvu za kiume</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/foot_ulcers:label">
+            <value>Vidonda vya mguu</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/memory_loss:label">
+            <value>Kupoteza kumbukumbu</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/numbness:label">
+            <value>Ganzi</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/other_challenge:label">
+            <value>Nyinginezo</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes/poor_vision:label">
+            <value>Uoni hafifu</value>
+          </text>
+          <text id="/ncd/ncd/choose_challenge_diabetes:label">
+            <value>Ainisha changamoto</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good:label">
+            <value>Je hali ya mgonjwa wa kisukari inaendelea vizuri?</value>
+          </text>
+          <text id="/ncd/ncd/client_diabetes_condition_good_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility:label">
+            <value>Je mgonjwa amewahi kufika kituo cha afya kupata huduma ya seli mundu siku za karibuni?</value>
+          </text>
+          <text id="/ncd/ncd/client_received_sickle_cell_trmt_at_facility_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_education_givens:label">
+            <value>&lt;span style="color:orange;font-style: italic"&gt;Toa elimu ya afya kuhusu ugonjwa wa kisukari&lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence:label">
+            <value>Je mgonjwa anatumia dawa za kisukari?</value>
+          </text>
+          <text id="/ncd/ncd/diabetes_medication_adherence_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement:label">
+            <value>Je umempima mteja urefu ili kupata kielelezo cha uwiano wa mwili (BMI)</value>
+          </text>
+          <text id="/ncd/ncd/height_measurement_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/height_measures:jr:constraintMsg">
+            <value>Andika kipimo sahihi, kuanzia 0 mpaka 300</value>
+          </text>
+          <text id="/ncd/ncd/height_measures:label">
+            <value>Andika urefu wa mgonjwa (cm)</value>
+          </text>
+          <text id="/ncd/ncd/instruction_height:label">
+            <value>&lt;span style="color:#f58a1f;font-weight:bold"&gt;Mpime mteja urefu. &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/instruction_pb:label">
+            <value>&lt;span style="color:#f58a1f;font-weight:bold"&gt;Mpime mteja shinikizo la damu. &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/instruction_weight:label">
+            <value>&lt;span style="color:#f58a1f;font-weight:bold"&gt;Mpime mteja uzito. &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose:label">
+            <value>Je mgonjwa umempima kiwango cha sukari kwenye damu?</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_after_meal/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_after_meal/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_after_meal:label">
+            <value>Je umempima mteja sukari baada ya kula?</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_before_meal/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_before_meal/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_before_meal:label">
+            <value>Je umempima mteja sukari kabla ya kula?</value>
+          </text>
+          <text id="/ncd/ncd/measure_blood_glucose_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp:label">
+            <value>Je mteja umempima shinikizo la damu?</value>
+          </text>
+          <text id="/ncd/ncd/measure_bp_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/measure_glucose_before_meal_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected/both_hosp_non_hosp:label">
+            <value>Mchanganyiko</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected/hospital_medicine:label">
+            <value>Dawa za hospitali</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected/non_hospital_medicine:label">
+            <value>Dawa za tiba asili na mbadala</value>
+          </text>
+          <text id="/ncd/ncd/medicine_type_selected:label">
+            <value>Aina gani za dawa unazotumia</value>
+          </text>
+          <text id="/ncd/ncd/normal_weight:label">
+            <value>&lt;span style="color:green;font-style: italic"&gt;Mteja ana uzito wa kawaida&lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/obesity:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Mteja ana uzito kupita kiasi&lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/other_challenge_specify:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/ncd/ncd/over_weight:label">
+            <value>&lt;span style="color:orange;font-style: italic"&gt;Mteja ana uzito mkubwa&lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic/long_distance:label">
+            <value>Umbali wa klinik/huduma ilipo</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic/long_queue:label">
+            <value>Sababu ya foleni ndefu klinik</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic/other:label">
+            <value>Sababu nyenginezo</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic:label">
+            <value>Nini sababu ya kutokuhudhuria kliniki?</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_clinic_other:label">
+            <value>Tafadhali taja</value>
+          </text>
+          <text id="/ncd/ncd/reason_no_select_other:label">
+            <value>Tafadhali taja</value>
+          </text>
+          <text id="/ncd/ncd/reason_select_other:label">
+            <value>Tafadhali taja</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_1:label">
+            <value>NI  mara ya kwanza kujigundua kua ni mgonjwa wa shinikizo la damu</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_2:label">
+            <value>Naishi mbali na kituo cha Afya</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_3:label">
+            <value>Nahisi dawa hazinifai</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_4:label">
+            <value>Sina pesa za kununua dawa</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select/not_select_other:label">
+            <value>Sababu nyengine</value>
+          </text>
+          <text id="/ncd/ncd/reasons_not_select:label">
+            <value>Taja sababu za kutotumia dawa</value>
+          </text>
+          <text id="/ncd/ncd/referral_given/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/referral_given/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/referral_given:label">
+            <value>Je mgonjwa umempa rufaa kwa maradhi yasiyo ambukiza?</value>
+          </text>
+          <text id="/ncd/ncd/referral_given_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma/select_asthma_1:label">
+            <value>Dawa za hospitali</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma/select_asthma_2:label">
+            <value>Dawa za tiba asili na mbadala</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma/select_asthma_other:label">
+            <value>Mchanganyiko</value>
+          </text>
+          <text id="/ncd/ncd/select_asthma:label">
+            <value>Aina gani za dawa unazotumia</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer/select_cancer_1:label">
+            <value>Dawa za hospitali</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer/select_cancer_2:label">
+            <value>Dawa za tiba asili na mbadala</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer/select_cancer_other:label">
+            <value>Mchanganyiko</value>
+          </text>
+          <text id="/ncd/ncd/select_cancer:label">
+            <value>Aina gani za dawa unazotumia ?</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/bad_mashine:label">
+            <value>Mashine ni mbovu</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/mashine_no_charge:label">
+            <value>Mashine imeisha chaji</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/no_mashine:label">
+            <value>Sina mashine</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/no_persons:label">
+            <value>Mteja amekataa</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons/select_others:label">
+            <value>Sababu Nyenginezo</value>
+          </text>
+          <text id="/ncd/ncd/select_reasons:label">
+            <value>Chagua Sababu</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell/select_sickle_cell_1:label">
+            <value>Dawa za hospitali</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell/select_sickle_cell_2:label">
+            <value>Dawa za tiba asili na mbadala</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell/select_sickle_cell_3:label">
+            <value>Mchanganyiko</value>
+          </text>
+          <text id="/ncd/ncd/select_sickle_cell:label">
+            <value>Aina gani za dawa unazotumia</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_education_givens:label">
+            <value>&lt;span style="color:orange;font-style: italic"&gt;Toa elimu ya afya kuhusu ugonjwa wa Seli mundu &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds:label">
+            <value>Je mgonjwa anatumia dawa za seli mundu?</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_client_taking_meds_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_diet_education_givens:label">
+            <value>&lt;span style="color:orange;font-style: italic"&gt;Toa elimu kuhusu chakula na lishe bora &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received:label">
+            <value>Je mgonjwa amewahi kufika kituo cha afya kupata huduma siku za karibuni?</value>
+          </text>
+          <text id="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/specify_other_illness:label">
+            <value>Tafadhali taja</value>
+          </text>
+          <text id="/ncd/ncd/take_bp_medicine/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/take_bp_medicine/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/take_bp_medicine:label">
+            <value>Je ulitumia dawa za shinikizo la damu ?</value>
+          </text>
+          <text id="/ncd/ncd/take_gps:label">
+            <value>Tafadhali bonyeza kitufe kilichopo chini ili kuchukua GPS</value>
+          </text>
+          <text id="/ncd/ncd/take_gps_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/asthma:label">
+            <value>Maradhi ya pumu</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/diabetes:label">
+            <value>Maradhi ya kisukari</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/high_bp:label">
+            <value>Shinikizo la damu</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/other_illness:label">
+            <value>Maradhi Mengineo</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/prostate_cancer:label">
+            <value>Maradhi ya Saratani</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness/sickle_cell:label">
+            <value>Maradhi ya seli mundu (sickle cell)</value>
+          </text>
+          <text id="/ncd/ncd/type_of_illness:label">
+            <value>Unaugua ugonjwa wa aina gani?</value>
+          </text>
+          <text id="/ncd/ncd/under_weight:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Mteja ana uzito wa chini&lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement:label">
+            <value>Je umempima mteja uzito ili kupata kielelezo cha uwiano wa mwili (BMI)</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement_note_to_chv1:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/weight_measurement_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/ncd/ncd/weight_measures:jr:constraintMsg">
+            <value>Andika kipimo sahihi</value>
+          </text>
+          <text id="/ncd/ncd/weight_measures:label">
+            <value>Andika uzito wa mgonjwa (kg)</value>
+          </text>
+          <text id="/ncd/ncd:label">
+            <value>Maradhi yasioambukiza</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ncd id="ncd" prefix="J1!ncd!" delimiter="#" version="2025-03-20 13-59">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <date_of_birth_c/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <start/>
+          <end/>
+          <ncd>
+            <type_of_illness/>
+            <specify_other_illness/>
+            <attend_clinic_or_group/>
+            <reason_no_clinic/>
+            <reason_no_clinic_other/>
+            <instruction_pb/>
+            <measure_bp_note_to_chv/>
+            <measure_bp/>
+            <bp_reading_note_to_chv/>
+            <bp_reading/>
+            <bp_reading_select_reasons/>
+            <select_reasons/>
+            <reason_select_other/>
+            <instruction_height/>
+            <bmi_measurement_note_to_chv/>
+            <height_measurement/>
+            <height_measurement_note_to_chv/>
+            <height_measures/>
+            <instruction_weight/>
+            <weight_measurement_note_to_chv1/>
+            <weight_measurement/>
+            <weight_measurement_note_to_chv/>
+            <weight_measures/>
+            <bmi_value/>
+            <bmi_value2/>
+            <under_weight/>
+            <normal_weight/>
+            <over_weight/>
+            <obesity/>
+            <take_bp_medicine/>
+            <medicine_type_selected/>
+            <reasons_not_select/>
+            <reason_no_select_other/>
+            <measure_blood_glucose_note_to_chv/>
+            <measure_blood_glucose/>
+            <measure_glucose_before_meal_note_to_chv/>
+            <measure_blood_glucose_before_meal/>
+            <blood_glucose_before_meal_readingnote_to_chv/>
+            <blood_glucose_before_meal_reading/>
+            <blood_glucose_after_meal_reading_note_to_chv/>
+            <measure_blood_glucose_after_meal/>
+            <blood_glucose_after_meal_readingnote_to_chv/>
+            <blood_glucose_after_meal_reading/>
+            <diabetes_medication_adherence_note_to_chv/>
+            <diabetes_medication_adherence/>
+            <diabetes_education_givens/>
+            <client_diabetes_condition_good_note_to_chv/>
+            <client_diabetes_condition_good/>
+            <choose_challenge_diabetes/>
+            <other_challenge_specify/>
+            <cancer_trtmt_note_to_chv/>
+            <cancer_trtmt/>
+            <select_cancer/>
+            <cancer_education_given_note_to_chv/>
+            <cancer_education_given/>
+            <asthma_client_health_facility_visit_note_to_chv/>
+            <asthma_client_health_facility_visit/>
+            <asthma_medication_adherence_note_to_chv/>
+            <asthma_medication_adherence/>
+            <select_asthma/>
+            <asthma_education_given_note_to_chv/>
+            <asthma_education_givens/>
+            <client_received_sickle_cell_trmt_at_facility_note_to_chv/>
+            <client_received_sickle_cell_trmt_at_facility/>
+            <sickle_cell_client_taking_meds_note_to_chv/>
+            <sickle_cell_client_taking_meds/>
+            <select_sickle_cell/>
+            <sickle_cell_client_education_givens/>
+            <sickle_cell_pain_mgmt_trmt_received_note_to_chv/>
+            <sickle_cell_pain_mgmt_trmt_received/>
+            <sickle_cell_diet_education_givens/>
+            <referral_given_note_to_chv/>
+            <referral_given/>
+            <take_gps_note_to_chv/>
+            <take_gps/>
+          </ncd>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </ncd>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/ncd/inputs" relevant="false()"/>
+      <bind nodeset="/ncd/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/ncd/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/ncd/inputs/user/name" type="string"/>
+      <bind nodeset="/ncd/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/ncd/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/ncd/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/ncd/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/ncd/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/ncd/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/ncd/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /ncd/date_of_birth_c ))"/>
+      <bind nodeset="/ncd/age_months" type="string" calculate="int( /ncd/age_days  div 30,0)"/>
+      <bind nodeset="/ncd/age_years" type="string" calculate="int( /ncd/age_days  div (30 *12),0)"/>
+      <bind nodeset="/ncd/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/ncd/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/ncd/ncd/type_of_illness" type="select" required="true()"/>
+      <bind nodeset="/ncd/ncd/specify_other_illness" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;other_illness&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/attend_clinic_or_group" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/reason_no_clinic" type="select" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;) and selected( /ncd/ncd/attend_clinic_or_group ,&quot;no_clinic_or_group&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/reason_no_clinic_other" type="string" relevant="selected( /ncd/ncd/reason_no_clinic ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/instruction_pb" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/measure_bp_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/measure_bp" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/bp_reading_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;) and selected( /ncd/ncd/measure_bp ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/bp_reading" type="string" jr:constraintMsg="jr:itext('/ncd/ncd/bp_reading:jr:constraintMsg')" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;) and selected( /ncd/ncd/measure_bp ,&quot;yes&quot;)" required="true()" constraint="regex(., '^\d{2,3}/\d{2,3}$')"/>
+      <bind nodeset="/ncd/ncd/bp_reading_select_reasons" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;) and selected( /ncd/ncd/measure_bp ,&quot;no&quot;)"/>
+      <bind nodeset="/ncd/ncd/select_reasons" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;) and selected( /ncd/ncd/measure_bp ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/reason_select_other" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;) and selected( /ncd/ncd/measure_bp ,&quot;no&quot;) and selected( /ncd/ncd/select_reasons ,&quot;select_others&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/instruction_height" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/bmi_measurement_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/height_measurement" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/height_measurement_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;) and selected( /ncd/ncd/height_measurement ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/height_measures" type="decimal" jr:constraintMsg="jr:itext('/ncd/ncd/height_measures:jr:constraintMsg')" relevant="selected( /ncd/ncd/height_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()" constraint=". &gt;= 0 and . &lt;= 300"/>
+      <bind nodeset="/ncd/ncd/instruction_weight" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/weight_measurement_note_to_chv1" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/weight_measurement" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/weight_measurement_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/weight_measures" type="decimal" jr:constraintMsg="jr:itext('/ncd/ncd/weight_measures:jr:constraintMsg')" relevant="selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()" constraint=". &gt; 0 and . &lt;= 300"/>
+      <bind nodeset="/ncd/ncd/bmi_value" type="string" calculate="( /ncd/ncd/weight_measures ) div ((( /ncd/ncd/height_measures  div 100)*( /ncd/ncd/height_measures  div 100)))" relevant="selected( /ncd/ncd/height_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/bmi_value2" readonly="true()" type="string" relevant=" /ncd/ncd/bmi_value  &gt; 0 and selected( /ncd/ncd/height_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/under_weight" readonly="true()" type="string" relevant=" /ncd/ncd/bmi_value  &lt; 18.5 and selected( /ncd/ncd/height_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/normal_weight" readonly="true()" type="string" relevant=" /ncd/ncd/bmi_value  &gt;= 18.5 and  /ncd/ncd/bmi_value  &lt;= 24.9 and selected( /ncd/ncd/height_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/over_weight" readonly="true()" type="string" relevant=" /ncd/ncd/bmi_value  &gt;= 25 and  /ncd/ncd/bmi_value  &lt; 30 and selected( /ncd/ncd/height_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/obesity" readonly="true()" type="string" relevant=" /ncd/ncd/bmi_value  &gt;= 30 and selected( /ncd/ncd/height_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/weight_measurement ,&quot;yes&quot;) and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)"/>
+      <bind nodeset="/ncd/ncd/take_bp_medicine" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/medicine_type_selected" type="select1" relevant=" /ncd/ncd/take_bp_medicine  = 'yes' and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/reasons_not_select" type="select1" relevant=" /ncd/ncd/take_bp_medicine  = 'no' and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/reason_no_select_other" type="string" relevant="selected( /ncd/ncd/reasons_not_select ,&quot;not_select_other&quot;) and  /ncd/ncd/take_bp_medicine  = 'no' and selected( /ncd/ncd/type_of_illness ,&quot;high_bp&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/measure_blood_glucose_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;)"/>
+      <bind nodeset="/ncd/ncd/measure_blood_glucose" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/measure_glucose_before_meal_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/measure_blood_glucose_before_meal" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/blood_glucose_before_meal_readingnote_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose_before_meal ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/blood_glucose_before_meal_reading" type="int" jr:constraintMsg="jr:itext('/ncd/ncd/blood_glucose_before_meal_reading:jr:constraintMsg')" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose_before_meal ,&quot;yes&quot;)" required="true()" constraint=". &gt;= 0 and . &lt;= 50"/>
+      <bind nodeset="/ncd/ncd/blood_glucose_after_meal_reading_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/measure_blood_glucose_after_meal" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/blood_glucose_after_meal_readingnote_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose_after_meal ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/blood_glucose_after_meal_reading" type="int" jr:constraintMsg="jr:itext('/ncd/ncd/blood_glucose_after_meal_reading:jr:constraintMsg')" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose_after_meal ,&quot;yes&quot;)" required="true()" constraint=". &gt;= 0 and . &lt;= 50"/>
+      <bind nodeset="/ncd/ncd/diabetes_medication_adherence_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/diabetes_medication_adherence" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/diabetes_education_givens" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/client_diabetes_condition_good_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/client_diabetes_condition_good" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/measure_blood_glucose ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/choose_challenge_diabetes" type="select" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/client_diabetes_condition_good ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/other_challenge_specify" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;diabetes&quot;) and selected( /ncd/ncd/client_diabetes_condition_good ,&quot;no&quot;) and selected( /ncd/ncd/choose_challenge_diabetes ,&quot;other_challenge&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/cancer_trtmt_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;prostate_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;cervical_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;breast_cancer&quot;)"/>
+      <bind nodeset="/ncd/ncd/cancer_trtmt" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;prostate_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;cervical_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;breast_cancer&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/select_cancer" type="select1" relevant=" /ncd/ncd/cancer_trtmt  = 'yes'" required="true()"/>
+      <bind nodeset="/ncd/ncd/cancer_education_given_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;prostate_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;cervical_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;breast_cancer&quot;)"/>
+      <bind nodeset="/ncd/ncd/cancer_education_given" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;prostate_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;cervical_cancer&quot;) or selected( /ncd/ncd/type_of_illness ,&quot;breast_cancer&quot;)"/>
+      <bind nodeset="/ncd/ncd/asthma_client_health_facility_visit_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;asthma&quot;)"/>
+      <bind nodeset="/ncd/ncd/asthma_client_health_facility_visit" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;asthma&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/asthma_medication_adherence_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;asthma&quot;)"/>
+      <bind nodeset="/ncd/ncd/asthma_medication_adherence" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;asthma&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/select_asthma" type="select1" relevant=" /ncd/ncd/asthma_medication_adherence  = 'yes'" required="true()"/>
+      <bind nodeset="/ncd/ncd/asthma_education_given_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;asthma&quot;)"/>
+      <bind nodeset="/ncd/ncd/asthma_education_givens" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;asthma&quot;)"/>
+      <bind nodeset="/ncd/ncd/client_received_sickle_cell_trmt_at_facility_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;)"/>
+      <bind nodeset="/ncd/ncd/client_received_sickle_cell_trmt_at_facility" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/sickle_cell_client_taking_meds_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;) and selected( /ncd/ncd/client_received_sickle_cell_trmt_at_facility ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/sickle_cell_client_taking_meds" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;) and selected( /ncd/ncd/client_received_sickle_cell_trmt_at_facility ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/select_sickle_cell" type="select1" relevant=" /ncd/ncd/sickle_cell_client_taking_meds  = 'yes'" required="true()"/>
+      <bind nodeset="/ncd/ncd/sickle_cell_client_education_givens" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;)"/>
+      <bind nodeset="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received_note_to_chv" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;) and selected( /ncd/ncd/client_received_sickle_cell_trmt_at_facility ,&quot;yes&quot;)"/>
+      <bind nodeset="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received" type="select1" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;) and selected( /ncd/ncd/client_received_sickle_cell_trmt_at_facility ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/ncd/ncd/sickle_cell_diet_education_givens" readonly="true()" type="string" relevant="selected( /ncd/ncd/type_of_illness ,&quot;sickle_cell&quot;)"/>
+      <bind nodeset="/ncd/ncd/referral_given_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/ncd/ncd/referral_given" type="select1" required="true()"/>
+      <bind nodeset="/ncd/ncd/take_gps_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/ncd/ncd/take_gps" type="geopoint" required="true()"/>
+      <bind nodeset="/ncd/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/ncd/inputs">
+      <group ref="/ncd/inputs/user">
+        <input ref="/ncd/inputs/user/contact_id">
+          <label ref="jr:itext('/ncd/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/ncd/inputs/user/facility_id">
+          <label ref="jr:itext('/ncd/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/ncd/inputs/user/name">
+          <label ref="jr:itext('/ncd/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/ncd/inputs/contact">
+        <input appearance="db-object" ref="/ncd/inputs/contact/_id"/>
+        <input ref="/ncd/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/ncd/ncd">
+      <label ref="jr:itext('/ncd/ncd:label')"/>
+      <select ref="/ncd/ncd/type_of_illness">
+        <label ref="jr:itext('/ncd/ncd/type_of_illness:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/type_of_illness/high_bp:label')"/>
+          <value>high_bp</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/type_of_illness/diabetes:label')"/>
+          <value>diabetes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/type_of_illness/prostate_cancer:label')"/>
+          <value>prostate_cancer</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/type_of_illness/asthma:label')"/>
+          <value>asthma</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/type_of_illness/sickle_cell:label')"/>
+          <value>sickle_cell</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/type_of_illness/other_illness:label')"/>
+          <value>other_illness</value>
+        </item>
+      </select>
+      <input ref="/ncd/ncd/specify_other_illness">
+        <label ref="jr:itext('/ncd/ncd/specify_other_illness:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/attend_clinic_or_group">
+        <label ref="jr:itext('/ncd/ncd/attend_clinic_or_group:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/attend_clinic_or_group/attend_clinic:label')"/>
+          <value>attend_clinic</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/attend_clinic_or_group/attend_group:label')"/>
+          <value>attend_group</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/attend_clinic_or_group/no_clinic_or_group:label')"/>
+          <value>no_clinic_or_group</value>
+        </item>
+      </select1>
+      <select ref="/ncd/ncd/reason_no_clinic">
+        <label ref="jr:itext('/ncd/ncd/reason_no_clinic:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reason_no_clinic/long_distance:label')"/>
+          <value>long_distance</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reason_no_clinic/long_queue:label')"/>
+          <value>long_queue</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reason_no_clinic/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <input ref="/ncd/ncd/reason_no_clinic_other">
+        <label ref="jr:itext('/ncd/ncd/reason_no_clinic_other:label')"/>
+      </input>
+      <input ref="/ncd/ncd/instruction_pb">
+        <label ref="jr:itext('/ncd/ncd/instruction_pb:label')"/>
+      </input>
+      <input ref="/ncd/ncd/measure_bp_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/measure_bp_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/measure_bp">
+        <label ref="jr:itext('/ncd/ncd/measure_bp:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_bp/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_bp/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/bp_reading_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/bp_reading_note_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/bp_reading">
+        <label ref="jr:itext('/ncd/ncd/bp_reading:label')"/>
+      </input>
+      <input ref="/ncd/ncd/bp_reading_select_reasons">
+        <label ref="jr:itext('/ncd/ncd/bp_reading_select_reasons:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/select_reasons">
+        <label ref="jr:itext('/ncd/ncd/select_reasons:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_reasons/no_mashine:label')"/>
+          <value>no_mashine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_reasons/bad_mashine:label')"/>
+          <value>bad_mashine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_reasons/mashine_no_charge:label')"/>
+          <value>mashine_no_charge</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_reasons/no_persons:label')"/>
+          <value>no_persons</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_reasons/select_others:label')"/>
+          <value>select_others</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/reason_select_other">
+        <label ref="jr:itext('/ncd/ncd/reason_select_other:label')"/>
+      </input>
+      <input ref="/ncd/ncd/instruction_height">
+        <label ref="jr:itext('/ncd/ncd/instruction_height:label')"/>
+      </input>
+      <input ref="/ncd/ncd/bmi_measurement_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/bmi_measurement_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/height_measurement">
+        <label ref="jr:itext('/ncd/ncd/height_measurement:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/height_measurement/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/height_measurement/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/height_measurement_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/height_measurement_note_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/height_measures">
+        <label ref="jr:itext('/ncd/ncd/height_measures:label')"/>
+      </input>
+      <input ref="/ncd/ncd/instruction_weight">
+        <label ref="jr:itext('/ncd/ncd/instruction_weight:label')"/>
+      </input>
+      <input ref="/ncd/ncd/weight_measurement_note_to_chv1">
+        <label ref="jr:itext('/ncd/ncd/weight_measurement_note_to_chv1:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/weight_measurement">
+        <label ref="jr:itext('/ncd/ncd/weight_measurement:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/weight_measurement/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/weight_measurement/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/weight_measurement_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/weight_measurement_note_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/weight_measures">
+        <label ref="jr:itext('/ncd/ncd/weight_measures:label')"/>
+      </input>
+      <input ref="/ncd/ncd/bmi_value2">
+        <label ref="jr:itext('/ncd/ncd/bmi_value2:label')"/>
+      </input>
+      <input ref="/ncd/ncd/under_weight">
+        <label ref="jr:itext('/ncd/ncd/under_weight:label')"/>
+      </input>
+      <input ref="/ncd/ncd/normal_weight">
+        <label ref="jr:itext('/ncd/ncd/normal_weight:label')"/>
+      </input>
+      <input ref="/ncd/ncd/over_weight">
+        <label ref="jr:itext('/ncd/ncd/over_weight:label')"/>
+      </input>
+      <input ref="/ncd/ncd/obesity">
+        <label ref="jr:itext('/ncd/ncd/obesity:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/take_bp_medicine">
+        <label ref="jr:itext('/ncd/ncd/take_bp_medicine:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/take_bp_medicine/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/take_bp_medicine/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ncd/ncd/medicine_type_selected">
+        <label ref="jr:itext('/ncd/ncd/medicine_type_selected:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/medicine_type_selected/hospital_medicine:label')"/>
+          <value>hospital_medicine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/medicine_type_selected/non_hospital_medicine:label')"/>
+          <value>non_hospital_medicine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/medicine_type_selected/both_hosp_non_hosp:label')"/>
+          <value>both_hosp_non_hosp</value>
+        </item>
+      </select1>
+      <select1 ref="/ncd/ncd/reasons_not_select">
+        <label ref="jr:itext('/ncd/ncd/reasons_not_select:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reasons_not_select/not_select_1:label')"/>
+          <value>not_select_1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reasons_not_select/not_select_2:label')"/>
+          <value>not_select_2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reasons_not_select/not_select_3:label')"/>
+          <value>not_select_3</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reasons_not_select/not_select_4:label')"/>
+          <value>not_select_4</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/reasons_not_select/not_select_other:label')"/>
+          <value>not_select_other</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/reason_no_select_other">
+        <label ref="jr:itext('/ncd/ncd/reason_no_select_other:label')"/>
+      </input>
+      <input ref="/ncd/ncd/measure_blood_glucose_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/measure_blood_glucose_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/measure_blood_glucose">
+        <label ref="jr:itext('/ncd/ncd/measure_blood_glucose:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_blood_glucose/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_blood_glucose/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/measure_glucose_before_meal_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/measure_glucose_before_meal_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/measure_blood_glucose_before_meal">
+        <label ref="jr:itext('/ncd/ncd/measure_blood_glucose_before_meal:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_blood_glucose_before_meal/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_blood_glucose_before_meal/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/blood_glucose_before_meal_readingnote_to_chv">
+        <label ref="jr:itext('/ncd/ncd/blood_glucose_before_meal_readingnote_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/blood_glucose_before_meal_reading">
+        <label ref="jr:itext('/ncd/ncd/blood_glucose_before_meal_reading:label')"/>
+      </input>
+      <input ref="/ncd/ncd/blood_glucose_after_meal_reading_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/blood_glucose_after_meal_reading_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/measure_blood_glucose_after_meal">
+        <label ref="jr:itext('/ncd/ncd/measure_blood_glucose_after_meal:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_blood_glucose_after_meal/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/measure_blood_glucose_after_meal/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/blood_glucose_after_meal_readingnote_to_chv">
+        <label ref="jr:itext('/ncd/ncd/blood_glucose_after_meal_readingnote_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/blood_glucose_after_meal_reading">
+        <label ref="jr:itext('/ncd/ncd/blood_glucose_after_meal_reading:label')"/>
+      </input>
+      <input ref="/ncd/ncd/diabetes_medication_adherence_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/diabetes_medication_adherence_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/diabetes_medication_adherence">
+        <label ref="jr:itext('/ncd/ncd/diabetes_medication_adherence:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/diabetes_medication_adherence/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/diabetes_medication_adherence/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/diabetes_education_givens">
+        <label ref="jr:itext('/ncd/ncd/diabetes_education_givens:label')"/>
+      </input>
+      <input ref="/ncd/ncd/client_diabetes_condition_good_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/client_diabetes_condition_good_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/client_diabetes_condition_good">
+        <label ref="jr:itext('/ncd/ncd/client_diabetes_condition_good:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/client_diabetes_condition_good/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/client_diabetes_condition_good/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/ncd/ncd/choose_challenge_diabetes">
+        <label ref="jr:itext('/ncd/ncd/choose_challenge_diabetes:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/choose_challenge_diabetes/foot_ulcers:label')"/>
+          <value>foot_ulcers</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/choose_challenge_diabetes/numbness:label')"/>
+          <value>numbness</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/choose_challenge_diabetes/memory_loss:label')"/>
+          <value>memory_loss</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/choose_challenge_diabetes/poor_vision:label')"/>
+          <value>poor_vision</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/choose_challenge_diabetes/erectile_dysfunction:label')"/>
+          <value>erectile_dysfunction</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/choose_challenge_diabetes/other_challenge:label')"/>
+          <value>other_challenge</value>
+        </item>
+      </select>
+      <input ref="/ncd/ncd/other_challenge_specify">
+        <label ref="jr:itext('/ncd/ncd/other_challenge_specify:label')"/>
+      </input>
+      <input ref="/ncd/ncd/cancer_trtmt_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/cancer_trtmt_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/cancer_trtmt">
+        <label ref="jr:itext('/ncd/ncd/cancer_trtmt:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/cancer_trtmt/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/cancer_trtmt/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ncd/ncd/select_cancer">
+        <label ref="jr:itext('/ncd/ncd/select_cancer:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_cancer/select_cancer_1:label')"/>
+          <value>select_cancer_1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_cancer/select_cancer_2:label')"/>
+          <value>select_cancer_2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_cancer/select_cancer_other:label')"/>
+          <value>select_cancer_other</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/cancer_education_given_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/cancer_education_given_note_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/cancer_education_given">
+        <label ref="jr:itext('/ncd/ncd/cancer_education_given:label')"/>
+      </input>
+      <input ref="/ncd/ncd/asthma_client_health_facility_visit_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/asthma_client_health_facility_visit_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/asthma_client_health_facility_visit">
+        <label ref="jr:itext('/ncd/ncd/asthma_client_health_facility_visit:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/asthma_client_health_facility_visit/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/asthma_client_health_facility_visit/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/asthma_medication_adherence_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/asthma_medication_adherence_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/asthma_medication_adherence">
+        <label ref="jr:itext('/ncd/ncd/asthma_medication_adherence:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/asthma_medication_adherence/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/asthma_medication_adherence/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ncd/ncd/select_asthma">
+        <label ref="jr:itext('/ncd/ncd/select_asthma:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_asthma/select_asthma_1:label')"/>
+          <value>select_asthma_1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_asthma/select_asthma_2:label')"/>
+          <value>select_asthma_2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_asthma/select_asthma_other:label')"/>
+          <value>select_asthma_other</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/asthma_education_given_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/asthma_education_given_note_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/asthma_education_givens">
+        <label ref="jr:itext('/ncd/ncd/asthma_education_givens:label')"/>
+      </input>
+      <input ref="/ncd/ncd/client_received_sickle_cell_trmt_at_facility_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/client_received_sickle_cell_trmt_at_facility_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/client_received_sickle_cell_trmt_at_facility">
+        <label ref="jr:itext('/ncd/ncd/client_received_sickle_cell_trmt_at_facility:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/client_received_sickle_cell_trmt_at_facility/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/client_received_sickle_cell_trmt_at_facility/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/sickle_cell_client_taking_meds_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/sickle_cell_client_taking_meds_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/sickle_cell_client_taking_meds">
+        <label ref="jr:itext('/ncd/ncd/sickle_cell_client_taking_meds:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/sickle_cell_client_taking_meds/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/sickle_cell_client_taking_meds/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ncd/ncd/select_sickle_cell">
+        <label ref="jr:itext('/ncd/ncd/select_sickle_cell:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_sickle_cell/select_sickle_cell_1:label')"/>
+          <value>select_sickle_cell_1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_sickle_cell/select_sickle_cell_2:label')"/>
+          <value>select_sickle_cell_2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/select_sickle_cell/select_sickle_cell_3:label')"/>
+          <value>select_sickle_cell_3</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/sickle_cell_client_education_givens">
+        <label ref="jr:itext('/ncd/ncd/sickle_cell_client_education_givens:label')"/>
+      </input>
+      <input ref="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/sickle_cell_pain_mgmt_trmt_received_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/sickle_cell_pain_mgmt_trmt_received">
+        <label ref="jr:itext('/ncd/ncd/sickle_cell_pain_mgmt_trmt_received:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/sickle_cell_pain_mgmt_trmt_received/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/sickle_cell_pain_mgmt_trmt_received/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/sickle_cell_diet_education_givens">
+        <label ref="jr:itext('/ncd/ncd/sickle_cell_diet_education_givens:label')"/>
+      </input>
+      <input ref="/ncd/ncd/referral_given_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/referral_given_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/ncd/ncd/referral_given">
+        <label ref="jr:itext('/ncd/ncd/referral_given:label')"/>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/referral_given/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ncd/ncd/referral_given/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ncd/ncd/take_gps_note_to_chv">
+        <label ref="jr:itext('/ncd/ncd/take_gps_note_to_chv:label')"/>
+      </input>
+      <input ref="/ncd/ncd/take_gps">
+        <label ref="jr:itext('/ncd/ncd/take_gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

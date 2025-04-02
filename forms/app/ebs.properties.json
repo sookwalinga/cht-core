@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "event based surveillance"
+    },
+    {
+      "locale": "sw",
+      "content": "Ufuatiliaji wa Matukio"
+    } 
+  ],
+  "icon": "ebs-icon",
+  "context": {
+    "person": false,
+    "place": true,
+    "expression": "contact && contact.type === 'clinic' && user.parent.type === 'health_center' && summary.show_new_modules"
+  }
+}

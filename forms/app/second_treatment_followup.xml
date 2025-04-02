@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Second Treatment Followup</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/second_treatment_followup/follow_up/congratulate_client_note:label">
+            <value>Congratulate them and encourage them to continue the same way</value>
+          </text>
+          <text id="/second_treatment_followup/follow_up/talk_to_supervisor_note:label">
+            <value>Advise the patient to return to the health facility. If they refuse, speak with your supervisor for assistance.</value>
+          </text>
+          <text id="/second_treatment_followup/follow_up:label">
+            <value>Followup</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_followup_tests/no:label">
+            <value>No</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_followup_tests/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_followup_tests:label">
+            <value>Does client followup up on the tests properly?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_have_side_effects/no:label">
+            <value>No</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_have_side_effects/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_have_side_effects:label">
+            <value>Does client have any problems or side effects?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly/no:label">
+            <value>No</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly:label">
+            <value>Does client take meds properly?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/last_visit_date_note:label">
+            <value>You last visit date was on <output value=" /second_treatment_followup/last_visit_date_c "/>. Please count the missed dosage from this date</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/num_days_missed_dose:label">
+            <value>How many days has the client missed their dose ?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup:label">
+            <value>Subsequent Followup</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/second_treatment_followup/follow_up/congratulate_client_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mpongeze na umuhimize kuendelea hivyo hivyo.&lt;/span&gt;</value>
+          </text>
+          <text id="/second_treatment_followup/follow_up/talk_to_supervisor_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mshauri arudi kituo cha afya. Akikataa, ongea na CHW supervisor akusaidie&lt;/span&gt;</value>
+          </text>
+          <text id="/second_treatment_followup/follow_up:label">
+            <value>Ufuatiliaji</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/last_visit_date:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs/visit_id:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_followup_tests/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_followup_tests/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_followup_tests:label">
+            <value>Unafuatilia vipimo ipasavyo?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_have_side_effects/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_have_side_effects/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_have_side_effects:label">
+            <value>Una shida au madhara yoyote?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly:label">
+            <value>Unakunywa dawa vizuri?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/last_visit_date_note:label">
+            <value>Tarehe yako ya mwisho ya kumtembelea mteja ilikuwa ni <output value=" /second_treatment_followup/last_visit_date_c "/>. Kwahio siku alizokosa mteja dawa zihesabiwe tokea tarehe hii.</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup/num_days_missed_dose:label">
+            <value>Ni siku ngapi mteja amekosa dozi yake ?</value>
+          </text>
+          <text id="/second_treatment_followup/subsequent_followup:label">
+            <value>Ufuatiliaji Zaidi</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <second_treatment_followup id="second_treatment_followup" prefix="J1!second_treatment_followup!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <visit_id/>
+            <last_visit_date/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <week/>
+          <month/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <visit_id/>
+          <last_visit_date_c/>
+          <treatment_end_date/>
+          <start/>
+          <end/>
+          <subsequent_followup>
+            <does_client_take_meds_properly/>
+            <last_visit_date_note/>
+            <num_days_missed_dose/>
+            <does_client_have_side_effects/>
+            <does_client_followup_tests/>
+          </subsequent_followup>
+          <follow_up>
+            <talk_to_supervisor_note/>
+            <congratulate_client_note/>
+          </follow_up>
+          <refer_tb_client/>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </second_treatment_followup>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/second_treatment_followup/inputs" relevant="false()"/>
+      <bind nodeset="/second_treatment_followup/inputs/visit_id" type="string"/>
+      <bind nodeset="/second_treatment_followup/inputs/last_visit_date" type="string"/>
+      <bind nodeset="/second_treatment_followup/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/second_treatment_followup/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/second_treatment_followup/inputs/user/name" type="string"/>
+      <bind nodeset="/second_treatment_followup/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/second_treatment_followup/inputs/contact/name" type="string"/>
+      <bind nodeset="/second_treatment_followup/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/second_treatment_followup/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/second_treatment_followup/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/second_treatment_followup/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/second_treatment_followup/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/second_treatment_followup/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/second_treatment_followup/week" type="string" calculate="7"/>
+      <bind nodeset="/second_treatment_followup/month" type="string" calculate="30"/>
+      <bind nodeset="/second_treatment_followup/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/second_treatment_followup/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/second_treatment_followup/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/second_treatment_followup/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/second_treatment_followup/visit_id" type="string" calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)"/>
+      <bind nodeset="/second_treatment_followup/last_visit_date_c" type="string" calculate="../inputs/last_visit_date"/>
+      <bind nodeset="/second_treatment_followup/treatment_end_date" type="string" calculate="instance('contact-summary')/context/treatment_end_date"/>
+      <bind nodeset="/second_treatment_followup/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/second_treatment_followup/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly" type="select1" required="true()"/>
+      <bind nodeset="/second_treatment_followup/subsequent_followup/last_visit_date_note" readonly="true()" type="string" relevant="selected( /second_treatment_followup/subsequent_followup/does_client_take_meds_properly ,&quot;no&quot;)"/>
+      <bind nodeset="/second_treatment_followup/subsequent_followup/num_days_missed_dose" type="int" relevant="selected( /second_treatment_followup/subsequent_followup/does_client_take_meds_properly ,&quot;no&quot;)" required="true()"/>
+      <bind nodeset="/second_treatment_followup/subsequent_followup/does_client_have_side_effects" type="select1"/>
+      <bind nodeset="/second_treatment_followup/subsequent_followup/does_client_followup_tests" type="select1"/>
+      <bind nodeset="/second_treatment_followup/follow_up/talk_to_supervisor_note" readonly="true()" type="string" relevant="selected( /second_treatment_followup/subsequent_followup/does_client_take_meds_properly ,&quot;no&quot;) or selected( /second_treatment_followup/subsequent_followup/does_client_have_side_effects ,&quot;yes&quot;) or selected( /second_treatment_followup/subsequent_followup/does_client_followup_tests ,&quot;no&quot;)"/>
+      <bind nodeset="/second_treatment_followup/follow_up/congratulate_client_note" readonly="true()" type="string" relevant="selected( /second_treatment_followup/subsequent_followup/does_client_take_meds_properly ,&quot;yes&quot;) and selected( /second_treatment_followup/subsequent_followup/does_client_have_side_effects ,&quot;no&quot;) and selected( /second_treatment_followup/subsequent_followup/does_client_followup_tests ,&quot;yes&quot;)"/>
+      <bind nodeset="/second_treatment_followup/refer_tb_client" type="string" calculate="if(
+selected( /second_treatment_followup/subsequent_followup/does_client_take_meds_properly ,&quot;no&quot;) or 
+selected( /second_treatment_followup/subsequent_followup/does_client_have_side_effects ,&quot;yes&quot;) or 
+selected( /second_treatment_followup/subsequent_followup/does_client_followup_tests ,&quot;no&quot;), 1,0)"/>
+      <bind nodeset="/second_treatment_followup/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/second_treatment_followup/inputs">
+      <input ref="/second_treatment_followup/inputs/visit_id"/>
+      <input ref="/second_treatment_followup/inputs/last_visit_date"/>
+      <group ref="/second_treatment_followup/inputs/user">
+        <input ref="/second_treatment_followup/inputs/user/contact_id">
+          <label ref="jr:itext('/second_treatment_followup/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/second_treatment_followup/inputs/user/facility_id">
+          <label ref="jr:itext('/second_treatment_followup/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/second_treatment_followup/inputs/user/name">
+          <label ref="jr:itext('/second_treatment_followup/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/second_treatment_followup/inputs/contact">
+        <input ref="/second_treatment_followup/inputs/contact/_id"/>
+        <input ref="/second_treatment_followup/inputs/contact/name"/>
+        <input ref="/second_treatment_followup/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/second_treatment_followup/subsequent_followup">
+      <label ref="jr:itext('/second_treatment_followup/subsequent_followup:label')"/>
+      <select1 ref="/second_treatment_followup/subsequent_followup/does_client_take_meds_properly">
+        <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_take_meds_properly:label')"/>
+        <item>
+          <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_take_meds_properly/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_take_meds_properly/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/second_treatment_followup/subsequent_followup/last_visit_date_note">
+        <label ref="jr:itext('/second_treatment_followup/subsequent_followup/last_visit_date_note:label')"/>
+      </input>
+      <input ref="/second_treatment_followup/subsequent_followup/num_days_missed_dose">
+        <label ref="jr:itext('/second_treatment_followup/subsequent_followup/num_days_missed_dose:label')"/>
+      </input>
+      <select1 ref="/second_treatment_followup/subsequent_followup/does_client_have_side_effects">
+        <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_have_side_effects:label')"/>
+        <item>
+          <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_have_side_effects/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_have_side_effects/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/second_treatment_followup/subsequent_followup/does_client_followup_tests">
+        <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_followup_tests:label')"/>
+        <item>
+          <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_followup_tests/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/second_treatment_followup/subsequent_followup/does_client_followup_tests/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/second_treatment_followup/follow_up">
+      <label ref="jr:itext('/second_treatment_followup/follow_up:label')"/>
+      <input ref="/second_treatment_followup/follow_up/talk_to_supervisor_note">
+        <label ref="jr:itext('/second_treatment_followup/follow_up/talk_to_supervisor_note:label')"/>
+      </input>
+      <input ref="/second_treatment_followup/follow_up/congratulate_client_note">
+        <label ref="jr:itext('/second_treatment_followup/follow_up/congratulate_client_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

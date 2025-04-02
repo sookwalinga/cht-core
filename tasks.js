@@ -1,3 +1,5 @@
+
+/* eslint-disable */
 const extras = require('./nools-extras.js');
 module.exports = [
 
@@ -887,21 +889,6 @@ module.exports = [
         form: 'chw_monthly_meeting' 
       } 
     ],
-    // resolvedIf: function (contact) {
-    //   let date = new Date();
-    //   let firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-    //   let lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
-    //   console.log('Is form submitted in window',Utils.isFormSubmittedInWindow(contact.reports,'chw_monthly_meeting',firstDay,lastDay
-    //   )); 
-    //   console.log('First day is', firstDay.toString()); 
-    //   console.log('Last day is', lastDay.toString()); 
-    //   return Utils.isFormSubmittedInWindow(
-    //     contact.reports,
-    //     'chw_monthly_meeting',
-    //     firstDay,
-    //     lastDay
-    //   );
-    // },
     events: [
       {
         id: 'chw-monthly-meeting-1',
@@ -1029,56 +1016,345 @@ module.exports = [
       }
     ]
   }, 
+  // TB result follow-up as a result of TB Investigation 
+
+  //This task is triggered when a TB Investigation form with referral is submitted. 
   
-  /*,
-  // This won't work on < 3.14
   {
-    name: 'chw-activity-task-1',
-    icon: 'risk',
-    title: 'task.chw_activity',
-    appliesTo: 'contacts',
-    appliesToType: [ 'person' ],
-    appliesIf: function (contact) {
-      const oneDay = 24 * 60 * 60 * 1000;
-      let mostRecentReportDate = new Date(Utils.getMostRecentTimestamp(contact.reports, [
-          'quality_monitoring',
-          
-          quality_monitoring_planning',
-          'chv_quality_monitoring',
-          'chv_youth_peer_education', 
-          'confirm_meeting', 
-          'covid_education',
-          'death_report',
-          'group_counseling', 
-          'infant_child',
-          'mute_person',
-          'peer_mentor_checklist', 
-          'pregnancy', 
-          'pregnancy_counselling', 
-          'pregnancy_outcomes',
-          'postpartum',
-          'referral_follow_up',
-          'unmute_person',
-          'wash_protocol'
-        ]));
-      let diffDays = Math.round(Math.abs((mostRecentReportDate - Utils.now()) / oneDay));
-      return diffDays >= 91 && user.parent && user.parent.type === 'district_hospital';
+    name: 'tb-result-follow-up',
+    icon: 'cough',
+    title: 'task.tb_result_follow_up',
+    appliesTo: 'reports',
+    appliesIf: function (c,r) { 
+      return  (extras.get(user,'parent.type')==='health_center') &&
+              extras.hasTBReferral(r) === '1'; 
     },
-    actions: [ 
-      { 
-        type: 'report',
-        form: 'chw_activity' 
-      } 
-    ],
+    appliesToType: ['tb_investigation','result_follow_up'],
+    actions: [{
+      form: 'result_follow_up'  
+    }],
     events: [
       {
-        id: 'chw-activity-1',
-        dueDate: function () {
-          return new Date();
+        id: 'result_followup',
+        dueDate: function (event,contact,report) { 
+          var newDate = Utils.addDate(new Date(report.reported_date), 3);
+          console.log('New date iss ', newDate); 
+          return newDate;
+        }, 
+        start: 3,
+        end: 30
+      }
+    ],
+    priority: {
+      level: 'high',
+      label: 'task.referral.high_priority'
+    },
+    resolvedIf: function (c,r,event,dueDate) {
+     const isResolved = Utils.isFormSubmittedInWindow(c.reports, 'result_follow_up',
+      Utils.addDate(dueDate, -4).getTime(),
+      Utils.addDate(dueDate, event.end+1).getTime()); 
+   //  console.log('Is resolved for result followup',c.contact.name,r.form,isResolved); 
+      return isResolved; 
+    }
+  },
+
+  // First treatment follow-up (Triggered after result followup is submitted and is positive)
+  {
+    name: 'tb-first-treatment-follow-up',
+    icon: 'tb-treatment-followup',
+    title: 'task.first_treatment_followup',
+    appliesTo: 'reports',
+    appliesIf: function (c,r) {
+      // console.log('appliefIf user.parent.type', (extras.get(user,'parent.type')==='health_center')); 
+     // console.log('r in appliesIf', r); 
+      return  (extras.get(user,'parent.type')==='health_center') &&
+              extras.hasTB(r) === '1' || extras.restartTreatmentForDefaulter(c,r); 
+    },
+    appliesToType: ['result_follow_up','first_treatment_followup','second_treatment_followup'],
+    actions: [{
+      form: 'first_treatment_followup', 
+      modifyContent: function (content,contact) {
+       content.first_treatment_date_constraint=extras.getFirstTreatmentDateConstraint(contact); 
+      } 
+    }],
+    events: [
+      {
+        id: 'first_treatment_followup',
+        dueDate: function (event,contact,report) { 
+          var newDate = Utils.addDate(new Date(report.reported_date), 3);
+          console.log('New date iss ', newDate); 
+          return newDate;
+        }, 
+        start: 3,
+        end: 30
+      }
+    ],
+    priority: {
+      level: 'high',
+      label: 'task.referral.high_priority'
+    },
+    resolvedIf: function (c,r,event,dueDate) {
+     //console.log('resolvedIf', extras.isContactDeceased(c) || extras.isContactMuted(c) ||  extras.countReportsSubmitted(c, 'tb_result_follow_up') > 0); 
+      console.log('Event start', c.contact.name,r.form,Utils.addDate(dueDate, -3)); 
+      console.log('Event end',c.contact.name,r.form,Utils.addDate(dueDate, event.end+1)); 
+      console.log(new Date(r.reported_date)); 
+     const isResolved = Utils.isFormSubmittedInWindow(c.reports, 'first_treatment_followup',
+        Utils.addDate(dueDate, -4).getTime(),
+        Utils.addDate(dueDate, event.end+1).getTime()) ||
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c);
+        console.log('Resolved if in first treatment followup task',c.contact.name, isResolved); 
+      return isResolved;
+    }
+  },
+
+   //Second treatment followup to appear bi-weekly for the first two months (56 days) 
+  //  {
+  //   name: 'second_treatment_followup_biweekly',
+  //   icon: 'follow-up',
+  //   title: 'task.second_treatment_followup_biweekly',
+  //   appliesTo: 'reports',
+  //    appliesIf: function (c,r) {
+  //     console.log('Inside appliesIf of second trmt followup biweekly'); 
+  //   //  console.log('appliesIf second treatment submitted',c.contact.name,extras.hasSecondTreatmentFollowupSubmitted(c,14)); 
+  //    console.log('r.form',r.form, 'for', c.contact.name); 
+  //    console.log('appliedIf biweekly', 'for', c.contact.name, extras.get(user,'parent.type')==='health_center' && 
+  //    extras.showSecondTreatmentFollowup(c,r,14)); 
+  //   return extras.get(user,'parent.type')==='health_center' && 
+  //            extras.showSecondTreatmentFollowup(c,r,14);//&& 
+  //           // extras.isWithinBiweeklyPeriod(c)
+  //   },
+  //   appliesToType: ['first_treatment_followup','second_treatment_followup'],
+  //   actions: [{
+  //     form: 'second_treatment_followup',
+  //     modifyContent: function (content) {
+  //       content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+  //         weekday: 'long',
+  //         year: 'numeric',
+  //         month: 'long',
+  //         day: 'numeric'
+  //       });
+  //     }
+  //   }],
+  //   events: [
+  //     {
+  //       id: 'second_treatment_followup_biweekly',
+  //       dueDate: function (event,c) {  
+  //         console.log('trmt start date in bi weekly task',extras.getTBTreatmentStartDate(c)); 
+  //         return extras.getTBTreatmentStartDate(c); 
+  //       },
+  //       start:0,
+  //       end: 56 //the task disappears if submitted and recur bi-weekly but will appear for 56 days if not submitted at all
+  //     },
+  //   ],
+  //   resolvedIf: function (c,r,event,dueDate) {
+  //     let resolvedIf =  
+  //       extras.isContactDeceased(c) ||
+  //       extras.isContactMuted(c);
+  //       console.log('Resolve if for reminder task',resolvedIf); 
+
+  //       return resolvedIf; 
+  //   }
+  // },
+
+  //Second treatment followup to appear bi-weekly for the first two months (56 days) 
+  //with missed dosage days
+  {
+    name: 'second_treatment_followup',
+    icon: 'follow-up',
+    title: 'task.second_treatment_followup',
+    appliesTo: 'reports',
+     appliesIf: function (c,r) {
+    
+     console.log('Applies if in secondtrtmt followup',extras.get(user,'parent.type')==='health_center' && 
+     extras.showSecondTreatmentFollowup(c,r)); 
+    return extras.get(user,'parent.type')==='health_center' && 
+             extras.showSecondTreatmentFollowup(c,r); 
+    },
+    appliesToType: ['first_treatment_followup','second_treatment_followup'],
+    actions: [{
+      form: 'second_treatment_followup',
+      modifyContent: function (content,contact) {
+        
+        let lastVisitDate = extras.getRecentSecondTrmtReportedDate(contact); 
+         console.log('lastvisitdate in task',lastVisitDate,contact.contact.name);
+        content.last_visit_date = lastVisitDate?lastVisitDate.toLocaleDateString('sw', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }):'';
+
+        console.log('content.last_visit_sate',content.last_visit_date,contact.contact.name); 
+      }
+    }],
+    events: [
+      {
+        id: 'second_treatment_followup',
+        dueDate: function (event,c) {  
+          console.log('trmt start date in bi weekly task',extras.getTBTreatmentStartDate(c)); 
+          return extras.getTBTreatmentStartDate(c); 
         },
         start:0,
-        end:3,
-      }
-    ]
-  }*/
+        end: 200 //the task disappears if submitted and recur bi-weekly but will appear for 56 days if not submitted at all
+      },
+    ],
+    resolvedIf: function (c,r,event,dueDate) {
+      let resolvedIf =  
+        extras.isContactDeceased(c) ||
+        extras.isContactMuted(c) || 
+        extras.shouldResolveSecondTreatmentFollowup(c);
+        console.log('Resolve if for reminder task',r.form,c.contact.name,resolvedIf); 
+
+        return resolvedIf; 
+    }
+  },
+
+//Second treatment followup to appear monthly from day 57 - 168 of treatment period 
+  // {
+  //   name: 'second_treatment_followup_monthly',
+  //   icon: 'follow-up',
+  //   title: 'task.second_treatment_followup_monthly',
+  //   appliesTo: 'reports',
+  //   appliesIf: function (c,r) {
+  //     return extras.get(user,'parent.type')==='health_center' && 
+  //            extras.showSecondTreatmentFollowup(c,r,28)
+  //   },
+  //   appliesToType:  ['first_treatment_followup','second_treatment_followup'],
+  //   actions: [{
+  //     form: 'second_treatment_followup',
+  //     modifyContent: function (content) {
+  //       content.due_date_human_readable = new Date(content.due_date).toLocaleDateString('sw', {
+  //         weekday: 'long',
+  //         year: 'numeric',
+  //         month: 'long',
+  //         day: 'numeric'
+  //       });
+  //     }
+  //   }],
+  //   events: [
+  //     {
+  //       id: 'second_treatment_followup_monthly',
+  //       dueDate: function (event,c) {  
+  //         let startDate = extras.getTBTreatmentStartDate(c); 
+  //          console.log('due date for reminder in second trmt monthly ', startDate);
+  //         return startDate && Utils.addDate(extras.getTBTreatmentStartDate(c), 57);
+
+  //       },
+  //       start:0,
+  //       end: 111  //168 -57 = 111 
+  //     },
+  //   ],
+  //   resolvedIf: function (c,r,event,dueDate) {
+  //     let resolvedIf =  
+  //       extras.isContactDeceased(c) ||
+  //       extras.isContactMuted(c);
+  //       console.log('Resolve if in second treatment monthyl for reminder task',resolvedIf); 
+
+  //       return resolvedIf; 
+  //   }
+  // },
+
+  // // TB result follow-up as a result of Contact Investigation > 5 
+  // {
+  //   name: 'tb-result-follow-up-contact-gt-5',
+  //   icon: 'cough',
+  //   title: 'task.tb_result_follow_up_contact_gt_5',
+  //   appliesTo: 'reports',
+  //   appliesIf: function (c,r) {
+  //     console.log('Inside appliesIf of', r.form); 
+  //     // console.log('appliefIf user.parent.type', (extras.get(user,'parent.type')==='health_center')); 
+  //     // console.log('r in appliesIf', r.fields.refer_tb_client); 
+  //     return  (extras.get(user,'parent.type')==='health_center') &&
+  //             extras.hasTBReferral(r) === '1'; 
+  //   },
+  //   appliesToType: ['contact_investigation_above_5','result_follow_up_contact_above_5'],
+  //   actions: [{
+  //     form: 'result_follow_up_contact_above_5'  
+  //   }],
+  //   events: [
+  //     {
+  //       id: 'result_followup_contact_above_5',
+  //       dueDate: function (event,contact,report) { 
+  //         var newDate = Utils.addDate(new Date(report.reported_date), 3);
+  //         console.log('New date iss ', newDate); 
+  //         return newDate;
+  //       }, 
+  //       start: 3,
+  //       end: 30
+  //     }
+  //   ],
+  //   priority: {
+  //     level: 'high',
+  //     label: 'task.referral.high_priority'
+  //   },
+  //   resolvedIf: function (c,r,event,dueDate) {
+  //    // console.log('resolvedIf', extras.isContactDeceased(c) || extras.isContactMuted(c) ||  extras.countReportsSubmitted(c, 'tb_result_follow_up') > 0); 
+  //     console.log('Event start',Utils.addDate(dueDate, -4)); 
+  //     console.log('Event end',Utils.addDate(dueDate, event.end+1)); 
+
+  //    const isResolved = Utils.isFormSubmittedInWindow(c.reports, 'result_follow_up_contact_above_5',
+  //       Utils.addDate(dueDate, -3).getTime(),
+  //       Utils.addDate(dueDate, event.end+1).getTime()) ||
+  //       extras.isContactDeceased(c) ||
+  //       extras.isContactMuted(c);
+  //       console.log('Resolved if', isResolved); 
+  //     return isResolved;
+  //   }
+  // },
+   //  // Second TB result follow-up triggered after second treatment followup is submitted
+  //this is no longer needed as second treatment followup does not trigger any referral
+  //  {
+  //   name: 'second-teeatment-result-follow-up',
+  //   icon: 'cough',
+  //   title: 'task.second_treatment_result_follow_up',
+  //   appliesTo: 'reports',
+  //   appliesIf: function (c,r) {
+  //     // console.log('appliefIf user.parent.type', (extras.get(user,'parent.type')==='health_center')); 
+  //     // console.log('r in appliesIf', r.fields.refer_tb_client); 
+  //     console.log('Applies if in second result followup',extras.get(user,'parent.type')==='health_center' &&
+  //     extras.hasReferralFromSecondTreatmentFollowup(c,r) === '1'); 
+
+  //     return  (extras.get(user,'parent.type')==='health_center') &&
+  //             extras.hasReferralFromSecondTreatmentFollowup(c,r) === '1'; 
+  //   },
+  //   appliesToType: ['second_treatment_followup','second_treatment_result_followup'],
+  //   actions: [{
+  //     form: 'second_treatment_result_followup', 
+  //     modifyContent: function (content, contact, report) {
+  //       content.refer_flag_medicine=extras.isClientTakingMedicine(report); 
+  //       content.refer_flag_side_effects=extras.isClientHavingSideEffects(report); 
+  //       content.refer_flag_monitoring_results=extras.isClientMonitoringResults(report); 
+  //       content.last_visit_date = report.reported_date;
+  //     }
+  //   }],
+  //   events: [
+  //     {
+  //       id: 'second_treatment_result_followup',
+  //       dueDate: function (event,contact,report) { 
+  //         var newDate = Utils.addDate(new Date(report.reported_date), 3);
+  //         return newDate;
+  //       }, 
+  //       start: 3,
+  //       end: 30
+  //     }
+  //   ],
+  //   priority: {
+  //     level: 'high',
+  //     label: 'task.referral.high_priority'
+  //   },
+  //   resolvedIf: function (c,r,event,dueDate) {
+  //    // console.log('resolvedIf', extras.isContactDeceased(c) || extras.isContactMuted(c) ||  extras.countReportsSubmitted(c, 'tb_result_follow_up') > 0); 
+  //     // console.log('Event start',Utils.addDate(dueDate, -4)); 
+  //     // console.log('Event end',Utils.addDate(dueDate, event.end+1)); 
+
+  //    const isResolved = Utils.isFormSubmittedInWindow(c.reports, 'second_treatment_result_followup',
+  //       Utils.addDate(dueDate, -3).getTime(),
+  //       Utils.addDate(dueDate, event.end+1).getTime()) ||
+  //       extras.isContactDeceased(c) ||
+  //       extras.isContactMuted(c);
+  //      console.log('Resolved if in second result followup', isResolved); 
+  //     return isResolved;
+  //   }
+  // },
 ];

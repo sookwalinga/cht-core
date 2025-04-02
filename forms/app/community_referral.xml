@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Community Referral</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/community_referral/community_referral/additional_information_comments:label">
+            <value>Additional information/comments</value>
+          </text>
+          <text id="/community_referral/community_referral/chw_patient_condition_description:label">
+            <value>For CHW: Write a brief description of the patient/client's condition</value>
+          </text>
+          <text id="/community_referral/community_referral/confirmation_taken:label">
+            <value>Obtain confirmation</value>
+          </text>
+          <text id="/community_referral/community_referral/has_confidentiality_agreement_confirmed/no:label">
+            <value>No</value>
+          </text>
+          <text id="/community_referral/community_referral/has_confidentiality_agreement_confirmed/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/community_referral/community_referral/has_confidentiality_agreement_confirmed:label">
+            <value>Has the confidentiality agreement been confirmed?</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_informed_about_referral/no:label">
+            <value>No</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_informed_about_referral/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_informed_about_referral:label">
+            <value>Has the patient been informed about the referral?</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_referral_provided/no:label">
+            <value>No</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_referral_provided/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_referral_provided:label">
+            <value>Has the patient been referred?</value>
+          </text>
+          <text id="/community_referral/community_referral/other_referral_reason:label">
+            <value>Write other reason for referral</value>
+          </text>
+          <text id="/community_referral/community_referral/patient_consent_for_data_sharing/no:label">
+            <value>No</value>
+          </text>
+          <text id="/community_referral/community_referral/patient_consent_for_data_sharing/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/community_referral/community_referral/patient_consent_for_data_sharing:label">
+            <value>I confirm that the patient has given consent to share the information provided in this form with relevant community services to support their needs</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/child_health_services:label">
+            <value>Child health services</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/drug_addiction_rehabilitation_services:label">
+            <value>Drug addiction rehabilitation services</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/financial_assistance:label">
+            <value>Financial assistance</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/food_assistance:label">
+            <value>Food assistance</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/housing_assistance:label">
+            <value>Housing assistance</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/legal_assistance:label">
+            <value>Legal assistance</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/maternal_health_services:label">
+            <value>Maternal health services</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/medical_services:label">
+            <value>Medical services</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/mental_health_services:label">
+            <value>Mental health services</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/vaccination_services:label">
+            <value>Vaccination services</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason:label">
+            <value>Reason for referral (Select a reason)</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type/emergency:label">
+            <value>Emergency</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type/routine:label">
+            <value>Routine</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type/urgent:label">
+            <value>Urgent</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type:label">
+            <value>Type of referral provided</value>
+          </text>
+          <text id="/community_referral/household_location/gps:label">
+            <value>Household GPS</value>
+          </text>
+          <text id="/community_referral/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Press the button below to capture GPS coordinates for the house. You will know the data has been captured if you see numbers appear in the four boxes below - you don't need to write anything yourself in these boxes. It may take some time for the numbers to appear. If you are waiting more than one minute and the numbers have not appeared, you should move on to the rest of the form without them.&lt;/span&gt;</value>
+          </text>
+          <text id="/community_referral/household_location:label">
+            <value>Household Location</value>
+          </text>
+          <text id="/community_referral/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/community_referral/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/community_referral/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/community_referral/community_referral/additional_information_comments:label">
+            <value>Maelezo ya ziada/maoni</value>
+          </text>
+          <text id="/community_referral/community_referral/chw_patient_condition_description:label">
+            <value>Kwa CHW: Andika maelezo mafupi kuhusu hali ya mgonjwa/mteja</value>
+          </text>
+          <text id="/community_referral/community_referral/confirmation_taken:label">
+            <value>Chukua uthibitisho</value>
+          </text>
+          <text id="/community_referral/community_referral/has_confidentiality_agreement_confirmed/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/community_referral/community_referral/has_confidentiality_agreement_confirmed/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/community_referral/community_referral/has_confidentiality_agreement_confirmed:label">
+            <value>Mkataba wa usiri umethibitishwa?</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_informed_about_referral/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_informed_about_referral/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_informed_about_referral:label">
+            <value>Mgonjwa amejulishwa kuhusu rufaa?</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_referral_provided/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_referral_provided/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/community_referral/community_referral/has_patient_referral_provided:label">
+            <value>Rufaa ya mgonjwa imetolewa?</value>
+          </text>
+          <text id="/community_referral/community_referral/other_referral_reason:label">
+            <value>Weka sababu nyingine ya kutoa rufaa</value>
+          </text>
+          <text id="/community_referral/community_referral/patient_consent_for_data_sharing/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/community_referral/community_referral/patient_consent_for_data_sharing/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/community_referral/community_referral/patient_consent_for_data_sharing:label">
+            <value>Nathibitisha kuwa mgonjwa ametoa ridhaa ya kushirikisha taarifa zilizotolewa katika fomu hii na huduma husika za jamii ili kusaidia mahitaji yake</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/child_health_services:label">
+            <value>Huduma za afya ya mtoto</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/drug_addiction_rehabilitation_services:label">
+            <value>Huduma za uraibu wa dawa za kulevya</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/financial_assistance:label">
+            <value>Msaada wa kifedha</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/food_assistance:label">
+            <value>Msaada wa chakula</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/housing_assistance:label">
+            <value>Msaada wa makaazi</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/legal_assistance:label">
+            <value>Msaada wa kisheria</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/maternal_health_services:label">
+            <value>Huduma za afya ya mama</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/medical_services:label">
+            <value>Huduma za matibabu</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/mental_health_services:label">
+            <value>Huduma za afya ya akili</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/other:label">
+            <value>Nyengine</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason/vaccination_services:label">
+            <value>Huduma ya chanjo</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_reason:label">
+            <value>Sababu ya rufaa(Chagua sababu)</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type/emergency:label">
+            <value>Dharura</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type/routine:label">
+            <value>Kawaida</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type/urgent:label">
+            <value>Haraka</value>
+          </text>
+          <text id="/community_referral/community_referral/referral_type:label">
+            <value>Aina ya rufaa iliyotolewa</value>
+          </text>
+          <text id="/community_referral/household_location/gps:label">
+            <value>GPS ya nyumba</value>
+          </text>
+          <text id="/community_referral/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV).&lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Bonyeza kitufe hichi kupata GPS ya nyumba hii. Utatambua kuwa taarifa zimepatikana endapo utaona nambari zinatokea kwenye jadueli nne chini. Hutakiwi kuandika chochote kwenye jadueli hizi. Inaweza kuchukua muda kidogo mpaka nambari kutokea. Ukiona umesubiria kwa zaidi ya dakika moja na hakuna nambari iliyotokea, tafadhali endelea kujaza fomu yako bila ya kuzisubiria zaidi.&lt;/span&gt;</value>
+          </text>
+          <text id="/community_referral/household_location:label">
+            <value>Eneo la kaya</value>
+          </text>
+          <text id="/community_referral/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/community_referral/inputs:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <community_referral id="community_referral" prefix="J1!community_referral!" delimiter="#" version="2024-12-12 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <date_of_birth_c/>
+          <age_days/>
+          <age_years/>
+          <start/>
+          <end/>
+          <community_referral>
+            <referral_reason/>
+            <other_referral_reason/>
+            <referral_type/>
+            <chw_patient_condition_description/>
+            <has_patient_referral_provided/>
+            <has_patient_informed_about_referral/>
+            <patient_consent_for_data_sharing/>
+            <has_confidentiality_agreement_confirmed/>
+            <additional_information_comments/>
+            <confirmation_taken/>
+          </community_referral>
+          <household_location>
+            <gps_note/>
+            <gps/>
+          </household_location>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </community_referral>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/community_referral/inputs" relevant="false()"/>
+      <bind nodeset="/community_referral/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/community_referral/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/community_referral/inputs/user/name" type="string"/>
+      <bind nodeset="/community_referral/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/community_referral/inputs/contact/name" type="string"/>
+      <bind nodeset="/community_referral/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/community_referral/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/community_referral/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/community_referral/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/community_referral/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/community_referral/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/community_referral/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/community_referral/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /community_referral/date_of_birth_c ))"/>
+      <bind nodeset="/community_referral/age_years" type="string" calculate="int( /community_referral/age_days  div (30 *12),0)"/>
+      <bind nodeset="/community_referral/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/community_referral/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/community_referral/community_referral/referral_reason" type="select"/>
+      <bind nodeset="/community_referral/community_referral/other_referral_reason" type="string" relevant="selected( /community_referral/community_referral/referral_reason ,&quot;other&quot;)"/>
+      <bind nodeset="/community_referral/community_referral/referral_type" type="select1" required="true()"/>
+      <bind nodeset="/community_referral/community_referral/chw_patient_condition_description" type="string" required="true()"/>
+      <bind nodeset="/community_referral/community_referral/has_patient_referral_provided" type="select1" required="true()"/>
+      <bind nodeset="/community_referral/community_referral/has_patient_informed_about_referral" type="select1" relevant="selected( /community_referral/community_referral/has_patient_referral_provided ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/community_referral/community_referral/patient_consent_for_data_sharing" type="select1"/>
+      <bind nodeset="/community_referral/community_referral/has_confidentiality_agreement_confirmed" type="select1" required="true()"/>
+      <bind nodeset="/community_referral/community_referral/additional_information_comments" type="string" required="true()"/>
+      <bind nodeset="/community_referral/community_referral/confirmation_taken" type="binary" required="true()"/>
+      <bind nodeset="/community_referral/household_location/gps_note" readonly="true()" type="string"/>
+      <bind nodeset="/community_referral/household_location/gps" type="geopoint" required="true()"/>
+      <bind nodeset="/community_referral/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/community_referral/inputs">
+      <group ref="/community_referral/inputs/user">
+        <input ref="/community_referral/inputs/user/contact_id">
+          <label ref="jr:itext('/community_referral/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/community_referral/inputs/user/facility_id">
+          <label ref="jr:itext('/community_referral/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/community_referral/inputs/user/name">
+          <label ref="jr:itext('/community_referral/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/community_referral/inputs/contact">
+        <input appearance="db-object" ref="/community_referral/inputs/contact/_id"/>
+        <input ref="/community_referral/inputs/contact/name"/>
+        <input ref="/community_referral/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/community_referral/community_referral">
+      <select ref="/community_referral/community_referral/referral_reason">
+        <label ref="jr:itext('/community_referral/community_referral/referral_reason:label')"/>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/medical_services:label')"/>
+          <value>medical_services</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/mental_health_services:label')"/>
+          <value>mental_health_services</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/drug_addiction_rehabilitation_services:label')"/>
+          <value>drug_addiction_rehabilitation_services</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/maternal_health_services:label')"/>
+          <value>maternal_health_services</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/child_health_services:label')"/>
+          <value>child_health_services</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/vaccination_services:label')"/>
+          <value>vaccination_services</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/financial_assistance:label')"/>
+          <value>financial_assistance</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/housing_assistance:label')"/>
+          <value>housing_assistance</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/food_assistance:label')"/>
+          <value>food_assistance</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/legal_assistance:label')"/>
+          <value>legal_assistance</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_reason/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <input ref="/community_referral/community_referral/other_referral_reason">
+        <label ref="jr:itext('/community_referral/community_referral/other_referral_reason:label')"/>
+      </input>
+      <select1 ref="/community_referral/community_referral/referral_type">
+        <label ref="jr:itext('/community_referral/community_referral/referral_type:label')"/>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_type/emergency:label')"/>
+          <value>emergency</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_type/urgent:label')"/>
+          <value>urgent</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/referral_type/routine:label')"/>
+          <value>routine</value>
+        </item>
+      </select1>
+      <input ref="/community_referral/community_referral/chw_patient_condition_description">
+        <label ref="jr:itext('/community_referral/community_referral/chw_patient_condition_description:label')"/>
+      </input>
+      <select1 ref="/community_referral/community_referral/has_patient_referral_provided">
+        <label ref="jr:itext('/community_referral/community_referral/has_patient_referral_provided:label')"/>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/has_patient_referral_provided/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/has_patient_referral_provided/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/community_referral/community_referral/has_patient_informed_about_referral">
+        <label ref="jr:itext('/community_referral/community_referral/has_patient_informed_about_referral:label')"/>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/has_patient_informed_about_referral/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/has_patient_informed_about_referral/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/community_referral/community_referral/patient_consent_for_data_sharing">
+        <label ref="jr:itext('/community_referral/community_referral/patient_consent_for_data_sharing:label')"/>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/patient_consent_for_data_sharing/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/patient_consent_for_data_sharing/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/community_referral/community_referral/has_confidentiality_agreement_confirmed">
+        <label ref="jr:itext('/community_referral/community_referral/has_confidentiality_agreement_confirmed:label')"/>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/has_confidentiality_agreement_confirmed/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/community_referral/community_referral/has_confidentiality_agreement_confirmed/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/community_referral/community_referral/additional_information_comments">
+        <label ref="jr:itext('/community_referral/community_referral/additional_information_comments:label')"/>
+      </input>
+      <upload mediatype="text/plain,application/pdf,application/vnd.ms-excel,application/msword,text/richtext,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip,application/x-zip,application/x-zip-compressed" ref="/community_referral/community_referral/confirmation_taken">
+        <label ref="jr:itext('/community_referral/community_referral/confirmation_taken:label')"/>
+      </upload>
+    </group>
+    <group appearance="field-list" ref="/community_referral/household_location">
+      <label ref="jr:itext('/community_referral/household_location:label')"/>
+      <input ref="/community_referral/household_location/gps_note">
+        <label ref="jr:itext('/community_referral/household_location/gps_note:label')"/>
+      </input>
+      <input ref="/community_referral/household_location/gps">
+        <label ref="jr:itext('/community_referral/household_location/gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

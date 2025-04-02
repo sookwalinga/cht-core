@@ -1,0 +1,1171 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Wash</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/wash/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/wash/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/wash/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/more_than_1:label">
+            <value>Greater than 1.0</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point1:label">
+            <value>0.1</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point2_to_point4:label">
+            <value>0.2 – 0.4</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point5:label">
+            <value>0.5</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point6_to_1:label">
+            <value>0.6 – 1.0</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/zero:label">
+            <value>0</value>
+          </text>
+          <text id="/wash/wash/chlorine_level:label">
+            <value>Check the chlorine level in the water</value>
+          </text>
+          <text id="/wash/wash/chlorine_level_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/feces_around_house/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/feces_around_house/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/feces_around_house:label">
+            <value>Is there feces around the house?</value>
+          </text>
+          <text id="/wash/wash/feces_disposal/store_within_house:label">
+            <value>Storing Feces in a Designated Pit Within the Household Area</value>
+          </text>
+          <text id="/wash/wash/feces_disposal/transport_outside_house:label">
+            <value>Transporting and Treating Feces Outside the Area</value>
+          </text>
+          <text id="/wash/wash/feces_disposal:label">
+            <value>How is feces stored or disposed of?</value>
+          </text>
+          <text id="/wash/wash/feces_on_floor_wall_hole/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/feces_on_floor_wall_hole/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/feces_on_floor_wall_hole:label">
+            <value>Is there feces on the floor, walls, or toilet hole?</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type/improved_toilet:label">
+            <value>Improved Toilet</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type/open_defecation:label">
+            <value>Open Defecation</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type/unimproved_toilet:label">
+            <value>Unimproved Toilet</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type:label">
+            <value>Type of functional toilet</value>
+          </text>
+          <text id="/wash/wash/handwash_area/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/handwash_area/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/handwash_area:label">
+            <value>Is there a handwashing station?</value>
+          </text>
+          <text id="/wash/wash/have_functional_toilet/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/have_functional_toilet/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/have_functional_toilet:label">
+            <value>Does the household have a functional toilet?</value>
+          </text>
+          <text id="/wash/wash/have_wastewater_fee/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/have_wastewater_fee/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/have_wastewater_fee:label">
+            <value>Does your house have a wastewater fee?</value>
+          </text>
+          <text id="/wash/wash/household_drinking_water_storage/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/household_drinking_water_storage/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/household_drinking_water_storage:label">
+            <value>Does the household have a special container for storing drinking water?</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/borehole_with_pump:label">
+            <value>Borehole with Pump</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/bottled_or_safe_water_source:label">
+            <value>Bottled Water or Water Brought from a Safe Source</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/covered_dug_wells:label">
+            <value>Covered Dug Wells</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/covered_springs:label">
+            <value>Covered Springs</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/piped_water:label">
+            <value>Piped Water</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/rainwater:label">
+            <value>Rainwater</value>
+          </text>
+          <text id="/wash/wash/improved_water_source:label">
+            <value>Specify the improved water source</value>
+          </text>
+          <text id="/wash/wash/improved_water_source_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/is_handwash_inside_toilet/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/is_handwash_inside_toilet/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/is_handwash_inside_toilet:label">
+            <value>Is it inside the toilet?</value>
+          </text>
+          <text id="/wash/wash/is_private_toilet/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/is_private_toilet/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/is_private_toilet:label">
+            <value>Is there privacy in the toilet?</value>
+          </text>
+          <text id="/wash/wash/is_soap_available/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/is_soap_available/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/is_soap_available:label">
+            <value>Is there soap at the handwashing station?</value>
+          </text>
+          <text id="/wash/wash/is_water_available_12hrs/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/is_water_available_12hrs/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/is_water_available_12hrs:label">
+            <value>Is water available for 12 hours ?</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets:label">
+            <value>Have water treatment tablets been provided?</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/provided_health_education/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/provided_health_education/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/provided_health_education:label">
+            <value>Has health education been provided?</value>
+          </text>
+          <text id="/wash/wash/soap_type/bar_soap:label">
+            <value>Bar soap</value>
+          </text>
+          <text id="/wash/wash/soap_type/liquid_soap:label">
+            <value>Liquid soap</value>
+          </text>
+          <text id="/wash/wash/soap_type/powder_soap:label">
+            <value>Powder soap</value>
+          </text>
+          <text id="/wash/wash/soap_type:label">
+            <value>Specify the type of soap at the handwashing station.</value>
+          </text>
+          <text id="/wash/wash/tablet_count:jr:constraintMsg">
+            <value>The count should be greater than zero</value>
+          </text>
+          <text id="/wash/wash/tablet_count:label">
+            <value>Number of water treatment tablets (Water Guard/Aquatab) provided</value>
+          </text>
+          <text id="/wash/wash/tablet_count_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/time_spent_fetch_water/more_than_30_mins:label">
+            <value>More than 30 Minutes</value>
+          </text>
+          <text id="/wash/wash/time_spent_fetch_water/within_30_mins:label">
+            <value>Within 30 Minutes</value>
+          </text>
+          <text id="/wash/wash/time_spent_fetch_water:label">
+            <value>If the water source is outside your area, how much time do you spend getting water?</value>
+          </text>
+          <text id="/wash/wash/toilet_leak_feaces/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/toilet_leak_feaces/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/toilet_leak_feaces:label">
+            <value>Does the toilet leak feces?</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_more_than_5_hh/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_more_than_5_hh/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_more_than_5_hh:label">
+            <value>If it is a shared toilet, is it used by more than five households?</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_multiple_households/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_multiple_households/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_multiple_households:label">
+            <value>Is the toilet shared by more than one household?</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/puddles:label">
+            <value>Surface Water (Puddles)</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/rivers:label">
+            <value>Surface Water (Rivers)</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/surface_water_unprotected_springs:label">
+            <value>Surface Water from Unprotected Springs</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/uncovered_wells:label">
+            <value>Uncovered Wells</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/unprotected_springs:label">
+            <value>Unprotected Springs</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source:label">
+            <value>Specify the unimproved water source</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/uses_water_trmt_method/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/uses_water_trmt_method/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/uses_water_trmt_method:label">
+            <value>Do you use any method to treat the water?</value>
+          </text>
+          <text id="/wash/wash/water_for_handwash/no:label">
+            <value>No</value>
+          </text>
+          <text id="/wash/wash/water_for_handwash/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/wash/wash/water_for_handwash:label">
+            <value>Is there water available for handwashing?</value>
+          </text>
+          <text id="/wash/wash/water_location/outside_house:label">
+            <value>Outside the Area of the House You Live In</value>
+          </text>
+          <text id="/wash/wash/water_location/within_house:label">
+            <value>Within the Surrounding Area of the House</value>
+          </text>
+          <text id="/wash/wash/water_location:label">
+            <value>Ask about the location of the water</value>
+          </text>
+          <text id="/wash/wash/water_source_condition/improved:label">
+            <value>Improved</value>
+          </text>
+          <text id="/wash/wash/water_source_condition/unimproved:label">
+            <value>Unimproved</value>
+          </text>
+          <text id="/wash/wash/water_source_condition:label">
+            <value>Choose the source of water</value>
+          </text>
+          <text id="/wash/wash/water_source_condition_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method/with_boiling:label">
+            <value>Treating Water by Boiling</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method/with_chlorine:label">
+            <value>Treating Water with Chlorine (Water Guard / Aquatab)</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method/with_special_filter:label">
+            <value>Treating Water Using a Special Filter</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method:label">
+            <value>Ask about the methods used to treat water</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/wash/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/wash/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/wash/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/wash/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/wash/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/wash/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/wash/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/more_than_1:label">
+            <value>Zaidi ya 1.0</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point1:label">
+            <value>0.1</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point2_to_point4:label">
+            <value>0.2 – 0.4</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point5:label">
+            <value>0.5</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/point6_to_1:label">
+            <value>0.6 – 1.0</value>
+          </text>
+          <text id="/wash/wash/chlorine_level/zero:label">
+            <value>0</value>
+          </text>
+          <text id="/wash/wash/chlorine_level:label">
+            <value>Chunguza kiwango cha klorini katika maji</value>
+          </text>
+          <text id="/wash/wash/chlorine_level_note:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe.&lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/feces_around_house/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/feces_around_house/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/feces_around_house:label">
+            <value>Je kuna kinyesi kuzunguka nyumba?</value>
+          </text>
+          <text id="/wash/wash/feces_disposal/store_within_house:label">
+            <value>Uhifadhi wa kinyesi katika shimo maalum eneo la nyumba</value>
+          </text>
+          <text id="/wash/wash/feces_disposal/transport_outside_house:label">
+            <value>Kusafirisha kinyesi na kutibu nje ya eneo</value>
+          </text>
+          <text id="/wash/wash/feces_disposal:label">
+            <value>Kinyesi kinahifadhiwa au kutupwa kwa njia gani?</value>
+          </text>
+          <text id="/wash/wash/feces_on_floor_wall_hole/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/feces_on_floor_wall_hole/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/feces_on_floor_wall_hole:label">
+            <value>Je kuna kinyesi kwenye sakafu, ukuta au tundu la choo?</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type/improved_toilet:label">
+            <value>Choo kilichoboreshwa</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type/open_defecation:label">
+            <value>Choo kujisaidia nje</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type/unimproved_toilet:label">
+            <value>Choo kisichoboreshwa</value>
+          </text>
+          <text id="/wash/wash/functional_toilet_type:label">
+            <value>Aina ya choo kinachotumika</value>
+          </text>
+          <text id="/wash/wash/handwash_area/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/handwash_area/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/handwash_area:label">
+            <value>Je ipo sehemu ya kunawa mikono?</value>
+          </text>
+          <text id="/wash/wash/have_functional_toilet/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/have_functional_toilet/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/have_functional_toilet:label">
+            <value>Je nyumba ina choo kinachotumika?</value>
+          </text>
+          <text id="/wash/wash/have_wastewater_fee/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/have_wastewater_fee/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/have_wastewater_fee:label">
+            <value>Je nyumba yako ina karo ya maji machafu?</value>
+          </text>
+          <text id="/wash/wash/household_drinking_water_storage/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/household_drinking_water_storage/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/household_drinking_water_storage:label">
+            <value>Je kaya ina chombo maalum cha kuhifadhia maji ya kunywa?</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/borehole_with_pump:label">
+            <value>Kisima cha bomba</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/bottled_or_safe_water_source:label">
+            <value>Maji ya chupa au yale yaliyoletwa kutoka chanzo salama</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/covered_dug_wells:label">
+            <value>Visima vya makalbi vilivofunikwa</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/covered_springs:label">
+            <value>Chemchem zilizofunikwa</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/piped_water:label">
+            <value>Maji ya bomba</value>
+          </text>
+          <text id="/wash/wash/improved_water_source/rainwater:label">
+            <value>Maji ya mvua</value>
+          </text>
+          <text id="/wash/wash/improved_water_source:label">
+            <value>Ainisha chanzo cha maji kilichoboreshwa</value>
+          </text>
+          <text id="/wash/wash/improved_water_source_note:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe.&lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/is_handwash_inside_toilet/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/is_handwash_inside_toilet/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/is_handwash_inside_toilet:label">
+            <value>Je ipo ndani ya choo?</value>
+          </text>
+          <text id="/wash/wash/is_private_toilet/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/is_private_toilet/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/is_private_toilet:label">
+            <value>Je kuna usiri/stara katika choo?</value>
+          </text>
+          <text id="/wash/wash/is_soap_available/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/is_soap_available/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/is_soap_available:label">
+            <value>Je kuna sabuni katika sehemu ya kunawa mikono?</value>
+          </text>
+          <text id="/wash/wash/is_water_available_12hrs/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/is_water_available_12hrs/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/is_water_available_12hrs:label">
+            <value>Je maji yanapatikana kwa masaa 12?</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets:label">
+            <value>Je dawa za kutibu maji zimetolewa ?</value>
+          </text>
+          <text id="/wash/wash/provide_water_trmt_tablets_note:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe.&lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/provided_health_education/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/provided_health_education/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/provided_health_education:label">
+            <value>Je elimu ya afya imetolewa?</value>
+          </text>
+          <text id="/wash/wash/soap_type/bar_soap:label">
+            <value>Sabuni ya vipande</value>
+          </text>
+          <text id="/wash/wash/soap_type/liquid_soap:label">
+            <value>Sabuni ya maji</value>
+          </text>
+          <text id="/wash/wash/soap_type/powder_soap:label">
+            <value>Sabuni ya unga</value>
+          </text>
+          <text id="/wash/wash/soap_type:label">
+            <value>Ainisha sabuni katika sehemu ya kunawa mikono</value>
+          </text>
+          <text id="/wash/wash/tablet_count:jr:constraintMsg">
+            <value>Tafadhali ingiza idadi sahihi</value>
+          </text>
+          <text id="/wash/wash/tablet_count:label">
+            <value>Idadi ya vidonge vya dawa za water guard / aquatab zilizotolewa</value>
+          </text>
+          <text id="/wash/wash/tablet_count_note:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe.&lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/time_spent_fetch_water/more_than_30_mins:label">
+            <value>Zaidi ya dakika 30</value>
+          </text>
+          <text id="/wash/wash/time_spent_fetch_water/within_30_mins:label">
+            <value>Ndani ya dakika 30</value>
+          </text>
+          <text id="/wash/wash/time_spent_fetch_water:label">
+            <value>Unatumia mda gani kufika eneo la maji yanapopatikana?</value>
+          </text>
+          <text id="/wash/wash/toilet_leak_feaces/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/toilet_leak_feaces/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/toilet_leak_feaces:label">
+            <value>Je choo kinavujisha kinyesi?</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_more_than_5_hh/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_more_than_5_hh/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_more_than_5_hh:label">
+            <value>Kama ni choo cha kuchangia, kinatumika na zaidi ya kaya tano?</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_multiple_households/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_multiple_households/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/toilet_shared_by_multiple_households:label">
+            <value>Je choo kinatumika na zaidi ya kaya moja ?</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/puddles:label">
+            <value>Maji juu ya ardhi (Vidimbwi)</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/rivers:label">
+            <value>Maji juu ya ardhi (Mito)</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/surface_water_unprotected_springs:label">
+            <value>Maji juu ya ardhi ya Chemchem zisizohifadhiwa</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/uncovered_wells:label">
+            <value>Visima visivyofunikwa</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source/unprotected_springs:label">
+            <value>Chemchem zisizohifadhiwa</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source:label">
+            <value>Ainisha chanzo cha maji kisichoboreshwa</value>
+          </text>
+          <text id="/wash/wash/unimproved_water_source_note:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe.&lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/uses_water_trmt_method/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/uses_water_trmt_method/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/uses_water_trmt_method:label">
+            <value>Je kuna njia yoyote mnatumia kutibu maji?</value>
+          </text>
+          <text id="/wash/wash/water_for_handwash/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/wash/wash/water_for_handwash/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/wash/wash/water_for_handwash:label">
+            <value>Je kuna maji katika sehemu ya kunawa mikono?</value>
+          </text>
+          <text id="/wash/wash/water_location/outside_house:label">
+            <value>Nje ya eneo la nyumba unayoishi</value>
+          </text>
+          <text id="/wash/wash/water_location/within_house:label">
+            <value>Ndani ya eneo la kuzunguka nyumba</value>
+          </text>
+          <text id="/wash/wash/water_location:label">
+            <value>Je maji yapo eneo gani?</value>
+          </text>
+          <text id="/wash/wash/water_source_condition/improved:label">
+            <value>Kilichoboreshwa</value>
+          </text>
+          <text id="/wash/wash/water_source_condition/unimproved:label">
+            <value>Kisichoboreshwa</value>
+          </text>
+          <text id="/wash/wash/water_source_condition:label">
+            <value>Chagua hali ya chanzo cha maji</value>
+          </text>
+          <text id="/wash/wash/water_source_condition_note:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe.&lt;/span&gt;</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method/with_boiling:label">
+            <value>Kutibu maji kwa kuyachemsha</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method/with_chlorine:label">
+            <value>Kutibu maji kwa kuweka klorini (Water guard / Aquatab)</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method/with_special_filter:label">
+            <value>Kutibu maji kwa kutumia chujio maalum la filta/kuchujia</value>
+          </text>
+          <text id="/wash/wash/water_trmt_method:label">
+            <value>Je ni njia gani mnazotumia kutibu maji?</value>
+          </text>
+          <text id="/wash/wash:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <wash id="wash" prefix="J1!wash!" delimiter="#" version="2025-03-10  13-23">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <wash>
+            <water_source_condition_note/>
+            <water_source_condition/>
+            <improved_water_source_note/>
+            <improved_water_source/>
+            <unimproved_water_source_note/>
+            <unimproved_water_source/>
+            <water_location/>
+            <time_spent_fetch_water/>
+            <is_water_available_12hrs/>
+            <household_drinking_water_storage/>
+            <uses_water_trmt_method/>
+            <water_trmt_method/>
+            <chlorine_level_note/>
+            <chlorine_level/>
+            <provide_water_trmt_tablets_note/>
+            <provide_water_trmt_tablets/>
+            <tablet_count_note/>
+            <tablet_count/>
+            <have_functional_toilet/>
+            <functional_toilet_type/>
+            <is_private_toilet/>
+            <toilet_shared_by_multiple_households/>
+            <toilet_shared_by_more_than_5_hh/>
+            <handwash_area/>
+            <water_for_handwash/>
+            <is_handwash_inside_toilet/>
+            <is_soap_available/>
+            <soap_type/>
+            <toilet_leak_feaces/>
+            <feces_on_floor_wall_hole/>
+            <feces_around_house/>
+            <have_wastewater_fee/>
+            <feces_disposal/>
+            <provided_health_education/>
+          </wash>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </wash>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/wash/inputs" relevant="false()"/>
+      <bind nodeset="/wash/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/wash/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/wash/inputs/user/name" type="string"/>
+      <bind nodeset="/wash/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/wash/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/wash/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/wash/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/wash/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/wash/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/wash/wash/water_source_condition_note" readonly="true()" type="string"/>
+      <bind nodeset="/wash/wash/water_source_condition" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/improved_water_source_note" readonly="true()" type="string" relevant="selected( /wash/wash/water_source_condition ,&quot;improved&quot;)"/>
+      <bind nodeset="/wash/wash/improved_water_source" type="select" relevant="selected( /wash/wash/water_source_condition ,&quot;improved&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/unimproved_water_source_note" readonly="true()" type="string" relevant="selected( /wash/wash/water_source_condition ,&quot;unimproved&quot;)"/>
+      <bind nodeset="/wash/wash/unimproved_water_source" type="select" relevant="selected( /wash/wash/water_source_condition ,&quot;unimproved&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/water_location" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/time_spent_fetch_water" type="select1" relevant="selected( /wash/wash/water_location ,&quot;outside_house&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/is_water_available_12hrs" type="select1" relevant="selected( /wash/wash/water_location ,&quot;outside_house&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/household_drinking_water_storage" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/uses_water_trmt_method" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/water_trmt_method" type="select" relevant="selected( /wash/wash/uses_water_trmt_method ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/chlorine_level_note" readonly="true()" type="string" relevant="selected( /wash/wash/uses_water_trmt_method ,&quot;yes&quot;) and selected( /wash/wash/water_trmt_method ,&quot;with_chlorine&quot;)"/>
+      <bind nodeset="/wash/wash/chlorine_level" type="select1" relevant="selected( /wash/wash/uses_water_trmt_method ,&quot;yes&quot;) and selected( /wash/wash/water_trmt_method ,&quot;with_chlorine&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/provide_water_trmt_tablets_note" readonly="true()" type="string"/>
+      <bind nodeset="/wash/wash/provide_water_trmt_tablets" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/tablet_count_note" readonly="true()" type="string" relevant="selected( /wash/wash/provide_water_trmt_tablets ,&quot;yes&quot;)"/>
+      <bind nodeset="/wash/wash/tablet_count" type="int" relevant="selected( /wash/wash/provide_water_trmt_tablets ,&quot;yes&quot;)" required="true()" jr:constraintMsg="jr:itext('/wash/wash/tablet_count:jr:constraintMsg')" constraint=". &gt; 0"/>
+      <bind nodeset="/wash/wash/have_functional_toilet" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/functional_toilet_type" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/is_private_toilet" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;) and (selected( /wash/wash/functional_toilet_type ,&quot;improved_toilet&quot;) or selected( /wash/wash/functional_toilet_type ,&quot;unimproved_toilet&quot;))" required="true()"/>
+      <bind nodeset="/wash/wash/toilet_shared_by_multiple_households" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/toilet_shared_by_more_than_5_hh" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;) and selected( /wash/wash/toilet_shared_by_multiple_households ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/handwash_area" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/water_for_handwash" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;) and selected( /wash/wash/handwash_area ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/is_handwash_inside_toilet" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;) and selected( /wash/wash/water_for_handwash ,&quot;yes&quot;) and selected( /wash/wash/handwash_area ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/is_soap_available" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;) and selected( /wash/wash/water_for_handwash ,&quot;yes&quot;) and selected( /wash/wash/handwash_area ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/soap_type" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;) and selected( /wash/wash/water_for_handwash ,&quot;yes&quot;) and selected( /wash/wash/handwash_area ,&quot;yes&quot;) and selected( /wash/wash/is_soap_available ,&quot;yes&quot;)"/>
+      <bind nodeset="/wash/wash/toilet_leak_feaces" type="select1" relevant="selected( /wash/wash/have_functional_toilet ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/wash/wash/feces_on_floor_wall_hole" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/feces_around_house" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/have_wastewater_fee" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/feces_disposal" type="select1" required="true()"/>
+      <bind nodeset="/wash/wash/provided_health_education" type="select1" required="true()"/>
+      <bind nodeset="/wash/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/wash/inputs">
+      <group ref="/wash/inputs/user">
+        <input ref="/wash/inputs/user/contact_id">
+          <label ref="jr:itext('/wash/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/wash/inputs/user/facility_id">
+          <label ref="jr:itext('/wash/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/wash/inputs/user/name">
+          <label ref="jr:itext('/wash/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/wash/inputs/contact">
+        <input appearance="db-object" ref="/wash/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group appearance="Field-list" ref="/wash/wash">
+      <input ref="/wash/wash/water_source_condition_note">
+        <label ref="jr:itext('/wash/wash/water_source_condition_note:label')"/>
+      </input>
+      <select1 ref="/wash/wash/water_source_condition">
+        <label ref="jr:itext('/wash/wash/water_source_condition:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_source_condition/improved:label')"/>
+          <value>improved</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_source_condition/unimproved:label')"/>
+          <value>unimproved</value>
+        </item>
+      </select1>
+      <input ref="/wash/wash/improved_water_source_note">
+        <label ref="jr:itext('/wash/wash/improved_water_source_note:label')"/>
+      </input>
+      <select ref="/wash/wash/improved_water_source">
+        <label ref="jr:itext('/wash/wash/improved_water_source:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/improved_water_source/piped_water:label')"/>
+          <value>piped_water</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/improved_water_source/borehole_with_pump:label')"/>
+          <value>borehole_with_pump</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/improved_water_source/covered_dug_wells:label')"/>
+          <value>covered_dug_wells</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/improved_water_source/covered_springs:label')"/>
+          <value>covered_springs</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/improved_water_source/rainwater:label')"/>
+          <value>rainwater</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/improved_water_source/bottled_or_safe_water_source:label')"/>
+          <value>bottled_or_safe_water_source</value>
+        </item>
+      </select>
+      <input ref="/wash/wash/unimproved_water_source_note">
+        <label ref="jr:itext('/wash/wash/unimproved_water_source_note:label')"/>
+      </input>
+      <select ref="/wash/wash/unimproved_water_source">
+        <label ref="jr:itext('/wash/wash/unimproved_water_source:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/unimproved_water_source/uncovered_wells:label')"/>
+          <value>uncovered_wells</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/unimproved_water_source/unprotected_springs:label')"/>
+          <value>unprotected_springs</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/unimproved_water_source/puddles:label')"/>
+          <value>puddles</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/unimproved_water_source/rivers:label')"/>
+          <value>rivers</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/unimproved_water_source/surface_water_unprotected_springs:label')"/>
+          <value>surface_water_unprotected_springs</value>
+        </item>
+      </select>
+      <select1 ref="/wash/wash/water_location">
+        <label ref="jr:itext('/wash/wash/water_location:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_location/within_house:label')"/>
+          <value>within_house</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_location/outside_house:label')"/>
+          <value>outside_house</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/time_spent_fetch_water">
+        <label ref="jr:itext('/wash/wash/time_spent_fetch_water:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/time_spent_fetch_water/within_30_mins:label')"/>
+          <value>within_30_mins</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/time_spent_fetch_water/more_than_30_mins:label')"/>
+          <value>more_than_30_mins</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/is_water_available_12hrs">
+        <label ref="jr:itext('/wash/wash/is_water_available_12hrs:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_water_available_12hrs/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_water_available_12hrs/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/household_drinking_water_storage">
+        <label ref="jr:itext('/wash/wash/household_drinking_water_storage:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/household_drinking_water_storage/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/household_drinking_water_storage/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/uses_water_trmt_method">
+        <label ref="jr:itext('/wash/wash/uses_water_trmt_method:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/uses_water_trmt_method/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/uses_water_trmt_method/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/wash/wash/water_trmt_method">
+        <label ref="jr:itext('/wash/wash/water_trmt_method:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_trmt_method/with_chlorine:label')"/>
+          <value>with_chlorine</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_trmt_method/with_boiling:label')"/>
+          <value>with_boiling</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_trmt_method/with_special_filter:label')"/>
+          <value>with_special_filter</value>
+        </item>
+      </select>
+      <input ref="/wash/wash/chlorine_level_note">
+        <label ref="jr:itext('/wash/wash/chlorine_level_note:label')"/>
+      </input>
+      <select1 ref="/wash/wash/chlorine_level">
+        <label ref="jr:itext('/wash/wash/chlorine_level:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/chlorine_level/zero:label')"/>
+          <value>zero</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/chlorine_level/point1:label')"/>
+          <value>point1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/chlorine_level/point2_to_point4:label')"/>
+          <value>point2_to_point4</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/chlorine_level/point5:label')"/>
+          <value>point5</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/chlorine_level/point6_to_1:label')"/>
+          <value>point6_to_1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/chlorine_level/more_than_1:label')"/>
+          <value>more_than_1</value>
+        </item>
+      </select1>
+      <input ref="/wash/wash/provide_water_trmt_tablets_note">
+        <label ref="jr:itext('/wash/wash/provide_water_trmt_tablets_note:label')"/>
+      </input>
+      <select1 ref="/wash/wash/provide_water_trmt_tablets">
+        <label ref="jr:itext('/wash/wash/provide_water_trmt_tablets:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/provide_water_trmt_tablets/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/provide_water_trmt_tablets/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/wash/wash/tablet_count_note">
+        <label ref="jr:itext('/wash/wash/tablet_count_note:label')"/>
+      </input>
+      <input ref="/wash/wash/tablet_count">
+        <label ref="jr:itext('/wash/wash/tablet_count:label')"/>
+      </input>
+      <select1 ref="/wash/wash/have_functional_toilet">
+        <label ref="jr:itext('/wash/wash/have_functional_toilet:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/have_functional_toilet/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/have_functional_toilet/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/functional_toilet_type">
+        <label ref="jr:itext('/wash/wash/functional_toilet_type:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/functional_toilet_type/improved_toilet:label')"/>
+          <value>improved_toilet</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/functional_toilet_type/unimproved_toilet:label')"/>
+          <value>unimproved_toilet</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/functional_toilet_type/open_defecation:label')"/>
+          <value>open_defecation</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/is_private_toilet">
+        <label ref="jr:itext('/wash/wash/is_private_toilet:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_private_toilet/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_private_toilet/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/toilet_shared_by_multiple_households">
+        <label ref="jr:itext('/wash/wash/toilet_shared_by_multiple_households:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/toilet_shared_by_multiple_households/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/toilet_shared_by_multiple_households/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/toilet_shared_by_more_than_5_hh">
+        <label ref="jr:itext('/wash/wash/toilet_shared_by_more_than_5_hh:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/toilet_shared_by_more_than_5_hh/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/toilet_shared_by_more_than_5_hh/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/handwash_area">
+        <label ref="jr:itext('/wash/wash/handwash_area:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/handwash_area/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/handwash_area/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/water_for_handwash">
+        <label ref="jr:itext('/wash/wash/water_for_handwash:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_for_handwash/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/water_for_handwash/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/is_handwash_inside_toilet">
+        <label ref="jr:itext('/wash/wash/is_handwash_inside_toilet:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_handwash_inside_toilet/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_handwash_inside_toilet/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/is_soap_available">
+        <label ref="jr:itext('/wash/wash/is_soap_available:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_soap_available/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/is_soap_available/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/soap_type">
+        <label ref="jr:itext('/wash/wash/soap_type:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/soap_type/liquid_soap:label')"/>
+          <value>liquid_soap</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/soap_type/powder_soap:label')"/>
+          <value>powder_soap</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/soap_type/bar_soap:label')"/>
+          <value>bar_soap</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/toilet_leak_feaces">
+        <label ref="jr:itext('/wash/wash/toilet_leak_feaces:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/toilet_leak_feaces/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/toilet_leak_feaces/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/feces_on_floor_wall_hole">
+        <label ref="jr:itext('/wash/wash/feces_on_floor_wall_hole:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/feces_on_floor_wall_hole/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/feces_on_floor_wall_hole/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/feces_around_house">
+        <label ref="jr:itext('/wash/wash/feces_around_house:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/feces_around_house/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/feces_around_house/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/have_wastewater_fee">
+        <label ref="jr:itext('/wash/wash/have_wastewater_fee:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/have_wastewater_fee/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/have_wastewater_fee/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/feces_disposal">
+        <label ref="jr:itext('/wash/wash/feces_disposal:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/feces_disposal/transport_outside_house:label')"/>
+          <value>transport_outside_house</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/feces_disposal/store_within_house:label')"/>
+          <value>store_within_house</value>
+        </item>
+      </select1>
+      <select1 ref="/wash/wash/provided_health_education">
+        <label ref="jr:itext('/wash/wash/provided_health_education:label')"/>
+        <item>
+          <label ref="jr:itext('/wash/wash/provided_health_education/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/wash/wash/provided_health_education/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+  </h:body>
+</h:html>

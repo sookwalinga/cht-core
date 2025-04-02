@@ -1,0 +1,940 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>TB Investigation</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/tb_investigation/choose_visit1/visit_type1/contact_investigation_above51:label">
+            <value>Contact Investigation above 5</value>
+          </text>
+          <text id="/tb_investigation/choose_visit1/visit_type1/tb_investigation1:label">
+            <value>TB Investigation</value>
+          </text>
+          <text id="/tb_investigation/choose_visit1/visit_type1:label">
+            <value>Choose visit</value>
+          </text>
+          <text id="/tb_investigation/choose_visit1:label">
+            <value>Choose visit</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2/visit_type2/contact_investigation_upto52:label">
+            <value>Contact Investigation upto 5</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2/visit_type2/tb_investigation2:label">
+            <value>TB Investigation</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2/visit_type2:label">
+            <value>Choose visit</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2:label">
+            <value>Choose visit</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/fever:label">
+            <value>Fever lasting two weeks or more without a known cause and not showing signs of recovery despite taking medication</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/lack_of_alertness:label">
+            <value>Lack of alertness</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/persistent_cough:label">
+            <value>Persistant Cough for two weeks or more</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/weight_loss:label">
+            <value>Losing weight or becoming thin for two weeks or more</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility/no:label">
+            <value>No</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms:label">
+            <value>Child TB Symptoms</value>
+          </text>
+          <text id="/tb_investigation/index_details/index_district_number:hint">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/index_details/index_district_number:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/index_details/index_initials:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/index_details/is_same_household/no:label">
+            <value>No</value>
+          </text>
+          <text id="/tb_investigation/index_details/is_same_household/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/tb_investigation/index_details/is_same_household:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/index_details:label">
+            <value>Index details</value>
+          </text>
+          <text id="/tb_investigation/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/tb_investigation/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/tb_investigation/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/tb_investigation/note_on_tb/important_note_on_tb:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/note_on_tb:label">
+            <value>Important Note on TB</value>
+          </text>
+          <text id="/tb_investigation/prevent_tb_spread/prevent_tb_spread_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/prevent_tb_spread:label">
+            <value>Prevent spread of TB</value>
+          </text>
+          <text id="/tb_investigation/question_for_chv/note_to_chv:label">
+            <value>Note to CHV</value>
+          </text>
+          <text id="/tb_investigation/question_for_chv:label">
+            <value>Questions for CHV</value>
+          </text>
+          <text id="/tb_investigation/tb_causes/tb_causes_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_causes:label">
+            <value>Causes of TB</value>
+          </text>
+          <text id="/tb_investigation/tb_introduction/tb_intro:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_introduction:label">
+            <value>TB Introduction</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/cough_with_blood:label">
+            <value>Coughing up phlegm mixed with blood for two weeks or more</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/evening_fever:label">
+            <value>Getting evening fevers for two weeks or more</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/other_symptoms:label">
+            <value>Other symptoms</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/persistent_cough:label">
+            <value>Persistant Cough for two weeks or more</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/sweat_at_night:label">
+            <value>Experiencing excessive night sweats for two weeks or more</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/weight_loss:label">
+            <value>Losing weight or becoming thin for two weeks or more</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms:label">
+            <value>Which of these symptoms do you have?</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/did_chv_take_sample/no:label">
+            <value>No</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/did_chv_take_sample/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/did_chv_take_sample:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/does_client_have_tb_symptoms/no:label">
+            <value>No</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/does_client_have_tb_symptoms/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/does_client_have_tb_symptoms:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_mixed_with_blood/no:label">
+            <value>No</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_mixed_with_blood/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_mixed_with_blood:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_with_phlegm/no:label">
+            <value>No</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_with_phlegm/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_with_phlegm:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample/client_refused:label">
+            <value>Client refused to provide a sample</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample/no_phlegm:label">
+            <value>He/She didn't have any phlegm this time.</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample/no_sample_container:label">
+            <value>No sample container available.</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/thank_client_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/was_client_referred_to_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation:label">
+            <value>TB Investigation</value>
+          </text>
+          <text id="/tb_investigation/tb_meaning/tb_meaning_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_meaning:label">
+            <value>Meaning of TB</value>
+          </text>
+          <text id="/tb_investigation/tb_symptops/tb_symptoms_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/tb_symptops:label">
+            <value>TB Symptoms</value>
+          </text>
+          <text id="/tb_investigation/types_of_tb/types_of_tb_note:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/types_of_tb:label">
+            <value>Types of TB</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/tb_investigation/choose_visit1/visit_type1/contact_investigation_above51:label">
+            <value>Uchunguzi wa watu wa karibu zaidi ya miaka 5</value>
+          </text>
+          <text id="/tb_investigation/choose_visit1/visit_type1/tb_investigation1:label">
+            <value>Uchunguzi wa TB</value>
+          </text>
+          <text id="/tb_investigation/choose_visit1/visit_type1:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="/tb_investigation/choose_visit1:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2/visit_type2/contact_investigation_upto52:label">
+            <value>Uchunguzi wa watu wa karibu hadi  miaka 5</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2/visit_type2/tb_investigation2:label">
+            <value>Uchunguzi wa TB</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2/visit_type2:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="/tb_investigation/choose_visit2:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/fever:label">
+            <value>Homa ya wiki mbili au zaidi bila kujua sababu na haonyeshi dalili za kupona akiwa anatumia dawa</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/lack_of_alertness:label">
+            <value>Kutokuchangamka au kuwa hasira</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/persistent_cough:label">
+            <value>Kukohoa mfululizo kwa wiki mbili au zaidi</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/weight_loss:label">
+            <value>Kupungua uzito, kushindwa kuongezeka uzito, kushindwa kukua</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms:label">
+            <value>Je mtoto ana dalili yoyote kati ya hizi?</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Toa rufaa. Umetoa rufaa? &lt;/span&gt;</value>
+          </text>
+          <text id="/tb_investigation/index_child_tb_symptoms:label">
+            <value>Dalili za TB kwa mtoto</value>
+          </text>
+          <text id="/tb_investigation/index_details/index_district_number:hint">
+            <value>Angalie kwenye kadi ya mgonjwa</value>
+          </text>
+          <text id="/tb_investigation/index_details/index_district_number:label">
+            <value>Andika namba ya wilaya ya Index</value>
+          </text>
+          <text id="/tb_investigation/index_details/index_initials:label">
+            <value>Andika initials za majina ya Index</value>
+          </text>
+          <text id="/tb_investigation/index_details/is_same_household/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/tb_investigation/index_details/is_same_household/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/tb_investigation/index_details/is_same_household:label">
+            <value>Anaishi kwa nyumba moja na Index?</value>
+          </text>
+          <text id="/tb_investigation/index_details:label">
+            <value>Taarifa za Index</value>
+          </text>
+          <text id="/tb_investigation/inputs/client_EDD:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/client_EDD_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs/visit_id:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/tb_investigation/note_on_tb/important_note_on_tb:label">
+            <value>Kumbuka kwamba ugonjwa wa TB si wa kurogwa au kurithi
+Ugonjwa wa TB unatibika kwa dawa za hospitali</value>
+          </text>
+          <text id="/tb_investigation/note_on_tb:label">
+            <value>Tanbihi</value>
+          </text>
+          <text id="/tb_investigation/prevent_tb_spread/prevent_tb_spread_note:label">
+            <value>Njia ya kuzuia maambukizi:
+Kikohozi salama
+Kuepuka mikusanyiko ya watu wengi
+Kukaa sehemu inayopitisha upepo wa kutosha
+Kugundua wagonjwa na kuwatibu mapema</value>
+          </text>
+          <text id="/tb_investigation/prevent_tb_spread:label">
+            <value>Njia ya kuzuia maambukizi</value>
+          </text>
+          <text id="/tb_investigation/question_for_chv/note_to_chv:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Kwa CHW:- Uliza kama kuna swali.&lt;/.span&gt;</value>
+          </text>
+          <text id="/tb_investigation/question_for_chv:label">
+            <value>Masuali kwa CHV</value>
+          </text>
+          <text id="/tb_investigation/tb_causes/tb_causes_note:label">
+            <value>Njia za maambukizi ni:
+Unaambukizwa kwa hewa wakati mtu anakohoa, kupiga chafya, kuongea, kuimba, kucheka.</value>
+          </text>
+          <text id="/tb_investigation/tb_causes:label">
+            <value>Njia za maambukizi</value>
+          </text>
+          <text id="/tb_investigation/tb_introduction/tb_intro:label">
+            <value>TB ni janga ya kitaifa ambayo inaathiri dunia ikiwemo Tanzania. 
+Huku Zanzibar wagonjwa wengi wa TB wanagundulikana kila mwaka.</value>
+          </text>
+          <text id="/tb_investigation/tb_introduction:label">
+            <value>Utangulizi wa TB</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/cough_with_blood:label">
+            <value>Kutoa makohozi yaliyochanganyika na damu, wiki mbili au zaidi</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/evening_fever:label">
+            <value>Kupata homa za jioni, wiki mbili au zaidi</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/other_symptoms:label">
+            <value>Na dalili zinginezo</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/persistent_cough:label">
+            <value>Kukohoa mfululizo kwa wiki mbili au zaidi</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/sweat_at_night:label">
+            <value>Kutoka jasho jingi nyakati za usiku, wiki mbili au zaidi</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms/weight_loss:label">
+            <value>Kupungua uzito au kukonda, wiki mbili au zaidi</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/client_tb_symptoms:label">
+            <value>Ni zipi?</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/did_chv_take_sample/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/did_chv_take_sample/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/did_chv_take_sample:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Chukua sampuli ya kikohozi.&lt;/span&gt; Umechukua sampuli?</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/does_client_have_tb_symptoms/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/does_client_have_tb_symptoms/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/does_client_have_tb_symptoms:label">
+            <value>Je una dalili yeyote kati ya tulizozitaja?</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_mixed_with_blood/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_mixed_with_blood/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_mixed_with_blood:label">
+            <value>Makohozi yamechanganyika na damu?</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_with_phlegm/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_with_phlegm/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/is_cough_with_phlegm:label">
+            <value>Unapokohoa unatoa makohozi?</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample/client_refused:label">
+            <value>Mteja amekataa</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample/no_phlegm:label">
+            <value>Hakuwa na makohozi wakati huu</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample/no_sample_container:label">
+            <value>Hakuna Kikopo cha sampuli</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/reason_no_sample:label">
+            <value>Kwa nini hakutoa sampuli?</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/thank_client_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mshukuru kwa ushirikiano. &lt;span&gt;</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation/was_client_referred_to_facility:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mpe rufaa mteja. ELEZA: &lt;/span&gt; Nakupa rufaa ya kwenda kituo cha afya cha karibu. Nitarudi baada ya siku tatu kuhakikisha ulikamilisha hii rufaa.</value>
+          </text>
+          <text id="/tb_investigation/tb_investigation:label">
+            <value>Uchunguzi wa TB</value>
+          </text>
+          <text id="/tb_investigation/tb_meaning/tb_meaning_note:label">
+            <value>TB ni nini? 
+TB ni ugonjwa sugu wa kuambukizwa
+Unasababishwa na vimelea wanaojulikana kama Mycobacterium Tuberculosis</value>
+          </text>
+          <text id="/tb_investigation/tb_meaning:label">
+            <value>Maana ya TB</value>
+          </text>
+          <text id="/tb_investigation/tb_symptops/tb_symptoms_note:label">
+            <value>Dalili za TB ni hizi: 
+Kukohoa mfululizo kwa wiki mbili au zaidi
+Kutoa makohozi yaliyochanganyika na damu, wiki mbili au zaidi
+Kupata homa za jioni, wiki mbili au zaidi
+Kupungua uzito au kukonda, wiki mbili au zaidi
+Kutoka jasho jingi nyakati za usiku, wiki mbili au zaidi
+Na dalili zinginezo
+
+Mtu akiwa na dalili moja au zaidi kunauwezekano mkubwa ana TB</value>
+          </text>
+          <text id="/tb_investigation/tb_symptops:label">
+            <value>Dalili za TB</value>
+          </text>
+          <text id="/tb_investigation/types_of_tb/types_of_tb_note:label">
+            <value>Aina za TB:
+TB ya mapafu
+TB ya nje ya mapafu</value>
+          </text>
+          <text id="/tb_investigation/types_of_tb:label">
+            <value>Aina za TB</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <tb_investigation id="tb_investigation" prefix="J1!tb_investigation!" delimiter="#" version="20/06/2019">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <due_date/>
+            <due_date_human_readable/>
+            <client_EDD/>
+            <visit_id/>
+            <client_EDD_human_readable/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <n_pregnancy_visits/>
+          <n_previous_anc_visits/>
+          <previous_hiv_status/>
+          <previous_rchcard_status/>
+          <show_research_questions/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <date_of_birth_c/>
+          <age_days/>
+          <age_months/>
+          <age_years/>
+          <age_in_years/>
+          <age_days_display/>
+          <week/>
+          <month/>
+          <household_head/>
+          <house_number/>
+          <kitongoji/>
+          <phone/>
+          <due_date/>
+          <due_date_pretty_print_english/>
+          <due_date_pretty_print_swahili/>
+          <client_EDD_pretty_print_english/>
+          <client_EDD_pretty_print_swahili/>
+          <client_EDD_c/>
+          <currently_pregnant/>
+          <hide_lmp_or_months_pregnant/>
+          <show_wash_protocol/>
+          <visit_id/>
+          <start/>
+          <end/>
+          <choose_visit1>
+            <visit_type1/>
+          </choose_visit1>
+          <choose_visit2>
+            <visit_type2/>
+          </choose_visit2>
+          <tb_introduction>
+            <tb_intro/>
+          </tb_introduction>
+          <tb_meaning>
+            <tb_meaning_note/>
+          </tb_meaning>
+          <tb_causes>
+            <tb_causes_note/>
+          </tb_causes>
+          <types_of_tb>
+            <types_of_tb_note/>
+          </types_of_tb>
+          <tb_symptops>
+            <tb_symptoms_note/>
+          </tb_symptops>
+          <prevent_tb_spread>
+            <prevent_tb_spread_note/>
+          </prevent_tb_spread>
+          <note_on_tb>
+            <important_note_on_tb/>
+          </note_on_tb>
+          <question_for_chv>
+            <note_to_chv/>
+          </question_for_chv>
+          <index_details>
+            <index_district_number/>
+            <index_initials/>
+            <is_same_household/>
+          </index_details>
+          <tb_investigation>
+            <does_client_have_tb_symptoms/>
+            <client_tb_symptoms/>
+            <is_cough_with_phlegm/>
+            <is_cough_mixed_with_blood/>
+            <did_chv_take_sample/>
+            <thank_client_note/>
+            <reason_no_sample/>
+            <was_client_referred_to_facility/>
+          </tb_investigation>
+          <index_child_tb_symptoms>
+            <child_tb_symptoms/>
+            <was_child_referred_to_facility/>
+          </index_child_tb_symptoms>
+          <refer_tb_client/>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </tb_investigation>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/tb_investigation/inputs" relevant="0"/>
+      <bind nodeset="/tb_investigation/inputs/due_date" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/client_EDD" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/visit_id" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/client_EDD_human_readable" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/user/name" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/tb_investigation/inputs/contact/name" type="string"/>
+      <bind nodeset="/tb_investigation/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/tb_investigation/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/tb_investigation/n_pregnancy_visits" type="string" calculate="if( /tb_investigation/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_pregnancy_visits,0)"/>
+      <bind nodeset="/tb_investigation/n_previous_anc_visits" type="string" calculate="if( /tb_investigation/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/n_previous_anc_visits,0)"/>
+      <bind nodeset="/tb_investigation/previous_hiv_status" type="string" calculate="if( /tb_investigation/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/previous_hiv_status,'false')"/>
+      <bind nodeset="/tb_investigation/previous_rchcard_status" type="string" calculate="if( /tb_investigation/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/previous_rchcard_status,&quot;false&quot;)"/>
+      <bind nodeset="/tb_investigation/show_research_questions" type="string" calculate="if( /tb_investigation/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/show_research_questions,&quot;false&quot;)"/>
+      <bind nodeset="/tb_investigation/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/tb_investigation/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/tb_investigation/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/tb_investigation/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/tb_investigation/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/tb_investigation/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /tb_investigation/date_of_birth_c ))"/>
+      <bind nodeset="/tb_investigation/age_months" type="string" calculate="int(( /tb_investigation/age_days  - ( /tb_investigation/age_years  * 12 * 30)) div 30,0)"/>
+      <bind nodeset="/tb_investigation/age_years" type="string" calculate="int( /tb_investigation/age_days  div (30 *12),0)"/>
+      <bind nodeset="/tb_investigation/age_in_years" type="string" calculate="round((decimal-date-time(today()) - decimal-date-time( /tb_investigation/date_of_birth_c )) div 365,0)"/>
+      <bind nodeset="/tb_investigation/age_days_display" type="string" calculate=" /tb_investigation/age_days  - ( /tb_investigation/age_months  * 30) - ( /tb_investigation/age_years  *12*30)"/>
+      <bind nodeset="/tb_investigation/week" type="string" calculate="7"/>
+      <bind nodeset="/tb_investigation/month" type="string" calculate="30"/>
+      <bind nodeset="/tb_investigation/household_head" type="string" calculate="instance('contact-summary')/context/household_head"/>
+      <bind nodeset="/tb_investigation/house_number" type="string" calculate="instance('contact-summary')/context/house_number"/>
+      <bind nodeset="/tb_investigation/kitongoji" type="string" calculate="instance('contact-summary')/context/kitongoji"/>
+      <bind nodeset="/tb_investigation/phone" type="string" calculate="instance('contact-summary')/context/phone"/>
+      <bind nodeset="/tb_investigation/due_date" type="string" calculate="../inputs/due_date"/>
+      <bind nodeset="/tb_investigation/due_date_pretty_print_english" type="string" calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Unknown&quot;)"/>
+      <bind nodeset="/tb_investigation/due_date_pretty_print_swahili" type="string" calculate="if(../inputs/due_date_human_readable != &quot;&quot;, ../inputs/due_date_human_readable, &quot;Haijulikani&quot;)"/>
+      <bind nodeset="/tb_investigation/client_EDD_pretty_print_english" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Unknown&quot;)"/>
+      <bind nodeset="/tb_investigation/client_EDD_pretty_print_swahili" type="string" calculate="if(../inputs/client_EDD_human_readable != &quot;&quot;, ../inputs/client_EDD_human_readable, &quot;Haijulikani&quot;)"/>
+      <bind nodeset="/tb_investigation/client_EDD_c" type="string" calculate="../inputs/client_EDD"/>
+      <bind nodeset="/tb_investigation/currently_pregnant" type="string" calculate="instance('contact-summary')/context/currently_pregnant"/>
+      <bind nodeset="/tb_investigation/hide_lmp_or_months_pregnant" type="string" calculate="if( /tb_investigation/currently_pregnant =&quot;true&quot;,instance('contact-summary')/context/hide_lmp_or_months_pregnant,&quot;false&quot;)"/>
+      <bind nodeset="/tb_investigation/show_wash_protocol" type="string" calculate="if(instance('contact-summary')/context/show_wash_protocol=&quot;true&quot;,1,0)"/>
+      <bind nodeset="/tb_investigation/visit_id" type="string" calculate="if(../inputs/visit_id != &quot;&quot;, ../inputs/visit_id, &quot;pregnancy_consent_visit&quot;)"/>
+      <bind nodeset="/tb_investigation/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/tb_investigation/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/tb_investigation/choose_visit1" relevant=" /tb_investigation/age_in_years  &gt;= 5"/>
+      <bind nodeset="/tb_investigation/choose_visit1/visit_type1" type="select1" required="true()"/>
+      <bind nodeset="/tb_investigation/choose_visit2" relevant=" /tb_investigation/age_in_years  &lt; 5"/>
+      <bind nodeset="/tb_investigation/choose_visit2/visit_type2" type="select1" required="true()"/>
+      <bind nodeset="/tb_investigation/tb_introduction" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/tb_introduction/tb_intro" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/tb_meaning" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/tb_meaning/tb_meaning_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/tb_causes" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/tb_causes/tb_causes_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/types_of_tb" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/types_of_tb/types_of_tb_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/tb_symptops" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/tb_symptops/tb_symptoms_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/prevent_tb_spread" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/prevent_tb_spread/prevent_tb_spread_note" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/note_on_tb" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/note_on_tb/important_note_on_tb" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/question_for_chv" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/question_for_chv/note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/tb_investigation/index_details" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;contact_investigation_above51&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;contact_investigation_upto52&quot;)"/>
+      <bind nodeset="/tb_investigation/index_details/index_district_number" type="string" required="true()"/>
+      <bind nodeset="/tb_investigation/index_details/index_initials" type="string" required="true()"/>
+      <bind nodeset="/tb_investigation/index_details/is_same_household" type="select1" required="true()"/>
+      <bind nodeset="/tb_investigation/tb_investigation" relevant="selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;contact_investigation_above51&quot;) or selected( /tb_investigation/choose_visit1/visit_type1 ,&quot;tb_investigation1&quot;) or selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;tb_investigation2&quot;)"/>
+      <bind nodeset="/tb_investigation/tb_investigation/does_client_have_tb_symptoms" type="select1" required="true()"/>
+      <bind nodeset="/tb_investigation/tb_investigation/client_tb_symptoms" type="select" required="true()" relevant="selected( /tb_investigation/tb_investigation/does_client_have_tb_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/tb_investigation/tb_investigation/is_cough_with_phlegm" type="select1" required="true()" relevant=" /tb_investigation/tb_investigation/does_client_have_tb_symptoms  = &quot;yes&quot; and 
+selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;persistent_cough&quot;) and 
+( /tb_investigation/tb_investigation/client_tb_symptoms  = &quot;&quot; or not(selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;cough_with_blood&quot;)))"/>
+      <bind nodeset="/tb_investigation/tb_investigation/is_cough_mixed_with_blood" type="select1" required="true()" relevant="( /tb_investigation/tb_investigation/client_tb_symptoms  != &quot;&quot; and selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;persistent_cough&quot;) and not(selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;cough_with_blood&quot;))) and 
+selected( /tb_investigation/tb_investigation/is_cough_with_phlegm , &quot;yes&quot;) and 
+selected( /tb_investigation/tb_investigation/does_client_have_tb_symptoms , &quot;yes&quot;)"/>
+      <bind nodeset="/tb_investigation/tb_investigation/did_chv_take_sample" type="select1" required="true()" relevant=" /tb_investigation/tb_investigation/does_client_have_tb_symptoms  = 'yes' and  /tb_investigation/tb_investigation/client_tb_symptoms  != &quot;&quot; and (selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;cough_with_blood&quot;) or ( /tb_investigation/tb_investigation/is_cough_with_phlegm  = 'yes' and selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;persistent_cough&quot;)))"/>
+      <bind nodeset="/tb_investigation/tb_investigation/thank_client_note" readonly="true()" type="string" relevant=" /tb_investigation/tb_investigation/did_chv_take_sample  = &quot;yes&quot; and  /tb_investigation/tb_investigation/does_client_have_tb_symptoms  = &quot;yes&quot; and  /tb_investigation/tb_investigation/is_cough_with_phlegm  = 'yes' and  /tb_investigation/tb_investigation/client_tb_symptoms  != &quot;&quot; and (selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;cough_with_blood&quot;) or selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;persistent_cough&quot;))"/>
+      <bind nodeset="/tb_investigation/tb_investigation/reason_no_sample" type="select1" required="true()" relevant=" /tb_investigation/tb_investigation/did_chv_take_sample  = &quot;no&quot; and 
+ /tb_investigation/tb_investigation/does_client_have_tb_symptoms  = &quot;yes&quot; and 
+( /tb_investigation/tb_investigation/client_tb_symptoms  != &quot;&quot; and (selected( /tb_investigation/tb_investigation/client_tb_symptoms , &quot;cough_with_blood&quot;) or selected( /tb_investigation/tb_investigation/is_cough_with_phlegm , &quot;yes&quot;)))"/>
+      <bind nodeset="/tb_investigation/tb_investigation/was_client_referred_to_facility" readonly="true()" type="string" relevant=" /tb_investigation/tb_investigation/does_client_have_tb_symptoms  = 'yes' and  /tb_investigation/tb_investigation/client_tb_symptoms  != &quot;&quot; and ( /tb_investigation/tb_investigation/did_chv_take_sample  = 'no' or  /tb_investigation/tb_investigation/is_cough_with_phlegm  = 'no')"/>
+      <bind nodeset="/tb_investigation/index_child_tb_symptoms" relevant="selected( /tb_investigation/choose_visit2/visit_type2 ,&quot;contact_investigation_upto52&quot;)"/>
+      <bind nodeset="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms" type="select" required="true()"/>
+      <bind nodeset="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility" type="select1" required="true()" relevant=" /tb_investigation/index_child_tb_symptoms/child_tb_symptoms  != &quot;&quot; and (selected( /tb_investigation/index_child_tb_symptoms/child_tb_symptoms ,&quot;persistent_cough&quot;) or 
+selected( /tb_investigation/index_child_tb_symptoms/child_tb_symptoms , &quot;weight_loss&quot;) or 
+selected( /tb_investigation/index_child_tb_symptoms/child_tb_symptoms ,&quot;lack_of_alertness&quot;) or 
+selected( /tb_investigation/index_child_tb_symptoms/child_tb_symptoms ,&quot;fever&quot;))"/>
+      <bind nodeset="/tb_investigation/refer_tb_client" type="string" calculate="if(selected( /tb_investigation/tb_investigation/does_client_have_tb_symptoms ,&quot;yes&quot;),1,0)"/>
+      <bind nodeset="/tb_investigation/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/tb_investigation/inputs">
+      <input ref="/tb_investigation/inputs/due_date"/>
+      <input ref="/tb_investigation/inputs/due_date_human_readable"/>
+      <input ref="/tb_investigation/inputs/client_EDD"/>
+      <input ref="/tb_investigation/inputs/visit_id"/>
+      <input ref="/tb_investigation/inputs/client_EDD_human_readable"/>
+      <group ref="/tb_investigation/inputs/user">
+        <input ref="/tb_investigation/inputs/user/contact_id">
+          <label ref="jr:itext('/tb_investigation/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/tb_investigation/inputs/user/facility_id">
+          <label ref="jr:itext('/tb_investigation/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/tb_investigation/inputs/user/name">
+          <label ref="jr:itext('/tb_investigation/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/tb_investigation/inputs/contact">
+        <input appearance="db-object" ref="/tb_investigation/inputs/contact/_id"/>
+        <input ref="/tb_investigation/inputs/contact/name"/>
+        <input ref="/tb_investigation/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group ref="/tb_investigation/choose_visit1">
+      <label ref="jr:itext('/tb_investigation/choose_visit1:label')"/>
+      <select1 ref="/tb_investigation/choose_visit1/visit_type1">
+        <label ref="jr:itext('/tb_investigation/choose_visit1/visit_type1:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/choose_visit1/visit_type1/tb_investigation1:label')"/>
+          <value>tb_investigation1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/choose_visit1/visit_type1/contact_investigation_above51:label')"/>
+          <value>contact_investigation_above51</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/tb_investigation/choose_visit2">
+      <label ref="jr:itext('/tb_investigation/choose_visit2:label')"/>
+      <select1 ref="/tb_investigation/choose_visit2/visit_type2">
+        <label ref="jr:itext('/tb_investigation/choose_visit2/visit_type2:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/choose_visit2/visit_type2/tb_investigation2:label')"/>
+          <value>tb_investigation2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/choose_visit2/visit_type2/contact_investigation_upto52:label')"/>
+          <value>contact_investigation_upto52</value>
+        </item>
+      </select1>
+    </group>
+    <group ref="/tb_investigation/tb_introduction">
+      <label ref="jr:itext('/tb_investigation/tb_introduction:label')"/>
+      <input ref="/tb_investigation/tb_introduction/tb_intro">
+        <label ref="jr:itext('/tb_investigation/tb_introduction/tb_intro:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_investigation/tb_meaning">
+      <label ref="jr:itext('/tb_investigation/tb_meaning:label')"/>
+      <input ref="/tb_investigation/tb_meaning/tb_meaning_note">
+        <label ref="jr:itext('/tb_investigation/tb_meaning/tb_meaning_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_investigation/tb_causes">
+      <label ref="jr:itext('/tb_investigation/tb_causes:label')"/>
+      <input ref="/tb_investigation/tb_causes/tb_causes_note">
+        <label ref="jr:itext('/tb_investigation/tb_causes/tb_causes_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_investigation/types_of_tb">
+      <label ref="jr:itext('/tb_investigation/types_of_tb:label')"/>
+      <input ref="/tb_investigation/types_of_tb/types_of_tb_note">
+        <label ref="jr:itext('/tb_investigation/types_of_tb/types_of_tb_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_investigation/tb_symptops">
+      <label ref="jr:itext('/tb_investigation/tb_symptops:label')"/>
+      <input ref="/tb_investigation/tb_symptops/tb_symptoms_note">
+        <label ref="jr:itext('/tb_investigation/tb_symptops/tb_symptoms_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_investigation/prevent_tb_spread">
+      <label ref="jr:itext('/tb_investigation/prevent_tb_spread:label')"/>
+      <input ref="/tb_investigation/prevent_tb_spread/prevent_tb_spread_note">
+        <label ref="jr:itext('/tb_investigation/prevent_tb_spread/prevent_tb_spread_note:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_investigation/note_on_tb">
+      <label ref="jr:itext('/tb_investigation/note_on_tb:label')"/>
+      <input ref="/tb_investigation/note_on_tb/important_note_on_tb">
+        <label ref="jr:itext('/tb_investigation/note_on_tb/important_note_on_tb:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/tb_investigation/question_for_chv">
+      <label ref="jr:itext('/tb_investigation/question_for_chv:label')"/>
+      <input ref="/tb_investigation/question_for_chv/note_to_chv">
+        <label ref="jr:itext('/tb_investigation/question_for_chv/note_to_chv:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/tb_investigation/index_details">
+      <label ref="jr:itext('/tb_investigation/index_details:label')"/>
+      <input ref="/tb_investigation/index_details/index_district_number">
+        <label ref="jr:itext('/tb_investigation/index_details/index_district_number:label')"/>
+        <hint ref="jr:itext('/tb_investigation/index_details/index_district_number:hint')"/>
+      </input>
+      <input ref="/tb_investigation/index_details/index_initials">
+        <label ref="jr:itext('/tb_investigation/index_details/index_initials:label')"/>
+      </input>
+      <select1 ref="/tb_investigation/index_details/is_same_household">
+        <label ref="jr:itext('/tb_investigation/index_details/is_same_household:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_details/is_same_household/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_details/is_same_household/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/tb_investigation/tb_investigation">
+      <label ref="jr:itext('/tb_investigation/tb_investigation:label')"/>
+      <select1 ref="/tb_investigation/tb_investigation/does_client_have_tb_symptoms">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/does_client_have_tb_symptoms:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/does_client_have_tb_symptoms/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/does_client_have_tb_symptoms/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/tb_investigation/tb_investigation/client_tb_symptoms">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/client_tb_symptoms:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/client_tb_symptoms/persistent_cough:label')"/>
+          <value>persistent_cough</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/client_tb_symptoms/cough_with_blood:label')"/>
+          <value>cough_with_blood</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/client_tb_symptoms/evening_fever:label')"/>
+          <value>evening_fever</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/client_tb_symptoms/weight_loss:label')"/>
+          <value>weight_loss</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/client_tb_symptoms/sweat_at_night:label')"/>
+          <value>sweat_at_night</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/client_tb_symptoms/other_symptoms:label')"/>
+          <value>other_symptoms</value>
+        </item>
+      </select>
+      <select1 ref="/tb_investigation/tb_investigation/is_cough_with_phlegm">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/is_cough_with_phlegm:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/is_cough_with_phlegm/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/is_cough_with_phlegm/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/tb_investigation/tb_investigation/is_cough_mixed_with_blood">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/is_cough_mixed_with_blood:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/is_cough_mixed_with_blood/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/is_cough_mixed_with_blood/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/tb_investigation/tb_investigation/did_chv_take_sample">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/did_chv_take_sample:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/did_chv_take_sample/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/did_chv_take_sample/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/tb_investigation/tb_investigation/thank_client_note">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/thank_client_note:label')"/>
+      </input>
+      <select1 ref="/tb_investigation/tb_investigation/reason_no_sample">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/reason_no_sample:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/reason_no_sample/no_sample_container:label')"/>
+          <value>no_sample_container</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/reason_no_sample/client_refused:label')"/>
+          <value>client_refused</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/tb_investigation/reason_no_sample/no_phlegm:label')"/>
+          <value>no_phlegm</value>
+        </item>
+      </select1>
+      <input ref="/tb_investigation/tb_investigation/was_client_referred_to_facility">
+        <label ref="jr:itext('/tb_investigation/tb_investigation/was_client_referred_to_facility:label')"/>
+      </input>
+    </group>
+    <group ref="/tb_investigation/index_child_tb_symptoms">
+      <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms:label')"/>
+      <select ref="/tb_investigation/index_child_tb_symptoms/child_tb_symptoms">
+        <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/child_tb_symptoms:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/persistent_cough:label')"/>
+          <value>persistent_cough</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/weight_loss:label')"/>
+          <value>weight_loss</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/lack_of_alertness:label')"/>
+          <value>lack_of_alertness</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/child_tb_symptoms/fever:label')"/>
+          <value>fever</value>
+        </item>
+      </select>
+      <select1 ref="/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility">
+        <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility:label')"/>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/tb_investigation/index_child_tb_symptoms/was_child_referred_to_facility/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+    </group>
+  </h:body>
+</h:html>

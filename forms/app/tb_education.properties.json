@@ -1,0 +1,12 @@
+{
+    "icon": "cough",
+    "title": {
+        "en": "About TB", 
+        "sw": "Kuhusu TB"
+    },
+    "context": {
+    "person": false,
+    "place": true,
+    "expression": "contact && contact.type === 'clinic' && user.parent.type === 'health_center' && summary.show_new_modules"
+  }
+}

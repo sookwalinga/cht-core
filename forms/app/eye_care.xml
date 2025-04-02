@@ -1,0 +1,899 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Eye care</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/education_on_home_environment_hygiene:label">
+            <value>Education on home environment hygiene</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/education_on_improving_eye_health:label">
+            <value>Education on improving eye health</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/education_on_using_proper_eye_treatment:label">
+            <value>Education on using proper eye treatment</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/providing_referral_for_eye_examination:label">
+            <value>Providing a referral for an eye examination</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services:label">
+            <value>Specify the additional services you provided to the client</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/note_additional_services:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/provided_additional_services_to_client/no:label">
+            <value>No</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/provided_additional_services_to_client/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/provided_additional_services_to_client:label">
+            <value>Have you provided additional services to the client?</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/one_month:label">
+            <value>One month</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/one_week:label">
+            <value>One week</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/one_year_or_years:label">
+            <value>One year or more</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/six_months:label">
+            <value>Six months</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/two_months:label">
+            <value>Two months</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/two_weeks:label">
+            <value>Two weeks</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started:label">
+            <value>Choose a time since you started having eye problems</value>
+          </text>
+          <text id="/eye_care/eye_care/ever_gone_health_facility_test_eye/no:label">
+            <value>No</value>
+          </text>
+          <text id="/eye_care/eye_care/ever_gone_health_facility_test_eye/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/eye_care/eye_care/ever_gone_health_facility_test_eye:label">
+            <value>Have you ever gone to a health facility and had your eyes examined?</value>
+          </text>
+          <text id="/eye_care/eye_care/examine_client:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Examine the client's eyes without touching them as instructed in the guide. &lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_issue/unable_to_see_far:label">
+            <value>Unable to see far</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_issue/unable_to_see_near:label">
+            <value>Unable to see near</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_issue:label">
+            <value>Which of these problems do you have?</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/eyes_itching_a_lot:label">
+            <value>Eyes itching a lot</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/eyes_producing_discharge:label">
+            <value>Eyes producing discharge</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/eyes_tearing_up:label">
+            <value>Eyes tearing up</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/poor_vision:label">
+            <value>Poor vision (Can't see far or near)</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems:label">
+            <value>What is your problem and when did it start?</value>
+          </text>
+          <text id="/eye_care/eye_care/has_eye_problems/no:label">
+            <value>No</value>
+          </text>
+          <text id="/eye_care/eye_care/has_eye_problems/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/eye_care/eye_care/has_eye_problems:label">
+            <value>Do you have any eye problems?</value>
+          </text>
+          <text id="/eye_care/eye_care/note_for_examination:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/eye_care/note_for_referral:label">
+            <value>&lt;span style="color:#f58a1f"&gt;I am referring you to a health facility for eye treatment. I will return in a few days to complete this referral.&lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/eye_care/other_treatment:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/cloudiness_in_front_of_eye:label">
+            <value>There is cloudiness in the front part of the eye</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/eyelids_do_not_close_properly:label">
+            <value>The eyelids do not close properly</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/eyes_appearance_not_normal:label">
+            <value>The appearance of the eyes is not normal</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/pupil_not_round_not_black:label">
+            <value>The pupil is not round and not black</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/white_part_not_white:label">
+            <value>The white part is not white</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results:label">
+            <value>Specify the examination results</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/advised_to_wear_glasses:label">
+            <value>I was advised to wear glasses</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/other_specify:label">
+            <value>Other (Specify)</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/recommended_for_surgery:label">
+            <value>I was recommended for surgery</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/was_given_eye_medication:label">
+            <value>I was given eye medication</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive:label">
+            <value>What treatment did you receive?</value>
+          </text>
+          <text id="/eye_care/eye_care:label">
+            <value>Eye care visit</value>
+          </text>
+          <text id="/eye_care/household_location/gps:label">
+            <value>Household GPS</value>
+          </text>
+          <text id="/eye_care/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Press the button below to capture GPS coordinates for the house. You will know the data has been captured if you see numbers appear in the four boxes below - you don't need to write anything yourself in these boxes. It may take some time for the numbers to appear. If you are waiting more than one minute and the numbers have not appeared, you should move on to the rest of the form without them.&lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/household_location:label">
+            <value>Household Location</value>
+          </text>
+          <text id="/eye_care/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/eye_care/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/eye_care/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/eye_care/referral_followup/attend_health_center/no:label">
+            <value>No</value>
+          </text>
+          <text id="/eye_care/referral_followup/attend_health_center/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/eye_care/referral_followup/attend_health_center:label">
+            <value>Did you go to the health center?</value>
+          </text>
+          <text id="/eye_care/referral_followup/mention_reason:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/eye_care/referral_followup/other_reason_not_examined:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/distance_transportation_difficulty:label">
+            <value>Distance/Transportation difficulty</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/financial_situation_couldnt_afford_transport:label">
+            <value>Financial situation (Couldn't afford transport)</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/forgot:label">
+            <value>Forgot</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/other_specify:label">
+            <value>Other (Specify)</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/unsatisfactory_services:label">
+            <value>Unsatisfactory services</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/was_very_sick:label">
+            <value>Was very sick</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/went_on_different_day_than_scheduled:label">
+            <value>Went on a different day than scheduled</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center:label">
+            <value>Reasons for not attending the health center:</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/health_worker_absent:label">
+            <value>Health worker was absent</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/long_queue:label">
+            <value>Long queue</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/other_specify:label">
+            <value>Other (Specify)</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/went_on_different_day_than_scheduled:label">
+            <value>Went on a different day than scheduled</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat:label">
+            <value>Reasons for not getting an eye examination and treatment</value>
+          </text>
+          <text id="/eye_care/referral_followup/receive_eye_examination_and_treatment/no:label">
+            <value>No</value>
+          </text>
+          <text id="/eye_care/referral_followup/receive_eye_examination_and_treatment/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/eye_care/referral_followup/receive_eye_examination_and_treatment:label">
+            <value>Did you receive an eye examination and treatment?</value>
+          </text>
+          <text id="/eye_care/select_visit_type/select_visit/new:label">
+            <value>New</value>
+          </text>
+          <text id="/eye_care/select_visit_type/select_visit/review:label">
+            <value>Review</value>
+          </text>
+          <text id="/eye_care/select_visit_type/select_visit:label">
+            <value>Select Visit</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/education_on_home_environment_hygiene:label">
+            <value>Elimu ya usafi wa mazingira ya nyumbani</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/education_on_improving_eye_health:label">
+            <value>Elimu ya kuboresha afya ya macho</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/education_on_using_proper_eye_treatment:label">
+            <value>Elimu ya kutumia tiba sahihi za macho</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services/providing_referral_for_eye_examination:label">
+            <value>Kutoa rufaa ya uchunguzi wa macho</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/eye_care_services:label">
+            <value>Ainisha huduma za ziada ulizotoa kwa mteja:</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/note_additional_services:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/provided_additional_services_to_client/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/provided_additional_services_to_client/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/eye_care/additional_eye_care_services/provided_additional_services_to_client:label">
+            <value>Je umetoa huduma za ziada kwa mteja?</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/one_month:label">
+            <value>Mwezi</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/one_week:label">
+            <value>Wiki moja</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/one_year_or_years:label">
+            <value>Mwaka au zaidi</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/six_months:label">
+            <value>Miezi sita</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/two_months:label">
+            <value>Miezi miwili</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started/two_weeks:label">
+            <value>Wiki mbili</value>
+          </text>
+          <text id="/eye_care/eye_care/chose_duration_since_eye_problems_started:label">
+            <value>Chagua muda tangu umeanza kupata shida ya macho</value>
+          </text>
+          <text id="/eye_care/eye_care/ever_gone_health_facility_test_eye/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/eye_care/eye_care/ever_gone_health_facility_test_eye/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/eye_care/eye_care/ever_gone_health_facility_test_eye:label">
+            <value>Je umewahi kwenda kituo cha afya na kuchunguzwa macho?</value>
+          </text>
+          <text id="/eye_care/eye_care/examine_client:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mchunguze mteja macho bila kumgusa kama ulivyoelekezwa kwenye mwongozo.&lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_issue/unable_to_see_far:label">
+            <value>Kutokuona mbali</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_issue/unable_to_see_near:label">
+            <value>Kutokuona karibu</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_issue:label">
+            <value>Je una tatizo lipi kati ya haya</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/eyes_itching_a_lot:label">
+            <value>Macho kuwasha sana</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/eyes_producing_discharge:label">
+            <value>Macho kutoa tongotongo</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/eyes_tearing_up:label">
+            <value>Macho kutoa machozi</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems/poor_vision:label">
+            <value>Uoni hafifu(Huoni mbali au karibu)</value>
+          </text>
+          <text id="/eye_care/eye_care/eye_problems:label">
+            <value>Je una shida gani na imeanza lini?</value>
+          </text>
+          <text id="/eye_care/eye_care/has_eye_problems/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/eye_care/eye_care/has_eye_problems/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/eye_care/eye_care/has_eye_problems:label">
+            <value>Je, una shida yoyote ya macho?</value>
+          </text>
+          <text id="/eye_care/eye_care/note_for_examination:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/eye_care/note_for_referral:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Nakupa rufaa kwenda kituo cha afya kupata matibabu ya macho. Nitarudi siku chache badae kukamilisha rufaa hii.&lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/eye_care/other_treatment:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/cloudiness_in_front_of_eye:label">
+            <value>Kuna ukungu sehemu ya mbele ya jicho</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/eyelids_do_not_close_properly:label">
+            <value>Mifuniko ya macho haifuniki sawa sawa</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/eyes_appearance_not_normal:label">
+            <value>Muonekano wa macho haupo sahihi</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/pupil_not_round_not_black:label">
+            <value>Mboni sio ya duara na sio nyeusi</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results/white_part_not_white:label">
+            <value>Nyeupe haipo nyeupe</value>
+          </text>
+          <text id="/eye_care/eye_care/specify_examination_results:label">
+            <value>Ainisha matokeo ya uchunguzi</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/advised_to_wear_glasses:label">
+            <value>Nilitakiwa nivae miwani</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/other_specify:label">
+            <value>Nyingine(Taja)</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/recommended_for_surgery:label">
+            <value>Nilishauriwa kupatiwa tiba ya upasuaji</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive/was_given_eye_medication:label">
+            <value>Nilipewa dawa ya macho</value>
+          </text>
+          <text id="/eye_care/eye_care/what_treatment_did_you_receive:label">
+            <value>Ulipata matibabu gani?</value>
+          </text>
+          <text id="/eye_care/eye_care:label">
+            <value>Tembeleo la huduma ya macho</value>
+          </text>
+          <text id="/eye_care/household_location/gps:label">
+            <value>GPS ya nyumba</value>
+          </text>
+          <text id="/eye_care/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV).&lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Bonyeza kitufe hichi kupata GPS ya nyumba hii. Utatambua kuwa taarifa zimepatikana endapo utaona nambari zinatokea kwenye jadueli nne chini. Hutakiwi kuandika chochote kwenye jadueli hizi. Inaweza kuchukua muda kidogo mpaka nambari kutokea. Ukiona umesubiria kwa zaidi ya dakika moja na hakuna nambari iliyotokea, tafadhali endelea kujaza fomu yako bila ya kuzisubiria zaidi.&lt;/span&gt;</value>
+          </text>
+          <text id="/eye_care/household_location:label">
+            <value>Eneo la kaya</value>
+          </text>
+          <text id="/eye_care/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/eye_care/referral_followup/attend_health_center/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/eye_care/referral_followup/attend_health_center/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/eye_care/referral_followup/attend_health_center:label">
+            <value>Je ulienda kituo cha afya?</value>
+          </text>
+          <text id="/eye_care/referral_followup/mention_reason:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/eye_care/referral_followup/other_reason_not_examined:label">
+            <value>Tafadhali taja:</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/distance_transportation_difficulty:label">
+            <value>Umbali/Usafiri mgumu</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/financial_situation_couldnt_afford_transport:label">
+            <value>Hali ya kiuchumi (Amekosa nauli)</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/forgot:label">
+            <value>Alisahau</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/other_specify:label">
+            <value>Nyingine(Taja)</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/unsatisfactory_services:label">
+            <value>Huduma haziridhishi</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/was_very_sick:label">
+            <value>Alikuwa mgonjwa sana</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center/went_on_different_day_than_scheduled:label">
+            <value>Alienda siku nyingine tofauti na aliyopangiwa</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_attending_health_center:label">
+            <value>Sababu za kutokuhudhuria kituo cha afya:</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/health_worker_absent:label">
+            <value>Mhudumu wa afya hakuwepo</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/long_queue:label">
+            <value>Foleni ndefu</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/other_specify:label">
+            <value>Nyingine(Taja)</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat/went_on_different_day_than_scheduled:label">
+            <value>Alienda siku nyingine tofauti na aliyopangiwa</value>
+          </text>
+          <text id="/eye_care/referral_followup/reasons_not_get_eye_examine_treat:label">
+            <value>Sababu za kutokuchunguzwa na kutibiwa macho:</value>
+          </text>
+          <text id="/eye_care/referral_followup/receive_eye_examination_and_treatment/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/eye_care/referral_followup/receive_eye_examination_and_treatment/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/eye_care/referral_followup/receive_eye_examination_and_treatment:label">
+            <value>Je ulipata huduma ya uchunguzi na matibabu ya macho?</value>
+          </text>
+          <text id="/eye_care/select_visit_type/select_visit/new:label">
+            <value>Jipya</value>
+          </text>
+          <text id="/eye_care/select_visit_type/select_visit/review:label">
+            <value>Marudio</value>
+          </text>
+          <text id="/eye_care/select_visit_type/select_visit:label">
+            <value>Chagua tembeleo</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <eye_care id="eye_care" prefix="J1!eye_care!" delimiter="#" version="2025-03-10 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <date_of_birth_c/>
+          <age_days/>
+          <age_years/>
+          <start/>
+          <end/>
+          <select_visit_type>
+            <select_visit/>
+          </select_visit_type>
+          <eye_care>
+            <has_eye_problems/>
+            <eye_problems/>
+            <chose_duration_since_eye_problems_started/>
+            <eye_issue/>
+            <ever_gone_health_facility_test_eye/>
+            <what_treatment_did_you_receive/>
+            <other_treatment/>
+            <examine_client/>
+            <note_for_examination/>
+            <specify_examination_results/>
+            <note_for_referral/>
+          </eye_care>
+          <referral_followup>
+            <attend_health_center/>
+            <receive_eye_examination_and_treatment/>
+            <reasons_not_attending_health_center/>
+            <mention_reason/>
+            <reasons_not_get_eye_examine_treat/>
+            <other_reason_not_examined/>
+          </referral_followup>
+          <additional_eye_care_services>
+            <note_additional_services/>
+            <provided_additional_services_to_client/>
+            <eye_care_services/>
+          </additional_eye_care_services>
+          <household_location>
+            <gps_note/>
+            <gps/>
+          </household_location>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </eye_care>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/eye_care/inputs" relevant="false()"/>
+      <bind nodeset="/eye_care/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/eye_care/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/eye_care/inputs/user/name" type="string"/>
+      <bind nodeset="/eye_care/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/eye_care/inputs/contact/name" type="string"/>
+      <bind nodeset="/eye_care/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/eye_care/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/eye_care/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/eye_care/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/eye_care/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/eye_care/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/eye_care/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/eye_care/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /eye_care/date_of_birth_c ))"/>
+      <bind nodeset="/eye_care/age_years" type="string" calculate="int( /eye_care/age_days  div (30 *12),0)"/>
+      <bind nodeset="/eye_care/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/eye_care/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/eye_care/select_visit_type/select_visit" type="select1"/>
+      <bind nodeset="/eye_care/eye_care" relevant="selected( /eye_care/select_visit_type/select_visit ,&quot;new&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/has_eye_problems" type="select1" required="true()"/>
+      <bind nodeset="/eye_care/eye_care/eye_problems" type="select" required="true()" relevant="selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/chose_duration_since_eye_problems_started" type="select1" required="true()" relevant="selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/eye_issue" type="select1" required="true()" relevant="selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;) and selected( /eye_care/eye_care/eye_problems ,&quot;poor_vision&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/ever_gone_health_facility_test_eye" type="select1" required="true()" relevant="selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/what_treatment_did_you_receive" type="select1" required="true()" relevant="selected( /eye_care/eye_care/ever_gone_health_facility_test_eye ,&quot;yes&quot;) and selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/other_treatment" type="string" required="true()" relevant="selected( /eye_care/eye_care/ever_gone_health_facility_test_eye ,&quot;yes&quot;) and selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;) and selected( /eye_care/eye_care/what_treatment_did_you_receive ,&quot;other_specify&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/examine_client" readonly="true()" type="string" relevant="selected( /eye_care/eye_care/ever_gone_health_facility_test_eye ,&quot;no&quot;) and selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/note_for_examination" readonly="true()" type="string" relevant="selected( /eye_care/eye_care/ever_gone_health_facility_test_eye ,&quot;no&quot;) and selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/specify_examination_results" type="select" required="true()" relevant="selected( /eye_care/eye_care/ever_gone_health_facility_test_eye ,&quot;no&quot;) and selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/eye_care/note_for_referral" readonly="true()" type="string" relevant="selected( /eye_care/eye_care/has_eye_problems ,&quot;yes&quot;) and selected( /eye_care/eye_care/ever_gone_health_facility_test_eye ,&quot;no&quot;) and (selected( /eye_care/eye_care/specify_examination_results ,&quot;eyes_appearance_not_normal&quot;) or selected( /eye_care/eye_care/specify_examination_results ,&quot;white_part_not_white&quot;) or selected( /eye_care/eye_care/specify_examination_results ,&quot;cloudiness_in_front_of_eye&quot;) or selected( /eye_care/eye_care/specify_examination_results ,&quot;pupil_not_round_not_black&quot;))"/>
+      <bind nodeset="/eye_care/referral_followup" relevant="selected( /eye_care/select_visit_type/select_visit ,&quot;review&quot;)"/>
+      <bind nodeset="/eye_care/referral_followup/attend_health_center" type="select1" required="true()"/>
+      <bind nodeset="/eye_care/referral_followup/receive_eye_examination_and_treatment" type="select1" required="true()" relevant="selected( /eye_care/referral_followup/attend_health_center ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/referral_followup/reasons_not_attending_health_center" type="select" required="true()" relevant="selected( /eye_care/referral_followup/attend_health_center ,&quot;no&quot;)"/>
+      <bind nodeset="/eye_care/referral_followup/mention_reason" type="string" required="true()" relevant="selected( /eye_care/referral_followup/reasons_not_attending_health_center ,&quot;other_specify&quot;) and selected( /eye_care/referral_followup/attend_health_center ,&quot;no&quot;)"/>
+      <bind nodeset="/eye_care/referral_followup/reasons_not_get_eye_examine_treat" type="select" required="true()" relevant="selected( /eye_care/referral_followup/receive_eye_examination_and_treatment ,&quot;no&quot;) and selected( /eye_care/referral_followup/attend_health_center ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/referral_followup/other_reason_not_examined" type="string" required="true()" relevant="selected( /eye_care/referral_followup/attend_health_center ,&quot;yes&quot;) and selected( /eye_care/referral_followup/receive_eye_examination_and_treatment ,&quot;no&quot;) and selected( /eye_care/referral_followup/reasons_not_get_eye_examine_treat ,&quot;other_specify&quot;)"/>
+      <bind nodeset="/eye_care/additional_eye_care_services/note_additional_services" readonly="true()" type="string"/>
+      <bind nodeset="/eye_care/additional_eye_care_services/provided_additional_services_to_client" type="select1" required="true()"/>
+      <bind nodeset="/eye_care/additional_eye_care_services/eye_care_services" type="select" required="true()" relevant="selected( /eye_care/additional_eye_care_services/provided_additional_services_to_client ,&quot;yes&quot;)"/>
+      <bind nodeset="/eye_care/household_location/gps_note" readonly="true()" type="string"/>
+      <bind nodeset="/eye_care/household_location/gps" type="geopoint" required="true()"/>
+      <bind nodeset="/eye_care/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/eye_care/inputs">
+      <group ref="/eye_care/inputs/user">
+        <input ref="/eye_care/inputs/user/contact_id">
+          <label ref="jr:itext('/eye_care/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/eye_care/inputs/user/facility_id">
+          <label ref="jr:itext('/eye_care/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/eye_care/inputs/user/name">
+          <label ref="jr:itext('/eye_care/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/eye_care/inputs/contact">
+        <input appearance="db-object" ref="/eye_care/inputs/contact/_id"/>
+        <input ref="/eye_care/inputs/contact/name"/>
+        <input ref="/eye_care/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group ref="/eye_care/select_visit_type">
+      <select1 ref="/eye_care/select_visit_type/select_visit">
+        <label ref="jr:itext('/eye_care/select_visit_type/select_visit:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/select_visit_type/select_visit/new:label')"/>
+          <value>new</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/select_visit_type/select_visit/review:label')"/>
+          <value>review</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/eye_care/eye_care">
+      <label ref="jr:itext('/eye_care/eye_care:label')"/>
+      <select1 ref="/eye_care/eye_care/has_eye_problems">
+        <label ref="jr:itext('/eye_care/eye_care/has_eye_problems:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/has_eye_problems/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/has_eye_problems/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/eye_care/eye_care/eye_problems">
+        <label ref="jr:itext('/eye_care/eye_care/eye_problems:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/eye_problems/poor_vision:label')"/>
+          <value>poor_vision</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/eye_problems/eyes_producing_discharge:label')"/>
+          <value>eyes_producing_discharge</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/eye_problems/eyes_tearing_up:label')"/>
+          <value>eyes_tearing_up</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/eye_problems/eyes_itching_a_lot:label')"/>
+          <value>eyes_itching_a_lot</value>
+        </item>
+      </select>
+      <select1 ref="/eye_care/eye_care/chose_duration_since_eye_problems_started">
+        <label ref="jr:itext('/eye_care/eye_care/chose_duration_since_eye_problems_started:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/chose_duration_since_eye_problems_started/one_week:label')"/>
+          <value>one_week</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/chose_duration_since_eye_problems_started/two_weeks:label')"/>
+          <value>two_weeks</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/chose_duration_since_eye_problems_started/one_month:label')"/>
+          <value>one_month</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/chose_duration_since_eye_problems_started/two_months:label')"/>
+          <value>two_months</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/chose_duration_since_eye_problems_started/six_months:label')"/>
+          <value>six_months</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/chose_duration_since_eye_problems_started/one_year_or_years:label')"/>
+          <value>one_year_or_years</value>
+        </item>
+      </select1>
+      <select1 ref="/eye_care/eye_care/eye_issue">
+        <label ref="jr:itext('/eye_care/eye_care/eye_issue:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/eye_issue/unable_to_see_far:label')"/>
+          <value>unable_to_see_far</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/eye_issue/unable_to_see_near:label')"/>
+          <value>unable_to_see_near</value>
+        </item>
+      </select1>
+      <select1 ref="/eye_care/eye_care/ever_gone_health_facility_test_eye">
+        <label ref="jr:itext('/eye_care/eye_care/ever_gone_health_facility_test_eye:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/ever_gone_health_facility_test_eye/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/ever_gone_health_facility_test_eye/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/eye_care/eye_care/what_treatment_did_you_receive">
+        <label ref="jr:itext('/eye_care/eye_care/what_treatment_did_you_receive:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/what_treatment_did_you_receive/was_given_eye_medication:label')"/>
+          <value>was_given_eye_medication</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/what_treatment_did_you_receive/advised_to_wear_glasses:label')"/>
+          <value>advised_to_wear_glasses</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/what_treatment_did_you_receive/recommended_for_surgery:label')"/>
+          <value>recommended_for_surgery</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/what_treatment_did_you_receive/other_specify:label')"/>
+          <value>other_specify</value>
+        </item>
+      </select1>
+      <input ref="/eye_care/eye_care/other_treatment">
+        <label ref="jr:itext('/eye_care/eye_care/other_treatment:label')"/>
+      </input>
+      <input ref="/eye_care/eye_care/examine_client">
+        <label ref="jr:itext('/eye_care/eye_care/examine_client:label')"/>
+      </input>
+      <input ref="/eye_care/eye_care/note_for_examination">
+        <label ref="jr:itext('/eye_care/eye_care/note_for_examination:label')"/>
+      </input>
+      <select ref="/eye_care/eye_care/specify_examination_results">
+        <label ref="jr:itext('/eye_care/eye_care/specify_examination_results:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/specify_examination_results/eyes_appearance_not_normal:label')"/>
+          <value>eyes_appearance_not_normal</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/specify_examination_results/white_part_not_white:label')"/>
+          <value>white_part_not_white</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/specify_examination_results/cloudiness_in_front_of_eye:label')"/>
+          <value>cloudiness_in_front_of_eye</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/specify_examination_results/pupil_not_round_not_black:label')"/>
+          <value>pupil_not_round_not_black</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/eye_care/specify_examination_results/eyelids_do_not_close_properly:label')"/>
+          <value>eyelids_do_not_close_properly</value>
+        </item>
+      </select>
+      <input ref="/eye_care/eye_care/note_for_referral">
+        <label ref="jr:itext('/eye_care/eye_care/note_for_referral:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/eye_care/referral_followup">
+      <select1 ref="/eye_care/referral_followup/attend_health_center">
+        <label ref="jr:itext('/eye_care/referral_followup/attend_health_center:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/attend_health_center/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/attend_health_center/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/eye_care/referral_followup/receive_eye_examination_and_treatment">
+        <label ref="jr:itext('/eye_care/referral_followup/receive_eye_examination_and_treatment:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/receive_eye_examination_and_treatment/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/receive_eye_examination_and_treatment/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/eye_care/referral_followup/reasons_not_attending_health_center">
+        <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center/was_very_sick:label')"/>
+          <value>was_very_sick</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center/distance_transportation_difficulty:label')"/>
+          <value>distance_transportation_difficulty</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center/unsatisfactory_services:label')"/>
+          <value>unsatisfactory_services</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center/financial_situation_couldnt_afford_transport:label')"/>
+          <value>financial_situation_couldnt_afford_transport</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center/forgot:label')"/>
+          <value>forgot</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center/went_on_different_day_than_scheduled:label')"/>
+          <value>went_on_different_day_than_scheduled</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_attending_health_center/other_specify:label')"/>
+          <value>other_specify</value>
+        </item>
+      </select>
+      <input ref="/eye_care/referral_followup/mention_reason">
+        <label ref="jr:itext('/eye_care/referral_followup/mention_reason:label')"/>
+      </input>
+      <select ref="/eye_care/referral_followup/reasons_not_get_eye_examine_treat">
+        <label ref="jr:itext('/eye_care/referral_followup/reasons_not_get_eye_examine_treat:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_get_eye_examine_treat/went_on_different_day_than_scheduled:label')"/>
+          <value>went_on_different_day_than_scheduled</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_get_eye_examine_treat/long_queue:label')"/>
+          <value>long_queue</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_get_eye_examine_treat/health_worker_absent:label')"/>
+          <value>health_worker_absent</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/referral_followup/reasons_not_get_eye_examine_treat/other_specify:label')"/>
+          <value>other_specify</value>
+        </item>
+      </select>
+      <input ref="/eye_care/referral_followup/other_reason_not_examined">
+        <label ref="jr:itext('/eye_care/referral_followup/other_reason_not_examined:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/eye_care/additional_eye_care_services">
+      <input ref="/eye_care/additional_eye_care_services/note_additional_services">
+        <label ref="jr:itext('/eye_care/additional_eye_care_services/note_additional_services:label')"/>
+      </input>
+      <select1 ref="/eye_care/additional_eye_care_services/provided_additional_services_to_client">
+        <label ref="jr:itext('/eye_care/additional_eye_care_services/provided_additional_services_to_client:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/additional_eye_care_services/provided_additional_services_to_client/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/additional_eye_care_services/provided_additional_services_to_client/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/eye_care/additional_eye_care_services/eye_care_services">
+        <label ref="jr:itext('/eye_care/additional_eye_care_services/eye_care_services:label')"/>
+        <item>
+          <label ref="jr:itext('/eye_care/additional_eye_care_services/eye_care_services/education_on_improving_eye_health:label')"/>
+          <value>education_on_improving_eye_health</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/additional_eye_care_services/eye_care_services/education_on_home_environment_hygiene:label')"/>
+          <value>education_on_home_environment_hygiene</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/additional_eye_care_services/eye_care_services/education_on_using_proper_eye_treatment:label')"/>
+          <value>education_on_using_proper_eye_treatment</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/eye_care/additional_eye_care_services/eye_care_services/providing_referral_for_eye_examination:label')"/>
+          <value>providing_referral_for_eye_examination</value>
+        </item>
+      </select>
+    </group>
+    <group appearance="field-list" ref="/eye_care/household_location">
+      <label ref="jr:itext('/eye_care/household_location:label')"/>
+      <input ref="/eye_care/household_location/gps_note">
+        <label ref="jr:itext('/eye_care/household_location/gps_note:label')"/>
+      </input>
+      <input ref="/eye_care/household_location/gps">
+        <label ref="jr:itext('/eye_care/household_location/gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

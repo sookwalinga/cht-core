@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Defaulter Tracing</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/defaulter_tracing/defaulter_tracing/congratulate_client:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/counsel_client:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/did_refer_client/no:label">
+            <value>No</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/did_refer_client/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/did_refer_client:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/index_district_number:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/note_did_refer_client:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/talk_to_supervisor:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing:label">
+            <value>Defaulter Tracing</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/defaulter_tracing/defaulter_tracing/congratulate_client:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mpongeze mteja kwa maamuzi yake. Utapata kazi ya ufuatiliaji wa rufaa kuhakikisha ameendelea na matibabu.&lt;/span&gt;</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/counsel_client:label">
+            <value>Toa ushauri kulingana na sababu ambazo mteja amezitaja. Mueleze umuhimu wa kurudi kituo cha afya kuendelea na matibabu. Toa rufaa kulingana na mahitaji ya mteja</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/did_refer_client/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/did_refer_client/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/did_refer_client:label">
+            <value>Umempa rufaa kituo cha afya?</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/index_district_number:label">
+            <value>Andika namba ya wilaya ya Index</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/note_did_refer_client:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing/talk_to_supervisor:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mshukuru mteja kwa wakati wake. Ongea na CHW supervisor akusaidie.&lt;/span&gt;</value>
+          </text>
+          <text id="/defaulter_tracing/defaulter_tracing:label">
+            <value>Defaulter Tracing</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/delivery_date:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/defaulter_tracing/inputs:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <defaulter_tracing id="defaulter_tracing" prefix="J1!defaulter_tracing!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <due_date/>
+            <due_date_human_readable/>
+            <delivery_date/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <defaulter_tracing>
+            <index_district_number/>
+            <counsel_client/>
+            <note_did_refer_client/>
+            <did_refer_client/>
+            <talk_to_supervisor/>
+            <congratulate_client/>
+          </defaulter_tracing>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </defaulter_tracing>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/defaulter_tracing/inputs" relevant="false()"/>
+      <bind nodeset="/defaulter_tracing/inputs/due_date" type="string"/>
+      <bind nodeset="/defaulter_tracing/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/defaulter_tracing/inputs/delivery_date" type="string"/>
+      <bind nodeset="/defaulter_tracing/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/defaulter_tracing/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/defaulter_tracing/inputs/user/name" type="string"/>
+      <bind nodeset="/defaulter_tracing/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/defaulter_tracing/inputs/contact/name" type="string"/>
+      <bind nodeset="/defaulter_tracing/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/defaulter_tracing/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/defaulter_tracing/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/defaulter_tracing/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/defaulter_tracing/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/defaulter_tracing/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/defaulter_tracing/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/defaulter_tracing/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/defaulter_tracing/defaulter_tracing/index_district_number" type="string" required="true()"/>
+      <bind nodeset="/defaulter_tracing/defaulter_tracing/counsel_client" readonly="true()" type="string"/>
+      <bind nodeset="/defaulter_tracing/defaulter_tracing/note_did_refer_client" readonly="true()" type="string"/>
+      <bind nodeset="/defaulter_tracing/defaulter_tracing/did_refer_client" type="select1" required="true()"/>
+      <bind nodeset="/defaulter_tracing/defaulter_tracing/talk_to_supervisor" readonly="true()" type="string" relevant="selected( /defaulter_tracing/defaulter_tracing/did_refer_client ,&quot;no&quot;)"/>
+      <bind nodeset="/defaulter_tracing/defaulter_tracing/congratulate_client" readonly="true()" type="string" relevant="selected( /defaulter_tracing/defaulter_tracing/did_refer_client ,&quot;yes&quot;)"/>
+      <bind nodeset="/defaulter_tracing/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/defaulter_tracing/inputs">
+      <input ref="/defaulter_tracing/inputs/due_date"/>
+      <input ref="/defaulter_tracing/inputs/due_date_human_readable"/>
+      <input ref="/defaulter_tracing/inputs/delivery_date"/>
+      <group ref="/defaulter_tracing/inputs/user">
+        <input ref="/defaulter_tracing/inputs/user/contact_id">
+          <label ref="jr:itext('/defaulter_tracing/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/defaulter_tracing/inputs/user/facility_id">
+          <label ref="jr:itext('/defaulter_tracing/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/defaulter_tracing/inputs/user/name">
+          <label ref="jr:itext('/defaulter_tracing/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/defaulter_tracing/inputs/contact">
+        <input ref="/defaulter_tracing/inputs/contact/_id"/>
+        <input ref="/defaulter_tracing/inputs/contact/name"/>
+        <input ref="/defaulter_tracing/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/defaulter_tracing/defaulter_tracing">
+      <label ref="jr:itext('/defaulter_tracing/defaulter_tracing:label')"/>
+      <input ref="/defaulter_tracing/defaulter_tracing/index_district_number">
+        <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/index_district_number:label')"/>
+      </input>
+      <input ref="/defaulter_tracing/defaulter_tracing/counsel_client">
+        <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/counsel_client:label')"/>
+      </input>
+      <input ref="/defaulter_tracing/defaulter_tracing/note_did_refer_client">
+        <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/note_did_refer_client:label')"/>
+      </input>
+      <select1 ref="/defaulter_tracing/defaulter_tracing/did_refer_client">
+        <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/did_refer_client:label')"/>
+        <item>
+          <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/did_refer_client/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/did_refer_client/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/defaulter_tracing/defaulter_tracing/talk_to_supervisor">
+        <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/talk_to_supervisor:label')"/>
+      </input>
+      <input ref="/defaulter_tracing/defaulter_tracing/congratulate_client">
+        <label ref="jr:itext('/defaulter_tracing/defaulter_tracing/congratulate_client:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,1385 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Club foot</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/clubfoot/gps/take_gps:label">
+            <value>Please press the button below to capture GPS</value>
+          </text>
+          <text id="/clubfoot/gps/take_gps_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/gps:label">
+            <value>GPS</value>
+          </text>
+          <text id="/clubfoot/health/accompany_client_note:label">
+            <value>Accompany the client to the health facility.</value>
+          </text>
+          <text id="/clubfoot/health/attend_health_center/no:label">
+            <value>No</value>
+          </text>
+          <text id="/clubfoot/health/attend_health_center/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/clubfoot/health/attend_health_center:label">
+            <value>Have you taken the child to any health facility?</value>
+          </text>
+          <text id="/clubfoot/health/child_clubfoot_diagnosis/no:label">
+            <value>No</value>
+          </text>
+          <text id="/clubfoot/health/child_clubfoot_diagnosis/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/clubfoot/health/child_clubfoot_diagnosis:label">
+            <value>Has the child been diagnosed with clubfoot?</value>
+          </text>
+          <text id="/clubfoot/health/clubfoot_education:label">
+            <value>Provide education on the importance of continuing treatment for a child with clubfoot.</value>
+          </text>
+          <text id="/clubfoot/health/facility_district:label">
+            <value>Which district is the health facility located?</value>
+          </text>
+          <text id="/clubfoot/health/facility_island/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/clubfoot/health/facility_island/pemba:label">
+            <value>Pemba</value>
+          </text>
+          <text id="/clubfoot/health/facility_island/unguja:label">
+            <value>Unguja</value>
+          </text>
+          <text id="/clubfoot/health/facility_island:label">
+            <value>Where is the health facility located?</value>
+          </text>
+          <text id="/clubfoot/health/note_to_conduct_screening:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Assess the child to detect clubfoot.&lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/health/received_service/no:label">
+            <value>No</value>
+          </text>
+          <text id="/clubfoot/health/received_service/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/clubfoot/health/received_service:label">
+            <value>Did the child receive clubfoot service?</value>
+          </text>
+          <text id="/clubfoot/health/referral_note:label">
+            <value>I am referring you to take the child to the nearest health facility, and I will follow up on the referral in a few days. It is important to go to the health facility as soon as possible to prevent permanent disability for the child.</value>
+          </text>
+          <text id="/clubfoot/health/visit_facility:label">
+            <value>Which facility did you visit?</value>
+          </text>
+          <text id="/clubfoot/health/visit_facility_other:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/clubfoot/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/clubfoot/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/clubfoot/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_note_to_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_type/new:label">
+            <value>New</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_type/review:label">
+            <value>Review</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_type:label">
+            <value>Select Visit</value>
+          </text>
+          <text id="/clubfoot/select_visit:label">
+            <value>Select Visit</value>
+          </text>
+          <text id="static_instance-facility_district-0">
+            <value>North A</value>
+          </text>
+          <text id="static_instance-facility_district-1">
+            <value>North B</value>
+          </text>
+          <text id="static_instance-facility_district-10">
+            <value>Wete</value>
+          </text>
+          <text id="static_instance-facility_district-2">
+            <value>Central</value>
+          </text>
+          <text id="static_instance-facility_district-3">
+            <value>South</value>
+          </text>
+          <text id="static_instance-facility_district-4">
+            <value>West A</value>
+          </text>
+          <text id="static_instance-facility_district-5">
+            <value>West B</value>
+          </text>
+          <text id="static_instance-facility_district-6">
+            <value>Urban</value>
+          </text>
+          <text id="static_instance-facility_district-7">
+            <value>Chake Chake</value>
+          </text>
+          <text id="static_instance-facility_district-8">
+            <value>Micheweni</value>
+          </text>
+          <text id="static_instance-facility_district-9">
+            <value>Mkoani</value>
+          </text>
+          <text id="static_instance-facility_island-0">
+            <value>Unguja</value>
+          </text>
+          <text id="static_instance-facility_island-1">
+            <value>Pemba</value>
+          </text>
+          <text id="static_instance-facility_island-2">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-medicine_type-0">
+            <value>Hospital</value>
+          </text>
+          <text id="static_instance-medicine_type-1">
+            <value>Natural and alternative medicine</value>
+          </text>
+          <text id="static_instance-medicine_type-2">
+            <value>A combination of both</value>
+          </text>
+          <text id="static_instance-new_review-0">
+            <value>New</value>
+          </text>
+          <text id="static_instance-new_review-1">
+            <value>Review</value>
+          </text>
+          <text id="static_instance-visit_facility-0">
+            <value>Chake Chake District Hospital</value>
+          </text>
+          <text id="static_instance-visit_facility-1">
+            <value>Pujini PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-10">
+            <value>Kiuyu Mbuyuni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-11">
+            <value>Bogoa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-12">
+            <value>Kengeja PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-13">
+            <value>Abdallah Mzee District Hospital</value>
+          </text>
+          <text id="static_instance-visit_facility-14">
+            <value>Michenzani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-15">
+            <value>Fundo PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-16">
+            <value>Kojani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-17">
+            <value>Makongeni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-18">
+            <value>Wete District Hospital</value>
+          </text>
+          <text id="static_instance-visit_facility-19">
+            <value>Mzambarauni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-2">
+            <value>Tundauwa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-20">
+            <value>Junguni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-21">
+            <value>Ukunjwi PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-22">
+            <value>Uondwe PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-23">
+            <value>Chwaka PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-24">
+            <value>Mwera PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-25">
+            <value>Unguja Ukuu PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-26">
+            <value>Uzini PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-27">
+            <value>Uroa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-28">
+            <value>Kivunge District Hospital</value>
+          </text>
+          <text id="static_instance-visit_facility-29">
+            <value>Matemwe PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-3">
+            <value>Vitongoji PHCC</value>
+          </text>
+          <text id="static_instance-visit_facility-30">
+            <value>Nungwi PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-31">
+            <value>Pwani Mchangani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-32">
+            <value>Tumbatu Gomani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-33">
+            <value>Kendwa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-34">
+            <value>Bumbwini Misufini PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-35">
+            <value>Donge Vijibweni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-36">
+            <value>Kiongwe PHCU</value>
+          </text>
+          <text id="static_instance-visit_facility-37">
+            <value>Kitope PHCU</value>
+          </text>
+          <text id="static_instance-visit_facility-38">
+            <value>Mahonda PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-39">
+            <value>Jambiani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-4">
+            <value>Wesha PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-40">
+            <value>Makunduchi District Hospital</value>
+          </text>
+          <text id="static_instance-visit_facility-41">
+            <value>Muyuni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-42">
+            <value>Bwejuu PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-43">
+            <value>Chumbuni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-44">
+            <value>Mnazi Mmoja Hospital</value>
+          </text>
+          <text id="static_instance-visit_facility-45">
+            <value>Mwembeladu MCH Clinic</value>
+          </text>
+          <text id="static_instance-visit_facility-46">
+            <value>Sebleni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-47">
+            <value>Chukwani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-48">
+            <value>Fuoni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-49">
+            <value>Kombeni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-5">
+            <value>Konde PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-50">
+            <value>Mtofaani PHCU+ (Kinuni)</value>
+          </text>
+          <text id="static_instance-visit_facility-51">
+            <value>Bumbwisudi PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-52">
+            <value>Selem PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-53">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-54">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-55">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-56">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-57">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-58">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-59">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-6">
+            <value>Makangale PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-60">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-61">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-62">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-63">
+            <value>Other</value>
+          </text>
+          <text id="static_instance-visit_facility-7">
+            <value>Maziwa Ngombe PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-8">
+            <value>Micheweni PHCC</value>
+          </text>
+          <text id="static_instance-visit_facility-9">
+            <value>Wingwi PHCU+</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Yes</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>No</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/clubfoot/gps/take_gps:label">
+            <value>Tafadhali bonyeza kitufe kilichopo chini ili kuchukua GPS</value>
+          </text>
+          <text id="/clubfoot/gps/take_gps_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/gps:label">
+            <value>Chukua GPS</value>
+          </text>
+          <text id="/clubfoot/health/accompany_client_note:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Ambatana na mteja kuelekea kituo cha afya.&lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/health/attend_health_center/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/clubfoot/health/attend_health_center/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/clubfoot/health/attend_health_center:label">
+            <value>Je mtoto umempeleka kituo chochote cha afya?</value>
+          </text>
+          <text id="/clubfoot/health/child_clubfoot_diagnosis/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/clubfoot/health/child_clubfoot_diagnosis/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/clubfoot/health/child_clubfoot_diagnosis:label">
+            <value>Je mtoto amegundulika na tatizo la mguu rungu?</value>
+          </text>
+          <text id="/clubfoot/health/clubfoot_education:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Toa elimu kuhusu umuhimu wa kuendelea na matibabu ya mtoto mwenye tatizo la mguu rungu.&lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/health/facility_district:label">
+            <value>Ni wilaya gani kituo cha afya kipo?</value>
+          </text>
+          <text id="/clubfoot/health/facility_island/other:label">
+            <value>Kwengine</value>
+          </text>
+          <text id="/clubfoot/health/facility_island/pemba:label">
+            <value>Pemba</value>
+          </text>
+          <text id="/clubfoot/health/facility_island/unguja:label">
+            <value>Unguja</value>
+          </text>
+          <text id="/clubfoot/health/facility_island:label">
+            <value>Ni wapi kituo cha afya kilipo?</value>
+          </text>
+          <text id="/clubfoot/health/note_to_conduct_screening:label">
+            <value>&lt;span style="color:#f58a1f"&gt;Mfanyie mtoto ukaguzi ili kubaini mguu rungu.&lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/health/received_service/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/clubfoot/health/received_service/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/clubfoot/health/received_service:label">
+            <value>Je mtoto alipatiwa huduma za mguu rungu?</value>
+          </text>
+          <text id="/clubfoot/health/referral_note:label">
+            <value>Nakupa rufaa kumpeleka mtoto kituo cha afya cha karibu na nitarudi baada ya siku chache kufuatilia rufaa. Ni muhimu kwenda kituo cha afya mapema ili kuepusha ulemavu wa kudumu kwa mtoto</value>
+          </text>
+          <text id="/clubfoot/health/visit_facility:label">
+            <value>Ulienda kituo gani cha afya ?</value>
+          </text>
+          <text id="/clubfoot/health/visit_facility_other:label">
+            <value>Tafadhali orodhesha</value>
+          </text>
+          <text id="/clubfoot/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/clubfoot/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/clubfoot/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/clubfoot/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/clubfoot/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/clubfoot/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/clubfoot/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_note_to_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHW). &lt;/span&gt;</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_type/new:label">
+            <value>Jipya</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_type/review:label">
+            <value>Marudio</value>
+          </text>
+          <text id="/clubfoot/select_visit/select_visit_type:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="/clubfoot/select_visit:label">
+            <value>Chagua tembeleo</value>
+          </text>
+          <text id="static_instance-facility_district-0">
+            <value>North A</value>
+          </text>
+          <text id="static_instance-facility_district-1">
+            <value>North B</value>
+          </text>
+          <text id="static_instance-facility_district-10">
+            <value>Wete</value>
+          </text>
+          <text id="static_instance-facility_district-2">
+            <value>Central</value>
+          </text>
+          <text id="static_instance-facility_district-3">
+            <value>South</value>
+          </text>
+          <text id="static_instance-facility_district-4">
+            <value>West A</value>
+          </text>
+          <text id="static_instance-facility_district-5">
+            <value>West B</value>
+          </text>
+          <text id="static_instance-facility_district-6">
+            <value>Urban</value>
+          </text>
+          <text id="static_instance-facility_district-7">
+            <value>Chake Chake</value>
+          </text>
+          <text id="static_instance-facility_district-8">
+            <value>Micheweni</value>
+          </text>
+          <text id="static_instance-facility_district-9">
+            <value>Mkoani</value>
+          </text>
+          <text id="static_instance-facility_island-0">
+            <value>Unguja</value>
+          </text>
+          <text id="static_instance-facility_island-1">
+            <value>Pemba</value>
+          </text>
+          <text id="static_instance-facility_island-2">
+            <value>Kwengine</value>
+          </text>
+          <text id="static_instance-medicine_type-0">
+            <value>Za Hospitali</value>
+          </text>
+          <text id="static_instance-medicine_type-1">
+            <value>Za tiba asili na mbadala</value>
+          </text>
+          <text id="static_instance-medicine_type-2">
+            <value>Mchanganyiko</value>
+          </text>
+          <text id="static_instance-new_review-0">
+            <value>Jipya</value>
+          </text>
+          <text id="static_instance-new_review-1">
+            <value>Marudio</value>
+          </text>
+          <text id="static_instance-visit_facility-0">
+            <value>Hospitali ya wilaya ya Chake Chake</value>
+          </text>
+          <text id="static_instance-visit_facility-1">
+            <value>Pujini PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-10">
+            <value>Kiuyu Mbuyuni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-11">
+            <value>Bogoa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-12">
+            <value>Kengeja PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-13">
+            <value>Hospitali ya Abdallah mzee</value>
+          </text>
+          <text id="static_instance-visit_facility-14">
+            <value>Michenzani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-15">
+            <value>Fundo PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-16">
+            <value>Kojani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-17">
+            <value>Makongeni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-18">
+            <value>Hospitali ya Wilaya ya Wete</value>
+          </text>
+          <text id="static_instance-visit_facility-19">
+            <value>Mzambarauni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-2">
+            <value>Tundauwa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-20">
+            <value>Junguni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-21">
+            <value>Ukunjwi PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-22">
+            <value>Uondwe PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-23">
+            <value>Chwaka PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-24">
+            <value>Mwera PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-25">
+            <value>Unguja Ukuu PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-26">
+            <value>Uzini PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-27">
+            <value>Uroa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-28">
+            <value>Hospitali ya wailaya ya Kivunge</value>
+          </text>
+          <text id="static_instance-visit_facility-29">
+            <value>Matemwe PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-3">
+            <value>Vitongoji PHCC</value>
+          </text>
+          <text id="static_instance-visit_facility-30">
+            <value>Nungwi PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-31">
+            <value>Pwani Mchangani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-32">
+            <value>Tumbatu Gomani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-33">
+            <value>Kendwa PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-34">
+            <value>Bumbwini Misufini PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-35">
+            <value>Donge Vijibweni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-36">
+            <value>Kiongwe PHCU</value>
+          </text>
+          <text id="static_instance-visit_facility-37">
+            <value>Kitope PHCU</value>
+          </text>
+          <text id="static_instance-visit_facility-38">
+            <value>Mahonda PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-39">
+            <value>Jambiani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-4">
+            <value>Wesha PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-40">
+            <value>Hospitali ya wilaya ya Makunduchi</value>
+          </text>
+          <text id="static_instance-visit_facility-41">
+            <value>Muyuni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-42">
+            <value>Bwejuu PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-43">
+            <value>Chumbuni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-44">
+            <value>Hospitali ya Mnazi Mmoja</value>
+          </text>
+          <text id="static_instance-visit_facility-45">
+            <value>Kliniki ya Mwembeladu</value>
+          </text>
+          <text id="static_instance-visit_facility-46">
+            <value>Sebleni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-47">
+            <value>Chukwani PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-48">
+            <value>Fuoni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-49">
+            <value>Kombeni PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-5">
+            <value>Konde PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-50">
+            <value>Mtofaani PHCU+ (Kinuni)</value>
+          </text>
+          <text id="static_instance-visit_facility-51">
+            <value>Bumbwisudi PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-52">
+            <value>Selem PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-53">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-54">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-55">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-56">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-57">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-58">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-59">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-6">
+            <value>Makangale PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-60">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-61">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-62">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-63">
+            <value>Nyengine</value>
+          </text>
+          <text id="static_instance-visit_facility-7">
+            <value>Maziwa Ngombe PHCU+</value>
+          </text>
+          <text id="static_instance-visit_facility-8">
+            <value>Micheweni PHCC</value>
+          </text>
+          <text id="static_instance-visit_facility-9">
+            <value>Wingwi PHCU+</value>
+          </text>
+          <text id="static_instance-yes_no-0">
+            <value>Ndiyo</value>
+          </text>
+          <text id="static_instance-yes_no-1">
+            <value>Hapana</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <clubfoot id="clubfoot" prefix="J1!clubfoot!" delimiter="#" version="2025-03-11  9-41">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+            </contact>
+          </inputs>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <start/>
+          <end/>
+          <select_visit>
+            <select_visit_note_to_chv/>
+            <select_visit_type/>
+          </select_visit>
+          <health>
+            <note_to_conduct_screening/>
+            <child_clubfoot_diagnosis/>
+            <referral_note/>
+            <attend_health_center/>
+            <facility_island/>
+            <facility_district/>
+            <visit_facility/>
+            <visit_facility_other/>
+            <received_service/>
+            <clubfoot_education/>
+            <accompany_client_note/>
+          </health>
+          <gps>
+            <take_gps_note_to_chv/>
+            <take_gps/>
+          </gps>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </clubfoot>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <itextId>static_instance-yes_no-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>static_instance-yes_no-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="new_review">
+        <root>
+          <item>
+            <itextId>static_instance-new_review-0</itextId>
+            <name>new</name>
+          </item>
+          <item>
+            <itextId>static_instance-new_review-1</itextId>
+            <name>review</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="medicine_type">
+        <root>
+          <item>
+            <itextId>static_instance-medicine_type-0</itextId>
+            <name>hospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-medicine_type-1</itextId>
+            <name>natural</name>
+          </item>
+          <item>
+            <itextId>static_instance-medicine_type-2</itextId>
+            <name>combination</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_island">
+        <root>
+          <item>
+            <itextId>static_instance-facility_island-0</itextId>
+            <name>unguja</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-1</itextId>
+            <name>pemba</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_island-2</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="facility_district">
+        <root>
+          <item>
+            <itextId>static_instance-facility_district-0</itextId>
+            <choice_filter>unguja</choice_filter>
+            <name>north_a</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-1</itextId>
+            <choice_filter>unguja</choice_filter>
+            <name>north_b</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-2</itextId>
+            <choice_filter>unguja</choice_filter>
+            <name>central</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-3</itextId>
+            <choice_filter>unguja</choice_filter>
+            <name>south</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-4</itextId>
+            <choice_filter>unguja</choice_filter>
+            <name>west_a</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-5</itextId>
+            <choice_filter>unguja</choice_filter>
+            <name>west_b</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-6</itextId>
+            <choice_filter>unguja</choice_filter>
+            <name>urban</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-7</itextId>
+            <choice_filter>pemba</choice_filter>
+            <name>chakechake</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-8</itextId>
+            <choice_filter>pemba</choice_filter>
+            <name>micheweni</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-9</itextId>
+            <choice_filter>pemba</choice_filter>
+            <name>mkoani</name>
+          </item>
+          <item>
+            <itextId>static_instance-facility_district-10</itextId>
+            <choice_filter>pemba</choice_filter>
+            <name>wete</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="visit_facility">
+        <root>
+          <item>
+            <itextId>static_instance-visit_facility-0</itextId>
+            <choice_filter>chakechake</choice_filter>
+            <name>chakechakedistricthospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-1</itextId>
+            <choice_filter>chakechake</choice_filter>
+            <name>pujiniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-2</itextId>
+            <choice_filter>chakechake</choice_filter>
+            <name>tundauwaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-3</itextId>
+            <choice_filter>chakechake</choice_filter>
+            <name>vitongojiphcc</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-4</itextId>
+            <choice_filter>chakechake</choice_filter>
+            <name>weshaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-5</itextId>
+            <choice_filter>micheweni</choice_filter>
+            <name>kondephcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-6</itextId>
+            <choice_filter>micheweni</choice_filter>
+            <name>makangalephcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-7</itextId>
+            <choice_filter>micheweni</choice_filter>
+            <name>maziwangombephcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-8</itextId>
+            <choice_filter>micheweni</choice_filter>
+            <name>micheweniphcc</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-9</itextId>
+            <choice_filter>micheweni</choice_filter>
+            <name>wingwiphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-10</itextId>
+            <choice_filter>micheweni</choice_filter>
+            <name>kiuyumbuyuniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-11</itextId>
+            <choice_filter>mkoani</choice_filter>
+            <name>bogoaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-12</itextId>
+            <choice_filter>mkoani</choice_filter>
+            <name>kengejaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-13</itextId>
+            <choice_filter>mkoani</choice_filter>
+            <name>abdallahmzeedistricthospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-14</itextId>
+            <choice_filter>mkoani</choice_filter>
+            <name>michenzaniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-15</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>fundophcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-16</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>kojaniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-17</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>makongeniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-18</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>wetedistricthospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-19</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>mzambarauniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-20</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>junguniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-21</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>ukunjwiphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-22</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>uondwephcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-23</itextId>
+            <choice_filter>central</choice_filter>
+            <name>chwakaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-24</itextId>
+            <choice_filter>central</choice_filter>
+            <name>mweraphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-25</itextId>
+            <choice_filter>central</choice_filter>
+            <name>ungujaukuuphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-26</itextId>
+            <choice_filter>central</choice_filter>
+            <name>uziniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-27</itextId>
+            <choice_filter>central</choice_filter>
+            <name>uroaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-28</itextId>
+            <choice_filter>north_a</choice_filter>
+            <name>kivungedistricthospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-29</itextId>
+            <choice_filter>north_a</choice_filter>
+            <name>matemwephcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-30</itextId>
+            <choice_filter>north_a</choice_filter>
+            <name>nungwiphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-31</itextId>
+            <choice_filter>north_a</choice_filter>
+            <name>pwanimchanganiphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-32</itextId>
+            <choice_filter>north_a</choice_filter>
+            <name>tumbatugomaniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-33</itextId>
+            <choice_filter>north_a</choice_filter>
+            <name>kendwaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-34</itextId>
+            <choice_filter>north_b</choice_filter>
+            <name>bumbwinimisufiniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-35</itextId>
+            <choice_filter>north_b</choice_filter>
+            <name>dongevijibweniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-36</itextId>
+            <choice_filter>north_b</choice_filter>
+            <name>kiongwephcu</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-37</itextId>
+            <choice_filter>north_b</choice_filter>
+            <name>kitopephcu</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-38</itextId>
+            <choice_filter>north_b</choice_filter>
+            <name>mahondaphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-39</itextId>
+            <choice_filter>south</choice_filter>
+            <name>jambianiphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-40</itextId>
+            <choice_filter>south</choice_filter>
+            <name>makunduchidistricthospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-41</itextId>
+            <choice_filter>south</choice_filter>
+            <name>muyuniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-42</itextId>
+            <choice_filter>south</choice_filter>
+            <name>bwejuuphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-43</itextId>
+            <choice_filter>urban</choice_filter>
+            <name>chumbuniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-44</itextId>
+            <choice_filter>urban</choice_filter>
+            <name>mnazimmojahospital</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-45</itextId>
+            <choice_filter>urban</choice_filter>
+            <name>mwembeladumchclinic</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-46</itextId>
+            <choice_filter>urban</choice_filter>
+            <name>sebleniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-47</itextId>
+            <choice_filter>west_b</choice_filter>
+            <name>chukwaniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-48</itextId>
+            <choice_filter>west_b</choice_filter>
+            <name>fuoniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-49</itextId>
+            <choice_filter>west_b</choice_filter>
+            <name>kombeniphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-50</itextId>
+            <choice_filter>west_a</choice_filter>
+            <name>mtofaaniphcu+(kinuni)</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-51</itextId>
+            <choice_filter>west_a</choice_filter>
+            <name>bumbwisudiphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-52</itextId>
+            <choice_filter>west_a</choice_filter>
+            <name>selemphcu+</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-53</itextId>
+            <choice_filter>chakechake</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-54</itextId>
+            <choice_filter>micheweni</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-55</itextId>
+            <choice_filter>mkoani</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-56</itextId>
+            <choice_filter>wete</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-57</itextId>
+            <choice_filter>central</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-58</itextId>
+            <choice_filter>north_a</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-59</itextId>
+            <choice_filter>north_b</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-60</itextId>
+            <choice_filter>south</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-61</itextId>
+            <choice_filter>urban</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-62</itextId>
+            <choice_filter>west_b</choice_filter>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>static_instance-visit_facility-63</itextId>
+            <choice_filter>west_a</choice_filter>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/clubfoot/inputs" relevant="false()"/>
+      <bind nodeset="/clubfoot/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/clubfoot/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/clubfoot/inputs/user/name" type="string"/>
+      <bind nodeset="/clubfoot/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/clubfoot/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/clubfoot/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/clubfoot/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/clubfoot/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/clubfoot/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/clubfoot/select_visit/select_visit_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/clubfoot/select_visit/select_visit_type" type="select1"/>
+      <bind nodeset="/clubfoot/health/note_to_conduct_screening" readonly="true()" type="string" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;new&quot;)"/>
+      <bind nodeset="/clubfoot/health/child_clubfoot_diagnosis" type="select1" required="true()" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;new&quot;)"/>
+      <bind nodeset="/clubfoot/health/referral_note" readonly="true()" type="string" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;new&quot;) and selected( /clubfoot/health/child_clubfoot_diagnosis ,&quot;yes&quot;)"/>
+      <bind nodeset="/clubfoot/health/attend_health_center" type="select1" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;)"/>
+      <bind nodeset="/clubfoot/health/facility_island" type="select1" required="true()" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;) and selected( /clubfoot/health/attend_health_center ,&quot;yes&quot;)"/>
+      <bind nodeset="/clubfoot/health/facility_district" type="select1" required="true()" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;) and selected( /clubfoot/health/attend_health_center ,&quot;yes&quot;) and (selected( /clubfoot/health/facility_island ,&quot;unguja&quot;) or selected( /clubfoot/health/facility_island ,&quot;pemba&quot;))"/>
+      <bind nodeset="/clubfoot/health/visit_facility" type="select1" required="true()" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;) and selected( /clubfoot/health/attend_health_center ,&quot;yes&quot;) and (selected( /clubfoot/health/facility_island ,&quot;unguja&quot;) or selected( /clubfoot/health/facility_island ,&quot;pemba&quot;)) and 
+(selected( /clubfoot/health/facility_district ,&quot;north_a&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;north_b&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;central&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;south&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;west_a&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;west_b&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;urban&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;chakechake&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;micheweni&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;mkoani&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;wete&quot;))"/>
+      <bind nodeset="/clubfoot/health/visit_facility_other" type="string" required="true()" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;) and selected( /clubfoot/health/attend_health_center ,&quot;yes&quot;) and (selected( /clubfoot/health/facility_island ,&quot;unguja&quot;) or selected( /clubfoot/health/facility_island ,&quot;pemba&quot;) )
+and 
+(selected( /clubfoot/health/facility_district ,&quot;north_a&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;north_b&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;central&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;south&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;west_a&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;west_b&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;urban&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;chakechake&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;micheweni&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;mkoani&quot;) or 
+selected( /clubfoot/health/facility_district ,&quot;wete&quot;)) and selected( /clubfoot/health/visit_facility ,&quot;other&quot;)"/>
+      <bind nodeset="/clubfoot/health/received_service" type="select1" required="true()" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;) and selected( /clubfoot/health/attend_health_center ,&quot;yes&quot;)"/>
+      <bind nodeset="/clubfoot/health/clubfoot_education" readonly="true()" type="string" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;) and selected( /clubfoot/health/attend_health_center ,&quot;yes&quot;)"/>
+      <bind nodeset="/clubfoot/health/accompany_client_note" readonly="true()" type="string" relevant="selected( /clubfoot/select_visit/select_visit_type ,&quot;review&quot;) and selected( /clubfoot/health/attend_health_center ,&quot;no&quot;)"/>
+      <bind nodeset="/clubfoot/gps/take_gps_note_to_chv" readonly="true()" type="string"/>
+      <bind nodeset="/clubfoot/gps/take_gps" type="geopoint" required="true()"/>
+      <bind nodeset="/clubfoot/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/clubfoot/inputs">
+      <group ref="/clubfoot/inputs/user">
+        <input ref="/clubfoot/inputs/user/contact_id">
+          <label ref="jr:itext('/clubfoot/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/clubfoot/inputs/user/facility_id">
+          <label ref="jr:itext('/clubfoot/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/clubfoot/inputs/user/name">
+          <label ref="jr:itext('/clubfoot/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/clubfoot/inputs/contact">
+        <input appearance="db-object" ref="/clubfoot/inputs/contact/_id"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/clubfoot/select_visit">
+      <label ref="jr:itext('/clubfoot/select_visit:label')"/>
+      <input ref="/clubfoot/select_visit/select_visit_note_to_chv">
+        <label ref="jr:itext('/clubfoot/select_visit/select_visit_note_to_chv:label')"/>
+      </input>
+      <select1 ref="/clubfoot/select_visit/select_visit_type">
+        <label ref="jr:itext('/clubfoot/select_visit/select_visit_type:label')"/>
+        <item>
+          <label ref="jr:itext('/clubfoot/select_visit/select_visit_type/new:label')"/>
+          <value>new</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/clubfoot/select_visit/select_visit_type/review:label')"/>
+          <value>review</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/clubfoot/health">
+      <input ref="/clubfoot/health/note_to_conduct_screening">
+        <label ref="jr:itext('/clubfoot/health/note_to_conduct_screening:label')"/>
+      </input>
+      <select1 ref="/clubfoot/health/child_clubfoot_diagnosis">
+        <label ref="jr:itext('/clubfoot/health/child_clubfoot_diagnosis:label')"/>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/child_clubfoot_diagnosis/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/child_clubfoot_diagnosis/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/clubfoot/health/referral_note">
+        <label ref="jr:itext('/clubfoot/health/referral_note:label')"/>
+      </input>
+      <select1 ref="/clubfoot/health/attend_health_center">
+        <label ref="jr:itext('/clubfoot/health/attend_health_center:label')"/>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/attend_health_center/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/attend_health_center/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/clubfoot/health/facility_island">
+        <label ref="jr:itext('/clubfoot/health/facility_island:label')"/>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/facility_island/unguja:label')"/>
+          <value>unguja</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/facility_island/pemba:label')"/>
+          <value>pemba</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/facility_island/other:label')"/>
+          <value>other</value>
+        </item>
+      </select1>
+      <select1 ref="/clubfoot/health/facility_district">
+        <label ref="jr:itext('/clubfoot/health/facility_district:label')"/>
+        <itemset nodeset="instance('facility_district')/root/item[choice_filter= /clubfoot/health/facility_island ]">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/clubfoot/health/visit_facility">
+        <label ref="jr:itext('/clubfoot/health/visit_facility:label')"/>
+        <itemset nodeset="instance('visit_facility')/root/item[choice_filter= /clubfoot/health/facility_district ]">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/clubfoot/health/visit_facility_other">
+        <label ref="jr:itext('/clubfoot/health/visit_facility_other:label')"/>
+      </input>
+      <select1 ref="/clubfoot/health/received_service">
+        <label ref="jr:itext('/clubfoot/health/received_service:label')"/>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/received_service/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/clubfoot/health/received_service/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/clubfoot/health/clubfoot_education">
+        <label ref="jr:itext('/clubfoot/health/clubfoot_education:label')"/>
+      </input>
+      <input ref="/clubfoot/health/accompany_client_note">
+        <label ref="jr:itext('/clubfoot/health/accompany_client_note:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/clubfoot/gps">
+      <label ref="jr:itext('/clubfoot/gps:label')"/>
+      <input ref="/clubfoot/gps/take_gps_note_to_chv">
+        <label ref="jr:itext('/clubfoot/gps/take_gps_note_to_chv:label')"/>
+      </input>
+      <input ref="/clubfoot/gps/take_gps">
+        <label ref="jr:itext('/clubfoot/gps/take_gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

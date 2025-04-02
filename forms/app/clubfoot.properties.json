@@ -1,0 +1,18 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Clubfoot service"
+    },
+    {
+      "locale": "sw",
+      "content": "Huduma ya mguu rungu"
+    }
+  ],
+  "icon": "clubfoot",
+  "context": {
+    "person": true,
+    "place": false,
+     "expression":"contact.type === 'person' && user.parent.type === 'health_center' && user._id != contact._id && summary.is_child_below_10 && summary.show_new_modules"
+  }
+}

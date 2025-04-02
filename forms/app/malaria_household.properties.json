@@ -1,0 +1,13 @@
+    
+{
+    "icon": "malaria",
+    "title": {
+        "en": "About Malaria", 
+        "sw": "Kuhusu Malaria"
+    },
+    "context": {
+    "person": false,
+    "place": true,
+    "expression": "contact && contact.type === 'clinic' && user.parent.type === 'health_center' && summary.show_new_modules"
+  }
+}

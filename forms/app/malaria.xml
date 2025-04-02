@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Malaria</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/malaria/additional_services/services_provided/education_environment:label">
+            <value>Education on environment cleanliness</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided/education_malaria_trt:label">
+            <value>Education on malaria treatment</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided/education_net_use:label">
+            <value>Education on mosquito net usage</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided/education_referrals_malaria:label">
+            <value>Education on referrals of malaria treatment</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided:label">
+            <value>Please specify</value>
+          </text>
+          <text id="/malaria/additional_services/was_additional_services_provided/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria/additional_services/was_additional_services_provided/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria/additional_services/was_additional_services_provided:label">
+            <value>Did you provide additional services to the client?</value>
+          </text>
+          <text id="/malaria/additional_services:label">
+            <value>Additional Services</value>
+          </text>
+          <text id="/malaria/household_location/gps:label">
+            <value>Household GPS</value>
+          </text>
+          <text id="/malaria/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Press the button below to capture GPS coordinates for the house. You will know the data has been captured if you see numbers appear in the four boxes below - you don't need to write anything yourself in these boxes. It may take some time for the numbers to appear. If you are waiting more than one minute and the numbers have not appeared, you should move on to the rest of the form without them.&lt;/span&gt;</value>
+          </text>
+          <text id="/malaria/household_location:label">
+            <value>Household Location</value>
+          </text>
+          <text id="/malaria/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/malaria/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/malaria/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/fifty_mg:label">
+            <value>50mg/135mg (3 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/hundred_mg:label">
+            <value>100mg/270mg (3 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/twenty_five_mg:label">
+            <value>25mg/67.5mg (3 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/two_hundred_mg:label">
+            <value>2 x 100mg/270mg (6 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/chv_provided_medication/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria/malaria/chv_provided_medication/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria/malaria/chv_provided_medication:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/business:label">
+            <value>Businessman</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/entepreneur:label">
+            <value>entepreneur</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/farmer:label">
+            <value>Farmer</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/fisherman:label">
+            <value>Fisherman</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/no_job:label">
+            <value>None</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/security:label">
+            <value>Securtiy</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/student:label">
+            <value>Student</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/worker:label">
+            <value>Worker</value>
+          </text>
+          <text id="/malaria/malaria/client_profession:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/has_malaria_symptoms/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria/malaria/has_malaria_symptoms/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria/malaria/has_malaria_symptoms:label">
+            <value>Do you have symptoms of malaria (headache, fatigue, high fever, body aches)?</value>
+          </text>
+          <text id="/malaria/malaria/is_mosquito_net_used/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria/malaria/is_mosquito_net_used/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria/malaria/is_mosquito_net_used:label">
+            <value>Do you use a mosquito net?</value>
+          </text>
+          <text id="/malaria/malaria/malaria_positive_condition/complicated:label">
+            <value>Complicted Malaria</value>
+          </text>
+          <text id="/malaria/malaria/malaria_positive_condition/un-complicated:label">
+            <value>Un-complicated malaria</value>
+          </text>
+          <text id="/malaria/malaria/malaria_positive_condition:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_chv/negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_chv/positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_chv:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;To be answered by the CHV &lt;/span&gt;.Select the result of the malaria test (mRDT) obtained after testing the household member.</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_facility/negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_facility/positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/note_test_client:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;Test the client for malaria. &lt;/span&gt;</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused/broken_net:label">
+            <value>Broken</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused/dont_have_net:label">
+            <value>I don't have net</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused/dont_use_but_have:label">
+            <value>Have but I don't use it</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused:label">
+            <value>Why?</value>
+          </text>
+          <text id="/malaria/malaria/referral_given/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria/malaria/referral_given/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria/malaria/referral_given:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/symptom_start_date_headache:jr:constraintMsg">
+            <value>The date cannot be after today</value>
+          </text>
+          <text id="/malaria/malaria/symptom_start_date_headache:label">
+            <value>When did they start feeling feverish/headache?</value>
+          </text>
+          <text id="/malaria/malaria/travelled_in_past_month/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria/malaria/travelled_in_past_month/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria/malaria/travelled_in_past_month:label">
+            <value>Did you travel outside Zanzibar in the past month?</value>
+          </text>
+          <text id="/malaria/malaria/went_to_facility_for_checkup/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria/malaria/went_to_facility_for_checkup/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria/malaria/went_to_facility_for_checkup:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/why_referral_not_given:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria:label">
+            <value>Malaria Visit</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/malaria/additional_services/services_provided/education_environment:label">
+            <value>Elimu ya usafi ya mazingira</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided/education_malaria_trt:label">
+            <value>Elimu ya kutumia tiba ya malaria</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided/education_net_use:label">
+            <value>Elimu ya kutumia chandarua</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided/education_referrals_malaria:label">
+            <value>Kutoa rufaa kupima malaria</value>
+          </text>
+          <text id="/malaria/additional_services/services_provided:label">
+            <value>Ainisha huduma za ziada ulizotoa kwa mteja</value>
+          </text>
+          <text id="/malaria/additional_services/was_additional_services_provided/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria/additional_services/was_additional_services_provided/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria/additional_services/was_additional_services_provided:label">
+            <value>Je umetoa huduma za ziada kwa mteja?</value>
+          </text>
+          <text id="/malaria/additional_services:label">
+            <value>Huduma za ziada</value>
+          </text>
+          <text id="/malaria/household_location/gps:label">
+            <value>GPS ya nyumba</value>
+          </text>
+          <text id="/malaria/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV).&lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Bonyeza kitufe hichi kupata GPS ya nyumba hii. Utatambua kuwa taarifa zimepatikana endapo utaona nambari zinatokea kwenye jadueli nne chini. Hutakiwi kuandika chochote kwenye jadueli hizi. Inaweza kuchukua muda kidogo mpaka nambari kutokea. Ukiona umesubiria kwa zaidi ya dakika moja na hakuna nambari iliyotokea, tafadhali endelea kujaza fomu yako bila ya kuzisubiria zaidi.&lt;/span&gt;</value>
+          </text>
+          <text id="/malaria/household_location:label">
+            <value>Eneo la kaya</value>
+          </text>
+          <text id="/malaria/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/fifty_mg:label">
+            <value>50mg/135mg (3 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/hundred_mg:label">
+            <value>100mg/270mg (3 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/twenty_five_mg:label">
+            <value>25mg/67.5mg (3 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage/two_hundred_mg:label">
+            <value>2 x 100mg/270mg (6 tabs)</value>
+          </text>
+          <text id="/malaria/malaria/choose_malaria_dosage:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;Chagua dozi aliyopewa mgonjwa</value>
+          </text>
+          <text id="/malaria/malaria/chv_provided_medication/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria/malaria/chv_provided_medication/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria/malaria/chv_provided_medication:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;Je amepatiwa dawa?</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/business:label">
+            <value>Mfanya biashara</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/entepreneur:label">
+            <value>Mjasiriamali</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/farmer:label">
+            <value>Mkulima</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/fisherman:label">
+            <value>Mvuvi</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/no_job:label">
+            <value>Sina kazi</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/security:label">
+            <value>Mlinzi</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/student:label">
+            <value>Mwanafunzi</value>
+          </text>
+          <text id="/malaria/malaria/client_profession/worker:label">
+            <value>Mfanyakazi</value>
+          </text>
+          <text id="/malaria/malaria/client_profession:label">
+            <value>Unajishughulisha na nini?</value>
+          </text>
+          <text id="/malaria/malaria/has_malaria_symptoms/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria/malaria/has_malaria_symptoms/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria/malaria/has_malaria_symptoms:label">
+            <value>Je, una dalili za malaria (kichwa kuuma, mwili kuishiwa na nguvu, joto kali, maumivu ya viungo) ?</value>
+          </text>
+          <text id="/malaria/malaria/is_mosquito_net_used/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria/malaria/is_mosquito_net_used/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria/malaria/is_mosquito_net_used:label">
+            <value>Je, unatumia chandarua?</value>
+          </text>
+          <text id="/malaria/malaria/malaria_positive_condition/complicated:label">
+            <value>Dalili za malaria kali (Kutapika, macho njano, viungo kuuma, mwili kuregea)</value>
+          </text>
+          <text id="/malaria/malaria/malaria_positive_condition/un-complicated:label">
+            <value>Sio malaria kali</value>
+          </text>
+          <text id="/malaria/malaria/malaria_positive_condition:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;Elezea hali ya ugonjwa</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_chv/negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_chv/positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_chv:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;Chagua matokeo ya kipimo cha malaria (mRDT) uliyopata baada ya kumpima mwanakaya?</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_facility/negative:label">
+            <value>Negative</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_facility/positive:label">
+            <value>Positive</value>
+          </text>
+          <text id="/malaria/malaria/malaria_results_from_facility:label">
+            <value>Majibu yalikuwaje?</value>
+          </text>
+          <text id="/malaria/malaria/note_test_client:label">
+            <value>&lt;span style="color:#f58a1f;font-weight: bold"&gt;Mpime mteja malaria kama ulivyoelekezwa. &lt;/span&gt;</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused/broken_net:label">
+            <value>Imeharibika</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused/dont_have_net:label">
+            <value>Sina</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused/dont_use_but_have:label">
+            <value>Ninacho lakini situmii</value>
+          </text>
+          <text id="/malaria/malaria/reasons_nets_unused:label">
+            <value>Kwanini hutumii chandarua?</value>
+          </text>
+          <text id="/malaria/malaria/referral_given/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria/malaria/referral_given/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria/malaria/referral_given:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;Je mgonjwa amepewa rufaa?</value>
+          </text>
+          <text id="/malaria/malaria/symptom_start_date_headache:jr:constraintMsg">
+            <value>Hakikisha umeingiza tarehe sahihi</value>
+          </text>
+          <text id="/malaria/malaria/symptom_start_date_headache:label">
+            <value>Umeanza lini kuhisi homa au kichwa kuuma?</value>
+          </text>
+          <text id="/malaria/malaria/travelled_in_past_month/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria/malaria/travelled_in_past_month/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria/malaria/travelled_in_past_month:label">
+            <value>Je, ulisafiri nje ya Zanzibar ndani ya mwezi uliopita?</value>
+          </text>
+          <text id="/malaria/malaria/went_to_facility_for_checkup/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria/malaria/went_to_facility_for_checkup/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria/malaria/went_to_facility_for_checkup:label">
+            <value>Je, umewahi kuenda kituo cha afya na kuchunguzwa malaria?</value>
+          </text>
+          <text id="/malaria/malaria/why_referral_not_given:label">
+            <value>&lt;span style="display:block;color:red;font-style: italic;padding-left:1em; font-weight:500"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;Kwanini hakupewa rufaa?</value>
+          </text>
+          <text id="/malaria/malaria:label">
+            <value>Tembeleo la Malaria</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <malaria id="malaria" prefix="J1!malaria!" delimiter="#" version="2025-03-04 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <date_of_birth_c/>
+          <age_days/>
+          <age_years/>
+          <start/>
+          <end/>
+          <malaria>
+            <has_malaria_symptoms/>
+            <symptom_start_date_headache/>
+            <went_to_facility_for_checkup/>
+            <malaria_results_from_facility/>
+            <note_test_client/>
+            <malaria_results_from_chv/>
+            <malaria_positive_condition/>
+            <chv_provided_medication/>
+            <choose_malaria_dosage/>
+            <referral_given/>
+            <why_referral_not_given/>
+            <travelled_in_past_month/>
+            <client_profession/>
+            <is_mosquito_net_used/>
+            <reasons_nets_unused/>
+          </malaria>
+          <additional_services>
+            <was_additional_services_provided/>
+            <services_provided/>
+          </additional_services>
+          <household_location>
+            <gps_note/>
+            <gps/>
+          </household_location>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </malaria>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/malaria/inputs" relevant="false()"/>
+      <bind nodeset="/malaria/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/malaria/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/malaria/inputs/user/name" type="string"/>
+      <bind nodeset="/malaria/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/malaria/inputs/contact/name" type="string"/>
+      <bind nodeset="/malaria/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/malaria/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/malaria/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/malaria/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/malaria/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/malaria/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/malaria/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/malaria/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /malaria/date_of_birth_c ))"/>
+      <bind nodeset="/malaria/age_years" type="string" calculate="int( /malaria/age_days  div (30 *12),0)"/>
+      <bind nodeset="/malaria/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/malaria/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/malaria/malaria/has_malaria_symptoms" type="select1" required="true()"/>
+      <bind nodeset="/malaria/malaria/symptom_start_date_headache" type="date" required="true()" constraint=". &lt;= today()" jr:constraintMsg="jr:itext('/malaria/malaria/symptom_start_date_headache:jr:constraintMsg')" relevant="selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/went_to_facility_for_checkup" type="select1" required="true()" relevant="selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/malaria_results_from_facility" type="select1" required="true()" relevant="selected( /malaria/malaria/went_to_facility_for_checkup ,&quot;yes&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/note_test_client" readonly="true()" type="string" relevant="selected( /malaria/malaria/went_to_facility_for_checkup ,&quot;no&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/malaria_results_from_chv" type="select1" required="true()" relevant="selected( /malaria/malaria/went_to_facility_for_checkup ,&quot;no&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/malaria_positive_condition" type="select1" required="true()" relevant="selected( /malaria/malaria/malaria_results_from_chv ,&quot;positive&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/chv_provided_medication" type="select1" required="true()" relevant="selected( /malaria/malaria/malaria_positive_condition ,&quot;un-complicated&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/choose_malaria_dosage" type="select1" required="true()" relevant="selected( /malaria/malaria/malaria_positive_condition ,&quot;un-complicated&quot;) and selected( /malaria/malaria/chv_provided_medication ,&quot;yes&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/referral_given" type="select1" required="true()" relevant="selected( /malaria/malaria/malaria_positive_condition ,&quot;complicated&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/why_referral_not_given" type="string" required="true()" relevant="selected( /malaria/malaria/malaria_positive_condition ,&quot;complicated&quot;) and selected( /malaria/malaria/referral_given ,&quot;no&quot;) and selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/travelled_in_past_month" type="select1" required="true()"/>
+      <bind nodeset="/malaria/malaria/client_profession" type="select1" required="true()" relevant="selected( /malaria/malaria/has_malaria_symptoms ,&quot;yes&quot;) or selected( /malaria/malaria/travelled_in_past_month ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/malaria/is_mosquito_net_used" type="select1" required="true()"/>
+      <bind nodeset="/malaria/malaria/reasons_nets_unused" type="select1" required="true()" relevant="selected( /malaria/malaria/is_mosquito_net_used ,&quot;no&quot;)"/>
+      <bind nodeset="/malaria/additional_services/was_additional_services_provided" type="select1" required="true()"/>
+      <bind nodeset="/malaria/additional_services/services_provided" type="select1" relevant="selected( /malaria/additional_services/was_additional_services_provided ,&quot;yes&quot;)"/>
+      <bind nodeset="/malaria/household_location/gps_note" readonly="true()" type="string"/>
+      <bind nodeset="/malaria/household_location/gps" type="geopoint" required="true()"/>
+      <bind nodeset="/malaria/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/malaria/inputs">
+      <group ref="/malaria/inputs/user">
+        <input ref="/malaria/inputs/user/contact_id">
+          <label ref="jr:itext('/malaria/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/malaria/inputs/user/facility_id">
+          <label ref="jr:itext('/malaria/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/malaria/inputs/user/name">
+          <label ref="jr:itext('/malaria/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/malaria/inputs/contact">
+        <input appearance="db-object" ref="/malaria/inputs/contact/_id"/>
+        <input ref="/malaria/inputs/contact/name"/>
+        <input ref="/malaria/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/malaria/malaria">
+      <label ref="jr:itext('/malaria/malaria:label')"/>
+      <select1 ref="/malaria/malaria/has_malaria_symptoms">
+        <label ref="jr:itext('/malaria/malaria/has_malaria_symptoms:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/has_malaria_symptoms/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/has_malaria_symptoms/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/malaria/malaria/symptom_start_date_headache">
+        <label ref="jr:itext('/malaria/malaria/symptom_start_date_headache:label')"/>
+      </input>
+      <select1 ref="/malaria/malaria/went_to_facility_for_checkup">
+        <label ref="jr:itext('/malaria/malaria/went_to_facility_for_checkup:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/went_to_facility_for_checkup/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/went_to_facility_for_checkup/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/malaria_results_from_facility">
+        <label ref="jr:itext('/malaria/malaria/malaria_results_from_facility:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/malaria_results_from_facility/positive:label')"/>
+          <value>positive</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/malaria_results_from_facility/negative:label')"/>
+          <value>negative</value>
+        </item>
+      </select1>
+      <input ref="/malaria/malaria/note_test_client">
+        <label ref="jr:itext('/malaria/malaria/note_test_client:label')"/>
+      </input>
+      <select1 ref="/malaria/malaria/malaria_results_from_chv">
+        <label ref="jr:itext('/malaria/malaria/malaria_results_from_chv:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/malaria_results_from_chv/positive:label')"/>
+          <value>positive</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/malaria_results_from_chv/negative:label')"/>
+          <value>negative</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/malaria_positive_condition">
+        <label ref="jr:itext('/malaria/malaria/malaria_positive_condition:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/malaria_positive_condition/complicated:label')"/>
+          <value>complicated</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/malaria_positive_condition/un-complicated:label')"/>
+          <value>un-complicated</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/chv_provided_medication">
+        <label ref="jr:itext('/malaria/malaria/chv_provided_medication:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/chv_provided_medication/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/chv_provided_medication/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/choose_malaria_dosage">
+        <label ref="jr:itext('/malaria/malaria/choose_malaria_dosage:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/choose_malaria_dosage/twenty_five_mg:label')"/>
+          <value>twenty_five_mg</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/choose_malaria_dosage/fifty_mg:label')"/>
+          <value>fifty_mg</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/choose_malaria_dosage/hundred_mg:label')"/>
+          <value>hundred_mg</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/choose_malaria_dosage/two_hundred_mg:label')"/>
+          <value>two_hundred_mg</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/referral_given">
+        <label ref="jr:itext('/malaria/malaria/referral_given:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/referral_given/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/referral_given/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/malaria/malaria/why_referral_not_given">
+        <label ref="jr:itext('/malaria/malaria/why_referral_not_given:label')"/>
+      </input>
+      <select1 ref="/malaria/malaria/travelled_in_past_month">
+        <label ref="jr:itext('/malaria/malaria/travelled_in_past_month:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/travelled_in_past_month/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/travelled_in_past_month/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/client_profession">
+        <label ref="jr:itext('/malaria/malaria/client_profession:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/business:label')"/>
+          <value>business</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/farmer:label')"/>
+          <value>farmer</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/fisherman:label')"/>
+          <value>fisherman</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/security:label')"/>
+          <value>security</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/entepreneur:label')"/>
+          <value>entepreneur</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/worker:label')"/>
+          <value>worker</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/student:label')"/>
+          <value>student</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/client_profession/no_job:label')"/>
+          <value>no_job</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/is_mosquito_net_used">
+        <label ref="jr:itext('/malaria/malaria/is_mosquito_net_used:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/is_mosquito_net_used/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/is_mosquito_net_used/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/malaria/reasons_nets_unused">
+        <label ref="jr:itext('/malaria/malaria/reasons_nets_unused:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/reasons_nets_unused/dont_have_net:label')"/>
+          <value>dont_have_net</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/reasons_nets_unused/broken_net:label')"/>
+          <value>broken_net</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/malaria/reasons_nets_unused/dont_use_but_have:label')"/>
+          <value>dont_use_but_have</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/malaria/additional_services">
+      <label ref="jr:itext('/malaria/additional_services:label')"/>
+      <select1 ref="/malaria/additional_services/was_additional_services_provided">
+        <label ref="jr:itext('/malaria/additional_services/was_additional_services_provided:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/additional_services/was_additional_services_provided/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/additional_services/was_additional_services_provided/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria/additional_services/services_provided">
+        <label ref="jr:itext('/malaria/additional_services/services_provided:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria/additional_services/services_provided/education_net_use:label')"/>
+          <value>education_net_use</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/additional_services/services_provided/education_environment:label')"/>
+          <value>education_environment</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/additional_services/services_provided/education_malaria_trt:label')"/>
+          <value>education_malaria_trt</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria/additional_services/services_provided/education_referrals_malaria:label')"/>
+          <value>education_referrals_malaria</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/malaria/household_location">
+      <label ref="jr:itext('/malaria/household_location:label')"/>
+      <input ref="/malaria/household_location/gps_note">
+        <label ref="jr:itext('/malaria/household_location/gps_note:label')"/>
+      </input>
+      <input ref="/malaria/household_location/gps">
+        <label ref="jr:itext('/malaria/household_location/gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,768 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>Malaria</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/malaria_household/household_location/gps:label">
+            <value>Household GPS</value>
+          </text>
+          <text id="/malaria_household/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV). &lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Press the button below to capture GPS coordinates for the house. You will know the data has been captured if you see numbers appear in the four boxes below - you don't need to write anything yourself in these boxes. It may take some time for the numbers to appear. If you are waiting more than one minute and the numbers have not appeared, you should move on to the rest of the form without them.&lt;/span&gt;</value>
+          </text>
+          <text id="/malaria_household/household_location:label">
+            <value>Household Location</value>
+          </text>
+          <text id="/malaria_household/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/malaria_household/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/malaria_household/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house_other:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/cans_with_water:label">
+            <value>Containers or cans with water</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/holes_in_pots:label">
+            <value>Holes in pots or plant containers</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/old_tires:label">
+            <value>Old, discarded tires</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/other:label">
+            <value>Other</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/plastic_bottles:label">
+            <value>Plastic bottles or containers with water</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/stagnant_water:label">
+            <value>Stagnant water in tiles or floor cracks</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/toilet_or_bathrooms:label">
+            <value>Toilets or bathrooms that are not functioning properly</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/water_ciontainers:label">
+            <value>Water containers (bucket, tank)</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/water_in_bathtubs:label">
+            <value>Water in bathtubs or sinks inside the house</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_house/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_house/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_house:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/construction_pits:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/holes:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/leaves:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/plants:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/ponds:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/potholes:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/rain_harvest:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/resrvoirs:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/stagnant_water:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/tires:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/utensils:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/water_storage:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/wells:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_qty_outside_house:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_qty:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_usage/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_usage/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_usage:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_inside_house/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_inside_house/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_inside_house:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_outside_house/no:label">
+            <value>No</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_outside_house/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_outside_house:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/filling_areas:label">
+            <value>Filling in informal waterlogged areas</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/filling_ditches:label">
+            <value>Filling in ditches</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/pouring_water:label">
+            <value>Pouring water</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/removing_containers:label">
+            <value>Removing unused water containers</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/repairing_areas:label">
+            <value>Repairing eroded areas</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/filling_areas:label">
+            <value>Filling in informal waterlogged areas</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/filling_ditches:label">
+            <value>Filling in ditches</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/pouring_water:label">
+            <value>Pouring water</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/removing_containers:label">
+            <value>Removing unused water containers</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/repairing_areas:label">
+            <value>Repairing eroded areas</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/num_clients_net_usage_last_night:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/type_of_mosquito_breeding_outside/long_term_breeding:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/type_of_mosquito_breeding_outside/short_term_breeding:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/type_of_mosquito_breeding_outside:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria:label">
+            <value>About Malaria</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/malaria_household/household_location/gps:label">
+            <value>GPS ya nyumba</value>
+          </text>
+          <text id="/malaria_household/household_location/gps_note:label">
+            <value>&lt;span style="color:red;font-style: italic"&gt;Usimsomee, jaza wewe (CHV).&lt;/span&gt;
+
+&lt;span style="color:#f58a1f"&gt;Bonyeza kitufe hichi kupata GPS ya nyumba hii. Utatambua kuwa taarifa zimepatikana endapo utaona nambari zinatokea kwenye jadueli nne chini. Hutakiwi kuandika chochote kwenye jadueli hizi. Inaweza kuchukua muda kidogo mpaka nambari kutokea. Ukiona umesubiria kwa zaidi ya dakika moja na hakuna nambari iliyotokea, tafadhali endelea kujaza fomu yako bila ya kuzisubiria zaidi.&lt;/span&gt;</value>
+          </text>
+          <text id="/malaria_household/household_location:label">
+            <value>Eneo la kaya</value>
+          </text>
+          <text id="/malaria_household/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house:label">
+            <value>Je kuna mazalia ya mbu yaliyoonekana ndani ya kaya?</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_house_other:label">
+            <value>Tafadhali taja</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/cans_with_water:label">
+            <value>Vifuu au makopo yenye maji</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/holes_in_pots:label">
+            <value>Mashimo ya sufuria au mitungi ya mimea</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/old_tires:label">
+            <value>Tairi na gari chakavu zilizotelekezwa</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/other:label">
+            <value>Nyengine</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/plastic_bottles:label">
+            <value>Chupa au mitungi ya plastiki yenye maji</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/stagnant_water:label">
+            <value>Maji yaliyotuwama kwenye vigae au nyufa za sakafu</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/toilet_or_bathrooms:label">
+            <value>Vyoo au bafu visivyofanya kazi vizuri</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/water_ciontainers:label">
+            <value>Vyombo vya maji (ndoo, tanki)</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list/water_in_bathtubs:label">
+            <value>Majimaji ya bafu au sinki ndani ya nyumba</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_inside_list:label">
+            <value>Ainisha mazalia ya mbu ndani ya nyumba</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_house/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_house/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_house:label">
+            <value>Je kuna mazalia ya mbu yaliyoonekana nje ya nyumba?</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/construction_pits:label">
+            <value>Mashimo ya ujenzi</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/holes:label">
+            <value>Mashimo ya kwato za wanyama zenye maji</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/leaves:label">
+            <value>Majani yaliyooza au makandamizo ya taka</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/plants:label">
+            <value>Mimea au vichaka migomba, majan yasiyopunguzwa au kusafishwa</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/ponds:label">
+            <value>Mabwawa au madimbwi ya maji</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/potholes:label">
+            <value>Mashimo au makaro yaliyoziba</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/rain_harvest:label">
+            <value>Makingo ya maji ya mvua</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/resrvoirs:label">
+            <value>Mahodhi ya maji</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/stagnant_water:label">
+            <value>Mitaro ya maji yaliyotuwama</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/tires:label">
+            <value>Tairi na gari chakavu zilizotelekezwa</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/utensils:label">
+            <value>Vyombo vya maji (ndoo, tanki)</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/water_storage:label">
+            <value>Chombo cha kuhifadhi maji</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list/wells:label">
+            <value>Visima visivyotumika</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_outside_list:label">
+            <value>Ainisha mazalia ya mbu nje ya nyumba</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_breeding_qty_outside_house:label">
+            <value>Idadi ya mazalia ya mbu uliyoyaona nje ya nyumba</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_qty:label">
+            <value>Jaza idadi ya vyandarua vilivyomo katika kaya</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_usage/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_usage/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_net_usage:label">
+            <value>Je kuna vyandarua katika kaya?</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_inside_house/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_inside_house/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_inside_house:label">
+            <value>Je umetia dawa katika mazalia ya mbu ndani ya nyumba?</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_outside_house/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_outside_house/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/malaria_household/malaria/mosquito_spray_outside_house:label">
+            <value>Je umetia dawa katika mazalia ya mbu nje ya nyumba?</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/filling_areas:label">
+            <value>Kufukia sehemu zinazotuwama maji zisizo rasmi</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/filling_ditches:label">
+            <value>Kufukia vishimo(vidimbwi) vya maji</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/pouring_water:label">
+            <value>Kumwaga maji</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/removing_containers:label">
+            <value>Kuondosha au kufunika ndoo za maji ambayo hayatumiki</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list/repairing_areas:label">
+            <value>Kukarabati sehemu zilizochimbika</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_inside_house_list:label">
+            <value>Kama hukutia dawa katika mazalia ya mbu, umechukua hatua gani juu ya mazalia ndani ya nyumba?</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/filling_areas:label">
+            <value>Kufukia sehemu zinazotuwama maji zisizo rasmi</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/filling_ditches:label">
+            <value>Kufukia vishimo(vidimbwi) vya maji</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/pouring_water:label">
+            <value>Kumwaga maji</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/removing_containers:label">
+            <value>Kuondosha au kufunika ndoo za maji ambayo hayatumiki</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list/repairing_areas:label">
+            <value>Kukarabati sehemu zilizochimbika</value>
+          </text>
+          <text id="/malaria_household/malaria/no_spray_outside_house_list:label">
+            <value>Kama hukutia dawa katika mazalia ya mbu, umechukua hatua gani juu ya mazalia nje ya nyumba?</value>
+          </text>
+          <text id="/malaria_household/malaria/num_clients_net_usage_last_night:label">
+            <value>Je ni watu wangapi waliotumia chandarua usiku wa kuamkia leo?</value>
+          </text>
+          <text id="/malaria_household/malaria/type_of_mosquito_breeding_outside/long_term_breeding:label">
+            <value>Mazalia ya muda mrefu</value>
+          </text>
+          <text id="/malaria_household/malaria/type_of_mosquito_breeding_outside/short_term_breeding:label">
+            <value>Mazalia ya muda mfupi</value>
+          </text>
+          <text id="/malaria_household/malaria/type_of_mosquito_breeding_outside:label">
+            <value>Aina ya mazalia</value>
+          </text>
+          <text id="/malaria_household/malaria:label">
+            <value>Kuhusu Malaria</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <malaria_household id="malaria_household" prefix="J1!malaria_household!" delimiter="#" version="2025-03-10 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <client_name/>
+          <patient_id/>
+          <created_by/>
+          <created_by_person_uuid/>
+          <created_by_place_uuid/>
+          <date_of_birth_c/>
+          <age_days/>
+          <age_years/>
+          <start/>
+          <end/>
+          <malaria>
+            <mosquito_breeding_inside_house/>
+            <mosquito_breeding_inside_list/>
+            <mosquito_breeding_inside_house_other/>
+            <mosquito_spray_inside_house/>
+            <no_spray_inside_house_list/>
+            <mosquito_breeding_outside_house/>
+            <type_of_mosquito_breeding_outside/>
+            <mosquito_breeding_outside_list/>
+            <mosquito_breeding_qty_outside_house/>
+            <mosquito_spray_outside_house/>
+            <no_spray_outside_house_list/>
+            <mosquito_net_usage/>
+            <mosquito_net_qty/>
+            <num_clients_net_usage_last_night/>
+          </malaria>
+          <household_location>
+            <gps_note/>
+            <gps/>
+          </household_location>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </malaria_household>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/malaria_household/inputs" relevant="false()"/>
+      <bind nodeset="/malaria_household/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/malaria_household/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/malaria_household/inputs/user/name" type="string"/>
+      <bind nodeset="/malaria_household/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/malaria_household/inputs/contact/name" type="string"/>
+      <bind nodeset="/malaria_household/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/malaria_household/client_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/malaria_household/patient_id" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/malaria_household/created_by" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/malaria_household/created_by_person_uuid" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/malaria_household/created_by_place_uuid" type="string" calculate="../inputs/user/facility_id"/>
+      <bind nodeset="/malaria_household/date_of_birth_c" type="string" calculate="../inputs/contact/date_of_birth"/>
+      <bind nodeset="/malaria_household/age_days" type="string" calculate="int(decimal-date-time(now())-decimal-date-time( /malaria_household/date_of_birth_c ))"/>
+      <bind nodeset="/malaria_household/age_years" type="string" calculate="int( /malaria_household/age_days  div (30 *12),0)"/>
+      <bind nodeset="/malaria_household/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/malaria_household/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_breeding_inside_house" type="select1" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_breeding_inside_list" type="select" relevant="selected( /malaria_household/malaria/mosquito_breeding_inside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_breeding_inside_house_other" type="string" relevant="selected( /malaria_household/malaria/mosquito_breeding_inside_house ,&quot;yes&quot;) and selected( /malaria_household/malaria/mosquito_breeding_inside_list ,&quot;other&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_spray_inside_house" type="select1" relevant="selected( /malaria_household/malaria/mosquito_breeding_inside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/no_spray_inside_house_list" type="select" relevant="selected( /malaria_household/malaria/mosquito_spray_inside_house ,&quot;no&quot;) and selected( /malaria_household/malaria/mosquito_breeding_inside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_breeding_outside_house" type="select1" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/type_of_mosquito_breeding_outside" type="select1" relevant="selected( /malaria_household/malaria/mosquito_breeding_outside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_breeding_outside_list" type="select" relevant="selected( /malaria_household/malaria/mosquito_breeding_outside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_breeding_qty_outside_house" type="string" relevant="selected( /malaria_household/malaria/mosquito_breeding_outside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_spray_outside_house" type="select1" relevant="selected( /malaria_household/malaria/mosquito_breeding_outside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/no_spray_outside_house_list" type="select" relevant="selected( /malaria_household/malaria/mosquito_spray_outside_house ,&quot;no&quot;) and selected( /malaria_household/malaria/mosquito_breeding_outside_house ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_net_usage" type="select1" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/mosquito_net_qty" type="string" relevant="selected( /malaria_household/malaria/mosquito_net_usage ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/malaria/num_clients_net_usage_last_night" type="string" relevant="selected( /malaria_household/malaria/mosquito_net_usage ,&quot;yes&quot;)" required="true()"/>
+      <bind nodeset="/malaria_household/household_location/gps_note" readonly="true()" type="string"/>
+      <bind nodeset="/malaria_household/household_location/gps" type="geopoint" required="true()"/>
+      <bind nodeset="/malaria_household/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/malaria_household/inputs">
+      <group ref="/malaria_household/inputs/user">
+        <input ref="/malaria_household/inputs/user/contact_id">
+          <label ref="jr:itext('/malaria_household/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/malaria_household/inputs/user/facility_id">
+          <label ref="jr:itext('/malaria_household/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/malaria_household/inputs/user/name">
+          <label ref="jr:itext('/malaria_household/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/malaria_household/inputs/contact">
+        <input appearance="db-object" ref="/malaria_household/inputs/contact/_id"/>
+        <input ref="/malaria_household/inputs/contact/name"/>
+        <input ref="/malaria_household/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/malaria_household/malaria">
+      <label ref="jr:itext('/malaria_household/malaria:label')"/>
+      <select1 ref="/malaria_household/malaria/mosquito_breeding_inside_house">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_house:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_house/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_house/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/malaria_household/malaria/mosquito_breeding_inside_list">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/water_ciontainers:label')"/>
+          <value>water_ciontainers</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/plastic_bottles:label')"/>
+          <value>plastic_bottles</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/stagnant_water:label')"/>
+          <value>stagnant_water</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/water_in_bathtubs:label')"/>
+          <value>water_in_bathtubs</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/holes_in_pots:label')"/>
+          <value>holes_in_pots</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/toilet_or_bathrooms:label')"/>
+          <value>toilet_or_bathrooms</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/old_tires:label')"/>
+          <value>old_tires</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/cans_with_water:label')"/>
+          <value>cans_with_water</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_list/other:label')"/>
+          <value>other</value>
+        </item>
+      </select>
+      <input ref="/malaria_household/malaria/mosquito_breeding_inside_house_other">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_inside_house_other:label')"/>
+      </input>
+      <select1 ref="/malaria_household/malaria/mosquito_spray_inside_house">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_spray_inside_house:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_spray_inside_house/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_spray_inside_house/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/malaria_household/malaria/no_spray_inside_house_list">
+        <label ref="jr:itext('/malaria_household/malaria/no_spray_inside_house_list:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_inside_house_list/pouring_water:label')"/>
+          <value>pouring_water</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_inside_house_list/filling_ditches:label')"/>
+          <value>filling_ditches</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_inside_house_list/repairing_areas:label')"/>
+          <value>repairing_areas</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_inside_house_list/filling_areas:label')"/>
+          <value>filling_areas</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_inside_house_list/removing_containers:label')"/>
+          <value>removing_containers</value>
+        </item>
+      </select>
+      <select1 ref="/malaria_household/malaria/mosquito_breeding_outside_house">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_house:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_house/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_house/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/malaria_household/malaria/type_of_mosquito_breeding_outside">
+        <label ref="jr:itext('/malaria_household/malaria/type_of_mosquito_breeding_outside:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/type_of_mosquito_breeding_outside/long_term_breeding:label')"/>
+          <value>long_term_breeding</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/type_of_mosquito_breeding_outside/short_term_breeding:label')"/>
+          <value>short_term_breeding</value>
+        </item>
+      </select1>
+      <select ref="/malaria_household/malaria/mosquito_breeding_outside_list">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/ponds:label')"/>
+          <value>ponds</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/utensils:label')"/>
+          <value>utensils</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/potholes:label')"/>
+          <value>potholes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/plants:label')"/>
+          <value>plants</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/leaves:label')"/>
+          <value>leaves</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/tires:label')"/>
+          <value>tires</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/resrvoirs:label')"/>
+          <value>resrvoirs</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/holes:label')"/>
+          <value>holes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/construction_pits:label')"/>
+          <value>construction_pits</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/stagnant_water:label')"/>
+          <value>stagnant_water</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/wells:label')"/>
+          <value>wells</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/rain_harvest:label')"/>
+          <value>rain_harvest</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_outside_list/water_storage:label')"/>
+          <value>water_storage</value>
+        </item>
+      </select>
+      <input ref="/malaria_household/malaria/mosquito_breeding_qty_outside_house">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_breeding_qty_outside_house:label')"/>
+      </input>
+      <select1 ref="/malaria_household/malaria/mosquito_spray_outside_house">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_spray_outside_house:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_spray_outside_house/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_spray_outside_house/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/malaria_household/malaria/no_spray_outside_house_list">
+        <label ref="jr:itext('/malaria_household/malaria/no_spray_outside_house_list:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_outside_house_list/pouring_water:label')"/>
+          <value>pouring_water</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_outside_house_list/filling_ditches:label')"/>
+          <value>filling_ditches</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_outside_house_list/repairing_areas:label')"/>
+          <value>repairing_areas</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_outside_house_list/filling_areas:label')"/>
+          <value>filling_areas</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/no_spray_outside_house_list/removing_containers:label')"/>
+          <value>removing_containers</value>
+        </item>
+      </select>
+      <select1 ref="/malaria_household/malaria/mosquito_net_usage">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_net_usage:label')"/>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_net_usage/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/malaria_household/malaria/mosquito_net_usage/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/malaria_household/malaria/mosquito_net_qty">
+        <label ref="jr:itext('/malaria_household/malaria/mosquito_net_qty:label')"/>
+      </input>
+      <input ref="/malaria_household/malaria/num_clients_net_usage_last_night">
+        <label ref="jr:itext('/malaria_household/malaria/num_clients_net_usage_last_night:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/malaria_household/household_location">
+      <label ref="jr:itext('/malaria_household/household_location:label')"/>
+      <input ref="/malaria_household/household_location/gps_note">
+        <label ref="jr:itext('/malaria_household/household_location/gps_note:label')"/>
+      </input>
+      <input ref="/malaria_household/household_location/gps">
+        <label ref="jr:itext('/malaria_household/household_location/gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,874 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+  <h:head>
+    <h:title>event based surveillance</h:title>
+    <model>
+      <itext>
+        <translation lang="en">
+          <text id="/ebs/client_gps/client_gps:label">
+            <value>Collect client GPS</value>
+          </text>
+          <text id="/ebs/client_gps:label">
+            <value>Client GPS</value>
+          </text>
+          <text id="/ebs/family_history/blood_history_hypertension/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/blood_history_hypertension/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/blood_history_hypertension:label">
+            <value>Do you have a medical history of treatment for hypertension?</value>
+          </text>
+          <text id="/ebs/family_history/cancer_history/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/cancer_history/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/cancer_history:label">
+            <value>Do you have a medical history of cancer?</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_10:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_11:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_12:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_13:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_14:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_15:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_1:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_2:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_3:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_4:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_5:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_6:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_7:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_8:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_9:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/choose_report:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/client_risky_behaviors/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/client_risky_behaviors/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/client_risky_behaviors:label">
+            <value>Does the client engage in risky behaviors such as smoking, alcohol consumption, or drug use?</value>
+          </text>
+          <text id="/ebs/family_history/clients/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/clients/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/clients:label">
+            <value>Does the client engage in risky behaviors such as smoking, alcohol consumption, or drug use?</value>
+          </text>
+          <text id="/ebs/family_history/death_count:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/death_report:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/diabetes_history/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/diabetes_history/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/diabetes_history:label">
+            <value>Do you have a medical history of diabetes treatment?</value>
+          </text>
+          <text id="/ebs/family_history/eye_health_complaints/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/eye_health_complaints/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/eye_health_complaints:label">
+            <value>Do you have any complaints about eye health?</value>
+          </text>
+          <text id="/ebs/family_history/hiv_history/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/hiv_history/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/hiv_history:label">
+            <value>Do you have a medical history of infectious diseases such as HIV/AIDS?</value>
+          </text>
+          <text id="/ebs/family_history/malaria_history/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/malaria_history/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/malaria_history:label">
+            <value>Do you have a medical history of MALARIA treatment within the past week?</value>
+          </text>
+          <text id="/ebs/family_history/medication_food/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/medication_food/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/medication_food:label">
+            <value>Do you experience adverse reactions when using certain medications or foods?</value>
+          </text>
+          <text id="/ebs/family_history/mental_health/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/mental_health/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/mental_health:label">
+            <value>Do you have a medical history of mental health treatment?</value>
+          </text>
+          <text id="/ebs/family_history/nutritional_problem/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/nutritional_problem/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/nutritional_problem:label">
+            <value>Do you have health issues or issues related to nutrition?</value>
+          </text>
+          <text id="/ebs/family_history/pregnant_or_miscarriage/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/pregnant_or_miscarriage/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/pregnant_or_miscarriage:label">
+            <value>Do you feel like you might be pregnant or that you had a miscarriage a few days ago?</value>
+          </text>
+          <text id="/ebs/family_history/reporter_name:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/reporter_phone:jr:constraintMsg">
+            <value>Using this format : +255XXXXXXXXX</value>
+          </text>
+          <text id="/ebs/family_history/reporter_phone:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/sickle_cell/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/sickle_cell/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/sickle_cell:label">
+            <value>Do you have a medical history of treatment or issues related to sickle cell disease?</value>
+          </text>
+          <text id="/ebs/family_history/total_dealth/no:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/total_dealth/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/total_dealth:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/total_report/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/total_report/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/total_report:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/family_history/tuberculosis_history/no:label">
+            <value>No</value>
+          </text>
+          <text id="/ebs/family_history/tuberculosis_history/yes:label">
+            <value>Yes</value>
+          </text>
+          <text id="/ebs/family_history/tuberculosis_history:label">
+            <value>Do you have a medical history of tuberculosis or leprosy?</value>
+          </text>
+          <text id="/ebs/family_history:label">
+            <value>Health family history</value>
+          </text>
+          <text id="/ebs/inputs/user/contact_id:label">
+            <value>Contact ID of the logged in user</value>
+          </text>
+          <text id="/ebs/inputs/user/facility_id:label">
+            <value>Facility ID for the parent user</value>
+          </text>
+          <text id="/ebs/inputs/user/name:label">
+            <value>Name of the logged in user</value>
+          </text>
+        </translation>
+        <translation lang="sw">
+          <text id="/ebs/client_gps/client_gps:label">
+            <value>Chukua GPS</value>
+          </text>
+          <text id="/ebs/client_gps:label">
+            <value>GPS ya mteja</value>
+          </text>
+          <text id="/ebs/family_history/blood_history_hypertension/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/blood_history_hypertension/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/blood_history_hypertension:label">
+            <value>Je kuna yoyote alieumwa kwa ghafla au mtu aliyesafiri nje ya nchi katika kipindi cha siku 21 zilizopita ?</value>
+          </text>
+          <text id="/ebs/family_history/cancer_history/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/cancer_history/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/cancer_history:label">
+            <value>Je kuna ongezeko la watu wanaonunua dawa kwa kuugua ugonjwa wa aina moja katika kipindi fulani?</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_10:label">
+            <value>Mganga wa tiba asili</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_11:label">
+            <value>Jamii</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_12:label">
+            <value>Daktari wa binaadamu</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_13:label">
+            <value>Kiongozi wa dini</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_14:label">
+            <value>Kiongozi wa serekali</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_15:label">
+            <value>Duka la dawa</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_1:label">
+            <value>Mitandao ya jamii</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_2:label">
+            <value>Dawati la tetesi</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_3:label">
+            <value>Vyombo vya habari</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_4:label">
+            <value>Mtoa taarifa mahsusi</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_5:label">
+            <value>Kituo cha afya</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_6:label">
+            <value>Mfanyakazi wa afya</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_7:label">
+            <value>Mwalimu</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_8:label">
+            <value>Daktari wa wanyama</value>
+          </text>
+          <text id="/ebs/family_history/choose_report/choose_report_9:label">
+            <value>Kiongozi wa mila</value>
+          </text>
+          <text id="/ebs/family_history/choose_report:label">
+            <value>Chanzo cha taarifa:</value>
+          </text>
+          <text id="/ebs/family_history/client_risky_behaviors/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/client_risky_behaviors/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/client_risky_behaviors:label">
+            <value>Je kuna yoyote anaehara maji kwa wingi mara 3 au zaidi ndani ya saa 24 kwa mtu mwenye miaka mitano au zaidi ?</value>
+          </text>
+          <text id="/ebs/family_history/clients/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/clients/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/ebs/family_history/clients:label">
+            <value>Je kuna mtoto yoyote (chini ya miaka 15) ambaye ghafla miguu yake imepoteza uwezo wa kutembea ?</value>
+          </text>
+          <text id="/ebs/family_history/death_count:label">
+            <value>Idaddi ya vifo vilivotolewa taarifa</value>
+          </text>
+          <text id="/ebs/family_history/death_report:label">
+            <value>Idaddi ya waliotolewa taarifa</value>
+          </text>
+          <text id="/ebs/family_history/diabetes_history/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/diabetes_history/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/diabetes_history:label">
+            <value>Je kuna yoyote mwenye ugonjwa wowote usio wa kawaida au kifo ambacho sababu zake hazijulikani ndani ya jamii?</value>
+          </text>
+          <text id="/ebs/family_history/eye_health_complaints/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/eye_health_complaints/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/eye_health_complaints:label">
+            <value>Je kuna ugonjwa unaodhaniwa kusababishwa na homa pamoja na kutokwa na damu mwilini ?</value>
+          </text>
+          <text id="/ebs/family_history/hiv_history/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/hiv_history/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/hiv_history:label">
+            <value>Je kuna ugonjwa au kifo kinachodhaniwa kutokana na kugusa, kula au kunywa chochote kinachotokana na mnyama/ndege?</value>
+          </text>
+          <text id="/ebs/family_history/malaria_history/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/malaria_history/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/malaria_history:label">
+            <value>Je kuna Idadi isiyo ya kawaida ya makundi ya wanyama/ndege (wakufugwa au waporini) wanaoumwa au waliokufa kwa kipindi cha ndani ya wiki moja na kuna uwezekano wa ugonjwa kusambaa kwenda kwa binadamu ?</value>
+          </text>
+          <text id="/ebs/family_history/medication_food/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/medication_food/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/medication_food:label">
+            <value>Je kuna ugonjwa au kifo kinachodhaniwa kusababishwa na homa na shingo kukakamaa ?</value>
+          </text>
+          <text id="/ebs/family_history/mental_health/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/mental_health/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/mental_health:label">
+            <value>Je kuna mtu yeyote aliyeng'atwa au kidonda chake kurambwa na mbwa au mnyama yoyote ?</value>
+          </text>
+          <text id="/ebs/family_history/nutritional_problem/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/nutritional_problem/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/nutritional_problem:label">
+            <value>Je kuna vifo vilivojitokeza katika shule au sehemu ya kazi ndani ya wiki moja?</value>
+          </text>
+          <text id="/ebs/family_history/pregnant_or_miscarriage/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/pregnant_or_miscarriage/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/pregnant_or_miscarriage:label">
+            <value>Je kuna wagonjwa wawili au zaidi waliojitokeza ndani ya wiki moja ?</value>
+          </text>
+          <text id="/ebs/family_history/reporter_name:label">
+            <value>Jina la mtoa taarifa</value>
+          </text>
+          <text id="/ebs/family_history/reporter_phone:jr:constraintMsg">
+            <value>Tafadhali ingiza namba kwa fomati: +255XXXXXXXXX</value>
+          </text>
+          <text id="/ebs/family_history/reporter_phone:label">
+            <value>Namba ya simu ya mtoa taarifa:</value>
+          </text>
+          <text id="/ebs/family_history/sickle_cell/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/sickle_cell/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/sickle_cell:label">
+            <value>Je kuna watu wawili au zaidi katika jamii wenye homa na matatizo ya kupumua ndani ya wiki moja?</value>
+          </text>
+          <text id="/ebs/family_history/total_dealth/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/total_dealth/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/ebs/family_history/total_dealth:label">
+            <value>Idadi ya vifo (tetesi) inajulikana ?</value>
+          </text>
+          <text id="/ebs/family_history/total_report/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/total_report/yes:label">
+            <value>Ndio</value>
+          </text>
+          <text id="/ebs/family_history/total_report:label">
+            <value>Idadi ya walioathirika (tetesi) inajulikana ?</value>
+          </text>
+          <text id="/ebs/family_history/tuberculosis_history/no:label">
+            <value>Hapana</value>
+          </text>
+          <text id="/ebs/family_history/tuberculosis_history/yes:label">
+            <value>Ndiyo</value>
+          </text>
+          <text id="/ebs/family_history/tuberculosis_history:label">
+            <value>Je kuna ongezeko la wanafunzi kutohudhuria masomo kwa sababu ya kuugua ugonjwa unaofanana kwa kipindi fulani ?</value>
+          </text>
+          <text id="/ebs/family_history:label">
+            <value>MAELEZO YA TETESI</value>
+          </text>
+          <text id="/ebs/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/contact/date_of_birth:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/contact/name:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/contact/sex:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/due_date:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/due_date_human_readable:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/user/contact_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/user/facility_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/user/name:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs/visit_id:label">
+            <value>-</value>
+          </text>
+          <text id="/ebs/inputs:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ebs id="ebs" prefix="J1!ebs!" delimiter="#" version="2025-03-14 00:00:00">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <visit_id/>
+            <due_date/>
+            <due_date_human_readable/>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <name/>
+              <sex/>
+              <date_of_birth/>
+            </contact>
+          </inputs>
+          <start/>
+          <end/>
+          <family_history>
+            <pregnant_or_miscarriage/>
+            <nutritional_problem/>
+            <total_report/>
+            <death_report/>
+            <total_dealth/>
+            <death_count/>
+            <malaria_history/>
+            <blood_history_hypertension/>
+            <diabetes_history/>
+            <tuberculosis_history/>
+            <cancer_history/>
+            <hiv_history/>
+            <mental_health/>
+            <sickle_cell/>
+            <eye_health_complaints/>
+            <medication_food/>
+            <client_risky_behaviors/>
+            <clients/>
+            <choose_report/>
+            <reporter_name/>
+            <reporter_phone/>
+          </family_history>
+          <client_gps>
+            <client_gps/>
+          </client_gps>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </ebs>
+      </instance>
+      <instance id="contact-summary"/>
+      <bind nodeset="/ebs/inputs" relevant="0"/>
+      <bind nodeset="/ebs/inputs/visit_id" type="string"/>
+      <bind nodeset="/ebs/inputs/due_date" type="string"/>
+      <bind nodeset="/ebs/inputs/due_date_human_readable" type="string"/>
+      <bind nodeset="/ebs/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/ebs/inputs/user/facility_id" type="string"/>
+      <bind nodeset="/ebs/inputs/user/name" type="string"/>
+      <bind nodeset="/ebs/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/ebs/inputs/contact/name" type="string"/>
+      <bind nodeset="/ebs/inputs/contact/sex" type="string"/>
+      <bind nodeset="/ebs/inputs/contact/date_of_birth" type="string"/>
+      <bind nodeset="/ebs/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/ebs/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/ebs/family_history/pregnant_or_miscarriage" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/nutritional_problem" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/total_report" type="select1" required="true()" relevant=" /ebs/family_history/nutritional_problem  = 'yes'"/>
+      <bind nodeset="/ebs/family_history/death_report" type="int" constraint=". &gt; 0" required="true()" relevant=" /ebs/family_history/total_report  = 'yes'"/>
+      <bind nodeset="/ebs/family_history/total_dealth" type="select1" required="true()" relevant=" /ebs/family_history/nutritional_problem  = 'yes'"/>
+      <bind nodeset="/ebs/family_history/death_count" type="int" constraint=". &gt; 0" required="true()" relevant=" /ebs/family_history/total_dealth  = 'yes'"/>
+      <bind nodeset="/ebs/family_history/malaria_history" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/blood_history_hypertension" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/diabetes_history" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/tuberculosis_history" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/cancer_history" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/hiv_history" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/mental_health" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/sickle_cell" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/eye_health_complaints" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/medication_food" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/client_risky_behaviors" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/clients" type="select1" required="true()"/>
+      <bind nodeset="/ebs/family_history/choose_report" type="select" required="true()" relevant=" /ebs/family_history/clients ='yes'"/>
+      <bind nodeset="/ebs/family_history/reporter_name" type="string" required="true()" relevant=" /ebs/family_history/clients ='yes'"/>
+      <bind nodeset="/ebs/family_history/reporter_phone" type="string" constraint="regex(., '^\+255[0-9]{9}$')" required="true()" jr:constraintMsg="jr:itext('/ebs/family_history/reporter_phone:jr:constraintMsg')" relevant=" /ebs/family_history/clients ='yes'"/>
+      <bind nodeset="/ebs/client_gps/client_gps" type="geopoint" required="true()"/>
+      <bind nodeset="/ebs/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="hidden" ref="/ebs/inputs">
+      <input ref="/ebs/inputs/visit_id"/>
+      <input ref="/ebs/inputs/due_date"/>
+      <input ref="/ebs/inputs/due_date_human_readable"/>
+      <group ref="/ebs/inputs/user">
+        <input ref="/ebs/inputs/user/contact_id">
+          <label ref="jr:itext('/ebs/inputs/user/contact_id:label')"/>
+        </input>
+        <input ref="/ebs/inputs/user/facility_id">
+          <label ref="jr:itext('/ebs/inputs/user/facility_id:label')"/>
+        </input>
+        <input ref="/ebs/inputs/user/name">
+          <label ref="jr:itext('/ebs/inputs/user/name:label')"/>
+        </input>
+      </group>
+      <group ref="/ebs/inputs/contact">
+        <input appearance="db-object" ref="/ebs/inputs/contact/_id"/>
+        <input ref="/ebs/inputs/contact/name"/>
+        <input ref="/ebs/inputs/contact/sex"/>
+        <input ref="/ebs/inputs/contact/date_of_birth"/>
+      </group>
+    </group>
+    <group appearance="Field-list" ref="/ebs/family_history">
+      <label ref="jr:itext('/ebs/family_history:label')"/>
+      <select1 ref="/ebs/family_history/pregnant_or_miscarriage">
+        <label ref="jr:itext('/ebs/family_history/pregnant_or_miscarriage:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/pregnant_or_miscarriage/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/pregnant_or_miscarriage/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/nutritional_problem">
+        <label ref="jr:itext('/ebs/family_history/nutritional_problem:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/nutritional_problem/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/nutritional_problem/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/total_report">
+        <label ref="jr:itext('/ebs/family_history/total_report:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/total_report/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/total_report/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ebs/family_history/death_report">
+        <label ref="jr:itext('/ebs/family_history/death_report:label')"/>
+      </input>
+      <select1 ref="/ebs/family_history/total_dealth">
+        <label ref="jr:itext('/ebs/family_history/total_dealth:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/total_dealth/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/total_dealth/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <input ref="/ebs/family_history/death_count">
+        <label ref="jr:itext('/ebs/family_history/death_count:label')"/>
+      </input>
+      <select1 ref="/ebs/family_history/malaria_history">
+        <label ref="jr:itext('/ebs/family_history/malaria_history:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/malaria_history/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/malaria_history/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/blood_history_hypertension">
+        <label ref="jr:itext('/ebs/family_history/blood_history_hypertension:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/blood_history_hypertension/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/blood_history_hypertension/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/diabetes_history">
+        <label ref="jr:itext('/ebs/family_history/diabetes_history:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/diabetes_history/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/diabetes_history/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/tuberculosis_history">
+        <label ref="jr:itext('/ebs/family_history/tuberculosis_history:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/tuberculosis_history/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/tuberculosis_history/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/cancer_history">
+        <label ref="jr:itext('/ebs/family_history/cancer_history:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/cancer_history/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/cancer_history/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/hiv_history">
+        <label ref="jr:itext('/ebs/family_history/hiv_history:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/hiv_history/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/hiv_history/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/mental_health">
+        <label ref="jr:itext('/ebs/family_history/mental_health:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/mental_health/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/mental_health/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/sickle_cell">
+        <label ref="jr:itext('/ebs/family_history/sickle_cell:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/sickle_cell/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/sickle_cell/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/eye_health_complaints">
+        <label ref="jr:itext('/ebs/family_history/eye_health_complaints:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/eye_health_complaints/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/eye_health_complaints/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/medication_food">
+        <label ref="jr:itext('/ebs/family_history/medication_food:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/medication_food/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/medication_food/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/client_risky_behaviors">
+        <label ref="jr:itext('/ebs/family_history/client_risky_behaviors:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/client_risky_behaviors/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/client_risky_behaviors/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select1 ref="/ebs/family_history/clients">
+        <label ref="jr:itext('/ebs/family_history/clients:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/clients/yes:label')"/>
+          <value>yes</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/clients/no:label')"/>
+          <value>no</value>
+        </item>
+      </select1>
+      <select ref="/ebs/family_history/choose_report">
+        <label ref="jr:itext('/ebs/family_history/choose_report:label')"/>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_1:label')"/>
+          <value>choose_report_1</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_2:label')"/>
+          <value>choose_report_2</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_3:label')"/>
+          <value>choose_report_3</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_4:label')"/>
+          <value>choose_report_4</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_5:label')"/>
+          <value>choose_report_5</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_6:label')"/>
+          <value>choose_report_6</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_7:label')"/>
+          <value>choose_report_7</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_8:label')"/>
+          <value>choose_report_8</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_9:label')"/>
+          <value>choose_report_9</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_10:label')"/>
+          <value>choose_report_10</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_11:label')"/>
+          <value>choose_report_11</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_12:label')"/>
+          <value>choose_report_12</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_13:label')"/>
+          <value>choose_report_13</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_14:label')"/>
+          <value>choose_report_14</value>
+        </item>
+        <item>
+          <label ref="jr:itext('/ebs/family_history/choose_report/choose_report_15:label')"/>
+          <value>choose_report_15</value>
+        </item>
+      </select>
+      <input ref="/ebs/family_history/reporter_name">
+        <label ref="jr:itext('/ebs/family_history/reporter_name:label')"/>
+      </input>
+      <input ref="/ebs/family_history/reporter_phone">
+        <label ref="jr:itext('/ebs/family_history/reporter_phone:label')"/>
+      </input>
+    </group>
+    <group appearance="Field-list" ref="/ebs/client_gps">
+      <label ref="jr:itext('/ebs/client_gps:label')"/>
+      <input ref="/ebs/client_gps/client_gps">
+        <label ref="jr:itext('/ebs/client_gps/client_gps:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>
