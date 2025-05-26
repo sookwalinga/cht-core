@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 
-import { Actions } from '@mm-actions/tasks';
 import { Actions as GlobalActions } from '@mm-actions/global';
+import { Actions } from '@mm-actions/tasks';
 
 const initialState = {
   tasksList: [] as any[],
@@ -14,39 +14,6 @@ const initialState = {
   },
 };
 
-<<<<<<< HEAD
-const orderByDueDateAndPriority = (t1, t2) => {
-=======
-
-const orderByDueDateAndPriority1 = (t1, t2) => {
->>>>>>> bb0310105beda41aafaa46a8efee46ee2bbee976
-  const lhs = t1?.dueDate;
-  const rhs = t2?.dueDate;
-
-  const lhsPriority = t1?.priority;
-  const rhsPriority = t2?.priority;
-
-  if ((lhsPriority && !rhsPriority) || lhsPriority > rhsPriority) {
-    return -1;
-  }
-
-  if ((!lhsPriority && rhsPriority) || lhsPriority < rhsPriority) {
-    return 1;
-  }
-
-  if (!lhs && !rhs) {
-    return 0;
-  }
-  if (!lhs) {
-    return 1;
-  }
-  if (!rhs) {
-    return -1;
-  }
-
-  return lhs < rhs ? -1 : 1;
-};
-
 /**
  * Task prioritization algorithm that combines:
  * 1. Overdue status (most urgent)
@@ -54,7 +21,7 @@ const orderByDueDateAndPriority1 = (t1, t2) => {
  * 3. Priority (importance)
  * 4. Due date (soonest first)
  * 5. Tasks without due dates (lowest priority)
- * 
+ *
  * Sorting rules (in order):
  * 1. Overdue tasks appear first (most urgent), sorted by priority (higher first)
  * 2. Tasks due today appear next, sorted by priority (higher first)
@@ -70,16 +37,21 @@ const orderByDueDateAndPriority = (t1, t2) => {
       return 6;
     } else if (typeof t?.priority === 'string') {
       return 0;
-    } else {
-      return t?.priority ?? 0;
     }
+    return t?.priority ?? 0;
   };
 
   const now = new Date();
-  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
-  
+  const startOfToday = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+  ).getTime();
+
   const getDateScore = (t) => {
-    if (!t?.dueDate) return Infinity;
+    if (!t?.dueDate) {
+      return Infinity;
+    }
     const date = new Date(t.dueDate).getTime();
     return Math.floor((date - startOfToday) / (1000 * 60 * 60 * 24));
   };
@@ -90,9 +62,15 @@ const orderByDueDateAndPriority = (t1, t2) => {
   const days2 = getDateScore(t2);
 
   const getTaskStatus = (days) => {
-    if (days === Infinity) return 3; //No date
-    if (days < 0) return 0; // Over due
-    if (days === 0) return 1; //Due today
+    if (days === Infinity) {
+      return 3;
+    } //No date
+    if (days < 0) {
+      return 0;
+    } // Over due
+    if (days === 0) {
+      return 1;
+    } //Due today
     return 2; //Future
   };
 
@@ -118,9 +96,6 @@ const orderByDueDateAndPriority = (t1, t2) => {
   return 0;
 };
 
-
-
-
 const _tasksReducer = createReducer(
   initialState,
   on(GlobalActions.clearSelected, (state) => ({ ...state, selected: null })),
@@ -132,16 +107,22 @@ const _tasksReducer = createReducer(
     };
   }),
 
-  on(Actions.setTasksLoaded, (state, { payload: { loaded }}) => ({ ...state, loaded })),
+  on(Actions.setTasksLoaded, (state, { payload: { loaded } }) => ({
+    ...state,
+    loaded,
+  })),
 
-  on(Actions.setSelectedTask, (state, { payload: { selected } }) => ({ ...state, selected })),
+  on(Actions.setSelectedTask, (state, { payload: { selected } }) => ({
+    ...state,
+    selected,
+  })),
 
   on(Actions.setLastSubmittedTask, (state, { payload: { task } }) => ({
     ...state,
-    tasksList: state.tasksList.filter(t => task?._id !== t._id),
+    tasksList: state.tasksList.filter((t) => task?._id !== t._id),
     taskGroup: {
       ...state.taskGroup,
-      lastSubmittedTask: task
+      lastSubmittedTask: task,
     },
   })),
 
@@ -165,16 +146,18 @@ const _tasksReducer = createReducer(
   on(Actions.setTaskGroup, (state, { payload: { taskGroup } }) => ({
     ...state,
     taskGroup: {
-      lastSubmittedTask: taskGroup.lastSubmittedTask ?? state.taskGroup.lastSubmittedTask,
+      lastSubmittedTask:
+        taskGroup.lastSubmittedTask ?? state.taskGroup.lastSubmittedTask,
       contact: taskGroup.contact ?? state.taskGroup.contact,
-      loadingContact: taskGroup.loadingContact ?? state.taskGroup.loadingContact,
+      loadingContact:
+        taskGroup.loadingContact ?? state.taskGroup.loadingContact,
     },
   })),
 
   on(Actions.clearTaskGroup, (state) => ({
     ...state,
     taskGroup: { ...initialState.taskGroup },
-  }))
+  })),
 );
 
 export const tasksReducer = (state, action) => {
