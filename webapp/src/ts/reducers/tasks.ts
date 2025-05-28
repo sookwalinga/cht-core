@@ -15,22 +15,6 @@ const initialState = {
   },
 };
 
-// const orderByDueDateAndPriority = (t1, t2) => {
-// const lhs = t1?.dueDate;
-// const rhs = t2?.dueDate;
-// if (!lhs && !rhs) {
-//   return 0;
-// }
-// if (!lhs) {
-//   return 1;
-// }
-// if (!rhs) {
-//   return -1;
-// }
-
-// return lhs < rhs ? -1 : 1;
-// };
-
 /**
  * Task prioritization algorithm that combines:
  * 1. Overdue status (most urgent)
@@ -55,18 +39,14 @@ const orderByDueDateAndPriority = (t1, t2) => {
     if (moment(dueDate).isValid()) {
       return moment(dueDate).valueOf();
     }
-    return NaN; // undefined/null/other
+    return NaN; //Invalid (bools/undefined/null/other)
   };
 
-  // Handle priority comparison (strings are considered low priority)
   const getPriorityValue = (priority) => {
     if (typeof priority === 'number') {
       return priority;
     }
-    if (typeof priority === 'string') {
-      return -Infinity;
-    } // Strings are lowest
-    return 0; // undefined/null/other
+    return NaN; // Invalid(bools/Strings/undefined/null/other)
   };
 
   const lhsDate = getDueDate(t1?.dueDate);
@@ -89,16 +69,30 @@ const orderByDueDateAndPriority = (t1, t2) => {
     return -1; // lhs goes before rhs
   }
 
-  // First sort by dueDate
+  // Sort by dueDate (earliest first)
   if (lhsDate !== rhsDate) {
     return lhsDate - rhsDate;
   }
 
-  // If dueDates are equal, sort by priority (descending - higher priority first)
+  if (isNaN(lhsPriority) && isNaN(rhsPriority)) {
+    // Both tasks have no valid priority, maintain original order
+    return 0;
+  }
+
+  if (isNaN(lhsPriority)) {
+    // lhs has no valid priority, rhs has a valid priority
+    return -1; // lhs goes before rhs
+  }
+  if (isNaN(rhsPriority)) {
+    // rhs has no valid priority, lhs has a valid priority
+    return 1; // lhs goes after rhs
+  }
+
+  // Sort by priority (descending - higher priority first)
   if (lhsPriority !== rhsPriority) {
     return rhsPriority - lhsPriority;
   }
-  // If both are equal, maintain original order
+  // If both due date and priority are equal, maintain original order
   return 0;
 };
 
