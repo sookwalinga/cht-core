@@ -1,3 +1,4 @@
+// @ts-nocheck
 const chai = require('chai');
 const expect = chai.expect;
 const TestRunner = require('cht-conf-test-harness');
@@ -61,18 +62,18 @@ describe('pregnancy home visit tests', () => {
   };
 
   const pregnancyHomeVisitTaskDays = getRangeForTask(
-    pregnancyHomeVisitTaskFirst,
+    pregnancyHomeVisitTaskFirst
   ).concat(getRangeForTask(pregnancyHomeVisitTaskSecond));
 
   const pregnancyHomeVisitUnknownLMPTaskDays = getRangeForTask(
-    pregnancyHomeVisitUnknownLMPTask,
+    pregnancyHomeVisitUnknownLMPTask
   );
 
   it('pregnancy home visit task should show', async () => {
     await harness.setNow('1999-10-10'); //10 weeks after LMP date
     const pregnancy = await harness.fillForm(
       'pregnancy',
-      ...pregnancyRegistrationScenarios.safe10Weeks,
+      ...pregnancyRegistrationScenarios.safe10Weeks
     );
     expect(pregnancy.errors).to.be.empty;
 
@@ -80,14 +81,14 @@ describe('pregnancy home visit tests', () => {
       70,
       32 * 7,
       pregnancyHomeVisitTaskFirst,
-      TEST_INTERVAL_DAYS,
+      TEST_INTERVAL_DAYS
     ).concat(
       getTaskTestDays(
         32 * 7 + 1,
         MAX_DAYS_IN_PREGNANCY,
         pregnancyHomeVisitTaskSecond,
-        TEST_INTERVAL_DAYS,
-      ),
+        TEST_INTERVAL_DAYS
+      )
     );
     for (const day of daysToTest) {
       await harness.setNow('1999-08-01'); //10 weeks after LMP date
@@ -107,7 +108,7 @@ describe('pregnancy home visit tests', () => {
     await harness.setNow('1999-10-10');
     const pregnancy = await harness.fillForm(
       'pregnancy',
-      ...pregnancyRegistrationScenarios.safe10Weeks,
+      ...pregnancyRegistrationScenarios.safe10Weeks
     );
     expect(pregnancy.errors).to.be.empty;
 
@@ -119,7 +120,7 @@ describe('pregnancy home visit tests', () => {
 
     const followupFormResult = await harness.loadAction(
       taskForHomeVisit[0],
-      ...pregnancyHomeVisitScenarios.safeNoFacilityVisits,
+      ...pregnancyHomeVisitScenarios.safeNoFacilityVisits
     );
 
     expect(followupFormResult.errors).to.be.empty;
@@ -138,14 +139,14 @@ describe('pregnancy home visit tests', () => {
     await harness.setNow('2000-01-01'); //Registration Date
     const pregnancy = await harness.fillForm(
       'pregnancy',
-      ...pregnancyRegistrationScenarios.lmpUnknown,
+      ...pregnancyRegistrationScenarios.lmpUnknown
     );
     expect(pregnancy.errors).to.be.empty;
     for (const day of getTaskTestDays(
       0,
       MAX_DAYS_IN_PREGNANCY,
       pregnancyHomeVisitUnknownLMPTask,
-      TEST_INTERVAL_DAYS,
+      TEST_INTERVAL_DAYS
     )) {
       await harness.setNow('2000-01-01'); //Registration Date
       await harness.flush(day);
@@ -165,7 +166,7 @@ describe('pregnancy home visit tests', () => {
     await harness.setNow('1999-10-10'); //10 weeks after LMP date
     const pregnancy = await harness.fillForm(
       'pregnancy',
-      ...pregnancyRegistrationScenarios.safe10Weeks,
+      ...pregnancyRegistrationScenarios.safe10Weeks
     );
     expect(pregnancy.errors).to.be.empty;
     let cleared = false;
@@ -173,14 +174,14 @@ describe('pregnancy home visit tests', () => {
       70,
       32 * 7,
       pregnancyHomeVisitTaskFirst,
-      TEST_INTERVAL_DAYS,
+      TEST_INTERVAL_DAYS
     ).concat(
       getTaskTestDays(
         32 * 7 + 1,
         MAX_DAYS_IN_PREGNANCY,
         pregnancyHomeVisitTaskSecond,
-        TEST_INTERVAL_DAYS,
-      ),
+        TEST_INTERVAL_DAYS
+      )
     )) {
       await harness.setNow('1999-08-01'); //10 weeks after LMP date
       await harness.flush(day);
@@ -193,7 +194,7 @@ describe('pregnancy home visit tests', () => {
 
         const followupFormResult = await harness.loadAction(
           taskForHomeVisit[0],
-          ...pregnancyHomeVisitScenarios.clearAll,
+          ...pregnancyHomeVisitScenarios.clearAll
         );
 
         expect(followupFormResult.errors).to.be.empty;
@@ -208,7 +209,7 @@ describe('pregnancy home visit tests', () => {
     await harness.setNow('2000-01-01');
     const pregnancy = await harness.fillForm(
       'pregnancy',
-      ...pregnancyRegistrationScenarios.lmpUnknown,
+      ...pregnancyRegistrationScenarios.lmpUnknown
     );
     expect(pregnancy.errors).to.be.empty;
     let cleared = false;
@@ -216,7 +217,7 @@ describe('pregnancy home visit tests', () => {
       0,
       MAX_DAYS_IN_PREGNANCY,
       pregnancyHomeVisitUnknownLMPTask,
-      TEST_INTERVAL_DAYS,
+      TEST_INTERVAL_DAYS
     )) {
       await harness.setNow('2000-01-01');
       await harness.flush(day);
@@ -229,7 +230,7 @@ describe('pregnancy home visit tests', () => {
 
         const followupFormResult = await harness.loadAction(
           taskForHomeVisit[0],
-          ...pregnancyHomeVisitScenarios.clearAll,
+          ...pregnancyHomeVisitScenarios.clearAll
         );
 
         expect(followupFormResult.errors).to.be.empty;
