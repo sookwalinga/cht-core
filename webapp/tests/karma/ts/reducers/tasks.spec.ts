@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
-import { Actions } from '@mm-actions/tasks';
 import { Actions as GlobalActions } from '@mm-actions/global';
+import { Actions } from '@mm-actions/tasks';
 import { tasksReducer } from '@mm-reducers/tasks';
 
 describe('Tasks reducer', () => {
@@ -250,7 +250,7 @@ describe('Tasks reducer', () => {
           { _id: 'task1', dueDate: false, state: 'Ready', field: 1 },
           { _id: 'task2', dueDate: undefined, state: 'Ready', field: 2 },
           { _id: 'task3', dueDate: 0, state: 'Ready', field: 3 },
-        ]
+        ],
       });
     });
   });
@@ -277,7 +277,7 @@ describe('Tasks reducer', () => {
         tasksList: [
           { _id: 'task1', dueDate: 22, state: 'Ready' },
           { _id: 'task2', dueDate: 33, state: 'Ready' },
-          { _id: 'task_id2', due: '33', field: 2 }
+          { _id: 'task_id2', due: '33', field: 2 },
         ],
         loaded: true,
         taskGroup: {

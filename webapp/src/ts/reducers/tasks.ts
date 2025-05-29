@@ -30,6 +30,9 @@ const initialState = {
  * 5. Tasks without due dates appear last
  */
 const orderByDueDateAndPriority = (t1, t2) => {
+  console.log('TASK 1', t1);
+  console.log('TASK 2', t2);
+
   const getPriorityScore = (t) => {
     if (t?.priority === 'high') {
       return 10;
