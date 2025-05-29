@@ -314,7 +314,7 @@ describe('Tasks reducer', () => {
         },
         {
           _id: 'task9',
-          dueDate: undefined,
+          dueDate: null,
           priority: 3,
           state: 'Ready',
           field: 9,
@@ -375,7 +375,7 @@ describe('Tasks reducer', () => {
           },
           {
             _id: 'task9',
-            dueDate: undefined,
+            dueDate: null,
             priority: 3,
             state: 'Ready',
             field: 9,

@@ -16,19 +16,10 @@ const initialState = {
 };
 
 /**
- * Task prioritization algorithm that combines:
- * 1. Overdue status (most urgent)
- * 2. Due today status (high urgency)
- * 3. Priority (importance)
- * 4. Due date (soonest first)
- * 5. Tasks without due dates (lowest priority)
- *
  * Sorting rules (in order):
- * 1. Overdue tasks appear first (most urgent), sorted by priority (higher first)
- * 2. Tasks due today appear next, sorted by priority (higher first)
- * 3. Then sort other dates too by date and priority (high to low)
- * 4. For equal priority, sort by due date (earlier first)
- * 5. Tasks without due dates and/or priorities appear last
+ * 1. Valid priorities sort first (higher value = higher priority)
+ * 2. Equal priorities sort by due date (earlier = higher priority)
+ * 3. Invalid/missing values sort last while maintaining original order
  */
 
 const orderByDueDateAndPriority = (t1, t2) => {
@@ -39,62 +30,57 @@ const orderByDueDateAndPriority = (t1, t2) => {
     if (moment(dueDate).isValid()) {
       return moment(dueDate).valueOf();
     }
-    return NaN; //Invalid (bools/undefined/null/other)
+    return NaN;
   };
 
   const getPriorityValue = (priority) => {
     if (typeof priority === 'number' && priority >= 0) {
       return priority;
     }
-    return NaN; // Invalid(bools/Strings/undefined/null/other)
+    return NaN;
   };
 
   const lhsDate = getDueDate(t1?.dueDate);
   const rhsDate = getDueDate(t2?.dueDate);
-
   const lhsPriority = getPriorityValue(t1?.priority);
   const rhsPriority = getPriorityValue(t2?.priority);
 
+  const compareDates = () => {
+    // Both dates invalid, maintain original order
+    if (isNaN(lhsDate) && isNaN(rhsDate)) {
+      return 0;
+    }
+    // Move tasks without dates to end
+    if (isNaN(lhsDate)) {
+      return 1;
+    }
+    if (isNaN(rhsDate)) {
+      return -1;
+    }
+    // Sort by date ascending
+    return lhsDate - rhsDate;
+  };
+
+  // Priority comparison cascade
   if (isNaN(lhsPriority) && isNaN(rhsPriority)) {
-    // Both tasks have no valid priority, maintain original order
-    return 0;
+    return compareDates(); // Both priorities invalid, sort by date
   }
 
+  // Move tasks without valid priorities to end
   if (isNaN(lhsPriority)) {
-    // lhs has no valid priority, rhs has a valid priority
-    return -1; // lhs goes before rhs
+    return 1;
   }
   if (isNaN(rhsPriority)) {
-    // rhs has no valid priority, lhs has a valid priority
-    return 1; // lhs goes after rhs
+    return -1;
   }
 
-  // Sort by priority (descending - higher priority first)
+  // Both priorities are valid, sort in descending order
   if (lhsPriority !== rhsPriority) {
     return rhsPriority - lhsPriority;
   }
 
-  if (isNaN(lhsDate) && isNaN(rhsDate)) {
-    // Both tasks have no due date, maintain original order
-    return 0;
-  }
-
-  if (isNaN(lhsDate)) {
-    // lhs has no due date, rhs has a due date
-    return 1; // lhs goes after rhs
-  }
-  if (isNaN(rhsDate)) {
-    // rhs has no due date, lhs has a due date
-    return -1; // lhs goes before rhs
-  }
-
-  // Sort by dueDate (earliest first)
-  if (lhsDate !== rhsDate) {
-    return lhsDate - rhsDate;
-  }
-
-  // If both due date and priority are equal, maintain original order
-  return 0;
+  // Same priority, sort by date
+  return compareDates();
 };
 
 const _tasksReducer = createReducer(
@@ -102,17 +88,6 @@ const _tasksReducer = createReducer(
   on(GlobalActions.clearSelected, (state) => ({ ...state, selected: null })),
 
   on(Actions.setTasksList, (state, { payload: { tasks } }) => {
-    console.info('<<<<<<<<<<<<SORTED TASKS>>>>>>>>>>>>>>>');
-    console.info(
-      [...tasks].sort(orderByDueDateAndPriority).map((t) => ({
-        contact: t.contact?.name,
-        title: t.title,
-        dueDate: t.dueDate,
-        priority: t.priority,
-        priorityLabel: t.priorityLabel,
-      }))
-    );
-
     return {
       ...state,
       tasksList: [...tasks].sort(orderByDueDateAndPriority),
