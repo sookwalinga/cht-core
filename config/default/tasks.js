@@ -515,7 +515,7 @@ module.exports = [
       console.warn(event);
       console.warn(dueDate);
       return {
-        level: 10,
+        level: 8,
         label: 'High',
       };
     },

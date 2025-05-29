@@ -2,6 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 
 import { Actions as GlobalActions } from '@mm-actions/global';
 import { Actions } from '@mm-actions/tasks';
+import moment from 'moment';
 
 const initialState = {
   tasksList: [] as any[],
@@ -15,19 +16,19 @@ const initialState = {
 };
 
 // const orderByDueDateAndPriority = (t1, t2) => {
-//   const lhs = t1?.dueDate;
-//   const rhs = t2?.dueDate;
-//   if (!lhs && !rhs) {
-//     return 0;
-//   }
-//   if (!lhs) {
-//     return 1;
-//   }
-//   if (!rhs) {
-//     return -1;
-//   }
+// const lhs = t1?.dueDate;
+// const rhs = t2?.dueDate;
+// if (!lhs && !rhs) {
+//   return 0;
+// }
+// if (!lhs) {
+//   return 1;
+// }
+// if (!rhs) {
+//   return -1;
+// }
 
-//   return lhs < rhs ? -1 : 1;
+// return lhs < rhs ? -1 : 1;
 // };
 
 /**
@@ -47,9 +48,15 @@ const initialState = {
  */
 
 const orderByDueDateAndPriority = (t1, t2) => {
-  // Handle dueDate comparison
-  const lhsDate = typeof t1?.dueDate === 'number' ? t1.dueDate : Infinity;
-  const rhsDate = typeof t2?.dueDate === 'number' ? t2.dueDate : Infinity;
+  const getDueDate = (dueDate) => {
+    if (typeof dueDate === 'number') {
+      return dueDate;
+    }
+    if (moment(dueDate).isValid()) {
+      return moment(dueDate).valueOf();
+    }
+    return NaN; // undefined/null/other
+  };
 
   // Handle priority comparison (strings are considered low priority)
   const getPriorityValue = (priority) => {
@@ -62,8 +69,25 @@ const orderByDueDateAndPriority = (t1, t2) => {
     return 0; // undefined/null/other
   };
 
+  const lhsDate = getDueDate(t1?.dueDate);
+  const rhsDate = getDueDate(t2?.dueDate);
+
   const lhsPriority = getPriorityValue(t1?.priority);
   const rhsPriority = getPriorityValue(t2?.priority);
+
+  if (isNaN(lhsDate) && isNaN(rhsDate)) {
+    // Both tasks have no due date, maintain original order
+    return 0;
+  }
+
+  if (isNaN(lhsDate)) {
+    // lhs has no due date, rhs has a due date
+    return 1; // lhs goes after rhs
+  }
+  if (isNaN(rhsDate)) {
+    // rhs has no due date, lhs has a due date
+    return -1; // lhs goes before rhs
+  }
 
   // First sort by dueDate
   if (lhsDate !== rhsDate) {
@@ -74,7 +98,6 @@ const orderByDueDateAndPriority = (t1, t2) => {
   if (lhsPriority !== rhsPriority) {
     return rhsPriority - lhsPriority;
   }
-
   // If both are equal, maintain original order
   return 0;
 };
@@ -84,6 +107,17 @@ const _tasksReducer = createReducer(
   on(GlobalActions.clearSelected, (state) => ({ ...state, selected: null })),
 
   on(Actions.setTasksList, (state, { payload: { tasks } }) => {
+    console.info('<<<<<<<<<<<<SORTED TASKS>>>>>>>>>>>>>>>');
+    console.info(
+      [...tasks].sort(orderByDueDateAndPriority).map((t) => ({
+        contact: t.contact?.name,
+        title: t.title,
+        dueDate: t.dueDate,
+        priority: t.priority,
+        priorityLabel: t.priorityLabel,
+      }))
+    );
+
     return {
       ...state,
       tasksList: [...tasks].sort(orderByDueDateAndPriority),
