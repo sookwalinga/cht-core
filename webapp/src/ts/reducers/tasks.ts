@@ -43,7 +43,7 @@ const orderByDueDateAndPriority = (t1, t2) => {
   };
 
   const getPriorityValue = (priority) => {
-    if (typeof priority === 'number') {
+    if (typeof priority === 'number' && priority >= 0) {
       return priority;
     }
     return NaN; // Invalid(bools/Strings/undefined/null/other)
@@ -54,6 +54,25 @@ const orderByDueDateAndPriority = (t1, t2) => {
 
   const lhsPriority = getPriorityValue(t1?.priority);
   const rhsPriority = getPriorityValue(t2?.priority);
+
+  if (isNaN(lhsPriority) && isNaN(rhsPriority)) {
+    // Both tasks have no valid priority, maintain original order
+    return 0;
+  }
+
+  if (isNaN(lhsPriority)) {
+    // lhs has no valid priority, rhs has a valid priority
+    return -1; // lhs goes before rhs
+  }
+  if (isNaN(rhsPriority)) {
+    // rhs has no valid priority, lhs has a valid priority
+    return 1; // lhs goes after rhs
+  }
+
+  // Sort by priority (descending - higher priority first)
+  if (lhsPriority !== rhsPriority) {
+    return rhsPriority - lhsPriority;
+  }
 
   if (isNaN(lhsDate) && isNaN(rhsDate)) {
     // Both tasks have no due date, maintain original order
@@ -74,24 +93,6 @@ const orderByDueDateAndPriority = (t1, t2) => {
     return lhsDate - rhsDate;
   }
 
-  if (isNaN(lhsPriority) && isNaN(rhsPriority)) {
-    // Both tasks have no valid priority, maintain original order
-    return 0;
-  }
-
-  if (isNaN(lhsPriority)) {
-    // lhs has no valid priority, rhs has a valid priority
-    return -1; // lhs goes before rhs
-  }
-  if (isNaN(rhsPriority)) {
-    // rhs has no valid priority, lhs has a valid priority
-    return 1; // lhs goes after rhs
-  }
-
-  // Sort by priority (descending - higher priority first)
-  if (lhsPriority !== rhsPriority) {
-    return rhsPriority - lhsPriority;
-  }
   // If both due date and priority are equal, maintain original order
   return 0;
 };
