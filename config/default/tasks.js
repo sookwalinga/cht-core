@@ -404,15 +404,6 @@ module.exports = [
         label: 'High',
       };
     },
-<<<<<<< HEAD
-    priority: function(contact, report, event, dueDate) {
-      console.warn(contact);
-      console.warn(event);
-      console.warn(dueDate);
-      return {
-        level: 10,
-        label: 'High',
-=======
     priority: function(contact, report) {
       console.warn('CONTACT', contact);
       console.warn('REPORT', report);
@@ -420,7 +411,6 @@ module.exports = [
       return {
         level: score,
         label: getPriorityCategory(score),
->>>>>>> bb0310105beda41aafaa46a8efee46ee2bbee976
       };
     },
     actions: [
@@ -484,15 +474,6 @@ module.exports = [
       return {
         level: 10,
         label: 'High',
-=======
-    priority: function(contact, report) {
-      console.warn('CONTACT', contact);
-      console.warn('REPORT', report);
-      const score = 10;
-      return {
-        level: score,
-        label: getPriorityCategory(score),
->>>>>>> bb0310105beda41aafaa46a8efee46ee2bbee976
       };
     },
     actions: [
