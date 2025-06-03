@@ -23,7 +23,7 @@ const initialState = {
  */
 
 const orderByDueDateAndPriority = (t1, t2) => {
-  const getDueDate = dueDate => {
+  const getDueDate = (dueDate) => {
     if (typeof dueDate === 'number') {
       return dueDate;
     }
@@ -43,7 +43,7 @@ const orderByDueDateAndPriority = (t1, t2) => {
     return NaN;
   };
 
-  const getPriorityValue = priority => {
+  const getPriorityValue = (priority) => {
     if (typeof priority === 'number' && priority >= 0) {
       return priority;
     }
@@ -95,7 +95,7 @@ const orderByDueDateAndPriority = (t1, t2) => {
 
 const _tasksReducer = createReducer(
   initialState,
-  on(GlobalActions.clearSelected, state => ({ ...state, selected: null })),
+  on(GlobalActions.clearSelected, (state) => ({ ...state, selected: null })),
 
   on(Actions.setTasksList, (state, { payload: { tasks } }) => {
     return {
@@ -116,7 +116,7 @@ const _tasksReducer = createReducer(
 
   on(Actions.setLastSubmittedTask, (state, { payload: { task } }) => ({
     ...state,
-    tasksList: state.tasksList.filter(t => task?._id !== t._id),
+    tasksList: state.tasksList.filter((t) => task?._id !== t._id),
     taskGroup: {
       ...state.taskGroup,
       lastSubmittedTask: task,
@@ -151,7 +151,7 @@ const _tasksReducer = createReducer(
     },
   })),
 
-  on(Actions.clearTaskGroup, state => ({
+  on(Actions.clearTaskGroup, (state) => ({
     ...state,
     taskGroup: { ...initialState.taskGroup },
   })),
