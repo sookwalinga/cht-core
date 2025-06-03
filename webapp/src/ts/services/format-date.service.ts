@@ -115,7 +115,7 @@ export class FormatDateService {
     const today = moment().startOf('day');
     const diff = date.diff(today, 'days');
 
-    if (diff < 0) {
+    if (diff <= 0) {
       if (this.config.taskDaysOverdue) {
         return this.translateService.instant('task.overdue.days', {
           DAYS: Math.abs(diff),
@@ -123,10 +123,6 @@ export class FormatDateService {
       }
 
       return this.translateService.instant('task.overdue');
-    }
-
-    if (diff === 0) {
-      return this.translateService.instant('Due today');
     }
 
     if (diff <= this.config.taskDayLimit) {

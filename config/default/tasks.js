@@ -1,5 +1,4 @@
 // @ts-nocheck
-/* eslint-disable implicit-arrow-linebreak */
 const extras = require('./nools-extras');
 
 const {
@@ -74,17 +73,6 @@ function checkTaskResolvedForHomeVisit(contact, report, event, dueDate) {
   );
 }
 
-function getPriorityCategory(score) {
-  if (score < 6) {
-    return 'Low priority';
-  } else if (score >= 6 && score <= 8) {
-    return 'Medium priority';
-  } else if (score > 8) {
-    return 'High priority';
-  }
-  return '';
-}
-
 module.exports = [
   //ANC Home Visit: 12, 20, 26, 30, 34, 36, 38, 40 weeks (Known LMP)
   {
@@ -135,18 +123,9 @@ module.exports = [
         addDays(report.reported_date, MAX_DAYS_IN_PREGNANCY + 7) >= today
       );
     },
+
     resolvedIf: checkTaskResolvedForHomeVisit,
-    priority: function (contact, report) {
-      console.warn('CONTACT', contact);
-      console.warn('REPORT', report);
-      const taskTypeScore = 8;
-      const individualScore = 2;
-      const score = taskTypeScore + individualScore;
-      return {
-        level: score,
-        label: getPriorityCategory(score),
-      };
-    },
+
     actions: [
       {
         type: 'report',
@@ -155,8 +134,7 @@ module.exports = [
       },
     ],
     //every two weeks from reported date until 42nd week, show before due date: 6 days, show after due date: 7 days
-    events: [...Array(21).keys()].map((i) =>
-      generateEventForHomeVisit((i + 1) * 2, 6, 7)
+    events: [...Array(21).keys()].map(i => generateEventForHomeVisit((i + 1) * 2, 6, 7)
     ),
   },
 
@@ -190,20 +168,11 @@ module.exports = [
         endTime
       );
     },
-    priority: function (contact, report) {
-      console.warn('CONTACT', contact);
-      console.warn('REPORT', report);
-      return {
-        level: 'medium',
-        label: '',
-      };
-    },
     actions: [
       {
         type: 'report',
         form: 'pregnancy_facility_visit_reminder',
         label: 'Pregnancy facility visit reminder',
-        // @ts-ignore
         modifyContent: function (content, contact, report) {
           content.source_visit_date = getField(
             report,
@@ -217,7 +186,6 @@ module.exports = [
         id: 'pregnancy-facility-visit-reminder',
         start: 3,
         end: 7,
-        // @ts-ignore
         dueDate: function (event, contact, report) {
           //next visit date
           return getDateISOLocal(
@@ -261,24 +229,6 @@ module.exports = [
         startTime,
         endTime
       );
-    },
-    priority: function (contact, report) {
-      console.warn('CONTACT', contact);
-      console.warn('REPORT', report);
-      const score = 10;
-      return {
-        level: score,
-        label: getPriorityCategory(score),
-      };
-    },
-    priority: function (contact, report) {
-      console.warn('CONTACT', contact);
-      console.warn('REPORT', report);
-      const score = 10;
-      return {
-        level: score,
-        label: getPriorityCategory(score),
-      };
     },
     actions: [
       {
@@ -389,24 +339,6 @@ module.exports = [
         endTime
       );
     },
-    priority: function (contact, report) {
-      console.warn('CONTACT', contact);
-      console.warn('REPORT', report);
-      const score = 3;
-      return {
-        level: score,
-        label: getPriorityCategory(score),
-      };
-    },
-    priority: function(contact, report) {
-      console.warn('CONTACT', contact);
-      console.warn('REPORT', report);
-      const score = 3;
-      return {
-        level: score,
-        label: getPriorityCategory(score),
-      };
-    },
     actions: [
       {
         type: 'report',
@@ -463,7 +395,6 @@ module.exports = [
         endTime
       );
     },
-    // @ts-ignore
     priority: function (contact, report, event, dueDate) {
       console.warn(contact);
       console.warn(event);
@@ -546,18 +477,7 @@ module.exports = [
         endTime
       );
     },
-    // @ts-ignore
     priority: function (contact, report, event, dueDate) {
-      console.warn(contact);
-      console.warn(event);
-      console.warn(dueDate);
-      return {
-        level: 8,
-        label: 'High',
-      };
-    },
-<<<<<<< HEAD
-    priority: function(contact, report, event, dueDate) {
       console.warn(contact);
       console.warn(event);
       console.warn(dueDate);
