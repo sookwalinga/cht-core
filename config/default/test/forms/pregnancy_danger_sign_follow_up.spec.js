@@ -5,23 +5,27 @@ const harnessDefaults = require('../../harness.defaults.json');
 
 const harness = new TestRunner();
 const TODAY = '2000-01-01';
-const patientDoc = harnessDefaults.docs.find(doc => doc._id === harnessDefaults.subject);
+const patientDoc = harnessDefaults.docs.find(
+  (doc) => doc._id === harnessDefaults.subject
+);
 
 describe('Pregnancy danger sign follow-up form', () => {
   before(() => harness.start());
 
   after(() => harness.stop());
 
-  beforeEach(
-    async() => {
-      await harness.clear();
-      await harness.setNow(new Date(TODAY));
-    });
+  beforeEach(async () => {
+    await harness.clear();
+    await harness.setNow(new Date(TODAY));
+  });
 
   afterEach(() => expect(harness.consoleErrors).to.be.empty);
 
-  it('saves data when a danger sign is recorded', async() => {
-    const result = await harness.fillForm('pregnancy_danger_sign_follow_up', ...followUp.danger);
+  it('saves data when a danger sign is recorded', async () => {
+    const result = await harness.fillForm(
+      'pregnancy_danger_sign_follow_up',
+      ...followUp.danger
+    );
 
     expect(result.errors).to.be.empty;
     expect(result.report.fields).to.deep.include({
@@ -56,8 +60,11 @@ describe('Pregnancy danger sign follow-up form', () => {
     });
   });
 
-  it('saves data when no danger signs are recorded', async() => {
-    const result = await harness.fillForm('pregnancy_danger_sign_follow_up', ...followUp.cured);
+  it('saves data when no danger signs are recorded', async () => {
+    const result = await harness.fillForm(
+      'pregnancy_danger_sign_follow_up',
+      ...followUp.cured
+    );
 
     expect(result.errors).to.be.empty;
     expect(result.report.fields).to.deep.include({

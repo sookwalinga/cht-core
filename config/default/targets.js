@@ -9,7 +9,6 @@ const {
 } = extras;
 
 module.exports = [
-
   {
     id: 'deaths-this-month',
     type: 'count',
@@ -36,7 +35,9 @@ module.exports = [
     appliesTo: 'reports',
     appliesToType: ['pregnancy'],
     appliesIf: function (contact, report) {
-      if (!report) {return false;}
+      if (!report) {
+        return false;
+      }
       return getMostRecentLMPDateForPregnancy(contact, report);
     },
     date: 'reported',
@@ -57,10 +58,9 @@ module.exports = [
     },
     date: (contact) => contact.contact.date_of_birth,
     dhis: {
-      dataElement: 'kB0ZBFisE0e',
+      dataElement: 'kB0ZBFisE0e'
     }
   },
-
 
   // ANC: Number of active pregnancies as a count - all time
   {
@@ -90,7 +90,9 @@ module.exports = [
     appliesTo: 'reports',
     appliesToType: ['pregnancy'],
     appliesIf: function (contact, report) {
-      if (!isActivePregnancy(contact, report)) {return false;}
+      if (!isActivePregnancy(contact, report)) {
+        return false;
+      }
       const visitCount = countANCFacilityVisits(contact, report);
       return visitCount > 0;
     },
@@ -111,14 +113,17 @@ module.exports = [
       return getField(report, 'delivery_outcome.delivery_place');
     },
     passesIf: function (contact, report) {
-      return getField(report, 'delivery_outcome.delivery_place') === 'health_facility';
+      return (
+        getField(report, 'delivery_outcome.delivery_place') ===
+        'health_facility'
+      );
     },
     date: 'now',
     idType: 'contact',
     dhis: {
       dataElement: 'e22tIwy1nKR',
       categoryOptionCombo: 'HllvX50cXC0',
-      attributeOptionCombo: 'HllvX50cXC0',
+      attributeOptionCombo: 'HllvX50cXC0'
     }
   },
 
@@ -132,7 +137,9 @@ module.exports = [
     appliesTo: 'reports',
     appliesToType: ['pregnancy'],
     appliesIf: function (contact, report) {
-      if (!isActivePregnancy(contact, report)) {return false;}
+      if (!isActivePregnancy(contact, report)) {
+        return false;
+      }
       const visitCount = countANCFacilityVisits(contact, report);
       return visitCount > 3;
     },
@@ -149,14 +156,21 @@ module.exports = [
     appliesTo: 'reports',
     appliesToType: ['pregnancy'],
     appliesIf: function (contact, report) {
-      if (!isActivePregnancy(contact, report)) {return false;}
+      if (!isActivePregnancy(contact, report)) {
+        return false;
+      }
       const pregnancyRegistrationCount = 1;
-      const pregnancyHomeVisitCount = getSubsequentPregnancyFollowUps(contact, report).length || 0;
+      const pregnancyHomeVisitCount =
+        getSubsequentPregnancyFollowUps(contact, report).length || 0;
       const facilityVisitCount = countANCFacilityVisits(contact, report) || 0;
-      return pregnancyRegistrationCount + pregnancyHomeVisitCount + facilityVisitCount > 7;
+      return (
+        pregnancyRegistrationCount +
+          pregnancyHomeVisitCount +
+          facilityVisitCount >
+        7
+      );
     },
     date: 'now',
     idType: 'contact'
-  },
-
+  }
 ];

@@ -1,13 +1,10 @@
 module.exports = {
-
   deathReportScenarios: {
-    withDeathDate: deathDate => [
+    withDeathDate: (deathDate) => [
       [deathDate, 'health_facility', 'Died while sleeping.'],
-      [],
+      []
     ],
-    undo:[
-      ['yes']
-    ]
+    undo: [['yes']]
   },
 
   pregnancyRegistrationScenarios: {
@@ -181,20 +178,20 @@ module.exports = {
       []
     ],
     danger: [
-      ['method_lmp'],                     // Index 0: Method
-      ['1999-11-01'],                     // Index 1: LMP date
-      [],                                 // Index 2: 
-      ['0'],                              // Index 3: ANC visits
-      ['yes'],                            // Index 4: Follow-up required (single field)
-      ['2000-01-20'],                     // Index 5: Follow-up date (separate field)
-      ['no', 'no'],                       // Index 6: 
-      ['none', 'no'],                     // Index 7: 
-      ['yes', ...Array(10).fill('no')],   // Index 8: Danger signs
-      ['no'],                             // Index 9:
-      ['no'],                             // Index 10:
-      [],                                 // Index 11:
-      ['no'],                             // Index 12:
-      []                                  // Index 13:
+      ['method_lmp'], // Index 0: Method
+      ['1999-11-01'], // Index 1: LMP date
+      [], // Index 2:
+      ['0'], // Index 3: ANC visits
+      ['yes'], // Index 4: Follow-up required (single field)
+      ['2000-01-20'], // Index 5: Follow-up date (separate field)
+      ['no', 'no'], // Index 6:
+      ['none', 'no'], // Index 7:
+      ['yes', ...Array(10).fill('no')], // Index 8: Danger signs
+      ['no'], // Index 9:
+      ['no'], // Index 10:
+      [], // Index 11:
+      ['no'], // Index 12:
+      [] // Index 13:
     ],
     lmpUnknown: [
       ['method_none'],
@@ -206,9 +203,8 @@ module.exports = {
       ['yes'],
       ['yes'],
       []
-
     ],
-    riskDanger: opts => {
+    riskDanger: (opts) => {
       const content = {
         firstPregnancy: 'no',
         miscarriages: 'no',
@@ -240,7 +236,7 @@ module.exports = {
         ['no'],
         []
       ];
-    },
+    }
   },
 
   pregnancyHomeVisitScenarios: {
@@ -340,18 +336,9 @@ module.exports = {
       ['yes'],
       []
     ],
-    miscarriage: [
-      ['miscarriage'],
-      ['2000-01-02']
-    ],
-    abortion: [
-      ['abortion'],
-      ['2000-01-02']
-    ],
-    clearAll: [
-      ['migrated'],
-      ['clear_all']
-    ],
+    miscarriage: [['miscarriage'], ['2000-01-02']],
+    abortion: [['abortion'], ['2000-01-02']],
+    clearAll: [['migrated'], ['clear_all']],
     riskDangerMultipleVisits: [
       ['yes', 'yes'],
       ['yes', '2', 'yes', '1999-10-02', 'yes', '1999-10-05'],
@@ -377,19 +364,29 @@ module.exports = {
       ['yes'],
       [],
       ['yes'],
-      ...(ttReceivedPast ? [] : [['yes']]),
+      ...(ttReceivedPast ? [] : [['yes']])
     ]
   },
   pregnancyDangerSignScenarios: {
-    danger: [
-      Array(11).fill('yes')
-    ],
+    danger: [Array(11).fill('yes')],
     followUp: {
-      cured: [
-        ['yes', 'no']
-      ],
+      cured: [['yes', 'no']],
       danger: [
-        ['yes', 'yes', 'yes', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no', 'no']
+        [
+          'yes',
+          'yes',
+          'yes',
+          'no',
+          'no',
+          'no',
+          'no',
+          'no',
+          'no',
+          'no',
+          'no',
+          'no',
+          'no'
+        ]
       ]
     }
   },
@@ -399,7 +396,18 @@ module.exports = {
       ['alive_well'],
       Array(5).fill('no'),
       ['1', '1', '2000-04-22', 'health_facility', 'vaginal'],
-      ['alive_well', 'Baby-1', 'female', 'yes', '2500', 'yes', '45', 'bcg_and_birth_polio', 'yes', 'yes'].concat(Array(9).fill('no')),
+      [
+        'alive_well',
+        'Baby-1',
+        'female',
+        'yes',
+        '2500',
+        'yes',
+        '45',
+        'bcg_and_birth_polio',
+        'yes',
+        'yes'
+      ].concat(Array(9).fill('no')),
       [],
       ['within_24_hrs'],
       []
@@ -408,7 +416,18 @@ module.exports = {
       ['alive_well'],
       Array(5).fill('no'),
       ['1', '1', '2000-04-22', 'home', 'skilled'],
-      ['alive_well', 'Baby-1', 'female', 'yes', '2500', 'yes', '45', 'bcg_and_birth_polio', 'yes', 'yes'].concat(Array(9).fill('no')),
+      [
+        'alive_well',
+        'Baby-1',
+        'female',
+        'yes',
+        '2500',
+        'yes',
+        '45',
+        'bcg_and_birth_polio',
+        'yes',
+        'yes'
+      ].concat(Array(9).fill('no')),
       [],
       ['within_24_hrs'],
       []
@@ -417,7 +436,18 @@ module.exports = {
       ['alive_well'],
       ['no', 'no', 'no', 'no', 'yes'],
       ['1', '1', '2000-04-22', 'home', 'skilled'],
-      ['alive_well', 'Baby-1', 'female', 'yes', '2500', 'yes', '45', 'bcg_and_birth_polio', 'yes', 'yes'].concat(Array(9).fill('no')),
+      [
+        'alive_well',
+        'Baby-1',
+        'female',
+        'yes',
+        '2500',
+        'yes',
+        '45',
+        'bcg_and_birth_polio',
+        'yes',
+        'yes'
+      ].concat(Array(9).fill('no')),
       [],
       ['within_24_hrs'],
       []
@@ -426,9 +456,33 @@ module.exports = {
       ['alive_well'],
       Array(5).fill('no'),
       ['2', '2', '2000-04-22', 'health_facility', 'vaginal'],
-      ['alive_well', 'Baby-1', 'female', 'yes', '2500', 'yes', '45', 'bcg_and_birth_polio', 'yes', 'yes'].concat(Array(9).fill('no')).concat(
-        ['alive_well', 'Baby-2', 'female', 'yes', '2500', 'yes', '45', 'bcg_and_birth_polio', 'yes', 'yes'].concat(Array(9).fill('no'))
-      ),
+      [
+        'alive_well',
+        'Baby-1',
+        'female',
+        'yes',
+        '2500',
+        'yes',
+        '45',
+        'bcg_and_birth_polio',
+        'yes',
+        'yes'
+      ]
+        .concat(Array(9).fill('no'))
+        .concat(
+          [
+            'alive_well',
+            'Baby-2',
+            'female',
+            'yes',
+            '2500',
+            'yes',
+            '45',
+            'bcg_and_birth_polio',
+            'yes',
+            'yes'
+          ].concat(Array(9).fill('no'))
+        ),
       [],
       ['within_24_hrs'],
       []
@@ -437,8 +491,28 @@ module.exports = {
       ['alive_well'],
       Array(5).fill('no'),
       ['3', '1', '2000-04-22', 'health_facility', 'vaginal'],
-      ['2000-04-22', 'health_facility', 'yes', '', '2000-04-23', 'home', 'no', ''],
-      ['alive_well', 'Baby-1', 'female', 'yes', '2500', 'yes', '45', 'bcg_and_birth_polio', 'yes', 'yes'].concat(Array(9).fill('no')),
+      [
+        '2000-04-22',
+        'health_facility',
+        'yes',
+        '',
+        '2000-04-23',
+        'home',
+        'no',
+        ''
+      ],
+      [
+        'alive_well',
+        'Baby-1',
+        'female',
+        'yes',
+        '2500',
+        'yes',
+        '45',
+        'bcg_and_birth_polio',
+        'yes',
+        'yes'
+      ].concat(Array(9).fill('no')),
       [],
       ['within_24_hrs'],
       []
@@ -449,43 +523,61 @@ module.exports = {
       [1, 0, deliveryDate, 'health_facility', 'vaginal'],
       [deliveryDate, 'health_facility', 'yes', 'Baby Death Notes'],
       ['none', ''],
-      [],
+      []
     ],
-    motherDeceased: deliveryDate => [
+    motherDeceased: (deliveryDate) => [
       ['deceased'],
       [deliveryDate, 'health_facility', 'yes', 'Additional Notes'],
       [1, 1, deliveryDate, 'health_facility', 'vaginal'],
-      ['alive_well', 'Baby Name', 'female', 'yes', 2000, 'yes', 50, 'bcg_and_birth_polio', ...Array(11).fill('no')],
+      [
+        'alive_well',
+        'Baby Name',
+        'female',
+        'yes',
+        2000,
+        'yes',
+        50,
+        'bcg_and_birth_polio',
+        ...Array(11).fill('no')
+      ],
       [],
       ['none', ''],
-      [],
+      []
     ],
     babyDeceased_motherDeceased: (deliveryDate) => [
       ['deceased'],
       [deliveryDate, 'health_facility', 'yes', 'Mother Death Notes'],
       [1, 0, deliveryDate, 'health_facility', 'vaginal'],
       [deliveryDate, 'health_facility', 'yes', 'Baby Death Notes'],
-      [],
+      []
     ],
     pncVisits: (deliveryDate, pncVisitsAttended, pncVisitsAdditional) => [
       ['alive_well'],
       Array(5).fill('no'),
       [1, 1, deliveryDate, 'health_facility', 'vaginal'],
-      ['alive_well', 'Baby Name', 'female', 'yes', 2000, 'yes', 50, 'bcg_and_birth_polio', 'yes', 'yes', ...Array(9).fill('no')],
+      [
+        'alive_well',
+        'Baby Name',
+        'female',
+        'yes',
+        2000,
+        'yes',
+        50,
+        'bcg_and_birth_polio',
+        'yes',
+        'yes',
+        ...Array(9).fill('no')
+      ],
       [],
       [pncVisitsAttended, pncVisitsAdditional],
-      [],
+      []
     ]
   },
 
   pncDangerSignFollowUpScenarios: {
     mother: {
-      cured: [
-        ['yes', 'no', 'no', 'no', 'no', 'no', 'no']
-      ],
-      danger: [
-        ['yes', 'yes', 'yes', 'no', 'no', 'no', 'no']
-      ]
+      cured: [['yes', 'no', 'no', 'no', 'no', 'no', 'no']],
+      danger: [['yes', 'yes', 'yes', 'no', 'no', 'no', 'no']]
     },
     baby: {
       cured: [
@@ -496,5 +588,4 @@ module.exports = {
       ]
     }
   }
-
 };

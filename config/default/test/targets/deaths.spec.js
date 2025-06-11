@@ -20,25 +20,36 @@ describe('Death related targets tests', () => {
   });
   afterEach(() => {
     expect(harness.consoleErrors).to.be.empty;
-    if (clock) {clock.restore();}
+    if (clock) {
+      clock.restore();
+    }
   });
 
   it('death this month target test this month', async () => {
     //await harness.setNow('2000-04-30');//DOD: 2000-04-25
-    clock = sinon.useFakeTimers({now: moment('2000-04-30').toDate()});
+    clock = sinon.useFakeTimers({ now: moment('2000-04-30').toDate() });
     harness.subject = babyDeceasedAtAge1Day;
-    const birthsThisMonth = await harness.getTargets({ type: 'deaths-this-month' });
+    const birthsThisMonth = await harness.getTargets({
+      type: 'deaths-this-month'
+    });
     expect(birthsThisMonth).to.have.property('length', 1);
-    expect(birthsThisMonth[0]).to.nested.include({ 'value.pass': 1, 'value.total': 1 });
+    expect(birthsThisMonth[0]).to.nested.include({
+      'value.pass': 1,
+      'value.total': 1
+    });
   });
 
   it('death this month target test next month', async () => {
     //await harness.setNow('2000-04-30');//DOD: 2000-04-25
-    clock = sinon.useFakeTimers({now: moment('2000-05-30').toDate()});
+    clock = sinon.useFakeTimers({ now: moment('2000-05-30').toDate() });
     harness.subject = babyDeceasedAtAge1Day;
-    const birthsThisMonth = await harness.getTargets({ type: 'deaths-this-month' });
+    const birthsThisMonth = await harness.getTargets({
+      type: 'deaths-this-month'
+    });
     expect(birthsThisMonth).to.have.property('length', 1);
-    expect(birthsThisMonth[0]).to.nested.not.include({ 'value.pass': 1, 'value.total': 1 });
+    expect(birthsThisMonth[0]).to.nested.not.include({
+      'value.pass': 1,
+      'value.total': 1
+    });
   });
-
 });

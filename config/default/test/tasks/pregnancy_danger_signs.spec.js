@@ -8,7 +8,7 @@ const TestRunner = require('cht-conf-test-harness');
 const {
   pregnancyRegistrationScenarios,
   pregnancyDangerSignScenarios,
-  pregnancyHomeVisitScenarios,
+  pregnancyHomeVisitScenarios
 } = require('../form-inputs');
 const harness = new TestRunner();
 
@@ -35,7 +35,7 @@ describe('Pregnancy danger sign tests', () => {
     // Load and fill form
     await harness.loadForm('pregnancy');
     const result = await harness.fillForm(
-      ...pregnancyRegistrationScenarios.danger,
+      ...pregnancyRegistrationScenarios.danger
     );
 
     // Debug: Log the submitted report
@@ -53,7 +53,7 @@ describe('Pregnancy danger sign tests', () => {
 
     // Complete follow-up
     const followUpResult = await harness.fillForm(
-      ...pregnancyDangerSignScenarios.followUp.cured,
+      ...pregnancyDangerSignScenarios.followUp.cured
     );
     expect(followUpResult.errors).to.be.empty;
 
@@ -61,26 +61,26 @@ describe('Pregnancy danger sign tests', () => {
     await harness.flush(1);
     it('danger sign follow up from pregnancy home visit', async () => {
       const actionFormResult = await harness.fillForm(
-        ...pregnancyRegistrationScenarios.safe,
+        ...pregnancyRegistrationScenarios.safe
       );
       expect(actionFormResult.errors).to.be.empty;
 
       await harness.setNow('2000-01-23');
       const taskForHomeVisit = await harness.getTasks({
-        title: 'task.anc.pregnancy_home_visit.title',
+        title: 'task.anc.pregnancy_home_visit.title'
       });
       expect(taskForHomeVisit.length).to.be.equal(1);
 
       await harness.flush(1);
       await harness.loadAction(taskForHomeVisit[0]);
       let followupFormResult = await harness.fillForm(
-        ...pregnancyHomeVisitScenarios.danger,
+        ...pregnancyHomeVisitScenarios.danger
       );
 
       expect(followupFormResult.errors).to.be.empty;
       // Confirm a task appears immediately
       const tasksAfterRegistration = await harness.getTasks({
-        title: 'task.anc.pregnancy_danger_sign_followup.title',
+        title: 'task.anc.pregnancy_danger_sign_followup.title'
       });
       expect(tasksAfterRegistration).to.have.property('length', 1);
 
@@ -89,7 +89,7 @@ describe('Pregnancy danger sign tests', () => {
       await harness.flush(1);
       await harness.loadAction(tasksAfterRegistration[0]);
       followupFormResult = await harness.fillForm(
-        ...pregnancyDangerSignScenarios.followUp.cured,
+        ...pregnancyDangerSignScenarios.followUp.cured
       );
       expect(followupFormResult.errors).to.be.empty;
       const tasksAfterDangerSignsFollowUp = await harness.getTasks();
@@ -98,19 +98,19 @@ describe('Pregnancy danger sign tests', () => {
 
     it('danger sign follow up from pregnancy danger sign', async () => {
       const actionFormResult = await harness.fillForm(
-        ...pregnancyRegistrationScenarios.safe,
+        ...pregnancyRegistrationScenarios.safe
       );
       expect(actionFormResult.errors).to.be.empty;
 
       await harness.loadForm('pregnancy_danger_sign');
       let followupFormResult = await harness.fillForm(
-        ...pregnancyDangerSignScenarios.danger,
+        ...pregnancyDangerSignScenarios.danger
       );
 
       expect(followupFormResult.errors).to.be.empty;
       // Confirm a task appears immediately
       const tasksAfterDangerSignReport = await harness.getTasks({
-        title: 'task.anc.pregnancy_danger_sign_followup.title',
+        title: 'task.anc.pregnancy_danger_sign_followup.title'
       });
       expect(tasksAfterDangerSignReport).to.have.property('length', 1);
 
@@ -119,11 +119,11 @@ describe('Pregnancy danger sign tests', () => {
       await harness.flush(1);
       await harness.loadAction(tasksAfterDangerSignReport[0]);
       followupFormResult = await harness.fillForm(
-        ...pregnancyDangerSignScenarios.followUp.cured,
+        ...pregnancyDangerSignScenarios.followUp.cured
       );
       expect(followupFormResult.errors).to.be.empty;
       const tasksAfterDangerSignsFollowUp = await harness.getTasks({
-        title: 'task.anc.pregnancy_danger_sign_followup.title',
+        title: 'task.anc.pregnancy_danger_sign_followup.title'
       });
       expect(tasksAfterDangerSignsFollowUp).to.be.empty;
     });
@@ -131,7 +131,7 @@ describe('Pregnancy danger sign tests', () => {
     it('danger sign follow up from pregnancy registration', async () => {
       // Submit danger sign pregnancy registration
       const actionFormResult = await harness.fillForm(
-        ...pregnancyRegistrationScenarios.danger,
+        ...pregnancyRegistrationScenarios.danger
       );
       expect(actionFormResult.errors).to.be.empty;
 
@@ -140,7 +140,7 @@ describe('Pregnancy danger sign tests', () => {
 
       // Verify task was created
       const tasksAfterRegistration = await harness.getTasks({
-        title: 'task.anc.pregnancy_danger_sign_followup.title',
+        title: 'task.anc.pregnancy_danger_sign_followup.title'
       });
       console.log('Tasks after registration:', tasksAfterRegistration); // Debug log
       expect(tasksAfterRegistration).to.have.lengthOf(1);
@@ -148,28 +148,28 @@ describe('Pregnancy danger sign tests', () => {
       // Complete the follow-up
       await harness.loadAction(tasksAfterRegistration[0]);
       const followupFormResult = await harness.fillForm(
-        ...pregnancyDangerSignScenarios.followUp.cured,
+        ...pregnancyDangerSignScenarios.followUp.cured
       );
       expect(followupFormResult.errors).to.be.empty;
 
       // Verify task is resolved
       await harness.flush(1);
       const tasksAfterFollowUp = await harness.getTasks({
-        title: 'task.anc.pregnancy_danger_sign_followup.title',
+        title: 'task.anc.pregnancy_danger_sign_followup.title'
       });
       expect(tasksAfterFollowUp).to.have.lengthOf(0);
     });
 
     it('danger sign follow up should not show if tasks were cleared', async () => {
       const actionFormResult = await harness.fillForm(
-        ...pregnancyRegistrationScenarios.danger,
+        ...pregnancyRegistrationScenarios.danger
       );
       expect(actionFormResult.errors).to.be.empty;
 
       // Confirm a task appears immediately
       //await harness.flush(1);
       const tasksAfterRegistration = await harness.getTasks({
-        title: 'task.anc.pregnancy_danger_sign_followup.title',
+        title: 'task.anc.pregnancy_danger_sign_followup.title'
       });
       expect(tasksAfterRegistration).to.have.property('length', 1);
 
@@ -177,7 +177,7 @@ describe('Pregnancy danger sign tests', () => {
       await harness.flush(1);
       await harness.loadForm('pregnancy_home_visit');
       const followupFormResult = await harness.fillForm(
-        ...pregnancyHomeVisitScenarios.clearAll,
+        ...pregnancyHomeVisitScenarios.clearAll
       );
       expect(followupFormResult.errors).to.be.empty;
       const tasksAfterClearing = await harness.getTasks();

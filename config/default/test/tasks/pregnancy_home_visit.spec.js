@@ -5,11 +5,11 @@ const TestRunner = require('cht-conf-test-harness');
 const {
   MAX_DAYS_IN_PREGNANCY,
   getRangeForTask,
-  getTaskTestDays,
+  getTaskTestDays
 } = require('../test-helpers');
 const {
   pregnancyRegistrationScenarios,
-  pregnancyHomeVisitScenarios,
+  pregnancyHomeVisitScenarios
 } = require('../form-inputs');
 const harness = new TestRunner();
 const TEST_INTERVAL_DAYS = 7;
@@ -42,14 +42,14 @@ describe('pregnancy home visit tests', () => {
     pre: 7,
     post: 14,
     triggers: [12, 20, 26, 30],
-    triggerUnit: 'weeks',
+    triggerUnit: 'weeks'
   };
 
   const pregnancyHomeVisitTaskSecond = {
     pre: 6,
     post: 7,
     triggers: [34, 36, 38, 40],
-    triggerUnit: 'weeks',
+    triggerUnit: 'weeks'
   };
 
   const pregnancyHomeVisitUnknownLMPTask = {
@@ -58,7 +58,7 @@ describe('pregnancy home visit tests', () => {
     triggers: Array(21)
       .fill()
       .map((item, index) => (1 + index) * 2), //[2, 4, 6, ..., 40, 42]
-    triggerUnit: 'weeks',
+    triggerUnit: 'weeks'
   };
 
   const pregnancyHomeVisitTaskDays = getRangeForTask(
@@ -94,7 +94,7 @@ describe('pregnancy home visit tests', () => {
       await harness.setNow('1999-08-01'); //10 weeks after LMP date
       await harness.flush(day);
       const taskForHomeVisit = await harness.getTasks({
-        title: 'task.anc.pregnancy_home_visit.title',
+        title: 'task.anc.pregnancy_home_visit.title'
       });
       if (pregnancyHomeVisitTaskDays.includes(day)) {
         expect(taskForHomeVisit.length).to.equal(1, day);
@@ -114,7 +114,7 @@ describe('pregnancy home visit tests', () => {
 
     await harness.setNow('1999-10-17');
     let taskForHomeVisit = await harness.getTasks({
-      title: 'task.anc.pregnancy_home_visit.title',
+      title: 'task.anc.pregnancy_home_visit.title'
     });
     expect(taskForHomeVisit.length).to.equal(1);
 
@@ -130,7 +130,7 @@ describe('pregnancy home visit tests', () => {
 
     await harness.setNow('1999-12-12');
     taskForHomeVisit = await harness.getTasks({
-      title: 'task.anc.pregnancy_home_visit.title',
+      title: 'task.anc.pregnancy_home_visit.title'
     });
     expect(taskForHomeVisit.length).to.equal(1);
   });
@@ -152,7 +152,7 @@ describe('pregnancy home visit tests', () => {
       await harness.flush(day);
 
       const taskForHomeVisit = await harness.getTasks({
-        title: 'task.anc.pregnancy_home_visit.title',
+        title: 'task.anc.pregnancy_home_visit.title'
       });
       if (pregnancyHomeVisitUnknownLMPTaskDays.includes(day)) {
         expect(taskForHomeVisit).to.have.property('length', 1, day);
@@ -188,7 +188,7 @@ describe('pregnancy home visit tests', () => {
 
       if (pregnancyHomeVisitTaskDays.includes(day) && !cleared) {
         const taskForHomeVisit = await harness.getTasks({
-          title: 'task.anc.pregnancy_home_visit.title',
+          title: 'task.anc.pregnancy_home_visit.title'
         });
         expect(taskForHomeVisit).to.have.property('length', 1, day);
 
@@ -224,7 +224,7 @@ describe('pregnancy home visit tests', () => {
 
       if (pregnancyHomeVisitUnknownLMPTaskDays.includes(day) && !cleared) {
         const taskForHomeVisit = await harness.getTasks({
-          title: 'task.anc.pregnancy_home_visit.title',
+          title: 'task.anc.pregnancy_home_visit.title'
         });
         expect(taskForHomeVisit).to.have.property('length', 1, day);
 

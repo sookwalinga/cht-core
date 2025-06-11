@@ -5,23 +5,27 @@ const harnessDefaults = require('../../harness.defaults.json');
 
 const harness = new TestRunner();
 const TODAY = '2000-01-01';
-const patientDoc = harnessDefaults.docs.find(doc => doc._id === harnessDefaults.subject);
+const patientDoc = harnessDefaults.docs.find(
+  (doc) => doc._id === harnessDefaults.subject
+);
 
 describe('Undo Death Report form', () => {
   before(() => harness.start());
 
   after(() => harness.stop());
 
-  beforeEach(
-    async() => {
-      await harness.clear();
-      await harness.setNow(new Date(TODAY));
-    });
+  beforeEach(async () => {
+    await harness.clear();
+    await harness.setNow(new Date(TODAY));
+  });
 
   afterEach(() => expect(harness.consoleErrors).to.be.empty);
 
-  it('saves data when submitted', async() => {
-    const result = await harness.fillForm('undo_death_report', ...deathReportScenarios.undo);
+  it('saves data when submitted', async () => {
+    const result = await harness.fillForm(
+      'undo_death_report',
+      ...deathReportScenarios.undo
+    );
 
     expect(result.errors).to.be.empty;
     expect(result.report.fields).to.deep.include({

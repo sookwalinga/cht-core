@@ -1,12 +1,19 @@
 const { expect } = require('chai');
 const TestRunner = require('cht-conf-test-harness');
-const { pregnancyRegistrationScenarios, pregnancyDangerSignScenarios } = require('../../form-inputs');
+const {
+  pregnancyRegistrationScenarios,
+  pregnancyDangerSignScenarios
+} = require('../../form-inputs');
 const harness = new TestRunner();
 
 const now = '2000-01-01';
 describe('Pregnancy danger sign form analytic field tests', () => {
-  before(async () => { return await harness.start(); });
-  after(async () => { return await harness.stop(); });
+  before(async () => {
+    return await harness.start();
+  });
+  after(async () => {
+    return await harness.stop();
+  });
   beforeEach(async () => {
     await harness.clear();
     await harness.setNow(now);
@@ -17,11 +24,15 @@ describe('Pregnancy danger sign form analytic field tests', () => {
   });
 
   it('danger sign follow up from pregnancy danger sign', async () => {
-    const actionFormResult = await harness.fillForm(...pregnancyRegistrationScenarios.safe);
+    const actionFormResult = await harness.fillForm(
+      ...pregnancyRegistrationScenarios.safe
+    );
     expect(actionFormResult.errors).to.be.empty;
     await harness.setNow('2000-01-30');
     await harness.loadForm('pregnancy_danger_sign');
-    const dangerSignForm = await harness.fillForm(...pregnancyDangerSignScenarios.danger);
+    const dangerSignForm = await harness.fillForm(
+      ...pregnancyDangerSignScenarios.danger
+    );
     expect(dangerSignForm.report.fields.data).to.deep.include({
       __vaginal_bleeding: 'yes',
       __fits: 'yes',
@@ -45,11 +56,15 @@ describe('Pregnancy danger sign form analytic field tests', () => {
       }
     });
     expect(dangerSignForm.errors).to.be.empty;
-    const tasksAfterDangerSignReport = await harness.getTasks({ title: 'task.anc.pregnancy_danger_sign_followup.title' });
+    const tasksAfterDangerSignReport = await harness.getTasks({
+      title: 'task.anc.pregnancy_danger_sign_followup.title'
+    });
 
     await harness.flush(1);
     await harness.loadAction(tasksAfterDangerSignReport[0]);
-    const dangerSignFollowupFormResult = await harness.fillForm(...pregnancyDangerSignScenarios.followUp.cured);
+    const dangerSignFollowupFormResult = await harness.fillForm(
+      ...pregnancyDangerSignScenarios.followUp.cured
+    );
     expect(dangerSignFollowupFormResult.errors).to.be.empty;
     expect(dangerSignFollowupFormResult.report.fields.data).to.deep.include({
       __visited_hf: 'yes',

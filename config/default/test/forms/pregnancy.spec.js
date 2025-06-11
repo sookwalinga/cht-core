@@ -6,16 +6,18 @@ const harness = new TestRunner();
 describe('Pregnancy form tests', () => {
   before(() => harness.start());
   after(() => harness.stop());
-  beforeEach(
-    async () => {
-      await harness.clear();
-      await harness.setNow(new Date('2000-01-01'));//UTC 00:00
-    });
+  beforeEach(async () => {
+    await harness.clear();
+    await harness.setNow(new Date('2000-01-01')); //UTC 00:00
+  });
   afterEach(() => expect(harness.consoleErrors).to.be.empty);
 
   it('pregnancy with pregnancy and danger signs followup dates', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.danger);
+    const result = await harness.fillForm(
+      'pregnancy',
+      ...pregnancyRegistrationScenarios.danger
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -36,7 +38,10 @@ describe('Pregnancy form tests', () => {
 
   it('pregnancy with no pregnancy follow up date', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.safeNoFollowUp);
+    const result = await harness.fillForm(
+      'pregnancy',
+      ...pregnancyRegistrationScenarios.safeNoFollowUp
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -45,12 +50,15 @@ describe('Pregnancy form tests', () => {
     expect(result.report.fields).to.deep.include({
       patient_name: 'Patient Name',
       t_danger_signs_referral_follow_up: 'no',
-      t_pregnancy_follow_up: 'no',
+      t_pregnancy_follow_up: 'no'
     });
   });
   it('pregnancy with current weeks pregnant', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.safe12WeeksApprox);
+    const result = await harness.fillForm(
+      'pregnancy',
+      ...pregnancyRegistrationScenarios.safe12WeeksApprox
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -68,7 +76,10 @@ describe('Pregnancy form tests', () => {
 
   it('pregnancy with current months pregnant', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.safe3MonthsApprox);
+    const result = await harness.fillForm(
+      'pregnancy',
+      ...pregnancyRegistrationScenarios.safe3MonthsApprox
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -86,7 +97,10 @@ describe('Pregnancy form tests', () => {
 
   it('pregnancy with edd', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.safeWithEddMethod);
+    const result = await harness.fillForm(
+      'pregnancy',
+      ...pregnancyRegistrationScenarios.safeWithEddMethod
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -104,33 +118,51 @@ describe('Pregnancy form tests', () => {
 
   it('pregnancy form shows deworming question if pregnancy is more than 12 weeks', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.safe12Weeks1Day);
+    const result = await harness.fillForm(
+      'pregnancy',
+      ...pregnancyRegistrationScenarios.safe12Weeks1Day
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
 
     // Verify some attributes on the resulting report
-    expect(result.report.fields.safe_pregnancy_practices).to.have.property('deworming');
+    expect(result.report.fields.safe_pregnancy_practices).to.have.property(
+      'deworming'
+    );
   });
 
   it('pregnancy form does not show deworming question if pregnancy is not more than 12 weeks', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.safe12Weeks);
+    const result = await harness.fillForm(
+      'pregnancy',
+      ...pregnancyRegistrationScenarios.safe12Weeks
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
 
     // Verify some attributes on the resulting report
-    expect(result.report.fields.safe_pregnancy_practices).to.not.have.property('deworming');
+    expect(result.report.fields.safe_pregnancy_practices).to.not.have.property(
+      'deworming'
+    );
   });
 
   describe('Risk Factors', () => {
-    it('shows summary when this is the first pregnancy for the woman and there are all the risk factors', async() => {
-      const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.riskDanger({
-        firstPregnancy: 'yes',
-        conditions: ['heart_condition', 'asthma', 'high_blood_pressure', 'diabetes'],
-        additionalFactors: ['yes', 'underweight']
-      }));
+    it('shows summary when this is the first pregnancy for the woman and there are all the risk factors', async () => {
+      const result = await harness.fillForm(
+        'pregnancy',
+        ...pregnancyRegistrationScenarios.riskDanger({
+          firstPregnancy: 'yes',
+          conditions: [
+            'heart_condition',
+            'asthma',
+            'high_blood_pressure',
+            'diabetes'
+          ],
+          additionalFactors: ['yes', 'underweight']
+        })
+      );
 
       expect(result.errors).to.be.empty;
       const { summary } = result.report.fields;
@@ -147,13 +179,24 @@ describe('Pregnancy form tests', () => {
       expect(summary.r_risk_additional).to.exist;
     });
 
-    it('shows summary when this is not the first pregnancy for the woman and there are all the risk factors', async() => {
-      const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.riskDanger({
-        firstPregnancy: 'no',
-        miscarriages: 'yes',
-        conditions: ['heart_condition', 'asthma', 'high_blood_pressure', 'diabetes', 'previous_difficulties', 'more_than_4_children', 'last_baby_born_less_than_1_year_ago'],
-        additionalFactors: ['yes', 'underweight']
-      }));
+    it('shows summary when this is not the first pregnancy for the woman and there are all the risk factors', async () => {
+      const result = await harness.fillForm(
+        'pregnancy',
+        ...pregnancyRegistrationScenarios.riskDanger({
+          firstPregnancy: 'no',
+          miscarriages: 'yes',
+          conditions: [
+            'heart_condition',
+            'asthma',
+            'high_blood_pressure',
+            'diabetes',
+            'previous_difficulties',
+            'more_than_4_children',
+            'last_baby_born_less_than_1_year_ago'
+          ],
+          additionalFactors: ['yes', 'underweight']
+        })
+      );
 
       expect(result.errors).to.be.empty;
       const { summary } = result.report.fields;
@@ -170,13 +213,16 @@ describe('Pregnancy form tests', () => {
       expect(summary.r_risk_additional).to.exist;
     });
 
-    it('does not show summary when there are no risk factors', async() => {
-      const result = await harness.fillForm('pregnancy', ...pregnancyRegistrationScenarios.riskDanger({
-        firstPregnancy: 'no',
-        miscarriages: 'no',
-        conditions: ['none'],
-        additionalFactors: ['no']
-      }));
+    it('does not show summary when there are no risk factors', async () => {
+      const result = await harness.fillForm(
+        'pregnancy',
+        ...pregnancyRegistrationScenarios.riskDanger({
+          firstPregnancy: 'no',
+          miscarriages: 'no',
+          conditions: ['none'],
+          additionalFactors: ['no']
+        })
+      );
 
       expect(result.errors).to.be.empty;
       const { summary } = result.report.fields;

@@ -9,7 +9,7 @@ const TestRunner = require('cht-conf-test-harness');
 const {
   deliveryReportScenarios,
   pncDangerSignFollowUpScenarios,
-  pregnancyHomeVisitScenarios,
+  pregnancyHomeVisitScenarios
 } = require('../form-inputs');
 const harness = new TestRunner();
 
@@ -40,7 +40,7 @@ describe('PNC danger sign follow up for mother tests', () => {
     // Confirm a task appears immediately
     await harness.flush(1);
     const tasksAfterDelivery = await harness.getTasks({
-      title: 'task.pnc.danger_sign_followup_mother.title',
+      title: 'task.pnc.danger_sign_followup_mother.title'
     });
     expect(tasksAfterDelivery).to.have.property('length', 1); //also follow up
 
@@ -63,7 +63,7 @@ describe('PNC danger sign follow up for mother tests', () => {
     // Confirm a task appears immediately
     //await harness.flush(1);
     const tasksAfterDangerSignFollowUp = await harness.getTasks({
-      title: 'task.pnc.danger_sign_followup_mother.title',
+      title: 'task.pnc.danger_sign_followup_mother.title'
     });
     expect(tasksAfterDangerSignFollowUp).to.have.property('length', 1);
 
@@ -76,7 +76,7 @@ describe('PNC danger sign follow up for mother tests', () => {
     );
 
     const tasksAfterDangerSignFollowUp2 = await harness.getTasks({
-      title: 'task.pnc.danger_sign_followup_mother.title',
+      title: 'task.pnc.danger_sign_followup_mother.title'
     });
     expect(tasksAfterDangerSignFollowUp2).to.have.property('length', 1);
 
@@ -99,7 +99,7 @@ describe('PNC danger sign follow up for mother tests', () => {
     // Confirm a task appears immediately
     //await harness.flush(1);
     const tasksAfterDelivery = await harness.getTasks({
-      title: 'task.pnc.danger_sign_followup_mother.title',
+      title: 'task.pnc.danger_sign_followup_mother.title'
     });
     expect(tasksAfterDelivery).to.have.property('length', 1); //also follow up
 

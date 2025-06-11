@@ -4,21 +4,26 @@ const { pregnancyRegistrationScenarios } = require('../../form-inputs');
 const harness = new TestRunner();
 
 describe('Pregnancy form analytic field tests', () => {
-  before(async () => { return await harness.start(); });
-  after(async () => { return await harness.stop(); });
-  beforeEach(
-    async () => {
-      await harness.clear();
-      await harness.setNow(new Date('2000-01-01'));//UTC 00:00
-      return harness.loadForm('pregnancy');
-    });
+  before(async () => {
+    return await harness.start();
+  });
+  after(async () => {
+    return await harness.stop();
+  });
+  beforeEach(async () => {
+    await harness.clear();
+    await harness.setNow(new Date('2000-01-01')); //UTC 00:00
+    return harness.loadForm('pregnancy');
+  });
   afterEach(() => {
     expect(harness.consoleErrors).to.be.empty;
   });
 
   it('pregnancy with pregnancy and danger signs followup dates', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm(...pregnancyRegistrationScenarios.danger);
+    const result = await harness.fillForm(
+      ...pregnancyRegistrationScenarios.danger
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -76,7 +81,9 @@ describe('Pregnancy form analytic field tests', () => {
 
   it('pregnancy with no pregnancy follow up date', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm(...pregnancyRegistrationScenarios.safeNoFollowUp);
+    const result = await harness.fillForm(
+      ...pregnancyRegistrationScenarios.safeNoFollowUp
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -134,7 +141,9 @@ describe('Pregnancy form analytic field tests', () => {
 
   it('pregnancy with current weeks pregnant', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm(...pregnancyRegistrationScenarios.safe12WeeksApprox);
+    const result = await harness.fillForm(
+      ...pregnancyRegistrationScenarios.safe12WeeksApprox
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -190,10 +199,11 @@ describe('Pregnancy form analytic field tests', () => {
     });
   });
 
-  
   it('pregnancy with current months pregnant', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm(...pregnancyRegistrationScenarios.safe3MonthsApprox);
+    const result = await harness.fillForm(
+      ...pregnancyRegistrationScenarios.safe3MonthsApprox
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -249,10 +259,11 @@ describe('Pregnancy form analytic field tests', () => {
     });
   });
 
-  
   it('pregnancy with edd', async () => {
     // Load the pregnancy form and fill in
-    const result = await harness.fillForm(...pregnancyRegistrationScenarios.safeWithEddMethod);
+    const result = await harness.fillForm(
+      ...pregnancyRegistrationScenarios.safeWithEddMethod
+    );
 
     // Verify that the form successfully got submitted
     expect(result.errors).to.be.empty;
@@ -307,5 +318,4 @@ describe('Pregnancy form analytic field tests', () => {
       }
     });
   });
-
 });
