@@ -47,6 +47,26 @@ const submit = function(e) {
   });
 };
 
+const requestSSOLogin = function(e){
+  e.preventDefault();
+  if (document.getElementById('form')?.className === 'loading') {
+    // debounce double clicks
+    return;
+  }
+  setState('loading');
+  const url = '/medic/login/oidc/authorize';
+  request('GET', url, null, (xmlhttp) => {
+    if (xmlhttp.status === 302) {
+      // success - redirect to app
+      window.location = xmlhttp.response;
+    } else {
+      // unknown error
+      setState('loginerror');
+      console.error('Error logging in', xmlhttp.response);
+    }
+  });
+};
+
 const requestTokenLogin = (retry = 20) => {
   const url = document.getElementById('tokenLogin')?.action;
   const payload = JSON.stringify({ locale: selectedLocale });
@@ -54,27 +74,27 @@ const requestTokenLogin = (retry = 20) => {
     let response = {};
     try {
       response = JSON.parse(xmlhttp.responseText);
-    } catch (err) {
+    } catch {
       // no body
     }
     switch (xmlhttp.status) {
-    case 302:
-      window.location = xmlhttp.response;
-      break;
-    case 401:
-      setTokenState(response && response.error === 'expired' ? 'tokenexpired' : 'tokeninvalid');
-      break;
-    case 408:
-      if (retry <= 0) {
-        return setTokenState('tokentimeout');
-      }
-      requestTokenLogin(retry - 1);
-      break;
-    case 400:
-      setTokenState(response && response.error === 'missing' ? 'tokenmissing' : 'tokenerror');
-      break;
-    default:
-      setTokenState('tokenerror');
+      case 302:
+        window.location = xmlhttp.response;
+        break;
+      case 401:
+        setTokenState(response && response.error === 'expired' ? 'tokenexpired' : 'tokeninvalid');
+        break;
+      case 408:
+        if (retry <= 0) {
+          return setTokenState('tokentimeout');
+        }
+        requestTokenLogin(retry - 1);
+        break;
+      case 400:
+        setTokenState(response && response.error === 'missing' ? 'tokenmissing' : 'tokenerror');
+        break;
+      default:
+        setTokenState('tokenerror');
     }
   });
 };
@@ -123,6 +143,16 @@ const getRedirectUrl = function() {
   if (usernameQueryParam === usernameEntered) {
     return urlParams.get('redirect');
   }
+};
+
+const getSsoError = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const sso_error = urlParams.get('sso_error');
+
+  if (!sso_error || ['ssouserinvalid', 'loginerror'].indexOf(sso_error) === -1) {
+    return;
+  }
+  return sso_error;
 };
 
 const checkSession = function() {
@@ -214,11 +244,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  const ssoLoginButton = document.getElementById('login-sso');
+  ssoLoginButton.addEventListener('click', requestSSOLogin, false);
+
   checkUnsupportedBrowser();
 });
 
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) {
     checkSession();
+  }
+
+  const ssoError = getSsoError();
+  if (ssoError) {
+    setState(ssoError);
   }
 });

@@ -5,6 +5,7 @@ const sentinelUtils = require('@utils/sentinel');
 const placeFactory = require('@factories/cht/contacts/place');
 const personFactory = require('@factories/cht/contacts/person');
 const userFactory = require('@factories/cht/users/users');
+const chai = require('chai');
 
 const getUserId = n => `org.couchdb.user:${n}`;
 const password = 'passwordSUP3RS3CR37!';
@@ -180,7 +181,7 @@ describe('Users API', () => {
           },
           auth: { username, password },
         })
-        .then(() => fail('You should get a 401 in this situation'))
+        .then(() => chai.expect.fail('You should get a 401 in this situation'))
         .catch(err => {
           chai.expect(err.body.error).to.equal('You do not have permissions to modify this person');
         });
@@ -196,7 +197,7 @@ describe('Users API', () => {
           },
           auth: { username, password },
         })
-        .then(() => fail('You should get an error in this situation'))
+        .then(() => chai.expect.fail('You should get an error in this situation'))
         .catch(err => {
           chai.expect(err.body.error).to.equal('unauthorized');
         });
@@ -234,7 +235,7 @@ describe('Users API', () => {
           },
           noAuth: true
         })
-        .then(() => fail('You should get an error in this situation'))
+        .then(() => chai.expect.fail('You should get an error in this situation'))
         .catch(err => {
           chai.expect(err.body.error).to.equal('You must authenticate with Basic Auth to modify your password');
         });
@@ -2111,6 +2112,382 @@ describe('Users API', () => {
     it('should set password_change_required when user does not have can_skip_password_change permission', async () => {
       const userDoc = await createUserRequest(['chw'], ['can_edit']);
       expect(userDoc.password_change_required).to.equal(true);
+    });
+  });
+
+  describe('oidc-login', () => {
+    const skippedUserFields = [
+      '_rev', 'derived_key', 'iterations', 'password_scheme', 'pbkdf2_prf', 'salt', 'password'
+    ];
+    const placeAttributes = {
+      parent: { _id: parentPlace._id },
+      type: 'health_center',
+    };
+    const places = [
+      placeFactory.place().build({ ...placeAttributes, name: 'place1' }),
+      placeFactory.place().build({ ...placeAttributes, name: 'place2' }),
+      placeFactory.place().build({ ...placeAttributes, name: 'place3' }),
+    ];
+    const contact = personFactory.build({
+      parent: { _id: places[0]._id, parent: places[0].parent },
+    });
+
+    before(async () => {
+      await utils.saveDocs([...places, contact]);
+    });
+
+    after(async () => {
+      const createdUsers = await utils.getCreatedUsers();
+      await utils.deleteUsers(createdUsers);
+      await utils.revertDb([], true);
+    });
+
+    it('should fail to create an OIDC user when oidc_provider is not configured in settings', async () => {
+      const body = {
+        username: uuid(),
+        oidc_username: uuid(),
+        place: places[0]._id,
+        contact: contact._id,
+        roles: ['chw']
+      };
+
+      await expect(utils.request({ path: `/api/v3/users`, method: 'POST', body })).to.be.rejectedWith(
+        '400 - {"code":400,"error":"Cannot set oidc_username when OIDC Login is not enabled."}'
+      );
+    });
+
+    describe('when oidc_provider is configured', () => {
+      const existingUser = {
+        username: uuid(),
+        oidc_username: uuid(),
+        place: places.map(place => place._id),
+        contact: contact._id,
+        roles: ['chw']
+      };
+
+      before(async () => {
+        await utils.updateSettings({
+          token_login: { translation_key: 'login_sms', enabled: true },
+          app_url: utils.getOrigin(),
+          oidc_provider: { client_id: 'keycloak' },
+          permissions: { can_have_multiple_places: ['chw'] }
+        }, { ignoreReload: true });
+        await utils.request({ path: '/api/v3/users', method: 'POST', body: existingUser });
+      });
+
+      after(async () => {
+        await utils.revertSettings(true);
+      });
+
+      it('returns the oidc_username of a user', async () => {
+        const user = await utils.request({
+          path: `/api/v2/users/${existingUser.username}`,
+        });
+
+        expect(user).excluding(['contact', 'place', 'rev']).to.deep.equal({
+          id: `org.couchdb.user:${existingUser.username}`,
+          username: existingUser.username,
+          roles: existingUser.roles,
+          oidc_username: existingUser.oidc_username,
+        });
+      });
+
+      [
+        ['password', { password }],
+        ['token_login', { token_login: true }]
+      ].forEach(([test, userData]) => {
+        it(`should fail to create a user when ${test} is also provided`, async () => {
+          const body = {
+            username: uuid(),
+            oidc_username: uuid(),
+            place: places[0]._id,
+            contact: contact._id,
+            roles: ['chw'],
+            phone: '+40755969696',
+            ...userData
+          };
+
+          await expect(utils.request({ path: `/api/v3/users`, method: 'POST', body })).to.be.rejectedWith(
+            '400 - {"code":400,"error":"Cannot set password or token_login with oidc_username."}'
+          );
+        });
+      });
+
+      it(`should fail to create a user when oidc_username is a duplicate`, async () => {
+        const body = {
+          ...existingUser,
+          username: uuid(),
+        };
+
+        await expect(utils.request({ path: `/api/v3/users`, method: 'POST', body })).to.be.rejectedWith(
+          `400 - {"code":400,"error":{"message":"The oidc_username [${body.oidc_username}] `
+          +`already exists for user [${getUserId(existingUser.username)}].",`
+          + '"translationKey":"user.sso.username.duplicate"}}'
+        );
+      });
+
+      it('should create OIDC user with api/v3', async () => {
+        const body = {
+          username: uuid(),
+          oidc_username: uuid(),
+          place: places.map(place => place._id),
+          contact: contact._id,
+          roles: ['chw']
+        };
+
+        const result = await utils.request({ path: '/api/v3/users', method: 'POST', body });
+        const userDoc = await utils.usersDb.get(result.user.id);
+        const userSettingsDoc = await utils.getDoc(result['user-settings'].id);
+
+        const expectedUserData = {
+          _id: getUserId(body.username),
+          name: body.username,
+          roles: body.roles,
+          facility_id: body.place,
+          contact_id: body.contact,
+        };
+        expect(userDoc).excluding(skippedUserFields).to.deep.equal({
+          ...expectedUserData,
+          type: 'user',
+          oidc_username: body.oidc_username,
+          password_change_required: false,
+        });
+        expect(userSettingsDoc).excluding(skippedUserFields).to.deep.equal({
+          ...expectedUserData,
+          type: 'user-settings',
+          oidc_login: true,
+        });
+      });
+
+      ['api/v1', 'api/v2'].forEach(api => {
+        it(`should create OIDC user with ${api}`, async () => {
+          const body = {
+            username: uuid(),
+            oidc_username: uuid(),
+            place: places[0]._id,
+            contact: contact._id,
+            roles: ['chw']
+          };
+
+          const result = await utils.request({ path: `/${api}/users`, method: 'POST', body });
+          const userDoc = await utils.usersDb.get(result.user.id);
+          const userSettingsDoc = await utils.getDoc(result['user-settings'].id);
+
+          const expectedUserData = {
+            _id: getUserId(body.username),
+            name: body.username,
+            roles: body.roles,
+            facility_id: [body.place],
+            contact_id: body.contact,
+          };
+          expect(userDoc).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            type: 'user',
+            oidc_username: body.oidc_username,
+            password_change_required: false,
+          });
+          expect(userSettingsDoc).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            type: 'user-settings',
+            oidc_login: true,
+          });
+        });
+      });
+
+      [
+        [
+          'user to be an OIDC user',
+          { password, password_change_required: false, roles: ['chw'] },
+          { oidc_username: uuid(), roles: ['chw'] }
+        ],
+        [
+          'OIDC user to be a normal user',
+          { oidc_username: uuid(), roles: ['chw'] },
+          { oidc_username: null, password, password_change_required: false, roles: ['chw'] }
+        ],
+        [
+          'OIDC user to have a different oidc_username',
+          { oidc_username: uuid(), roles: ['chw'] },
+          { oidc_username: uuid(), roles: ['chw'] }
+        ]
+      ].forEach(([test, originalUserData, updatedUserData]) => {
+        it(`should update an existing ${test}`, async () => {
+          const body = {
+            username: uuid(),
+            place: places[0]._id,
+            contact: contact._id,
+            roles: ['chw'],
+            ...originalUserData
+          };
+
+          const result = await utils.request({ path: '/api/v3/users', method: 'POST', body });
+          const userDoc = await utils.usersDb.get(result.user.id);
+          const userSettingsDoc = await utils.getDoc(result['user-settings'].id);
+
+          const expectedUserData = {
+            _id: getUserId(body.username),
+            name: body.username,
+            roles: body.roles,
+            facility_id: [body.place],
+            contact_id: body.contact,
+          };
+          expect(userDoc).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            type: 'user',
+            password_change_required: false,
+            ...originalUserData
+          });
+          expect(userSettingsDoc).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            type: 'user-settings',
+            ...(originalUserData.oidc_username ? { oidc_login: true } : {})
+          });
+
+          const updatedResult = await utils.request({
+            path: `/api/v3/users/${body.username}`,
+            method: 'POST',
+            body: updatedUserData
+          });
+          const updatedUserDoc = await utils.usersDb.get(updatedResult.user.id);
+          const updatedUserSettings = await utils.getDoc(updatedResult['user-settings'].id);
+
+          expect(updatedUserDoc).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            type: 'user',
+            ...updatedUserData,
+            password_change_required: false,
+          });
+          expect(updatedUserSettings).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            type: 'user-settings',
+            oidc_login: !!updatedUserData.oidc_username
+          });
+        });
+      });
+
+      describe('should fail to update an existing user', () => {
+        const userData = {
+          username: uuid(),
+          place: places[0]._id,
+          contact: contact._id,
+          roles: ['chw'],
+          phone: '+40755969696',
+          password
+        };
+
+        before(() => utils.request({ path: '/api/v3/users', method: 'POST', body: userData }));
+
+        [
+          ['password or token_login', { oidc_username: uuid(), password: 'gr34t.n3w.PASSWORD' } ],
+          ['token_login', { oidc_username: uuid(), token_login: true } ],
+        ].forEach(([test, body]) => {
+          it(`when setting OIDC and ${test}`, async () => {
+            await expect(utils.request({
+              path: `/api/v3/users/${userData.username}`,
+              method: 'POST',
+              body
+            })).to.be.rejectedWith(
+              `400 - {"code":400,"error":"Cannot set ${test} with oidc_username."}`
+            );
+          });
+        });
+      });
+
+      describe('when updating an existing token_login user', () => {
+        const userData = {
+          username: uuid(),
+          place: places[0]._id,
+          contact: contact._id,
+          roles: ['chw'],
+          phone: '+40755969696',
+          token_login: true
+        };
+
+        before(() => utils.request({ path: '/api/v3/users', method: 'POST', body: userData }));
+
+        it('should fail when setting OIDC', async () => {
+          await expect(utils.request({
+            path: `/api/v3/users/${userData.username}`,
+            method: 'POST',
+            body: { oidc_username: uuid() }
+          })).to.be.rejectedWith(
+            `400 - {"code":400,"error":"Cannot set token_login with oidc_username."}`
+          );
+        });
+
+        it('should allow setting OIDC when disabling token_login', async () => {
+          const expectedUserData = {
+            _id: getUserId(userData.username),
+            name: userData.username,
+            roles: userData.roles,
+            facility_id: [userData.place],
+            contact_id: userData.contact,
+          };
+          const oidc_username = uuid();
+
+          const updatedResult = await utils.request({
+            path: `/api/v3/users/${userData.username}`,
+            method: 'POST',
+            body: { oidc_username, token_login: false }
+          });
+          const updatedUserDoc = await utils.usersDb.get(updatedResult.user.id);
+          const updatedUserSettings = await utils.getDoc(updatedResult['user-settings'].id);
+
+          expect(updatedUserDoc).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            oidc_username,
+            type: 'user',
+            password_change_required: false,
+          });
+          expect(updatedUserSettings).excluding(skippedUserFields).to.deep.equal({
+            ...expectedUserData,
+            type: 'user-settings',
+            phone: userData.phone,
+            oidc_login: true
+          });
+        });
+      });
+
+      describe('should fail to update an existing OIDC user', () => {
+        const userData = {
+          username: uuid(),
+          place: places[0]._id,
+          contact: contact._id,
+          roles: ['chw'],
+          phone: '+40755969696',
+          oidc_username: uuid()
+        };
+
+        before(() => utils.request({ path: '/api/v3/users', method: 'POST', body: userData }));
+
+        [
+          ['password or token_login', { password } ],
+          ['token_login', { token_login: true } ],
+        ].forEach(([test, body]) => {
+          it(`when setting ${test}`, async () => {
+            await expect(utils.request({
+              path: `/api/v3/users/${userData.username}`,
+              method: 'POST',
+              body
+            })).to.be.rejectedWith(
+              `400 - {"code":400,"error":"Cannot set ${test} with oidc_username."}`
+            );
+          });
+        });
+
+        it(`when setting the oidc_username to a duplicate value`, async () => {
+          const body = { oidc_username: existingUser.oidc_username };
+          await expect(utils.request({
+            path: `/api/v3/users/${userData.username}`,
+            method: 'POST',
+            body
+          })).to.be.rejectedWith(
+            `400 - {"code":400,"error":{"message":"The oidc_username [${body.oidc_username}] `
+            +`already exists for user [${getUserId(existingUser.username)}].",`
+            + `"translationKey":"user.sso.username.duplicate"}}`
+          );
+        });
+      });
     });
   });
 });

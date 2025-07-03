@@ -15,7 +15,7 @@ const {
   addDays,
   getRecentANCVisitWithEvent,
   isPregnancyTaskMuted,
-  getField
+  getField,
 } = extras;
 
 const generateEventForHomeVisit = (week, start, end) => ({
@@ -29,7 +29,7 @@ const generateEventForHomeVisit = (week, start, end) => ({
       return addDays(recentLMPDate, week * 7);
     }
     return addDays(report.reported_date, week * 7);
-  }
+  },
 });
 
 function checkTaskResolvedForHomeVisit(contact, report, event, dueDate) {
@@ -92,8 +92,8 @@ module.exports = [
       {
         type: 'report',
         form: 'pregnancy_home_visit',
-        label: 'Pregnancy home visit'
-      }
+        label: 'Pregnancy home visit',
+      },
     ],
     events: [
       generateEventForHomeVisit(12, 7, 14),
@@ -103,8 +103,8 @@ module.exports = [
       generateEventForHomeVisit(34, 6, 7),
       generateEventForHomeVisit(36, 6, 7),
       generateEventForHomeVisit(38, 6, 7),
-      generateEventForHomeVisit(40, 6, 7)
-    ]
+      generateEventForHomeVisit(40, 6, 7),
+    ],
   },
 
   //ANC Home Visit: show every 2 weeks (Unknown LMP)
@@ -130,12 +130,17 @@ module.exports = [
       {
         type: 'report',
         form: 'pregnancy_home_visit',
-        label: 'Pregnancy home visit'
-      }
+        label: 'Pregnancy home visit',
+      },
     ],
     //every two weeks from reported date until 42nd week, show before due date: 6 days, show after due date: 7 days
+<<<<<<< HEAD
     events: [...Array(21).keys()].map((i) => generateEventForHomeVisit((i + 1) * 2, 6, 7)
     )
+=======
+    events: [...Array(21).keys()].map(i => generateEventForHomeVisit((i + 1) * 2, 6, 7)
+    ),
+>>>>>>> master
   },
 
   //ANC - Health Facility Visit Reminder
@@ -178,8 +183,13 @@ module.exports = [
             report,
             't_pregnancy_follow_up_date'
           );
+<<<<<<< HEAD
         }
       }
+=======
+        },
+      },
+>>>>>>> master
     ],
     events: [
       {
@@ -191,9 +201,15 @@ module.exports = [
           return getDateISOLocal(
             getField(report, 't_pregnancy_follow_up_date')
           );
+<<<<<<< HEAD
         }
       }
     ]
+=======
+        },
+      },
+    ],
+>>>>>>> master
   },
 
   {
@@ -205,7 +221,11 @@ module.exports = [
       'pregnancy',
       'pregnancy_home_visit',
       'pregnancy_danger_sign',
+<<<<<<< HEAD
       'pregnancy_danger_sign_follow_up'
+=======
+      'pregnancy_danger_sign_follow_up',
+>>>>>>> master
     ],
     appliesIf: function (contact, report) {
       return (
@@ -233,8 +253,8 @@ module.exports = [
     actions: [
       {
         type: 'report',
-        form: 'pregnancy_danger_sign_follow_up'
-      }
+        form: 'pregnancy_danger_sign_follow_up',
+      },
     ],
     events: [
       {
@@ -246,9 +266,15 @@ module.exports = [
           return getDateISOLocal(
             getField(report, 't_danger_signs_referral_follow_up_date')
           );
+<<<<<<< HEAD
         }
       }
     ]
+=======
+        },
+      },
+    ],
+>>>>>>> master
   },
 
   {
@@ -291,8 +317,8 @@ module.exports = [
     actions: [
       {
         type: 'report',
-        form: 'delivery'
-      }
+        form: 'delivery',
+      },
     ],
     events: [
       {
@@ -305,9 +331,15 @@ module.exports = [
             getMostRecentLMPDateForPregnancy(contact, report),
             MAX_DAYS_IN_PREGNANCY
           ); //LMP + 42 weeks
+<<<<<<< HEAD
         }
       }
     ]
+=======
+        },
+      },
+    ],
+>>>>>>> master
   },
 
   {
@@ -350,8 +382,8 @@ module.exports = [
           } else {
             content.delivery_uuid = getField(report, 'inputs.delivery_uuid');
           }
-        }
-      }
+        },
+      },
     ],
     events: [
       {
@@ -363,9 +395,15 @@ module.exports = [
           return getDateISOLocal(
             getField(report, 't_danger_signs_referral_follow_up_date')
           );
+<<<<<<< HEAD
         }
       }
     ]
+=======
+        },
+      },
+    ],
+>>>>>>> master
   },
 
   {
@@ -395,6 +433,7 @@ module.exports = [
         endTime
       );
     },
+<<<<<<< HEAD
     priority: function (contact, report, event, dueDate) {
       console.warn(contact);
       console.warn(event);
@@ -402,6 +441,12 @@ module.exports = [
       return {
         level: 10,
         label: 'High'
+=======
+    priority: function () {
+      return {
+        level: 10,
+        label: 'High',
+>>>>>>> master
       };
     },
     actions: [
@@ -410,8 +455,8 @@ module.exports = [
         form: 'pnc_danger_sign_follow_up_baby',
         modifyContent: function (content, contact) {
           content.delivery_uuid = contact.contact.created_by_doc;
-        }
-      }
+        },
+      },
     ],
     events: [
       {
@@ -423,9 +468,15 @@ module.exports = [
           return getDateISOLocal(
             contact.contact.t_danger_signs_referral_follow_up_date
           );
+<<<<<<< HEAD
         }
       }
     ]
+=======
+        },
+      },
+    ],
+>>>>>>> master
   },
 
   {
@@ -458,6 +509,7 @@ module.exports = [
         endTime
       );
     },
+<<<<<<< HEAD
     priority: function (contact, report, event, dueDate) {
       console.warn(contact);
       console.warn(event);
@@ -465,6 +517,12 @@ module.exports = [
       return {
         level: 10,
         label: 'High'
+=======
+    priority: function () {
+      return {
+        level: 10,
+        label: 'High',
+>>>>>>> master
       };
     },
     actions: [
@@ -474,8 +532,8 @@ module.exports = [
         // @ts-ignore
         modifyContent: function (content, contact, report) {
           content.delivery_uuid = getField(report, 'inputs.delivery_uuid');
-        }
-      }
+        },
+      },
     ],
     events: [
       {
@@ -487,8 +545,15 @@ module.exports = [
           return getDateISOLocal(
             getField(report, 't_danger_signs_referral_follow_up_date')
           );
+<<<<<<< HEAD
         }
       }
     ]
   }
+=======
+        },
+      },
+    ],
+  },
+>>>>>>> master
 ];

@@ -5,7 +5,6 @@ const jsondiff = require('json-diff');
 
 const PouchDB = require('pouchdb-core');
 PouchDB.plugin(require('pouchdb-adapter-http'));
-PouchDB.plugin(require('pouchdb-session-authentication'));
 PouchDB.plugin(require('pouchdb-mapreduce'));
 
 const argv = parseArgs(process.argv);
@@ -21,7 +20,7 @@ if (!server || argv.h || argv.help) {
   console.log('  node diff.js http://localhost:5984/medic');
   console.log('  node diff.js --server=http://localhost:5984/medic');
   console.log('  COUCH_URL=http://localhost:5984/medic node diff.js');
-  return;
+  process.exit(1);
 }
 
 console.log(`Generating diffs for conflicts on ${server}`);

@@ -101,15 +101,6 @@ export class UserSettingsService {
       .get()
       .put(doc);
   }
-
-  setAsKnown(): Promise<Object> {
-    return this.get()
-      .then((userSettings:any) => {
-        userSettings.known = true;
-        return this.put(userSettings);
-      });
-  }
-
 }
 
 export interface UserSettings {
@@ -117,6 +108,8 @@ export interface UserSettings {
   contact_id: string;
   facility_id: string[];
   name: string;
+  oidc_login?: boolean;
   roles: string[];
+  token_login?: Record<string, unknown>;
   type: string;
 }

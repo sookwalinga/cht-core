@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 
 const _ = require('lodash');
 const constants = require('@constants');
@@ -16,7 +15,6 @@ const buildVersions = require('../../scripts/build/versions');
 const PouchDB = require('pouchdb-core');
 const chtDbUtils = require('@utils/cht-db');
 PouchDB.plugin(require('pouchdb-adapter-http'));
-PouchDB.plugin(require('pouchdb-session-authentication'));
 PouchDB.plugin(require('pouchdb-mapreduce'));
 
 process.env.COUCHDB_USER = constants.USERNAME;
@@ -335,7 +333,7 @@ const saveDocsRevs = async (docs) => {
 const saveDocIfNotExists = async doc => {
   try {
     await getDoc(doc._id);
-  } catch (_) {
+  } catch {
     await saveDoc(doc);
   }
 };
@@ -356,7 +354,7 @@ const saveMetaDocs = (user, docs) => {
     });
 };
 
-const getDoc = (id, rev, parameters = '') => {
+const getDoc = (id, rev = '', parameters = '') => {
   const params = {};
   if (rev) {
     params.rev = rev;

@@ -4,7 +4,6 @@ const diff = require('just-diff').diff;
 
 const PouchDB = require('pouchdb-core');
 PouchDB.plugin(require('pouchdb-adapter-http'));
-PouchDB.plugin(require('pouchdb-session-authentication'));
 PouchDB.plugin(require('pouchdb-mapreduce'));
 
 const argv = parseArgs(process.argv);
@@ -32,7 +31,7 @@ if (!server || argv.h || argv.help) {
   console.log('Other options:');
   console.log('  --verbose');
   console.log('    outputs unresolved diffs');
-  return;
+  process.exit(1);
 }
 
 console.log(`Loading and attempting to auto-resolve conflicts on ${server}`);
