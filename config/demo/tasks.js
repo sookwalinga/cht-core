@@ -280,6 +280,7 @@ module.exports = [
       const endTime = addDays(dueDate, event.end).getTime();
       return isFormArraySubmittedInWindow(contact.reports, ['pnc_danger_sign_follow_up_baby'], startTime, endTime);
     },
+    
     actions: [
       {
         type: 'report',
