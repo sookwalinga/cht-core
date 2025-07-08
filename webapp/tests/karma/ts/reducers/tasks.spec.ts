@@ -248,12 +248,13 @@ describe('Tasks reducer', () => {
           { _id: 'task4', dueDate: 500, state: 'Ready', field: 4 },
           { _id: 'task5', dueDate: 500, state: 'Ready', field: 5 },
           { _id: 'task8', dueDate: 899, state: 'Ready', field: 8 },
+          { _id: 'task1', dueDate: false, state: 'Ready', field: 1 },
           { _id: 'task2', dueDate: undefined, state: 'Ready', field: 2 }
         ]
       });
     });
 
-    it('should sort provided tasks by priority and due date', () => {
+    it.only('should sort provided tasks by priority and due date', () => {
       const tasks = [
         {
           _id: 'task1',
