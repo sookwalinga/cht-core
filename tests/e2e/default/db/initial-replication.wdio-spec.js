@@ -5,6 +5,9 @@ const sentinelUtils = require('@utils/sentinel');
 const commonPage = require('@page-objects/default/common/common.wdio.page');
 const loginPage = require('@page-objects/default/login/login.wdio.page');
 const dataFactory = require('@factories/cht/generate');
+const { DOC_IDS } = require('@medic/constants');
+
+const LOCAL_ONLY_DOC_IDS = ['_design/medic-offline-freetext'];
 
 describe('initial-replication', () => {
   const LOCAL_LOG = '_local/initial-replication';
@@ -14,9 +17,9 @@ describe('initial-replication', () => {
 
   const requiredDocs = [
     '_design/medic-client',
-    'settings',
+    DOC_IDS.SETTINGS,
     `org.couchdb.user:${userAllowedDocs.user.username}`,
-    'service-worker-meta',
+    DOC_IDS.SERVICE_WORKER_META,
     'resources',
     'branding',
     userAllowedDocs.user.place,
@@ -46,17 +49,31 @@ describe('initial-replication', () => {
     return formDocs.rows;
   };
 
+  const getExpectedAttachments = (formId) => {
+    const expectedAttachments = ['model.xml', 'form.html', 'xml'];
+    if (formId !== 'form:training:admin_welcome') {
+      return expectedAttachments;
+    }
+
+    return [
+      ...expectedAttachments,
+      'images/household-profile.png',
+      'images/icon-people-pregnant-clinic.png',
+      'images/logo.png'
+    ];
+  };
+
   const validateReplication = async () => {
     const localAllDocsPreSync = await chtDbUtils.getDocs();
     const docIdsPreSync = dataFactory.ids(localAllDocsPreSync);
 
     await commonPage.sync();
 
-    const localAllDocs = await chtDbUtils.getDocs();
+    const localAllDocs = (await chtDbUtils.getDocs()).filter(doc => !LOCAL_ONLY_DOC_IDS.includes(doc.id));
     const localDocIds = dataFactory.ids(localAllDocs);
 
     // no additional docs to download
-    expect(docIdsPreSync).to.have.members(localDocIds);
+    expect(docIdsPreSync).to.have.members([...localDocIds, ...LOCAL_ONLY_DOC_IDS]);
 
     const serverAllDocs = await getServerDocs(localDocIds);
 
@@ -70,17 +87,17 @@ describe('initial-replication', () => {
     expect(localDocIds).to.include.members(requiredDocs);
     expect(localDocIds).to.include.members(translationIds);
 
-    const localForms = await chtDbUtils.getDocs(formIds);
-    const expectedAttachments = ['model.xml', 'form.html', 'xml'];
-    localForms.forEach(form => {
-      const attachments = form._attachments;
-      const serverForm = forms.find(serverForm => form._id === serverForm.id);
+    for (const formId of formIds) {
+      const localDoc = await chtDbUtils.getDoc(formId, true);
+      const serverForm = forms.find(serverForm => formId === serverForm.id);
+      const expectedAttachments = getExpectedAttachments((formId));
+      expect(Object.keys(localDoc._attachments))
+        .to.have.members(expectedAttachments, `${formId} has incorrect attachments`);
 
-      expect(Object.keys(attachments)).to.have.members(expectedAttachments, `${form._id} has incorrect attachments`);
       expectedAttachments.forEach(attName => {
-        expect(attachments[attName].data).to.deep.equal(serverForm.doc._attachments[attName].data);
+        expect(localDoc._attachments[attName].data).to.deep.equal(serverForm.doc._attachments[attName].data);
       });
-    });
+    }
 
     expect(localDocIds).to.include.members(dataFactory.ids(userAllowedDocs.clinics));
     expect(localDocIds).to.include.members(dataFactory.ids(userAllowedDocs.persons));
@@ -103,6 +120,15 @@ describe('initial-replication', () => {
 
   before(async () => {
     await utils.toggleSentinelTransitions();
+    // due to the high number of generated docs, many tasks would also be generated
+    // this makes the sync feature slower, and unpredictable
+    // disabling tasks fixes this _and_ makes the test faster
+    await utils.updatePermissions(
+      userAllowedDocs.user.roles,
+      [],
+      ['can_view_tasks', 'can_view_analytics'],
+      { ignoreReload: true }
+    );
 
     // we're creating ~2000 docs
     await utils.saveDocs([...userAllowedDocs.places, ...userDeniedDocs.places]);
@@ -126,7 +152,8 @@ describe('initial-replication', () => {
   });
 
   it('should log user in', async () => {
-    await loginPage.login(userAllowedDocs.user);
+    await loginPage.login({ ...userAllowedDocs.user, loadPage: false });
+    await commonPage.waitForPageLoaded(60000);
 
     await validateReplication();
 
@@ -135,9 +162,9 @@ describe('initial-replication', () => {
     await commonPage.waitForAngularLoaded(3000);
 
     // supports reloading the page while offline
-    await browser.throttle('offline');
+    await browser.throttleNetwork('offline');
     await refreshAndWaitForAngular();
-    await browser.throttle('online');
+    await browser.throttleNetwork('online');
 
     // it should not restart initial replication if the local doc is missing on refresh
     await chtDbUtils.deleteDoc(LOCAL_LOG);
@@ -155,7 +182,7 @@ describe('initial-replication', () => {
     setTimeout(() => browser.refresh(), 5000);
 
     await utils.delayPromise(5000); // wait for above timers to expire
-    await commonPage.waitForPageLoaded();
+    await commonPage.waitForPageLoaded(60000);
     await validateReplication();
   });
 });

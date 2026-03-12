@@ -1,10 +1,10 @@
 const sinon = require('sinon');
 const chai = require('chai');
 const environment = require('@medic/environment');
-const config = require('../../src/config');
+const { HTTP_HEADERS } = require('@medic/constants');
 const serverUtils = require('../../src/server-utils');
 const cookie = require('../../src/services/cookie');
-const {InvalidArgumentError} = require('@medic/cht-datasource');
+const { InvalidArgumentError, ResourceNotFoundError } = require('@medic/cht-datasource');
 
 let req;
 let res;
@@ -34,27 +34,6 @@ describe('Server utils', () => {
   afterEach(() => {
     environment.db = originalDb;
     sinon.restore();
-  });
-
-  describe('getAppUrl', () => {
-    beforeEach(() => sinon.stub(config, 'get'));
-
-    it('returns the URL data from the request when app_url is not set', () => {
-      req.protocol = 'https';
-      req.get.returns('example.com');
-      chai.expect(serverUtils.getAppUrl(req)).to.equal('https://example.com');
-      chai.expect(config.get.calledOnceWithExactly('app_url')).to.be.true;
-      chai.expect(req.get.calledOnceWithExactly('host')).to.be.true;
-    });
-
-    it('returns the app_url value', () => {
-      req.protocol = 'http';
-      req.hostname = 'example.com';
-      config.get.returns('https://cht-instance.org/');
-      chai.expect(serverUtils.getAppUrl(req)).to.equal('https://cht-instance.org');
-      chai.expect(config.get.calledOnceWithExactly('app_url')).to.be.true;
-      chai.expect(req.get.notCalled).to.be.true;
-    });
   });
 
   describe('error', () => {
@@ -90,6 +69,18 @@ describe('Server utils', () => {
 
       chai.expect(res.writeHead.callCount).to.eq(1);
       chai.expect(res.writeHead.args[0][0]).to.eq(400);
+      chai.expect(res.writeHead.args[0][1]['Content-Type']).to.equal('text/plain');
+      chai.expect(res.end.callCount).to.equal(1);
+      chai.expect(res.end.args[0][0]).to.equal('Bad Request');
+    });
+
+    it('function handles ResourceNotFound error as 404 error', () => {
+      const err = new ResourceNotFoundError('Bad Request');
+
+      serverUtils.error(err, req, res);
+
+      chai.expect(res.writeHead.callCount).to.eq(1);
+      chai.expect(res.writeHead.args[0][0]).to.eq(404);
       chai.expect(res.writeHead.args[0][1]['Content-Type']).to.equal('text/plain');
       chai.expect(res.end.callCount).to.equal(1);
       chai.expect(res.end.args[0][0]).to.equal('Bad Request');
@@ -306,6 +297,6 @@ describe('Server utils', () => {
   });
 
   it('should export request header', () => {
-    chai.expect(serverUtils.REQUEST_ID_HEADER).to.equal('X-Request-Id');
+    chai.expect(serverUtils.REQUEST_ID_HEADER).to.equal(HTTP_HEADERS.REQUEST_ID);
   });
 });

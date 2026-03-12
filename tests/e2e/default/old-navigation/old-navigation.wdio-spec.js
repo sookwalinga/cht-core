@@ -11,10 +11,11 @@ const genericForm = require('@page-objects/default/enketo/generic-form.wdio.page
 const reportsPage = require('@page-objects/default/reports/reports.wdio.page');
 const contactPage = require('@page-objects/default/contacts/contacts.wdio.page');
 const targetAggregatesPage = require('@page-objects/default/targets/target-aggregates.wdio.page');
+const { CONTACT_TYPES } = require('@medic/constants');
 
 describe('Old Navigation', () => {
   const places = placeFactory.generateHierarchy();
-  const healthCenter = places.get('health_center');
+  const healthCenter = places.get(CONTACT_TYPES.HEALTH_CENTER);
 
   const offlineUser = userFactory.build({ place: healthCenter._id });
 
@@ -40,7 +41,7 @@ describe('Old Navigation', () => {
     const permissions = settings.permissions;
     permissions.can_aggregate_targets = offlineUser.roles;
     permissions.can_view_old_navigation = offlineUser.roles;
-    await utils.updateSettings({ tasks, permissions }, true);
+    await utils.updateSettings({ tasks, permissions }, { ignoreReload: true });
 
     await loginPage.login({ ...offlineUser, loadPage: false });
     await oldNavigationPage.waitForPageLoaded();

@@ -2,6 +2,7 @@ import { Injectable, Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 import { ResourceIconsService } from '@mm-services/resource-icons.service';
+import { DOC_IDS } from '@medic/constants';
 
 @Pipe({
   name: 'resourceIcon'
@@ -16,7 +17,7 @@ export class ResourceIconPipe implements PipeTransform {
   ) { }
 
   transform(name:string, placeholder = '') {
-    return this.sanitizer.bypassSecurityTrustHtml(this.resourceIcons.getImg(name, 'resources', placeholder));
+    return this.sanitizer.bypassSecurityTrustHtml(this.resourceIcons.getImg(name, DOC_IDS.RESOURCES, placeholder));
   }
 }
 
@@ -50,7 +51,7 @@ export class PartnerImagePipe implements PipeTransform {
   ) { }
 
   transform(name:string) {
-    return this.sanitizer.bypassSecurityTrustHtml(this.resourceIcons.getImg(name, 'partners'));
+    return this.sanitizer.bypassSecurityTrustHtml(this.resourceIcons.getImg(name, DOC_IDS.PARTNERS));
   }
 }
 

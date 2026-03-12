@@ -9,6 +9,7 @@ const placeFactory = require('@factories/cht/contacts/place');
 const personFactory = require('@factories/cht/contacts/person');
 const genericReportFactory = require('@factories/cht/reports/generic-report');
 const uuid = require('uuid').v4;
+const { DOC_IDS, CONTACT_TYPES } = require('@medic/constants');
 
 /* global window */
 
@@ -46,7 +47,7 @@ describe('db-sync', () => {
     }),
     placeFactory.place().build({
       _id: restrictedFacilityId,
-      type: 'health_center',
+      type: CONTACT_TYPES.HEALTH_CENTER,
       contact
     }),
     personFactory.build(contact),
@@ -153,7 +154,7 @@ describe('db-sync', () => {
   it('should filter resources, service-worker, forms, translations, branding, partners docs', async () => {
     const docIds = [
       'resources',
-      'service-worker-meta',
+      DOC_IDS.SERVICE_WORKER_META,
       'form:contact:person:edit',
       'messages-en',
     ];
@@ -199,19 +200,10 @@ describe('db-sync', () => {
 
   describe('meta db replication', () => {
     const createMetaDoc = async (doc) => {
-      const { err, result } = await browser.executeAsync((doc, callback) => {
+      return await browser.execute(async (doc) => {
         const db = window.CHTCore.DB.get({ meta: true });
-        return db
-          .put(doc)
-          .then(result => callback({ result }))
-          .catch(err => callback({ err }));
+        return await db.put(doc);
       }, doc);
-
-      if (err) {
-        throw err;
-      }
-
-      return result;
     };
 
     it('should replicate meta db up', async () => {

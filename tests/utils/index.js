@@ -1,6 +1,6 @@
-
 const _ = require('lodash');
 const constants = require('@constants');
+const { DOC_IDS, DOC_TYPES, SENTINEL_METADATA } = require('@medic/constants');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
@@ -16,10 +16,21 @@ const PouchDB = require('pouchdb-core');
 const chtDbUtils = require('@utils/cht-db');
 PouchDB.plugin(require('pouchdb-adapter-http'));
 PouchDB.plugin(require('pouchdb-mapreduce'));
+const { setTimeout: setTimeoutPromise } = require('node:timers/promises');
 
 process.env.COUCHDB_USER = constants.USERNAME;
 process.env.COUCHDB_PASSWORD = constants.PASSWORD;
 process.env.CERTIFICATE_MODE = constants.CERTIFICATE_MODE;
+
+// Suppress the warning about NODE_TLS_REJECT_UNAUTHORIZED
+const originalEmitWarning = process.emitWarning;
+process.emitWarning = (warning, ...args) => {
+  if (typeof warning === 'string' && warning.includes('NODE_TLS_REJECT_UNAUTHORIZED')) {
+    return;
+  }
+  originalEmitWarning.call(process, warning, ...args);
+};
+
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; // allow self signed certificates
 const DEBUG = process.env.DEBUG;
 
@@ -46,19 +57,20 @@ const SERVICES = {
   api: 'api',
   sentinel: 'sentinel',
   'haproxy-healthcheck': 'healthcheck',
+  'couchdb-nouveau': 'couchdb-nouveau',
 };
 const CONTAINER_NAMES = {};
 const originalTranslations = {};
 const COUCH_USER_ID_PREFIX = 'org.couchdb.user:';
 const COMPOSE_FILES = ['cht-core', 'cht-couchdb-cluster'];
-const PERMANENT_TYPES = ['translations', 'translations-backup', 'user-settings', 'info'];
+const PERMANENT_TYPES = [DOC_TYPES.TRANSLATIONS, 'translations-backup', 'user-settings', 'info'];
 const db = new PouchDB(`${constants.BASE_URL}/${constants.DB_NAME}`, { auth });
 const sentinelDb = new PouchDB(`${constants.BASE_URL}/${constants.DB_NAME}-sentinel`, { auth });
 const usersDb = new PouchDB(`${constants.BASE_URL}/_users`, { auth });
 const logsDb = new PouchDB(`${constants.BASE_URL}/${constants.DB_NAME}-logs`, { auth });
 const auditDb = new PouchDB(`${constants.BASE_URL}/${constants.DB_NAME}-audit`, { auth });
 const existingFeedbackDocIds = [];
-const MINIMUM_BROWSER_VERSION = '90';
+const MINIMUM_BROWSER_VERSION = '107';
 const KUBECTL_CONTEXT = `-n ${PROJECT_NAME} --context k3d-${PROJECT_NAME}`;
 
 const makeTempDir = (prefix) => fs.mkdtempSync(path.join(path.join(os.tmpdir(), prefix || 'ci-')));
@@ -121,6 +133,14 @@ const parseCookieResponse = (cookieString) => {
       cookieObject[key] = (key.includes('Secure') || key.includes('HttpOnly')) ? true : value;
     });
     return cookieObject;
+  });
+};
+
+const loginUser = async (username = constants.USERNAME, password = constants.PASSWORD) => {
+  await request({
+    path: '/medic/login',
+    body: { user: username, password: password },
+    method: 'POST',
   });
 };
 
@@ -411,14 +431,15 @@ const deleteDocs = ids => {
 };
 
 const PROTECTED_DOCS = [
-  'service-worker-meta',
+  DOC_IDS.SERVICE_WORKER_META,
   constants.USER_CONTACT_ID,
+  `${COUCH_USER_ID_PREFIX}${constants.USERNAME}`,
+  constants.DEFAULT_USER_ADMIN_TRAINING_DOC._id,
   'migration-log',
   'resources',
   'branding',
-  'partners',
-  'settings',
-  /^form:/,
+  DOC_IDS.PARTNERS,
+  DOC_IDS.SETTINGS,
   /^_design/
 ];
 
@@ -482,6 +503,7 @@ const deleteSentinelDocs = async (docsToKeep) => {
  * @return     {Promise}  completion promise
  */
 const deleteAllDocs = async (except = []) => {
+  await getDefaultForms();
   const filters = createDocumentFilters(except);
   const { rows } = await db.allDocs({ include_docs: true });
 
@@ -507,35 +529,21 @@ const deleteAllDocs = async (except = []) => {
   await deleteSentinelDocs(docsToKeep);
 };
 
+const updateCustomSettings = async (updates) => {
+  const settings = await request({ path: '/api/v1/settings' });
+  originalSettings = originalSettings || settings;
+  // Make sure all updated fields are present in originalSettings, to enable reverting later.
+  Object.keys(updates).forEach(updatedField => {
+    if (!_.has(originalSettings, updatedField)) {
+      originalSettings[updatedField] = null;
+    }
+  });
 
-// Update both ddocs, to avoid instability in tests.
-// Note that API will be copying changes to medic over to medic-client, so change
-// medic-client first (api does nothing) and medic after (api copies changes over to
-// medic-client, but the changes are already there.)
-const updateCustomSettings = updates => {
-  if (originalSettings) {
-    throw new Error('A previous test did not call revertSettings');
-  }
-  return request({
-    path: '/api/v1/settings',
-    method: 'GET',
-  })
-    .then(settings => {
-      originalSettings = settings;
-      // Make sure all updated fields are present in originalSettings, to enable reverting later.
-      Object.keys(updates).forEach(updatedField => {
-        if (!_.has(originalSettings, updatedField)) {
-          originalSettings[updatedField] = null;
-        }
-      });
-    })
-    .then(() => {
-      return request({
-        path: '/api/v1/settings?replace=1',
-        method: 'PUT',
-        body: updates,
-      });
-    });
+  return await request({
+    path: '/api/v1/settings?replace=1',
+    method: 'PUT',
+    body: updates,
+  });
 };
 
 const waitForSettingsUpdateLogs = (type) => {
@@ -595,25 +603,26 @@ const updateSettings = async (updates, options = {}) => {
     await watcher.promise;
   }
   if (sync) {
-    await commonElements.sync({ expectReload: true });
+    await commonElements.sync();
   }
   if (refresh) {
     await browser.refresh();
   }
 };
 
-const revertCustomSettings = () => {
+const revertCustomSettings = async () => {
   if (!originalSettings) {
-    return Promise.resolve(false);
+    return false;
   }
-  return request({
+
+  const result = await request({
     path: '/api/v1/settings?replace=1',
     method: 'PUT',
     body: originalSettings,
-  }).then((result) => {
-    originalSettings = null;
-    return result.updated;
   });
+
+  originalSettings = null;
+  return result.updated;
 };
 
 /**
@@ -636,18 +645,8 @@ const revertSettings = async ignoreRefresh => {
     return;
   }
 
-  return await watcher.promise;
-};
-
-const seedTestData = (userContactDoc, documents) => {
-  return saveDocs(documents)
-    .then(() => getDoc(constants.USER_CONTACT_ID))
-    .then(existingContactDoc => {
-      if (userContactDoc) {
-        Object.assign(existingContactDoc, userContactDoc);
-        return saveDoc(existingContactDoc);
-      }
-    });
+  await watcher.promise;
+  return needsRefresh;
 };
 
 const revertTranslations = async () => {
@@ -688,7 +687,7 @@ const getDefaultForms = async () => {
   const docName = '_local/default-forms';
   try {
     const doc = await db.get(docName);
-    return doc.forms;
+    PROTECTED_DOCS.push(...doc.forms);
   } catch {
     const result = await db.allDocs({ startkey: 'form:', endkey: 'form:\ufff0' });
     const doc = {
@@ -696,27 +695,24 @@ const getDefaultForms = async () => {
       forms: result.rows.map(row => row.id),
     };
     await db.put(doc);
-    return doc.forms;
+    PROTECTED_DOCS.push(...doc.forms);
   }
 };
 
-const setUserContactDoc = (attempt = 0) => {
-  const {
-    USER_CONTACT_ID: docId,
-    DEFAULT_USER_CONTACT_DOC: defaultDoc
-  } = constants;
-
-  return db
-    .get(docId)
-    .catch(() => ({}))
-    .then(existing => Object.assign(defaultDoc, { _rev: existing?._rev }))
-    .then(newDoc => db.put(newDoc))
-    .catch(err => {
-      if (attempt > 3) {
-        throw err;
-      }
-      return setUserContactDoc(attempt + 1);
-    });
+const setUserContactDoc = async (attempt = 0) => {
+  const docsToSetup = [constants.DEFAULT_USER_CONTACT_DOC, constants.DEFAULT_USER_ADMIN_TRAINING_DOC];
+  try {
+    const existingDocs = await getDocs(docsToSetup.map(doc => doc._id));
+    const finalDocs = existingDocs
+      .map(doc => doc || {})
+      .map((doc, i) => ({ ...doc, ...docsToSetup[i] }));
+    await saveDocs(finalDocs);
+  } catch (err) {
+    if (attempt > 3) {
+      throw err;
+    }
+    return setUserContactDoc(attempt + 1);
+  }
 };
 
 const deleteMetaDbs = async () => {
@@ -727,13 +723,23 @@ const deleteMetaDbs = async () => {
   }
 };
 
+const deleteCredentials = async () => {
+  const credentials = await request({ path: `/${constants.DB_NAME}-vault/_all_docs` });
+  const credentialsToDelete = credentials.rows.map(row => ({ _id: row.id, _rev: row.value.rev, _deleted: true }));
+  await request({
+    path: `/${constants.DB_NAME}-vault/_bulk_docs`,
+    method: 'POST',
+    body: { docs: credentialsToDelete }
+  });
+};
+
 /**
  * Deletes documents from the database, including Enketo forms. Use with caution.
  * @param {array} except - exeptions in the delete method. If this parameter is empty
  *                         everything will be deleted from the config, including all the enketo forms.
  * @param {boolean} ignoreRefresh
  */
-const revertDb = async (except, ignoreRefresh) => { //NOSONAR
+const revertDb = async (except = [], ignoreRefresh = true) => { //NOSONAR
   await deleteAllDocs(except);
   await revertTranslations();
   await deleteLocalDocs();
@@ -751,6 +757,7 @@ const revertDb = async (except, ignoreRefresh) => { //NOSONAR
   }
 
   await deleteMetaDbs();
+  await deleteCredentials();
 
   await setUserContactDoc();
 };
@@ -888,11 +895,18 @@ const getUserSettings = ({ contactId, name }) => {
 };
 
 const listenForApi = async () => {
-  let retryCount = 180;
+  const totalTries = 180; // 3 minutes
+  let retryCount = totalTries;
   do {
     try {
       console.log(`Checking API, retries left ${retryCount}`);
-      return await request({ path: '/api/info' });
+      await request({ path: '/api/info' });
+      if (retryCount < totalTries) {
+        // if api request failed at least once, make sure that it's stable
+        await delayPromise(1000);
+        await request({ path: '/api/info' });
+      }
+      return;
     } catch (err) {
       console.log('API check failed, trying again in 1 second');
       console.log(err.message);
@@ -1018,22 +1032,19 @@ const deepFreeze = (obj) => {
 };
 
 // delays executing a function that returns a promise with the provided interval (in ms)
-const delayPromise = (promiseFn, interval) => {
+const delayPromise = async (promiseFn, interval) => {
   if (typeof promiseFn === 'number') {
     interval = promiseFn;
-    promiseFn = () => Promise.resolve();
+    promiseFn = () => {};
   }
 
-  return new Promise((resolve, reject) => {
-    setTimeout(() => promiseFn()
-      .then(resolve)
-      .catch(reject), interval);
-  });
+  await setTimeoutPromise(interval);
+  return await promiseFn();
 };
 
 const setTransitionSeqToNow = () => {
   return Promise.all([
-    sentinelDb.get('_local/transitions-seq').catch(() => ({ _id: '_local/transitions-seq' })),
+    sentinelDb.get(SENTINEL_METADATA.TRANSITIONS_SEQ).catch(() => ({ _id: SENTINEL_METADATA.TRANSITIONS_SEQ })),
     db.info()
   ]).then(([sentinelMetadata, { update_seq: updateSeq }]) => {
     sentinelMetadata.value = updateSeq;
@@ -1077,7 +1088,7 @@ const getDefaultSettings = () => {
   return JSON.parse(fs.readFileSync(pathToDefaultAppSettings).toString());
 };
 
-const addTranslations = (languageCode, translations = {}) => {
+const addTranslations = async (languageCode, translations = {}) => {
   const builtinTranslations = [
     'bm',
     'en',
@@ -1093,10 +1104,9 @@ const addTranslations = (languageCode, translations = {}) => {
       if (err.status === 404) {
         return {
           _id: `messages-${code}`,
-          type: 'translations',
+          type: DOC_TYPES.TRANSLATIONS,
           code: code,
           name: code,
-          enabled: true,
           generic: {}
         };
       }
@@ -1104,20 +1114,24 @@ const addTranslations = (languageCode, translations = {}) => {
       throw err;
     });
   };
-
-  return getTranslationsDoc(languageCode).then(translationsDoc => {
+  
+  const saveTranslationsDoc = async () => {
+    const translationsDoc = await getTranslationsDoc(languageCode);
     if (builtinTranslations.includes(languageCode)) {
       originalTranslations[languageCode] = _.clone(translationsDoc.generic);
     }
 
     Object.assign(translationsDoc.generic, translations);
     return db.put(translationsDoc);
-  });
+  };
+
+  await saveTranslationsDoc();
 };
 
 const enableLanguage = (languageCode) => enableLanguages([languageCode]);
 
-const enableLanguages = async (languageCodes) => {
+const enableLanguages = async (languageCodes, options) => {
+
   const { languages } = await getSettings();
   for (const languageCode of languageCodes) {
     const language = languages.find(language => language.locale === languageCode);
@@ -1130,10 +1144,10 @@ const enableLanguages = async (languageCodes) => {
       });
     }
   }
-  await updateSettings({ languages });
+  await updateSettings({ languages }, options);
 };
 
-const getSettings = () => getDoc('settings').then(settings => settings.settings);
+const getSettings = () => getDoc(DOC_IDS.SETTINGS).then(settings => settings.settings);
 
 const getTemplateComposeFilePath = file => path.resolve(__dirname, '../..', 'scripts', 'build', `${file}.yml.template`);
 
@@ -1145,15 +1159,37 @@ const generateK3DValuesFile = async () => {
     tag: buildVersions.getImageTag(),
     db_name: constants.DB_NAME,
     user: constants.USERNAME,
+    project_name: PROJECT_NAME,
+    chtversion: buildVersions.getVersion(),
+    cht_image_tag: buildVersions.getImageTag(),
     password: constants.PASSWORD,
     secret: env.COUCHDB_SECRET,
     uuid: env.COUCHDB_UUID,
     namespace: PROJECT_NAME,
-    data_path: K3D_DATA_PATH,
+    data_path: K3D_DATA_PATH
   };
 
-  const templatePath = path.resolve(__dirname, '..', 'helm', `values.yaml.template`);
-  const testValuesPath = path.resolve(__dirname, '..', 'helm', `values.yaml`);
+  const templatePath = path.resolve(
+    __dirname,
+    '..',
+    '..',
+    'scripts',
+    'build',
+    'helm',
+    'tests',
+    'integration-k3d-values.yaml.template'
+  );
+
+  const testValuesPath = path.resolve(
+    __dirname,
+    '..',
+    '..',
+    'scripts',
+    'build',
+    'helm',
+    'tests',
+    'integration-k3d-values.yaml'
+  );
   const template = await fs.promises.readFile(templatePath, 'utf-8');
   await fs.promises.writeFile(testValuesPath, mustache.render(template, view));
 };
@@ -1203,6 +1239,7 @@ const startServices = async () => {
   env.DB1_DATA = makeTempDir('ci-dbdata');
   env.DB2_DATA = makeTempDir('ci-dbdata');
   env.DB3_DATA = makeTempDir('ci-dbdata');
+  env.COUCHDB_NOUVEAU_DATA = makeTempDir('ci-nouveaudata');
 
   await dockerComposeCmd('up -d');
   const services = await dockerComposeCmd('ps -q');
@@ -1292,11 +1329,26 @@ const prepK3DServices = async (defaultSettings) => {
   await generateK3DValuesFile();
   await importImages();
 
-  const helmChartPath = path.join(__dirname, '..', 'helm');
-  const valesPath = path.join(helmChartPath, 'values.yaml');
+  const helmChartPath = path.join(__dirname, '..', '..', 'scripts', 'build', 'helm');
+  const valuesPath = path.join(
+    __dirname,
+    '..',
+    '..',
+    'scripts',
+    'build',
+    'helm',
+    'tests',
+    'integration-k3d-values.yaml'
+  );
+
   await runCommand(
     `helm install ${PROJECT_NAME} ${helmChartPath} -n ${PROJECT_NAME} ` +
-    `--kube-context k3d-${PROJECT_NAME} --values ${valesPath} --create-namespace`
+    `--kube-context k3d-${PROJECT_NAME} ` +
+    `-f ${helmChartPath}/values/base.yaml ` +
+    `-f ${helmChartPath}/values/deployment-multi.yaml ` +
+    `-f ${helmChartPath}/values/platform-k3s-k3d.yaml ` +
+    `-f ${valuesPath} ` +
+    `--create-namespace`
   );
   await listenForApi();
 
@@ -1305,6 +1357,9 @@ const prepK3DServices = async (defaultSettings) => {
   }
   await runAndLogApiStartupMessage('User contact doc setup', setUserContactDoc);
   await runAndLogApiStartupMessage('Getting default forms', getDefaultForms);
+
+  await loginUser();
+  await setupUserDoc();
 };
 
 const prepServices = async (defaultSettings) => {
@@ -1321,6 +1376,9 @@ const prepServices = async (defaultSettings) => {
   }
   await runAndLogApiStartupMessage('User contact doc setup', setUserContactDoc);
   await runAndLogApiStartupMessage('Getting default forms', getDefaultForms);
+
+  await loginUser();
+  await setupUserDoc();
 };
 
 const getLogs = (container) => {
@@ -1388,34 +1446,54 @@ const killSpawnedProcess = (proc) => {
  * that contains the promise to resolve when logs lines are matched and a cancel function
  */
 
-const waitForLogs = (container, tail, ...regex) => {
+const waitForLogs = async (container, tail, ...regex) => {
   container = getContainerName(container);
   const cmd = isDocker() ? 'docker' : 'kubectl';
   let timeout;
   let logs = '';
-  let firstLine = false;
-  tail = (isDocker() || tail) ? '--tail=1' : '';
+  let isReady = false;
+  const startTime = Date.now() - 50; // Subtract a small buffer to account for any clock skew
+  tail = (isDocker() || tail) ? '--tail=20' : '';
 
   // It takes a while until the process actually starts tailing logs, and initiating next test steps immediately
   // after watching results in a race condition, where the log is created before watching started.
-  // As a fix, watch the logs with tail=1, so we always receive one log line immediately, then proceed with next
-  // steps of testing afterward.
-  const params = `logs ${container} -f ${tail} ${isK3D() ? KUBECTL_CONTEXT : ''}`.split(' ').filter(Boolean);
+  // As a fix, watch the logs with tail=20 and use timestamps to ensure we only match logs produced after
+  // the watcher was ready (not historical logs from before the watcher started).
+  const params = `logs ${container} -f ${tail} --timestamps ${isK3D() ? KUBECTL_CONTEXT : ''}`
+    .split(' ')
+    .filter(Boolean);
   const proc = spawn(cmd, params, { stdio: ['ignore', 'pipe', 'pipe'] });
   let receivedFirstLine;
-  const firstLineReceivedPromise = new Promise(resolve => receivedFirstLine = resolve);
+  const ready = new Promise(resolve => receivedFirstLine = resolve);
 
   const checkOutput = (data) => {
-    if (!firstLine) {
-      firstLine = true;
-      receivedFirstLine();
-      return;
-    }
-
     data = data.toString();
     logs += data;
+
+    if (!isReady) {
+      isReady = true;
+      receivedFirstLine();
+    }
+
     const lines = data.split('\n');
-    const matchingLine = lines.find(line => regex.find(r => r.test(line)));
+    const matchingLine = lines.find(line => {
+      if (!regex.find(r => r.test(line))) {
+        return false;
+      }
+
+      // Parse timestamp from log line (format: 2026-01-29T11:17:14.437Z or 2026-01-29T11:17:14.437123456Z)
+      const timestampMatch = line.match(/^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z?)/);
+
+      if (!timestampMatch) {
+        return isReady;
+      }
+
+      // Docker/kubectl timestamps are in UTC. Add 'Z' suffix if not present to ensure proper UTC parsing
+      const timestampStr = timestampMatch[1].endsWith('Z') ? timestampMatch[1] : timestampMatch[1] + 'Z';
+      const logTime = new Date(timestampStr).getTime();
+      return logTime >= startTime;
+    });
+
     return matchingLine;
   };
 
@@ -1439,13 +1517,15 @@ const waitForLogs = (container, tail, ...regex) => {
     proc.stderr.on('data', check);
   });
 
-  return firstLineReceivedPromise.then(() => ({
+  await ready;
+
+  return {
     promise,
     cancel: () => {
       clearTimeout(timeout);
       killSpawnedProcess(proc);
     }
-  }));
+  };
 };
 
 const waitForApiLogs = (...regex) => waitForLogs('api', true, ...regex);
@@ -1501,16 +1581,19 @@ const collectLogs = (container, ...regex) => {
     killSpawnedProcess(proc);
   }, 180000);
 
-  const collect = () => {
+  const collect = async () => {
+    if (isK3D()) {
+      await delayPromise(500);
+    }
     clearTimeout(timeout);
     if (errors.length) {
       const error = new Error('CollectLogs errored');
       error.errors = errors;
       error.logs = logs;
-      return Promise.reject(error);
+      throw error;
     }
 
-    return Promise.resolve(matches);
+    return matches;
   };
 
   return firstLineReceivedPromise.then(() => collect);
@@ -1600,7 +1683,7 @@ const logFeedbackDocs = async (test) => {
     return false;
   }
 
-  const filename = `feedbackDocs-${test.parent} ${test.title}.json`.replace(/\s/g, '-');
+  const filename = `feedbackDocs-${test.parent} ${test.title}.json`.replace(/[^\w.-]/g, '-');
   const filePath = path.resolve(__dirname, '..', 'logs', filename);
   fs.writeFileSync(filePath, JSON.stringify(newFeedbackDocs, null, 2));
   existingFeedbackDocIds.push(...newFeedbackDocs.map(doc => doc._id));
@@ -1610,10 +1693,20 @@ const logFeedbackDocs = async (test) => {
 
 const isMinimumChromeVersion = process.env.CHROME_VERSION === MINIMUM_BROWSER_VERSION;
 
-const escapeBranchName = (branch) => branch?.replace(/[/|_]/g, '-');
+const escapeBranchName = (branch) => branch?.replace(/[^A-Za-z0-9.-]/g, '-');
 
 const toggleSentinelTransitions = () => sendSignal('sentinel', 'USR1');
 const runSentinelTasks = () => sendSignal('sentinel', 'USR2');
+
+const waitForIndexes = async () => {
+  let indexes = [];
+  do {
+    indexes = await request({ path: '/_active_tasks' });
+    if (indexes.length) {
+      await delayPromise(500);
+    }
+  } while (indexes.length);
+};
 
 module.exports = {
   db,
@@ -1646,7 +1739,6 @@ module.exports = {
   deleteAllDocs,
   updateSettings,
   revertSettings,
-  seedTestData,
   revertDb,
   getOrigin,
   getBaseUrl,
@@ -1699,4 +1791,5 @@ module.exports = {
   runCommand,
   deletePurgeDbs,
   saveLogs,
+  waitForIndexes,
 };

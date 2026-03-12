@@ -59,6 +59,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
+
+    - name: Set system ulimit
+      uses: ./.github/actions/bump-system-ulimit
+
     - name: Create logs directory
       run: mkdir tests/logs
     - run: npm ci
@@ -94,7 +98,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        cmd: ['test-config-default']
+        cmd: ['test-config-covid-19', 'test-config-default', 'test-config-demo']
 
     steps:
     - uses: actions/checkout@v4
@@ -168,6 +172,9 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - uses: actions/checkout@v4
 
+      - name: Set system ulimit
+        uses: ./.github/actions/bump-system-ulimit
+
       - name: Download docker images artifacts
         uses: actions/download-artifact@v4
         with:
@@ -180,9 +187,15 @@ jobs:
         if: ${{ !env.INTERNAL_CONTRIBUTOR }}
 
       - run: mkdir tests/logs
-      - run: python -m pip install git+https://github.com/medic/pyxform.git@medic-conf-1.17#egg=pyxform-medic
       - run: npm install -g cht-conf
       - run: npm ci
+      
+      - name: Fix Docker 29 insecure registry handling
+        run: |
+          EXISTING=$(cat /etc/docker/daemon.json 2>/dev/null || echo '{}')
+          echo "$EXISTING" | jq '. + {"features":{"containerd-snapshotter":false}}' | sudo tee /etc/docker/daemon.json
+          sudo systemctl restart docker
+          sleep 2
 
       - uses: nolar/setup-k3d-k3s@v1
       - uses: azure/setup-helm@v4.1.0
@@ -217,24 +230,24 @@ jobs:
 
   tests:
     needs: build
-    name: ${{ matrix.cmd }}-${{ matrix.suite || '' }}${{ matrix.chrome-version == '90' && '-minimum-browser' || '' }}
+    name: ${{ matrix.cmd }}-${{ matrix.suite || '' }}${{ matrix.chrome-version == '107' && '-minimum-browser' || '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 60
     
     env:
       CHROME_VERSION: ${{ matrix.chrome-version }}
-      JOB_NAME: ${{ matrix.cmd }}-${{ matrix.suite || '' }}${{ matrix.chrome-version == '90' && '-minimum-browser' || '' }}
+      JOB_NAME: ${{ matrix.cmd }}-${{ matrix.suite || '' }}${{ matrix.chrome-version == '107' && '-minimum-browser' || '' }}
 
     strategy:
       fail-fast: false
       matrix:
         cmd: ['ci-integration-all', 'ci-integration-sentinel', 'ci-webdriver-default-mobile']
-        chrome-version: ['90', 'latest']
+        chrome-version: ['107', 'latest']
         suite: [all]
         include:
           - cmd: ci-webdriver-default
             suite: core
-            chrome-version: 90
+            chrome-version: 107
           - cmd: ci-webdriver-default
             suite: core
             chrome-version: latest
@@ -242,7 +255,7 @@ jobs:
             suite: data
           - cmd: ci-webdriver-default
             suite: enketo
-            chrome-version: 90
+            chrome-version: 107
           - cmd: ci-webdriver-default
             suite: enketo
             chrome-version: latest
@@ -250,13 +263,13 @@ jobs:
             suite: lowLevel
           - cmd: ci-webdriver-default
             suite: workflows
-        exclude: # temporary until all suites run on Chrome 90
+        exclude: # temporary until all suites run on Chrome 107
           - cmd: ci-integration-all
-            chrome-version: 90
+            chrome-version: 107
           - cmd: ci-integration-sentinel
-            chrome-version: 90
+            chrome-version: 107
           - cmd: ci-webdriver-default-mobile
-            chrome-version: 90
+            chrome-version: 107
     steps:
     - name: Login to Docker Hub
       uses: docker/login-action@v3
@@ -296,88 +309,38 @@ jobs:
       working-directory: images/
       if: ${{ !env.INTERNAL_CONTRIBUTOR }}
 
+    - name: Set system ulimit
+      uses: ./.github/actions/bump-system-ulimit
+
     - name: Create logs directory
       run: mkdir tests/logs
-    - name: Install pyxform
-      run:  python -m pip install git+https://github.com/medic/pyxform.git@medic-conf-1.17#egg=pyxform-medic
     - name: Install cht-conf
       run:  npm install -g cht-conf
     - run: npm ci
-    - name: Fetch allure history
-      uses: actions/checkout@v4
-      with:
-        repository: 'medic/build-history-data'
-        path: 'build-history-data'
-        persist-credentials: false
-    - name: Copy allure history
-      run: |
-        mkdir -p allure-results/history
-        cp -r build-history-data/cht-core/allure/${{ env.JOB_NAME }}/allure-report/history allure-results | true
-    - name: Cache Chrome 90 Installer
-      if: ${{ matrix.chrome-version == '90' }}
+
+    - name: Cache Chrome 107 Installer
+      if: ${{ matrix.chrome-version == '107' }}
       id: cache-chrome
       uses: actions/cache@v4
       with:
-        path: /tmp/chrome90
-        key: chrome90-${{ runner.os }}-90.0.4430.72
+        path: /tmp/chrome107
+        key: chrome107-${{ runner.os }}-107.0.5304.87
         restore-keys: |
-          chrome90-${{ runner.os }}-
-          chrome90-
-    - name: Download Chrome 90
-      if: ${{ matrix.chrome-version == '90' && steps.cache-chrome.outputs.cache-hit != 'true' }}
+          chrome107-${{ runner.os }}-
+          chrome107-
+    - name: Download Chrome 107
+      if: ${{ matrix.chrome-version == '107' && steps.cache-chrome.outputs.cache-hit != 'true' }}
       run: |
-        mkdir -p /tmp/chrome90
-        wget -O "/tmp/chrome90/google-chrome-stable_current_amd64.deb" https://www.slimjet.com/chrome/download-chrome.php?file=files/90.0.4430.72/google-chrome-stable_current_amd64.deb
-    - name: Install Chrome 90
-      if: ${{ matrix.chrome-version == '90' }}
+        mkdir -p /tmp/chrome107
+        wget -O "/tmp/chrome107/google-chrome-stable_current_amd64.deb" https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_107.0.5304.87-1_amd64.deb
+    - name: Install Chrome 107
+      if: ${{ matrix.chrome-version == '107' }}
       run: |
-        sudo dpkg -i "/tmp/chrome90/google-chrome-stable_current_amd64.deb"
-        npm install chromedriver@^90.0.1
+        sudo dpkg -i "/tmp/chrome107/google-chrome-stable_current_amd64.deb"
+        npm install chromedriver@^107.0.3
     - name: Run tests ${{ matrix.cmd }}-${{ matrix.suite }} on Chrome ${{ matrix.chrome-version }}
       run: npm run ${{ matrix.cmd }} -- --suite=${{ matrix.suite }}
 
-    - name: Fetch allure history
-      if: always()
-      uses: actions/checkout@v4
-      with:
-        repository: 'medic/build-history-data'
-        path: 'build-history-data-new'
-        persist-credentials: false
-    - name: Copy new allure history
-      if: always()
-      run: |
-        mkdir -p build-history-data-new/cht-core/allure/${{ env.JOB_NAME }}/history
-        cp -r allure-report/history build-history-data-new/cht-core/allure/${{ env.JOB_NAME }}/allure-report | true
-    - name: Upload allure report history
-      if: always() && github.ref == 'refs/heads/master' # whether pass or fail, but only on master
-      continue-on-error: true # don't fail the build if git push fails
-      uses: actions-js/push@master
-      with:
-        github_token: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
-        directory: 'build-history-data-new'
-        repository: 'medic/build-history-data'
-        force: true
-    - name: Fetch report repo
-      if: always()
-      uses: actions/checkout@v4
-      with:
-        repository: 'medic/build-history'
-        path: 'build-history'
-        persist-credentials: false
-    - name: Copy new report
-      if: always()
-      run: |
-        mkdir -p build-history/cht-core/allure/${{ env.JOB_NAME }}
-        cp -r allure-report build-history/cht-core/allure/${{ env.JOB_NAME }} | true
-    - name: Upload allure report
-      if: always() && github.ref == 'refs/heads/master' # whether pass or fail, but only on master
-      continue-on-error: true # don't fail the build if git push fails
-      uses: actions-js/push@master
-      with:
-        github_token: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
-        directory: 'build-history'
-        repository: 'medic/build-history'
-        force: true
     - name: Archive Results
       uses: actions/upload-artifact@v4
       with:
@@ -400,7 +363,7 @@ jobs:
     steps:
     - name: Install regctl
       if: ${{ env.INTERNAL_CONTRIBUTOR }}
-      uses: regclient/actions/regctl-installer@main
+      uses: regclient/actions/regctl-installer@df29323daedc1f78ee74b261bd8d849327cb4ff0
 
     - name: Configure AWS credentials
       if: ${{ env.INTERNAL_CONTRIBUTOR }}
@@ -495,6 +458,10 @@ jobs:
           registry-type: public
           mask-password: 'true'
       - uses: actions/checkout@v4
+
+      - name: Set system ulimit
+        uses: ./.github/actions/bump-system-ulimit
+
       - name: Set ENV
         run: |
           echo "BUILDS_SERVER=$STAGING_SERVER" >> $GITHUB_ENV

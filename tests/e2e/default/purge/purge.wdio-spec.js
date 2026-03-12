@@ -6,12 +6,13 @@ const placeFactory = require('@factories/cht/contacts/place');
 const personFactory = require('@factories/cht/contacts/person');
 const genericReportFactory = require('@factories/cht/reports/generic-report');
 const sentinelUtils = require('@utils/sentinel');
+const { CONTACT_TYPES } = require('@medic/constants');
 
 /* global window */
 
 describe('purge', function() {
   const places = placeFactory.generateHierarchy();
-  const healthCenter = places.get('health_center');
+  const healthCenter = places.get(CONTACT_TYPES.HEALTH_CENTER);
 
   const contact = personFactory.build({ parent: { _id: healthCenter._id, parent: healthCenter.parent } });
   const patient = personFactory.build({ parent: { _id: healthCenter._id, parent: healthCenter.parent } });
@@ -42,13 +43,11 @@ describe('purge', function() {
 
   const pregnancies = generateReports(125, 'pregnancy');
 
-  const getAllReports = () => browser.executeAsync(callback => {
-    window.CHTCore.DB
+  const getAllReports = () => browser.execute(() => {
+    return window.CHTCore.DB
       .get()
       .allDocs({ include_docs: true })
-      .then(results => results.rows.map(row => row.doc).filter(doc => doc.type === 'data_record'))
-      .then(callback)
-      .catch(callback);
+      .then(results => results.rows.map(row => row.doc).filter(doc => doc.type === 'data_record'));
   });
 
   const updatePurgeSettings = async (purgeFn, revert) => {

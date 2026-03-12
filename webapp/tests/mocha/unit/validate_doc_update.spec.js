@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const fs = require('fs');
 const assert = require('chai').assert;
+const { DOC_IDS, DOC_TYPES } = require('@medic/constants');
 
 describe('validate doc update', () => {
 
@@ -69,12 +70,12 @@ describe('validate doc update', () => {
     Object.entries({
       'ddocs': { _id: '_design/something' },
       'resources doc': { _id: 'resources' },
-      'service-worker-meta doc': { _id: 'service-worker-meta' },
+      'service-worker-meta doc': { _id: DOC_IDS.SERVICE_WORKER_META },
       'forms': { type: 'form' },
-      'translations': { type: 'translations' },
+      'translations': { type: DOC_TYPES.TRANSLATIONS },
       'extension-libs': { _id: 'extension-libs' },
       'header logo': { _id: 'branding' },
-      'partners': { _id: 'partners' }
+      'partners': { _id: DOC_IDS.PARTNERS },
     }).forEach(([ name, doc ]) => {
       it(name, () => {
         allowedOnServer(adminCtx, doc);
@@ -95,7 +96,7 @@ describe('validate doc update', () => {
       },
       {
         name: 'translations',
-        oldDoc: { _id: 'messages-en', type: 'translations' },
+        oldDoc: { _id: 'messages-en', type: DOC_TYPES.TRANSLATIONS },
         newDoc: { _id: 'messages-en', type: 'feedback' }
       },
       {
@@ -110,8 +111,8 @@ describe('validate doc update', () => {
       },
       {
         name: 'partners',
-        oldDoc: { _id: 'partners' },
-        newDoc: { _id: 'partners', field: 'mine' }
+        oldDoc: { _id: DOC_IDS.PARTNERS },
+        newDoc: { _id: DOC_IDS.PARTNERS, field: 'mine' }
       },
     ].forEach(({ name, oldDoc, newDoc }) => {
       it(name, () => {

@@ -1,4 +1,4 @@
-import { getResource, RemoteDataContext, getResources } from './libs/data-context';
+import { getResource, getResources, postResource, putResource, RemoteDataContext } from './libs/data-context';
 import { FreetextQualifier, UuidQualifier } from '../qualifier';
 import * as Report from '../report';
 import { Nullable, Page } from '../libs/core';
@@ -8,7 +8,7 @@ export namespace v1 {
   const getReport = (remoteContext: RemoteDataContext) => getResource(remoteContext, 'api/v1/report');
 
   const getReportUuids = (remoteContext: RemoteDataContext) => getResources(remoteContext, 'api/v1/report/uuid');
-  
+
   /** @internal */
   export const get = (remoteContext: RemoteDataContext) => (
     identifier: UuidQualifier
@@ -26,5 +26,19 @@ export namespace v1 {
       ...(cursor ? { cursor } : {}),
     };
     return getReportUuids(remoteContext)(queryParams);
+  };
+
+  /** @internal */
+  export const create = postResource('api/v1/report');
+
+  /** @internal */
+  export const update = putResource(`api/v1/report`);
+
+  /** @internal */
+  export const getWithLineage = (remoteContext: RemoteDataContext) => (
+    identifier: UuidQualifier
+  ): Promise<Nullable<Report.v1.ReportWithLineage>> => {
+    const queryParams = { with_lineage: 'true' };
+    return getReport(remoteContext)(identifier.uuid, queryParams);
   };
 }

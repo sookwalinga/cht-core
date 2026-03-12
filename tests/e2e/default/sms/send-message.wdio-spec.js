@@ -5,12 +5,13 @@ const userFactory = require('@factories/cht/users/users');
 const placeFactory = require('@factories/cht/contacts/place');
 const personFactory = require('@factories/cht/contacts/person');
 const messagesPage = require('@page-objects//default/sms/messages.wdio.page');
+const { CONTACT_TYPES } = require('@medic/constants');
 
 describe('Send message', () => {
   const rawNumber = '+50683858585';
   const anotherRawNumber = '+50689232323';
   const places = placeFactory.generateHierarchy();
-  const healthCenter = places.get('health_center');
+  const healthCenter = places.get(CONTACT_TYPES.HEALTH_CENTER);
   const anne = personFactory.build({
     name: 'Anne',
     phone: '+50683333333',
@@ -33,8 +34,7 @@ describe('Send message', () => {
   };
 
   const verifyLastSmsContent = async (msg, type) => {
-    const messages = await messagesPage.getAmountOfMessagesByPhone();
-    const { content, state } = await messagesPage.getMessageContent(messages);
+    const { content, state } = await messagesPage.getLastMessageContent();
     expect(content).to.equal(smsMsg(msg, type));
     expect(state).to.equal('pending');
   };

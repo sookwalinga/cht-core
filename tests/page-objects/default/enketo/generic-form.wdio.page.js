@@ -27,23 +27,24 @@ const nextPage = async (numberOfPages = 1, waitForLoad = true) => {
 
   for (let i = 0; i < numberOfPages; i++) {
     const currentPageId = (await currentFormView()).elementId;
-    await nextButton().waitForDisplayed();
     await nextButton().click();
     waitForLoad && await browser.waitUntil(async () => (await currentFormView()).elementId !== currentPageId);
   }
 };
 
-const selectContact = async (contactName, label, searchTerm = '') => {
+const searchContact = async (label, searchTerm) => {
   const searchField = await $('.select2-search__field');
   if (!await searchField.isDisplayed()) {
     await select2Selection(label).click();
   }
 
-  await searchField.setValue(searchTerm || contactName);
+  await searchField.setValue(searchTerm);
   await $('.select2-results__option.loading-results').waitForDisplayed({ reverse: true });
-  const contact = await $(`.name*=${contactName}`);
-  await contact.waitForDisplayed();
-  await contact.click();
+};
+
+const selectContact = async (contactName, label, searchTerm = '') => {
+  await searchContact(label, searchTerm || contactName);
+  await $(`.name*=${contactName}`).click();
 
   await browser.waitUntil(async () => {
     return (await select2Selection(label).getText()).toLowerCase().endsWith(contactName.toLowerCase());
@@ -63,6 +64,7 @@ const submitForm = async ({ waitForPageLoaded = true, ignoreValidationErrors = f
   }
   await submitButton().click();
   if (waitForPageLoaded) {
+    await formTitle().waitForDisplayed({ reverse: true });
     await commonPage.waitForPageLoaded();
   }
 };
@@ -81,10 +83,7 @@ const getFormTitle = async () => {
   return await formTitle().getText();
 };
 
-const getDBObjectWidgetValues = async (field) => {
-  const widget = $(`[data-contains-ref-target="${field}"] .selection`);
-  await widget.click();
-
+const getDBObjectWidgetValues = async () => {
   const dropdown = $('.select2-dropdown--below');
   await dropdown.waitForDisplayed();
   const firstElement = $('.select2-results__options > li');
@@ -93,8 +92,12 @@ const getDBObjectWidgetValues = async (field) => {
   const list = await $$('.select2-results__options > li');
   const contacts = [];
   for (const item of list) {
+    const itemName = item.$('.name');
+    if (!(await itemName.isExisting())) {
+      continue;
+    }
     contacts.push({
-      name: await (item.$('.name').getText()),
+      name: await itemName.getText(),
       click: () => item.click(),
     });
   }
@@ -117,21 +120,19 @@ const getDuplicateContactHeadings = async () => {
 
 const getDuplicateContactSummaryField = async (index, fieldName) => {
   const duplicateContact = (await duplicateContacts())[index];
-  const contactSummary = await duplicateContact.$('#contact_summary');
   await duplicateContact.click();
+  const contactSummary = await duplicateContact.$('#contact_summary');
   await contactSummary.waitForDisplayed();
   const field = await contactSummary.$(`.cell.${fieldName}`);
   return (await field.$('p:not(.summary_label)')).getText();
 };
 
 const checkAcknowledgeDuplicatesBox = async () => {
-  const checkBox = await acknowledgeCheckBox();
-  await checkBox.click();
+  await acknowledgeCheckBox().click();
 };
 
 const openDuplicateContact = async () => {
-  const openButton = await openDuplicateButton();
-  await openButton.click();
+  await openDuplicateButton().click();
 };
 
 module.exports = {
@@ -143,6 +144,7 @@ module.exports = {
   nextPage,
   nameField,
   fieldByName,
+  searchContact,
   selectContact,
   clearSelectedContact,
   cancelForm,

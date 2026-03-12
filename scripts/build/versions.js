@@ -10,7 +10,7 @@ const {
   INTERNAL_CONTRIBUTOR,
 } = process.env;
 
-const escapeBranchName = (branch) => branch?.replace(/[/|_]/g, '-');
+const escapeBranchName = (branch) => branch?.replace(/[^A-Za-z0-9.-]/g, '-');
 
 const getBranchVersion = (release) => {
   const branch = BRANCH === 'master' ? 'alpha' : escapeBranchName(BRANCH);
@@ -46,7 +46,8 @@ const getVersion = (release) => {
     return process.env.VERSION;
   }
 
-  return execSync('git branch --show-current', { encoding: 'utf-8' }).trim();
+  const branch = execSync('git branch --show-current', { encoding: 'utf-8' }).trim();
+  return escapeBranchName(branch);
 };
 
 const getImageTag = (service, release = false) => {
@@ -61,5 +62,5 @@ module.exports = {
   getRepo,
   escapeBranchName,
   SERVICES: ['api', 'sentinel'],
-  INFRASTRUCTURE: ['couchdb', 'haproxy', 'haproxy-healthcheck', 'nginx'],
+  INFRASTRUCTURE: ['couchdb', 'couchdb-nouveau', 'haproxy', 'haproxy-healthcheck', 'nginx'],
 };
